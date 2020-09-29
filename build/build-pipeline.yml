@@ -74,8 +74,6 @@ stages:
       runOnce:
         deploy:
           steps:
-          - download: current
-            artifact: Nuget
           - task: PublishToCMP@1
             name: PublishORC
             displayName: Publish package for ORC
