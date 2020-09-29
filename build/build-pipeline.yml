@@ -74,10 +74,9 @@ stages:
       runOnce:
         deploy:
           steps:
-          - download: current
-            artifact: Nuget
           - task: PublishToCMP@1
-            name: Publish package for ORC
+            name: PublishORC
+            displayName: Publish package for ORC
             inputs:
               cmpUrl: '$(CMP.Url)'
               cmpUsername: '$(CMP.UserName)'
@@ -90,7 +89,8 @@ stages:
               currentBuildNumber: '$(Build.BuildNumber)'
 
           - task: PublishToCMP@1
-            name: Publish package for Sales
+            name: PublishSales
+            displayName: Publish package for Sales
             inputs:
               cmpUrl: '$(CMP.Url)'
               cmpUsername: '$(CMP.UserName)'
@@ -103,7 +103,8 @@ stages:
               currentBuildNumber: '$(Build.BuildNumber)'
 
           - task: PublishToCMP@1
-            name: Publish package for SLS
+            name: PublishSLS
+            displayName: Publish package for SLS
             inputs:
               cmpUrl: '$(CMP.Url)'
               cmpUsername: '$(CMP.UserName)'
