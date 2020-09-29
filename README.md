@@ -40,6 +40,14 @@ The sensitive information (usernames & passwords) have been scrubbed from the da
 > }
 > ```
 
+### Before doing a Git commit
+
+The build process will modify files which contain sensitive data and you will need to revert the changes to these file before adding the files to Git to prevent sensitive information to be committed to Git. You can run this command to revert the changes to known sensitive files:
+
+```powershell
+.\Build.ps1 -t UndoSensitiveData
+```
+
 ## Deployment
 
 The build script will generate an artifact named `CommerceModel.BetterRetail.*.nupkg`. On a developer workstation this package will be copied to the folder `C:\packages` and in an Azure Pipeline it will be uploaded to Orckestra's Cloud Management platform for deployment on a publicly accessible platform.
@@ -123,7 +131,10 @@ By default, the deployment script `integration.psake.ps1` does not automatically
                    SmtpHost = ""
                    SmtpPassword = ""
                    SmtpUserName = ""
-                   SmtpPort = "587"
+                   SmtpPort = @{
+                     "value" = 587
+                     "__type" = "ValueOfInt32"
+                   }
                    SmtpSenderAddress = ""
                    SmtpAllowedReceiverDomainsRegex = ""
                    SmtpDisallowedEmailAddressReceiver = ""
