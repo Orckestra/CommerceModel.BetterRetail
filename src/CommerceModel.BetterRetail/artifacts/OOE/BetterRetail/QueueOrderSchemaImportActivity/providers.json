@@ -1,0 +1,1757 @@
+[
+  {
+    "id": "303DB3E9-ABCE-4EAD-B4d1-4AC96DBB83A9",
+    "type": "FulfillmentCarrier",
+    "scopeId": "BetterRetailCanada",
+    "name": "TranssmartCarrierProvider",
+    "displayName": {
+      "en-US": "Transsmart carrier provider",
+      "en-CA": "Transsmart carrier provider",
+      "fr-CA": "Fournisseur de transport Transsmart",
+      "it-IT": "Transsmart carrier provider"
+    },
+    "implementationTypeName": "TranssmartFulfillmentCarrierProvider",
+    "description": "Transsmart allows you to easily connect your webshop, ERP and WMS to all your carriers! Control and optimize your shipment handling and transport costs from order entry until delivery. Connect your logistics services to your checkout and ERP/WMS with standard plugins.",
+    "isActive": true,
+    "values": {
+      "ApiEndpoint": "#TranssmartApiEndpoint#",
+      "ApiUsername": "#TranssmartApiUsername#",
+      "ApiPassword": "#TranssmartApiPassword#",
+      "Account": "#TranssmartAccount#",
+      "MailType": "0",
+      "ServiceType": "NON-DOCS",
+      "OverrideQuantityUOM": "PCS",
+      "IsResidential": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "EnableApiRequestLogging": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ShouldBookReturnLabel": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "TimeoutInSeconds": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "DefaultWeightWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultHeightWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultWidthWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultLengthWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultWeightUOMWhenNotSpecified": "KG",
+      "DefaultLinearUOMWhenNotSpecified": "CM",
+      "MapperLinearUOM": "Centimetre=CM,Feet=FT,inches=IN",
+      "MapperPackageType": "Boîte Std.|Std. 31 kg pkg.|Std. Box=BOX",
+      "MapperWeightUOM": "Pound=LB,Ounce=OZ,Kilogram=KG",
+      "MapperQuantityUOM": "",
+      "CarrierMappingConfiguration": "{'Express':{'SAvER':{'UpS': 'UpS','DhL': 'DhL'},'RapIdo':{'MexIco':'MexIco','ChIli':'ChIli'}}, 'TimesAver':{'SaVer':{'UpS':'UpS','dHl':'dHl'}, 'Saving':{'UpS': 'UpS', 'FeDEx' : 'FeDEx'}}, 'StanDarD':{'SAver':{'uPS': 'uPS', 'Dhl': 'Dhl'}}}",
+      "ReverseAddressesForReturns": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ReturnCarrierCode": "",
+      "ReturnServiceLevel": "",
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
+    "type": "FulfillmentCarrier",
+    "scopeId": "BetterRetailCanada",
+    "name": "ShippoCarrierProvider",
+    "displayName": {
+      "en-US": "Shippo carrier provider",
+      "en-CA": "Shippo carrier provider",
+      "fr-CA": "Fournisseur de transport Shippo",
+      "it-IT": "Shippo carrier provider"
+    },
+    "implementationTypeName": "ShippoFulfillmentCarrierProvider",
+    "description": "Shippo helps you focus on growing your business. Start by connecting your e-commerce platform to Shippo to automatically sync order information. Then, create all shipping labels and docs you may need for domestic and international orders.",
+    "isActive": true,
+    "values": {
+      "GenerateCustomsDeclaration": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ShouldBookReturnLabel": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "CustomsDeclarationIncoterm": "DDU",
+      "LabelFileType": "PDF",
+      "ApiToken": "#ShippoApiKey#",
+      "DefaultWeightWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultWeightUOMWhenNotSpecified": "KG"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
+    "type": "FulfillmentRouting",
+    "scopeId": "BetterRetailCanada",
+    "name": "LRU Routing Provider",
+    "implementationTypeName": "LRUFulfillmentRoutingProvider",
+    "description": "The LRU Routing Provider is designed to provide high level routing principles for one or many different instances of Fulfillment Providers. It controls order splitting policies and governs the Fulfillment Provider's routing priority phase by selecting a target Fulfillment Location using a Least Recently Used (LRU) selection algorithm.",
+    "displayName": {
+      "en-US": "Least recently used routing provider",
+      "en-CA": "Least recently used routing provider",
+      "fr-CA": "Fournisseur de routage le moins récemment utilisé (MRU)"
+    },
+    "isActive": true,
+    "values": {
+      "MaximumRoutingElapsedTimeInHours": {
+        "__type": "ValueOfInt32",
+        "value": 20
+      },
+      "MaximumDailyShipmentsPerStore": {
+        "__type": "ValueOfInt32",
+        "value": 100
+      },
+      "MaximumShipmentsPerOrder": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      },
+      "ItemOnlySplitLevelAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "ItemOrUnitSplitLevelAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "7A169585-DA71-442D-8F74-02BEAFB03B3C",
+    "type": "FulfillmentRouting",
+    "scopeId": "BetterRetailCanada",
+    "name": "Competition Routing Provider",
+    "description": "The Competition Routing Provider is designed to provide high level routing principles for one or many different instances of Fulfillment Providers. It controls the Fulfillment Provider's routing priority phase by selecting all eligible Fulfillment Locations and offering a shipment too all of them, at the same time, to elicit a competition to seize it. Competition routing does not support order splitting.",
+    "implementationTypeName": "CompetitionFulfillmentRoutingProvider",
+    "displayName": {
+      "en-US": "Competition routing provider",
+      "en-CA": "Competition routing provider",
+      "fr-CA": "Fournisseur de routage (compétition)"
+    },
+    "isActive": true,
+    "values": {
+      "MaximumRoutingElapsedTimeInHours": {
+        "__type": "ValueOfInt32",
+        "value": 20
+      },
+      "MaximumDailyShipmentsPerStore": {
+        "__type": "ValueOfInt32",
+        "value": 100
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "Buy-online-pick-up-in-store (LRU)",
+    "implementationTypeName": "BOPISFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying LRU Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "displayName": {
+      "en-US": "BOPIS Fulfillment Provider (LRU)",
+      "en-CA": "BOPIS Fulfillment Provider (LRU)",
+      "fr-CA": "Fournisseur BOPIS (LRU)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "Ship from store (LRU)",
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store LRU Fulfillment Provider is designed to sequentially route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase then determines the next Fulfillment location to select for the shipment. The underlying LRU Routing Provider controls splitting and prioritization. The provider then governs policies associated with in-store fulfillment, concluding with stores shipping the order shipments to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
+    "displayName": {
+      "en-US": "Ship From Store (LRU)",
+      "en-CA": "Ship From Store (LRU)",
+      "fr-CA": "Expédition à partir du magasin (LRU)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "Ship from store (Competition)",
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
+    "displayName": {
+      "en-US": "Ship From Store (Competition)",
+      "en-CA": "Ship From Store (Competition)",
+      "fr-CA": "Expédition à partir du magasin (Compétition)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "7A169585-DA71-442D-8F74-02BEAFB03B3C",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "Shipping",
+    "implementationTypeName": "FlatRateShippingProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 3
+      },
+      "EstimatedTransitInDays": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "PickUp",
+    "implementationTypeName": "PickUpShippingProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 2
+      }
+    },
+    "propertyConfigurations": {
+
+    }
+  },
+  {
+    "type": "Payment",
+    "scopeId": "BetterRetailCanada",
+    "name": "Onsite payment",
+    "implementationTypeName": "OnSitePOSPaymentProvider",
+    "displayName": {
+      "en-US": "In store payment",
+      "en-CA": "In store payment",
+      "fr-CA": "Paiement en magasin"
+    },
+    "isActive": true,
+    "values": {
+      "OnSiteCash": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OnSiteDebit": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OnSiteCredit": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OnSiteUnspecified": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "Cheque": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Tax",
+    "scopeId": "BetterRetailCanada",
+    "name": "Default",
+    "implementationTypeName": "DefaultTaxProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "propertyConfigurations": {
+
+    }
+  },
+  {
+    "type": "Tax",
+    "scopeId": "BetterRetailCanada",
+    "name": "AvalaraTaxProvider",
+    "implementationTypeName": "AvalaraTaxProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "values": {
+      "EnableLogging": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "EnableAddressValidation": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "Timeout": {
+        "__type": "ValueOfInt32",
+        "value": 3000
+      },
+      "AccountNumber": "#AvalaraAccountNumber#",
+      "CompanyCode": "#AvalaraCompanyCode#",
+      "LicenceKey": "#AvalaraLicenceKey#",
+      "ServiceUrl": "#AvalaraServiceUrl#"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Payment",
+    "scopeId": "BetterRetailCanada",
+    "name": "Moneris Store 1",
+    "implementationTypeName": "MonerisCanadaPaymentProvider",
+    "displayName": {
+
+    },
+    "isActive": false,
+    "values": {
+      "IsCvdVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAvsVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeAValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeBValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeCValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeDValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeGValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeIValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeMValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeNValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodePValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeRValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeSValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeUValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeWValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeXValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeYValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeZValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "MonerisHostname": "esqa.moneris.com",
+      "DefaultCulture": "en-CA",
+      "StoreId": "store1",
+      "ApiToken": "yesguy",
+      "PaymentCaptureUrl": "{PaymentCaptureUrl}",
+      "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
+      "HostedCardTokenizationProfileId": "htZYSB45YO5BMBR",
+      "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Payment",
+    "scopeId": "BetterRetailCanada",
+    "name": "Moneris Store 2",
+    "implementationTypeName": "MonerisCanadaPaymentProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "values": {
+      "IsCvdVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAvsVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeAValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeBValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeCValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeDValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeGValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeIValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeMValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeNValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodePValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeRValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeSValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeUValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeWValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeXValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeYValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeZValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "MonerisHostname": "esqa.moneris.com",
+      "DefaultCulture": "en-CA",
+      "StoreId": "store2",
+      "ApiToken": "yesguy",
+      "PaymentCaptureUrl": "{PaymentCaptureUrl}",
+      "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
+      "HostedCardTokenizationProfileId": "ht1RRATIA38HFFK",
+      "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Payment",
+    "scopeId": "BetterRetailCanada",
+    "name": "Moneris Store 3",
+    "implementationTypeName": "MonerisCanadaPaymentProvider",
+    "displayName": {
+
+    },
+    "isActive": false,
+    "values": {
+      "IsCvdVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAvsVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeAValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeBValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeCValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeDValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeGValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeIValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeMValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeNValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodePValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeRValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeSValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeUValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeWValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeXValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeYValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeZValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "MonerisHostname": "esqa.moneris.com",
+      "DefaultCulture": "en-CA",
+      "StoreId": "store3",
+      "ApiToken": "yesguy",
+      "PaymentCaptureUrl": "{PaymentCaptureUrl}",
+      "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
+      "HostedCardTokenizationProfileId": "ht3F4CQ1Y3T1YFP",
+      "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Payment",
+    "scopeId": "BetterRetailCanada",
+    "name": "Moneris Store 5",
+    "implementationTypeName": "MonerisCanadaPaymentProvider",
+    "displayName": {
+
+    },
+    "isActive": false,
+    "values": {
+      "IsCvdVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAvsVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeAValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeBValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeCValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeDValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeGValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeIValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeMValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeNValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodePValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeRValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeSValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeUValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeWValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeXValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeYValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeZValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "MonerisHostname": "esqa.moneris.com",
+      "DefaultCulture": "en-CA",
+      "StoreId": "store5",
+      "ApiToken": "yesguy",
+      "PaymentCaptureUrl": "{PaymentCaptureUrl}",
+      "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
+      "HostedCardTokenizationProfileId": "ht3F4CQ1Y3T1YFP",
+      "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "e7d7a2c8-4be1-40bf-862e-2fe1013a3c78",
+    "type": "FulfillmentCarrier",
+    "scopeId": "BetterRetailNorway",
+    "name": "TranssmartCarrierProvider",
+    "displayName": {
+      "en-US": "Transsmart carrier provider",
+      "en-CA": "Transsmart carrier provider",
+      "fr-CA": "Fournisseur de transport Transsmart",
+      "it-IT": "Transsmart carrier provider"
+    },
+    "implementationTypeName": "TranssmartFulfillmentCarrierProvider",
+    "description": "Transsmart allows you to easily connect your webshop, ERP and WMS to all your carriers! Control and optimize your shipment handling and transport costs from order entry until delivery. Connect your logistics services to your checkout and ERP/WMS with standard plugins.",
+    "isActive": true,
+    "values": {
+      "ApiEndpoint": "#TranssmartApiEndpoint#",
+      "ApiUsername": "#TranssmartApiUsername#",
+      "ApiPassword": "#TranssmartApiPassword#",
+      "Account": "#TranssmartAccount#",
+      "MailType": "0",
+      "ServiceType": "NON-DOCS",
+      "OverrideQuantityUOM": "PCS",
+      "IsResidential": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "EnableApiRequestLogging": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ShouldBookReturnLabel": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "TimeoutInSeconds": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "DefaultWeightWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultHeightWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultWidthWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultLengthWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultWeightUOMWhenNotSpecified": "KG",
+      "DefaultLinearUOMWhenNotSpecified": "CM",
+      "MapperLinearUOM": "Centimetre=CM,Feet=FT,inches=IN",
+      "MapperPackageType": "Boîte Std.|Std. 31 kg pkg.|Std. Box=BOX",
+      "MapperWeightUOM": "Pound=LB,Ounce=OZ,Kilogram=KG",
+      "MapperQuantityUOM": "",
+      "CarrierMappingConfiguration": "{'Express':{'SAvER':{'UpS': 'UpS','DhL': 'DhL'},'RapIdo':{'MexIco':'MexIco','ChIli':'ChIli'}}, 'TimesAver':{'SaVer':{'UpS':'UpS','dHl':'dHl'}, 'Saving':{'UpS': 'UpS', 'FeDEx' : 'FeDEx'}}, 'StanDarD':{'SAver':{'uPS': 'uPS', 'Dhl': 'Dhl'}}}",
+      "ReverseAddressesForReturns": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ReturnCarrierCode": "",
+      "ReturnServiceLevel": ""
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "81acac2b-5d2a-4cea-b015-ac4cdbd039a5",
+    "type": "FulfillmentCarrier",
+    "scopeId": "BetterRetailNorway",
+    "name": "ShippoCarrierProvider",
+    "displayName": {
+      "en-US": "Shippo carrier provider",
+      "en-CA": "Shippo carrier provider",
+      "fr-CA": "Fournisseur de transport Shippo",
+      "it-IT": "Shippo carrier provider"
+    },
+    "implementationTypeName": "ShippoFulfillmentCarrierProvider",
+    "description": "Shippo helps you focus on growing your business. Start by connecting your e-commerce platform to Shippo to automatically sync order information. Then, create all shipping labels and docs you may need for domestic and international orders.",
+    "isActive": true,
+    "values": {
+      "GenerateCustomsDeclaration": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ShouldBookReturnLabel": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "CustomsDeclarationIncoterm": "DDU",
+      "LabelFileType": "PDF",
+      "ApiToken": "#ShippoApiKey#",
+      "DefaultWeightWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultWeightUOMWhenNotSpecified": "KG"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "3D5F3AA6-CCAD-4B20-AA5C-92BAAB283F96",
+    "type": "FulfillmentRouting",
+    "scopeId": "BetterRetailNorway",
+    "name": "LRU Routing Provider",
+    "implementationTypeName": "LRUFulfillmentRoutingProvider",
+    "displayName": {
+      "en-US": "Least recently used routing provider",
+      "en-CA": "Least recently used routing provider",
+      "fr-CA": "Fournisseur de routage le moins récemment utilisé (MRU)"
+    },
+    "isActive": true,
+    "values": {
+      "MaximumRoutingElapsedTimeInHours": {
+        "__type": "ValueOfInt32",
+        "value": 48
+      },
+      "MaximumDailyShipmentsPerStore": {
+        "__type": "ValueOfInt32",
+        "value": 100
+      },
+      "MaximumShipmentsPerOrder": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      },
+      "ItemOnlySplitLevelAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "ItemOrUnitSplitLevelAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "9B058102-9D34-70C3-6ACC-2B66E3200241",
+    "type": "FulfillmentRouting",
+    "scopeId": "BetterRetailNorway",
+    "name": "Competition Routing Provider",
+    "description": "The Competition Routing Provider is designed to provide high level routing principles for one or many different instances of Fulfillment Providers. It controls the Fulfillment Provider's routing priority phase by selecting all eligible Fulfillment Locations and offering a shipment too all of them, at the same time, to elicit a competition to seize it. Competition routing does not support order splitting.",
+    "implementationTypeName": "CompetitionFulfillmentRoutingProvider",
+    "displayName": {
+      "en-US": "Competition routing provider",
+      "en-CA": "Competition routing provider",
+      "fr-CA": "Fournisseur de routage (compétition)"
+    },
+    "isActive": true,
+    "values": {
+      "MaximumRoutingElapsedTimeInHours": {
+        "__type": "ValueOfInt32",
+        "value": 20
+      },
+      "MaximumDailyShipmentsPerStore": {
+        "__type": "ValueOfInt32",
+        "value": 100
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "7275307C-36D2-4580-AAFF-920293B2250C",
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "Ship from store (LRU)",
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "displayName": {
+      "en-US": "Ship From Store (LRU)",
+      "en-CA": "Ship From Store (LRU)",
+      "fr-CA": "Expédition à partir du magasin (LRU)"
+    },
+    "description": "The Ship from Store Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "3D5F3AA6-CCAD-4B20-AA5C-92BAAB283F96",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "Buy-online-pick-up-in-store (LRU)",
+    "implementationTypeName": "BOPISFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying LRU Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "displayName": {
+      "en-US": "BOPIS Fulfillment Provider (LRU)",
+      "en-CA": "BOPIS Fulfillment Provider (LRU)",
+      "fr-CA": "Fournisseur BOPIS (LRU)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "3D5F3AA6-CCAD-4B20-AA5C-92BAAB283F96",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "670B239B-61C4-6749-08DA-31D0CA0B4039",
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "Ship from store (Competition)",
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "displayName": {
+      "en-US": "Ship From Store (Competition)",
+      "en-CA": "Ship From Store (Competition)",
+      "fr-CA": "Expédition à partir du magasin (Compétition)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "9B058102-9D34-70C3-6ACC-2B66E3200241",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "B08B42C7-FD0D-4F13-9993-F3803AC7B719",
+    "type": "Payment",
+    "scopeId": "BetterRetailNorway",
+    "name": "Onsite payment",
+    "implementationTypeName": "OnSitePOSPaymentProvider",
+    "displayName": {
+      "en-US": "In store payment"
+    },
+    "isActive": true,
+    "values": {
+      "OnSiteCash": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OnSiteDebit": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OnSiteCredit": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OnSiteUnspecified": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "Cheque": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "Shipping",
+    "implementationTypeName": "FlatRateShippingProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 3
+      },
+      "EstimatedTransitInDays": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "PickUp",
+    "implementationTypeName": "PickUpShippingProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 2
+      }
+    },
+    "propertyConfigurations": {
+
+    }
+  },
+  {
+    "type": "Tax",
+    "scopeId": "BetterRetailNorway",
+    "name": "Default",
+    "implementationTypeName": "DefaultTaxProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "propertyConfigurations": {
+
+    }
+  },
+  {
+    "type": "Tax",
+    "scopeId": "BetterRetailNorway",
+    "name": "AvalaraTaxProvider",
+    "implementationTypeName": "AvalaraTaxProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "values": {
+      "EnableLogging": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "EnableAddressValidation": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "Timeout": {
+        "__type": "ValueOfInt32",
+        "value": 3000
+      },
+      "AccountNumber": "#AvalaraAccountNumber#",
+      "CompanyCode": "#AvalaraCompanyCode#",
+      "LicenceKey": "#AvalaraLicenceKey#",
+      "ServiceUrl": "#AvalaraServiceUrl#"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Payment",
+    "scopeId": "BetterRetailNorway",
+    "name": "Moneris Store 2",
+    "implementationTypeName": "MonerisCanadaPaymentProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "values": {
+      "IsCvdVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAvsVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeAValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeBValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeCValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeDValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeGValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeIValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeMValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeNValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodePValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeRValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeSValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeUValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeWValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeXValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeYValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeZValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "MonerisHostname": "esqa.moneris.com",
+      "DefaultCulture": "en-CA",
+      "StoreId": "store2",
+      "ApiToken": "yesguy",
+      "PaymentCaptureUrl": "{PaymentCaptureUrl}",
+      "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
+      "HostedCardTokenizationProfileId": "ht1RRATIA38HFFK",
+      "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "c850b1c9-ea17-448e-aac2-7e82d794d207",
+    "type": "FulfillmentCarrier",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "TranssmartCarrierProvider",
+    "displayName": {
+      "en-US": "Transsmart carrier provider",
+      "en-CA": "Transsmart carrier provider",
+      "fr-CA": "Fournisseur de transport Transsmart",
+      "it-IT": "Transsmart carrier provider"
+    },
+    "implementationTypeName": "TranssmartFulfillmentCarrierProvider",
+    "description": "Transsmart allows you to easily connect your webshop, ERP and WMS to all your carriers! Control and optimize your shipment handling and transport costs from order entry until delivery. Connect your logistics services to your checkout and ERP/WMS with standard plugins.",
+    "isActive": true,
+    "values": {
+      "ApiEndpoint": "#TranssmartApiEndpoint#",
+      "ApiUsername": "#TranssmartApiUsername#",
+      "ApiPassword": "#TranssmartApiPassword#",
+      "Account": "#TranssmartAccount#",
+      "MailType": "0",
+      "ServiceType": "NON-DOCS",
+      "OverrideQuantityUOM": "PCS",
+      "IsResidential": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "EnableApiRequestLogging": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ShouldBookReturnLabel": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "TimeoutInSeconds": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "DefaultWeightWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultHeightWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultWidthWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultLengthWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultWeightUOMWhenNotSpecified": "KG",
+      "DefaultLinearUOMWhenNotSpecified": "CM",
+      "MapperLinearUOM": "Centimetre=CM,Feet=FT,inches=IN",
+      "MapperPackageType": "Boîte Std.|Std. 31 kg pkg.|Std. Box=BOX",
+      "MapperWeightUOM": "Pound=LB,Ounce=OZ,Kilogram=KG",
+      "MapperQuantityUOM": "",
+      "CarrierMappingConfiguration": "{'Express':{'SAvER':{'UpS': 'UpS','DhL': 'DhL'},'RapIdo':{'MexIco':'MexIco','ChIli':'ChIli'}}, 'TimesAver':{'SaVer':{'UpS':'UpS','dHl':'dHl'}, 'Saving':{'UpS': 'UpS', 'FeDEx' : 'FeDEx'}}, 'StanDarD':{'SAver':{'uPS': 'uPS', 'Dhl': 'Dhl'}}}",
+      "ReverseAddressesForReturns": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ReturnCarrierCode": "",
+      "ReturnServiceLevel": ""
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "325867db-80d7-4a57-99d5-44e17c6d0d31",
+    "type": "FulfillmentCarrier",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "ShippoCarrierProvider",
+    "displayName": {
+      "en-US": "Shippo carrier provider",
+      "en-CA": "Shippo carrier provider",
+      "fr-CA": "Fournisseur de transport Shippo",
+      "it-IT": "Shippo carrier provider"
+    },
+    "implementationTypeName": "ShippoFulfillmentCarrierProvider",
+    "description": "Shippo helps you focus on growing your business. Start by connecting your e-commerce platform to Shippo to automatically sync order information. Then, create all shipping labels and docs you may need for domestic and international orders.",
+    "isActive": true,
+    "values": {
+      "GenerateCustomsDeclaration": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ShouldBookReturnLabel": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "CustomsDeclarationIncoterm": "DDU",
+      "LabelFileType": "PDF",
+      "ApiToken": "#ShippoApiKey#",
+      "DefaultWeightWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultWeightUOMWhenNotSpecified": "KG"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "01F61BCF-9885-4F1E-B03A-F86294E13BA4",
+    "type": "FulfillmentRouting",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "LRU Routing Provider",
+    "implementationTypeName": "LRUFulfillmentRoutingProvider",
+    "displayName": {
+      "en-US": "Least recently used routing provider",
+      "en-CA": "Least recently used routing provider",
+      "fr-CA": "Fournisseur de routage le moins récemment utilisé (MRU)"
+    },
+    "isActive": true,
+    "values": {
+      "MaximumRoutingElapsedTimeInHours": {
+        "__type": "ValueOfInt32",
+        "value": 48
+      },
+      "MaximumDailyShipmentsPerStore": {
+        "__type": "ValueOfInt32",
+        "value": 100
+      },
+      "MaximumShipmentsPerOrder": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      },
+      "ItemOnlySplitLevelAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "ItemOrUnitSplitLevelAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "4BB38EF2-0D3D-4489-A826-E7FB44000107",
+    "type": "FulfillmentRouting",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "Competition Routing Provider",
+    "description": "The Competition Routing Provider is designed to provide high level routing principles for one or many different instances of Fulfillment Providers. It controls the Fulfillment Provider's routing priority phase by selecting all eligible Fulfillment Locations and offering a shipment too all of them, at the same time, to elicit a competition to seize it. Competition routing does not support order splitting.",
+    "implementationTypeName": "CompetitionFulfillmentRoutingProvider",
+    "displayName": {
+      "en-US": "Competition routing provider",
+      "en-CA": "Competition routing provider",
+      "fr-CA": "Fournisseur de routage (compétition)"
+    },
+    "isActive": true,
+    "values": {
+      "MaximumRoutingElapsedTimeInHours": {
+        "__type": "ValueOfInt32",
+        "value": 20
+      },
+      "MaximumDailyShipmentsPerStore": {
+        "__type": "ValueOfInt32",
+        "value": 100
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "2F036881-2E6C-4317-B343-60B8FE29A0C9",
+    "type": "Shipping",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "Ship from store (LRU)",
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "displayName": {
+      "en-US": "Ship From Store (LRU)",
+      "en-CA": "Ship From Store (LRU)",
+      "fr-CA": "Expédition à partir du magasin (LRU)"
+    },
+    "description": "The Ship from Store Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "01F61BCF-9885-4F1E-B03A-F86294E13BA4",
+      "FulfillmentCarrierProviderId": "c850b1c9-ea17-448e-aac2-7e82d794d207",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "Buy-online-pick-up-in-store (LRU)",
+    "implementationTypeName": "BOPISFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying LRU Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "displayName": {
+      "en-US": "BOPIS Fulfillment Provider (LRU)",
+      "en-CA": "BOPIS Fulfillment Provider (LRU)",
+      "fr-CA": "Fournisseur BOPIS (LRU)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "01F61BCF-9885-4F1E-B03A-F86294E13BA4",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "13DAC5EC-475E-4639-A152-9E695FB0AA2F",
+    "type": "Shipping",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "Ship from store (Competition)",
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "displayName": {
+      "en-US": "Ship From Store (Competition)",
+      "en-CA": "Ship From Store (Competition)",
+      "fr-CA": "Expédition à partir du magasin (Compétition)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "4BB38EF2-0D3D-4489-A826-E7FB44000107",
+      "FulfillmentCarrierProviderId": "c850b1c9-ea17-448e-aac2-7e82d794d207",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "B2F92C17-8457-487E-B77C-0B2E1EDF3B68",
+    "type": "Payment",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "Onsite payment",
+    "implementationTypeName": "OnSitePOSPaymentProvider",
+    "displayName": {
+      "en-US": "In store payment"
+    },
+    "isActive": true,
+    "values": {
+      "OnSiteCash": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OnSiteDebit": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OnSiteCredit": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OnSiteUnspecified": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "Cheque": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "Shipping",
+    "implementationTypeName": "FlatRateShippingProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 3
+      },
+      "EstimatedTransitInDays": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "PickUp",
+    "implementationTypeName": "PickUpShippingProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 2
+      }
+    },
+    "propertyConfigurations": {
+
+    }
+  },
+  {
+    "type": "Tax",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "Default",
+    "implementationTypeName": "DefaultTaxProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "propertyConfigurations": {
+
+    }
+  },
+  {
+    "type": "Tax",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "AvalaraTaxProvider",
+    "implementationTypeName": "AvalaraTaxProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "values": {
+      "EnableLogging": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "EnableAddressValidation": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "Timeout": {
+        "__type": "ValueOfInt32",
+        "value": 3000
+      },
+      "AccountNumber": "#AvalaraAccountNumber#",
+      "CompanyCode": "#AvalaraCompanyCode#",
+      "LicenceKey": "#AvalaraLicenceKey#",
+      "ServiceUrl": "#AvalaraServiceUrl#"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Payment",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "Moneris Store 2",
+    "implementationTypeName": "MonerisCanadaPaymentProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "values": {
+      "IsCvdVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAvsVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeAValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeBValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeCValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeDValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeGValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeIValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeMValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeNValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodePValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeRValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeSValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeUValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeWValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeXValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeYValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeZValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "MonerisHostname": "esqa.moneris.com",
+      "DefaultCulture": "en-CA",
+      "StoreId": "store2",
+      "ApiToken": "yesguy",
+      "PaymentCaptureUrl": "{PaymentCaptureUrl}",
+      "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
+      "HostedCardTokenizationProfileId": "ht1RRATIA38HFFK",
+      "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
+    },
+    "propertyConfigurations": {}
+  }
+]
+

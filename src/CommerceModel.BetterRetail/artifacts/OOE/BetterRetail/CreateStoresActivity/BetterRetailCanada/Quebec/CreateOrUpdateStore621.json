@@ -1,0 +1,211 @@
+{
+  "Number": "BRC-621",
+  "IsActive": true,
+  "Name": "BRC-Buckingham",
+  "DisplayName": {
+    "en-CA": "Buckingham",
+    "en-US": "Buckingham",
+    "fr-CA": "Buckingham"
+  },
+  "Description": {
+    "en-CA": "",
+    "en-US": "",
+    "fr-CA": ""
+  },
+  "StoreType": 0,
+  "Manager": null,
+  "PhoneNumber": "(819) 986-7429",
+  "PhoneExtension": null,
+  "FaxNumber": null,
+  "FaxExtension": null,
+  "Email": null,
+  "SupportPickUp": true,
+  "SupportDelivery": false,
+  "SupportShipping": false,
+  "ShipOrderFromOther": false,
+  "OperatingStatus": {
+    "Id": "F2AEF75D-862D-4590-9293-A797D2ED2EA6",
+    "AvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "DeliveryAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "DeliveryQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PropertyBag": null
+  },
+  "Schedule": {
+    "FulfillmentLocationId": "f2aef75d-862d-4590-9293-a797d2ed2ea6",
+    "OpeningHours": [
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:00:00",
+            "EndingTime": "17:30:00"
+          }
+        ],
+        "Day": 1,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:00:00",
+            "EndingTime": "17:30:00"
+          }
+        ],
+        "Day": 2,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:00:00",
+            "EndingTime": "17:30:00"
+          }
+        ],
+        "Day": 3,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:00:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 4,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:00:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 5,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:00:00",
+            "EndingTime": "17:00:00"
+          }
+        ],
+        "Day": 6,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "11:00:00",
+            "EndingTime": "16:00:00"
+          }
+        ],
+        "Day": 0,
+        "IsOpenedAllDay": false
+      }
+    ],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 0,
+    "PropertyBag": null
+  },
+  "PickUpSchedule": {
+    "FulfillmentLocationId": "f2aef75d-862d-4590-9293-a797d2ed2ea6",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 2,
+    "PropertyBag": null
+  },
+  "DeliverySchedule": {
+    "FulfillmentLocationId": "f2aef75d-862d-4590-9293-a797d2ed2ea6",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 1,
+    "PropertyBag": null
+  },
+  "TimeZone": "Eastern Standard Time",
+  "DeliveryScheduleManaged": false,
+  "PickUpScheduleManaged": false,
+  "InventoryLocationId": "BRC-621",
+  "InventoryProviderId": "OvertureQuantitative",
+  "IsInventoryEnabled": true,
+  "IsAtpEnabled": true,
+  "PropertyBag": null,
+  "Addresses": [
+    {
+      "Id": "7a453743-bcf2-41d7-9a68-10435eb9cae5",
+      "AddressName": "AddressFr",
+      "City": "Gatineau",
+      "CountryCode": "CA",
+      "RegionCode": "CA-QC",
+      "Line1": "444, Ave. de Buckingham",
+      "Line2": null,
+      "FirstName": null,
+      "LastName": null,
+      "PhoneNumber": "8199867429",
+      "PhoneExtension": null,
+      "PostalCode": "J8L 2G7",
+      "Latitude": 45.587898,
+      "Longitude": -75.416779,
+      "Email": null,
+      "Notes": null,
+      "IsPreferredBilling": false,
+      "IsPreferredShipping": false,
+      "PropertyBag": {
+        "Address_Id": 80
+      }
+    }
+  ],
+  "ScopeId": "BetterRetailCanada"
+}

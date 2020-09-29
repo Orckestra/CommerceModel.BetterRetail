@@ -1,0 +1,211 @@
+{
+  "Number": "BRC-484",
+  "IsActive": true,
+  "Name": "BRC-Place du Royaume",
+  "DisplayName": {
+    "en-CA": "Place du Royaume",
+    "en-US": "Place du Royaume",
+    "fr-CA": "Place du Royaume"
+  },
+  "Description": {
+    "en-CA": "",
+    "en-US": "",
+    "fr-CA": ""
+  },
+  "StoreType": 0,
+  "Manager": null,
+  "PhoneNumber": "418 545-4945",
+  "PhoneExtension": null,
+  "FaxNumber": null,
+  "FaxExtension": null,
+  "Email": null,
+  "SupportPickUp": true,
+  "SupportDelivery": false,
+  "SupportShipping": false,
+  "ShipOrderFromOther": false,
+  "OperatingStatus": {
+    "Id": "07AF4470-EC34-40DA-880B-43A0D8876A66",
+    "AvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "DeliveryAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "DeliveryQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PropertyBag": null
+  },
+  "Schedule": {
+    "FulfillmentLocationId": "07af4470-ec34-40da-880b-43a0d8876a66",
+    "OpeningHours": [
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "17:30:00"
+          }
+        ],
+        "Day": 1,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "17:30:00"
+          }
+        ],
+        "Day": 2,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "17:30:00"
+          }
+        ],
+        "Day": 3,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 4,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 5,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:00:00",
+            "EndingTime": "17:00:00"
+          }
+        ],
+        "Day": 6,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "11:30:00",
+            "EndingTime": "16:30:00"
+          }
+        ],
+        "Day": 0,
+        "IsOpenedAllDay": false
+      }
+    ],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 0,
+    "PropertyBag": null
+  },
+  "PickUpSchedule": {
+    "FulfillmentLocationId": "07af4470-ec34-40da-880b-43a0d8876a66",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 2,
+    "PropertyBag": null
+  },
+  "DeliverySchedule": {
+    "FulfillmentLocationId": "07af4470-ec34-40da-880b-43a0d8876a66",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 1,
+    "PropertyBag": null
+  },
+  "TimeZone": "Eastern Standard Time",
+  "DeliveryScheduleManaged": false,
+  "PickUpScheduleManaged": false,
+  "InventoryLocationId": "BRC-484",
+  "InventoryProviderId": "OvertureQuantitative",
+  "IsInventoryEnabled": true,
+  "IsAtpEnabled": true,
+  "PropertyBag": null,
+  "Addresses": [
+    {
+      "Id": "7d52b05a-54cb-4020-ba2f-dbad4f077e41",
+      "AddressName": "AddressFr",
+      "City": "Chicoutimi",
+      "CountryCode": "CA",
+      "RegionCode": "CA-QC",
+      "Line1": "1401, Boul. Talbot",
+      "Line2": null,
+      "FirstName": null,
+      "LastName": null,
+      "PhoneNumber": "4185454945",
+      "PhoneExtension": null,
+      "PostalCode": "G7H 5N6",
+      "Latitude": 48.406075,
+      "Longitude": -71.053223,
+      "Email": null,
+      "Notes": null,
+      "IsPreferredBilling": false,
+      "IsPreferredShipping": false,
+      "PropertyBag": {
+        "Address_Id": 29
+      }
+    }
+  ],
+  "ScopeId": "BetterRetailCanada"
+}

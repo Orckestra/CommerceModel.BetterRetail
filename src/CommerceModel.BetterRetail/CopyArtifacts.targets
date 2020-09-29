@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <InstallerFiles Include="$(TargetPath);$(TargetDir)$(TargetName).pdb" />
+    </ItemGroup>
+    <!--After build copy the generated binary containing the compiled workflows in the bin folders to be included in the package-->
+    <Copy SourceFiles="@(InstallerFiles)" SkipUnchangedFiles="true" DestinationFolder="$(TargetDir)\Package\artifacts\OOE" />
+    <Copy SourceFiles="@(InstallerFiles)" SkipUnchangedFiles="true" DestinationFolder="$(TargetDir)\Package\artifacts\OCS\bin" />
+  </Target>
+</Project>

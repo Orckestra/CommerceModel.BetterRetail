@@ -1,0 +1,48 @@
+﻿
+Hello {{Cart.Customer.FirstName}} {{Cart.Customer.LastName}},
+
+An order will be automatically created for you in a few days for your recurring orders. You will find in the following e-mail all details related to that upcoming order.
+
+Best regards,
+The {{Variables.CompanyName}} Team
+
+{% for shipment in Cart.Shipments %}
+SHIPMENT INFORMATION
+==============================
+
+{{shipment.ShippingAddress.FirstName}} {{shipment.ShippingAddress.LastName}}
+{{shipment.ShippingAddress.AddressName}}
+{{shipment.ShippingAddress.Line1}}
+{{shipment.ShippingAddress.Line2}}
+{{shipment.ShippingAddress.City}}, {{shipment.ShippingAddress.RegionDisplayName}}
+{{shipment.ShippingAddress.PostalCode}}
+{{shipment.ShippingAddress.CountryDisplayName}}
+{{shipment.ShippingAddress.PhoneNumber}} {{shipment.ShippingAddress.PhoneExtension}}
+
+{% endfor %}
+
+ORDER DETAILS
+==============================
+{% for item in Cart.LineItems%}
+Item: {{item.Quantity}} x {{item.ProductDisplayName}} ${% if item.SalePrice < item.ListPrice %}{{item.SalePrice | number: "#,0.00"}}{% else %}{{item.ListPrice | number: "#,0.00"}}{% endif %}{% if item.DiscountAmount > 0 %} (includes a discount of ${{item.DiscountAmount | number: "#,0.00"}}){% endif %}
+{% endfor %}
+Merchandise Total: ${{Cart.SubTotal | plus:Cart.DiscountTotal | number: "#,0.00" }}
+
+Discount: ${{Cart.DiscountTotal | number: "#,0.00" }}
+
+Sub-total: ${{Cart.SubTotal | number: "#,0.00" }}
+
+Shipping Total: ${{Cart.ShippingTotal | number: "#,0.00"}}
+
+Sales Tax: ${{Cart.TaxTotal | number: "#,0.00"}}
+
+Total: ${{Cart.Total | number: "#,0.00"}}
+
+
+ADDITIONAL INFORMATION
+==============================
+
+Please do not reply to this email message.
+It was sent from an address that cannot accept incoming email.
+ 
+Copyright {{Variables.CopyrightsYear}} {{Variables.CompanyName}}. All rights reserved.

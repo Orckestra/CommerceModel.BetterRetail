@@ -1,0 +1,32 @@
+﻿
+Bonjour,
+
+Il y a eu un problème lors de la création de la commande récurrente du client {{Customer.FirstName}} {{Customer.LastName}}.  Les produits de cette commande ont été reportés à une date ultérieure.
+
+Merci,
+L’équipe {{Variables.CompanyName}}
+
+
+PRODUITS REPORTÉS
+==============================
+
+{% for item in RescheduledProducts %}
+Produit: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
+Prix: {{item.TotalRegularPrice | money:"fr-CA" }}
+{% endfor %}
+
+
+TOUS LES PRODUITS QUI SERONT ENVOYÉS PÉRIODIQUEMENT
+==============================
+
+{% for item in AllProducts %}
+Produit: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
+Prix: {{item.TotalRegularPrice | money:"fr-CA" }}
+{% endfor %}
+
+
+INFORMATION ADDITIONNELLE
+==============================
+Ne pas répondre à ce courriel. L’adresse d’envoi ne peut recevoir de courriels.
+ 
+Copyright {{Variables.CopyrightsYear}} {{Variables.CompanyName}}. Tous droits réservés.

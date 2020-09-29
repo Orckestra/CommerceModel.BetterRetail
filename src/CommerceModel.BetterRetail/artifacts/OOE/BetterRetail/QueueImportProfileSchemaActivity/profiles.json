@@ -1,0 +1,446 @@
+[
+  {
+    "attributes": [
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Lookup",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "AvaTaxCustomerUsageType",
+        "isSearchable": false,
+        "name": "CustomerUsageType",
+        "description": "Customer usage type",
+        "displayName": {
+          "en-CA": "Customer usage type",
+          "en-US": "Customer usage type",
+          "fr-CA": "Customer usage type",
+          "fr-FR": "Customer usage type"
+        }
+      },
+      {
+        "groupId": "DEFAULT",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Text",
+        "isBuiltIn": true,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "minimum": 0,
+        "maximum": 64,
+        "isSearchable": true,
+        "name": "CreatedBy",
+        "displayName": {
+          "en-CA": "",
+          "en-US": "CreatedBy",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      },
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Text",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "maximum": 50,
+        "isSearchable": false,
+        "name": "CustomerCode",
+        "description": "Customer code",
+        "displayName": {
+          "en-CA": "Customer code",
+          "en-US": "Customer code",
+          "fr-CA": "Customer code",
+          "fr-FR": "Customer code"
+        }
+      },
+      {
+        "groupId": "DEFAULT",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Integer",
+        "isBuiltIn": true,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "isSearchable": true,
+        "name": "SequenceNumber",
+        "displayName": {
+          "en-CA": "",
+          "en-US": "SequenceNumber",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      },
+      {
+        "groupId": "DEFAULT",
+        "isRequired": true,
+        "displayOrder": 0,
+        "dataType": "Text",
+        "isBuiltIn": true,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "isSearchable": true,
+        "name": "Id",
+        "displayName": {
+          "en-CA": "",
+          "en-US": "Id",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      },
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Text",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "maximum": 25,
+        "isSearchable": false,
+        "name": "ExemptionNumber",
+        "description": "Exemption number",
+        "displayName": {
+          "en-CA": "Exemption number",
+          "en-US": "Exemption number",
+          "fr-CA": "Exemption number",
+          "fr-FR": "Exemption number"
+        }
+      },
+      {
+        "groupId": "DEFAULT",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Text",
+        "isBuiltIn": true,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "minimum": 0,
+        "maximum": 64,
+        "isSearchable": true,
+        "name": "LastModifiedBy",
+        "displayName": {
+          "en-CA": "",
+          "en-US": "LastModifiedBy",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      },
+      {
+        "groupId": "DEFAULT",
+        "isRequired": true,
+        "displayOrder": 0,
+        "dataType": "Boolean",
+        "isBuiltIn": true,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "defaultValue": true,
+        "isSearchable": true,
+        "name": "IsActive",
+        "displayName": {
+          "en-CA": "",
+          "en-US": "IsActive",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      },
+      {
+        "groupId": "DEFAULT",
+        "isRequired": true,
+        "displayOrder": 0,
+        "dataType": "DateTime",
+        "isBuiltIn": true,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "isSearchable": true,
+        "name": "Created",
+        "displayName": {
+          "en-CA": "",
+          "en-US": "Created",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      },
+      {
+        "groupId": "DEFAULT",
+        "isRequired": true,
+        "displayOrder": 0,
+        "dataType": "DateTime",
+        "isBuiltIn": true,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "isSearchable": true,
+        "name": "LastModified",
+        "displayName": {
+          "en-CA": "",
+          "en-US": "LastModified",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      },
+      {
+        "groupId": "DEFAULT",
+        "isRequired": true,
+        "displayOrder": 0,
+        "dataType": "Text",
+        "isBuiltIn": true,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "minimum": 0,
+        "maximum": 64,
+        "isSearchable": true,
+        "name": "Name",
+        "displayName": {
+          "en-CA": "",
+          "en-US": "Name",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      }
+    ],
+    "isSharedEntity": false,
+    "name": "AvaTaxProfile",
+    "description": "AvaTax customer profile for tax exemptions codes",
+    "displayName": {
+      "en-CA": "AvaTax profile",
+      "en-US": "AvaTax profile",
+      "fr-CA": "Profil AvaTax",
+      "fr-FR": "Profil AvaTax"
+    }
+  },
+  {
+    "attributes": [
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "EntityReference",
+        "isBuiltIn": false,
+        "allowMultipleValues": true,
+        "multilingual": false,
+        "referenceTypeName": "AvaTaxProfile",
+        "isSearchable": false,
+        "name": "CustomerAvaTaxProfile",
+        "description": "Customer AvaTax profile",
+        "displayName": {
+          "en-CA": "AvaTax profile",
+          "en-US": "AvaTax profile",
+          "fr-CA": "AvaTax profile",
+          "fr-FR": "AvaTax profile"
+        }
+      },
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "EntityReference",
+        "isBuiltIn": false,
+        "allowMultipleValues": true,
+        "multilingual": false,
+        "referenceTypeName": "Newsletter",
+        "isSearchable": false,
+        "name": "Newsletter",
+        "displayName": {
+          "en-US": "",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      },
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Lookup",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "Age",
+        "isSearchable": false,
+        "name": "Age",
+        "displayName": {
+          "ar-QA": "",
+          "ar-YE": "",
+          "de-DE": "",
+          "en-CA": "",
+          "en-US": "",
+          "es-AR": "",
+          "es-BO": "",
+          "es-CL": "",
+          "es-CO": "",
+          "es-CR": "",
+          "es-DO": "",
+          "es-EC": "",
+          "es-GT": "",
+          "es-HN": "",
+          "es-SV": "",
+          "fr-BE": "",
+          "fr-CA": "",
+          "fr-FR": "",
+          "it-IT": "",
+          "ja-JP": "",
+          "ko-KR": "",
+          "nb-NO": "",
+          "nl-BE": "",
+          "nl-NL": "",
+          "nn-NO": "",
+          "ru-RU": "",
+          "sa-IN": "",
+          "zh-CN": "",
+          "zh-HK": "",
+          "zh-MO": "",
+          "zh-SG": "",
+          "zh-TW": ""
+        }
+      },
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Lookup",
+        "isBuiltIn": false,
+        "allowMultipleValues": true,
+        "multilingual": false,
+        "referenceTypeName": "WineTypes",
+        "isSearchable": false,
+        "name": "PreferredWineTypes",
+        "displayName": {
+          "ar-QA": "",
+          "ar-YE": "",
+          "de-DE": "",
+          "en-CA": "",
+          "en-US": "Preferred Wine Types",
+          "es-AR": "",
+          "es-BO": "",
+          "es-CL": "",
+          "es-CO": "",
+          "es-CR": "",
+          "es-DO": "",
+          "es-EC": "",
+          "es-GT": "",
+          "es-HN": "",
+          "es-SV": "",
+          "fr-BE": "",
+          "fr-CA": "",
+          "fr-FR": "",
+          "it-IT": "",
+          "ja-JP": "",
+          "ko-KR": "",
+          "nb-NO": "",
+          "nl-BE": "",
+          "nl-NL": "",
+          "nn-NO": "",
+          "ru-RU": "",
+          "sa-IN": "",
+          "zh-CN": "",
+          "zh-HK": "",
+          "zh-MO": "",
+          "zh-SG": "",
+          "zh-TW": ""
+        }
+      },
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "EntityReference",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "AdditionalInformation",
+        "isSearchable": false,
+        "name": "AdditionalInformation",
+        "displayName": {
+          "en-US": "Additional Information",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      }
+    ],
+    "isSharedEntity": true,
+    "name": "CUSTOMER",
+    "displayName": {
+      "ar-QA": "",
+      "ar-YE": "",
+      "de-DE": "",
+      "en-CA": "",
+      "en-US": "Customer",
+      "es-AR": "",
+      "es-BO": "",
+      "es-CL": "",
+      "es-CO": "",
+      "es-CR": "",
+      "es-DO": "",
+      "es-EC": "",
+      "es-GT": "",
+      "es-HN": "",
+      "es-SV": "",
+      "fr-BE": "",
+      "fr-CA": "Client",
+      "fr-FR": "",
+      "it-IT": "Cliente",
+      "ja-JP": "",
+      "ko-KR": "",
+      "nb-NO": "",
+      "nl-BE": "",
+      "nl-NL": "",
+      "nn-NO": "",
+      "ru-RU": "",
+      "sa-IN": "",
+      "zh-CN": "",
+      "zh-HK": "",
+      "zh-MO": "",
+      "zh-SG": "",
+      "zh-TW": ""
+    }
+  },
+  {
+    "attributes": [
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Text",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "isSearchable": false,
+        "name": "FulfillmentCompetitionStatusOfferedDestinationEmailAddress",
+        "displayName": {
+          "en-US": "Destination email addresses for offered shipments",
+          "en-CA": "Destination email addresses for offered shipments",
+          "fr-CA": "Courriel de destination pour les envois offerts",
+          "it-IT": "Destination email addresses for offered shipments"
+        }
+      },
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Text",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "isSearchable": false,
+        "name": "FulfillmentCompetitionStatusSeizedDestinationEmailAddress",
+        "displayName": {
+          "en-US": "Destination email addresses for seized shipments",
+          "en-CA": "Destination email addresses for seized shipments",
+          "fr-CA": "Courriel de destination pour les envois saisis",
+          "it-IT": "Destination email addresses for seized shipments"
+        }
+      }
+    ],
+    "isSharedEntity": true,
+    "name": "STORE",
+    "displayName": {
+      "en-US": "Store",
+      "en-CA": "Store",
+      "fr-CA": "Magasin",
+      "it-IT": "Negozio"
+    }
+  }
+]

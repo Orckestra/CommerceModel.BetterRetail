@@ -1,0 +1,24 @@
+[
+  {
+    "id": "DEFAULT",
+    "type": "Regular",
+    "category": "Regular",
+    "sequenceNumber": 0,
+    "displayName": {
+      "en-CA": "Regular Price",
+      "en-US": "Default Price List",
+      "fr-CA": "Prix r\u00E9gulier"
+    }
+  },
+  {
+    "id": "DISCOUNT",
+    "type": "Discount",
+    "category": "OnSale",
+    "sequenceNumber": 1,
+    "displayName": {
+      "en-CA": "Sale Price",
+      "en-US": "Sale Price List",
+      "fr-CA": "Prix de vente"
+    }
+  }
+]

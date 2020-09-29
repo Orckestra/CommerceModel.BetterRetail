@@ -1,0 +1,32 @@
+﻿
+Bonjour {{Customer.FirstName}} {{Customer.LastName}},
+
+Vous trouverez dans ce courriel les produits qui ne vous seront plus envoyé de façon périodique.
+
+Merci,
+L’équipe {{Variables.CompanyName}}
+
+
+PRODUITS QUI NE VOUS SERONT PLUS ENVOYÉ DE FAÇON PÉRIODIQUE
+==============================
+
+{% for item in DeletedProducts %}
+Produit: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
+Prix: {{item.TotalRegularPrice | money:"fr-CA" }}
+{% endfor %}
+
+
+TOUS LES PRODUITS QUI SERONT ENVOYÉS PÉRIODIQUEMENT
+==============================
+
+{% for item in AllProducts %}
+Produit: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
+Prix: {{item.TotalRegularPrice | money:"fr-CA" }}
+{% endfor %}
+
+
+INFORMATION ADDITIONNELLE
+==============================
+Ne pas répondre à ce courriel. L’adresse d’envoi ne peut recevoir de courriels.
+ 
+Copyright {{Variables.CopyrightsYear}} {{Variables.CompanyName}}. Tous droits réservés.

@@ -1,0 +1,211 @@
+{
+  "Number": "BRC-502",
+  "IsActive": true,
+  "Name": "BRC-Saint-Eustache",
+  "DisplayName": {
+    "en-CA": "Saint-Eustache",
+    "en-US": "Saint-Eustache",
+    "fr-CA": "Saint-Eustache"
+  },
+  "Description": {
+    "en-CA": "",
+    "en-US": "",
+    "fr-CA": ""
+  },
+  "StoreType": 0,
+  "Manager": null,
+  "PhoneNumber": "450 472-5485",
+  "PhoneExtension": null,
+  "FaxNumber": null,
+  "FaxExtension": null,
+  "Email": null,
+  "SupportPickUp": true,
+  "SupportDelivery": false,
+  "SupportShipping": false,
+  "ShipOrderFromOther": false,
+  "OperatingStatus": {
+    "Id": "2AE765B4-AF45-48D0-A063-66ED7068C8B7",
+    "AvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "DeliveryAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "DeliveryQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PropertyBag": null
+  },
+  "Schedule": {
+    "FulfillmentLocationId": "2ae765b4-af45-48d0-a063-66ed7068c8b7",
+    "OpeningHours": [
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "18:00:00"
+          }
+        ],
+        "Day": 1,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "18:00:00"
+          }
+        ],
+        "Day": 2,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "18:00:00"
+          }
+        ],
+        "Day": 3,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 4,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 5,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:00:00",
+            "EndingTime": "17:00:00"
+          }
+        ],
+        "Day": 6,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "12:00:00",
+            "EndingTime": "17:00:00"
+          }
+        ],
+        "Day": 0,
+        "IsOpenedAllDay": false
+      }
+    ],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 0,
+    "PropertyBag": null
+  },
+  "PickUpSchedule": {
+    "FulfillmentLocationId": "2ae765b4-af45-48d0-a063-66ed7068c8b7",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 2,
+    "PropertyBag": null
+  },
+  "DeliverySchedule": {
+    "FulfillmentLocationId": "2ae765b4-af45-48d0-a063-66ed7068c8b7",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 1,
+    "PropertyBag": null
+  },
+  "TimeZone": "Eastern Standard Time",
+  "DeliveryScheduleManaged": false,
+  "PickUpScheduleManaged": false,
+  "InventoryLocationId": "BRC-502",
+  "InventoryProviderId": "OvertureQuantitative",
+  "IsInventoryEnabled": true,
+  "IsAtpEnabled": true,
+  "PropertyBag": null,
+  "Addresses": [
+    {
+      "Id": "cac4deb0-606a-4a3a-be63-e0ac98200e42",
+      "AddressName": "AddressFr",
+      "City": "Saint-Eustache",
+      "CountryCode": "CA",
+      "RegionCode": "CA-QC",
+      "Line1": "200, Boul. Arthur-Sauvé",
+      "Line2": null,
+      "FirstName": null,
+      "LastName": null,
+      "PhoneNumber": "4504725485",
+      "PhoneExtension": null,
+      "PostalCode": "J7R 2H9",
+      "Latitude": 45.561356,
+      "Longitude": -73.894653,
+      "Email": null,
+      "Notes": null,
+      "IsPreferredBilling": false,
+      "IsPreferredShipping": false,
+      "PropertyBag": {
+        "Address_Id": 37
+      }
+    }
+  ],
+  "ScopeId": "BetterRetailCanada"
+}

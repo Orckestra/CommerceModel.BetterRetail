@@ -1,0 +1,211 @@
+{
+  "Number": "BRC-650",
+  "IsActive": true,
+  "Name": "BRC-3rd Street",
+  "DisplayName": {
+    "en-CA": "3rd Street",
+    "en-US": "3rd Street",
+    "fr-CA": "3e Rue"
+  },
+  "Description": {
+    "en-CA": "",
+    "en-US": "",
+    "fr-CA": ""
+  },
+  "StoreType": 0,
+  "Manager": null,
+  "PhoneNumber": "(418) 748-4243",
+  "PhoneExtension": null,
+  "FaxNumber": null,
+  "FaxExtension": null,
+  "Email": null,
+  "SupportPickUp": true,
+  "SupportDelivery": false,
+  "SupportShipping": false,
+  "ShipOrderFromOther": false,
+  "OperatingStatus": {
+    "Id": "C7708337-8D06-4728-A843-02CF675CAC91",
+    "AvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "DeliveryAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "DeliveryQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PropertyBag": null
+  },
+  "Schedule": {
+    "FulfillmentLocationId": "c7708337-8d06-4728-a843-02cf675cac91",
+    "OpeningHours": [
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "17:30:00"
+          }
+        ],
+        "Day": 1,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "17:30:00"
+          }
+        ],
+        "Day": 2,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "17:30:00"
+          }
+        ],
+        "Day": 3,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 4,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 5,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "17:00:00"
+          }
+        ],
+        "Day": 6,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "12:00:00",
+            "EndingTime": "16:00:00"
+          }
+        ],
+        "Day": 0,
+        "IsOpenedAllDay": false
+      }
+    ],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 0,
+    "PropertyBag": null
+  },
+  "PickUpSchedule": {
+    "FulfillmentLocationId": "c7708337-8d06-4728-a843-02cf675cac91",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 2,
+    "PropertyBag": null
+  },
+  "DeliverySchedule": {
+    "FulfillmentLocationId": "c7708337-8d06-4728-a843-02cf675cac91",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 1,
+    "PropertyBag": null
+  },
+  "TimeZone": "Eastern Standard Time",
+  "DeliveryScheduleManaged": false,
+  "PickUpScheduleManaged": false,
+  "InventoryLocationId": "BRC-650",
+  "InventoryProviderId": "OvertureQuantitative",
+  "IsInventoryEnabled": true,
+  "IsAtpEnabled": true,
+  "PropertyBag": null,
+  "Addresses": [
+    {
+      "Id": "f5b2bd79-d492-4052-9334-bb6c21859f3a",
+      "AddressName": "AddressFr",
+      "City": "Chibougamau",
+      "CountryCode": "CA",
+      "RegionCode": "CA-QC",
+      "Line1": "434, 3e Rue",
+      "Line2": null,
+      "FirstName": null,
+      "LastName": null,
+      "PhoneNumber": "4187484243",
+      "PhoneExtension": null,
+      "PostalCode": "G8P 1N7",
+      "Latitude": 49.913651,
+      "Longitude": -74.360977,
+      "Email": null,
+      "Notes": null,
+      "IsPreferredBilling": false,
+      "IsPreferredShipping": false,
+      "PropertyBag": {
+        "Address_Id": 89
+      }
+    }
+  ],
+  "ScopeId": "BetterRetailCanada"
+}

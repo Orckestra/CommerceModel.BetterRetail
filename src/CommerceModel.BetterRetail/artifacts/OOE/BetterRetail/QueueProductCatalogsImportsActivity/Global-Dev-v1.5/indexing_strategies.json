@@ -1,0 +1,30 @@
+[{
+        "strategyId": "4ef66583ed7f4f43859430928f590eb1",
+        "strategyName": "Product",
+        "scopeName": "Global",
+        "parameters": {
+            "ProductDefinition": {
+                "__type": "Orckestra.Overture.Entities.ValueContainer`1[[System.String, mscorlib]], Orckestra.Overture.Entities",
+                "value": "RetailVariantSpecifics"
+            },
+            "SearchOption": {
+                "__type": "Orckestra.Overture.Entities.ValueContainer`1[[Orckestra.Overture.Entities.Search.VariantSearchOption, Orckestra.Overture.Entities]], Orckestra.Overture.Entities",
+                "value": "SingleRecordPerProduct"
+            }
+        }
+    }, {
+        "strategyId": "85df7445f3cd44ccb3df49b11abb9709",
+        "strategyName": "Product",
+        "scopeName": "Global",
+        "parameters": {
+            "ProductDefinition": {
+                "__type": "Orckestra.Overture.Entities.ValueContainer`1[[System.String, mscorlib]], Orckestra.Overture.Entities",
+                "value": "RetailWithVariant"
+            },
+            "SearchOption": {
+                "__type": "Orckestra.Overture.Entities.ValueContainer`1[[Orckestra.Overture.Entities.Search.VariantSearchOption, Orckestra.Overture.Entities]], Orckestra.Overture.Entities",
+                "value": "SingleRecordPerProduct"
+            }
+        }
+    }
+]

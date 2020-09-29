@@ -1,0 +1,211 @@
+{
+  "Number": "BRC-635",
+  "IsActive": true,
+  "Name": "BRC-Les Galeries de la Baie",
+  "DisplayName": {
+    "en-CA": "Les Galeries de la Baie",
+    "en-US": "Les Galeries de la Baie",
+    "fr-CA": "Les Galeries de la Baie"
+  },
+  "Description": {
+    "en-CA": "",
+    "en-US": "",
+    "fr-CA": ""
+  },
+  "StoreType": 0,
+  "Manager": null,
+  "PhoneNumber": "(418) 544-0877",
+  "PhoneExtension": null,
+  "FaxNumber": null,
+  "FaxExtension": null,
+  "Email": null,
+  "SupportPickUp": true,
+  "SupportDelivery": false,
+  "SupportShipping": false,
+  "ShipOrderFromOther": false,
+  "OperatingStatus": {
+    "Id": "EC0925A4-0FDC-4195-8496-F3CF6158CC73",
+    "AvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "DeliveryAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "DeliveryQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PropertyBag": null
+  },
+  "Schedule": {
+    "FulfillmentLocationId": "ec0925a4-0fdc-4195-8496-f3cf6158cc73",
+    "OpeningHours": [
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "17:30:00"
+          }
+        ],
+        "Day": 1,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "17:30:00"
+          }
+        ],
+        "Day": 2,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "17:30:00"
+          }
+        ],
+        "Day": 3,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 4,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 5,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:30:00",
+            "EndingTime": "17:00:00"
+          }
+        ],
+        "Day": 6,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "11:00:00",
+            "EndingTime": "16:00:00"
+          }
+        ],
+        "Day": 0,
+        "IsOpenedAllDay": false
+      }
+    ],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 0,
+    "PropertyBag": null
+  },
+  "PickUpSchedule": {
+    "FulfillmentLocationId": "ec0925a4-0fdc-4195-8496-f3cf6158cc73",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 2,
+    "PropertyBag": null
+  },
+  "DeliverySchedule": {
+    "FulfillmentLocationId": "ec0925a4-0fdc-4195-8496-f3cf6158cc73",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 1,
+    "PropertyBag": null
+  },
+  "TimeZone": "Eastern Standard Time",
+  "DeliveryScheduleManaged": false,
+  "PickUpScheduleManaged": false,
+  "InventoryLocationId": "BRC-635",
+  "InventoryProviderId": "OvertureQuantitative",
+  "IsInventoryEnabled": true,
+  "IsAtpEnabled": true,
+  "PropertyBag": null,
+  "Addresses": [
+    {
+      "Id": "968e4ae2-e173-4785-9db0-deec025babb0",
+      "AddressName": "AddressFr",
+      "City": "La Baie",
+      "CountryCode": "CA",
+      "RegionCode": "CA-QC",
+      "Line1": "2100, Rue Bagot",
+      "Line2": null,
+      "FirstName": null,
+      "LastName": null,
+      "PhoneNumber": "4185440877",
+      "PhoneExtension": null,
+      "PostalCode": "G7B 3Z3",
+      "Latitude": 48.33569,
+      "Longitude": -70.894699,
+      "Email": null,
+      "Notes": null,
+      "IsPreferredBilling": false,
+      "IsPreferredShipping": false,
+      "PropertyBag": {
+        "Address_Id": 85
+      }
+    }
+  ],
+  "ScopeId": "BetterRetailCanada"
+}

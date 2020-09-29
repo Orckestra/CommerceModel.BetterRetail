@@ -1,0 +1,154 @@
+{
+  "number": "310",
+  "isActive": true,
+  "name": "North's Bay",
+  "displayName": {
+    "en-CA": "",
+    "en-US": "",
+    "fr-CA": ""
+  },
+  "description": {
+    "en-CA": "",
+    "en-US": "",
+    "fr-CA": ""
+  },
+  "storeType": "Physical",
+  "isPickUpLocation": false,
+  "supportPickUp": true,
+  "supportDelivery": true,
+  "supportShipping": true,
+  "supportShipToStore": false,
+  "operatingStatus": {
+    "id": "4507CEB4-679D-479C-84BC-3CCE53731E1E",
+    "availabilityStatus": {
+      "isAvailable": true,
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "deliveryAvailabilityStatus": {
+      "isAvailable": true,
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "deliveryQuoteTime": {
+      "duration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      },
+      "couldBeDelayed": false,
+      "delayEstimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "pickupAvailabilityStatus": {
+      "isAvailable": true,
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "pickupQuoteTime": {
+      "duration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      },
+      "couldBeDelayed": false,
+      "delayEstimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    }
+  },
+  "schedule": {
+    "fulfillmentLocationId": "4507ceb4-679d-479c-84bc-3cce53731e1e",
+    "openingHours": [
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Monday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Tuesday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Wednesday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Thursday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Friday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Saturday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Sunday",
+        "isOpenedAllDay": true
+      }
+    ],
+    "openingHourExceptions": [],
+    "scheduleType": "OpeningHours"
+  },
+  "pickUpSchedule": {
+    "fulfillmentLocationId": "4507ceb4-679d-479c-84bc-3cce53731e1e",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": "Pickup"
+  },
+  "deliverySchedule": {
+    "fulfillmentLocationId": "4507ceb4-679d-479c-84bc-3cce53731e1e",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": "Delivery"
+  },
+  "timeZone": "Atlantic Standard Time",
+  "deliveryScheduleManaged": false,
+  "pickUpScheduleManaged": false,
+  "inventoryLocationId": "310",
+  "inventoryProviderId": "OvertureScheduled",
+  "IsInventoryEnabled": true,
+  "IsAtpEnabled": true,
+  "addresses": [
+    {
+      "id": "0ed3a38de9f94cddb896909e102c7072",
+      "city": "Pleasant Valley",
+      "countryCode": "CA",
+      "regionCode": "CA-PE",
+      "line1": "243 Alton Road",
+      "postalCode": "C0A1E0",
+      "isPreferredBilling": true,
+      "isPreferredShipping": true,
+      "propertyBag": {
+        "Address_Id": {
+          "__type": "ValueOfInt32",
+          "value": 37457
+        }
+      }
+    }
+  ],
+  "scopeId": "BetterRetailCanada"
+}

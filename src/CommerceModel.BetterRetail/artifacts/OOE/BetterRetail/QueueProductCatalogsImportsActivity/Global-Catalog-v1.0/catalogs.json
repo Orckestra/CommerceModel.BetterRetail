@@ -1,0 +1,7 @@
+{
+    "id": "Global",
+    "isActive": true,
+    "defaultLanguage": "en-US",
+    "languages": ["en-CA", "en-US", "fr-CA"],
+    "overrideParent": false
+}

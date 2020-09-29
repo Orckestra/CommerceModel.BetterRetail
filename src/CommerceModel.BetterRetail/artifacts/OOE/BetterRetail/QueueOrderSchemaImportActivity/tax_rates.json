@@ -1,0 +1,48 @@
+[
+  {
+    "ratePercentage": 0.09975,
+    "taxCategoryName": "Taxable",
+    "taxJurisdictionGroupName": "Quebec",
+    "scopeId": "BetterRetailCanada",
+    "name": "QST",
+    "displayName": {
+      "en-CA": "QST (9.975%)",
+      "fr-CA": "TVQ (9.975%)"
+    }
+  },
+  {
+    "ratePercentage": 0.05,
+    "taxCategoryName": "Taxable",
+    "taxJurisdictionGroupName": "Canada",
+    "scopeId": "BetterRetailCanada",
+    "name": "GST",
+    "displayName": {
+      "en-CA": "GST (5%)",
+      "fr-CA": "TPS (5%)"
+    }
+  },
+  {
+    "ratePercentage": 0.0333,
+    "taxCategoryName": "Taxable",
+    "taxJurisdictionGroupName": "BetterRetailNorway",
+    "scopeId": "BetterRetailNorway",
+    "name": "Tax 2",
+    "displayName": { "en-US": "Tax 2 (3.33%)" }
+  },
+  {
+    "ratePercentage": 0.025,
+    "taxCategoryName": "Taxable",
+    "taxJurisdictionGroupName": "BetterRetailNorway",
+    "scopeId": "BetterRetailNorway",
+    "name": "Tax 1",
+    "displayName": { "en-US": "Tax 1 (2.5%)" }
+  },
+  {
+    "ratePercentage": 0.21,
+    "taxCategoryName": "Taxable",
+    "taxJurisdictionGroupName": "BetterRetailNetherlands",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "Tax 1",
+    "displayName": { "en-US": "Tax 1 (21%)" }
+  }
+]

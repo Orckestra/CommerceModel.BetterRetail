@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- So that mobile will display zoomed in -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- enable media queries for windows phone 8 -->
+    <meta name="format-detection" content="telephone=no"> <!-- disable auto telephone linking in iOS -->
+    <title>Order is ready for pickup</title>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        table {
+            border-spacing: 0;
+        }
+
+            table td {
+                border-collapse: collapse;
+            }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+            .ExternalClass,
+            .ExternalClass p,
+            .ExternalClass span,
+            .ExternalClass font,
+            .ExternalClass td,
+            .ExternalClass div {
+                line-height: 100%;
+            }
+
+        .ReadMsgBody {
+            width: 100%;
+            background-color: #ebebeb;
+        }
+
+        table {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        .yshortcuts a {
+            border-bottom: none !important;
+        }
+
+        @media screen and (max-width: 599px) {
+            .force-row,
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .container-padding {
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+            }
+        }
+
+        .ios-footer a {
+            color: #aaaaaa !important;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body style="margin:0; padding:0;" bgcolor="#F0F0F0" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+    <!-- 100% background wrapper (grey background) -->
+    <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" bgcolor="#F0F0F0">
+        <tr>
+            <td align="center" valign="top" bgcolor="#F0F0F0" style="background-color: #F0F0F0;">
+
+                <br>
+
+                <!-- 600px container (white background) -->
+                <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" style="width:600px;max-width:600px">
+                    <tr>
+                        <td class="container-padding content" align="left" style="padding-left: 24px; padding-right: 24px; padding-top: 12px; padding-bottom: 12px; background-color: #ffffff">
+                            <div style="padding-top:5px; padding-bottom:10px; border-bottom:1px solid #d0d8de;">
+                                <img src="https://occdev0localdeployment.blob.core.windows.net/images/better-retail.png" alt="icon" class="title-icon">
+                            </div>
+                            <br />
+                            <div class="title" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; color: #374550">
+                                Hello {{Order.Cart.Customer.FirstName}} {{Order.Cart.Customer.LastName}},<br />
+
+                                You just completed your order on <a href="{{Variables.RootUrl}}" style="color: #0984b2;" target="_blank">{{Variables.RootUrl}}</a>. You will find in the following e-mail all details related to that order:
+                            </div>                                                        
+                            <div class="body-text">
+                                <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; font-size: 14px;">
+									<tbody>
+										<tr>
+											<td style="padding-bottom: 30px;">
+												<h2 style="font-size: 24px; margin-bottom: 0px;">
+													Order: {{Order.OrderNumber}}</h2>
+												<p style="font-size: 18px; margin-top: 0px;">
+													<strong>Order Date: {{Order.Created | date: "D"}}</strong></p>
+											</td>
+											<td style="padding-bottom: 30px;">
+												&nbsp;</td>
+										</tr>
+										<tr>
+											<td style="vertical-align: top;">
+												<p style="font-size: 18px; margin-top: 0px; margin-bottom: 5px;">
+													<strong>Shipping Address</strong></p>
+												<p style="line-height: 20px; margin-top: 0px; margin-bottom: 0px;">
+													{{Order.Cart.Shipments[0].address.FirstName}} {{Order.Cart.Shipments[0].address.LastName}}</p>
+												<p style="line-height: 20px; margin-top: 0px; margin-bottom: 0px;">
+													{{Order.Cart.Shipments[0].address.Line1}}</p>
+												<p style="line-height: 20px; margin-top: 0px; margin-bottom: 0px;">
+													{{Order.Cart.Shipments[0].address.Line2}}</p>
+												<p style="line-height: 20px; margin-top: 0px; margin-bottom: 0px;">
+													{{Order.Cart.Shipments[0].address.PostalCode}}</p>
+												<p style="line-height: 20px; margin-top: 0px; margin-bottom: 0px;">
+													{{Order.Cart.Shipments[0].address.City}}</p>
+												<p style="line-height: 20px; margin-top: 0px; margin-bottom: 0px;">
+													{{Order.Cart.Shipments[0].address.RegionCode}}</p>
+											</td>
+											<td style="vertical-align: top;">
+												<p style="font-size: 18px; margin-top: 0px; margin-bottom: 5px;">
+													<strong>Billing Address</strong></p>
+												<p style="line-height: 20px; margin-top: 0px; margin-bottom: 0px;">
+													{{Order.Cart.Payments[0].BillingAddress.FirstName}} {{Order.Cart.Payments[0].BillingAddress.LastName}}</p>
+												<p style="line-height: 20px; margin-top: 0px; margin-bottom: 0px;">
+													{{Order.Cart.Payments[0].BillingAddress.Line1}}</p>
+												<p style="line-height: 20px; margin-top: 0px; margin-bottom: 0px;">
+													{{Order.Cart.Payments[0].BillingAddress.Line2}}</p>
+												<p style="line-height: 20px; margin-top: 0px; margin-bottom: 0px;">
+													{{Order.Cart.Payments[0].BillingAddress.PostalCode}}</p>
+												<p style="line-height: 20px; margin-top: 0px; margin-bottom: 0px;">
+													{{Order.Cart.Payments[0].BillingAddress.City}}</p>
+												<p style="line-height: 20px; margin-top: 0px; margin-bottom: 0px;">
+													{{Order.Cart.Payments[0].BillingAddress.RegionCode}}</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>							
+                            </div>
+                            <br />
+                            <div class="body-text">
+                                <p style="font-size: 18px; margin-top: 0px;">
+									<strong>Order details</strong></p>
+								
+								<table border="0" cellpadding="0" cellspacing="0" style="width: 100%; text-align: center; font-size: 14px; vertical-align: middle;border-color: #eaeaea; border-width: 1px; border-style: solid;">
+									<thead style="background-color: #000000; color: #ffffff; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
+										<tr>
+											<th colspan="2" style="padding: 10px;">
+												<span style="font-weight: normal;">Product</span></th>
+											<th style="padding: 10px;">
+												<span style="font-weight: normal;">Unit Price</span></th>
+											<th style="padding: 10px;">
+												<span style="font-weight: normal;">Quantity</span></th>
+											<th style="padding: 10px;">
+												<span style="font-weight: normal;">Sub-total</span></th>
+										</tr>
+									</thead>									
+									<tbody>
+										{% for shipment in Order.Cart.Shipments %}
+										{% for item in shipment.LineItems%}
+										<tr>
+											<!--<td style="border-bottom: 1px solid #e1e4ea; padding: 20px 0;"><img src="{{item.ImageURL}}" width="76" alt="product-image" style="display: block;" /></td>-->
+											<td colspan="2" style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
+												<strong>{{item.ProductSummary.DisplayName}}</strong><br />
+												{% for kva in item.kvaDisplayValues%}
+												<span>{{kva}}</span><br />
+												{% endfor %}
+											</td>
+											<td style="padding: 20px 0px; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
+												<strong>{{item.PlacedPrice | money:"en-US" }}</strong></td>
+											<td style="padding: 20px 0px; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
+												<strong>{{item.Quantity}}</strong></td>
+											<td style="padding: 20px 10px 20px 0px; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
+												<strong>{{item.Total | money:"en-US" }}</strong>
+												{% for fee in item.additionalFees%}
+												<br><span style="font-size:11px;">+ {{fee.Amount | money:"en-US" }}{% if fee.calculationRule == "PerUnit" %}/unit{% else %}{% endif %} of {{ fee.DisplayName | localize:"en-US" }}</span>
+												{% endfor %}
+											</td>
+										</tr>
+										{% endfor %}
+										{% endfor %}
+									</tbody>
+									<tfoot style="text-align: right;">
+										<tr>
+											<td colspan="2"></td>
+											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
+												<span style="text-transform: none;">Merchandise total: </span>
+											</td>
+											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
+												<strong>{{ Order.Cart.MerchandiseTotal | money:"en-US" }}</strong>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2"></td>
+											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
+												<span style="text-transform: none;">Savings: </span>
+											</td>
+											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
+												<strong>{{ Order.Cart.DiscountTotal | money:"en-US" }}</strong>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2"></td>
+											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
+												<span style="text-transform: none;">Fulfillment cost: </span>
+											</td>
+											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
+												<strong>{{ Order.Cart.FulfillmentCost | money:"en-US" }}</strong>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2"></td>
+											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
+												<span>Sub-Total :</span>
+											</td>
+											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
+												<strong>{{ Order.Cart.SubTotal | money:"en-US" }}</strong>
+											</td>
+										</tr>
+										{% for fee in Order.Cart.ShipmentFees %}
+											{% if fee.Taxable == "true" %}
+											<tr>
+												<td colspan="2"></td>
+												<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
+													<span style="text-transform: none;">{{ fee.DisplayName | localize:"en-US" }}</span>
+												</td>
+												<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
+													<strong>{{ fee.Amount | money:"en-US" }}</strong>
+												</td>
+											</tr>
+											{% endif %}
+										{% endfor %}	
+										{% for fee in Order.Cart.LineItemFees %}
+											{% if fee.Taxable == "true" %}
+											<tr>
+												<td colspan="2"></td>
+												<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
+													<span style="text-transform: none;">{{ fee.DisplayName | localize:"en-US" }}</span>
+												</td>
+												<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
+													<strong>{{ fee.Amount | money:"en-US" }}</strong>
+												</td>
+											</tr>
+											{% endif %}
+										{% endfor %}
+										{% for tax in Order.Cart.AggregatedTaxes %}
+											<tr>
+												<td colspan="2"></td>
+												<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
+													<span style="text-transform: none;">{{ tax.DisplayName | localize:"en-US" }}</span>
+												</td>
+												<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
+													<strong>{{ tax.TaxTotal | money:"en-US" }}</strong>
+												</td>
+											</tr>
+										{% endfor %}
+										{% for fee in Order.Cart.ShipmentFees %}
+											{% if fee.Taxable == "false" %}
+											<tr>
+												<td colspan="2"></td>
+												<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
+													<span style="text-transform: none;">{{ fee.DisplayName | localize:"en-US" }}</span>
+												</td>
+												<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
+													<strong>{{ fee.Amount | money:"en-US" }}</strong>
+												</td>
+											</tr>
+											{% endif %}
+										{% endfor %}
+										{% for fee in Order.Cart.LineItemFees %}
+											{% if fee.Taxable == "false" %}
+											<tr>
+												<td colspan="2"></td>
+												<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
+													<span style="text-transform: none;">{{ fee.DisplayName | localize:"en-US" }}</span>
+												</td>
+												<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
+													<strong>{{ fee.Amount | money:"en-US" }}</strong>
+												</td>
+											</tr>
+											{% endif %}
+										{% endfor %}
+										<tr>
+											<td colspan="2"></td>
+											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
+												<strong style="font-size: 18px;">Total</strong>
+											</td>
+											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
+												<strong style="font-size: 18px;">{{ Order.Cart.Total | money:"en-US" }} {{Order.Cart.BillingCurrency}}</strong>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							
+                            </div>
+                            <br />
+                            <div class="body-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 20px; text-align: center; color: #333333;">
+                                Please do not reply to this email message. It was sent from an address that cannot accept incoming email. Copyright {{Variables.CopyrightsYear}} {{Variables.CompanyName}}. All rights reserved.
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <!--/600px container -->
+            </td>
+        </tr>
+    </table>
+    <!--/100% background wrapper-->
+
+</body>
+</html>

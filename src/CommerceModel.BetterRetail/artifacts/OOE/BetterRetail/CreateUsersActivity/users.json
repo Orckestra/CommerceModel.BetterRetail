@@ -1,0 +1,517 @@
+{
+  "Users": [
+    {
+      "userName": "QA_OrdersAdmGlob",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Orders Administrator Global",
+      "firstName": "Orders",
+      "jobTitle": "Orders Admin Global",
+      "lastName": "AdminGlobal",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "Administrator",
+          "moduleName": "Orders",
+          "scopeId": "Global"
+        }
+      ]
+    },
+    {
+      "userName": "QA_OrdersAdmCA",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Orders Administrator Canada",
+      "firstName": "Orders",
+      "jobTitle": "Orders Admin BetterRetailCanada",
+      "lastName": "AdminCanada",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "Administrator",
+          "moduleName": "Orders",
+          "scopeId": "BetterRetailCanada"
+        }
+      ]
+    },
+    {
+      "userName": "QA_OrdersEditGlob",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Orders Editor Global",
+      "firstName": "Orders",
+      "jobTitle": "Orders Editor Global",
+      "lastName": "EditorGlobal",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "Editor",
+          "moduleName": "Orders",
+          "scopeId": "Global"
+        }
+      ]
+    },
+    {
+      "userName": "QA_OrdersEditCA",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Orders Editor Canada",
+      "firstName": "Orders",
+      "jobTitle": "Orders Editor BetterRetailCanada",
+      "lastName": "EditorCanada",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "Editor",
+          "moduleName": "Orders",
+          "scopeId": "BetterRetailCanada"
+        }
+      ]
+    },
+    {
+      "userName": "QA_OrdersReadGlob",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Orders Reader Global",
+      "firstName": "Orders",
+      "jobTitle": "Orders Reader Global",
+      "lastName": "ReaderGlobal",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "Reader",
+          "moduleName": "Orders",
+          "scopeId": "Global"
+        }
+      ]
+    },
+    {
+      "userName": "QA_OrdersReadCA",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Orders Reader Canada",
+      "firstName": "Orders",
+      "jobTitle": "Orders Reader BetterRetailCanada",
+      "lastName": "ReaderCanada",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "Reader",
+          "moduleName": "Orders",
+          "scopeId": "BetterRetailCanada"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsAdmGlob",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Administrator Global",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Administrator Global",
+      "lastName": "AdministratorGlobal",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "Administrator",
+          "moduleName": "Analytics",
+          "scopeId": "Global"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsAdmCA",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Administrator Canada",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Administrator BetterRetailCanada",
+      "lastName": "AdministratorCanada",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "Administrator",
+          "moduleName": "Analytics",
+          "scopeId": "BetterRetailCanada"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsProdGlob",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Products Global",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Products Global",
+      "lastName": "ProductsGlobal",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "ProductsReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "Global"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsProdCA",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Products Canada",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Products BetterRetailCanada",
+      "lastName": "ProductsCanada",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "ProductsReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "BetterRetailCanada"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsMarkGlob",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Marketing Global",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Marketing Global",
+      "lastName": "MarketingGlobal",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "MarketingReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "Global"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsMarkCA",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Marketing Canada",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Marketing BetterRetailCanada",
+      "lastName": "MarketingCanada",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "MarketingReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "BetterRetailCanada"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsOrderGlob",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Order Global",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Order Global",
+      "lastName": "OrderGlobal",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "OrderReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "Global"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsOrderCA",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Order Canada",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Order BetterRetailCanada",
+      "lastName": "OrderCanada",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "OrderReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "BetterRetailCanada"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsPrMkGlob",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Products Marketing Global",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Products Marketing Global",
+      "lastName": "ProductsMarketingGlobal",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "ProductsReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "Global"
+        },
+        {
+          "roleName": "MarketingReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "Global"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsPrMkCA",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Products Marketing Canada",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Products Marketing BetterRetailCanada",
+      "lastName": "ProductsMarketingCanada",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "ProductsReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "BetterRetailCanada"
+        },
+        {
+          "roleName": "MarketingReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "BetterRetailCanada"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsPrOrGlob",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Products Order Global",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Products Order Global",
+      "lastName": "ProductsOrderGlobal",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "ProductsReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "Global"
+        },
+        {
+          "roleName": "OrderReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "Global"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsPrOrCA",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Products Order Canada",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Products Order BetterRetailCanada",
+      "lastName": "ProductsOrderCanada",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "ProductsReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "BetterRetailCanada"
+        },
+        {
+          "roleName": "OrderReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "BetterRetailCanada"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsMkOrGlob",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Marketing Order Global",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Marketing Order Global",
+      "lastName": "MarketingOrderGlobal",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "MarketingReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "Global"
+        },
+        {
+          "roleName": "OrderReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "Global"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsMkOrCA",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics Marketing Order Canada",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics Marketing Order BetterRetailCanada",
+      "lastName": "MarketingOrderCanada",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "MarketingReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "BetterRetailCanada"
+        },
+        {
+          "roleName": "OrderReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "BetterRetailCanada"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsAllGlob",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics All Global",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics All Global",
+      "lastName": "AllGlobal",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "ProductsReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "Global"
+        },
+        {
+          "roleName": "MarketingReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "Global"
+        },
+        {
+          "roleName": "OrderReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "Global"
+        }
+      ]
+    },
+    {
+      "userName": "QA_AnlsAllCA",
+      "city": "Longueuil",
+      "country": "Canada",
+      "displayName": "Analytics All Canada",
+      "firstName": "Analytics",
+      "jobTitle": "Analytics All BetterRetailCanada",
+      "lastName": "AllCanada",
+      "password": "#NewUsersPassword#",
+      "address": "1111 St-Charles",
+      "postalCode": "EH8 8DY",
+      "preferredLanguage": "en-CA",
+      "state": "QC",
+      "roles": [
+        {
+          "roleName": "ProductsReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "BetterRetailCanada"
+        },
+        {
+          "roleName": "MarketingReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "BetterRetailCanada"
+        },
+        {
+          "roleName": "OrderReportsReader",
+          "moduleName": "Analytics",
+          "scopeId": "BetterRetailCanada"
+        }
+      ]
+    }
+  ]
+}
+

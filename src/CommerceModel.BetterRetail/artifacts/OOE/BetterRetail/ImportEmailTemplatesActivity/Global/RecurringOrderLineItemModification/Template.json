@@ -1,0 +1,41 @@
+﻿{
+  "name": "RecurringOrderLineItemModification",
+  "description": {
+    "en-US": "Notification email sent when a product is set to recurring",
+    "en-CA": "Notification email sent when a product is set to recurring",
+    "fr-CA": "Courriel de communication envoyé lorsqu'un produit est configuré pour être récurrent"
+  },
+  "contents": [
+    {
+      "name": "SenderDisplayName",
+      "content": {
+        "en-CA": "Orckestra Commerce Cloud",
+        "en-US": "Orckestra Commerce Cloud",
+        "fr-CA": "Orckestra Commerce Cloud"
+      }
+    },
+    {
+      "name": "ReceiverDisplayName",
+      "content": {
+        "en-CA": "{{Order.Cart.Customer.FirstName}} {{Order.Cart.Customer.LastName}}",
+        "en-US": "{{Order.Cart.Customer.FirstName}} {{Order.Cart.Customer.LastName}}",
+        "fr-CA": "{{Order.Cart.Customer.FirstName}} {{Order.Cart.Customer.LastName}}"
+      }
+    },
+    {
+      "name": "Subject",
+      "content": {
+        "en-CA": "New Recurring Product",
+        "en-US": "New Recurring Product",
+        "fr-CA": "Nouveau produit récurrent"
+      }
+    }
+  ],
+  "displayName": {
+    "en-US": "Recurring order line item modification",
+    "en-CA": "Recurring order line item modification",
+    "fr-CA": "Modification d'article de commande à venir"
+  },
+  "isActive": true,
+  "type": "Email"
+}

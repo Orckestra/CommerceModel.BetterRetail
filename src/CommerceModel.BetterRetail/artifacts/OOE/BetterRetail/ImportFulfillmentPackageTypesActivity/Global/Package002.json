@@ -1,0 +1,23 @@
+{
+  "description": {
+    "en-CA": "Package 30x25x25 cm",
+    "fr-CA": "Paquet 30x25x25 cm",
+    "en-US": "Package 30x25x25 cm"
+  },
+  "displayName": {
+    "en-CA": "Package 30x25x25 cm",
+    "fr-CA": "Paquet 30x25x25 cm",
+    "en-US": "Package 30x25x25 cm"
+  },
+  "id": "8a684e1b-c8ed-47fb-9e62-75e309fa1d76",
+  "isActive": "true",
+  "shortDisplayName": {
+    "en-CA": "30x25x25 cm",
+    "fr-CA": "30x25x25 cm",
+    "en-US": "30x25x25 cm"
+  },
+  "distanceUOM": "Centimetre",
+  "height": "30",
+  "length": "25",
+  "width": "25"
+}

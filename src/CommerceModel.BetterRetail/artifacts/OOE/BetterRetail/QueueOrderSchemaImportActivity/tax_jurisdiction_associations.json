@@ -1,0 +1,18 @@
+[
+  {
+    "taxJurisdictionName": "Canada",
+    "taxJurisdictionGroupName": "Canada"
+  },
+  {
+    "taxJurisdictionName": "Quebec",
+    "taxJurisdictionGroupName": "Quebec"
+  },
+  {
+    "taxJurisdictionName": "BetterRetailNorway",
+    "taxJurisdictionGroupName": "BetterRetailNorway"
+  },
+  {
+    "taxJurisdictionName": "BetterRetailNetherlands",
+    "taxJurisdictionGroupName": "BetterRetailNetherlands"
+  }
+]

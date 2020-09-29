@@ -1,0 +1,41 @@
+﻿{
+  "name": "CustomerCreated",
+  "description": {
+    "en-US": "Notification email sent when customer has been created",
+    "en-CA": "Notification email sent when customer has been created",
+    "fr-CA": "Courriel de communication envoyé lorsque le compte d'un client est créé"
+  },
+  "contents": [
+    {
+      "name": "SenderDisplayName",
+      "content": {
+        "en-CA": "Orckestra Commerce Cloud",
+        "en-US": "Orckestra Commerce Cloud",
+        "fr-CA": "Orckestra Commerce Cloud"
+      }
+    },
+    {
+      "name": "ReceiverDisplayName",
+      "content": {
+        "en-CA": "{{Customer.FirstName}} {{Customer.LastName}}",
+        "en-US": "{{Customer.FirstName}} {{Customer.LastName}}",
+        "fr-CA": "{{Customer.FirstName}} {{Customer.LastName}}"
+      }
+    },
+    {
+      "name": "Subject",
+      "content": {
+        "en-CA": "Account Creation Confirmation for Orckestra Commerce Cloud",
+        "en-US": "Account Creation Confirmation for Orckestra Commerce Cloud",
+        "fr-CA": "Confirmation de création de compte pour Orckestra Commerce Cloud"
+      }
+    }
+  ],
+  "displayName": {
+    "en-US": "New customer",
+    "en-CA": "New customer",
+    "fr-CA": "Nouveau client"
+  },
+  "isActive": true,
+  "type": "Email"
+}

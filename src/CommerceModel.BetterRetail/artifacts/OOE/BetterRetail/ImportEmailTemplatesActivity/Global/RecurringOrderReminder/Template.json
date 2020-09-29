@@ -1,0 +1,41 @@
+﻿{
+  "name": "RecurringOrderReminder",
+  "description": {
+    "en-US": "Notification email sent when a reminder of an upcoming order must be sent",
+    "en-CA": "Notification email sent when a reminder of an upcoming order must be sent",
+    "fr-CA": "Courriel de communication envoyé lorsqu'un rappel d'une commande à venir doit être envoyé"
+  },
+  "contents": [
+    {
+      "name": "SenderDisplayName",
+      "content": {
+        "en-CA": "Orckestra Commerce Cloud",
+        "en-US": "Orckestra Commerce Cloud",
+        "fr-CA": "Orckestra Commerce Cloud"
+      }
+    },
+    {
+      "name": "ReceiverDisplayName",
+      "content": {
+        "en-CA": "{{Order.Cart.Customer.FirstName}} {{Order.Cart.Customer.LastName}}",
+        "en-US": "{{Order.Cart.Customer.FirstName}} {{Order.Cart.Customer.LastName}}",
+        "fr-CA": "{{Order.Cart.Customer.FirstName}} {{Order.Cart.Customer.LastName}}"
+      }
+    },
+    {
+      "name": "Subject",
+      "content": {
+        "en-CA": "Order Reminder",
+        "en-US": "Order Reminder",
+        "fr-CA": "Rappel de commande"
+      }
+    }
+  ],
+  "displayName": {
+    "en-US": "Recurring order reminder",
+    "en-CA": "Recurring order reminder",
+    "fr-CA": "Rappel de commande à venir"
+  },
+  "isActive": true,
+  "type": "Email"
+}

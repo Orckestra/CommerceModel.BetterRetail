@@ -1,0 +1,12 @@
+{
+  "id": "BetterRetailCanada",
+  "isActive": true,
+  "defaultLanguage": "en-CA",
+  "languages": [
+    "en-CA",
+    "en-US",
+    "fr-CA"
+  ],
+  "endDate": "2021-12-31T05:00:00.0000000Z",
+  "overrideParent": false
+}

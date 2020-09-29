@@ -1,0 +1,34 @@
+﻿
+Hello {{Customer.FirstName}} {{Customer.LastName}},
+
+You will find in the following e-mail products that will no longer be sent to you periodically.
+
+Best regards,
+The {{Variables.CompanyName}} Team
+
+
+PRODUCTS THAT WILL NO LONGER BE SENT PERIODICALLY
+==============================
+
+{% for item in DeletedProducts %}
+Item: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
+Price: {{item.TotalRegularPrice | money:"en-CA" }}
+{% endfor %}
+
+
+COMPLETE LIST OF PRODUCTS THAT WILL BE SENT PERIODICALLY
+==============================
+
+{% for item in AllProducts %}
+Item: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
+Price: {{item.TotalRegularPrice | money:"en-CA" }}
+{% endfor %}
+
+
+ADDITIONAL INFORMATION
+==============================
+
+Please do not reply to this email message.
+It was sent from an address that cannot accept incoming email.
+ 
+Copyright {{Variables.CopyrightsYear}} {{Variables.CompanyName}}. All rights reserved.

@@ -1,0 +1,5 @@
+# Everything from this folder should be under source control.
+!*
+
+# Even if they are in a sub folder
+!*/

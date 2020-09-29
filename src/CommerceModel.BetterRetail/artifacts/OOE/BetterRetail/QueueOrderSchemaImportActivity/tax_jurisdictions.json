@@ -1,0 +1,43 @@
+[
+  {
+    "code": "Quebec",
+    "countryCode": "CA",
+    "regionCode": "CA-QC",
+    "fromPostalCode": "",
+    "toPostalCode": "",
+    "displayName": {
+      "en-CA": "Quebec",
+      "fr-CA": "Quebec"
+    }
+  },
+  {
+    "code": "Canada",
+    "countryCode": "CA",
+    "fromPostalCode": "",
+    "toPostalCode": "",
+    "displayName": {
+      "en-CA": "Canada",
+      "fr-CA": "Canada"
+    }
+  },
+  {
+    "code": "BetterRetailNorway",
+    "countryCode": "NO",
+    "fromPostalCode": "",
+    "toPostalCode": "",
+    "displayName": {
+      "en-CA": "BetterRetailNorway",
+      "fr-CA": "BetterRetailNorway"
+    }
+  },
+  {
+    "code": "BetterRetailNetherlands",
+    "countryCode": "NL",
+    "fromPostalCode": "",
+    "toPostalCode": "",
+    "displayName": {
+      "en-CA": "BetterRetailNetherlands",
+      "fr-CA": "BetterRetailNetherlands"
+    }
+  }
+]

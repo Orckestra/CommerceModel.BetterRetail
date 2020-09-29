@@ -1,0 +1,20 @@
+# Set default behavior to automatically normalize line endings.
+* text=auto
+
+# Custom for TDS/Sitecore serialization 
+*.item -text 
+
+# LSF
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.7z filter=lfs diff=lfs merge=lfs -text
+*.dtsx filter=lfs diff=lfs merge=lfs -text
+*.bacpac filter=lfs diff=lfs merge=lfs -text
+*.dacpac filter=lfs diff=lfs merge=lfs -text
+*.msi filter=lfs diff=lfs merge=lfs -text
+*.bak filter=lfs diff=lfs merge=lfs -text
+*.mdf filter=lfs diff=lfs merge=lfs -text
+*.ldf filter=lfs diff=lfs merge=lfs -text
+*.nupkg filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
+*.pbix filter=lfs diff=lfs merge=lfs -text

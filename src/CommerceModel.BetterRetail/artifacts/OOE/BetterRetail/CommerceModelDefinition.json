@@ -1,0 +1,281 @@
+{
+  "defaultLanguage": "en-US",
+  "supportedLanguages": [ "en-US", "en-CA", "fr-CA" ],
+  "supportedCountries": [ "CA", "US", "NO", "NL" ],
+  "scope": {
+    "id": "Global",
+    "type": "Global",
+    "isActive": "True",
+    "name": {
+      "en-CA": "Global",
+      "en-US": "Global",
+      "fr-CA": "Global"
+    },
+    "description": {
+      "en-US": "Global business scope",
+      "en-CA": "Global business scope",
+      "fr-CA": "Global business scope"
+    },
+    "children": [
+      {
+        "id": "BetterRetail",
+        "type": "Virtual",
+        "isActive": "True",
+        "name": {
+          "en-CA": "Better Retail",
+          "en-US": "Better Retail",
+          "fr-CA": "Better Retail"
+        },
+        "description": {
+          "en-CA": "Better Retail",
+          "en-US": "Better Retail",
+          "fr-CA": "Better Retail"
+        },
+        "children": [
+          {
+            "id": "BetterRetailCanada",
+            "type": "Sale",
+            "isActive": "True",
+            "name": {
+              "en-CA": "Better Retail Canada",
+              "en-US": "Better Retail Canada",
+              "fr-CA": "Better Retail Canada"
+            },
+            "description": {
+              "en-CA": "Better Retail Canada",
+              "en-US": "Better Retail Canada",
+              "fr-CA": "Better Retail Canada"
+            },
+            "children": [
+              {
+                "id": "Ontario",
+                "type": "Virtual",
+                "isActive": "True",
+                "name": {
+                  "en-CA": "Ontario",
+                  "en-US": "Ontario",
+                  "fr-CA": "Ontario"
+                },
+                "description": {
+                  "en-CA": "",
+                  "en-US": "",
+                  "fr-CA": ""
+                },
+                "children": [],
+                "defaultCulture": "en-US"
+              },
+              {
+                "id": "Quebec",
+                "type": "Virtual",
+                "isActive": "True",
+                "name": {
+                  "en-CA": "Quebec",
+                  "en-US": "Quebec",
+                  "fr-CA": "Quebec"
+                },
+                "description": {
+                  "en-CA": "",
+                  "en-US": "",
+                  "fr-CA": ""
+                },
+                "children": [
+                  {
+                    "id": "BRC-409",
+                    "type": "Dependant",
+                    "isActive": "True",
+                    "name": {
+                      "en-CA": "BRC-409",
+                      "en-US": "BRC-409",
+                      "fr-CA": "BRC-409"
+                    },
+                    "description": {
+                      "en-CA": "",
+                      "en-US": "",
+                      "fr-CA": ""
+                    },
+                    "children": [],
+                    "currencyIso": "CAD"
+                  },
+                  {
+                    "id": "BRC-410",
+                    "type": "Dependant",
+                    "isActive": "True",
+                    "name": {
+                      "en-CA": "BRC-410",
+                      "en-US": "BRC-410",
+                      "fr-CA": "BRC-410"
+                    },
+                    "description": {
+                      "en-CA": "",
+                      "en-US": "",
+                      "fr-CA": ""
+                    },
+                    "children": [],
+                    "currencyIso": "CAD"
+                  }
+                ],
+                "defaultCulture": "en-US"
+              }
+            ],
+            "parentScopeId": "BetterRetail",
+            "defaultCulture": "en-CA",
+            "currencyIso": "CAD"
+          },
+          {
+            "id": "BetterRetailUSA",
+            "type": "Sale",
+            "isActive": "True",
+            "name": {
+              "en-CA": "Better Retail USA",
+              "en-US": "Better Retail USA",
+              "fr-CA": "Better Retail USA"
+            },
+            "description": {
+              "en-CA": "Better Retail USA",
+              "en-US": "Better Retail USA",
+              "fr-CA": "Better Retail USA"
+            },
+            "children": [],
+            "defaultCulture": "en-US",
+            "currencyIso": "USD"
+          },
+          {
+            "id": "BetterRetailNorway",
+            "type": "Sale",
+            "isActive": true,
+            "name": {
+              "en-CA": "Better Retail Norway",
+              "en-US": "Better Retail Norway",
+              "fr-CA": "Better Retail Norway"
+            },
+            "description": {
+              "en-CA": "Better Retail Norway",
+              "en-US": "Better Retail Norway",
+              "fr-CA": "Better Retail Norway"
+            },
+            "children": [
+              {
+                "id": "JackAndJonesNO",
+                "type": "Virtual",
+                "name": {
+                  "en-US": "Jack & Jones"
+                },
+                "description": {
+                  "en-US": "Jack & Jones"
+                },
+                "children": [
+                  {
+                    "id": "JJ-9101",
+                    "type": "Dependant",
+                    "name": {
+                      "en-CA": "Jack & Jones 9101",
+                      "en-US": "Jack & Jones 9101",
+                      "fr-CA": "Jack & Jones 9101"
+                    },
+                    "description": {
+                      "en-CA": "Jack & Jones 9101",
+                      "en-US": "Jack & Jones 9101",
+                      "fr-CA": "Jack & Jones 9101"
+                    },
+                    "defaultCulture": "en-US",
+                    "isActive": true
+
+                  },
+                  {
+                    "id": "JJ-9102",
+                    "type": "Dependant",
+                    "name": {
+                      "en-CA": "Jack & Jones 9102",
+                      "en-US": "Jack & Jones 9102",
+                      "fr-CA": "Jack & Jones 9102"
+                    },
+                    "description": {
+                      "en-CA": "Jack & Jones 9102",
+                      "en-US": "Jack & Jones 9102",
+                      "fr-CA": "Jack & Jones 9102"
+                    },
+                    "defaultCulture": "en-US",
+                    "isActive": true
+                  }
+                ],
+                "defaultCulture": "en-US",
+                "isActive": true
+              }
+            ],
+            "defaultCulture": "en-US",
+            "currencyIso": "NOK"
+          },
+          {
+            "id": "BetterRetailNetherlands",
+            "type": "Sale",
+            "isActive": true,
+            "name": {
+              "en-CA": "Better Retail Netherlands",
+              "en-US": "Better Retail Netherlands",
+              "fr-CA": "Better Retail Netherlands"
+            },
+            "description": {
+              "en-CA": "Better Retail Netherlands",
+              "en-US": "Better Retail Netherlands",
+              "fr-CA": "Better Retail Netherlands"
+            },
+            "children": [
+              {
+                "id": "JackAndJonesNL",
+                "type": "Virtual",
+                "name": {
+                  "en-US": "Jack & Jones"
+                },
+                "description": {
+                  "en-US": "Jack & Jones"
+                },
+                "children": [
+                  {
+                    "id": "JJ-5101",
+                    "type": "Dependant",
+                    "name": {
+                      "en-CA": "Jack & Jones 5101",
+                      "en-US": "Jack & Jones 5101",
+                      "fr-CA": "Jack & Jones 5101"
+                    },
+                    "description": {
+                      "en-CA": "Jack & Jones 5101",
+                      "en-US": "Jack & Jones 5101",
+                      "fr-CA": "Jack & Jones 5101"
+                    },
+                    "defaultCulture": "en-US",
+                    "isActive": true
+
+                  },
+                  {
+                    "id": "JJ-5102",
+                    "type": "Dependant",
+                    "name": {
+                      "en-CA": "Jack & Jones 5102",
+                      "en-US": "Jack & Jones 5102",
+                      "fr-CA": "Jack & Jones 5102"
+                    },
+                    "description": {
+                      "en-CA": "Jack & Jones 5102",
+                      "en-US": "Jack & Jones 5102",
+                      "fr-CA": "Jack & Jones 5102"
+                    },
+                    "defaultCulture": "en-US",
+                    "isActive": true
+                  }
+                ],
+                "defaultCulture": "en-US",
+                "isActive": true
+              }
+            ],
+            "defaultCulture": "en-US",
+            "currencyIso": "EUR"
+          }
+        ],
+        "defaultCulture": "en-US"
+      }
+    ],
+    "defaultCulture": "en-US",
+    "currencyIso": "USD"
+  }
+}

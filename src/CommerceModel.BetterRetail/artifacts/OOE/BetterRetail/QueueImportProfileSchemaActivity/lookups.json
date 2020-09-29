@@ -1,0 +1,185 @@
+[
+	{
+		"lookupName": "AvaTaxCustomerUsageType",
+		"values": [{
+				"value": "L",
+				"displayName": {
+					"en-CA": "Other",
+					"en-US": "Other",
+					"fr-CA": "Other",
+					"fr-FR": "Other"
+				},
+				"sortOrder": 12,
+				"isActive": false
+			}, {
+				"value": "B",
+				"displayName": {
+					"en-CA": "US - State Government",
+					"en-US": "US - State Government",
+					"fr-CA": "US - State Government",
+					"fr-FR": "US - State Government"
+				},
+				"sortOrder": 2,
+				"isActive": false
+			}, {
+				"value": "E",
+				"displayName": {
+					"en-CA": "Charitable or benevolent organization",
+					"en-US": "Charitable or benevolent organization",
+					"fr-CA": "Charitable or benevolent organization",
+					"fr-FR": "Charitable or benevolent organization"
+				},
+				"sortOrder": 5,
+				"isActive": false
+			}, {
+				"value": "J",
+				"displayName": {
+					"en-CA": "Direct Pay Permit",
+					"en-US": "Direct Pay Permit",
+					"fr-CA": "Direct Pay Permit",
+					"fr-FR": "Direct Pay Permit"
+				},
+				"sortOrder": 10,
+				"isActive": false
+			}, {
+				"value": "P",
+				"displayName": {
+					"en-CA": "Canada - Commercial Aquaculture",
+					"en-US": "Canada - Commercial Aquaculture",
+					"fr-CA": "Canada - Commercial Aquaculture",
+					"fr-FR": "Canada - Commercial Aquaculture"
+				},
+				"sortOrder": 14,
+				"isActive": false
+			}, {
+				"value": "G",
+				"displayName": {
+					"en-CA": "Resale",
+					"en-US": "Resale",
+					"fr-CA": "Resale",
+					"fr-FR": "Resale"
+				},
+				"sortOrder": 7,
+				"isActive": false
+			}, {
+				"value": "N",
+				"displayName": {
+					"en-CA": "US - Local Government",
+					"en-US": "US - Local Government",
+					"fr-CA": "US - Local Government",
+					"fr-FR": "US - Local Government"
+				},
+				"sortOrder": 13,
+				"isActive": false
+			}, {
+				"value": "Q",
+				"displayName": {
+					"en-CA": "Canada - Commercial Fishery",
+					"en-US": "Canada - Commercial Fishery",
+					"fr-CA": "Canada - Commercial Fishery",
+					"fr-FR": "Canada - Commercial Fishery"
+				},
+				"sortOrder": 15,
+				"isActive": false
+			}, {
+				"value": "R",
+				"displayName": {
+					"en-CA": "Canada - Non-resident",
+					"en-US": "Canada - Non-resident",
+					"fr-CA": "Canada - Non-resident",
+					"fr-FR": "Canada - Non-resident"
+				},
+				"sortOrder": 16,
+				"isActive": false
+			}, {
+				"value": "F",
+				"displayName": {
+					"en-CA": "Religious or education organization",
+					"en-US": "Religious or education organization",
+					"fr-CA": "Religious or education organization",
+					"fr-FR": "Religious or education organization"
+				},
+				"sortOrder": 6,
+				"isActive": false
+			}, {
+				"value": "H",
+				"displayName": {
+					"en-CA": "Commercial agricultural production",
+					"en-US": "Commercial agricultural production",
+					"fr-CA": "Commercial agricultural production",
+					"fr-FR": "Commercial agricultural production"
+				},
+				"sortOrder": 8,
+				"isActive": false
+			}, {
+				"value": "D",
+				"displayName": {
+					"en-CA": "Foreign diplomat",
+					"en-US": "Foreign diplomat",
+					"fr-CA": "Foreign diplomat",
+					"fr-FR": "Foreign diplomat"
+				},
+				"sortOrder": 4,
+				"isActive": false
+			}, {
+				"value": "A",
+				"displayName": {
+					"en-CA": "US - Federal Government",
+					"en-US": "US - Federal Government",
+					"fr-CA": "US - Federal Government",
+					"fr-FR": "US - Federal Government"
+				},
+				"sortOrder": 1,
+				"isActive": false
+			}, {
+				"value": "TAXABLE",
+				"displayName": {
+					"en-CA": "Not exempt - taxable customer",
+					"en-US": "Not exempt - taxable customer",
+					"fr-CA": "Not exempt - taxable customer",
+					"fr-FR": "Not exempt - taxable customer"
+				},
+				"sortOrder": 17,
+				"isActive": false
+			}, {
+				"value": "K",
+				"displayName": {
+					"en-CA": "Direct Mail",
+					"en-US": "Direct Mail",
+					"fr-CA": "Direct Mail",
+					"fr-FR": "Direct Mail"
+				},
+				"sortOrder": 11,
+				"isActive": false
+			}, {
+				"value": "C",
+				"displayName": {
+					"en-CA": "Tribal/Status Indian/Indian Band",
+					"en-US": "Tribal/Status Indian/Indian Band",
+					"fr-CA": "Tribal/Status Indian/Indian Band",
+					"fr-FR": "Tribal/Status Indian/Indian Band"
+				},
+				"sortOrder": 3,
+				"isActive": false
+			}, {
+				"value": "I",
+				"displayName": {
+					"en-CA": "Industrial production/Manufacturer",
+					"en-US": "Industrial production/Manufacturer",
+					"fr-CA": "Industrial production/Manufacturer",
+					"fr-FR": "Industrial production/Manufacturer"
+				},
+				"sortOrder": 9,
+				"isActive": false
+			}
+		],
+		"displayName": {
+			"en-CA": "AvaTax Customer Usage Type",
+			"en-US": "AvaTax Customer Usage Type",
+			"fr-CA": "AvaTax Customer Usage Type",
+			"fr-FR": "AvaTax Customer Usage Type"
+		},
+		"description": "Avalara Tax exemption codes that can be associated to a customer",
+		"isActive": false
+	}
+]

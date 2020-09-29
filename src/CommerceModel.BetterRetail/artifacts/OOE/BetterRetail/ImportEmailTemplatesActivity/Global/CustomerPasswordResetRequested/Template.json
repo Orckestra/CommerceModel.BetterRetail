@@ -1,0 +1,41 @@
+﻿{
+  "name": "CustomerPasswordResetRequested",
+  "description": {
+    "en-US": "Notification email sent when customer has requested a password reset",
+    "en-CA": "Notification email sent when customer has requested a password reset",
+    "fr-CA": "Courriel de communication envoyé lorsque le client demande une reinitialisation de mot de passe"
+  },
+  "contents": [
+    {
+      "name": "SenderDisplayName",
+      "content": {
+        "en-CA": "Orckestra Commerce Cloud",
+        "en-US": "Orckestra Commerce Cloud",
+        "fr-CA": "Orckestra Commerce Cloud"
+      }
+    },
+    {
+      "name": "ReceiverDisplayName",
+      "content": {
+        "en-CA": "{{Customer.FirstName}} {{Customer.LastName}}",
+        "en-US": "{{Customer.FirstName}} {{Customer.LastName}}",
+        "fr-CA": "{{Customer.FirstName}} {{Customer.LastName}}"
+      }
+    },
+    {
+      "name": "Subject",
+      "content": {
+        "en-CA": "Reset password for Orckestra Commerce Cloud",
+        "en-US": "Reset password for Orckestra Commerce Cloud",
+        "fr-CA": "Reinitialisation de mot de passe de Orckestra Commerce Cloud"
+      }
+    }
+  ],
+  "displayName": {
+    "en-US": "Reset password",
+    "en-CA": "Reset password",
+    "fr-CA": "Reinitialisation du mot de passe"
+  },
+  "isActive": true,
+  "type": "Email"
+}

@@ -1,0 +1,1773 @@
+[
+	{
+		"itemName": "womens_skirts",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "women",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "mens_suits",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "men",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "women",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "Root",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "mens_shirts",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "men",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "womens_activewear",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "women",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "mens_mens_shoes",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "men",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "men",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "Root",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "womens_pants__leggings",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "women",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "mens_pants",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "men",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "mens_activewear",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "men",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "mens_accessories",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "men",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "womens_tops",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "women",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "womens_dresses",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "women",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "womens_plus_size_outerwear",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "women",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "womens_petites_outerwear",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "women",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "shoes_womens_shoes",
+		"itemDescriminator": "CATEGORY",
+		"parentItemName": "women",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3337776",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2315422",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1616079",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1617221",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1736676",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2394232",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3357142",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1831306",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2192992",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1616050",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3317698",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3455894",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2367398",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2220401",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3224229",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3510561",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_plus_size_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3507447",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_petites_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3493629",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1617270",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615192",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3890014",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_plus_size_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2363044",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2956724",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_plus_size_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3126613",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1917405",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1886580",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615184",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1866543",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2853451",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1616974",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3507420",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_petites_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1760777",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1617625",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3433026",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3393219",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1760316",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3164906",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "4024292",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_plus_size_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2291320",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615087",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1617222",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1618258",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1852693",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1618653",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1617619",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2269136",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3373700",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1782540",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1621132",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3862488",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_petites_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1761457",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1614468",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1759833",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3466416",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3460584",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_petites_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1620192",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "4024293",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_plus_size_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1621875",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2297467",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3081578",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1831307",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2177746",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2772599",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2880981",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1756120",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3373717",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2394206",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2666658",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2376509",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615183",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3406336",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2269132",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2169525",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1886579",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1801905",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1616041",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1623198",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1624742",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1620754",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2394207",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1859947",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1616055",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3121702",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2220400",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615187",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2699061",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2877367",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2254970",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3317727",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615107",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1623137",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2237527",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3351242",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2363045",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2218118",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3291438",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3508033",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_plus_size_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1618172",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2877369",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2950896",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1624313",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3507444",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_petites_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2284591",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3734154",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_petites_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2926305",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1614533",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1945369",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3317726",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1756101",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1762143",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3324146",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3351251",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1614934",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1735567",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1762145",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3368449",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1623109",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1761030",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2513161",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1616973",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615159",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1831309",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615180",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3073091",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3351238",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1759979",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1801993",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1623827",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1616044",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1612565",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1621947",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "4024291",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_plus_size_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1736454",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615194",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1613950",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2329429",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615450",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1831185",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615109",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3098899",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615295",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3317718",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615451",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1623657",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1760314",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2275234",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3507456",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_petites_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2218129",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1616696",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1761031",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3373694",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2329426",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1618264",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2288874",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2782670",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615185",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1724959",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2943389",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3131825",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1623013",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3890695",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_plus_size_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1616053",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2853498",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615181",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2363043",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3507419",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_petites_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1923419",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1616574",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3328817",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1852666",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2179230",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3156113",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1616051",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1616579",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1819562",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1624681",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2222849",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2960529",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1617620",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3314799",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2926304",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2941033",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1759787",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1618262",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2348125",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3351232",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2508830",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2179232",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_pants",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2933177",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1852674",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3580015",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_petites_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2327718",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3411899",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1621127",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1852575",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1618419",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1615188",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_accessories",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2989949",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1618491",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2941030",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1736312",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3478777",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_plus_size_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2209658",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1623108",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2941031",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1621131",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1826232",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3089333",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1831314",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2666656",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3183783",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1621105",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1886577",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3291504",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2482896",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1620920",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1616567",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_tops",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1946445",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3351248",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1620919",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1624683",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "shoes_womens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3132541",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1620068",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3518882",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_plus_size_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3291439",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_activewear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2246896",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2491458",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_dresses",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3442690",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_skirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3507451",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_petites_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "3507452",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_petites_outerwear",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "2186235",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1736365",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "womens_pants__leggings",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1760641",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_mens_shoes",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "1831311",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_suits",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "9268473",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "9368473",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	},
+	{
+		"itemName": "9468473",
+		"itemDescriminator": "PRODUCT",
+		"parentItemName": "mens_shirts",
+		"parentItemDescriminator": "CATEGORY",
+		"sequenceNumber": 0
+	}
+]

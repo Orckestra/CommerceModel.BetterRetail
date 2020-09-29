@@ -1,0 +1,23 @@
+{
+  "description": {
+    "en-CA": "Package 1x1x1 ft",
+    "fr-CA": "Paquet 1x1x1 pied",
+    "en-US": "Package 1x1x1 ft"
+  },
+  "displayName": {
+    "en-CA": "Package 1x1x1 ft",
+    "fr-CA": "Paquet 1x1x1 pied",
+    "en-US": "Package 1x1x1 ft"
+  },
+  "id": "17cba2d0-45c9-470b-b0a8-577789217619",
+  "isActive": "true",
+  "shortDisplayName": {
+    "en-CA": "1x1x1 ft",
+    "fr-CA": "1x1x1 pied",
+    "en-US": "1x1x1 ft1"
+  },
+  "distanceUOM": "Feet",
+  "height": "1",
+  "length": "1",
+  "width": "1"
+}

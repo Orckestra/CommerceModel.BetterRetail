@@ -1,0 +1,41 @@
+﻿{
+  "name": "CustomerPasswordChanged",
+  "description": {
+    "en-US": "Notification email sent when customer password has been changed",
+    "en-CA": "Notification email sent when customer password has been changed",
+    "fr-CA": "Courriel de communication envoyé lorsque le mot de passe du client a été changé"
+  },
+  "contents": [
+    {
+      "name": "SenderDisplayName",
+      "content": {
+        "en-CA": "Orckestra Commerce Cloud",
+        "en-US": "Orckestra Commerce Cloud",
+        "fr-CA": "Orckestra Commerce Cloud"
+      }
+    },
+    {
+      "name": "ReceiverDisplayName",
+      "content": {
+        "en-CA": "{{Customer.FirstName}} {{Customer.LastName}}",
+        "en-US": "{{Customer.FirstName}} {{Customer.LastName}}",
+        "fr-CA": "{{Customer.FirstName}} {{Customer.LastName}}"
+      }
+    },
+    {
+      "name": "Subject",
+      "content": {
+        "en-CA": "Your Password has been changed for Orckestra Commerce Cloud",
+        "en-US": "Your Password has been changed for Orckestra Commerce Cloud",
+        "fr-CA": "Votre mot de passe a été changé pour Orckestra Commerce Cloud"
+      }
+    }
+  ],
+  "displayName": {
+    "en-US": "Password changed",
+    "en-CA": "Password changed",
+    "fr-CA": "Mot de passe changé"
+  },
+  "isActive": true,
+  "type": "Email"
+}

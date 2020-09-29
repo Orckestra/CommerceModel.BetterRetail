@@ -1,0 +1,41 @@
+﻿{
+  "name": "RecurringOrderUnableToCreateOrderFromCart",
+  "description": {
+    "en-US": "Notification email sent when a recurring order was not able to be created",
+    "en-CA": "Notification email sent when a recurring order was not able to be created",
+    "fr-CA": "Courriel de communication envoyé lorsqu'une commande récurrente n'a pas pu être créée"
+  },
+  "contents": [
+    {
+      "name": "SenderDisplayName",
+      "content": {
+        "en-CA": "Orckestra Commerce Cloud",
+        "en-US": "Orckestra Commerce Cloud",
+        "fr-CA": "Orckestra Commerce Cloud"
+      }
+    },
+    {
+      "name": "ReceiverDisplayName",
+      "content": {
+        "en-CA": "{{Customer.FirstName}} {{Customer.LastName}}",
+        "en-US": "{{Customer.FirstName}} {{Customer.LastName}}",
+        "fr-CA": "{{Customer.FirstName}} {{Customer.LastName}}"
+      }
+    },
+    {
+      "name": "Subject",
+      "content": {
+        "en-CA": "There was a problem with your recurring order",
+        "en-US": "There was a problem with your recurring order",
+        "fr-CA": "Erreur lors de la création de votre commande récurrente"
+      }
+    }
+  ],
+  "displayName": {
+    "en-US": "Recurring order creation error",
+    "en-CA": "Recurring order creation error",
+    "fr-CA": "Erreur de création de commande récurrente"
+  },
+  "isActive": true,
+  "type": "Email"
+}

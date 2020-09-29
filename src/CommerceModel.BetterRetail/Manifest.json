@@ -1,0 +1,24 @@
+﻿{
+  "Name": "CommerceModel.BetterRetail",
+  "Version": "0.0.0",
+  "DependsOnPackages": [
+    {
+      "Name": "OrckestraCommerce.Core",
+      "Version": "3.14.0-new-fulfillment"
+    },
+    {
+      "Name": "OrckestraCommerce.Marketing",
+      "Version": "3.12.0-proget-feed-fix"
+    },
+    {
+      "Name": "CommerceModel.OrckestraDevelopment",
+      "Version": "0.1.49-new-fulfillment"
+    }
+  ],
+  "ModifiesComponents": [
+    "DB-OLTP",
+    "OOE",
+    "OCS-CM",
+    "OCS-CD"
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "number": "BRU-101",
+  "isActive": true,
+  "name": "BRU-Miami",
+  "displayName": {
+    "en-CA": "BRU-Miami",
+    "en-US": "BRU-Miami",
+    "fr-CA": "BRU-Miami"
+  },
+  "description": {
+    "en-CA": "",
+    "en-US": "",
+    "fr-CA": ""
+  },
+  "storeType": "Physical",
+  "phoneNumber": "305 591-0622",
+  "isPickUpLocation": false,
+  "supportPickUp": true,
+  "supportDelivery": false,
+  "supportShipping": false,
+  "supportShipToStore": false,
+  "operatingStatus": {
+    "id": "2A154A0A-EE92-4F7F-B265-F76DBF98ACD6",
+    "availabilityStatus": {
+      "isAvailable": true,
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "deliveryAvailabilityStatus": {
+      "isAvailable": true,
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "deliveryQuoteTime": {
+      "duration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      },
+      "couldBeDelayed": false,
+      "delayEstimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "pickupAvailabilityStatus": {
+      "isAvailable": true,
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "pickupQuoteTime": {
+      "duration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      },
+      "couldBeDelayed": false,
+      "delayEstimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    }
+  },
+  "schedule": {
+    "fulfillmentLocationId": "2a154a0a-ee92-4f7f-b265-f76dbf98acd6",
+    "openingHours": [
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Monday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Tuesday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Wednesday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Thursday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Friday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Saturday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Sunday",
+        "isOpenedAllDay": true
+      }
+    ],
+    "openingHourExceptions": [],
+    "scheduleType": "OpeningHours"
+  },
+  "pickUpSchedule": {
+    "fulfillmentLocationId": "2a154a0a-ee92-4f7f-b265-f76dbf98acd6",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": "Pickup"
+  },
+  "deliverySchedule": {
+    "fulfillmentLocationId": "2a154a0a-ee92-4f7f-b265-f76dbf98acd6",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": "Delivery"
+  },
+  "timeZone": "Eastern Standard Time",
+  "deliveryScheduleManaged": false,
+  "pickUpScheduleManaged": false,
+  "inventoryLocationId": "BRU-101",
+  "inventoryProviderId": "OvertureQuantitative",
+  "isInventoryEnabled": true,
+  "isAtpEnabled": true,
+  "addresses": [
+    {
+      "id": "e99f9f07aa9d4fd7bc496c6f40c491e8",
+      "addressName": "MainAddress",
+      "city": "Doral",
+      "countryCode": "US",
+      "regionCode": "US-FL",
+      "line1": "10688 NW 12th St",
+      "postalCode": "33172",
+      "isPreferredBilling": false,
+      "isPreferredShipping": false,
+      "propertyBag": {
+        "Address_Id": {
+          "__type": "ValueOfInt32",
+          "value": 37484
+        }
+      }
+    }
+  ],
+  "scopeId": "BetterRetailFlorida"
+ }

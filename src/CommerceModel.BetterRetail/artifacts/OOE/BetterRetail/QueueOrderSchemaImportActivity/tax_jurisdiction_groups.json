@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Canada",
+    "displayName": {
+      "en-CA": "Canada",
+      "fr-CA": "Canada"
+    }
+  },
+  {
+    "name": "Quebec",
+    "displayName": {
+      "en-CA": "Quebec",
+      "fr-CA": "Quebec"
+    }
+  },
+  {
+    "name": "BetterRetailNorway",
+    "displayName": {
+      "en-CA": "BetterRetailNorway",
+      "fr-CA": "BetterRetailNorway"
+    }
+  },
+  {
+    "name": "BetterRetailNetherlands",
+    "displayName": {
+      "en-CA": "BetterRetailNetherlands",
+      "fr-CA": "BetterRetailNetherlands"
+    }
+  }
+]

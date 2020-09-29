@@ -1,0 +1,213 @@
+{
+  "Number": "TaxTestStore",
+  "IsActive": true,
+  "Name": "TaxTestStore",
+  "DisplayName": {
+    "en-CA": "TaxTestStore",
+    "en-US": "TaxTestStore",
+    "fr-FR": "TaxTestStore",
+    "fr-CA": "TaxTestStore"
+  },
+  "Description": {
+    "en-CA": "TaxTestStore",
+    "en-US": "TaxTestStore",
+    "fr-FR": "TaxTestStore",
+    "fr-CA": "TaxTestStore"
+  },
+  "StoreType": 0,
+  "Manager": null,
+  "PhoneNumber": "123 456-7890",
+  "PhoneExtension": null,
+  "FaxNumber": null,
+  "FaxExtension": null,
+  "Email": null,
+  "SupportPickUp": true,
+  "SupportDelivery": true,
+  "SupportShipping": true,
+  "ShipOrderFromOther": false,
+  "OperatingStatus": {
+    "Id": "194a6885-5220-4ef3-b22a-3d4cff779652",
+    "AvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "DeliveryAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "DeliveryQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PropertyBag": null
+  },
+  "Schedule": {
+    "FulfillmentLocationId": "194a6885-5220-4ef3-b22a-3d4cff779652",
+    "OpeningHours": [
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "10:00:00",
+            "EndingTime": "18:00:00"
+          }
+        ],
+        "Day": 1,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "10:00:00",
+            "EndingTime": "18:00:00"
+          }
+        ],
+        "Day": 2,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "10:00:00",
+            "EndingTime": "18:00:00"
+          }
+        ],
+        "Day": 3,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "10:00:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 4,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "10:00:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 5,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "09:00:00",
+            "EndingTime": "17:00:00"
+          }
+        ],
+        "Day": 6,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "12:00:00",
+            "EndingTime": "17:00:00"
+          }
+        ],
+        "Day": 0,
+        "IsOpenedAllDay": false
+      }
+    ],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 0,
+    "PropertyBag": null
+  },
+  "PickUpSchedule": {
+    "FulfillmentLocationId": "194a6885-5220-4ef3-b22a-3d4cff779652",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 2,
+    "PropertyBag": null
+  },
+  "DeliverySchedule": {
+    "FulfillmentLocationId": "194a6885-5220-4ef3-b22a-3d4cff779652",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 1,
+    "PropertyBag": null
+  },
+  "TimeZone": "Eastern Standard Time",
+  "DeliveryScheduleManaged": false,
+  "PickUpScheduleManaged": false,
+  "InventoryLocationId": "TaxTestStore",
+  "InventoryProviderId": "OvertureQuantitative",
+  "IsInventoryEnabled": false,
+  "IsAtpEnabled": true,
+  "PropertyBag": null,
+  "Addresses": [
+    {
+      "Id": "74a498df83874c2bbf74aebb0ff85724",
+      "AddressName": "AddressFr",
+      "City": "Montreal",
+      "CountryCode": "CA",
+      "RegionCode": "CA-QC",
+      "Line1": "1100 av. canadiens-de-montreal",
+      "Line2": null,
+      "FirstName": "TestFulfillmentLoc",
+      "LastName": "TestFulfillmentLoc",
+      "PhoneNumber": "1234567890",
+      "PhoneExtension": null,
+      "PostalCode": "H3B 2S2",
+      "Latitude": null,
+      "Longitude": null,
+      "Email": null,
+      "Notes": null,
+      "IsPreferredBilling": true,
+      "IsPreferredShipping": true,
+      "PropertyBag": {
+        "Address_Id": 38459
+      }
+    }
+  ],
+  "ScopeId": "BetterRetailCanada"
+}

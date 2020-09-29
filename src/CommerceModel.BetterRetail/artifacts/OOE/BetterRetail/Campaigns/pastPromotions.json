@@ -1,0 +1,440 @@
+{
+    "name": "Past Promotions",
+    "description": "",
+    "startDate": "2015-05-01T00:00:00.0000000Z",
+    "endDate": "2025-05-02T00:00:00.0000000Z",
+    "status": "Expired",
+    "allowOptOut": false,
+    "timeZone": "Eastern Standard Time",
+    "type": "",
+    "priority": 1,
+    "campaignId": "ca6deb24aa8d4369adc48dc9c1ea473a",
+    "promotions": [
+        {
+            "campaignId": "ca6deb24aa8d4369adc48dc9c1ea473a",
+            "name": "[COUPON] Buy one CALVIN KLEIN scarf and get one free",
+            "description": "When you purchase one eligible CALVIN KLEIN scarf, you get one free when using the 'SCARF' coupon.",
+            "promotionText": {
+                "en-CA": "Buy one CALVIN KLEIN scarf and get one free",
+                "en-US": "Buy one CALVIN KLEIN scarf and get one free",
+                "fr-CA": "Achetez un foulard CALVIN KLEIN et obtenez-en un gratuit"
+            },
+            "conditions": [
+                {
+                    "level": "Product",
+                    "type": "Quantity",
+                    "value": 1,
+                    "unitOfMeasure": "Unit",
+                    "targets": [
+                        {
+                            "targetType": "Product",
+                            "catalogId": "Canada",
+                            "productId": "3511985",
+                            "displayName": "CALVIN KLEIN Ottoman Rib Infinity Scarf"
+                        },
+                        {
+                            "targetType": "Product",
+                            "catalogId": "Canada",
+                            "productId": "3511987",
+                            "displayName": "CALVIN KLEIN Jacquard Logo Scarf"
+                        },
+                        {
+                            "targetType": "Product",
+                            "catalogId": "Canada",
+                            "productId": "3511990",
+                            "displayName": "CALVIN KLEIN Modernist Logo Scarf"
+                        },
+                        {
+                            "targetType": "Product",
+                            "catalogId": "Canada",
+                            "productId": "3535475",
+                            "displayName": "CALVIN KLEIN  Mirror Raschel Scarf"
+                        },
+                        {
+                            "targetType": "Product",
+                            "catalogId": "Canada",
+                            "productId": "3511980",
+                            "displayName": "CALVIN KLEIN Geometric Rib Scarf"
+                        },
+                        {
+                            "targetType": "Product",
+                            "catalogId": "Canada",
+                            "productId": "3511993",
+                            "displayName": "CALVIN KLEIN Herringbone Raschel Knit Scarf"
+                        },
+                        {
+                            "targetType": "Product",
+                            "catalogId": "Canada",
+                            "productId": "3511986",
+                            "displayName": "CALVIN KLEIN Jacquard Logo Scarf"
+                        },
+                        {
+                            "targetType": "Product",
+                            "catalogId": "Canada",
+                            "productId": "3511978",
+                            "displayName": "CALVIN KLEIN Colourblock Cable Scarf"
+                        },
+                        {
+                            "targetType": "Product",
+                            "catalogId": "Canada",
+                            "productId": "3540052",
+                            "displayName": "CALVIN KLEIN Calvin Klein Herringbone Mirror Raschel Scarf"
+                        },
+                        {
+                            "targetType": "Product",
+                            "catalogId": "Canada",
+                            "productId": "3511984",
+                            "displayName": "CALVIN KLEIN Ottoman Rib Infinity Scarf"
+                        }
+                    ],
+                    "excludeDiscountedItems": false,
+                    "consumabilityRules": [ ],
+                    "id": "72b0ae0d91384cfc8f5912f5125a621d",
+                    "propertyBag": { }
+                }
+            ],
+            "rewardDefinitions": [
+                {
+                    "level": "Product",
+                    "rewardType": "Discount",
+                    "valueType": "FixedPrice",
+                    "value": 0,
+                    "quantity": 1,
+                    "matchQuantityOrLess": false,
+                    "matchQuantityOrMore": false,
+                    "useConsumedItemsFromConditions": false,
+                    "rewardTargets": [
+                        {
+                            "targetType": "Product",
+                            "displayName": "CALVIN KLEIN Ottoman Rib Infinity Scarf",
+                            "catalogId": "Canada",
+                            "productId": "3511985",
+                            "quantity": 0
+                        },
+                        {
+                            "targetType": "Product",
+                            "displayName": "CALVIN KLEIN Jacquard Logo Scarf",
+                            "catalogId": "Canada",
+                            "productId": "3511987",
+                            "quantity": 0
+                        },
+                        {
+                            "targetType": "Product",
+                            "displayName": "CALVIN KLEIN Modernist Logo Scarf",
+                            "catalogId": "Canada",
+                            "productId": "3511990",
+                            "quantity": 0
+                        },
+                        {
+                            "targetType": "Product",
+                            "displayName": "CALVIN KLEIN  Mirror Raschel Scarf",
+                            "catalogId": "Canada",
+                            "productId": "3535475",
+                            "quantity": 0
+                        },
+                        {
+                            "targetType": "Product",
+                            "displayName": "CALVIN KLEIN Geometric Rib Scarf",
+                            "catalogId": "Canada",
+                            "productId": "3511980",
+                            "quantity": 0
+                        },
+                        {
+                            "targetType": "Product",
+                            "displayName": "CALVIN KLEIN Herringbone Raschel Knit Scarf",
+                            "catalogId": "Canada",
+                            "productId": "3511993",
+                            "quantity": 0
+                        },
+                        {
+                            "targetType": "Product",
+                            "displayName": "CALVIN KLEIN Jacquard Logo Scarf",
+                            "catalogId": "Canada",
+                            "productId": "3511986",
+                            "quantity": 0
+                        },
+                        {
+                            "targetType": "Product",
+                            "displayName": "CALVIN KLEIN Colourblock Cable Scarf",
+                            "catalogId": "Canada",
+                            "productId": "3511978",
+                            "quantity": 0
+                        },
+                        {
+                            "targetType": "Product",
+                            "displayName": "CALVIN KLEIN Calvin Klein Herringbone Mirror Raschel Scarf",
+                            "catalogId": "Canada",
+                            "productId": "3540052",
+                            "quantity": 0
+                        },
+                        {
+                            "targetType": "Product",
+                            "displayName": "CALVIN KLEIN Ottoman Rib Infinity Scarf",
+                            "catalogId": "Canada",
+                            "productId": "3511984",
+                            "quantity": 0
+                        }
+                    ],
+                    "disambiguation": "NotSpecified",
+                    "unitOfMeasure": "Unit",
+                    "excludeDiscountedItems": false,
+                    "consumabilityRules": [ ],
+                    "id": "f91efa0c038a45beb1e8ec7cebcc879b",
+                    "propertyBag": { }
+                }
+            ],
+            "campaignPriority": 1,
+            "priority": 1,
+            "promotionLimit": 0,
+            "selectionInfo": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<UISelectionTuple xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" p=\"ProductAndCategory\" c=\"BuyXUnitsOfX\" r=\"GetYUnitsOfBForZAmount\" />",
+            "isExclusive": false,
+            "excludeDiscountedItems": false,
+            "allowConsumedConditionItemsToBeReused": true,
+            "allowConsumedRewardItemsToBeReused": true,
+            "couponMode": "Single",
+            "couponStartDate": "2015-05-01T00:00:00.0000000Z",
+            "couponEndDate": "2025-05-02T00:00:00.0000000Z",
+            "couponMaximumUsageGlobal": 0,
+            "couponMaximumUsageCustomer": 1,
+            "couponSingleCouponCode": "past-ckscarf",
+            "versionNumber": 1,
+            "isActive": true,
+            "consumabilityRules": [ ],
+            "id": "70975d25d2df46bca34a576b46a74d62",
+            "propertyBag": { }
+        },
+        {
+            "campaignId": "ca6deb24aa8d4369adc48dc9c1ea473a",
+            "name": "Get 10% off on 3816040 [BLACK VARIANT ONLY]",
+            "description": "10% off on BLACK BROWN 1826 Plaid Scarf (3816040) on BLACK variant only (SKU: 87044889)",
+            "promotionText": {
+                "en-CA": "Get 10% off this black scarf",
+                "en-US": "Get 10% off this black scarf",
+                "fr-CA": "Obtenez 10% sur ce foulard noir"
+            },
+            "conditions": [ ],
+            "rewardDefinitions": [
+                {
+                    "level": "Product",
+                    "rewardType": "Discount",
+                    "valueType": "Percentage",
+                    "value": 0.1,
+                    "quantity": 1,
+                    "matchQuantityOrLess": false,
+                    "matchQuantityOrMore": false,
+                    "useConsumedItemsFromConditions": false,
+                    "rewardTargets": [
+                        {
+                            "targetType": "Variant",
+                            "displayName": "BLACK BROWN 1826 Plaid Scarf",
+                            "catalogId": "Canada",
+                            "productId": "3816040",
+                            "variantId": "87044889",
+                            "quantity": 0
+                        }
+                    ],
+                    "disambiguation": "NotSpecified",
+                    "unitOfMeasure": "Unit",
+                    "excludeDiscountedItems": false,
+                    "consumabilityRules": [ ],
+                    "id": "947d7647914644938c29446c2190d8cd",
+                    "propertyBag": { }
+                }
+            ],
+            "campaignPriority": 1,
+            "priority": 1,
+            "promotionLimit": 0,
+            "selectionInfo": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<UISelectionTuple xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" p=\"ProductAndCategory\" c=\"BuyXUnitsOfX\" r=\"SaveZPercentOnA\" />",
+            "isExclusive": false,
+            "excludeDiscountedItems": false,
+            "allowConsumedConditionItemsToBeReused": true,
+            "allowConsumedRewardItemsToBeReused": true,
+            "couponMode": "None",
+            "couponStartDate": "2015-05-01T00:00:00.0000000Z",
+            "couponEndDate": "2025-05-02T00:00:00.0000000Z",
+            "couponMaximumUsageGlobal": 0,
+            "couponMaximumUsageCustomer": 0,
+            "couponSingleCouponCode": "",
+            "versionNumber": 1,
+            "isActive": true,
+            "consumabilityRules": [ ],
+            "id": "b599f688cb5549b28954882fce701587",
+            "propertyBag": { }
+        },
+        {
+            "campaignId": "ca6deb24aa8d4369adc48dc9c1ea473a",
+            "name": "[COUPON] Spend CAD $200 and get 10% off your order",
+            "description": "Spend CAD $200 and get 10% off your order",
+            "promotionText": {
+                "en-CA": "Spend $200 and get 10% off your order",
+                "en-US": "Spend $200 and get 10% off your order",
+                "fr-CA": "Achetez pour 200$ et économisez 10% sur votre commande"
+            },
+            "conditions": [
+                {
+                    "level": "Order",
+                    "type": "Amount",
+                    "value": 200,
+                    "unitOfMeasure": "Unit",
+                    "targets": [ ],
+                    "excludeDiscountedItems": false,
+                    "consumabilityRules": [ ],
+                    "id": "bf95f34fa419447fbd7dacd9e4690318",
+                    "propertyBag": { }
+                }
+            ],
+            "rewardDefinitions": [
+                {
+                    "level": "Order",
+                    "rewardType": "Discount",
+                    "valueType": "Percentage",
+                    "value": 0.1,
+                    "quantity": 0,
+                    "matchQuantityOrLess": false,
+                    "matchQuantityOrMore": false,
+                    "useConsumedItemsFromConditions": false,
+                    "rewardTargets": [ ],
+                    "disambiguation": "NotSpecified",
+                    "unitOfMeasure": "Unit",
+                    "excludeDiscountedItems": false,
+                    "consumabilityRules": [ ],
+                    "id": "2e36ab07858b480d933220ffd3bd2f49",
+                    "propertyBag": { }
+                }
+            ],
+            "campaignPriority": 1,
+            "priority": 1,
+            "promotionLimit": 0,
+            "selectionInfo": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<UISelectionTuple xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" p=\"Cart\" c=\"SpendXTotal\" r=\"SaveZPercentOnYourOrder\" />",
+            "isExclusive": false,
+            "excludeDiscountedItems": false,
+            "allowConsumedConditionItemsToBeReused": true,
+            "allowConsumedRewardItemsToBeReused": true,
+            "couponMode": "Single",
+            "couponStartDate": "2015-05-01T00:00:00.0000000Z",
+            "couponEndDate": "2025-05-02T00:00:00.0000000Z",
+            "couponMaximumUsageGlobal": 0,
+            "couponMaximumUsageCustomer": 1,
+            "couponSingleCouponCode": "past-supersave",
+            "versionNumber": 1,
+            "isActive": true,
+            "consumabilityRules": [ ],
+            "id": "baa78ed52b78420fa2c9e59c65347e34",
+            "propertyBag": { }
+        },
+        {
+            "campaignId": "ca6deb24aa8d4369adc48dc9c1ea473a",
+            "name": "Get 10% off on 3928640 [ALL VARIANTS]",
+            "description": "10% off on TOMMY HILFIGER Selena Dress Striped Dress (3928640) on all variants",
+            "promotionText": {
+                "en-CA": "Get 10% this article",
+                "en-US": "Get 10% this article",
+                "fr-CA": "Obtenez 10% de rabais sur cet article"
+            },
+            "conditions": [ ],
+            "rewardDefinitions": [
+                {
+                    "level": "Product",
+                    "rewardType": "Discount",
+                    "valueType": "Percentage",
+                    "value": 0.1,
+                    "quantity": 1,
+                    "matchQuantityOrLess": false,
+                    "matchQuantityOrMore": false,
+                    "useConsumedItemsFromConditions": false,
+                    "rewardTargets": [
+                        {
+                            "targetType": "Variant",
+                            "displayName": "TOMMY HILFIGER Selena Dress Striped Dress",
+                            "catalogId": "Canada",
+                            "productId": "3928640",
+                            "quantity": 0
+                        }
+                    ],
+                    "disambiguation": "NotSpecified",
+                    "unitOfMeasure": "Unit",
+                    "excludeDiscountedItems": false,
+                    "consumabilityRules": [ ],
+                    "id": "050661821e764260ad303dcc7e14f6a5",
+                    "propertyBag": { }
+                }
+            ],
+            "campaignPriority": 1,
+            "priority": 1,
+            "promotionLimit": 0,
+            "selectionInfo": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<UISelectionTuple xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" p=\"ProductAndCategory\" c=\"BuyXUnitsOfX\" r=\"SaveZPercentOnA\" />",
+            "isExclusive": false,
+            "excludeDiscountedItems": false,
+            "allowConsumedConditionItemsToBeReused": true,
+            "allowConsumedRewardItemsToBeReused": false,
+            "couponMode": "None",
+            "couponStartDate": "2015-05-01T00:00:00.0000000Z",
+            "couponEndDate": "2025-05-02T00:00:00.0000000Z",
+            "couponMaximumUsageGlobal": 0,
+            "couponMaximumUsageCustomer": 0,
+            "couponSingleCouponCode": "",
+            "versionNumber": 1,
+            "isActive": true,
+            "consumabilityRules": [ ],
+            "id": "e15fc09a24384e7bbc70c7d10372f719",
+            "propertyBag": { }
+        },
+        {
+            "campaignId": "ca6deb24aa8d4369adc48dc9c1ea473a",
+            "name": "15% on Women's Activewear",
+            "description": "15% on Women's Activewear",
+            "promotionText": {
+                "en-CA": "Get 15% off on all Women's Activewear articles",
+                "en-US": "Get 15% off on all Women's Activewear articles",
+                "fr-CA": "Économisez 15% sur tous les Vetements de sport féminins"
+            },
+            "conditions": [ ],
+            "rewardDefinitions": [
+                {
+                    "level": "Product",
+                    "rewardType": "Discount",
+                    "valueType": "Percentage",
+                    "value": 0.15,
+                    "quantity": 1,
+                    "matchQuantityOrLess": false,
+                    "matchQuantityOrMore": false,
+                    "useConsumedItemsFromConditions": false,
+                    "rewardTargets": [
+                        {
+                            "targetType": "Category",
+                            "displayName": "Women's Activewear",
+                            "catalogId": "Canada",
+                            "categoryId": "womens_activewear",
+                            "quantity": 0
+                        }
+                    ],
+                    "disambiguation": "NotSpecified",
+                    "unitOfMeasure": "Unit",
+                    "excludeDiscountedItems": false,
+                    "consumabilityRules": [ ],
+                    "id": "97d868a9b2d84ae0a0b6688063029f45",
+                    "propertyBag": { }
+                }
+            ],
+            "campaignPriority": 1,
+            "priority": 1,
+            "promotionLimit": 0,
+            "selectionInfo": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<UISelectionTuple xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" p=\"ProductAndCategory\" c=\"BuyXUnitsOfX\" r=\"SaveZPercentOnA\" />",
+            "isExclusive": false,
+            "excludeDiscountedItems": false,
+            "allowConsumedConditionItemsToBeReused": true,
+            "allowConsumedRewardItemsToBeReused": true,
+            "couponMode": "None",
+            "couponStartDate": "2015-05-01T00:00:00.0000000Z",
+            "couponEndDate": "2025-05-02T00:00:00.0000000Z",
+            "couponMaximumUsageGlobal": 0,
+            "couponMaximumUsageCustomer": 0,
+            "couponSingleCouponCode": "",
+            "versionNumber": 1,
+            "isActive": true,
+            "consumabilityRules": [ ],
+            "id": "d73d6f9fb64d407c92e8065b03c0eee5",
+            "propertyBag": { }
+        }
+    ]
+}

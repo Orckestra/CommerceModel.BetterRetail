@@ -1,0 +1,211 @@
+{
+  "number": "BRC-770",
+  "isActive": true,
+  "name": "BRC-Main Street",
+  "displayName": {
+    "en-CA": "Main Street",
+    "en-US": "Main Street",
+    "fr-CA": "Rue Principale"
+  },
+  "description": {
+    "en-CA": "",
+    "en-US": "",
+    "fr-CA": ""
+  },
+  "storeType": 0,
+  "manager": null,
+  "phoneNumber": "(867) 668-6848",
+  "phoneExtension": null,
+  "faxNumber": null,
+  "faxExtension": null,
+  "email": null,
+  "supportPickUp": true,
+  "supportDelivery": false,
+  "supportShipping": false,
+  "shipOrderFromOther": false,
+  "operatingStatus": {
+    "id": "31101C70-0366-4DB6-89C3-E9E52BB69E31",
+    "availabilityStatus": {
+      "isAvailable": true,
+      "reason": null,
+      "estimatedDuration": {
+        "time": 0.0,
+        "timeScale": 0
+      }
+    },
+    "deliveryAvailabilityStatus": {
+      "isAvailable": true,
+      "reason": null,
+      "estimatedDuration": {
+        "time": 0.0,
+        "timeScale": 0
+      }
+    },
+    "deliveryQuoteTime": {
+      "duration": {
+        "time": 0.0,
+        "timeScale": 0
+      },
+      "couldBeDelayed": false,
+      "delayReason": null,
+      "delayEstimatedDuration": {
+        "time": 0.0,
+        "timeScale": 0
+      }
+    },
+    "pickupAvailabilityStatus": {
+      "isAvailable": true,
+      "reason": null,
+      "estimatedDuration": {
+        "time": 0.0,
+        "timeScale": 0
+      }
+    },
+    "pickupQuoteTime": {
+      "duration": {
+        "time": 0.0,
+        "timeScale": 0
+      },
+      "couldBeDelayed": false,
+      "delayReason": null,
+      "delayEstimatedDuration": {
+        "time": 0.0,
+        "timeScale": 0
+      }
+    },
+    "propertyBag": null
+  },
+  "schedule": {
+    "fulfillmentLocationId": "31101c70-0366-4db6-89c3-e9e52bb69e31",
+    "openingHours": [
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "09:00:00",
+            "endingTime": "18:00:00"
+          }
+        ],
+        "day": 1,
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "09:00:00",
+            "endingTime": "18:00:00"
+          }
+        ],
+        "day": 2,
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "09:00:00",
+            "endingTime": "18:00:00"
+          }
+        ],
+        "day": 3,
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "09:00:00",
+            "endingTime": "18:00:00"
+          }
+        ],
+        "day": 4,
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "09:00:00",
+            "endingTime": "19:00:00"
+          }
+        ],
+        "day": 5,
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "09:00:00",
+            "endingTime": "18:00:00"
+          }
+        ],
+        "day": 6,
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "12:00:00",
+            "endingTime": "17:00:00"
+          }
+        ],
+        "day": 0,
+        "isOpenedAllDay": false
+      }
+    ],
+    "openingHourExceptions": [],
+    "scheduleType": 0,
+    "propertyBag": null
+  },
+  "pickUpSchedule": {
+    "fulfillmentLocationId": "31101c70-0366-4db6-89c3-e9e52bb69e31",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": 2,
+    "propertyBag": null
+  },
+  "deliverySchedule": {
+    "fulfillmentLocationId": "31101c70-0366-4db6-89c3-e9e52bb69e31",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": 1,
+    "propertyBag": null
+  },
+  "timeZone": "Eastern Standard Time",
+  "deliveryScheduleManaged": false,
+  "pickUpScheduleManaged": false,
+  "inventoryLocationId": "BRC-770",
+  "inventoryProviderId": "OvertureQuantitative",
+  "isInventoryEnabled": true,
+  "isAtpEnabled": true,
+  "propertyBag": null,
+  "addresses": [
+    {
+      "id": "2f2ade87-c100-470c-9405-25e3ac09f655",
+      "addressName": "AddressFr",
+      "city": "Whitehorse",
+      "countryCode": "CA",
+      "regionCode": "CA-YT",
+      "line1": "305, Rue Principale",
+      "line2": null,
+      "firstName": null,
+      "lastName": null,
+      "phoneNumber": "8676686848",
+      "phoneExtension": null,
+      "postalCode": "Y1A 2B4",
+      "latitude": 60.719124,
+      "longitude": -135.055176,
+      "email": null,
+      "notes": null,
+      "isPreferredBilling": false,
+      "isPreferredShipping": false,
+      "propertyBag": {
+        "Address_Id": 59
+      }
+    }
+  ],
+  "scopeId": "BetterRetailCanada"
+}

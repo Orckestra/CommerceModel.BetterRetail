@@ -1,0 +1,41 @@
+﻿{
+  "name": "RecurringOrderUnableToCreateOrderFromCartCSR",
+  "description": {
+    "en-US": "Notification email to the CSR sent when a recurring order was not able to be created",
+    "en-CA": "Notification email to the CSR sent when a recurring order was not able to be created",
+    "fr-CA": "Courriel de communication au CSR envoyé lorsqu'une commande récurrente n'a pas pu être créée"
+  },
+  "contents": [
+    {
+      "name": "SenderDisplayName",
+      "content": {
+        "en-CA": "Orckestra Commerce Cloud",
+        "en-US": "Orckestra Commerce Cloud",
+        "fr-CA": "Orckestra Commerce Cloud"
+      }
+    },
+    {
+      "name": "ReceiverDisplayName",
+      "content": {
+        "en-CA": "Recurring order",
+        "en-US": "Recurring order",
+        "fr-CA": "Commande récurrente"
+      }
+    },
+    {
+      "name": "Subject",
+      "content": {
+        "en-CA": "There was a problem with a recurring order",
+        "en-US": "There was a problem with a recurring order",
+        "fr-CA": "Erreur lors de la création d'une commande récurrente"
+      }
+    }
+  ],
+  "displayName": {
+    "en-US": "Recurring order creation error - CSR",
+    "en-CA": "Recurring order creation error - CSR",
+    "fr-CA": "Erreur de création de commande récurrente - CSR"
+  },
+  "isActive": true,
+  "type": "Email"
+}

@@ -1,0 +1,31 @@
+﻿
+Bonjour {{Customer.FirstName}} {{Customer.LastName}},
+
+Votre commande placée sur {{Variables.RootUrl}} contient des produits qui vous seront envoyés de façon périodique.  Ce courriel contient tous les détails de la commande pour ces produits:
+
+Merci,
+L’équipe {{Variables.CompanyName}}
+
+NOUVEAUX PRODUITS QUI SERONT ENVOYÉS PÉRIODIQUEMENT
+==============================
+
+{% for item in AddedProducts %}
+Produit: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
+Prix: {{item.TotalRegularPrice | money:"fr-CA" }}
+{% endfor %}
+
+
+TOUS LES PRODUITS QUI SERONT ENVOYÉS PÉRIODIQUEMENT
+==============================
+
+{% for item in AllProducts %}
+Produit: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
+Prix: {{item.TotalRegularPrice | money:"fr-CA" }}
+{% endfor %}
+
+
+INFORMATION ADDITIONNELLE
+==============================
+Ne pas répondre à ce courriel. L’adresse d’envoi ne peut recevoir de courriels.
+
+Copyright {{Variables.CopyrightsYear}} {{Variables.CompanyName}}. Tous droits réservés.

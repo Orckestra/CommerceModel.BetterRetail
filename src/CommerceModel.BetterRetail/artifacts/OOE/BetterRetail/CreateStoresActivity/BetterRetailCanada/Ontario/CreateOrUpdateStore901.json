@@ -1,0 +1,191 @@
+{
+  "number": "BRC-901",
+  "isActive": true,
+  "name": "BRC-Hawkesbury",
+  "displayName": {
+    "en-CA": "BRC-Hawkesbury",
+    "en-US": "BRC-Hawkesbury",
+    "fr-CA": "BRC-Hawkesbury"
+  },
+  "description": {
+    "en-CA": "",
+    "en-US": "",
+    "fr-CA": ""
+  },
+  "storeType": "Physical",
+  "phoneNumber": "613 632-0793",
+  "isPickUpLocation": false,
+  "supportPickUp": false,
+  "supportDelivery": false,
+  "supportShipping": false,
+  "supportShipToStore": true,
+  "operatingStatus": {
+    "id": "CC728F80-1833-4F47-9E99-30BAAC1A42B4",
+    "availabilityStatus": {
+      "isAvailable": true,
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "deliveryAvailabilityStatus": {
+      "isAvailable": true,
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "deliveryQuoteTime": {
+      "duration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      },
+      "couldBeDelayed": false,
+      "delayEstimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "pickupAvailabilityStatus": {
+      "isAvailable": true,
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "pickupQuoteTime": {
+      "duration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      },
+      "couldBeDelayed": false,
+      "delayEstimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    }
+  },
+  "schedule": {
+    "fulfillmentLocationId": "cc728f80-1833-4f47-9e99-30baac1a42b4",
+    "openingHours": [
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT9H",
+            "endingTime": "PT17H"
+          }
+        ],
+        "day": "Monday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT9H",
+            "endingTime": "PT17H"
+          }
+        ],
+        "day": "Tuesday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT9H",
+            "endingTime": "PT17H"
+          }
+        ],
+        "day": "Wednesday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT9H",
+            "endingTime": "PT21H"
+          }
+        ],
+        "day": "Thursday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT9H",
+            "endingTime": "PT21H"
+          }
+        ],
+        "day": "Friday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT9H",
+            "endingTime": "PT17H"
+          }
+        ],
+        "day": "Saturday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT11H",
+            "endingTime": "PT16H"
+          }
+        ],
+        "day": "Sunday",
+        "isOpenedAllDay": false
+      }
+    ],
+    "openingHourExceptions": [],
+    "scheduleType": "OpeningHours"
+  },
+  "pickUpSchedule": {
+    "fulfillmentLocationId": "cc728f80-1833-4f47-9e99-30baac1a42b4",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": "Pickup"
+  },
+  "deliverySchedule": {
+    "fulfillmentLocationId": "cc728f80-1833-4f47-9e99-30baac1a42b4",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": "Delivery"
+  },
+  "timeZone": "Eastern Standard Time",
+  "deliveryScheduleManaged": false,
+  "pickUpScheduleManaged": false,
+  "inventoryLocationId": "BRC-901",
+  "inventoryProviderId": "OvertureQuantitative",
+  "IsInventoryEnabled": true,
+  "IsAtpEnabled": true,
+  "addresses": [
+    {
+      "id": "a7d71a9dcb2e4d868c4845852b1b9c51",
+      "addressName": "MainAddress",
+      "city": "Hawkesbury",
+      "countryCode": "CA",
+      "regionCode": "CA-ON",
+      "line1": "454, County Road 17",
+      "postalCode": "K6A 2R2",
+      "isPreferredBilling": false,
+      "isPreferredShipping": false,
+      "propertyBag": {
+        "Address_Id": {
+          "__type": "ValueOfInt32",
+          "value": 37479
+        }
+      }
+    }
+  ],
+  "scopeId": "BetterRetailOntario"
+}

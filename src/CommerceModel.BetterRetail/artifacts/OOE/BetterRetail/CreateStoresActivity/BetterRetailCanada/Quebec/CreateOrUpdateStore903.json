@@ -1,0 +1,197 @@
+{
+  "number": "BRC-903",
+  "isActive": true,
+  "name": "BRC-Galeries Terrebonne",
+  "displayName": {
+    "en-CA": "Galeries Terrebonne",
+    "en-US": "Galeries Terrebonne",
+    "fr-CA": "Galeries Terrebonne"
+  },
+  "description": {
+    "en-CA": "",
+    "en-US": "",
+    "fr-CA": ""
+  },
+  "storeType": "Physical",
+  "phoneNumber": "450 471-3688",
+  "isPickUpLocation": true,
+  "supportPickUp": false,
+  "supportDelivery": false,
+  "supportShipping": false,
+  "supportShipToStore": false,
+  "operatingStatus": {
+    "id": "17808CD8-CC24-41D1-B1B6-F872D62495C7",
+    "availabilityStatus": {
+      "isAvailable": true,
+      "reason": "",
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "deliveryAvailabilityStatus": {
+      "isAvailable": true,
+      "reason": "",
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "deliveryQuoteTime": {
+      "duration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      },
+      "couldBeDelayed": false,
+      "delayReason": "",
+      "delayEstimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "pickupAvailabilityStatus": {
+      "isAvailable": true,
+      "reason": "",
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "pickupQuoteTime": {
+      "duration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      },
+      "couldBeDelayed": false,
+      "delayReason": "",
+      "delayEstimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    }
+  },
+  "schedule": {
+    "fulfillmentLocationId": "17808cd8-cc24-41d1-b1b6-f872d62495c7",
+    "openingHours": [
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT10H",
+            "endingTime": "PT18H"
+          }
+        ],
+        "day": "Monday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT10H",
+            "endingTime": "PT18H"
+          }
+        ],
+        "day": "Tuesday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT10H",
+            "endingTime": "PT21H"
+          }
+        ],
+        "day": "Wednesday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT10H",
+            "endingTime": "PT21H"
+          }
+        ],
+        "day": "Thursday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT10H",
+            "endingTime": "PT21H"
+          }
+        ],
+        "day": "Friday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT9H",
+            "endingTime": "PT17H"
+          }
+        ],
+        "day": "Saturday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT10H",
+            "endingTime": "PT17H"
+          }
+        ],
+        "day": "Sunday",
+        "isOpenedAllDay": false
+      }
+    ],
+    "openingHourExceptions": [],
+    "scheduleType": "OpeningHours"
+  },
+  "pickUpSchedule": {
+    "fulfillmentLocationId": "17808cd8-cc24-41d1-b1b6-f872d62495c7",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": "Pickup"
+  },
+  "deliverySchedule": {
+    "fulfillmentLocationId": "17808cd8-cc24-41d1-b1b6-f872d62495c7",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": "Delivery"
+  },
+  "timeZone": "Eastern Standard Time",
+  "deliveryScheduleManaged": false,
+  "pickUpScheduleManaged": false,
+  "inventoryLocationId": "BRC-903",
+  "inventoryProviderId": "OvertureQuantitative",
+  "IsInventoryEnabled": true,
+  "IsAtpEnabled": true,
+  "addresses": [
+    {
+      "id": "f86d39ecc3ad4e28adc1d36440d39d0f",
+      "addressName": "AddressFr",
+      "city": "Terrebonne",
+      "countryCode": "CA",
+      "regionCode": "CA-QC",
+      "line1": "1185, Rue Moody",
+      "phoneNumber": "4504713688",
+      "postalCode": "J6W 3Z5",
+      "isPreferredBilling": false,
+      "isPreferredShipping": false,
+      "propertyBag": {
+        "Address_Id": {
+          "__type": "ValueOfInt32",
+          "value": 37462
+        }
+      }
+    }
+  ],
+  "scopeId": "BetterRetailCanada"
+}

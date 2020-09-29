@@ -1,0 +1,41 @@
+﻿{
+  "name": "OrderReadyForPickup",
+  "description": {
+    "en-US": "Notification email sent when order is ready to be picked up",
+    "en-CA": "Notification email sent when order is ready to be picked up",
+    "fr-CA": "Courriel de communication envoyé lorsque la commande est prête pour ramassage en magasin"
+  },
+  "contents": [
+    {
+      "name": "SenderDisplayName",
+      "content": {
+        "en-CA": "Orckestra Commerce Cloud",
+        "en-US": "Orckestra Commerce Cloud",
+        "fr-CA": "Orckestra Commerce Cloud"
+      }
+    },
+    {
+      "name": "ReceiverDisplayName",
+      "content": {
+        "en-CA": "{{Order.Cart.Customer.FirstName}} {{Order.Cart.Customer.LastName}}",
+        "en-US": "{{Order.Cart.Customer.FirstName}} {{Order.Cart.Customer.LastName}}",
+        "fr-CA": "{{Order.Cart.Customer.FirstName}} {{Order.Cart.Customer.LastName}}"
+      }
+    },
+    {
+      "name": "Subject",
+      "content": {
+        "en-CA": "Order ready for pick up - order {{Order.OrderNumber}}",
+        "en-US": "Order ready for pick up - order {{Order.OrderNumber}}",
+        "fr-CA": "Commande prête pour ramassage – commande {{Order.OrderNumber}}"
+      }
+    }
+  ],
+  "displayName": {
+    "en-US": "Order created",
+    "en-CA": "Order created",
+    "fr-CA": "Order created"
+  },
+  "isActive": true,
+  "type": "Email"
+}

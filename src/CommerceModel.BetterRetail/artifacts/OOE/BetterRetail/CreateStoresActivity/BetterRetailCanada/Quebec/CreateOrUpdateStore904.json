@@ -1,0 +1,197 @@
+{
+  "number": "BRC-904",
+  "isActive": true,
+  "name": "BRC-Carrefour Angrignon",
+  "displayName": {
+    "en-CA": "Carrefour Angrignon",
+    "en-US": "Carrefour Angrignon",
+    "fr-CA": "Carrefour Angrignon"
+  },
+  "description": {
+    "en-CA": "",
+    "en-US": "",
+    "fr-CA": ""
+  },
+  "storeType": "Physical",
+  "phoneNumber": "514 365-1286",
+  "isPickUpLocation": false,
+  "supportPickUp": true,
+  "supportDelivery": false,
+  "supportShipping": false,
+  "supportShipToStore": false,
+  "operatingStatus": {
+    "id": "5E912424-855A-4587-9717-9715F392CF75",
+    "availabilityStatus": {
+      "isAvailable": true,
+      "reason": "",
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "deliveryAvailabilityStatus": {
+      "isAvailable": true,
+      "reason": "",
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "deliveryQuoteTime": {
+      "duration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      },
+      "couldBeDelayed": false,
+      "delayReason": "",
+      "delayEstimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "pickupAvailabilityStatus": {
+      "isAvailable": true,
+      "reason": "",
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "pickupQuoteTime": {
+      "duration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      },
+      "couldBeDelayed": false,
+      "delayReason": "",
+      "delayEstimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    }
+  },
+  "schedule": {
+    "fulfillmentLocationId": "5e912424-855a-4587-9717-9715f392cf75",
+    "openingHours": [
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT10H",
+            "endingTime": "PT18H"
+          }
+        ],
+        "day": "Monday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT10H",
+            "endingTime": "PT18H"
+          }
+        ],
+        "day": "Tuesday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT10H",
+            "endingTime": "PT21H"
+          }
+        ],
+        "day": "Wednesday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT10H",
+            "endingTime": "PT21H"
+          }
+        ],
+        "day": "Thursday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT10H",
+            "endingTime": "PT21H"
+          }
+        ],
+        "day": "Friday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT9H",
+            "endingTime": "PT17H"
+          }
+        ],
+        "day": "Saturday",
+        "isOpenedAllDay": false
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [
+          {
+            "beginingTime": "PT10H",
+            "endingTime": "PT17H"
+          }
+        ],
+        "day": "Sunday",
+        "isOpenedAllDay": false
+      }
+    ],
+    "openingHourExceptions": [],
+    "scheduleType": "OpeningHours"
+  },
+  "pickUpSchedule": {
+    "fulfillmentLocationId": "5e912424-855a-4587-9717-9715f392cf75",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": "Pickup"
+  },
+  "deliverySchedule": {
+    "fulfillmentLocationId": "5e912424-855a-4587-9717-9715f392cf75",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": "Delivery"
+  },
+  "timeZone": "Eastern Standard Time",
+  "deliveryScheduleManaged": false,
+  "pickUpScheduleManaged": false,
+  "inventoryLocationId": "BRC-904",
+  "inventoryProviderId": "OvertureQuantitative",
+  "IsInventoryEnabled": true,
+  "IsAtpEnabled": true,
+  "addresses": [
+    {
+      "id": "ae4a5c461e4c406a8074c78db254b71e",
+      "addressName": "AddressFr",
+      "city": "Lasalle",
+      "countryCode": "CA",
+      "regionCode": "CA-QC",
+      "line1": "7077, Boul. Newman",
+      "phoneNumber": "5143651286",
+      "postalCode": "H8N 1X1",
+      "isPreferredBilling": false,
+      "isPreferredShipping": false,
+      "propertyBag": {
+        "Address_Id": {
+          "__type": "ValueOfInt32",
+          "value": 37463
+        }
+      }
+    }
+  ],
+  "scopeId": "BetterRetailCanada"
+}
