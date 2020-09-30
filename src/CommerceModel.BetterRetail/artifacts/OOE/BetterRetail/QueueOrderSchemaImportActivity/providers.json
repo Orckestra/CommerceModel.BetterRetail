@@ -65,7 +65,7 @@
         "value": true
       },
       "ReturnCarrierCode": "",
-      "ReturnServiceLevel": "",
+      "ReturnServiceLevel": ""
     },
     "propertyConfigurations": {}
   },
@@ -202,6 +202,14 @@
       "StoreToStoreTransfersEnabled": {
         "__type": "ValueOfBoolean",
         "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
       }
     },
     "propertyConfigurations": {}
@@ -237,6 +245,14 @@
         "value": 15
       },
       "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
       }
@@ -968,6 +984,14 @@
       "ForceManualCarrierSelection": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
       }
     },
     "propertyConfigurations": {}
@@ -1009,6 +1033,14 @@
       "StoreToStoreTransfersEnabled": {
         "__type": "ValueOfBoolean",
         "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
       }
     },
     "propertyConfigurations": {}
@@ -1045,6 +1077,14 @@
         "value": 15
       },
       "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
       }
@@ -1460,6 +1500,14 @@
       "ForceManualCarrierSelection": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
       }
     },
     "propertyConfigurations": {}
@@ -1501,6 +1549,14 @@
       "StoreToStoreTransfersEnabled": {
         "__type": "ValueOfBoolean",
         "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
       }
     },
     "propertyConfigurations": {}
@@ -1538,6 +1594,14 @@
         "value": 15
       },
       "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
       }
@@ -1754,4 +1818,3 @@
     "propertyConfigurations": {}
   }
 ]
-
