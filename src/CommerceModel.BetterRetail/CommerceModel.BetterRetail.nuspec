@@ -12,8 +12,8 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<summary>CommerceModel.BetterRetail</summary>
 		<description>CommerceModel.BetterRetail</description>
-		<releaseNotes>Orckestra Commerce 2018 release.</releaseNotes>
-		<copyright>Copyright Orckestra Technologies Inc. 2018</copyright>
+		<releaseNotes>Orckestra Commerce 2020 release.</releaseNotes>
+		<copyright>Copyright Orckestra Technologies Inc. 2020</copyright>
 		<dependencies>
 			<dependency id="CommerceModel.BetterRetail" version="0.0.0" />
 		</dependencies>

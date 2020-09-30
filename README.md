@@ -155,7 +155,7 @@ By default, the deployment script `integration.psake.ps1` does not automatically
 1. Fork this repository on Azure DevOps
    1. Create a new repository on Azure DevOps
    1. Download this repository from GitHub and upload it to the new Azure DevOps repository
-   1. Edit the file `build/build-pipeline.yml` and keep only one of the `PublishToCMP` tasks and change its `clientCode` input to `$(CMP.Password)`
+   1. Edit the file `build/build-pipeline.yml` and keep only one of the `PublishToCMP` tasks and change its `clientCode` input to `$(CMP.ClientCode)`
 1. Create a variable group (in Pipeline/Library) called `CMP - Connection API V2`
 
    1. This group should have 4 values:

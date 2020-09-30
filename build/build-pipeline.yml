@@ -75,13 +75,13 @@ stages:
         deploy:
           steps:
           - task: PublishToCMP@1
-            name: PublishORC
-            displayName: Publish package for ORC
+            name: PublishOCC
+            displayName: Publish package for OCC
             inputs:
               cmpUrl: '$(CMP.Url)'
               cmpUsername: '$(CMP.UserName)'
               cmpPassword: '$(CMP.Password)'
-              cmpClientCode: 'orc'
+              cmpClientCode: 'occ'
               cmpPackageFolder: '$(Pipeline.Workspace)/Nuget'
               cmpStability: '$(CmpStability)'
               cmpPackagesList: 'CommerceModel*.nupkg'
