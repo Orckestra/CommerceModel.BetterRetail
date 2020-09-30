@@ -6,7 +6,7 @@ using System.Reflection;
 
 [assembly: AssemblyCompany("Orckestra Technologies Inc.")]
 [assembly: AssemblyProduct("Orckestra Commerce")]
-[assembly: AssemblyCopyright("Copyright © Orckestra Technologies Inc. 2019")]
+[assembly: AssemblyCopyright("Copyright Â© Orckestra Technologies Inc. 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
