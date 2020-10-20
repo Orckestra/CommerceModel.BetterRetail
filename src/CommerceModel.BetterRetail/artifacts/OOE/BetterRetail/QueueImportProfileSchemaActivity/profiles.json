@@ -432,23 +432,6 @@
           "fr-CA": "Courriel de destination pour les envois saisis",
           "it-IT": "Destination email addresses for seized shipments"
         }
-      },
-      {
-        "groupId": "Default",
-        "isRequired": false,
-        "displayOrder": 0,
-        "dataType": "Text",
-        "isBuiltIn": false,
-        "allowMultipleValues": false,
-        "multilingual": false,
-        "isSearchable": false,
-        "name": "CarrierAccountList",
-        "description": "List of Shippo carrier accounts associated to a store and considered valid for shipping",
-        "displayName": {
-          "en-US": "Carrier Account List",
-          "en-CA": "Carrier Account List",
-          "fr-CA": "Liste de comptes de transporteur"
-        }
       }
     ],
     "isSharedEntity": true,
