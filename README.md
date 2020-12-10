@@ -14,6 +14,9 @@ You also need PowerShell 5.1 to execute the build script. The build script it no
 
 ### Building
 
+> [!CAUTION]
+> Known issue: We have an issue with the PAT (personal access token) used in the nuget.config files. For security reasons you have to update the PAT in the nuget files before executing a build.
+
 You can build the project by opening a PowerShell window in the `build` folder and executing this:
 
 ```powershell

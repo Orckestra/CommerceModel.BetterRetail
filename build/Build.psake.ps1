@@ -73,7 +73,8 @@ Task Clean        -depends CleanPackages,
                            CleanArtifacts `
                   -precondition { $IsRunningOnBuildMachine -eq $false }   # No need to clean on build machine since we always start from a brand new workspace.
 
-Task Compile      -depends RestorePackages,
+Task Compile      -depends UpdateNugetConfigFromFeeds,
+                           RestorePackages,
                            ReplaceSensitiveData,
                            InitializeAssemblyVersion,
                            InitializeDeploymentPackageManifestVersion,
@@ -240,6 +241,27 @@ Task UndoSensitiveData {
         }
 
         $content | Set-Content -Path $file -NoNewline
+    }
+}
+
+Task UpdateNugetConfigFromFeeds {
+    if ($NugetFeeds) {
+        $nugetFiles = @(
+            (Join-Path $WorkspaceRoot "nuget.config"),
+            (Join-Path $WorkspaceRoot "build\nuget.config")
+        )
+        
+        foreach ($nugetFile in $nugetFiles) {
+            $xmlContent = [xml] (Get-Content -Path $nugetFile -Raw)
+
+            $passwordNodes = $xmlContent.SelectNodes("//add[@key='ClearTextPassword']")
+
+            foreach ($passwordNode in $passwordNodes) {
+                $passwordNode.SetAttribute("value", $NugetFeeds["Release"].password) # assume that we have the same PAT for every feed
+            }
+
+            $xmlContent.Save($nugetFile)
+        }
     }
 }
 
