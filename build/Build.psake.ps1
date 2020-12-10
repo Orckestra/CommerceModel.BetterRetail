@@ -73,8 +73,7 @@ Task Clean        -depends CleanPackages,
                            CleanArtifacts `
                   -precondition { $IsRunningOnBuildMachine -eq $false }   # No need to clean on build machine since we always start from a brand new workspace.
 
-Task Compile      -depends UpdateNugetConfigFromFeeds,
-                           RestorePackages,
+Task Compile      -depends RestorePackages,
                            ReplaceSensitiveData,
                            InitializeAssemblyVersion,
                            InitializeDeploymentPackageManifestVersion,
@@ -110,6 +109,9 @@ $WorkspaceRoot = Split-Path $psake.build_script_dir -Parent
 
 # Download nuget packages that are required very soon in the build process for PsUtil
 # (i.e. before RestorePackages is called)
+
+UpdateNugetConfigFromFeeds # workaround until we figure out how to handle PAT in a public repo
+
 $packages = Copy-Item "$WorkspaceRoot\build\packages.bootstrap.config" -Destination (Join-Path $env:TEMP 'packages.config') -Force -PassThru
 Exec { & "$WorkspaceRoot\lib\nuget\nuget.exe" restore $packages.FullName -PackagesDirectory "$WorkspaceRoot\packages\NuGet" -ConfigFile "$WorkspaceRoot\nuget.config" -Verbosity quiet }
 Get-ChildItem "$WorkspaceRoot\packages\NuGet" -Recurse -Include Orckestra.PsUtil.psd1 |
@@ -244,27 +246,6 @@ Task UndoSensitiveData {
     }
 }
 
-Task UpdateNugetConfigFromFeeds {
-    if ($NugetFeeds) {
-        $nugetFiles = @(
-            (Join-Path $WorkspaceRoot "nuget.config"),
-            (Join-Path $WorkspaceRoot "build\nuget.config")
-        )
-        
-        foreach ($nugetFile in $nugetFiles) {
-            $xmlContent = [xml] (Get-Content -Path $nugetFile -Raw)
-
-            $passwordNodes = $xmlContent.SelectNodes("//add[@key='ClearTextPassword']")
-
-            foreach ($passwordNode in $passwordNodes) {
-                $passwordNode.SetAttribute("value", $NugetFeeds["Release"].password) # assume that we have the same PAT for every feed
-            }
-
-            $xmlContent.Save($nugetFile)
-        }
-    }
-}
-
 Task PublishPackages {
     # this tasks depends on the variable BuildStability set by DetectBuildStability
 
@@ -328,6 +309,27 @@ Task InitializeAssemblyVersion -precondition { $IsRunningOnBuildMachine } {
     $globalAssemblyInfoPath = Join-Path (Get-GitWorkspaceRoot) 'src\Common\GlobalAssemblyInfo.cs'
     $projectsDirectoryPaths = @('src', 'tests')
     InitializeAssemblyInfo -RootFolder $rootFolder -GlobalAssemblyInfoPath $globalAssemblyInfoPath -ProjectsDirectoryPaths $projectsDirectoryPaths
+}
+
+function UpdateNugetConfigFromFeeds {
+    if ($NugetFeeds) {
+        $nugetFiles = @(
+            (Join-Path $WorkspaceRoot "nuget.config"),
+            (Join-Path $WorkspaceRoot "build\nuget.config")
+        )
+        
+        foreach ($nugetFile in $nugetFiles) {
+            $xmlContent = [xml] (Get-Content -Path $nugetFile -Raw)
+
+            $passwordNodes = $xmlContent.SelectNodes("//add[@key='ClearTextPassword']")
+
+            foreach ($passwordNode in $passwordNodes) {
+                $passwordNode.SetAttribute("value", $NugetFeeds["Release"].password) # assume that we have the same PAT for every feed
+            }
+
+            $xmlContent.Save($nugetFile)
+        }
+    }
 }
 
 function Get-SensitiveData {
