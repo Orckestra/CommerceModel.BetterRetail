@@ -64,6 +64,28 @@ param(
 # Fail on first error.
 $ErrorActionPreference = 'Stop'
 
+
+function UpdateNugetConfigFromFeeds {
+    if ($ExtraProperties -and $ExtraProperties.NugetFeeds) {
+        $nugetFiles = @(
+            (Join-Path $PSScriptRoot "..\nuget.config"),
+            (Join-Path $PSScriptRoot "nuget.config")
+        )
+        
+        foreach ($nugetFile in $nugetFiles) {
+            $xmlContent = [xml] (Get-Content -Path $nugetFile -Raw)
+
+            $passwordNodes = $xmlContent.SelectNodes("//add[@key='ClearTextPassword']")
+
+            foreach ($passwordNode in $passwordNodes) {
+                $passwordNode.SetAttribute("value", $ExtraProperties.NugetFeeds["Release"].password) # assume that we have the same PAT for every feed
+            }
+
+            $xmlContent.Save($nugetFile)
+        }
+    }
+}
+
 $originalPsModulePath = $env:PSModulePath
 try {
     $env:PSModulePath = (Join-Path (Split-Path $PSScriptRoot -Parent) 'lib\PowerShellModules;') + $env:PSModulePath
@@ -149,6 +171,8 @@ The hierarchy of the tasks is also displayed.
         if ($IsRunningOnBuildMachine) {
             Write-Output $psakeProperties
         }
+
+        UpdateNugetConfigFromFeeds # workaround until we figure out how to handle PAT in a public repo
 
         Invoke-psake $psakeScript -properties $psakeProperties -taskLis $TaskList -nologo -Verbose:$verboseEnabled
 

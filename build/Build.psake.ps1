@@ -100,27 +100,6 @@ FormatTaskName {
     "[$(Get-Date -f 'yyyy-MM-dd HH:mm:ss')] $taskName"
 }
 
-function UpdateNugetConfigFromFeeds {
-    if ($NugetFeeds) {
-        $nugetFiles = @(
-            (Join-Path $WorkspaceRoot "nuget.config"),
-            (Join-Path $WorkspaceRoot "build\nuget.config")
-        )
-        
-        foreach ($nugetFile in $nugetFiles) {
-            $xmlContent = [xml] (Get-Content -Path $nugetFile -Raw)
-
-            $passwordNodes = $xmlContent.SelectNodes("//add[@key='ClearTextPassword']")
-
-            foreach ($passwordNode in $passwordNodes) {
-                $passwordNode.SetAttribute("value", $NugetFeeds["Release"].password) # assume that we have the same PAT for every feed
-            }
-
-            $xmlContent.Save($nugetFile)
-        }
-    }
-}
-
 # Since we don't stop psake when test fails, we need a flag that will track how many 
 # tests fail.
 $psake.number_of_test_run_errors = 0
@@ -130,9 +109,6 @@ $WorkspaceRoot = Split-Path $psake.build_script_dir -Parent
 
 # Download nuget packages that are required very soon in the build process for PsUtil
 # (i.e. before RestorePackages is called)
-
-UpdateNugetConfigFromFeeds # workaround until we figure out how to handle PAT in a public repo
-
 $packages = Copy-Item "$WorkspaceRoot\build\packages.bootstrap.config" -Destination (Join-Path $env:TEMP 'packages.config') -Force -PassThru
 Exec { & "$WorkspaceRoot\lib\nuget\nuget.exe" restore $packages.FullName -PackagesDirectory "$WorkspaceRoot\packages\NuGet" -ConfigFile "$WorkspaceRoot\nuget.config" -Verbosity quiet }
 Get-ChildItem "$WorkspaceRoot\packages\NuGet" -Recurse -Include Orckestra.PsUtil.psd1 |
