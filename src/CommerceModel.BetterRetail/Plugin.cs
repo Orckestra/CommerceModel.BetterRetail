@@ -8,7 +8,7 @@ namespace CommerceModel.BetterRetail
     {
        public void Register(IOvertureHost host)
         {
-            host.Providers.Register("BetterRetail", typeof(BetterRetailDamProvider), ComponentLifestyle.Transient);
+            //host.Providers.Register("BetterRetail", typeof(BetterRetailDamProvider), ComponentLifestyle.Transient);
         }
     }
 }
