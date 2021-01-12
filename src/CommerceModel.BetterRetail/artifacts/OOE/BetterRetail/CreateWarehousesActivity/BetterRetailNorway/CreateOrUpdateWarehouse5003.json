@@ -30,8 +30,8 @@
   ],
   "deliverySchedule": {
     "fulfillmentLocationId": "FB5B8F3A-6E1F-4D49-9638-949D81E807E8",
-    "openingHourExceptions": [ ],
-    "openingHours": [ ],
+    "openingHourExceptions": [],
+    "openingHours": [],
     "propertyBag": null,
     "scheduleType": 1
   },
@@ -111,16 +111,21 @@
   "phoneNumber": "450 471-3688",
   "pickUpSchedule": {
     "fulfillmentLocationId": "FB5B8F3A-6E1F-4D49-9638-949D81E807E8",
-    "openingHourExceptions": [ ],
-    "openingHours": [ ],
+    "openingHourExceptions": [],
+    "openingHours": [],
     "propertyBag": null,
     "scheduleType": 2
   },
   "pickUpScheduleManaged": false,
-  "propertyBag": "PropertyBag",
+  "PropertyBag": {
+    "RequireScanToPick": {
+      "__type": "ValueOfBoolean",
+      "value": false
+    }
+  },
   "schedule": {
     "fulfillmentLocationId": "FB5B8F3A-6E1F-4D49-9638-949D81E807E8",
-    "openingHourExceptions": [ ],
+    "openingHourExceptions": [],
     "openingHours": [
       {
         "IsClosed": false,

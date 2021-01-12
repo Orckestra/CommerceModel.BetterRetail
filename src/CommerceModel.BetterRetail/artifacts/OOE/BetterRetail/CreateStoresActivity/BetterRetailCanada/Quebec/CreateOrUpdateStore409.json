@@ -181,7 +181,12 @@
   "InventoryProviderId": "OvertureQuantitative",
   "IsInventoryEnabled": true,
   "IsAtpEnabled": true,
-  "PropertyBag": null,
+  "PropertyBag": {
+    "RequireScanToPick": {
+      "__type": "ValueOfBoolean",
+      "value": false
+    }
+  },
   "Addresses": [
     {
       "Id": "607ddc6e-2971-4d48-909f-ecfb4d0af430",

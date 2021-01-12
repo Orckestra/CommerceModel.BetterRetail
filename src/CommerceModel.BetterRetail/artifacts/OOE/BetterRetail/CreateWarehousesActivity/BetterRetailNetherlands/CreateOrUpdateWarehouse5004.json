@@ -1,5 +1,5 @@
 {
-  "scopeId": "BetterRetailNetherlands", 
+  "scopeId": "BetterRetailNetherlands",
   "addresses": [
     {
       "Id": "6244c2bd-f2db-472a-9846-ccf892902118",
@@ -117,7 +117,12 @@
     "scheduleType": 2
   },
   "pickUpScheduleManaged": false,
-  "propertyBag": "PropertyBag",
+  "PropertyBag": {
+    "RequireScanToPick": {
+      "__type": "ValueOfBoolean",
+      "value": false
+    }
+  },
   "schedule": {
     "fulfillmentLocationId": "C3EBBA51-20B6-4E54-AA6F-36D157FA9241",
     "openingHourExceptions": [],
@@ -206,6 +211,6 @@
   "supportDelivery": false,
   "supportPickUp": false,
   "supportShipping": true,
-  "supportShipToStore" : false,
+  "supportShipToStore": false,
   "timeZone": "Eastern Standard Time"
 }

@@ -1,5 +1,5 @@
 {
-  "scopeId":  "BetterRetailCanada", 
+  "scopeId": "BetterRetailCanada",
   "addresses": [
     {
       "Id": "6F3D359D-B325-4177-9CBD-5D7ECFC33BD1",
@@ -30,8 +30,8 @@
   ],
   "deliverySchedule": {
     "fulfillmentLocationId": "570AB555-3856-47ED-BD35-94B720E8D02C",
-    "openingHourExceptions": [ ],
-    "openingHours": [ ],
+    "openingHourExceptions": [],
+    "openingHours": [],
     "propertyBag": null,
     "scheduleType": 1
   },
@@ -111,16 +111,21 @@
   "phoneNumber": "450 471-3688",
   "pickUpSchedule": {
     "fulfillmentLocationId": "570AB555-3856-47ED-BD35-94B720E8D02C",
-    "openingHourExceptions": [ ],
-    "openingHours": [ ],
+    "openingHourExceptions": [],
+    "openingHours": [],
     "propertyBag": null,
     "scheduleType": 2
   },
   "pickUpScheduleManaged": false,
-  "propertyBag": "PropertyBag",
+  "PropertyBag": {
+    "RequireScanToPick": {
+      "__type": "ValueOfBoolean",
+      "value": false
+    }
+  },
   "schedule": {
     "fulfillmentLocationId": "570AB555-3856-47ED-BD35-94B720E8D02C",
-    "openingHourExceptions": [ ],
+    "openingHourExceptions": [],
     "openingHours": [
       {
         "IsClosed": false,

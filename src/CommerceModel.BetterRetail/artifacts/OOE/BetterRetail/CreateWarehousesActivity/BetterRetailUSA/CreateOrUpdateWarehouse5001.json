@@ -30,8 +30,8 @@
   ],
   "deliverySchedule": {
     "fulfillmentLocationId": "AA57BCC8-4DE5-402D-A22A-B13A339C252E",
-    "openingHourExceptions": [ ],
-    "openingHours": [ ],
+    "openingHourExceptions": [],
+    "openingHours": [],
     "propertyBag": null,
     "scheduleType": 1
   },
@@ -111,16 +111,21 @@
   "phoneNumber": "1-866-307-7117",
   "pickUpSchedule": {
     "fulfillmentLocationId": "AA57BCC8-4DE5-402D-A22A-B13A339C252E",
-    "openingHourExceptions": [ ],
-    "openingHours": [ ],
+    "openingHourExceptions": [],
+    "openingHours": [],
     "propertyBag": null,
     "scheduleType": 2
   },
   "pickUpScheduleManaged": false,
-  "propertyBag": "PropertyBag",
+  "PropertyBag": {
+    "RequireScanToPick": {
+      "__type": "ValueOfBoolean",
+      "value": false
+    }
+  },
   "schedule": {
     "fulfillmentLocationId": "AA57BCC8-4DE5-402D-A22A-B13A339C252E",
-    "openingHourExceptions": [ ],
+    "openingHourExceptions": [],
     "openingHours": [
       {
         "IsClosed": false,

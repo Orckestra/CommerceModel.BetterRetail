@@ -449,6 +449,24 @@
           "en-CA": "Carrier Account List",
           "fr-CA": "Liste de comptes de transporteur"
         }
+      },
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Boolean",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "isSearchable": false,
+        "defaultValue": false,
+        "name": "RequireScanToPick",
+        "description": "Imposes scanning of line item barcodes to capture unit quantities during picking",
+        "displayName": {
+          "en-US": "Require Scan to pick in MSF",
+          "en-CA": "Require Scan to pick in MSF",
+          "fr-CA": "Exiger le scan pour la cueillette dans MSF"
+        }
       }
     ],
     "isSharedEntity": true,
@@ -458,6 +476,36 @@
       "en-CA": "Store",
       "fr-CA": "Magasin",
       "it-IT": "Negozio"
+    }
+  },
+  {
+    "attributes": [
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Boolean",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "isSearchable": false,
+        "defaultValue": false,
+        "name": "RequireScanToPick",
+        "description": "Imposes scanning of line item barcodes to capture unit quantities during picking",
+        "displayName": {
+          "en-US": "Require Scan to pick in MSF",
+          "en-CA": "Require Scan to pick in MSF",
+          "fr-CA": "Exiger le scan pour la cueillette dans MSF"
+        }
+      }
+    ],
+    "isSharedEntity": true,
+    "name": "WAREHOUSE",
+    "displayName": {
+      "en-US": "Warehouse",
+      "en-CA": "Warehouse",
+      "fr-CA": "Entrepôt",
+      "it-IT": "Magazzino"
     }
   }
 ]
