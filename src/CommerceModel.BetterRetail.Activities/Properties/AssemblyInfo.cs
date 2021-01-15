@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("CommerceModel.BetterRetail")]
+[assembly: AssemblyTitle("CommerceModel.BetterRetail.Activities")]
 [assembly: AssemblyDescription("")]
 
 [assembly: ComVisible(false)]
-[assembly: Guid("9052b54b-3da8-4eed-b224-d99841e450a0")]
+[assembly: Guid("2c86e045-77a4-4ec1-a055-52bb2d76f389")]
