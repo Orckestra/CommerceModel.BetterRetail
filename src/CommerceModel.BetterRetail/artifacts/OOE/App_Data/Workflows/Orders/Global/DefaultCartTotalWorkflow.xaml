@@ -1,0 +1,391 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Orders.Processing.Workflows.Workflows.Orders.DefaultCartTotalWorkflow"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:cba="clr-namespace:CommerceModel.BetterRetail.Activities;assembly=CommerceModel.BetterRetail.Activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:ooopwa="clr-namespace:Orckestra.Overture.Orders.Processing.Workflows.Activities;assembly=Orckestra.Overture.Orders.Processing.Workflows.Activities"
+ xmlns:ooopwav="clr-namespace:Orckestra.Overture.Orders.Processing.Workflows.Activities.Validation;assembly=Orckestra.Overture.Orders.Processing.Workflows.Activities"
+ xmlns:oosop="clr-namespace:Orckestra.Overture.ServiceModel.Orders.Processing;assembly=Orckestra.Overture.ServiceModel"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="OrderProcessingContextArgument" Type="InArgument(oosop:OrderProcessingContext)" />
+    <x:Property Name="OrderProcessingResultArgument" Type="InOutArgument(oosop:OrderProcessingResult)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>Orders.Processing.Workflows.Workflows.Orders.DefaultCartTotalWorkflow_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>Orckestra.Overture.Orders.Processing.Workflows.Activities</x:String>
+      <x:String>Orckestra.Overture.Orders.Processing.Workflows.Activities.Validation</x:String>
+      <x:String>Orckestra.Overture.Providers</x:String>
+      <x:String>Orckestra.Overture.ServiceModel.Marketing</x:String>
+      <x:String>Orckestra.Overture.ServiceModel.Orders</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities.Debugger</x:String>
+      <x:String>System.Activities.Debugger.Symbol</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Autofac</AssemblyReference>
+      <AssemblyReference>Common.Logging</AssemblyReference>
+      <AssemblyReference>Common.Logging.Core</AssemblyReference>
+      <AssemblyReference>Ionic.Zip</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
+      <AssemblyReference>Microsoft.Azure.Documents.Client</AssemblyReference>
+      <AssemblyReference>Microsoft.Azure.KeyVault.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.Data.Edm</AssemblyReference>
+      <AssemblyReference>Microsoft.Data.OData</AssemblyReference>
+      <AssemblyReference>Microsoft.Data.Services.Client</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.Common</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.SemanticLogging</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage</AssemblyReference>
+      <AssemblyReference>Microsoft.WindowsAzure.Storage</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>Orckestra.AsyncExtensions</AssemblyReference>
+      <AssemblyReference>Orckestra.Caching</AssemblyReference>
+      <AssemblyReference>Orckestra.Data</AssemblyReference>
+      <AssemblyReference>Orckestra.Logging</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.DurableTask</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.DurableTask.Scheduling.Quartz</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Extensibility</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Interfaces</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.MessagingModel</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Orders.Processing.Workflows</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Orders.Processing.Workflows.Activities</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.ServiceModel</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.ServiceModel.Requests</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.SolrIndexing</AssemblyReference>
+      <AssemblyReference>Orckestra.SolrLib</AssemblyReference>
+      <AssemblyReference>OrckestraCommerce.CommerceModelUtilities</AssemblyReference>
+      <AssemblyReference>OrckestraCommerce.DataExchange</AssemblyReference>
+      <AssemblyReference>Quartz</AssemblyReference>
+      <AssemblyReference>ServiceStack.Interfaces</AssemblyReference>
+      <AssemblyReference>ServiceStack.Text</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Buffers</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.DataAnnotations</AssemblyReference>
+      <AssemblyReference>System.Configuration</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net</AssemblyReference>
+      <AssemblyReference>System.Net.Http</AssemblyReference>
+      <AssemblyReference>System.Net.Http.WinHttpHandler</AssemblyReference>
+      <AssemblyReference>System.Numerics</AssemblyReference>
+      <AssemblyReference>System.Numerics.Vectors</AssemblyReference>
+      <AssemblyReference>System.Reactive.Core</AssemblyReference>
+      <AssemblyReference>System.Reactive.Interfaces</AssemblyReference>
+      <AssemblyReference>System.Reactive.Linq</AssemblyReference>
+      <AssemblyReference>System.Runtime.CompilerServices.Unsafe</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Algorithms</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Encoding</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.X509Certificates</AssemblyReference>
+      <AssemblyReference>System.Spatial</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Dataflow</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>CommerceModel.BetterRetail.Activities</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>CommerceModel.BetterRetail</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <ooopwa:AssignShipmentProcessingDateTimeActivity sap2010:WorkflowViewState.IdRef="AssignShipmentProcessingDateTimeActivity_1">
+      <ooopwa:AssignShipmentProcessingDateTimeActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:AssignShipmentProcessingDateTimeActivity.OrderProcessingContextArgument>
+      <ooopwa:AssignShipmentProcessingDateTimeActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:AssignShipmentProcessingDateTimeActivity.OrderProcessingResultArgument>
+    </ooopwa:AssignShipmentProcessingDateTimeActivity>
+    <ooopwa:AssignFirstActiveStoreInScopeActivity sap2010:WorkflowViewState.IdRef="AssignFirstActiveStoreInScopeActivity_1">
+      <ooopwa:AssignFirstActiveStoreInScopeActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:AssignFirstActiveStoreInScopeActivity.OrderProcessingContextArgument>
+      <ooopwa:AssignFirstActiveStoreInScopeActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:AssignFirstActiveStoreInScopeActivity.OrderProcessingResultArgument>
+    </ooopwa:AssignFirstActiveStoreInScopeActivity>
+    <Sequence DisplayName="Validate Line items" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <ooopwav:ValidateOrderingCatalogActivity sap2010:WorkflowViewState.IdRef="ValidateOrderingCatalogActivity_1" RemoveInvalidItemsFromCart="False" ValidateInformationInterval="3600">
+        <ooopwav:ValidateOrderingCatalogActivity.OrderProcessingContextArgument>
+          <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+            <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+          </InArgument>
+        </ooopwav:ValidateOrderingCatalogActivity.OrderProcessingContextArgument>
+        <ooopwav:ValidateOrderingCatalogActivity.OrderProcessingResultArgument>
+          <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+            <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+          </InOutArgument>
+        </ooopwav:ValidateOrderingCatalogActivity.OrderProcessingResultArgument>
+      </ooopwav:ValidateOrderingCatalogActivity>
+      <ooopwav:ValidateOrderingProductActivity sap2010:WorkflowViewState.IdRef="ValidateOrderingProductActivity_1" RemoveInvalidItemsFromCart="False" ValidateInformationInterval="900">
+        <ooopwav:ValidateOrderingProductActivity.OrderProcessingContextArgument>
+          <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+            <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+          </InArgument>
+        </ooopwav:ValidateOrderingProductActivity.OrderProcessingContextArgument>
+        <ooopwav:ValidateOrderingProductActivity.OrderProcessingResultArgument>
+          <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+            <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+          </InOutArgument>
+        </ooopwav:ValidateOrderingProductActivity.OrderProcessingResultArgument>
+      </ooopwav:ValidateOrderingProductActivity>
+    </Sequence>
+    <ooopwa:FetchLineItemsProductInformationActivity CustomPropertiesToReturn="Country|Appellations|Region|Score" CustomVariantPropertiesToReturn="*" sap2010:WorkflowViewState.IdRef="FetchLineItemsProductInformationActivity_1" RefreshInformationInterval="900">
+      <ooopwa:FetchLineItemsProductInformationActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:FetchLineItemsProductInformationActivity.OrderProcessingContextArgument>
+      <ooopwa:FetchLineItemsProductInformationActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:FetchLineItemsProductInformationActivity.OrderProcessingResultArgument>
+    </ooopwa:FetchLineItemsProductInformationActivity>
+    <cba:SetAdditionnalLineItemAttributesActivity sap2010:WorkflowViewState.IdRef="SetAdditionnalLineItemAttributesActivity_1">
+      <cba:SetAdditionnalLineItemAttributesActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </cba:SetAdditionnalLineItemAttributesActivity.OrderProcessingContextArgument>
+      <cba:SetAdditionnalLineItemAttributesActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </cba:SetAdditionnalLineItemAttributesActivity.OrderProcessingResultArgument>
+    </cba:SetAdditionnalLineItemAttributesActivity>
+    <ooopwav:ValidateFulfillmentShippingActivity sap2010:WorkflowViewState.IdRef="ValidateFulfillmentShippingActivity_1">
+      <ooopwav:ValidateFulfillmentShippingActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwav:ValidateFulfillmentShippingActivity.OrderProcessingContextArgument>
+      <ooopwav:ValidateFulfillmentShippingActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwav:ValidateFulfillmentShippingActivity.OrderProcessingResultArgument>
+    </ooopwav:ValidateFulfillmentShippingActivity>
+    <ooopwav:ValidatePaymentsOptionsActivity sap2010:WorkflowViewState.IdRef="ValidatePaymentsOptionsActivity_1">
+      <ooopwav:ValidatePaymentsOptionsActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwav:ValidatePaymentsOptionsActivity.OrderProcessingContextArgument>
+      <ooopwav:ValidatePaymentsOptionsActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwav:ValidatePaymentsOptionsActivity.OrderProcessingResultArgument>
+    </ooopwav:ValidatePaymentsOptionsActivity>
+    <ooopwav:ValidateCartCouponsActivity sap2010:WorkflowViewState.IdRef="ValidateCartCouponsActivity_1">
+      <ooopwav:ValidateCartCouponsActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwav:ValidateCartCouponsActivity.OrderProcessingContextArgument>
+      <ooopwav:ValidateCartCouponsActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwav:ValidateCartCouponsActivity.OrderProcessingResultArgument>
+    </ooopwav:ValidateCartCouponsActivity>
+    <ooopwa:AssignCartLineItemPricesActivity sap2010:WorkflowViewState.IdRef="AssignCartLineItemPricesActivity_1">
+      <ooopwa:AssignCartLineItemPricesActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:AssignCartLineItemPricesActivity.OrderProcessingContextArgument>
+      <ooopwa:AssignCartLineItemPricesActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:AssignCartLineItemPricesActivity.OrderProcessingResultArgument>
+    </ooopwa:AssignCartLineItemPricesActivity>
+    <ooopwa:MergeEquivalentLineItemsActivity sap2010:WorkflowViewState.IdRef="MergeEquivalentLineItemsActivity_1">
+      <ooopwa:MergeEquivalentLineItemsActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:MergeEquivalentLineItemsActivity.OrderProcessingContextArgument>
+      <ooopwa:MergeEquivalentLineItemsActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:MergeEquivalentLineItemsActivity.OrderProcessingResultArgument>
+    </ooopwa:MergeEquivalentLineItemsActivity>
+    <ooopwa:RetrieveFulfillmentMethodsActivity sap2010:WorkflowViewState.IdRef="RetrieveFulfillmentMethodsActivity_1">
+      <ooopwa:RetrieveFulfillmentMethodsActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:RetrieveFulfillmentMethodsActivity.OrderProcessingContextArgument>
+      <ooopwa:RetrieveFulfillmentMethodsActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:RetrieveFulfillmentMethodsActivity.OrderProcessingResultArgument>
+    </ooopwa:RetrieveFulfillmentMethodsActivity>
+    <ooopwa:RetrieveDiscountsActivity sap2010:WorkflowViewState.IdRef="RetrieveDiscountsActivity_1">
+      <ooopwa:RetrieveDiscountsActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:RetrieveDiscountsActivity.OrderProcessingContextArgument>
+      <ooopwa:RetrieveDiscountsActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:RetrieveDiscountsActivity.OrderProcessingResultArgument>
+    </ooopwa:RetrieveDiscountsActivity>
+    <ooopwa:AddGiftsToCartActivity RefreshInformationInterval="{x:Null}" CustomPropertiesToReturn="Brand" CustomVariantPropertiesToReturn="*" sap2010:WorkflowViewState.IdRef="AddGiftsToCartActivity_1">
+      <ooopwa:AddGiftsToCartActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:AddGiftsToCartActivity.OrderProcessingContextArgument>
+      <ooopwa:AddGiftsToCartActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:AddGiftsToCartActivity.OrderProcessingResultArgument>
+    </ooopwa:AddGiftsToCartActivity>
+    <ooopwa:CalculateCartTaxesActivity DisplayName="CalculateCartTaxesActivity" sap2010:WorkflowViewState.IdRef="CalculateCartTaxesActivity_1">
+      <ooopwa:CalculateCartTaxesActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:CalculateCartTaxesActivity.OrderProcessingContextArgument>
+      <ooopwa:CalculateCartTaxesActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:CalculateCartTaxesActivity.OrderProcessingResultArgument>
+    </ooopwa:CalculateCartTaxesActivity>
+    <ooopwa:DistributeUnpaidBalanceAcrossPaymentsActivity sap2010:WorkflowViewState.IdRef="DistributeUnpaidBalanceAcrossPaymentsActivity_1">
+      <ooopwa:DistributeUnpaidBalanceAcrossPaymentsActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:DistributeUnpaidBalanceAcrossPaymentsActivity.OrderProcessingContextArgument>
+      <ooopwa:DistributeUnpaidBalanceAcrossPaymentsActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:DistributeUnpaidBalanceAcrossPaymentsActivity.OrderProcessingResultArgument>
+    </ooopwa:DistributeUnpaidBalanceAcrossPaymentsActivity>
+    <ooopwav:ValidateCartCouponsEligibilityActivity sap2010:WorkflowViewState.IdRef="ValidateCartCouponsEligibilityActivity_1">
+      <ooopwav:ValidateCartCouponsEligibilityActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwav:ValidateCartCouponsEligibilityActivity.OrderProcessingContextArgument>
+      <ooopwav:ValidateCartCouponsEligibilityActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwav:ValidateCartCouponsEligibilityActivity.OrderProcessingResultArgument>
+    </ooopwav:ValidateCartCouponsEligibilityActivity>
+    <ooopwa:CreateOrderCustomerSummaryActivity sap2010:WorkflowViewState.IdRef="CreateOrderCustomerSummaryActivity_1">
+      <ooopwa:CreateOrderCustomerSummaryActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:CreateOrderCustomerSummaryActivity.OrderProcessingContextArgument>
+      <ooopwa:CreateOrderCustomerSummaryActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:CreateOrderCustomerSummaryActivity.OrderProcessingResultArgument>
+    </ooopwa:CreateOrderCustomerSummaryActivity>
+    <ooopwa:SurfaceLineItemsErrorsAsMessagesActivity sap2010:WorkflowViewState.IdRef="SurfaceLineItemsErrorsAsMessagesActivity_1">
+      <ooopwa:SurfaceLineItemsErrorsAsMessagesActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:SurfaceLineItemsErrorsAsMessagesActivity.OrderProcessingContextArgument>
+      <ooopwa:SurfaceLineItemsErrorsAsMessagesActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:SurfaceLineItemsErrorsAsMessagesActivity.OrderProcessingResultArgument>
+    </ooopwa:SurfaceLineItemsErrorsAsMessagesActivity>
+    <sads:DebugSymbol.Symbol>d4wBQzpcV29cQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXGFydGlmYWN0c1xPT0VcQXBwX0RhdGFcV29ya2Zsb3dzXE9yZGVyc1xHbG9iYWxcRGVmYXVsdENhcnRUb3RhbFdvcmtmbG93LnhhbWw7eAPgAg4CAQF5BYQBNwMBgQGFAQWQATQCAXqRAQWqARACAWurAQW2ATcCAWS3AQXCATQCAV3DAQXOATMCAVbPAQXaAS8CAU/bAQXmASsCAUjnAQXyAS8CAUHzAQX+AS8CATr/AQWKAjECATOLAgWWAigCASyXAgWiAiUCASWjAgWuAikCAR6vAgW6AjwCARe7AgXGAjYCARDHAgXSAjECAQnTAgXeAjcCAQKBAQuBAYEBAwGFAXwLfHsDAYIBjQELjQGBAQIBfogBC4gBewIBe5IBB50BMQIBc54BB6kBMQIBbLMBC7MBgQECAWiuAQuuAXsCAWW/AQu/AYEBAgFhugELugF7AgFeywELywGBAQIBWsYBC8YBewIBV9cBC9cBgQECAVPSAQvSAXsCAVDjAQvjAYEBAgFM3gEL3gF7AgFJ7wEL7wGBAQIBReoBC+oBewIBQvsBC/sBgQECAT72AQv2AXsCATuHAguHAoEBAgE3ggILggJ7AgE0kwILkwKBAQIBMI4CC44CewIBLZ8CC58CgQECASmaAguaAnsCASarAgurAoEBAgEipgILpgJ7AgEftwILtwKBAQIBG7ICC7ICewIBGMMCC8MCgQECARS+Agu+AnsCARHPAgvPAoEBAgENygILygJ7AgEK2wIL2wKBAQIBBtYCC9YCewIBA5oBDZoBgwECAXeVAQ2VAX0CAXSmAQ2mAYMBAgFwoQENoQF9AgFt</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="AssignShipmentProcessingDateTimeActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="AssignFirstActiveStoreInScopeActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="ValidateOrderingCatalogActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ValidateOrderingProductActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="421,208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FetchLineItemsProductInformationActivity_1" sap:VirtualizedContainerService.HintSize="421,190" />
+      <sap2010:ViewStateData Id="SetAdditionnalLineItemAttributesActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="ValidateFulfillmentShippingActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="ValidatePaymentsOptionsActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="ValidateCartCouponsActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="AssignCartLineItemPricesActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="MergeEquivalentLineItemsActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="RetrieveFulfillmentMethodsActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="RetrieveDiscountsActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="AddGiftsToCartActivity_1" sap:VirtualizedContainerService.HintSize="421,190" />
+      <sap2010:ViewStateData Id="CalculateCartTaxesActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="DistributeUnpaidBalanceAcrossPaymentsActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="ValidateCartCouponsEligibilityActivity_1" sap:VirtualizedContainerService.HintSize="421,36" />
+      <sap2010:ViewStateData Id="CreateOrderCustomerSummaryActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="SurfaceLineItemsErrorsAsMessagesActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="443,1736">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Orders.Processing.Workflows.Workflows.Orders.DefaultCartTotalWorkflow_1" sap:VirtualizedContainerService.HintSize="483,1816" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

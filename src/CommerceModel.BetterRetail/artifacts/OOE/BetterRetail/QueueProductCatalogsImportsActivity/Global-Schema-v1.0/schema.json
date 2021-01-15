@@ -92,6 +92,12 @@
           "sequenceNumber": 0,
           "isVariant": true,
           "isKeyVariant": false
+        },
+        {
+          "name": "AllowSelectionWithoutScan",
+          "sequenceNumber": 0,
+          "isVariant": false,
+          "isKeyVariant": false
         }
       ],
       "allowPriceLists": true
@@ -150,6 +156,12 @@
         },
         {
           "name": "RetailSize",
+          "sequenceNumber": 0,
+          "isVariant": false,
+          "isKeyVariant": false
+        },
+        {
+          "name": "AllowSelectionWithoutScan",
           "sequenceNumber": 0,
           "isVariant": false,
           "isKeyVariant": false
@@ -233,6 +245,12 @@
           "name": "TaxCategory",
           "sequenceNumber": 0,
           "isVariant": true,
+          "isKeyVariant": false
+        },
+        {
+          "name": "AllowSelectionWithoutScan",
+          "sequenceNumber": 0,
+          "isVariant": false,
           "isKeyVariant": false
         }
       ],
@@ -928,6 +946,25 @@
       "includeInAllProductDefinition": true,
       "includeInAllCategoryDefinition": false,
       "includeInAllVariantDefinition": true,
+      "groupName": "Default",
+      "isHiddenInOrchestrator": false,
+      "isSystem": false
+    },
+    {
+      "propertyName": "AllowSelectionWithoutScan",
+      "displayName": {
+        "en-CA": "Allow selection without scan",
+        "en-US": "Allow selection without scan",
+        "fr-CA": "Permets la sélection sans scan"
+      },
+      "minMultiplicity": "0",
+      "maxMultiplicity": "1",
+      "isMultilingual": false,
+      "dataType": "Boolean",
+      "defaultValue": false,
+      "includeInAllProductDefinition": true,
+      "includeInAllCategoryDefinition": false,
+      "includeInAllVariantDefinition": false,
       "groupName": "Default",
       "isHiddenInOrchestrator": false,
       "isSystem": false

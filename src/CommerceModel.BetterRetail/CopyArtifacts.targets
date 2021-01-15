@@ -3,9 +3,12 @@
   <Target Name="AfterBuild">
     <ItemGroup>
       <InstallerFiles Include="$(TargetPath);$(TargetDir)$(TargetName).pdb" />
+      <BetterRetail Include="$(TargetDir)Package\artifacts\OOE\App_Data\Workflows\Orders\BetterRetail\**\*.*" />
+      <Global Include="$(TargetDir)Package\artifacts\OOE\App_Data\Workflows\Orders\Global\**\*.*" />
     </ItemGroup>
     <!--After build copy the generated binary containing the compiled workflows in the bin folders to be included in the package-->
     <Copy SourceFiles="@(InstallerFiles)" SkipUnchangedFiles="true" DestinationFolder="$(TargetDir)\Package\artifacts\OOE" />
-    <Copy SourceFiles="@(InstallerFiles)" SkipUnchangedFiles="true" DestinationFolder="$(TargetDir)\Package\artifacts\OCS\bin" />
+    <Copy SourceFiles="@(BetterRetail)" SkipUnchangedFiles="true" DestinationFolder="$(TargetDir)\Package\artifacts\OCS\App_Data\Workflows\Orders\BetterRetail" />
+    <Copy SourceFiles="@(Global)" SkipUnchangedFiles="true" DestinationFolder="$(TargetDir)\Package\artifacts\OCS\App_Data\Workflows\Orders\Global" />
   </Target>
 </Project>
