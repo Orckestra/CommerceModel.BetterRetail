@@ -118,55 +118,55 @@
       <HintPath>..\..\Packages\NuGet\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.AsyncExtensions, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.AsyncExtensions.4.5.0-addallowse0078\lib\net461\Orckestra.AsyncExtensions.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.AsyncExtensions.4.5.0-alpha0208\lib\net461\Orckestra.AsyncExtensions.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.Caching, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Common.4.5.0-addallowse0078\lib\net461\Orckestra.Caching.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Common.4.5.0-alpha0208\lib\net461\Orckestra.Caching.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.Data, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Data.4.5.0-addallowse0078\lib\net461\Orckestra.Data.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Data.4.5.0-alpha0208\lib\net461\Orckestra.Data.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.Logging, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Common.4.5.0-addallowse0078\lib\net461\Orckestra.Logging.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Common.4.5.0-alpha0208\lib\net461\Orckestra.Logging.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.Overture.DurableTask, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-addallowse0078\lib\net461\Orckestra.Overture.DurableTask.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-alpha0208\lib\net461\Orckestra.Overture.DurableTask.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.Overture.DurableTask.Scheduling.Quartz, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-addallowse0078\lib\net461\Orckestra.Overture.DurableTask.Scheduling.Quartz.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-alpha0208\lib\net461\Orckestra.Overture.DurableTask.Scheduling.Quartz.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.Overture.Extensibility, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-addallowse0078\lib\net461\Orckestra.Overture.Extensibility.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-alpha0208\lib\net461\Orckestra.Overture.Extensibility.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.Overture.Interfaces, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Interfaces.4.5.0-addallowse0078\lib\net461\Orckestra.Overture.Interfaces.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Interfaces.4.5.0-alpha0208\lib\net461\Orckestra.Overture.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.Overture.MessagingModel, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-addallowse0078\lib\net461\Orckestra.Overture.MessagingModel.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-alpha0208\lib\net461\Orckestra.Overture.MessagingModel.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.Overture.Orders.Processing.Workflows, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-addallowse0078\lib\net461\Orckestra.Overture.Orders.Processing.Workflows.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-alpha0208\lib\net461\Orckestra.Overture.Orders.Processing.Workflows.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.Overture.Orders.Processing.Workflows.Activities, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-addallowse0078\lib\net461\Orckestra.Overture.Orders.Processing.Workflows.Activities.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-alpha0208\lib\net461\Orckestra.Overture.Orders.Processing.Workflows.Activities.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.Overture.ServiceModel, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.ServiceModel.4.5.0-addallowse0078\lib\net461\Orckestra.Overture.ServiceModel.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.ServiceModel.4.5.0-alpha0208\lib\net461\Orckestra.Overture.ServiceModel.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.Overture.ServiceModel.Requests, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.ServiceModel.Requests.4.5.0-addallowse0078\lib\net461\Orckestra.Overture.ServiceModel.Requests.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.ServiceModel.Requests.4.5.0-alpha0208\lib\net461\Orckestra.Overture.ServiceModel.Requests.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.Overture.SolrIndexing, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-addallowse0078\lib\net461\Orckestra.Overture.SolrIndexing.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-alpha0208\lib\net461\Orckestra.Overture.SolrIndexing.dll</HintPath>
     </Reference>
     <Reference Include="Orckestra.SolrLib, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-addallowse0078\lib\net461\Orckestra.SolrLib.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-alpha0208\lib\net461\Orckestra.SolrLib.dll</HintPath>
     </Reference>
     <Reference Include="OrckestraCommerce.CommerceModelUtilities, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.4.5.0-alpha0074\lib\net461\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.4.5.0-alpha0208\lib\net461\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
     </Reference>
     <Reference Include="OrckestraCommerce.DataExchange, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-addallowse0078\lib\net461\OrckestraCommerce.DataExchange.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.4.5.0-alpha0208\lib\net461\OrckestraCommerce.DataExchange.dll</HintPath>
     </Reference>
     <Reference Include="Quartz, Version=2.3.1.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Quartz.2.3.1\lib\net40\Quartz.dll</HintPath>
