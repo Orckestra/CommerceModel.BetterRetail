@@ -162,7 +162,11 @@
 		"hiddenInScope": false,
 		"propertyBag": {
 			"PrimaryParentCategoryId": "womens_dresses",
-			"TaxCategory": "Taxable"
+			"TaxCategory": "Taxable",
+			"AllowSelectionWithoutScan": {
+				"__type": "ValueOfBoolean",
+				"value": true
+			}
 		}
 	},
 	{
@@ -559,7 +563,11 @@
 		"hiddenInScope": false,
 		"propertyBag": {
 			"PrimaryParentCategoryId": "womens_tops",
-			"TaxCategory": "Taxable"
+			"TaxCategory": "Taxable",
+			"AllowSelectionWithoutScan": {
+				"__type": "ValueOfBoolean",
+				"value": true
+			}
 		}
 	},
 	{
@@ -1316,7 +1324,11 @@
 		"hiddenInScope": false,
 		"propertyBag": {
 			"PrimaryParentCategoryId": "womens_dresses",
-			"TaxCategory": "Taxable"
+			"TaxCategory": "Taxable",
+			"AllowSelectionWithoutScan": {
+				"__type": "ValueOfBoolean",
+				"value": true
+			}
 		}
 	},
 	{
@@ -1355,7 +1367,11 @@
 		"hiddenInScope": false,
 		"propertyBag": {
 			"PrimaryParentCategoryId": "shoes_womens_shoes",
-			"TaxCategory": "Taxable"
+			"TaxCategory": "Taxable",
+			"AllowSelectionWithoutScan": {
+				"__type": "ValueOfBoolean",
+				"value": true
+			}
 		}
 	},
 	{
@@ -3326,7 +3342,11 @@
 		"hiddenInScope": false,
 		"propertyBag": {
 			"PrimaryParentCategoryId": "womens_skirts",
-			"TaxCategory": "Taxable"
+			"TaxCategory": "Taxable",
+			"AllowSelectionWithoutScan": {
+				"__type": "ValueOfBoolean",
+				"value": true
+			}
 		}
 	},
 	{
@@ -45138,7 +45158,11 @@
 		"weight": 12.92,
 		"propertyBag": {
 			"PrimaryParentCategoryId": "mens_activewear",
-			"TaxCategory": "Taxable"
+			"TaxCategory": "Taxable",
+			"AllowSelectionWithoutScan": {
+				"__type": "ValueOfBoolean",
+				"value": true
+			}
 		}
 	},
 	{
