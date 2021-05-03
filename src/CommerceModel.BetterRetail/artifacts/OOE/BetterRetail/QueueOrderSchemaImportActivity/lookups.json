@@ -521,6 +521,17 @@
         "isActive": true
       },
       {
+        "value": "Abandoned",
+        "displayName": {
+          "en-US": "Abandoned",
+          "en-CA": "Abandoned",
+          "fr-CA": "Abandonné",
+          "it-IT": "Abandoned"
+        },
+        "sortOrder": 18,
+        "isActive": true
+      },
+      {
         "value": "Expired",
         "displayName": {
           "en-US": "Expired",
