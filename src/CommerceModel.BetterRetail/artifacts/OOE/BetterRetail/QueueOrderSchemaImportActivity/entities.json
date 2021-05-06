@@ -1,0 +1,119 @@
+[{
+        "displayName": {
+            "en-US": "Order",
+            "fr-CA": "Commande"
+        },
+        "entityTypeName": "Order",
+        "isBuiltIn": true,
+        "attributes": [{
+                "name": "IsGiftPackaging",
+                "displayName": {
+                    "en-US": "Is Gift Packaging",
+                    "fr-CA": "Emballage cadeau"
+                },
+                "isRequired": true,
+                "displayOrder": 1,
+                "dataType": "Boolean",
+                "isBuiltIn": false,
+                "allowMultipleValues": false,
+                "multilingual": false,
+                "isSearchable": false,
+				"groupId":"Default"
+            },{
+				"name": "CustomText",
+				"displayName": {
+				  "en-US": "Custom Text",
+				  "fr-CA": "Texte Custom"
+				},
+				"isRequired": false,
+				"displayOrder": 1,
+				"dataType": "Text",
+				"isBuiltIn": false,
+				"allowMultipleValues": false,
+				"multilingual": false,
+				"isSearchable": false,
+				"minimum": 0,
+				"maximum": 64,
+				"description": "Custom attribute for test purpose.",
+				"groupId":"Default"
+			},{
+				"name": "CustomBoolean",
+				"displayName": {
+				  "en-US": "Custom Boolean",
+				  "fr-CA": "Booléen Custom"
+				},
+				"isRequired": false,
+				"displayOrder": 2,
+				"dataType": "Boolean",
+				"isBuiltIn": false,
+				"allowMultipleValues": false,
+				"multilingual": false,
+				"isSearchable": false,
+				"description": "Custom attribute for test purpose.",
+				"groupId":"Default"
+			},{
+				"name": "CustomDatetime",
+				"displayName": {
+				  "en-US": "Custom Datetime",
+				  "fr-CA": "Datetime Custom"
+				},
+				"isRequired": false,
+				"displayOrder": 1,
+				"dataType": "DateTime",
+				"isBuiltIn": false,
+				"allowMultipleValues": false,
+				"multilingual": false,
+				"isSearchable": false,
+				"description": "Custom attribute for test purpose.",
+				"groupId":"Default"
+			},{
+				"name": "CustomInteger",
+				"displayName": {
+				  "en-US": "Custom Integer",
+				  "fr-CA": "Entier Custom"
+				},
+				"isRequired": false,
+				"displayOrder": 1,
+				"dataType": "Integer",
+				"isBuiltIn": false,
+				"allowMultipleValues": false,
+				"multilingual": false,
+				"isSearchable": false,
+				"description": "Custom attribute for test purpose.",
+				"groupId":"Default"
+			},{
+				"name": "CustomDecimal",
+				"displayName": {
+				  "en-US": "Custom Decimal",
+				  "fr-CA": "Décimal Custom"
+				},
+				"isRequired": false,
+				"displayOrder": 1,
+				"dataType": "Decimal",
+				"isBuiltIn": false,
+				"allowMultipleValues": false,
+				"multilingual": false,
+				"isSearchable": false,
+				"description": "Custom attribute for test purpose.",
+				"groupId":"Default"
+			},{
+				"name": "CustomLookup",
+				"displayName": {
+				  "en-US": "Custom Lookup",
+				  "fr-CA": "Lookup Custom"
+				},
+				"isRequired": false,
+				"displayOrder": 1,
+				"dataType": "Lookup",
+				"referenceTypeName": "ValidationsFulfillment",
+				"isBuiltIn": false,
+				"allowMultipleValues": false,
+				"multilingual": false,
+				"isSearchable": false,
+				"description": "Custom attribute for test purpose.",
+				"groupId":"Default"
+			}
+        ],
+        "isSharedEntity": false
+    }
+]
