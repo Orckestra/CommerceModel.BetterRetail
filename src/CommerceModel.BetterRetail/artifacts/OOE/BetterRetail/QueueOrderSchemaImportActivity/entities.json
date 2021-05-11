@@ -112,6 +112,22 @@
 				"isSearchable": false,
 				"description": "Custom attribute for test purpose.",
 				"groupId":"Default"
+			},{
+				"name": "CustomLookup2",
+				"displayName": {
+				  "en-US": "Custom Lookup 2",
+				  "fr-CA": "Lookup Custom 2"
+				},
+				"isRequired": false,
+				"displayOrder": 1,
+				"dataType": "Lookup",
+				"referenceTypeName": "ValidationsFulfillment",
+				"isBuiltIn": false,
+				"allowMultipleValues": true,
+				"multilingual": false,
+				"isSearchable": false,
+				"description": "Custom attribute for test purpose.",
+				"groupId":"Default"
 			}
         ],
         "isSharedEntity": false
