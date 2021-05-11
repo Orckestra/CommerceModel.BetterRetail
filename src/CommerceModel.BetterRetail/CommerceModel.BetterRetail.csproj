@@ -253,6 +253,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Membership\InsertAuthorization.sql" />
+    <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddCustomAttributes.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\FixProviders.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\CustomerCreated\Contents\Html\en-CA.html" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\CustomerCreated\Contents\Html\en-US.html" />
