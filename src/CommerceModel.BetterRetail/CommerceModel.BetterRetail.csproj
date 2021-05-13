@@ -584,7 +584,6 @@
     <Content Include="artifacts\OCS-OOE\Search\solr.inventories.ALL.config" />
     <Content Include="artifacts\OCS-OOE\Search\solr.stores.ALL.config" />
     <Content Include="artifacts\OOE\BetterRetail\CreateUsersActivity\users.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueOrderSchemaImportActivity\entities.json" />
     <None Include="CopyArtifacts.targets" />
     <None Include="job_scheduling_data_2_0.xsd">
       <SubType>Designer</SubType>
