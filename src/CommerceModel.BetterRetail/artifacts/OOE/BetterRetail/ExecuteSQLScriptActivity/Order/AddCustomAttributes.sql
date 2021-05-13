@@ -13,50 +13,50 @@ USAGE
 IF NOT EXISTS(SELECT 1
 				FROM dbo.GROUP
 				WHERE Group_Guid='<Group_Guid>')
-	BEGIN
-		INSERT INTO [dbo].[GROUP] (
-				[IsDeleted]
-				,[GroupName]
-				,[IsSystem]
-				,[Description]
-				,[SequenceNumber]
-				,[Group_Guid]
-			) VALUES (
-				0
-				,<GroupName, nvarchar(128),>
-				,0
-				,<Description, nvarchar(256),>
-				,<SequenceNumber, int,>
-				,<Group_Guid, uniqueidentifier,>
-			)
-	END
+BEGIN
+	INSERT INTO [dbo].[GROUP] (
+			[IsDeleted]
+			,[GroupName]
+			,[IsSystem]
+			,[Description]
+			,[SequenceNumber]
+			,[Group_Guid]
+		) VALUES (
+			0
+			,<GroupName, nvarchar(128),>
+			,0
+			,<Description, nvarchar(256),>
+			,<SequenceNumber, int,>
+			,<Group_Guid, uniqueidentifier,>
+		)
+END
 GO
 
 IF NOT EXISTS(SELECT 1
 				FROM dbo.GROUP_LOCALIZE
 				WHERE Group_Localize_Guid='<Group_Localize_Guid>')
-	BEGIN
-		INSERT INTO [dbo].[GROUP_LOCALIZE] (
-				[GroupName]
-				,[CultureIso]
-				,[DisplayName]
-				,[Group_Localize_Guid]
-			) VALUES (
-				<GroupName, nvarchar(128),>
-				,<CultureIso, varchar(16),>
-				,<DisplayName, nvarchar(128),>
-				,<Group_Localize_Guid, uniqueidentifier,>
-			)
-	END
+BEGIN
+	INSERT INTO [dbo].[GROUP_LOCALIZE] (
+			[GroupName]
+			,[CultureIso]
+			,[DisplayName]
+			,[Group_Localize_Guid]
+		) VALUES (
+			<GroupName, nvarchar(128),>
+			,<CultureIso, varchar(16),>
+			,<DisplayName, nvarchar(128),>
+			,<Group_Localize_Guid, uniqueidentifier,>
+		)
+END
 GO
 
 IF NOT EXISTS(SELECT 1 
 				FROM sys.columns
 				WHERE Name = N'<AttributeName>'
 				AND Object_ID = Object_ID(N'dbo.ORDER'))
-	BEGIN
-		ALTER TABLE dbo.[ORDER] ADD <AttributeName> <COLUMN TYPE> NULL;
-	END
+BEGIN
+	ALTER TABLE dbo.[ORDER] ADD <AttributeName> <COLUMN TYPE> NULL;
+END
 GO
 
 -- COLUMN TYPES
@@ -70,64 +70,64 @@ GO
 IF NOT EXISTS(SELECT 1
 				FROM dbo.ENTITY_ATTRIBUTE
 				WHERE Entity_Attribute_Guid='<Entity_Attribute_Guid>')
-	BEGIN
-		INSERT INTO [dbo].[ENTITY_ATTRIBUTE] (
-				[EntityName]
-				,[AttributeName]
-				,[IsSystemAttribute]
-				,[DataType]
-				,[DefaultValue]
-				,[GroupName]
-				,[Description]
-				,[MinValue]
-				,[MaxValue]
-				,[MinMultiplicity]
-				,[MaxMultiplicity]
-				,[IsMultilingual]
-				,[IsSearchable]
-				,[ReferenceLookUpName]
-				,[SequenceNumber]
-				,[IsDeleted]
-				,[Entity_Attribute_Guid]
-				,[DataTypeSequence]
-			) VALUES (
-				'Order'
-				,<AttributeName, nvarchar(64),>
-				,0
-				,<DataType, varchar(16),>
-				,<DefaultValue, nvarchar(128),>
-				,'Default' or group name
-				,<Description, nvarchar(256),>
-				,<MinValue, nvarchar(32),>
-				,<MaxValue, nvarchar(32),>
-				,'1' if the attribute is required, '0' otherwise
-				,'*' if the attribute allow multiple values, '1' otherwise
-				,1 if the attribute is localized, 0 otherwise
-				,<IsSearchable, bit,>
-				,<ReferenceLookUpName, nvarchar(64),>
-				,<SequenceNumber, int,>
-				,0
-				,<Entity_Attribute_Guid, uniqueidentifier,>
-				,<DataTypeSequence, int,> -- each non system custom attribute of the same type must have an incrementing number starting at 1
-			)
-	END
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE] (
+			[EntityName]
+			,[AttributeName]
+			,[IsSystemAttribute]
+			,[DataType]
+			,[DefaultValue]
+			,[GroupName]
+			,[Description]
+			,[MinValue]
+			,[MaxValue]
+			,[MinMultiplicity]
+			,[MaxMultiplicity]
+			,[IsMultilingual]
+			,[IsSearchable]
+			,[ReferenceLookUpName]
+			,[SequenceNumber]
+			,[IsDeleted]
+			,[Entity_Attribute_Guid]
+			,[DataTypeSequence]
+		) VALUES (
+			'Order'
+			,<AttributeName, nvarchar(64),>
+			,0
+			,<DataType, varchar(16),>
+			,<DefaultValue, nvarchar(128),>
+			,'Default' or group name
+			,<Description, nvarchar(256),>
+			,<MinValue, nvarchar(32),>
+			,<MaxValue, nvarchar(32),>
+			,'1' if the attribute is required, '0' otherwise
+			,'*' if the attribute allow multiple values, '1' otherwise
+			,1 if the attribute is localized, 0 otherwise
+			,<IsSearchable, bit,>
+			,<ReferenceLookUpName, nvarchar(64),>
+			,<SequenceNumber, int,>
+			,0
+			,<Entity_Attribute_Guid, uniqueidentifier,>
+			,<DataTypeSequence, int,> -- each non system custom attribute of the same type must have an incrementing number starting at 1
+		)
+END
 GO
 
 IF NOT EXISTS(SELECT 1
 				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
 				WHERE Entity_Attribute_Guid='<Entity_Attribute_Guid>'
 				  AND CultureIso='<CultureIso>')
-	BEGIN
-		INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
-						[Entity_Attribute_Guid]
-					   ,[CultureIso]
-					   ,[DisplayName]
-				   ) VALUES (
-						<Entity_Attribute_Guid, uniqueidentifier,>
-					   ,<CultureIso, varchar(16),>
-					   ,<DisplayName, nvarchar(128),>
-				   )
-	END
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					<Entity_Attribute_Guid, uniqueidentifier,>
+					,<CultureIso, varchar(16),>
+					,<DisplayName, nvarchar(128),>
+				)
+END
 GO
 
 */
@@ -191,6 +191,38 @@ BEGIN
 		)
 END
 
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='fab5214b-4684-4ab1-93c2-010858155b57'
+				  AND CultureIso='en-US')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'fab5214b-4684-4ab1-93c2-010858155b57'
+					,'en-US'
+					,'Custom Boolean Att'
+				)
+END
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='fab5214b-4684-4ab1-93c2-010858155b57'
+				  AND CultureIso='fr-CA')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'fab5214b-4684-4ab1-93c2-010858155b57'
+					,'fr-CA'
+					,'Att booléen custom'
+				)
+END
+
 -- TEXT ATTRIBUTE
 
 IF NOT EXISTS(SELECT 1 
@@ -244,6 +276,38 @@ BEGIN
 			,'92be239e-fcac-45ac-accf-5d84dcda2b7b'
 			,1
 		)
+END
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='92be239e-fcac-45ac-accf-5d84dcda2b7b'
+				  AND CultureIso='en-US')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'92be239e-fcac-45ac-accf-5d84dcda2b7b'
+					,'en-US'
+					,'Custom text Att'
+				)
+END
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='92be239e-fcac-45ac-accf-5d84dcda2b7b'
+				  AND CultureIso='fr-CA')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'92be239e-fcac-45ac-accf-5d84dcda2b7b'
+					,'fr-CA'
+					,'Att texte custom'
+				)
 END
 
 -- LOOKUP ATTRIBUTE
@@ -301,6 +365,38 @@ BEGIN
 		)
 END
 
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='95c95e9f-124c-4338-a82a-64e4f7969159'
+				  AND CultureIso='en-US')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'95c95e9f-124c-4338-a82a-64e4f7969159'
+					,'en-US'
+					,'Custom lookup Att'
+				)
+END
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='95c95e9f-124c-4338-a82a-64e4f7969159'
+				  AND CultureIso='fr-CA')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'95c95e9f-124c-4338-a82a-64e4f7969159'
+					,'fr-CA'
+					,'Att lookup custom'
+				)
+END
+
 -- LOOKUP ATTRIBUTE WITH MULTIPLE VALUES
 
 IF NOT EXISTS(SELECT 1 
@@ -356,6 +452,38 @@ BEGIN
 		)
 END
 
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='5f68b52b-ec0c-424a-8106-4bcb8811b3f8'
+				  AND CultureIso='en-US')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'5f68b52b-ec0c-424a-8106-4bcb8811b3f8'
+					,'en-US'
+					,'Custom multi lookup Att'
+				)
+END
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='5f68b52b-ec0c-424a-8106-4bcb8811b3f8'
+				  AND CultureIso='fr-CA')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'5f68b52b-ec0c-424a-8106-4bcb8811b3f8'
+					,'fr-CA'
+					,'Att lookup multiple custom'
+				)
+END
+
 -- DECIMAL ATTRIBUTE
 
 IF NOT EXISTS(SELECT 1 
@@ -409,6 +537,38 @@ BEGIN
 			,'c230eb37-0ec3-4487-a27b-1c80dc0bae82'
 			,1
 		)
+END
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='c230eb37-0ec3-4487-a27b-1c80dc0bae82'
+				  AND CultureIso='en-US')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'c230eb37-0ec3-4487-a27b-1c80dc0bae82'
+					,'en-US'
+					,'Custom decimal Att'
+				)
+END
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='c230eb37-0ec3-4487-a27b-1c80dc0bae82'
+				  AND CultureIso='fr-CA')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'c230eb37-0ec3-4487-a27b-1c80dc0bae82'
+					,'fr-CA'
+					,'Att décimal custom'
+				)
 END
 
 -- INTEGER ATTRIBUTE
