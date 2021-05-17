@@ -219,7 +219,7 @@ BEGIN
 				) VALUES (
 					'fab5214b-4684-4ab1-93c2-010858155b57'
 					,'fr-CA'
-					,'Att booléen custom'
+					,'Att boolÃ©en custom'
 				)
 END
 
@@ -567,7 +567,7 @@ BEGIN
 				) VALUES (
 					'c230eb37-0ec3-4487-a27b-1c80dc0bae82'
 					,'fr-CA'
-					,'Att décimal custom'
+					,'Att dÃ©cimal custom'
 				)
 END
 
