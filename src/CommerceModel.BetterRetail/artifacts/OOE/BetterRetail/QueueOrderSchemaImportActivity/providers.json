@@ -498,13 +498,292 @@
         "__type": "ValueOfBoolean",
         "value": true
       },
-      "Hostname": "esqa.moneris.com",
+      "MonerisHostname": "esqa.moneris.com",
       "DefaultCulture": "en-CA",
       "StoreId": "store1",
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
       "HostedCardTokenizationProfileId": "htZYSB45YO5BMBR",
+      "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
+    },
+    "propertyConfigurations": {}
+  },
+ {
+    "type": "Payment",
+    "scopeId": "BetterRetailCanada",
+    "name": "Moneris Store 2",
+    "implementationTypeName": "MonerisCanadaPaymentProvider",
+    "displayName": {
+
+    },
+    "isActive": true,
+    "values": {
+      "IsCvdVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAvsVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeAValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeBValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeCValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeDValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeGValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeIValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeMValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeNValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodePValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeRValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeSValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeUValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeWValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeXValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeYValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeZValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "MonerisHostname": "esqa.moneris.com",
+      "DefaultCulture": "en-CA",
+      "StoreId": "store2",
+      "ApiToken": "yesguy",
+      "PaymentCaptureUrl": "{PaymentCaptureUrl}",
+      "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
+      "HostedCardTokenizationProfileId": "ht1RRATIA38HFFK",
+      "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Payment",
+    "scopeId": "BetterRetailCanada",
+    "name": "Moneris Store 3",
+    "implementationTypeName": "MonerisCanadaPaymentProvider",
+    "displayName": {
+
+    },
+    "isActive": false,
+    "values": {
+      "IsCvdVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAvsVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeAValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeBValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeCValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeDValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeGValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeIValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeMValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeNValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodePValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeRValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeSValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeUValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeWValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeXValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeYValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeZValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "MonerisHostname": "esqa.moneris.com",
+      "DefaultCulture": "en-CA",
+      "StoreId": "store3",
+      "ApiToken": "yesguy",
+      "PaymentCaptureUrl": "{PaymentCaptureUrl}",
+      "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
+      "HostedCardTokenizationProfileId": "ht3F4CQ1Y3T1YFP",
+      "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Payment",
+    "scopeId": "BetterRetailCanada",
+    "name": "Moneris Store 5",
+    "implementationTypeName": "MonerisCanadaPaymentProvider",
+    "displayName": {
+
+    },
+    "isActive": false,
+    "values": {
+      "IsCvdVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAvsVerificationEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeAValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeBValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeCValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeDValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeGValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeIValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeMValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeNValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodePValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeRValid": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsResultCodeSValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeUValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeWValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeXValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeYValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "IsResultCodeZValid": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "MonerisHostname": "esqa.moneris.com",
+      "DefaultCulture": "en-CA",
+      "StoreId": "store5",
+      "ApiToken": "yesguy",
+      "PaymentCaptureUrl": "{PaymentCaptureUrl}",
+      "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
+      "HostedCardTokenizationProfileId": "ht3YVHZQ8833XCJ",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
