@@ -71,6 +71,8 @@ stages:
     displayName: Publish To CMP
     variables:
         CmpStability: $[stageDependencies.Build.Build.outputs['SaveCmpStability.CmpStability']]
+    env:
+      AZURE_DEVOPS_BUILD_REASON: $(Build.Reason)
     strategy:
       runOnce:
         deploy:

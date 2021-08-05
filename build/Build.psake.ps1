@@ -244,34 +244,39 @@ Task UndoSensitiveData {
 }
 
 Task PublishPackages {
-    # this tasks depends on the variable BuildStability set by DetectBuildStability
+    # This task depends on:
+	# - variable BuildStability set by DetectBuildStability
+	# - $env:AZURE_DEVOPS_BUILD_REASON set (or not) by build.pipeline.yml
 
-    if ($NugetFeeds) {
-        if ($NugetFeeds.Contains($BuildStability.nuget)) {
-            $NugetFeed = $NugetFeeds[$BuildStability.nuget].url
-            $NugetUser = $NugetFeeds[$BuildStability.nuget].username
-            $NugetPassword = $NugetFeeds[$BuildStability.nuget].password
-
-            if ($NugetUser -and $NugetPassword -and $NugetFeed) {
-                # Only publish packages in build jobs that have the nuget 
-                # publishing information. 
-                #
-                # Note that the build definition used for the pull request
-                # does not publish packages.
-                Get-ChildItem $NugetArtifactsDirectory\*.nupkg | 
-                Publish-NugetPackage -Feed $NugetFeed -User $NugetUser -Password $NugetPassword -NugetVerbosity $NugetVerbosity
+    if ($env:AZURE_DEVOPS_BUILD_REASON -ne 'PullRequest')
+    {
+        if ($NugetFeeds) {
+            if ($NugetFeeds.Contains($BuildStability.nuget)) {
+                $NugetFeed = $NugetFeeds[$BuildStability.nuget].url
+                $NugetUser = $NugetFeeds[$BuildStability.nuget].username
+                $NugetPassword = $NugetFeeds[$BuildStability.nuget].password
+	    
+                if ($NugetUser -and $NugetPassword -and $NugetFeed) {
+                    # Only publish packages in build jobs that have the nuget 
+                    # publishing information. 
+                    #
+                    # Note that the build definition used for the pull request
+                    # does not publish packages.
+                    Get-ChildItem $NugetArtifactsDirectory\*.nupkg | 
+                    Publish-NugetPackage -Feed $NugetFeed -User $NugetUser -Password $NugetPassword -NugetVerbosity $NugetVerbosity
+                }
+                else {
+                    Write-Host "Missing Nuget username, password or feed"
+                }
             }
             else {
-                Write-Host "Missing Nuget username, password or feed"
+                throw "Could not find the configuration for '$($BuildStability.nuget)' in the provided NugetFeeds parameter"
             }
         }
         else {
-            throw "Could not find the configuration for '$($BuildStability.nuget)' in the provided NugetFeeds parameter"
+            Write-Host "Nuget feeds was not provided. Skipping publishing of Nuget packages"
         }
     }
-    else {
-        Write-Host "Nuget feeds was not provided. Skipping publishing of Nuget packages"
-    }  
 }
 
 Task PublishArtifacts {
