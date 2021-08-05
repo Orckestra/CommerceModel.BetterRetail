@@ -36,9 +36,7 @@ stages:
       displayName: 'Build BetterRetail'
       inputs:
         scriptName: build/Build.ps1
-        arguments: '-TaskList All -IsRunningOnBuildMachine -ExtraProperties @{ NugetFeeds=$(NugetFeeds); SensitiveData = $(SensitiveData) } -Verbose:$(Build.Verbose)'
-      env:
-        AZURE_DEVOPS_BUILD_REASON: $(Build.Reason)
+        arguments: '-TaskList All -IsRunningOnBuildMachine -ExtraProperties @{ NugetFeeds=$(NugetFeeds); SensitiveData = $(SensitiveData) } -Verbose:$(Build.Verbose) -BuildReason $(Build.Reason)'
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact: Troubleshooting'
       inputs:
