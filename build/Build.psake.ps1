@@ -45,6 +45,7 @@ properties {
     $NugetVerbosity = 'quiet'   # Can be: normal, quiet, detailed
     $NugetFeeds = $null     # Will be set only when running on build machine.
     $SensitiveData = $null
+    $BuildReason = $null
 }
 
 
@@ -71,7 +72,7 @@ Task All          -depends Clean,
 Task Clean        -depends CleanPackages,
                            CleanSolutions,
                            CleanArtifacts `
-                  -precondition { $IsRunningOnBuildMachine -eq $false }   # No need to clean on build machine since we always start from a brand new workspace.
+    -precondition { $IsRunningOnBuildMachine -eq $false }   # No need to clean on build machine since we always start from a brand new workspace.
 
 Task Compile      -depends RestorePackages,
                            ReplaceSensitiveData,
@@ -161,8 +162,8 @@ Task CleanArtifacts {
 
 Task RestorePackages {
     $toRestore = ("$WorkspaceRoot\Build\packages.bootstrap.config",
-                  "$WorkspaceRoot\Build\packages.config",
-                  (Get-AllSolutions))
+        "$WorkspaceRoot\Build\packages.config",
+        (Get-AllSolutions))
 
     $toRestore | Invoke-NugetRestore -NugetVerbosity $NugetVerbosity -VisualStudioVersion $VisualStudioVersion
 
@@ -244,14 +245,20 @@ Task UndoSensitiveData {
 }
 
 Task PublishPackages {
-    # this tasks depends on the variable BuildStability set by DetectBuildStability
+    # This task depends on:
+    # - variable BuildStability set by DetectBuildStability
+
+    if ($BuildReason -eq "PullRequest") {
+        Write-Host "PullRequest build detected. Skipping Nuget publishing."
+        return
+    }
 
     if ($NugetFeeds) {
         if ($NugetFeeds.Contains($BuildStability.nuget)) {
             $NugetFeed = $NugetFeeds[$BuildStability.nuget].url
             $NugetUser = $NugetFeeds[$BuildStability.nuget].username
             $NugetPassword = $NugetFeeds[$BuildStability.nuget].password
-
+    
             if ($NugetUser -and $NugetPassword -and $NugetFeed) {
                 # Only publish packages in build jobs that have the nuget 
                 # publishing information. 
@@ -271,7 +278,7 @@ Task PublishPackages {
     }
     else {
         Write-Host "Nuget feeds was not provided. Skipping publishing of Nuget packages"
-    }  
+    }
 }
 
 Task PublishArtifacts {
