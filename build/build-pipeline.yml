@@ -26,6 +26,9 @@ variables:
 - name: Build.Verbose
   value: $${{ parameters.BuildVerbosity }}
 
+env:
+  AZURE_DEVOPS_BUILD_REASON: $(Build.Reason)
+
 stages:
 - stage: Build
   displayName: Build
@@ -63,8 +66,6 @@ stages:
     
 - stage: Publish
   displayName: Publish Artifacts
-  env:
-    AZURE_DEVOPS_BUILD_REASON: $(Build.Reason)
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
   jobs:
   - deployment: DepJob
