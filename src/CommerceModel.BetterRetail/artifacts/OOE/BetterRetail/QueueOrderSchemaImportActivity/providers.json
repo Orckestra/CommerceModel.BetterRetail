@@ -416,10 +416,13 @@
   {
     "type": "Payment",
     "scopeId": "BetterRetailCanada",
-    "name": "Moneris Store 1",
+    "name": "Moneris",
     "implementationTypeName": "MonerisCanadaPaymentProvider",
     "displayName": {
-
+      "en-US": "Moneris Canada Payment Provider",
+      "en-CA": "Moneris Canada Payment Provider",
+      "fr-CA": "Moneris Canada Payment Provider",
+      "it-IT": "Moneris Canada Payment Provider"
     },
     "isActive": false,
     "values": {
@@ -506,7 +509,7 @@
     },
     "propertyConfigurations": {}
   },
-  {
+ {
     "type": "Payment",
     "scopeId": "BetterRetailCanada",
     "name": "Moneris Store 2",
@@ -780,7 +783,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht3F4CQ1Y3T1YFP",
+      "HostedCardTokenizationProfileId": "ht3YVHZQ8833XCJ",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -1210,10 +1213,13 @@
   {
     "type": "Payment",
     "scopeId": "BetterRetailNorway",
-    "name": "Moneris Store 2",
+    "name": "Moneris",
     "implementationTypeName": "MonerisCanadaPaymentProvider",
     "displayName": {
-
+      "en-US": "Moneris Canada Payment Provider",
+      "en-CA": "Moneris Canada Payment Provider",
+      "fr-CA": "Moneris Canada Payment Provider",
+      "it-IT": "Moneris Canada Payment Provider"
     },
     "isActive": true,
     "values": {
@@ -1727,10 +1733,13 @@
   {
     "type": "Payment",
     "scopeId": "BetterRetailNetherlands",
-    "name": "Moneris Store 2",
+    "name": "Moneris",
     "implementationTypeName": "MonerisCanadaPaymentProvider",
     "displayName": {
-
+      "en-US": "Moneris Canada Payment Provider",
+      "en-CA": "Moneris Canada Payment Provider",
+      "fr-CA": "Moneris Canada Payment Provider",
+      "it-IT": "Moneris Canada Payment Provider"
     },
     "isActive": true,
     "values": {
