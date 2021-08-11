@@ -7,8 +7,7 @@
         "displayName": {
           "en-US": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing.",
           "en-CA": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing.",
-          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} n'est pas prêt pour le traitement.",
-          "it-IT": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing."
+          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} n'est pas prêt pour le traitement."
         },
         "sortOrder": 0,
         "isActive": true
@@ -18,8 +17,7 @@
         "displayName": {
           "en-US": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. No inventory reservations found.",
           "en-CA": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. No inventory reservations found.",
-          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} n'est pas prêt pour le traitement. Aucune réservation des stocks n'a été trouvée.",
-          "it-IT": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. No inventory reservations found."
+          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} n'est pas prêt pour le traitement. Aucune réservation des stocks n'a été trouvée."
         },
         "sortOrder": 0,
         "isActive": true
@@ -29,8 +27,7 @@
         "displayName": {
           "en-US": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. Some line items are not in stock or have no planned or confirmed inventory reservations.",
           "en-CA": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. Some line items are not in stock or have no planned or confirmed inventory reservations.",
-          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} n'est pas prêt pour le traitement. Certains articles ne sont pas en stock ou n'ont aucune réservation de stocks planifiée ou confirmée.",
-          "it-IT": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. Some line items are not in stock or have no planned or confirmed inventory reservations."
+          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} n'est pas prêt pour le traitement. Certains articles ne sont pas en stock ou n'ont aucune réservation de stocks planifiée ou confirmée."
         },
         "sortOrder": 0,
         "isActive": true
@@ -40,8 +37,7 @@
         "displayName": {
           "en-US": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. The authorized or paid payment amount is not enough to cover the shipment total.",
           "en-CA": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. The authorized or paid payment amount is not enough to cover the shipment total.",
-          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} n'est pas prêt pour le traitement. Le paiement autorisé ou approuvé est inférieur au montant total de l'envoi.",
-          "it-IT": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. The authorized or paid payment amount is not enough to cover the shipment total."
+          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} n'est pas prêt pour le traitement. Le paiement autorisé ou approuvé est inférieur au montant total de l'envoi."
         },
         "sortOrder": 0,
         "isActive": true
@@ -51,8 +47,7 @@
         "displayName": {
           "en-US": "Pick-up location {FulfillmentLocationId} not found for shipment {ShipmentId} in order {OrderId}.",
           "en-CA": "Pick-up location {FulfillmentLocationId} not found for shipment {ShipmentId} in order {OrderId}.",
-          "fr-CA": "Le point de cueillette {FulfillmentLocationId} est introuvable pour l'envoi {ShipmentId} de la commande {OrderId}.",
-          "it-IT": "Pick-up location {FulfillmentLocationId} not found for shipment {ShipmentId} in order {OrderId}."
+          "fr-CA": "Le point de cueillette {FulfillmentLocationId} est introuvable pour l'envoi {ShipmentId} de la commande {OrderId}."
         },
         "sortOrder": 0,
         "isActive": true
@@ -62,8 +57,7 @@
         "displayName": {
           "en-US": "Failed reservation for item {Sku} with quantity {Quantity}.",
           "en-CA": "Failed reservation for item {Sku} with quantity {Quantity}.",
-          "fr-CA": "La réservation de {Quantity} article(s) {Sku} a échoué.",
-          "it-IT": "Failed reservation for item {Sku} with quantity {Quantity}."
+          "fr-CA": "La réservation de {Quantity} article(s) {Sku} a échoué."
         },
         "sortOrder": 0,
         "isActive": true
@@ -73,8 +67,7 @@
         "displayName": {
           "en-US": "Reserved items and number of items requested do not match. Reserved {ReservedCount} and requested {RequestedCount}.",
           "en-CA": "Reserved items and number of items requested do not match. Reserved {ReservedCount} and requested {RequestedCount}.",
-          "fr-CA": "Le nombre d'articles réservés et d'articles demandés ne correspond pas. Réservés {ReservedCount} et demandés {RequestedCount}.",
-          "it-IT": "Reserved items and number of items requested do not match. Reserved {ReservedCount} and requested {RequestedCount}."
+          "fr-CA": "Le nombre d'articles réservés et d'articles demandés ne correspond pas. Réservés {ReservedCount} et demandés {RequestedCount}."
         },
         "sortOrder": 0,
         "isActive": true
@@ -84,8 +77,7 @@
         "displayName": {
           "en-US": "Reserved items and number of items requested do not match. Reserved {ReservedCount} and requested {RequestedCount}.",
           "en-CA": "Reserved items and number of items requested do not match. Reserved {ReservedCount} and requested {RequestedCount}.",
-          "fr-CA": "Le nombre d'articles réservés et d'articles demandés ne correspond pas. Réservés {ReservedCount} et demandés {RequestedCount}.",
-          "it-IT": "Reserved items and number of items requested do not match. Reserved {ReservedCount} and requested {RequestedCount}."
+          "fr-CA": "Le nombre d'articles réservés et d'articles demandés ne correspond pas. Réservés {ReservedCount} et demandés {RequestedCount}."
         },
         "sortOrder": 0,
         "isActive": true
@@ -95,8 +87,7 @@
         "displayName": {
           "en-US": "Unable to route order since the allocated routing time has been elapsed.",
           "en-CA": "Unable to route order since the allocated routing time has been elapsed.",
-          "fr-CA": "Imposssible d'assigner un centre de traitement pour la commande, puisque le temps alloué pour l'assignation est écoulé.",
-          "it-IT": "Unable to route order since the allocated routing time has been elapsed."
+          "fr-CA": "Imposssible d'assigner un centre de traitement pour la commande, puisque le temps alloué pour l'assignation est écoulé."
         },
         "sortOrder": 0,
         "isActive": true
@@ -106,8 +97,7 @@
         "displayName": {
           "en-US": "Unable to route order since there is no location avalaible to fulfill.",
           "en-CA": "Unable to route order since there is no location avalaible to fulfill.",
-          "fr-CA": "Imposssible d'assigner un centre de traitement pour la commande, puisqu'aucun centre ne peut la traiter.",
-          "it-IT": "Unable to route order since there is no location avalaible to fulfill."
+          "fr-CA": "Imposssible d'assigner un centre de traitement pour la commande, puisqu'aucun centre ne peut la traiter."
         },
         "sortOrder": 0,
         "isActive": true
@@ -117,8 +107,7 @@
         "displayName": {
           "en-US": "Unable to route to a fulfillment location order number since number of shipments after split exceed maximum per order.",
           "en-CA": "Unable to route to a fulfillment location order number since number of shipments after split exceed maximum per order.",
-          "fr-CA": "Imposssible d'assigner un centre de traitement pour la commande, puisque le nombre d'envois après la redistribution excède le maximum par commande.",
-          "it-IT": "Unable to route to a fulfillment location order number since number of shipments after split exceed maximum per order."
+          "fr-CA": "Imposssible d'assigner un centre de traitement pour la commande, puisque le nombre d'envois après la redistribution excède le maximum par commande."
         },
         "sortOrder": 0,
         "isActive": true
@@ -128,8 +117,7 @@
         "displayName": {
           "en-US": "The shipment {ShipmentId} in order {OrderId} has an incompatible fulfillment method type '{FulfillmentMethodType}' for the selected provider '{FulfillmentProvider}'.",
           "en-CA": "The shipment {ShipmentId} in order {OrderId} has an incompatible fulfillment method type '{FulfillmentMethodType}' for the selected provider '{FulfillmentProvider}'.",
-          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} est configuré avec une méthode de traitement'{FulfillmentMethodType}' incompatible pour le provider sélectionné '{FulfillmentProvider}'.",
-          "it-IT": "The shipment {ShipmentId} in order {OrderId} has an incompatible fulfillment method type '{FulfillmentMethodType}' for the selected provider '{FulfillmentProvider}'."
+          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} est configuré avec une méthode de traitement'{FulfillmentMethodType}' incompatible pour le provider sélectionné '{FulfillmentProvider}'."
         },
         "sortOrder": 0,
         "isActive": true
@@ -139,8 +127,7 @@
         "displayName": {
           "en-US": "The fulfillment location {FulfillmentLocationId} was not found for the shipment {ShipmentId} in order {OrderId}.",
           "en-CA": "The fulfillment location {FulfillmentLocationId} was not found for the shipment {ShipmentId} in order {OrderId}.",
-          "fr-CA": "Le centre de traitement {FulfillmentLocationId} est introuvable pour l'envoi {ShipmentId} de la commande {OrderId}.",
-          "it-IT": "The fulfillment location {FulfillmentLocationId} was not found for the shipment {ShipmentId} in order {OrderId}."
+          "fr-CA": "Le centre de traitement {FulfillmentLocationId} est introuvable pour l'envoi {ShipmentId} de la commande {OrderId}."
         },
         "sortOrder": 0,
         "isActive": true
@@ -150,8 +137,7 @@
         "displayName": {
           "en-US": "The pickup location {PickUpLocationId} was not found for the shipment {ShipmentId} in order {OrderId}.",
           "en-CA": "The pickup location {PickUpLocationId} was not found for the shipment {ShipmentId} in order {OrderId}.",
-          "fr-CA": "Le point de cueillette {PickUpLocationId} est introuvable pour l'envoi {ShipmentId} de la commande {OrderId}.",
-          "it-IT": "The pickup location {PickUpLocationId} was not found for the shipment {ShipmentId} in order {OrderId}."
+          "fr-CA": "Le point de cueillette {PickUpLocationId} est introuvable pour l'envoi {ShipmentId} de la commande {OrderId}."
         },
         "sortOrder": 0,
         "isActive": true
@@ -161,8 +147,7 @@
         "displayName": {
           "en-US": "The fulfillment location {FulfillmentLocationId} for the shipment {ShipmentId} in order {OrderId} does not support shipping.",
           "en-CA": "The fulfillment location {FulfillmentLocationId} for the shipment {ShipmentId} in order {OrderId} does not support shipping.",
-          "fr-CA": "Le centre de traitement {FulfillmentLocationId} pour l'envoi {ShipmentId} de la commande {OrderId} ne supporte pas l'expédition.",
-          "it-IT": "The fulfillment location {FulfillmentLocationId} for the shipment {ShipmentId} in order {OrderId} does not support shipping."
+          "fr-CA": "Le centre de traitement {FulfillmentLocationId} pour l'envoi {ShipmentId} de la commande {OrderId} ne supporte pas l'expédition."
         },
         "sortOrder": 0,
         "isActive": true
@@ -172,8 +157,7 @@
         "displayName": {
           "en-US": "The fulfillment provider {FulfillmentProvider} for the shipment {ShipmentId} in order {OrderId} does not support a pickup location and will therefore be ignored.",
           "en-CA": "The fulfillment provider {FulfillmentProvider} for the shipment {ShipmentId} in order {OrderId} does not support a pickup location and will therefore be ignored.",
-          "fr-CA": "Le provider de traitement {FulfillmentProvider} pour l'envoi {ShipmentId} de la commande {OrderId} ne supporte pas la cueillette en magasin et sera en conséquence ignorée.",
-          "it-IT": "The fulfillment provider {FulfillmentProvider} for the shipment {ShipmentId} in order {OrderId} does not support a pickup location and will therefore be ignored."
+          "fr-CA": "Le provider de traitement {FulfillmentProvider} pour l'envoi {ShipmentId} de la commande {OrderId} ne supporte pas la cueillette en magasin et sera en conséquence ignorée."
         },
         "sortOrder": 0,
         "isActive": true
@@ -183,8 +167,7 @@
         "displayName": {
           "en-US": "Either a pickup location or a fulfillment location is required for the shipment {ShipmentId} in order {OrderId} when using the fulfillment method type '{FulfillmentMethodType}'.",
           "en-CA": "Either a pickup location or a fulfillment location is required for the shipment {ShipmentId} in order {OrderId} when using the fulfillment method type '{FulfillmentMethodType}'.",
-          "fr-CA": "Un point de cueillette ou un centre de traitement est requis pour l'envoi {ShipmentId} de la commande {OrderId} lorsque la méthode de traitement'{FulfillmentMethodType}' est sélectionnée.",
-          "it-IT": "Either a pickup location or a fulfillment location is required for the shipment {ShipmentId} in order {OrderId} when using the fulfillment method type '{FulfillmentMethodType}'."
+          "fr-CA": "Un point de cueillette ou un centre de traitement est requis pour l'envoi {ShipmentId} de la commande {OrderId} lorsque la méthode de traitement'{FulfillmentMethodType}' est sélectionnée."
         },
         "sortOrder": 0,
         "isActive": true
@@ -194,8 +177,7 @@
         "displayName": {
           "en-US": "The  pickup location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}'. The fulfillment location {FulfillmentLocationId} will be used as the pickup location as well.",
           "en-CA": "The  pickup location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}'. The fulfillment location {FulfillmentLocationId} will be used as the pickup location as well.",
-          "fr-CA": "Un point de cueillette est manquant pour l'envoi {ShipmentId} de la commande {OrderId} et utilisant la méthode de traitement'{FulfillmentMethodType}'. Le centre de traitement {FulfillmentLocationId} sera donc utilisé comme point de cueillette.",
-          "it-IT": "The  pickup location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}'. The fulfillment location {FulfillmentLocationId} will be used as the pickup location as well."
+          "fr-CA": "Un point de cueillette est manquant pour l'envoi {ShipmentId} de la commande {OrderId} et utilisant la méthode de traitement'{FulfillmentMethodType}'. Le centre de traitement {FulfillmentLocationId} sera donc utilisé comme point de cueillette."
         },
         "sortOrder": 0,
         "isActive": true
@@ -205,8 +187,7 @@
         "displayName": {
           "en-US": "The pickup location {PickUpLocationId} for the shipment {ShipmentId} in order {OrderId} does not support pickup.",
           "en-CA": "The pickup location {PickUpLocationId} for the shipment {ShipmentId} in order {OrderId} does not support pickup.",
-          "fr-CA": "Le point de cueillette {PickUpLocationId} pour l'envoi {ShipmentId} de la commande {OrderId} ne supporte pas la cueillette.",
-          "it-IT": "The pickup location {PickUpLocationId} for the shipment {ShipmentId} in order {OrderId} does not support pickup."
+          "fr-CA": "Le point de cueillette {PickUpLocationId} pour l'envoi {ShipmentId} de la commande {OrderId} ne supporte pas la cueillette."
         },
         "sortOrder": 0,
         "isActive": true
@@ -216,8 +197,7 @@
         "displayName": {
           "en-US": "The fulfillment location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}' and with store-to-store transfers being disabled. The pickup location {PickUpLocationId} will be used as the fulfillment location as well.",
           "en-CA": "The fulfillment location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}' and with store-to-store transfers being disabled. The pickup location {PickUpLocationId} will be used as the fulfillment location as well.",
-          "fr-CA": "Le centre de traitement est manquant pour l'envoi {ShipmentId} associé à la commande {OrderId} qui utilise la méthode de traitement'{FulfillmentMethodType}'. Le transfert entre magasins n'est pas disponible. Le point de cueillette {PickUpLocationId} sera donc utilisé comme centre de traitement.",
-          "it-IT": "The fulfillment location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}' and with store-to-store transfers being disabled. The pickup location {PickUpLocationId} will be used as the fulfillment location as well."
+          "fr-CA": "Le centre de traitement est manquant pour l'envoi {ShipmentId} associé à la commande {OrderId} qui utilise la méthode de traitement'{FulfillmentMethodType}'. Le transfert entre magasins n'est pas disponible. Le point de cueillette {PickUpLocationId} sera donc utilisé comme centre de traitement." the fulfillment location as well."
         },
         "sortOrder": 0,
         "isActive": true
@@ -227,8 +207,7 @@
         "displayName": {
           "en-US": "The fulfillment location for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}' is different from the pickup location {PickUpLocationId} with store-to-store transfers being disabled.",
           "en-CA": "The fulfillment location for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}' is different from the pickup location {PickUpLocationId} with store-to-store transfers being disabled.",
-          "fr-CA": "Le centre de traitement pour l'envoi {ShipmentId} associé à la commande {OrderId} qui utilise la méthode de traitement'{FulfillmentMethodType}' est différent du point de cueillette {PickUpLocationId}. Le transfert entre magasins n'est pas disponible.",
-          "it-IT": "The fulfillment location for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}' is different from the pickup location {PickUpLocationId} with store-to-store transfers being disabled."
+          "fr-CA": "Le centre de traitement pour l'envoi {ShipmentId} associé à la commande {OrderId} qui utilise la méthode de traitement'{FulfillmentMethodType}' est différent du point de cueillette {PickUpLocationId}. Le transfert entre magasins n'est pas disponible."
         },
         "sortOrder": 0,
         "isActive": true
@@ -238,8 +217,7 @@
         "displayName": {
           "en-US": "Shipment '{ShipmentId}' in order '{OrderId}' does not require booking.  Both Outbound and Return flags are false.",
           "en-CA": "Shipment '{ShipmentId}' in order '{OrderId}' does not require booking.  Both Outbound and Return flags are false.",
-          "fr-CA": "L'envoi '{ShipmentId}' de la commande '{OrderId}' ne requiert pas de réservation avec le transporteur. Les indicateurs de sortie et de retour sont inactifs.",
-          "it-IT": "Shipment '{ShipmentId}' in order '{OrderId}' does not require booking.  Both Outbound and Return flags are false."
+          "fr-CA": "L'envoi '{ShipmentId}' de la commande '{OrderId}' ne requiert pas de réservation avec le transporteur. Les indicateurs de sortie et de retour sont inactifs."
         },
         "sortOrder": 0,
         "isActive": true
@@ -249,8 +227,7 @@
         "displayName": {
           "en-US": "Shipment '{ShipmentId}' in order '{OrderId}' has no fulfillment location configured.",
           "en-CA": "Shipment '{ShipmentId}' in order '{OrderId}' has no fulfillment location configured.",
-          "fr-CA": "L'envoi '{ShipmentId}' de la commande '{OrderId}' n'a pas centre de traitement configuré.",
-          "it-IT": "Shipment '{ShipmentId}' in order '{OrderId}' has no fulfillment location configured."
+          "fr-CA": "L'envoi '{ShipmentId}' de la commande '{OrderId}' n'a pas centre de traitement configuré."
         },
         "sortOrder": 0,
         "isActive": true
@@ -260,8 +237,7 @@
         "displayName": {
           "en-US": "The fulfillment location '{FulfillmentLocationId}' in shipment '{ShipmentId}' in order '{OrderId}' has no address.",
           "en-CA": "The fulfillment location '{FulfillmentLocationId}' in shipment '{ShipmentId}' in order '{OrderId}' has no address.",
-          "fr-CA": "Le centre de traitement '{FulfillmentLocationId}' pour l'envoi {ShipmentId} de la commande {OrderId} n'a aucune adresse.",
-          "it-IT": "The fulfillment location '{FulfillmentLocationId}' in shipment '{ShipmentId}' in order '{OrderId}' has no address."
+          "fr-CA": "Le centre de traitement '{FulfillmentLocationId}' pour l'envoi {ShipmentId} de la commande {OrderId} n'a aucune adresse."
         },
         "sortOrder": 0,
         "isActive": true
@@ -271,8 +247,7 @@
         "displayName": {
           "en-US": "Shipment '{ShipmentId}' in order '{OrderId}' does not contain packages.",
           "en-CA": "Shipment '{ShipmentId}' in order '{OrderId}' does not contain packages.",
-          "fr-CA": "L'envoi '{ShipmentId}' de la commande '{OrderId}' ne contient pas de colis.",
-          "it-IT": "Shipment '{ShipmentId}' in order '{OrderId}' does not contain packages."
+          "fr-CA": "L'envoi '{ShipmentId}' de la commande '{OrderId}' ne contient pas de colis."
         },
         "sortOrder": 0,
         "isActive": true
@@ -282,8 +257,7 @@
         "displayName": {
           "en-US": "Cannot book outbound packages for shipment '{ShipmentId}' in order '{OrderId}'. See order history for more details.",
           "en-CA": "Cannot book outbound packages for shipment '{ShipmentId}' in order '{OrderId}'. See order history for more details.",
-          "fr-CA": "Impossible de planifier le transport des colis pour l'envoi '{ShipmentId}' de la commande '{OrderId}'. Veuillez consulter l'historique de la commande pour plus de détails.",
-          "it-IT": "Cannot book outbound packages for shipment '{ShipmentId}' in order '{OrderId}'. See order history for more details."
+          "fr-CA": "Impossible de planifier le transport des colis pour l'envoi '{ShipmentId}' de la commande '{OrderId}'. Veuillez consulter l'historique de la commande pour plus de détails."
         },
         "sortOrder": 0,
         "isActive": true
@@ -293,8 +267,7 @@
         "displayName": {
           "en-US": "Cannot book return packages for shipment '{ShipmentId}' in order '{OrderId}'. See order history for more details.",
           "en-CA": "Cannot book return packages for shipment '{ShipmentId}' in order '{OrderId}'. See order history for more details.",
-          "fr-CA": "Impossible de planifier le retour des colis pour l'envoi '{ShipmentId}' de la commande '{OrderId}'. Veuillez consulter l'historique de la commande pour plus de détails.",
-          "it-IT": "Cannot book return packages for shipment '{ShipmentId}' in order '{OrderId}'. See order history for more details."
+          "fr-CA": "Impossible de planifier le retour des colis pour l'envoi '{ShipmentId}' de la commande '{OrderId}'. Veuillez consulter l'historique de la commande pour plus de détails."
         },
         "sortOrder": 0,
         "isActive": true
@@ -304,8 +277,7 @@
         "displayName": {
           "en-US": "The following occured while attempting to book packages for shipment '{ShipmentId}' in order '{OrderId}' : {ErrorMessage}",
           "en-CA": "The following occured while attempting to book packages for shipment '{ShipmentId}' in order '{OrderId}' : {ErrorMessage}",
-          "fr-CA": "L'erreur suivante est survenue lors de la tentative de réservation avec le transporteur pour l'envoi '{ShipmentId}' de la commande '{OrderId}': {ErrorMessage}",
-          "it-IT": "The following occured while attempting to book packages for shipment '{ShipmentId}' in order '{OrderId}' : {ErrorMessage}"
+          "fr-CA": "L'erreur suivante est survenue lors de la tentative de réservation avec le transporteur pour l'envoi '{ShipmentId}' de la commande '{OrderId}': {ErrorMessage}"
         },
         "sortOrder": 0,
         "isActive": true
@@ -314,8 +286,7 @@
     "displayName": {
       "en-CA": "Fulfillment Validation Errors",
       "en-US": "Fulfillment Validation Errors",
-      "fr-CA": "Erreurs de validation du traitement",
-      "it-IT": "Errori di convalida esecuzione"
+      "fr-CA": "Erreurs de validation du traitement"
     },
     "isActive": true
   },
@@ -327,8 +298,7 @@
         "displayName": {
           "en-US": "Incoming",
           "en-CA": "Incoming",
-          "fr-CA": "En route",
-          "it-IT": "Incoming"
+          "fr-CA": "En route"
         },
         "sortOrder": 0,
         "isActive": true
@@ -338,8 +308,7 @@
         "displayName": {
           "en-US": "Pending response",
           "en-CA": "Pending response",
-          "fr-CA": "En attente d'une réponse",
-          "it-IT": "Pending response"
+          "fr-CA": "En attente d'une réponse"
         },
         "sortOrder": 1,
         "isActive": true
@@ -349,8 +318,7 @@
         "displayName": {
           "en-US": "Ready for picking",
           "en-CA": "Ready for picking",
-          "fr-CA": "Prêt pour le ramassage",
-          "it-IT": "Ready for picking"
+          "fr-CA": "Prêt pour le ramassage"
         },
         "sortOrder": 2,
         "isActive": true
@@ -360,8 +328,7 @@
         "displayName": {
           "en-US": "Picking in progress",
           "en-CA": "Picking in progress",
-          "fr-CA": "Ramassage en cours",
-          "it-IT": "Picking in progress"
+          "fr-CA": "Ramassage en cours"
         },
         "sortOrder": 3,
         "isActive": true
@@ -371,8 +338,7 @@
         "displayName": {
           "en-US": "Ready for packing",
           "en-CA": "Ready for packing",
-          "fr-CA": "Prêt pour l'assemblage",
-          "it-IT": "Ready for packing"
+          "fr-CA": "Prêt pour l'assemblage"
         },
         "sortOrder": 4,
         "isActive": true
@@ -382,8 +348,7 @@
         "displayName": {
           "en-US": "Packing in progress",
           "en-CA": "Packing in progress",
-          "fr-CA": "Assemblage en cours",
-          "it-IT": "Packing in progress"
+          "fr-CA": "Assemblage en cours"
         },
         "sortOrder": 5,
         "isActive": true
@@ -393,8 +358,7 @@
         "displayName": {
           "en-US": "Ready for booking",
           "en-CA": "Ready for booking",
-          "fr-CA": "Prêt pour la réservation",
-          "it-IT": "Ready for booking"
+          "fr-CA": "Prêt pour la réservation"
         },
         "sortOrder": 6,
         "isActive": true
@@ -404,8 +368,7 @@
         "displayName": {
           "en-US": "Booking in progress",
           "en-CA": "Booking in progress",
-          "fr-CA": "Réservation en cours",
-          "it-IT": "Booking in progress"
+          "fr-CA": "Réservation en cours"
         },
         "sortOrder": 7,
         "isActive": true
@@ -415,8 +378,7 @@
         "displayName": {
           "en-US": "Booked with success",
           "en-CA": "Booked with success",
-          "fr-CA": "Réservé avec succès",
-          "it-IT": "Booked with success"
+          "fr-CA": "Réservé avec succès"
         },
         "sortOrder": 8,
         "isActive": true
@@ -426,8 +388,7 @@
         "displayName": {
           "en-US": "Booking in error",
           "en-CA": "Booking in error",
-          "fr-CA": "Réservation en erreur",
-          "it-IT": "Booking in error"
+          "fr-CA": "Réservation en erreur"
         },
         "sortOrder": 9,
         "isActive": true
@@ -437,8 +398,7 @@
         "displayName": {
           "en-US": "Ready for shipping",
           "en-CA": "Ready for shipping",
-          "fr-CA": "Prêt pour l'expédition",
-          "it-IT": "Ready for shipping"
+          "fr-CA": "Prêt pour l'expédition"
         },
         "sortOrder": 10,
         "isActive": true
@@ -448,8 +408,7 @@
         "displayName": {
           "en-US": "Ready for pickup",
           "en-CA": "Ready for pickup",
-          "fr-CA": "Prêt pour la cueillette",
-          "it-IT": "Ready for pickup"
+          "fr-CA": "Prêt pour la cueillette"
         },
         "sortOrder": 11,
         "isActive": true
@@ -459,8 +418,7 @@
         "displayName": {
           "en-US": "Ready for transfer",
           "en-CA": "Ready for transfer",
-          "fr-CA": "Prêt pour le transfert",
-          "it-IT": "Ready for transfer"
+          "fr-CA": "Prêt pour le transfert"
         },
         "sortOrder": 12,
         "isActive": true
@@ -470,8 +428,7 @@
         "displayName": {
           "en-US": "Pending reception",
           "en-CA": "Pending reception",
-          "fr-CA": "Attente de réception",
-          "it-IT": "Pending reception"
+          "fr-CA": "Attente de réception"
         },
         "sortOrder": 13,
         "isActive": true
@@ -481,8 +438,7 @@
         "displayName": {
           "en-US": "Shipping completed",
           "en-CA": "Shipping completed",
-          "fr-CA": "Expédition complétée",
-          "it-IT": "Shipping completed"
+          "fr-CA": "Expédition complétée"
         },
         "sortOrder": 14,
         "isActive": true
@@ -492,8 +448,7 @@
         "displayName": {
           "en-US": "Transfer completed",
           "en-CA": "Transfer completed",
-          "fr-CA": "Transfert complété",
-          "it-IT": "Transfer completed"
+          "fr-CA": "Transfert complété"
         },
         "sortOrder": 15,
         "isActive": true
@@ -503,8 +458,7 @@
         "displayName": {
           "en-US": "Pickup completed",
           "en-CA": "Pickup completed",
-          "fr-CA": "Cueillette complétée",
-          "it-IT": "Pickup completed"
+          "fr-CA": "Cueillette complétée"
         },
         "sortOrder": 16,
         "isActive": true
@@ -514,8 +468,7 @@
         "displayName": {
           "en-US": "Offered",
           "en-CA": "Offered",
-          "fr-CA": "Offre",
-          "it-IT": "Offered"
+          "fr-CA": "Offre"
         },
         "sortOrder": 17,
         "isActive": true
@@ -525,8 +478,7 @@
         "displayName": {
           "en-US": "Abandoned",
           "en-CA": "Abandoned",
-          "fr-CA": "Abandonné",
-          "it-IT": "Abandoned"
+          "fr-CA": "Abandonné"
         },
         "sortOrder": 18,
         "isActive": true
@@ -536,8 +488,7 @@
         "displayName": {
           "en-US": "Expired",
           "en-CA": "Expired",
-          "fr-CA": "Expiré",
-          "it-IT": "Expired"
+          "fr-CA": "Expiré"
         },
         "sortOrder": 0,
         "isActive": true
@@ -547,8 +498,7 @@
         "displayName": {
           "en-US": "Rejected",
           "en-CA": "Rejected",
-          "fr-CA": "Rejeté",
-          "it-IT": "Rejected"
+          "fr-CA": "Rejeté"
         },
         "sortOrder": 0,
         "isActive": true
@@ -558,8 +508,7 @@
         "displayName": {
           "en-US": "Declined",
           "en-CA": "Declined",
-          "fr-CA": "Refusé",
-          "it-IT": "Declined"
+          "fr-CA": "Refusé"
         },
         "sortOrder": 0,
         "isActive": true
@@ -569,8 +518,7 @@
         "displayName": {
           "en-US": "Transfer Requested",
           "en-CA": "Transfer Requested",
-          "fr-CA": "Transfert demandé",
-          "it-IT": "Transfer Requested"
+          "fr-CA": "Transfert demandé"
         },
         "sortOrder": 0,
         "isActive": true
@@ -580,8 +528,7 @@
         "displayName": {
           "en-US": "Unable to route",
           "en-CA": "Unable to route",
-          "fr-CA": "Impossible à assigner",
-          "it-IT": "Unable to route"
+          "fr-CA": "Impossible à assigner"
         },
         "sortOrder": 0,
         "isActive": true
@@ -591,8 +538,7 @@
         "displayName": {
           "en-US": "Packing completed",
           "en-CA": "Packing completed",
-          "fr-CA": "Assemblage terminé",
-          "it-IT": "Packing completed"
+          "fr-CA": "Assemblage terminé"
         },
         "sortOrder": 0,
         "isActive": true
@@ -601,8 +547,7 @@
     "displayName": {
       "en-CA": "Shipment Status",
       "en-US": "Shipment Status",
-      "fr-CA": "Statut de l'envoi",
-      "it-IT": "Stato di spedizione"
+      "fr-CA": "Statut de l'envoi"
     },
     "isActive": true
   },
@@ -614,8 +559,7 @@
         "displayName": {
           "en-US": "Accept",
           "en-CA": "Accept",
-          "fr-CA": "Accepter",
-          "it-IT": "Accept"
+          "fr-CA": "Accepter"
         },
         "sortOrder": 1,
         "isActive": true
@@ -625,8 +569,7 @@
         "displayName": {
           "en-US": "Decline",
           "en-CA": "Decline",
-          "fr-CA": "Décliner",
-          "it-IT": "Decline"
+          "fr-CA": "Décliner"
         },
         "sortOrder": 2,
         "isActive": true
@@ -636,8 +579,7 @@
         "displayName": {
           "en-US": "Start picking",
           "en-CA": "Start picking",
-          "fr-CA": "Débuter le ramassage",
-          "it-IT": "Start picking"
+          "fr-CA": "Débuter le ramassage"
         },
         "sortOrder": 3,
         "isActive": true
@@ -647,8 +589,7 @@
         "displayName": {
           "en-US": "Reject picking",
           "en-CA": "Reject picking",
-          "fr-CA": "Rejeter le ramassage",
-          "it-IT": "Reject picking"
+          "fr-CA": "Rejeter le ramassage"
         },
         "sortOrder": 0,
         "isActive": true
@@ -658,8 +599,7 @@
         "displayName": {
           "en-US": "Complete picking",
           "en-CA": "Complete picking",
-          "fr-CA": "Compléter le ramassage",
-          "it-IT": "Complete picking"
+          "fr-CA": "Compléter le ramassage"
         },
         "sortOrder": 4,
         "isActive": true
@@ -669,8 +609,7 @@
         "displayName": {
           "en-US": "Stop picking",
           "en-CA": "Stop picking",
-          "fr-CA": "Interrompre le ramassage",
-          "it-IT": "Stop picking"
+          "fr-CA": "Interrompre le ramassage"
         },
         "sortOrder": 5,
         "isActive": true
@@ -680,8 +619,7 @@
         "displayName": {
           "en-US": "Reject picking",
           "en-CA": "Reject picking",
-          "fr-CA": "Rejeter le ramassage",
-          "it-IT": "Reject picking"
+          "fr-CA": "Rejeter le ramassage"
         },
         "sortOrder": 0,
         "isActive": true
@@ -691,8 +629,7 @@
         "displayName": {
           "en-US": "Start packing",
           "en-CA": "Start packing",
-          "fr-CA": "Débuter l'assemblage",
-          "it-IT": "Start packing"
+          "fr-CA": "Débuter l'assemblage"
         },
         "sortOrder": 6,
         "isActive": true
@@ -702,8 +639,7 @@
         "displayName": {
           "en-US": "Reject packing",
           "en-CA": "Reject packing",
-          "fr-CA": "Interrompre l'assemblage",
-          "it-IT": "Reject packing"
+          "fr-CA": "Interrompre l'assemblage"
         },
         "sortOrder": 0,
         "isActive": true
@@ -713,8 +649,7 @@
         "displayName": {
           "en-US": "Complete packing",
           "en-CA": "Complete packing",
-          "fr-CA": "Compléter l'assemblage",
-          "it-IT": "Complete packing"
+          "fr-CA": "Compléter l'assemblage"
         },
         "sortOrder": 7,
         "isActive": true
@@ -724,8 +659,7 @@
         "displayName": {
           "en-US": "Cancel packing",
           "en-CA": "Cancel packing",
-          "fr-CA": "Annuler l'assemblage",
-          "it-IT": "Cancel packing"
+          "fr-CA": "Annuler l'assemblage"
         },
         "sortOrder": 8,
         "isActive": true
@@ -735,8 +669,7 @@
         "displayName": {
           "en-US": "Reject packing",
           "en-CA": "Reject packing",
-          "fr-CA": "Rejeter l'assemblage",
-          "it-IT": "Reject packing"
+          "fr-CA": "Rejeter l'assemblage"
         },
         "sortOrder": 0,
         "isActive": true
@@ -746,8 +679,7 @@
         "displayName": {
           "en-US": "Reject booking",
           "en-CA": "Reject booking",
-          "fr-CA": "Rejeter la réservation",
-          "it-IT": "Reject booking"
+          "fr-CA": "Rejeter la réservation"
         },
         "sortOrder": 0,
         "isActive": true
@@ -757,8 +689,7 @@
         "displayName": {
           "en-US": "Complete shipping",
           "en-CA": "Complete shipping",
-          "fr-CA": "Compléter l'expédition",
-          "it-IT": "Complete shipping"
+          "fr-CA": "Compléter l'expédition"
         },
         "sortOrder": 9,
         "isActive": true
@@ -768,8 +699,7 @@
         "displayName": {
           "en-US": "Reject shipping",
           "en-CA": "Reject shipping",
-          "fr-CA": "Rejeter l'expédition",
-          "it-IT": "Reject shipping"
+          "fr-CA": "Rejeter l'expédition"
         },
         "sortOrder": 0,
         "isActive": true
@@ -778,8 +708,7 @@
     "displayName": {
       "en-CA": "Shipment State Transition",
       "en-US": "Shipment State Transition",
-      "fr-CA": "Transition du statut de l'envoi",
-      "it-IT": "Shipment State Transition"
+      "fr-CA": "Transition du statut de l'envoi"
     },
     "isActive": true
   },
@@ -791,8 +720,7 @@
         "displayName": {
           "en-US": "Start picking",
           "en-CA": "Start picking",
-          "fr-CA": "Débuter l'assemblage",
-          "it-IT": "Start picking"
+          "fr-CA": "Débuter l'assemblage"
         },
         "sortOrder": 1,
         "isActive": true
@@ -802,8 +730,7 @@
         "displayName": {
           "en-US": "Complete picking",
           "en-CA": "Complete picking",
-          "fr-CA": "Compléter le ramassage",
-          "it-IT": "Complete picking"
+          "fr-CA": "Compléter le ramassage"
         },
         "sortOrder": 2,
         "isActive": true
@@ -813,8 +740,7 @@
         "displayName": {
           "en-US": "Cancel picking",
           "en-CA": "Cancel picking",
-          "fr-CA": "Annuler le ramassage",
-          "it-IT": "Cancel picking"
+          "fr-CA": "Annuler le ramassage"
         },
         "sortOrder": 3,
         "isActive": true
@@ -824,8 +750,7 @@
         "displayName": {
           "en-US": "Print packing slip",
           "en-CA": "Print packing slip",
-          "fr-CA": "Imprimer le bordereau d'expédition",
-          "it-IT": "Print packing slip"
+          "fr-CA": "Imprimer le bordereau d'expédition"
         },
         "sortOrder": 4,
         "isActive": true
@@ -835,8 +760,7 @@
         "displayName": {
           "en-US": "Select carrier documents",
           "en-CA": "Select carrier documents",
-          "fr-CA": "Sélectionner les documents du transporteur",
-          "it-IT": "Select carrier documents"
+          "fr-CA": "Sélectionner les documents du transporteur"
         },
         "sortOrder": 5,
         "isActive": true
@@ -846,8 +770,7 @@
         "displayName": {
           "en-US": "Show carrier documents",
           "en-CA": "Show carrier documents",
-          "fr-CA": "Afficher les documents du transporteur",
-          "it-IT": "Show carrier documents"
+          "fr-CA": "Afficher les documents du transporteur"
         },
         "sortOrder": 6,
         "isActive": true
@@ -857,8 +780,7 @@
         "displayName": {
           "en-US": "Seize",
           "en-CA": "Seize",
-          "fr-CA": "Saisir",
-          "it-IT": "Seize"
+          "fr-CA": "Saisir"
         },
         "sortOrder": 7,
         "isActive": true
@@ -868,8 +790,7 @@
         "displayName": {
           "en-US": "Ignore",
           "en-CA": "Ignore",
-          "fr-CA": "Ignorer",
-          "it-IT": "Ignore"
+          "fr-CA": "Ignorer"
         },
         "sortOrder": 8,
         "isActive": true
@@ -878,8 +799,7 @@
     "displayName": {
       "en-CA": "Shipment User Action",
       "en-US": "Shipment User Action",
-      "fr-CA": "Actions de l'utilisateur",
-      "it-IT": "Shipment User Action"
+      "fr-CA": "Actions de l'utilisateur"
     },
     "isActive": true
   },
@@ -891,8 +811,7 @@
         "displayName": {
           "en-US": "Incoming",
           "en-CA": "Incoming",
-          "fr-CA": "En route",
-          "it-IT": "Incoming"
+          "fr-CA": "En route"
         },
         "sortOrder": 1,
         "isActive": true
@@ -902,8 +821,7 @@
         "displayName": {
           "en-US": "Pending",
           "en-CA": "Pending",
-          "fr-CA": "En attente",
-          "it-IT": "Pending"
+          "fr-CA": "En attente"
         },
         "sortOrder": 2,
         "isActive": true
@@ -913,8 +831,7 @@
         "displayName": {
           "en-US": "In Progress",
           "en-CA": "In Progress",
-          "fr-CA": "En cours",
-          "it-IT": "In Progress"
+          "fr-CA": "En cours"
         },
         "sortOrder": 3,
         "isActive": true
@@ -924,8 +841,7 @@
         "displayName": {
           "en-US": "Completed",
           "en-CA": "Completed",
-          "fr-CA": "Complété",
-          "it-IT": "Completed"
+          "fr-CA": "Complété"
         },
         "sortOrder": 4,
         "isActive": true
@@ -935,8 +851,7 @@
         "displayName": {
           "en-US": "Excluded",
           "en-CA": "Excluded",
-          "fr-CA": "Exclus",
-          "it-IT": "Excluded"
+          "fr-CA": "Exclus"
         },
         "sortOrder": 5,
         "isActive": true
@@ -946,8 +861,7 @@
         "displayName": {
           "en-US": "Late",
           "en-CA": "Late",
-          "fr-CA": "En retard",
-          "it-IT": "In ritardo"
+          "fr-CA": "En retard"
         },
         "sortOrder": 6,
         "isActive": true
@@ -956,8 +870,7 @@
     "displayName": {
       "en-CA": "Fulfillment Productivity Group",
       "en-US": "Fulfillment Productivity Group",
-      "fr-CA": "Groupe de productivité d'assemblage",
-      "it-IT": "Fulfillment Productivity Group"
+      "fr-CA": "Groupe de productivité d'assemblage"
     },
     "isActive": true
   },
@@ -1292,8 +1205,7 @@
         "displayName": {
           "en-US": "Packing slip",
           "en-CA": "Packing slip",
-          "fr-CA": "Bordereau d'assemblage",
-          "it-IT": "Packing slip"
+          "fr-CA": "Bordereau d'assemblage"
         },
         "sortOrder": 1,
         "isActive": true
@@ -1303,8 +1215,7 @@
         "displayName": {
           "en-US": "Shipping labels",
           "en-CA": "Shipping labels",
-          "fr-CA": "Étiquettes d'expédition",
-          "it-IT": "Shipping labels"
+          "fr-CA": "Étiquettes d'expédition"
         },
         "sortOrder": 2,
         "isActive": true
@@ -1314,8 +1225,7 @@
         "displayName": {
           "en-US": "Return labels",
           "en-CA": "Return labels",
-          "fr-CA": "Étiquettes de retour",
-          "it-IT": "Returning labels"
+          "fr-CA": "Étiquettes de retour"
         },
         "sortOrder": 3,
         "isActive": true
@@ -1324,8 +1234,7 @@
     "displayName": {
       "en-CA": "Carrier Document",
       "en-US": "Carrier Document",
-      "fr-CA": "Document du transporteur",
-      "it-IT": "Carrier Document"
+      "fr-CA": "Document du transporteur"
     },
     "isActive": true
   }
