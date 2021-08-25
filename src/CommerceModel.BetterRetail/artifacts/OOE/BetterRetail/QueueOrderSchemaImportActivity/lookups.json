@@ -1192,7 +1192,7 @@
     "displayName": {
       "en-CA": "Shipment Fulfillment Rejection Reason",
       "en-US": "Shipment Fulfillment Rejection Reason",
-      "fr-CA": "Raison de rejet de traitement d’envoi"
+      "fr-CA": "Raison de rejet de traitement d'envoi"
     },
     "description": "List of rejection reasons presented to Fulfillment Application users as they decline or reject an order shipment.",
     "isActive": false
@@ -1237,5 +1237,40 @@
       "fr-CA": "Document du transporteur"
     },
     "isActive": true
+  },
+  {
+    "lookupName": "OrderHistoryCategory",
+    "values": [
+      {
+        "value": "Carrier booking",
+        "displayName": {
+          "en-US": "Carrier booking",
+          "en-CA": "Carrier booking",
+          "fr-CA": "Réservation du transporteur"
+        },
+        "sortOrder": 1,
+        "isActive": true
+      },
+      {
+        "value": "Offered Shipment Seized",
+        "displayName": {
+          "en-US": "Offered Shipment Seized",
+          "en-CA": "Offered Shipment Seized",
+          "fr-CA": "Offre de l'envoi saisi"
+        },
+        "sortOrder": 2,
+        "isActive": true
+      },
+      {
+        "value": "Shipment Status Change",
+        "displayName": {
+          "en-US": "Shipment Status Change",
+          "en-CA": "Shipment Status Change",
+          "fr-CA": "Modification du statut de l'envoi"
+        },
+        "sortOrder": 3,
+        "isActive": true
+      }
+    ]
   }
 ]
