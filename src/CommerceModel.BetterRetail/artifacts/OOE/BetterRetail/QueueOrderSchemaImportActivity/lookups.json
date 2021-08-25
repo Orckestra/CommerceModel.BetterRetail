@@ -1270,6 +1270,16 @@
         },
         "sortOrder": 3,
         "isActive": true
+      },
+      {
+        "value": "Routing",
+        "displayName": {
+          "en-US": "Routing",
+          "en-CA": "Routing",
+          "fr-CA": "Routage"
+        },
+        "sortOrder": 3,
+        "isActive": true
       }
     ]
   }
