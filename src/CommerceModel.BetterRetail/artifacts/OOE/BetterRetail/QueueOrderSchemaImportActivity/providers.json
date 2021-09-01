@@ -497,11 +497,11 @@
       },
       "MonerisHostname": "esqa.moneris.com",
       "DefaultCulture": "en-CA",
-      "StoreId": "store1",
+      "StoreId": "store3",
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "htZYSB45YO5BMBR",
+      "HostedCardTokenizationProfileId": "ht2Z6Q1CNIOECO2",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -594,7 +594,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht1RRATIA38HFFK",
+      "HostedCardTokenizationProfileId": "ht1QCEDOPMJZ3QN",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -687,7 +687,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht3F4CQ1Y3T1YFP",
+      "HostedCardTokenizationProfileId": "ht2MXFAOQ31FERQ",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -780,7 +780,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht3F4CQ1Y3T1YFP",
+      "HostedCardTokenizationProfileId": "ht2J2QIZZ2ZYYJC",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
