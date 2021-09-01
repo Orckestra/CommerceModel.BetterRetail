@@ -220,18 +220,18 @@
             </InOutArgument>
           </ooopwav:ValidateCustomerActivity.OrderProcessingResultArgument>
         </ooopwav:ValidateCustomerActivity>
-        <ooopwav:ValidateFulfillmentLineItemCountActivity sap2010:WorkflowViewState.IdRef="ValidateFulfillmentLineItemCountActivity_1">
-          <ooopwav:ValidateFulfillmentLineItemCountActivity.OrderProcessingContextArgument>
+        <ooopwav:ValidateLineItemCountActivity sap2010:WorkflowViewState.IdRef="ValidateLineItemCountActivity_1">
+          <ooopwav:ValidateLineItemCountActivity.OrderProcessingContextArgument>
             <InArgument x:TypeArguments="oosop:OrderProcessingContext">
               <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
             </InArgument>
-          </ooopwav:ValidateFulfillmentLineItemCountActivity.OrderProcessingContextArgument>
-          <ooopwav:ValidateFulfillmentLineItemCountActivity.OrderProcessingResultArgument>
+          </ooopwav:ValidateLineItemCountActivity.OrderProcessingContextArgument>
+          <ooopwav:ValidateLineItemCountActivity.OrderProcessingResultArgument>
             <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
               <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
             </InOutArgument>
-          </ooopwav:ValidateFulfillmentLineItemCountActivity.OrderProcessingResultArgument>
-        </ooopwav:ValidateFulfillmentLineItemCountActivity>
+          </ooopwav:ValidateLineItemCountActivity.OrderProcessingResultArgument>
+        </ooopwav:ValidateLineItemCountActivity>
         <ooopwav:ValidateFulfillmentOptionSelectedActivity sap2010:WorkflowViewState.IdRef="ValidateFulfillmentOptionSelectedActivity_1">
           <ooopwav:ValidateFulfillmentOptionSelectedActivity.OrderProcessingContextArgument>
             <InArgument x:TypeArguments="oosop:OrderProcessingContext">
@@ -503,7 +503,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="ValidateCustomerActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="ValidateFulfillmentLineItemCountActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ValidateLineItemCountActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
       <sap2010:ViewStateData Id="ValidateFulfillmentOptionSelectedActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
       <sap2010:ViewStateData Id="ValidateFulfillmentMethodHasChangedWhileFulfillmentStarted_1" sap:VirtualizedContainerService.HintSize="200,22" />
       <sap2010:ViewStateData Id="ValidateFulfillmentShippingActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
