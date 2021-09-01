@@ -323,18 +323,18 @@
         </InOutArgument>
       </ooopwav:ValidateFulfillmentPickUpActivity.OrderProcessingResultArgument>
     </ooopwav:ValidateFulfillmentPickUpActivity>
-    <ooopwav:ValidateFulfillmentLineItemCountActivity sap2010:WorkflowViewState.IdRef="ValidateFulfillmentLineItemCountActivity_2">
-      <ooopwav:ValidateFulfillmentLineItemCountActivity.OrderProcessingContextArgument>
+    <ooopwav:ValidateLineItemCountActivity sap2010:WorkflowViewState.IdRef="ValidateLineItemCountActivity_2">
+      <ooopwav:ValidateLineItemCountActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
           <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
         </InArgument>
-      </ooopwav:ValidateFulfillmentLineItemCountActivity.OrderProcessingContextArgument>
-      <ooopwav:ValidateFulfillmentLineItemCountActivity.OrderProcessingResultArgument>
+      </ooopwav:ValidateLineItemCountActivity.OrderProcessingContextArgument>
+      <ooopwav:ValidateLineItemCountActivity.OrderProcessingResultArgument>
         <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
           <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
         </InOutArgument>
-      </ooopwav:ValidateFulfillmentLineItemCountActivity.OrderProcessingResultArgument>
-    </ooopwav:ValidateFulfillmentLineItemCountActivity>
+      </ooopwav:ValidateLineItemCountActivity.OrderProcessingResultArgument>
+    </ooopwav:ValidateLineItemCountActivity>
     <ooopwav:ValidateFulfilmentTimeActivity sap2010:WorkflowViewState.IdRef="ValidateFulfilmentTimeActivity_1">
       <ooopwav:ValidateFulfilmentTimeActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
@@ -416,7 +416,7 @@
       <sap2010:ViewStateData Id="ValidateCartCouponsEligibilityActivity_1" sap:VirtualizedContainerService.HintSize="421,36" />
       <sap2010:ViewStateData Id="AuthorizePaymentsActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
       <sap2010:ViewStateData Id="ValidateFulfillmentPickUpActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
-      <sap2010:ViewStateData Id="ValidateFulfillmentLineItemCountActivity_2" sap:VirtualizedContainerService.HintSize="421,22" />
+      <sap2010:ViewStateData Id="ValidateLineItemCountActivity_2" sap:VirtualizedContainerService.HintSize="421,22" />
       <sap2010:ViewStateData Id="ValidateFulfilmentTimeActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
       <sap2010:ViewStateData Id="ValidateCartBeforeCheckoutActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
       <sap2010:ViewStateData Id="CreateOrderCustomerSummaryActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
