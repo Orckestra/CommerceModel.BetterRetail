@@ -146,17 +146,6 @@
         "isActive": true
       },
       {
-        "value": "PickupLocationNotFound",
-        "displayName": {
-          "en-US": "The pickup location {PickUpLocationId} was not found for the shipment {ShipmentId} in order {OrderId}.",
-          "en-CA": "The pickup location {PickUpLocationId} was not found for the shipment {ShipmentId} in order {OrderId}.",
-          "fr-CA": "Le point de cueillette {PickUpLocationId} est introuvable pour l'envoi {ShipmentId} de la commande {OrderId}.",
-          "it-IT": "The pickup location {PickUpLocationId} was not found for the shipment {ShipmentId} in order {OrderId}."
-        },
-        "sortOrder": 0,
-        "isActive": true
-      },
-      {
         "value": "FulfillmentLocationDoesNotSupportShipping",
         "displayName": {
           "en-US": "The fulfillment location {FulfillmentLocationId} for the shipment {ShipmentId} in order {OrderId} does not support shipping.",
@@ -196,17 +185,6 @@
           "en-CA": "The  pickup location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}'. The fulfillment location {FulfillmentLocationId} will be used as the pickup location as well.",
           "fr-CA": "Un point de cueillette est manquant pour l'envoi {ShipmentId} de la commande {OrderId} et utilisant la méthode de traitement'{FulfillmentMethodType}'. Le centre de traitement {FulfillmentLocationId} sera donc utilisé comme point de cueillette.",
           "it-IT": "The  pickup location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}'. The fulfillment location {FulfillmentLocationId} will be used as the pickup location as well."
-        },
-        "sortOrder": 0,
-        "isActive": true
-      },
-      {
-        "value": "PickupLocationDoesNotSupportPickup",
-        "displayName": {
-          "en-US": "The pickup location {PickUpLocationId} for the shipment {ShipmentId} in order {OrderId} does not support pickup.",
-          "en-CA": "The pickup location {PickUpLocationId} for the shipment {ShipmentId} in order {OrderId} does not support pickup.",
-          "fr-CA": "Le point de cueillette {PickUpLocationId} pour l'envoi {ShipmentId} de la commande {OrderId} ne supporte pas la cueillette.",
-          "it-IT": "The pickup location {PickUpLocationId} for the shipment {ShipmentId} in order {OrderId} does not support pickup."
         },
         "sortOrder": 0,
         "isActive": true
