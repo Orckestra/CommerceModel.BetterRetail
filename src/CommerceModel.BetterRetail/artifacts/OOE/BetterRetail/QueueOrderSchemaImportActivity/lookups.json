@@ -5,10 +5,10 @@
       {
         "value": "NotReadyToProcess",
         "displayName": {
-          "en-US": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing.",
-          "en-CA": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing.",
-          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} n'est pas prêt pour le traitement.",
-          "it-IT": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing."
+          "en-US": "The shipment {ShipmentId} of the order {OrderNumber} ({OrderId}) is not ready for processing.",
+          "en-CA": "The shipment {ShipmentId} of the order {OrderNumber} ({OrderId}) is not ready for processing.",
+          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) n'est pas prêt pour le traitement.",
+          "it-IT": "The shipment {ShipmentId} of the order {OrderNumber} ({OrderId}) is not ready for processing."
         },
         "sortOrder": 0,
         "isActive": true
@@ -16,10 +16,10 @@
       {
         "value": "NoInventoryReservationsFound",
         "displayName": {
-          "en-US": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. No inventory reservations found.",
-          "en-CA": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. No inventory reservations found.",
-          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} n'est pas prêt pour le traitement. Aucune réservation des stocks n'a été trouvée.",
-          "it-IT": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. No inventory reservations found."
+          "en-US": "The shipment {ShipmentId} of the order {OrderNumber} ({OrderId}) is not ready for processing. No inventory reservations found.",
+          "en-CA": "The shipment {ShipmentId} of the order {OrderNumber} ({OrderId}) is not ready for processing. No inventory reservations found.",
+          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) n'est pas prêt pour le traitement. Aucune réservation des stocks n'a été trouvée.",
+          "it-IT": "The shipment {ShipmentId} of the order {OrderNumber} ({OrderId}) is not ready for processing. No inventory reservations found."
         },
         "sortOrder": 0,
         "isActive": true
