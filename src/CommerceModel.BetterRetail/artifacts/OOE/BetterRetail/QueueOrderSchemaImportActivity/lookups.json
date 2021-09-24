@@ -192,10 +192,10 @@
       {
         "value": "FulfillmentLocationIsMissing",
         "displayName": {
-          "en-US": "The fulfillment location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}' and with store-to-store transfers being disabled. The pickup location {PickUpLocationId} will be used as the fulfillment location as well.",
-          "en-CA": "The fulfillment location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}' and with store-to-store transfers being disabled. The pickup location {PickUpLocationId} will be used as the fulfillment location as well.",
-          "fr-CA": "Le centre de traitement est manquant pour l'envoi {ShipmentId} associé à la commande {OrderId} qui utilise la méthode de traitement'{FulfillmentMethodType}'. Le transfert entre magasins n'est pas disponible. Le point de cueillette {PickUpLocationId} sera donc utilisé comme centre de traitement.",
-          "it-IT": "The fulfillment location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}' and with store-to-store transfers being disabled. The pickup location {PickUpLocationId} will be used as the fulfillment location as well."
+          "en-US": "The  fulfillment location is missing for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) using the fulfillment method type '{FulfillmentMethodType}' and with store transfer disabled. The pickup location {PickUpLocationName} ({PickUpLocationId}) will be used as the fulfillment location as well.",
+          "en-CA": "The  fulfillment location is missing for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) using the fulfillment method type '{FulfillmentMethodType}' and with store transfer disabled. The pickup location {PickUpLocationName} ({PickUpLocationId}) will be used as the fulfillment location as well.",
+          "fr-CA": "Le centre de traitement est manquant pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) et utilisant la méthode de traitement'{FulfillmentMethodType}' et ayant le transfert entre magasins non disponible. Le point de cueillette {PickUpLocationName} ({PickUpLocationId}) sera donc utilisé comme centre de traitement.",
+          "it-IT": "The  fulfillment location is missing for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) using the fulfillment method type '{FulfillmentMethodType}' and with store transfer disabled. The pickup location {PickUpLocationName} ({PickUpLocationId}) will be used as the fulfillment location as well."
         },
         "sortOrder": 0,
         "isActive": true
