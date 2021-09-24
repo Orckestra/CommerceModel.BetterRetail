@@ -181,10 +181,10 @@
       {
         "value": "PickupLocationIsMissing",
         "displayName": {
-          "en-US": "The  pickup location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}'. The fulfillment location {FulfillmentLocationId} will be used as the pickup location as well.",
-          "en-CA": "The  pickup location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}'. The fulfillment location {FulfillmentLocationId} will be used as the pickup location as well.",
-          "fr-CA": "Un point de cueillette est manquant pour l'envoi {ShipmentId} de la commande {OrderId} et utilisant la méthode de traitement'{FulfillmentMethodType}'. Le centre de traitement {FulfillmentLocationId} sera donc utilisé comme point de cueillette.",
-          "it-IT": "The  pickup location is missing for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}'. The fulfillment location {FulfillmentLocationId} will be used as the pickup location as well."
+          "en-US": "The  pickup location is missing for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) using the fulfillment method type '{FulfillmentMethodType}'. The fulfillment location {FulfillmentLocationName} ({FulfillmentLocationId}) will be used as the pickup location as well.",
+          "en-CA": "The  pickup location is missing for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) using the fulfillment method type '{FulfillmentMethodType}'. The fulfillment location {FulfillmentLocationName} ({FulfillmentLocationId}) will be used as the pickup location as well.",
+          "fr-CA": "Un point de cueillette est manquant pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) et utilisant la méthode de traitement'{FulfillmentMethodType}'. Le centre de traitement {FulfillmentLocationName} ({FulfillmentLocationId}) sera donc utilisé comme point de cueillette.",
+          "it-IT": "The  pickup location is missing for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) using the fulfillment method type '{FulfillmentMethodType}'. The fulfillment location {FulfillmentLocationName} ({FulfillmentLocationId}) will be used as the pickup location as well."
         },
         "sortOrder": 0,
         "isActive": true
