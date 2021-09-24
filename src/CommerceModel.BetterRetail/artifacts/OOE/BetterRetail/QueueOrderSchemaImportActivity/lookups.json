@@ -159,10 +159,10 @@
       {
         "value": "FulfillmentProviderDoesNotSupportPickupLocationId",
         "displayName": {
-          "en-US": "The fulfillment provider {FulfillmentProvider} for the shipment {ShipmentId} in order {OrderId} does not support a pickup location and will therefore be ignored.",
-          "en-CA": "The fulfillment provider {FulfillmentProvider} for the shipment {ShipmentId} in order {OrderId} does not support a pickup location and will therefore be ignored.",
-          "fr-CA": "Le provider de traitement {FulfillmentProvider} pour l'envoi {ShipmentId} de la commande {OrderId} ne supporte pas la cueillette en magasin et sera en conséquence ignorée.",
-          "it-IT": "The fulfillment provider {FulfillmentProvider} for the shipment {ShipmentId} in order {OrderId} does not support a pickup location and will therefore be ignored."
+          "en-US": "The fulfillment provider {FulfillmentProvider} for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) does not support a pickup location and will therefore be ignored.",
+          "en-CA": "The fulfillment provider {FulfillmentProvider} for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) does not support a pickup location and will therefore be ignored.",
+          "fr-CA": "Le provider de traitement {FulfillmentProvider} pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) ne supporte pas la cueillette en magasin et sera en conséquence ignorée.",
+          "it-IT": "The fulfillment provider {FulfillmentProvider} for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) does not support a pickup location and will therefore be ignored."
         },
         "sortOrder": 0,
         "isActive": true
@@ -170,10 +170,10 @@
       {
         "value": "PickupOrFulfillmentLocationRequired",
         "displayName": {
-          "en-US": "Either a pickup location or a fulfillment location is required for the shipment {ShipmentId} in order {OrderId} when using the fulfillment method type '{FulfillmentMethodType}'.",
-          "en-CA": "Either a pickup location or a fulfillment location is required for the shipment {ShipmentId} in order {OrderId} when using the fulfillment method type '{FulfillmentMethodType}'.",
-          "fr-CA": "Un point de cueillette ou un centre de traitement est requis pour l'envoi {ShipmentId} de la commande {OrderId} lorsque la méthode de traitement'{FulfillmentMethodType}' est sélectionnée.",
-          "it-IT": "Either a pickup location or a fulfillment location is required for the shipment {ShipmentId} in order {OrderId} when using the fulfillment method type '{FulfillmentMethodType}'."
+          "en-US": "Either a pickup location or a fulfillment location is required for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) when using the fulfillment method type '{FulfillmentMethodType}'.",
+          "en-CA": "Either a pickup location or a fulfillment location is required for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) when using the fulfillment method type '{FulfillmentMethodType}'.",
+          "fr-CA": "Un point de cueillette ou un centre de traitement est requis pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) lorsque la méthode de traitement'{FulfillmentMethodType}' est sélectionnée.",
+          "it-IT": "Either a pickup location or a fulfillment location is required for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) when using the fulfillment method type '{FulfillmentMethodType}'."
         },
         "sortOrder": 0,
         "isActive": true
