@@ -137,10 +137,10 @@
       {
         "value": "FulfillmentLocationNotFound",
         "displayName": {
-          "en-US": "The fulfillment location {FulfillmentLocationId} was not found for the shipment {ShipmentId} in order {OrderId}.",
-          "en-CA": "The fulfillment location {FulfillmentLocationId} was not found for the shipment {ShipmentId} in order {OrderId}.",
-          "fr-CA": "Le centre de traitement {FulfillmentLocationId} est introuvable pour l'envoi {ShipmentId} de la commande {OrderId}.",
-          "it-IT": "The fulfillment location {FulfillmentLocationId} was not found for the shipment {ShipmentId} in order {OrderId}."
+          "en-US": "The fulfillment location {FulfillmentLocationId} was not found for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}).",
+          "en-CA": "The fulfillment location {FulfillmentLocationId} was not found for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}).",
+          "fr-CA": "Le centre de traitement {FulfillmentLocationId} est introuvable pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}).",
+          "it-IT": "The fulfillment location {FulfillmentLocationId} was not found for the shipment {ShipmentId} in order {OrderNumber} ({OrderId})."
         },
         "sortOrder": 0,
         "isActive": true
@@ -148,10 +148,10 @@
       {
         "value": "FulfillmentLocationDoesNotSupportShipping",
         "displayName": {
-          "en-US": "The fulfillment location {FulfillmentLocationId} for the shipment {ShipmentId} in order {OrderId} does not support shipping.",
-          "en-CA": "The fulfillment location {FulfillmentLocationId} for the shipment {ShipmentId} in order {OrderId} does not support shipping.",
-          "fr-CA": "Le centre de traitement {FulfillmentLocationId} pour l'envoi {ShipmentId} de la commande {OrderId} ne supporte pas l'expédition.",
-          "it-IT": "The fulfillment location {FulfillmentLocationId} for the shipment {ShipmentId} in order {OrderId} does not support shipping."
+          "en-US": "The fulfillment location {FulfillmentLocationName} ({FulfillmentLocationId}) for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) does not support shipping.",
+          "en-CA": "The fulfillment location {FulfillmentLocationName} ({FulfillmentLocationId}) for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) does not support shipping.",
+          "fr-CA": "Le centre de traitement {FulfillmentLocationName} ({FulfillmentLocationId}) pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) ne supporte pas l'expédition.",
+          "it-IT": "The fulfillment location {FulfillmentLocationName} ({FulfillmentLocationId}) for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) does not support shipping."
         },
         "sortOrder": 0,
         "isActive": true
