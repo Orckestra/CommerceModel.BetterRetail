@@ -34,9 +34,9 @@
       {
         "value": "ShipmentTotalNotCovered",
         "displayName": {
-          "en-US": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. The authorized or paid payment amount is not enough to cover the shipment total.",
-          "en-CA": "The shipment {ShipmentId} of the order {OrderId} is not ready for processing. The authorized or paid payment amount is not enough to cover the shipment total.",
-          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} n'est pas prêt pour le traitement. Le paiement autorisé ou approuvé est inférieur au montant total de l'envoi."
+          "en-US": "The shipment {ShipmentId} of the order {OrderNumber} ({OrderId}) is not ready for processing. The authorized or paid payment amount is not enough to cover the shipment total.",
+          "en-CA": "The shipment {ShipmentId} of the order {OrderNumber} ({OrderId}) is not ready for processing. The authorized or paid payment amount is not enough to cover the shipment total.",
+          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) n'est pas prêt pour le traitement. Le paiement autorisé ou approuvé est inférieur au montant total de l'envoi."
         },
         "sortOrder": 0,
         "isActive": true
@@ -44,9 +44,9 @@
       {
         "value": "CannotFindFulfillmentLocation",
         "displayName": {
-          "en-US": "Pick-up location {FulfillmentLocationId} not found for shipment {ShipmentId} in order {OrderId}.",
-          "en-CA": "Pick-up location {FulfillmentLocationId} not found for shipment {ShipmentId} in order {OrderId}.",
-          "fr-CA": "Le point de cueillette {FulfillmentLocationId} est introuvable pour l'envoi {ShipmentId} de la commande {OrderId}."
+          "en-US": "Pick-up location {FulfillmentLocationId} not found for shipment {ShipmentId} in order {OrderNumber} ({OrderId}).",
+          "en-CA": "Pick-up location {FulfillmentLocationId} not found for shipment {ShipmentId} in order {OrderNumber} ({OrderId}).",
+          "fr-CA": "Le point de cueillette {FulfillmentLocationId} est introuvable pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId})."
         },
         "sortOrder": 0,
         "isActive": true
@@ -184,9 +184,9 @@
       {
         "value": "FulfillmentLocationDifferentThanPickupLocation",
         "displayName": {
-          "en-US": "The fulfillment location for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}' is different from the pickup location {PickUpLocationId} with store-to-store transfers being disabled.",
-          "en-CA": "The fulfillment location for the shipment {ShipmentId} in order {OrderId} using the fulfillment method type '{FulfillmentMethodType}' is different from the pickup location {PickUpLocationId} with store-to-store transfers being disabled.",
-          "fr-CA": "Le centre de traitement pour l'envoi {ShipmentId} associé à la commande {OrderId} qui utilise la méthode de traitement'{FulfillmentMethodType}' est différent du point de cueillette {PickUpLocationId}. Le transfert entre magasins n'est pas disponible."
+          "en-US": "The fulfillment location for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) using the fulfillment method type '{FulfillmentMethodType}' is different from the pickup location {PickUpLocationName} ({PickUpLocationId}) with store-to-store transfers being disabled.",
+          "en-CA": "The fulfillment location for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) using the fulfillment method type '{FulfillmentMethodType}' is different from the pickup location {PickUpLocationName} ({PickUpLocationId}) with store-to-store transfers being disabled.",
+          "fr-CA": "Le centre de traitement pour l'envoi {ShipmentId} associé à la commande {OrderNumber} ({OrderId}) qui utilise la méthode de traitement'{FulfillmentMethodType}' est différent du point de cueillette {PickUpLocationName} ({PickUpLocationId}). Le transfert entre magasins n'est pas disponible."
         },
         "sortOrder": 0,
         "isActive": true
@@ -194,9 +194,9 @@
       {
         "value": "BookingNotRequested",
         "displayName": {
-          "en-US": "Shipment '{ShipmentId}' in order '{OrderId}' does not require booking.  Both Outbound and Return flags are false.",
-          "en-CA": "Shipment '{ShipmentId}' in order '{OrderId}' does not require booking.  Both Outbound and Return flags are false.",
-          "fr-CA": "L'envoi '{ShipmentId}' de la commande '{OrderId}' ne requiert pas de réservation avec le transporteur. Les indicateurs de sortie et de retour sont inactifs."
+          "en-US": "Shipment '{ShipmentId}' in order '{OrderNumber} ({OrderId})' does not require booking.  Both Outbound and Return flags are false.",
+          "en-CA": "Shipment '{ShipmentId}' in order '{OrderNumber} ({OrderId})' does not require booking.  Both Outbound and Return flags are false.",
+          "fr-CA": "L'envoi '{ShipmentId}' de la commande '{OrderNumber} ({OrderId})' ne requiert pas de réservation avec le transporteur. Les indicateurs de sortie et de retour sont inactifs."
         },
         "sortOrder": 0,
         "isActive": true
@@ -204,9 +204,9 @@
       {
         "value": "FulfillmentLocationNotSet",
         "displayName": {
-          "en-US": "Shipment '{ShipmentId}' in order '{OrderId}' has no fulfillment location configured.",
-          "en-CA": "Shipment '{ShipmentId}' in order '{OrderId}' has no fulfillment location configured.",
-          "fr-CA": "L'envoi '{ShipmentId}' de la commande '{OrderId}' n'a pas centre de traitement configuré."
+          "en-US": "Shipment '{ShipmentId}' in order '{OrderNumber} ({OrderId})' has no fulfillment location configured.",
+          "en-CA": "Shipment '{ShipmentId}' in order '{OrderNumber} ({OrderId})' has no fulfillment location configured.",
+          "fr-CA": "L'envoi '{ShipmentId}' de la commande '{OrderNumber} ({OrderId})' n'a pas centre de traitement configuré."
         },
         "sortOrder": 0,
         "isActive": true
@@ -214,9 +214,9 @@
       {
         "value": "FulfillmentLocationHasNoAddresses",
         "displayName": {
-          "en-US": "The fulfillment location '{FulfillmentLocationId}' in shipment '{ShipmentId}' in order '{OrderId}' has no address.",
-          "en-CA": "The fulfillment location '{FulfillmentLocationId}' in shipment '{ShipmentId}' in order '{OrderId}' has no address.",
-          "fr-CA": "Le centre de traitement '{FulfillmentLocationId}' pour l'envoi {ShipmentId} de la commande {OrderId} n'a aucune adresse."
+          "en-US": "The fulfillment location '{FulfillmentLocationName} ({FulfillmentLocationId})' in shipment '{ShipmentId}' in order '{OrderNumber} ({OrderId})' has no address.",
+          "en-CA": "The fulfillment location '{FulfillmentLocationName} ({FulfillmentLocationId})' in shipment '{ShipmentId}' in order '{OrderNumber} ({OrderId})' has no address.",
+          "fr-CA": "Le centre de traitement '{FulfillmentLocationName} ({FulfillmentLocationId})' pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) n'a aucune adresse."
         },
         "sortOrder": 0,
         "isActive": true
@@ -224,9 +224,9 @@
       {
         "value": "ShipmentHasNoPackages",
         "displayName": {
-          "en-US": "Shipment '{ShipmentId}' in order '{OrderId}' does not contain packages.",
-          "en-CA": "Shipment '{ShipmentId}' in order '{OrderId}' does not contain packages.",
-          "fr-CA": "L'envoi '{ShipmentId}' de la commande '{OrderId}' ne contient pas de colis."
+          "en-US": "Shipment '{ShipmentId}' in order '{OrderNumber} ({OrderId})' does not contain packages.",
+          "en-CA": "Shipment '{ShipmentId}' in order '{OrderNumber} ({OrderId})' does not contain packages.",
+          "fr-CA": "L'envoi '{ShipmentId}' de la commande '{OrderNumber} ({OrderId})' ne contient pas de colis."
         },
         "sortOrder": 0,
         "isActive": true
@@ -234,9 +234,9 @@
       {
         "value": "CannotBookOutboundPackage",
         "displayName": {
-          "en-US": "Cannot book outbound packages for shipment '{ShipmentId}' in order '{OrderId}'. See order history for more details.",
-          "en-CA": "Cannot book outbound packages for shipment '{ShipmentId}' in order '{OrderId}'. See order history for more details.",
-          "fr-CA": "Impossible de planifier le transport des colis pour l'envoi '{ShipmentId}' de la commande '{OrderId}'. Veuillez consulter l'historique de la commande pour plus de détails."
+          "en-US": "Cannot book outbound packages for shipment '{ShipmentId}' in order '{OrderNumber} ({OrderId})'. See order history for more details.",
+          "en-CA": "Cannot book outbound packages for shipment '{ShipmentId}' in order '{OrderNumber} ({OrderId})'. See order history for more details.",
+          "fr-CA": "Impossible de planifier le transport des colis pour l'envoi '{ShipmentId}' de la commande '{OrderNumber} ({OrderId})'. Veuillez consulter l'historique de la commande pour plus de détails."
         },
         "sortOrder": 0,
         "isActive": true
@@ -244,9 +244,9 @@
       {
         "value": "CannotBookReturnPackage",
         "displayName": {
-          "en-US": "Cannot book return packages for shipment '{ShipmentId}' in order '{OrderId}'. See order history for more details.",
-          "en-CA": "Cannot book return packages for shipment '{ShipmentId}' in order '{OrderId}'. See order history for more details.",
-          "fr-CA": "Impossible de planifier le retour des colis pour l'envoi '{ShipmentId}' de la commande '{OrderId}'. Veuillez consulter l'historique de la commande pour plus de détails."
+          "en-US": "Cannot book return packages for shipment '{ShipmentId}' in order '{OrderNumber} ({OrderId})'. See order history for more details.",
+          "en-CA": "Cannot book return packages for shipment '{ShipmentId}' in order '{OrderNumber} ({OrderId})'. See order history for more details.",
+          "fr-CA": "Impossible de planifier le retour des colis pour l'envoi '{ShipmentId}' de la commande '{OrderNumber} ({OrderId})'. Veuillez consulter l'historique de la commande pour plus de détails."
         },
         "sortOrder": 0,
         "isActive": true
