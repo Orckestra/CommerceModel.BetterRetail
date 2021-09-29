@@ -114,9 +114,9 @@
       {
         "value": "IncompatibleFulfillmentMethodType",
         "displayName": {
-          "en-US": "The shipment {ShipmentId} in order {OrderId} has an incompatible fulfillment method type '{FulfillmentMethodType}' for the selected provider '{FulfillmentProvider}'.",
-          "en-CA": "The shipment {ShipmentId} in order {OrderId} has an incompatible fulfillment method type '{FulfillmentMethodType}' for the selected provider '{FulfillmentProvider}'.",
-          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderId} est configuré avec une méthode de traitement'{FulfillmentMethodType}' incompatible pour le provider sélectionné '{FulfillmentProvider}'."
+          "en-US": "The shipment {ShipmentId} in order {OrderNumber} ({OrderId}) has an incompatible fulfillment method type '{FulfillmentMethodType}' for the selected provider '{FulfillmentProvider}'.",
+          "en-CA": "The shipment {ShipmentId} in order {OrderNumber} ({OrderId}) has an incompatible fulfillment method type '{FulfillmentMethodType}' for the selected provider '{FulfillmentProvider}'.",
+          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) est configuré avec une méthode de traitement'{FulfillmentMethodType}' incompatible pour le provider sélectionné '{FulfillmentProvider}'."
         },
         "sortOrder": 0,
         "isActive": true
