@@ -72,8 +72,7 @@ $ErrorActionPreference = 'Stop'
 function UpdateNugetConfigFromFeeds {
     if ($ExtraProperties -and $ExtraProperties.NugetFeeds) {
         $nugetFiles = @(
-            (Join-Path $PSScriptRoot "..\nuget.config"),
-            (Join-Path $PSScriptRoot "nuget.config")
+            (Join-Path $PSScriptRoot "..\nuget.config")
         )
         
         foreach ($nugetFile in $nugetFiles) {
