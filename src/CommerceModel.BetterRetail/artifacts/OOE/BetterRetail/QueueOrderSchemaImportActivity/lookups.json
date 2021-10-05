@@ -28,6 +28,7 @@
           "en-US": "The shipment {ShipmentId} of the order {OrderNumber} ({OrderId}) is not ready for processing. Some line items are not in stock or have no planned or confirmed inventory reservations.",
           "en-CA": "The shipment {ShipmentId} of the order {OrderNumber} ({OrderId}) is not ready for processing. Some line items are not in stock or have no planned or confirmed inventory reservations.",
           "fr-CA": "L'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) n'est pas prêt pour le traitement. Certains articles ne sont pas en stock ou n'ont aucune réservation de stocks planifiée ou confirmée.",
+        },
         "sortOrder": 0,
         "isActive": true
       },
