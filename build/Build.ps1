@@ -56,6 +56,10 @@ param(
     [Parameter(Position = 4, ParameterSetName = 'execute')]
     $ExtraProperties,
 
+    # Can be used to pass the reason of the build. This is used to avoid publishing Nuget packages for PullRequest builds
+    [Parameter(Position = 5, ParameterSetName = 'execute')]
+    $BuildReason,
+
     # Use this switch to list the available tasks that can be provided to 'TaskList'.
     [Parameter(ParameterSetName = 'doc')]
     [switch]$Docs
@@ -68,8 +72,7 @@ $ErrorActionPreference = 'Stop'
 function UpdateNugetConfigFromFeeds {
     if ($ExtraProperties -and $ExtraProperties.NugetFeeds) {
         $nugetFiles = @(
-            (Join-Path $PSScriptRoot "..\nuget.config"),
-            (Join-Path $PSScriptRoot "nuget.config")
+            (Join-Path $PSScriptRoot "..\nuget.config")
         )
         
         foreach ($nugetFile in $nugetFiles) {
@@ -160,7 +163,8 @@ The hierarchy of the tasks is also displayed.
         $psakeProperties = @{
             Configuration           = $Configuration; 
             IsRunningOnBuildMachine = $IsRunningOnBuildMachine; 
-            MsbuildVerbosity        = $MsbuildVerbosity
+            MsbuildVerbosity        = $MsbuildVerbosity;
+            BuildReason             = $BuildReason
         }   
 
         foreach ($key in $ExtraProperties.Keys) {
