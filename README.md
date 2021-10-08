@@ -14,7 +14,7 @@ You also need PowerShell 5.1 to execute the build script. The build script it no
 
 ### Building
 
-> For security reasons, credentials cannot be stored in nuget.config. Instead they are stored in an environment variable called `OrckestraAzureArtifactsPassword`. You will be prompted for its value the first time the build script is executed and you may need to update its value manually should it be modified. You can ask your Orckestra support person for a the value if you do not already have it.
+> For security reasons, credentials cannot be stored in nuget.config. Instead they are stored in an environment variable called `OrckestraAzureArtifactsPassword`. You will be prompted for its value the first time the build script is executed and you may need to update its value manually should it be modified. You can ask your Orckestra Support Specialist for a the value if you do not already have it.
 
 You can build the project by opening a PowerShell window in the `build` folder and executing this:
 
