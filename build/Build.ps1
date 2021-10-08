@@ -69,24 +69,17 @@ param(
 $ErrorActionPreference = 'Stop'
 
 
-function UpdateNugetConfigFromFeeds {
-    # if ($ExtraProperties -and $ExtraProperties.NugetFeeds) {
-    #     $nugetFiles = @(
-    #         (Join-Path $PSScriptRoot "..\nuget.config")
-    #     )
+function ConfigureNugetAuthentication {
+    if ($ExtraProperties -and $ExtraProperties.NugetFeeds) {
+        $patToken = $ExtraProperties.NugetFeeds["Release"].password
         
-    #     foreach ($nugetFile in $nugetFiles) {
-    #         $xmlContent = [xml] (Get-Content -Path $nugetFile -Raw)
+        if (-not $patToken) {
+            throw "NugetFeeds variable group is empty or does not contain password"
+        }
 
-    #         $passwordNodes = $xmlContent.SelectNodes("//add[@key='ClearTextPassword']")
-
-    #         foreach ($passwordNode in $passwordNodes) {
-    #             $passwordNode.SetAttribute("value", $ExtraProperties.NugetFeeds["Release"].password) # assume that we have the same PAT for every feed
-    #         }
-
-    #         $xmlContent.Save($nugetFile)
-    #     }
-    # }
+        [Environment]::SetEnvironmentVariable('OrckestraAzureArtifactsPassword', $patToken, [System.EnvironmentVariableTarget]::User)
+        $env:OrckestraAzureArtifactsPassword = $patToken
+    }
 }
 
 $originalPsModulePath = $env:PSModulePath
@@ -176,7 +169,7 @@ The hierarchy of the tasks is also displayed.
             Write-Output $psakeProperties
         }
 
-        UpdateNugetConfigFromFeeds # workaround until we figure out how to handle PAT in a public repo
+        ConfigureNugetAuthentication
 
         Invoke-psake $psakeScript -properties $psakeProperties -taskLis $TaskList -nologo -Verbose:$verboseEnabled
 
