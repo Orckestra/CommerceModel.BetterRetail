@@ -14,8 +14,7 @@ You also need PowerShell 5.1 to execute the build script. The build script it no
 
 ### Building
 
-> [!CAUTION]
-> Known issue: We have an issue with the PAT (personal access token) used in the nuget.config files. For security reasons you have to update the PAT in the nuget files before executing a build. Do not commit a new PAT value in the repo!
+> For security reasons, credentials cannot be stored in nuget.config. Instead they are stored in an environment variable called `OrckestraAzureArtifactsPassword`. You will be prompted for its value the first time the build script is executed and you may need to update its value manually should it be modified. You can ask your Orckestra support person for a the value if you do not already have it.
 
 You can build the project by opening a PowerShell window in the `build` folder and executing this:
 

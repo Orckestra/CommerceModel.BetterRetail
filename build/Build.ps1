@@ -70,23 +70,23 @@ $ErrorActionPreference = 'Stop'
 
 
 function UpdateNugetConfigFromFeeds {
-    if ($ExtraProperties -and $ExtraProperties.NugetFeeds) {
-        $nugetFiles = @(
-            (Join-Path $PSScriptRoot "..\nuget.config")
-        )
+    # if ($ExtraProperties -and $ExtraProperties.NugetFeeds) {
+    #     $nugetFiles = @(
+    #         (Join-Path $PSScriptRoot "..\nuget.config")
+    #     )
         
-        foreach ($nugetFile in $nugetFiles) {
-            $xmlContent = [xml] (Get-Content -Path $nugetFile -Raw)
+    #     foreach ($nugetFile in $nugetFiles) {
+    #         $xmlContent = [xml] (Get-Content -Path $nugetFile -Raw)
 
-            $passwordNodes = $xmlContent.SelectNodes("//add[@key='ClearTextPassword']")
+    #         $passwordNodes = $xmlContent.SelectNodes("//add[@key='ClearTextPassword']")
 
-            foreach ($passwordNode in $passwordNodes) {
-                $passwordNode.SetAttribute("value", $ExtraProperties.NugetFeeds["Release"].password) # assume that we have the same PAT for every feed
-            }
+    #         foreach ($passwordNode in $passwordNodes) {
+    #             $passwordNode.SetAttribute("value", $ExtraProperties.NugetFeeds["Release"].password) # assume that we have the same PAT for every feed
+    #         }
 
-            $xmlContent.Save($nugetFile)
-        }
-    }
+    #         $xmlContent.Save($nugetFile)
+    #     }
+    # }
 }
 
 $originalPsModulePath = $env:PSModulePath
