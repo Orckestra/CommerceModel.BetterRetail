@@ -45,6 +45,7 @@ properties {
     $NugetVerbosity = 'quiet'   # Can be: normal, quiet, detailed
     $NugetFeeds = $null     # Will be set only when running on build machine.
     $SensitiveData = $null
+    $BuildReason = $null
 }
 
 
@@ -71,7 +72,7 @@ Task All          -depends Clean,
 Task Clean        -depends CleanPackages,
                            CleanSolutions,
                            CleanArtifacts `
-                  -precondition { $IsRunningOnBuildMachine -eq $false }   # No need to clean on build machine since we always start from a brand new workspace.
+    -precondition { $IsRunningOnBuildMachine -eq $false }   # No need to clean on build machine since we always start from a brand new workspace.
 
 Task Compile      -depends RestorePackages,
                            ReplaceSensitiveData,
@@ -99,6 +100,30 @@ FormatTaskName {
     param($taskName)
     "[$(Get-Date -f 'yyyy-MM-dd HH:mm:ss')] $taskName"
 }
+
+# This function configure Nuget authentication
+function ConfigureNugetAuthentication {
+    $patToken = $env:OrckestraAzureArtifactsPassword
+
+    if (-not $patToken) {
+        if ($IsRunningOnBuildMachine) {
+            throw "Nuget authentication environment variable has not been defined."
+        }
+
+        while (-not $patToken) {
+            $patToken = Read-Host -Prompt 'Input the Nuget authentication token'
+        }
+
+        Write-Host "Saving Nuget authentication to environment variable OrckestraAzureArtifactsPassword" -ForegroundColor Blue
+        [Environment]::SetEnvironmentVariable('OrckestraAzureArtifactsPassword', $patToken, [System.EnvironmentVariableTarget]::User)
+        $env:OrckestraAzureArtifactsPassword = $patToken
+    }
+    else {
+        Write-Host "Using Nuget authentication value stored in environment variable OrckestraAzureArtifactsPassword." -ForegroundColor Blue
+    }
+}
+
+ConfigureNugetAuthentication
 
 # Since we don't stop psake when test fails, we need a flag that will track how many 
 # tests fail.
@@ -161,8 +186,8 @@ Task CleanArtifacts {
 
 Task RestorePackages {
     $toRestore = ("$WorkspaceRoot\Build\packages.bootstrap.config",
-                  "$WorkspaceRoot\Build\packages.config",
-                  (Get-AllSolutions))
+        "$WorkspaceRoot\Build\packages.config",
+        (Get-AllSolutions))
 
     $toRestore | Invoke-NugetRestore -NugetVerbosity $NugetVerbosity -VisualStudioVersion $VisualStudioVersion
 
@@ -244,14 +269,20 @@ Task UndoSensitiveData {
 }
 
 Task PublishPackages {
-    # this tasks depends on the variable BuildStability set by DetectBuildStability
+    # This task depends on:
+    # - variable BuildStability set by DetectBuildStability
+
+    if ($BuildReason -eq "PullRequest") {
+        Write-Host "PullRequest build detected. Skipping Nuget publishing."
+        return
+    }
 
     if ($NugetFeeds) {
         if ($NugetFeeds.Contains($BuildStability.nuget)) {
             $NugetFeed = $NugetFeeds[$BuildStability.nuget].url
             $NugetUser = $NugetFeeds[$BuildStability.nuget].username
             $NugetPassword = $NugetFeeds[$BuildStability.nuget].password
-
+    
             if ($NugetUser -and $NugetPassword -and $NugetFeed) {
                 # Only publish packages in build jobs that have the nuget 
                 # publishing information. 
@@ -271,7 +302,7 @@ Task PublishPackages {
     }
     else {
         Write-Host "Nuget feeds was not provided. Skipping publishing of Nuget packages"
-    }  
+    }
 }
 
 Task PublishArtifacts {

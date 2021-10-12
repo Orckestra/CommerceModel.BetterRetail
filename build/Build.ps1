@@ -56,6 +56,10 @@ param(
     [Parameter(Position = 4, ParameterSetName = 'execute')]
     $ExtraProperties,
 
+    # Can be used to pass the reason of the build. This is used to avoid publishing Nuget packages for PullRequest builds
+    [Parameter(Position = 5, ParameterSetName = 'execute')]
+    $BuildReason,
+
     # Use this switch to list the available tasks that can be provided to 'TaskList'.
     [Parameter(ParameterSetName = 'doc')]
     [switch]$Docs
@@ -65,24 +69,16 @@ param(
 $ErrorActionPreference = 'Stop'
 
 
-function UpdateNugetConfigFromFeeds {
+function ConfigureNugetAuthentication {
     if ($ExtraProperties -and $ExtraProperties.NugetFeeds) {
-        $nugetFiles = @(
-            (Join-Path $PSScriptRoot "..\nuget.config"),
-            (Join-Path $PSScriptRoot "nuget.config")
-        )
+        $patToken = $ExtraProperties.NugetFeeds["Release"].password
         
-        foreach ($nugetFile in $nugetFiles) {
-            $xmlContent = [xml] (Get-Content -Path $nugetFile -Raw)
-
-            $passwordNodes = $xmlContent.SelectNodes("//add[@key='ClearTextPassword']")
-
-            foreach ($passwordNode in $passwordNodes) {
-                $passwordNode.SetAttribute("value", $ExtraProperties.NugetFeeds["Release"].password) # assume that we have the same PAT for every feed
-            }
-
-            $xmlContent.Save($nugetFile)
+        if (-not $patToken) {
+            throw "NugetFeeds variable group is empty or does not contain password"
         }
+
+        [Environment]::SetEnvironmentVariable('OrckestraAzureArtifactsPassword', $patToken, [System.EnvironmentVariableTarget]::User)
+        $env:OrckestraAzureArtifactsPassword = $patToken
     }
 }
 
@@ -160,7 +156,8 @@ The hierarchy of the tasks is also displayed.
         $psakeProperties = @{
             Configuration           = $Configuration; 
             IsRunningOnBuildMachine = $IsRunningOnBuildMachine; 
-            MsbuildVerbosity        = $MsbuildVerbosity
+            MsbuildVerbosity        = $MsbuildVerbosity;
+            BuildReason             = $BuildReason
         }   
 
         foreach ($key in $ExtraProperties.Keys) {
@@ -172,7 +169,7 @@ The hierarchy of the tasks is also displayed.
             Write-Output $psakeProperties
         }
 
-        UpdateNugetConfigFromFeeds # workaround until we figure out how to handle PAT in a public repo
+        ConfigureNugetAuthentication
 
         Invoke-psake $psakeScript -properties $psakeProperties -taskLis $TaskList -nologo -Verbose:$verboseEnabled
 
