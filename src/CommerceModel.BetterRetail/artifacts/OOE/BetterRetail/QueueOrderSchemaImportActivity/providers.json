@@ -7,8 +7,7 @@
     "displayName": {
       "en-US": "Transsmart carrier provider",
       "en-CA": "Transsmart carrier provider",
-      "fr-CA": "Fournisseur de transport Transsmart",
-      "it-IT": "Transsmart carrier provider"
+      "fr-CA": "Fournisseur de transport Transsmart"
     },
     "implementationTypeName": "TranssmartFulfillmentCarrierProvider",
     "description": "Transsmart allows you to easily connect your webshop, ERP and WMS to all your carriers! Control and optimize your shipment handling and transport costs from order entry until delivery. Connect your logistics services to your checkout and ERP/WMS with standard plugins.",
@@ -77,8 +76,7 @@
     "displayName": {
       "en-US": "Shippo carrier provider",
       "en-CA": "Shippo carrier provider",
-      "fr-CA": "Fournisseur de transport Shippo",
-      "it-IT": "Shippo carrier provider"
+      "fr-CA": "Fournisseur de transport Shippo"
     },
     "implementationTypeName": "ShippoFulfillmentCarrierProvider",
     "description": "Shippo helps you focus on growing your business. Start by connecting your e-commerce platform to Shippo to automatically sync order information. Then, create all shipping labels and docs you may need for domestic and international orders.",
@@ -421,8 +419,7 @@
     "displayName": {
       "en-US": "Moneris Canada Payment Provider",
       "en-CA": "Moneris Canada Payment Provider",
-      "fr-CA": "Moneris Canada Payment Provider",
-      "it-IT": "Moneris Canada Payment Provider"
+      "fr-CA": "Moneris Canada Payment Provider"
     },
     "isActive": false,
     "values": {
@@ -500,11 +497,11 @@
       },
       "MonerisHostname": "esqa.moneris.com",
       "DefaultCulture": "en-CA",
-      "StoreId": "store1",
+      "StoreId": "store5",
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "htZYSB45YO5BMBR",
+      "HostedCardTokenizationProfileId": "ht2ERD9HJ4VNEZI",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -597,7 +594,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht1RRATIA38HFFK",
+      "HostedCardTokenizationProfileId": "ht1QCEDOPMJZ3QN",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -690,7 +687,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht3F4CQ1Y3T1YFP",
+      "HostedCardTokenizationProfileId": "ht2MXFAOQ31FERQ",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -783,7 +780,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht3YVHZQ8833XCJ",
+      "HostedCardTokenizationProfileId": "ht2J2QIZZ2ZYYJC",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -796,8 +793,7 @@
     "displayName": {
       "en-US": "Transsmart carrier provider",
       "en-CA": "Transsmart carrier provider",
-      "fr-CA": "Fournisseur de transport Transsmart",
-      "it-IT": "Transsmart carrier provider"
+      "fr-CA": "Fournisseur de transport Transsmart"
     },
     "implementationTypeName": "TranssmartFulfillmentCarrierProvider",
     "description": "Transsmart allows you to easily connect your webshop, ERP and WMS to all your carriers! Control and optimize your shipment handling and transport costs from order entry until delivery. Connect your logistics services to your checkout and ERP/WMS with standard plugins.",
@@ -866,8 +862,7 @@
     "displayName": {
       "en-US": "Shippo carrier provider",
       "en-CA": "Shippo carrier provider",
-      "fr-CA": "Fournisseur de transport Shippo",
-      "it-IT": "Shippo carrier provider"
+      "fr-CA": "Fournisseur de transport Shippo"
     },
     "implementationTypeName": "ShippoFulfillmentCarrierProvider",
     "description": "Shippo helps you focus on growing your business. Start by connecting your e-commerce platform to Shippo to automatically sync order information. Then, create all shipping labels and docs you may need for domestic and international orders.",
@@ -1218,8 +1213,7 @@
     "displayName": {
       "en-US": "Moneris Canada Payment Provider",
       "en-CA": "Moneris Canada Payment Provider",
-      "fr-CA": "Moneris Canada Payment Provider",
-      "it-IT": "Moneris Canada Payment Provider"
+      "fr-CA": "Moneris Canada Payment Provider"
     },
     "isActive": true,
     "values": {
@@ -1314,8 +1308,7 @@
     "displayName": {
       "en-US": "Transsmart carrier provider",
       "en-CA": "Transsmart carrier provider",
-      "fr-CA": "Fournisseur de transport Transsmart",
-      "it-IT": "Transsmart carrier provider"
+      "fr-CA": "Fournisseur de transport Transsmart"
     },
     "implementationTypeName": "TranssmartFulfillmentCarrierProvider",
     "description": "Transsmart allows you to easily connect your webshop, ERP and WMS to all your carriers! Control and optimize your shipment handling and transport costs from order entry until delivery. Connect your logistics services to your checkout and ERP/WMS with standard plugins.",
@@ -1384,8 +1377,7 @@
     "displayName": {
       "en-US": "Shippo carrier provider",
       "en-CA": "Shippo carrier provider",
-      "fr-CA": "Fournisseur de transport Shippo",
-      "it-IT": "Shippo carrier provider"
+      "fr-CA": "Fournisseur de transport Shippo"
     },
     "implementationTypeName": "ShippoFulfillmentCarrierProvider",
     "description": "Shippo helps you focus on growing your business. Start by connecting your e-commerce platform to Shippo to automatically sync order information. Then, create all shipping labels and docs you may need for domestic and international orders.",
@@ -1738,8 +1730,7 @@
     "displayName": {
       "en-US": "Moneris Canada Payment Provider",
       "en-CA": "Moneris Canada Payment Provider",
-      "fr-CA": "Moneris Canada Payment Provider",
-      "it-IT": "Moneris Canada Payment Provider"
+      "fr-CA": "Moneris Canada Payment Provider"
     },
     "isActive": true,
     "values": {
