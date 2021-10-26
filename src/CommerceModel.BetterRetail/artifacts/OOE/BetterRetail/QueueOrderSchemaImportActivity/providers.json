@@ -129,7 +129,9 @@
       "TimeoutInSeconds": {
         "__type": "ValueOfInt32",
         "value": 30
-      }
+      },
+      "DefaultDSPs": "[{\"name\": \"DoorDash\"}]",
+      "DefaultDSPAttributes": ""
     },
     "propertyConfigurations": {}
   },
@@ -947,7 +949,9 @@
       "TimeoutInSeconds": {
         "__type": "ValueOfInt32",
         "value": 30
-      }
+      },
+      "DefaultDSPs": "[{\"name\": \"DoorDash\"}]",
+      "DefaultDSPAttributes": ""
     },
     "propertyConfigurations": {}
   },
@@ -1494,7 +1498,9 @@
       "TimeoutInSeconds": {
         "__type": "ValueOfInt32",
         "value": 30
-      }
+      },
+      "DefaultDSPs": "[{\"name\": \"DoorDash\"}]",
+      "DefaultDSPAttributes": ""
     },
     "propertyConfigurations": {}
   },
