@@ -50,7 +50,7 @@ BEGIN
                ,1
                ,'<PaymentProvider>
                 <IsDefaultPaymentMethodSupported Type="Boolean">False</IsDefaultPaymentMethodSupported>
-                <IsRefreshOperationSupported Type="Boolean">False</IsRefreshOperationSupported>
+                <IsRefreshOperationSupported Type="Boolean">True</IsRefreshOperationSupported>
                 <Id Type="Guid">' + @@providerGuid + '</Id>
                 <Type Type="ProviderType">' + @@providerType + '</Type>
                 <ScopeId Type="String">' + @@scopeId + '</ScopeId>
@@ -58,22 +58,25 @@ BEGIN
                 <ImplementationTypeName Type="String">' + @@paymentProviderType + '</ImplementationTypeName>
                 <DisplayName Type="Localizable:String">
                 <type Type="String">String</type>
-                <en_x2d_GB Type="String">Bambora payment provider</en_x2d_GB>
+                <en_x2d_US Type="String">Bambora</en_x2d_US>
+                <en_x2d_CA Type="String">Bambora</en_x2d_CA>
+                <fr_x2d_CA Type="String">Bambora</fr_x2d_CA>
                 </DisplayName>
                 <IsActive Type="Boolean">True</IsActive>
                 <Values Type="Dictionary">
-                <IsRefreshOperationSupported Type="Boolean">True</IsRefreshOperationSupported>
                 <Timeout Type="Int32">30</Timeout>
+                <IsRefreshOperationSupported Type="Boolean">True</IsRefreshOperationSupported>
                 <AuthorizePaymentUrl Type="String">' + @@webAppPaymentURL + 'api/paymentprovider/authorize</AuthorizePaymentUrl>
                 <RefreshPaymentUrl Type="String">' + @@webAppPaymentURL + 'api/paymentprovider/refresh</RefreshPaymentUrl>
                 <RefundPaymentUrl Type="String">' + @@webAppPaymentURL + 'api/paymentprovider/refund</RefundPaymentUrl>
                 <SettlePaymentUrl Type="String">' + @@webAppPaymentURL + 'api/paymentprovider/settle</SettlePaymentUrl>
                 <VoidPaymentUrl Type="String">' + @@webAppPaymentURL + 'api/paymentprovider/void</VoidPaymentUrl>
-                <DeletePaymentMethodUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/deletepaymentmethod</DeletePaymentMethodUrl>
-                <GetPaymentMethodsByCustomerIdUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/getpaymentmethodsbycustomerId</GetPaymentMethodsByCustomerIdUrl>
-                <GetPaymentMethodsByCartUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/getpaymentmethods</GetPaymentMethodsByCartUrl>
-                <SetDefaultPaymentMethodUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/setdefaultpaymentmethod</SetDefaultPaymentMethodUrl>
+                <DeletePaymentMethodUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/delete</DeletePaymentMethodUrl>
+                <GetPaymentMethodsByCustomerIdUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/getpaymentmethodsbycustomerid</GetPaymentMethodsByCustomerIdUrl>
+                <GetPaymentMethodsByCartUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/get</GetPaymentMethodsByCartUrl>
+                <SetDefaultPaymentMethodUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/set</SetDefaultPaymentMethodUrl>
                 <InitializePaymentUrl Type="String">' + @@webAppPaymentURL + 'api/paymentprovider/initialize</InitializePaymentUrl>
+                <AuthenticationKey Type="String">SecureAndSecretKey</AuthenticationKey>
                 </Values>
                 <PropertyConfigurations Type="Dictionary" />
                 <FullTypeName Type="String">Orckestra.Overture.Entities.Providers.PaymentProvider, Orckestra.Overture.Entities</FullTypeName>
