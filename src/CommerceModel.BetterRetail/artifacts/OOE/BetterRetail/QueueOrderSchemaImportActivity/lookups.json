@@ -1262,5 +1262,26 @@
         "isActive": true
       }
     ]
+  },
+  {
+    "lookupName": "PaymentStatus",
+    "values": [
+      {
+        "value": "PreAuthorizationCompletion",
+        "displayName": {
+          "en-US": "Pre-Authorization Completion",
+          "en-CA": "Pre-Authorization Completion",
+          "fr-CA": "Complétion de la préauthorisation"
+        },
+        "sortOrder": 0,
+        "isActive": true
+      }
+    ],
+    "displayName": {
+      "en-US": "Payment Status",
+      "en-CA": "Payment Status",
+      "fr-CA": "Statut du paiement"
+    },
+    "isActive": true
   }
 ]
