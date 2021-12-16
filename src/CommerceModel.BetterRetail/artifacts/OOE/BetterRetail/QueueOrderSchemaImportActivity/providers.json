@@ -102,6 +102,44 @@
     "propertyConfigurations": {}
   },
   {
+    "id": "9857DD1F-8984-4FC4-99E5-9A2E84D72BEF",
+    "type": "FulfillmentCarrier",
+    "scopeId": "BetterRetailCanada",
+    "name": "DeliverySolutionsCarrierProvider",
+    "displayName": {
+      "en-US": "DeliverySolutions carrier provider",
+      "en-CA": "DeliverySolutions carrier provider",
+      "fr-CA": "Fournisseur de transport DeliverySolutions"
+    },
+    "implementationTypeName": "DeliverySolutionsFulfillmentCarrierProvider",
+    "description": "DeliverySolutions",
+    "isActive": true,
+    "values": {
+      "ApiEndpoint": "#DeliverySolutionsApiEndpoint#",
+      "ApiKey": "#DeliverySolutionsApiKey#",
+      "TenantId": "#DeliverySolutionsTenantId#",
+      "EnableApiRequestLogging": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ShouldBookReturnLabel": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PreemptivelyBookCarrier": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "TimeoutInSeconds": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "DefaultDSPs": "[{\"name\": \"DoorDash\"}]",
+      "DefaultDSPAttributes": ""
+    },
+    "propertyConfigurations": {}
+  },
+  {
     "id": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
     "type": "FulfillmentRouting",
     "scopeId": "BetterRetailCanada",
@@ -506,7 +544,7 @@
     },
     "propertyConfigurations": {}
   },
- {
+  {
     "type": "Payment",
     "scopeId": "BetterRetailCanada",
     "name": "Moneris Store 2",
@@ -884,6 +922,44 @@
         "value": 1
       },
       "DefaultWeightUOMWhenNotSpecified": "KG"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "E3D5A8B0-E94D-47E9-BDB1-11D10C305557",
+    "type": "FulfillmentCarrier",
+    "scopeId": "BetterRetailNorway",
+    "name": "DeliverySolutionsCarrierProvider",
+    "displayName": {
+      "en-US": "DeliverySolutions carrier provider",
+      "en-CA": "DeliverySolutions carrier provider",
+      "fr-CA": "Fournisseur de transport DeliverySolutions"
+    },
+    "implementationTypeName": "DeliverySolutionsFulfillmentCarrierProvider",
+    "description": "DeliverySolutions",
+    "isActive": true,
+    "values": {
+      "ApiEndpoint": "#DeliverySolutionsApiEndpoint#",
+      "ApiKey": "#DeliverySolutionsApiKey#",
+      "TenantId": "#DeliverySolutionsTenantId#",
+      "EnableApiRequestLogging": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ShouldBookReturnLabel": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PreemptivelyBookCarrier": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "TimeoutInSeconds": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "DefaultDSPs": "[{\"name\": \"DoorDash\"}]",
+      "DefaultDSPAttributes": ""
     },
     "propertyConfigurations": {}
   },
@@ -1399,6 +1475,44 @@
         "value": 1
       },
       "DefaultWeightUOMWhenNotSpecified": "KG"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "1E7D72C8-CDAC-4FA6-8B46-F75C139EEADD",
+    "type": "FulfillmentCarrier",
+    "scopeId": "BetterRetailNetherlands",
+    "name": "DeliverySolutionsCarrierProvider",
+    "displayName": {
+      "en-US": "DeliverySolutions carrier provider",
+      "en-CA": "DeliverySolutions carrier provider",
+      "fr-CA": "Fournisseur de transport DeliverySolutions"
+    },
+    "implementationTypeName": "DeliverySolutionsFulfillmentCarrierProvider",
+    "description": "DeliverySolutions",
+    "isActive": true,
+    "values": {
+      "ApiEndpoint": "#DeliverySolutionsApiEndpoint#",
+      "ApiKey": "#DeliverySolutionsApiKey#",
+      "TenantId": "#DeliverySolutionsTenantId#",
+      "EnableApiRequestLogging": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ShouldBookReturnLabel": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PreemptivelyBookCarrier": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "TimeoutInSeconds": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "DefaultDSPs": "[{\"name\": \"DoorDash\"}]",
+      "DefaultDSPAttributes": ""
     },
     "propertyConfigurations": {}
   },
