@@ -135,7 +135,158 @@
               "en-US": "Better Retail USA",
               "fr-CA": "Better Retail USA"
             },
-            "children": [],
+            "children": [
+              {
+                "id": "California",
+                "type": "Virtual",
+                "name": {
+                  "en-CA": "California",
+                  "en-US": "California",
+                  "fr-CA": "California"
+                },
+                "description": {
+                  "en-CA": "",
+                  "en-US": "",
+                  "fr-CA": ""
+                },
+                "defaultCulture": "en-US",
+                "isActive": true,
+                "children": [
+                  {
+                    "id": "BRU-100",
+                    "type": "Dependant",
+                    "name": {
+                      "en-CA": "BRU-100",
+                      "en-US": "BRU-100",
+                      "fr-CA": "BRU-100"
+                    },
+                    "description": {
+                      "en-CA": "",
+                      "en-US": "",
+                      "fr-CA": ""
+                    },
+                    "defaultCulture": "en-US",
+                    "isActive": true
+                  }
+                ]
+              },
+              {
+                "id": "Florida",
+                "type": "Virtual",
+                "name": {
+                  "en-CA": "Florida",
+                  "en-US": "Florida",
+                  "fr-CA": "Florida"
+                },
+                "description": {
+                  "en-CA": "",
+                  "en-US": "",
+                  "fr-CA": ""
+                },
+                "defaultCulture": "en-US",
+                "isActive": true,
+                "children": [
+                  {
+                    "id": "BRU-101",
+                    "type": "Dependant",
+                    "name": {
+                      "en-CA": "BRU-101",
+                      "en-US": "BRU-101",
+                      "fr-CA": "BRU-101"
+                    },
+                    "description": {
+                      "en-CA": "",
+                      "en-US": "",
+                      "fr-CA": ""
+                    },
+                    "defaultCulture": "en-US",
+                    "isActive": true
+                  }
+                ]
+              },
+              {
+                "id": "Hawaii",
+                "type": "Virtual",
+                "name": {
+                  "en-CA": "Hawaii",
+                  "en-US": "Hawaii",
+                  "fr-CA": "Hawaii"
+                },
+                "description": {
+                  "en-CA": "",
+                  "en-US": "",
+                  "fr-CA": ""
+                },
+                "defaultCulture": "en-US",
+                "isActive": true,
+                "children": [
+                  {
+                    "id": "BRU-102",
+                    "type": "Dependant",
+                    "name": {
+                      "en-CA": "BRU-102",
+                      "en-US": "BRU-102",
+                      "fr-CA": "BRU-102"
+                    },
+                    "description": {
+                      "en-CA": "",
+                      "en-US": "",
+                      "fr-CA": ""
+                    },
+                    "defaultCulture": "en-US",
+                    "isActive": true
+                  }
+                ]
+              },
+              {
+                "id": "BRU-103",
+                "type": "Dependant",
+                "name": {
+                  "en-CA": "BRU-103",
+                  "en-US": "BRU-103",
+                  "fr-CA": "BRU-103"
+                },
+                "description": {
+                  "en-CA": "",
+                  "en-US": "",
+                  "fr-CA": ""
+                },
+                "defaultCulture": "en-US",
+                "isActive": true
+              },
+              {
+                "id": "BRU-104",
+                "type": "Dependant",
+                "name": {
+                  "en-CA": "BRU-104",
+                  "en-US": "BRU-104",
+                  "fr-CA": "BRU-104"
+                },
+                "description": {
+                  "en-CA": "",
+                  "en-US": "",
+                  "fr-CA": ""
+                },
+                "defaultCulture": "en-US",
+                "isActive": true
+              },
+              {
+                "id": "BRU-105",
+                "type": "Dependant",
+                "name": {
+                  "en-CA": "BRU-105",
+                  "en-US": "BRU-105",
+                  "fr-CA": "BRU-105"
+                },
+                "description": {
+                  "en-CA": "",
+                  "en-US": "",
+                  "fr-CA": ""
+                },
+                "defaultCulture": "en-US",
+                "isActive": true
+              }
+            ],
             "defaultCulture": "en-US",
             "currencyIso": "USD"
           },
