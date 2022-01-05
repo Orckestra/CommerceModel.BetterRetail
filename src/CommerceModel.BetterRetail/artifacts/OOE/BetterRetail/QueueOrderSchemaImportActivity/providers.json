@@ -1,74 +1,5 @@
 [
   {
-    "id": "303DB3E9-ABCE-4EAD-B4d1-4AC96DBB83A9",
-    "type": "FulfillmentCarrier",
-    "scopeId": "BetterRetailCanada",
-    "name": "TranssmartCarrierProvider",
-    "displayName": {
-      "en-US": "Transsmart carrier provider",
-      "en-CA": "Transsmart carrier provider",
-      "fr-CA": "Fournisseur de transport Transsmart"
-    },
-    "implementationTypeName": "TranssmartFulfillmentCarrierProvider",
-    "description": "Transsmart allows you to easily connect your webshop, ERP and WMS to all your carriers! Control and optimize your shipment handling and transport costs from order entry until delivery. Connect your logistics services to your checkout and ERP/WMS with standard plugins.",
-    "isActive": true,
-    "values": {
-      "ApiEndpoint": "#TranssmartApiEndpoint#",
-      "ApiUsername": "#TranssmartApiUsername#",
-      "ApiPassword": "#TranssmartApiPassword#",
-      "Account": "#TranssmartAccount#",
-      "MailType": "0",
-      "ServiceType": "NON-DOCS",
-      "OverrideQuantityUOM": "PCS",
-      "IsResidential": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "EnableApiRequestLogging": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "ShouldBookReturnLabel": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "TimeoutInSeconds": {
-        "__type": "ValueOfInt32",
-        "value": 30
-      },
-      "DefaultWeightWhenNotSpecified": {
-        "__type": "ValueOfDouble",
-        "value": 1
-      },
-      "DefaultHeightWhenNotSpecified": {
-        "__type": "ValueOfDouble",
-        "value": 1
-      },
-      "DefaultWidthWhenNotSpecified": {
-        "__type": "ValueOfDouble",
-        "value": 1
-      },
-      "DefaultLengthWhenNotSpecified": {
-        "__type": "ValueOfDouble",
-        "value": 1
-      },
-      "DefaultWeightUOMWhenNotSpecified": "KG",
-      "DefaultLinearUOMWhenNotSpecified": "CM",
-      "MapperLinearUOM": "Centimetre=CM,Feet=FT,inches=IN",
-      "MapperPackageType": "Boîte Std.|Std. 31 kg pkg.|Std. Box=BOX",
-      "MapperWeightUOM": "Pound=LB,Ounce=OZ,Kilogram=KG",
-      "MapperQuantityUOM": "",
-      "CarrierMappingConfiguration": "{'Express':{'SAvER':{'UpS': 'UpS','DhL': 'DhL'},'RapIdo':{'MexIco':'MexIco','ChIli':'ChIli'}}, 'TimesAver':{'SaVer':{'UpS':'UpS','dHl':'dHl'}, 'Saving':{'UpS': 'UpS', 'FeDEx' : 'FeDEx'}}, 'StanDarD':{'SAver':{'uPS': 'uPS', 'Dhl': 'Dhl'}}}",
-      "ReverseAddressesForReturns": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "ReturnCarrierCode": "",
-      "ReturnServiceLevel": ""
-    },
-    "propertyConfigurations": {}
-  },
-  {
     "id": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
     "type": "FulfillmentCarrier",
     "scopeId": "BetterRetailCanada",
@@ -1399,7 +1330,7 @@
       },
       "ShouldBookReturnLabel": {
         "__type": "ValueOfBoolean",
-        "value": false
+        "value": "#TranssmartShouldBookReturnLabelNL#"
       },
       "TimeoutInSeconds": {
         "__type": "ValueOfInt32",
@@ -1427,13 +1358,13 @@
       "MapperPackageType": "Boîte Std.|Std. 31 kg pkg.|Std. Box=BOX",
       "MapperWeightUOM": "Pound=LB,Ounce=OZ,Kilogram=KG",
       "MapperQuantityUOM": "",
-      "CarrierMappingConfiguration": "{'Express':{'SAvER':{'UpS': 'UpS','DhL': 'DhL'},'RapIdo':{'MexIco':'MexIco','ChIli':'ChIli'}}, 'TimesAver':{'SaVer':{'UpS':'UpS','dHl':'dHl'}, 'Saving':{'UpS': 'UpS', 'FeDEx' : 'FeDEx'}}, 'StanDarD':{'SAver':{'uPS': 'uPS', 'Dhl': 'Dhl'}}}",
+      "CarrierMappingConfiguration": #TranssmartMappingNL#,
       "ReverseAddressesForReturns": {
         "__type": "ValueOfBoolean",
         "value": true
       },
-      "ReturnCarrierCode": "",
-      "ReturnServiceLevel": ""
+      "ReturnCarrierCode": "#TranssmartReturnCarrierCodeNL#",
+      "ReturnServiceLevel": "#TranssmartReturnServiceLevelNL#"
     },
     "propertyConfigurations": {}
   },
