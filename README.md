@@ -35,6 +35,10 @@ The sensitive information (usernames & passwords) have been scrubbed from the da
 >   "TranssmartApiPassword": "",
 >   "TranssmartAccount": "",
 >   "TranssmartApiEndpoint": "",
+>   "TranssmartMappingNL": "",
+>   "TranssmartReturnCarrierCodeNL": "",
+>   "TranssmartReturnServiceLevelNL": "",
+>   "TranssmartShouldBookReturnLabelNL": "",
 >   "AvalaraAccountNumber": "",
 >   "AvalaraCompanyCode": "",
 >   "AvalaraLicenceKey": "",
@@ -44,6 +48,9 @@ The sensitive information (usernames & passwords) have been scrubbed from the da
 >   "DeliverySolutionsTenantId": ""
 > }
 > ```
+>
+> Note that "...NL" parameters is an example on how to have specific settings for a given Transsmart provider for a given sale scope.
+>
 
 ### Before doing a Git commit
 
