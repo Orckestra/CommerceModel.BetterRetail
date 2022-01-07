@@ -1,7 +1,7 @@
 {
   "defaultLanguage": "en-US",
   "supportedLanguages": [ "en-US", "en-CA", "fr-CA" ],
-  "supportedCountries": [ "CA", "US", "NO", "NL" ],
+  "supportedCountries": [ "CA", "US", "NO", "NL", "DE" ],
   "scope": {
     "id": "Global",
     "type": "Global",
@@ -421,6 +421,59 @@
             ],
             "defaultCulture": "en-US",
             "currencyIso": "EUR"
+          },
+          {
+            "id": "BetterRetailGermany",
+            "type": "Sale",
+            "isActive": true,
+            "name": {
+              "en-CA": "Better Retail Germany",
+              "en-US": "Better Retail Germany",
+              "fr-CA": "Better Retail Germany"
+            },
+            "description": {
+              "en-CA": "Better Retail Germany",
+              "en-US": "Better Retail Germany",
+              "fr-CA": "Better Retail Germany"
+            },
+            "defaultCulture": "en-US",
+            "currencyIso": "EUR",
+            "children": [
+              {
+                "id": "NorthRhineWestphalia",
+                "type": "Virtual",
+                "name": {
+                  "en-CA": "North Rhine-Westphalia (DE-NW)",
+                  "en-US": "North Rhine-Westphalia (DE-NW)",
+                  "fr-CA": "North Rhine-Westphalia (DE-NW)"
+                },
+                "description": {
+                  "en-CA": "",
+                  "en-US": "",
+                  "fr-CA": ""
+                },
+                "defaultCulture": "en-US",
+                "isActive": true,
+                "children": [
+                  {
+                    "id": "BRDE-100",
+                    "type": "Dependant",
+                    "name": {
+                      "en-CA": "BRDE-100",
+                      "en-US": "BRDE-100",
+                      "fr-CA": "BRDE-100"
+                    },
+                    "description": {
+                      "en-CA": "",
+                      "en-US": "",
+                      "fr-CA": ""
+                    },
+                    "defaultCulture": "en-US",
+                    "isActive": true
+                  }
+                ]
+              }
+            ]
           }
         ],
         "defaultCulture": "en-US"
