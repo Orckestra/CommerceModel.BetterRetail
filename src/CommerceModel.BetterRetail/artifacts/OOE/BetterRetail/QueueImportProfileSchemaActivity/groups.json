@@ -1,0 +1,11 @@
+﻿[
+  {
+    "displayOrder": 1,
+    "name": "OrderEditSettings",
+    "displayName": {
+      "en-CA": "Order Edit Settings",
+      "en-US": "Order Edit Settings",
+      "fr-CA": "Commande Modifier les paramètres"
+    }
+  }
+]

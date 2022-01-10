@@ -462,6 +462,55 @@
           "en-CA": "Require Scan to pick in MSF",
           "fr-CA": "Exiger le scan pour la cueillette dans MSF"
         }
+      },
+      {
+        "groupId": "OrderEditSettings",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Lookup",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "FulfillmentTransitionTypes",
+        "isSearchable": false,
+        "name": "FulfillmentTransitionType",
+        "displayName": {
+          "en-CA": "Fulfillment Transition Type",
+          "en-US": "Fulfillment Transition Type",
+          "fr-CA": "Type de transition d'exécution"
+        }
+      },
+      {
+        "groupId": "OrderEditSettings",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Decimal",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "isSearchable": false,
+        "name": "FulfillmentTransitionLeadTime",
+        "displayName": {
+          "en-CA": "Fulfillment Transition Lead Time ",
+          "en-US": "Fulfillment Transition Lead Time ",
+          "fr-CA": "Délai de transition d'exécution"
+        }
+      },
+      {
+        "groupId": "OrderEditSettings",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "DateTime",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "isSearchable": false,
+        "name": "FulfillmentTransitionCutOffTime",
+        "displayName": {
+          "en-CA": "Fulfillment Transition Cut Off Time",
+          "en-US": "Fulfillment Transition Cut Off Time",
+          "fr-CA": "Heure limite de transition d'exécution"
+        }
       }
     ],
     "isSharedEntity": true,

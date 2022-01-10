@@ -1,7 +1,8 @@
 [
 	{
 		"lookupName": "AvaTaxCustomerUsageType",
-		"values": [{
+		"values": [
+			{
 				"value": "L",
 				"displayName": {
 					"en-CA": "Other",
@@ -11,7 +12,8 @@
 				},
 				"sortOrder": 12,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "B",
 				"displayName": {
 					"en-CA": "US - State Government",
@@ -21,7 +23,8 @@
 				},
 				"sortOrder": 2,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "E",
 				"displayName": {
 					"en-CA": "Charitable or benevolent organization",
@@ -31,7 +34,8 @@
 				},
 				"sortOrder": 5,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "J",
 				"displayName": {
 					"en-CA": "Direct Pay Permit",
@@ -41,7 +45,8 @@
 				},
 				"sortOrder": 10,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "P",
 				"displayName": {
 					"en-CA": "Canada - Commercial Aquaculture",
@@ -51,7 +56,8 @@
 				},
 				"sortOrder": 14,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "G",
 				"displayName": {
 					"en-CA": "Resale",
@@ -61,7 +67,8 @@
 				},
 				"sortOrder": 7,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "N",
 				"displayName": {
 					"en-CA": "US - Local Government",
@@ -71,7 +78,8 @@
 				},
 				"sortOrder": 13,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "Q",
 				"displayName": {
 					"en-CA": "Canada - Commercial Fishery",
@@ -81,7 +89,8 @@
 				},
 				"sortOrder": 15,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "R",
 				"displayName": {
 					"en-CA": "Canada - Non-resident",
@@ -91,7 +100,8 @@
 				},
 				"sortOrder": 16,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "F",
 				"displayName": {
 					"en-CA": "Religious or education organization",
@@ -101,7 +111,8 @@
 				},
 				"sortOrder": 6,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "H",
 				"displayName": {
 					"en-CA": "Commercial agricultural production",
@@ -111,7 +122,8 @@
 				},
 				"sortOrder": 8,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "D",
 				"displayName": {
 					"en-CA": "Foreign diplomat",
@@ -121,7 +133,8 @@
 				},
 				"sortOrder": 4,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "A",
 				"displayName": {
 					"en-CA": "US - Federal Government",
@@ -131,7 +144,8 @@
 				},
 				"sortOrder": 1,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "TAXABLE",
 				"displayName": {
 					"en-CA": "Not exempt - taxable customer",
@@ -141,7 +155,8 @@
 				},
 				"sortOrder": 17,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "K",
 				"displayName": {
 					"en-CA": "Direct Mail",
@@ -151,7 +166,8 @@
 				},
 				"sortOrder": 11,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "C",
 				"displayName": {
 					"en-CA": "Tribal/Status Indian/Indian Band",
@@ -161,7 +177,8 @@
 				},
 				"sortOrder": 3,
 				"isActive": false
-			}, {
+			},
+			{
 				"value": "I",
 				"displayName": {
 					"en-CA": "Industrial production/Manufacturer",
@@ -181,5 +198,39 @@
 		},
 		"description": "Avalara Tax exemption codes that can be associated to a customer",
 		"isActive": false
+	},
+	{
+		"lookupName": "FulfillmentTransitionTypes",
+		"values": [
+			{
+				"value": "fulfillmentLeadTime",
+				"displayName": {
+					"en-CA": "Fulfillment Lead Time",
+					"en-US": "Fulfillment Lead Time",
+					"fr-CA": "Délai d'exécution"
+				},
+				"sortOrder": 1,
+				"isActive": true,
+				"isBuiltIn": false
+			},
+			{
+				"value": "fulfillmentCutoffTime",
+				"displayName": {
+					"en-CA": " Fulfillment Cut off Time",
+					"en-US": " Fulfillment Cut off Time",
+					"fr-CA": "Heure limite d'exécution"
+				},
+				"sortOrder": 0,
+				"isActive": true,
+				"isBuiltIn": false
+			}
+		],
+		"displayName": {
+			"en-CA": "Fulfillment Transition Types",
+			"en-US": "Fulfillment Transition Types",
+			"fr-CA": "Types de Transition d'exécution"
+		},
+		"isActive": true,
+		"isBuiltIn": false
 	}
 ]
