@@ -1,74 +1,5 @@
 [
   {
-    "id": "303DB3E9-ABCE-4EAD-B4d1-4AC96DBB83A9",
-    "type": "FulfillmentCarrier",
-    "scopeId": "BetterRetailCanada",
-    "name": "TranssmartCarrierProvider",
-    "displayName": {
-      "en-US": "Transsmart carrier provider",
-      "en-CA": "Transsmart carrier provider",
-      "fr-CA": "Fournisseur de transport Transsmart"
-    },
-    "implementationTypeName": "TranssmartFulfillmentCarrierProvider",
-    "description": "Transsmart allows you to easily connect your webshop, ERP and WMS to all your carriers! Control and optimize your shipment handling and transport costs from order entry until delivery. Connect your logistics services to your checkout and ERP/WMS with standard plugins.",
-    "isActive": true,
-    "values": {
-      "ApiEndpoint": "#TranssmartApiEndpoint#",
-      "ApiUsername": "#TranssmartApiUsername#",
-      "ApiPassword": "#TranssmartApiPassword#",
-      "Account": "#TranssmartAccount#",
-      "MailType": "0",
-      "ServiceType": "NON-DOCS",
-      "OverrideQuantityUOM": "PCS",
-      "IsResidential": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "EnableApiRequestLogging": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "ShouldBookReturnLabel": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "TimeoutInSeconds": {
-        "__type": "ValueOfInt32",
-        "value": 30
-      },
-      "DefaultWeightWhenNotSpecified": {
-        "__type": "ValueOfDouble",
-        "value": 1
-      },
-      "DefaultHeightWhenNotSpecified": {
-        "__type": "ValueOfDouble",
-        "value": 1
-      },
-      "DefaultWidthWhenNotSpecified": {
-        "__type": "ValueOfDouble",
-        "value": 1
-      },
-      "DefaultLengthWhenNotSpecified": {
-        "__type": "ValueOfDouble",
-        "value": 1
-      },
-      "DefaultWeightUOMWhenNotSpecified": "KG",
-      "DefaultLinearUOMWhenNotSpecified": "CM",
-      "MapperLinearUOM": "Centimetre=CM,Feet=FT,inches=IN",
-      "MapperPackageType": "Boîte Std.|Std. 31 kg pkg.|Std. Box=BOX",
-      "MapperWeightUOM": "Pound=LB,Ounce=OZ,Kilogram=KG",
-      "MapperQuantityUOM": "",
-      "CarrierMappingConfiguration": "{'Express':{'SAvER':{'UpS': 'UpS','DhL': 'DhL'},'RapIdo':{'MexIco':'MexIco','ChIli':'ChIli'}}, 'TimesAver':{'SaVer':{'UpS':'UpS','dHl':'dHl'}, 'Saving':{'UpS': 'UpS', 'FeDEx' : 'FeDEx'}}, 'StanDarD':{'SAver':{'uPS': 'uPS', 'Dhl': 'Dhl'}}}",
-      "ReverseAddressesForReturns": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "ReturnCarrierCode": "",
-      "ReturnServiceLevel": ""
-    },
-    "propertyConfigurations": {}
-  },
-  {
     "id": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
     "type": "FulfillmentCarrier",
     "scopeId": "BetterRetailCanada",
@@ -831,7 +762,7 @@
     },
     "implementationTypeName": "TranssmartFulfillmentCarrierProvider",
     "description": "Transsmart allows you to easily connect your webshop, ERP and WMS to all your carriers! Control and optimize your shipment handling and transport costs from order entry until delivery. Connect your logistics services to your checkout and ERP/WMS with standard plugins.",
-    "isActive": true,
+    "isActive": false,
     "values": {
       "ApiEndpoint": "#TranssmartApiEndpoint#",
       "ApiUsername": "#TranssmartApiUsername#",
@@ -878,13 +809,13 @@
       "MapperPackageType": "Boîte Std.|Std. 31 kg pkg.|Std. Box=BOX",
       "MapperWeightUOM": "Pound=LB,Ounce=OZ,Kilogram=KG",
       "MapperQuantityUOM": "",
-      "CarrierMappingConfiguration": "{'Express':{'SAvER':{'UpS': 'UpS','DhL': 'DhL'},'RapIdo':{'MexIco':'MexIco','ChIli':'ChIli'}}, 'TimesAver':{'SaVer':{'UpS':'UpS','dHl':'dHl'}, 'Saving':{'UpS': 'UpS', 'FeDEx' : 'FeDEx'}}, 'StanDarD':{'SAver':{'uPS': 'uPS', 'Dhl': 'Dhl'}}}",
+      "CarrierMappingConfiguration": "{'STANDARD_BRINGZOLL_HOME':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD_BRINGZOLL_PICKUP':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD_BRINGZOLL_CC':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD_BRING_HOME':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD_BRING_PICKUP':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD_BRING_CC':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD_BRINGZOLL_BRING':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD':{'SERVICEPARCEL':{'BRING':'BNG'}}}",
       "ReverseAddressesForReturns": {
         "__type": "ValueOfBoolean",
         "value": true
       },
-      "ReturnCarrierCode": "",
-      "ReturnServiceLevel": ""
+      "ReturnCarrierCode": "BRINGZOLL",
+      "ReturnServiceLevel": "STANDARD, EXPRESS"
     },
     "propertyConfigurations": {}
   },
@@ -1399,7 +1330,7 @@
       },
       "ShouldBookReturnLabel": {
         "__type": "ValueOfBoolean",
-        "value": false
+        "value": true
       },
       "TimeoutInSeconds": {
         "__type": "ValueOfInt32",
@@ -1427,13 +1358,13 @@
       "MapperPackageType": "Boîte Std.|Std. 31 kg pkg.|Std. Box=BOX",
       "MapperWeightUOM": "Pound=LB,Ounce=OZ,Kilogram=KG",
       "MapperQuantityUOM": "",
-      "CarrierMappingConfiguration": "{'Express':{'SAvER':{'UpS': 'UpS','DhL': 'DhL'},'RapIdo':{'MexIco':'MexIco','ChIli':'ChIli'}}, 'TimesAver':{'SaVer':{'UpS':'UpS','dHl':'dHl'}, 'Saving':{'UpS': 'UpS', 'FeDEx' : 'FeDEx'}}, 'StanDarD':{'SAver':{'uPS': 'uPS', 'Dhl': 'Dhl'}}}",
+      "CarrierMappingConfiguration": "{'STANDARD_POSTNL_HOME':{'3085':{'POSTNL':'PNL'}},'STANDARD_POSTNL_PICKUP':{'3533':{'POSTNL':'PNL'}},'STANDARD_POSTNL_CC':{'3533':{'POSTNL':'PNL'}},'STANDARD':{'3085':{'POSTNL':'PNL'}},'EXPRESS':{'3085':{'POSTNL':'PNL'}},'EXPRESS_HOME':{'3085':{'POSTNL':'PNL'}}}",
       "ReverseAddressesForReturns": {
         "__type": "ValueOfBoolean",
         "value": true
       },
-      "ReturnCarrierCode": "",
-      "ReturnServiceLevel": ""
+      "ReturnCarrierCode": "PNL",
+      "ReturnServiceLevel": "3085"
     },
     "propertyConfigurations": {}
   },
@@ -2251,6 +2182,346 @@
   {
     "type": "Tax",
     "scopeId": "BetterRetailUSA",
+    "name": "Default",
+    "implementationTypeName": "DefaultTaxProvider",
+    "displayName": {},
+    "isActive": true,
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "A36C367C-B322-447F-961C-5F2C6EE9BF6D",
+    "type": "FulfillmentCarrier",
+    "scopeId": "BetterRetailGermany",
+    "name": "TranssmartCarrierProvider",
+    "displayName": {
+      "en-US": "Transsmart carrier provider",
+      "en-CA": "Transsmart carrier provider",
+      "fr-CA": "Fournisseur de transport Transsmart"
+    },
+    "implementationTypeName": "TranssmartFulfillmentCarrierProvider",
+    "description": "Transsmart allows you to easily connect your webshop, ERP and WMS to all your carriers! Control and optimize your shipment handling and transport costs from order entry until delivery. Connect your logistics services to your checkout and ERP/WMS with standard plugins.",
+    "isActive": true,
+    "values": {
+      "ApiEndpoint": "#TranssmartApiEndpoint#",
+      "ApiUsername": "#TranssmartApiUsername#",
+      "ApiPassword": "#TranssmartApiPassword#",
+      "Account": "#TranssmartAccount#",
+      "MailType": "0",
+      "ServiceType": "NON-DOCS",
+      "OverrideQuantityUOM": "PCS",
+      "IsResidential": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "EnableApiRequestLogging": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ShouldBookReturnLabel": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "TimeoutInSeconds": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "DefaultWeightWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultHeightWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultWidthWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultLengthWhenNotSpecified": {
+        "__type": "ValueOfDouble",
+        "value": 1
+      },
+      "DefaultWeightUOMWhenNotSpecified": "KG",
+      "DefaultLinearUOMWhenNotSpecified": "CM",
+      "MapperLinearUOM": "Centimetre=CM,Feet=FT,inches=IN",
+      "MapperPackageType": "Boîte Std.|Std. 31 kg pkg.|Std. Box=BOX",
+      "MapperWeightUOM": "Pound=LB,Ounce=OZ,Kilogram=KG",
+      "MapperQuantityUOM": "",
+      "CarrierMappingConfiguration": "{'STANDARD':{'PAKET':{'DHL':'DDM','HERMES':'DDM'}},'EXPRESS':{'PAKET':{'DHL':'DDM'}}}",
+      "ReverseAddressesForReturns": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "ReturnCarrierCode": "DDM",
+      "ReturnServiceLevel": "RETOURE"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "E6A1386C-0984-4D38-A126-926FF1ABF84E",
+    "type": "FulfillmentRouting",
+    "scopeId": "BetterRetailGermany",
+    "name": "LRU Routing Provider",
+    "implementationTypeName": "LRUFulfillmentRoutingProvider",
+    "description": "The LRU Routing Provider is designed to provide high level routing principles for one or many different instances of Fulfillment Providers. It controls order splitting policies and governs the Fulfillment Provider's routing priority phase by selecting a target Fulfillment Location using a Least Recently Used (LRU) selection algorithm.",
+    "displayName": {
+      "en-US": "Least recently used routing provider",
+      "en-CA": "Least recently used routing provider",
+      "fr-CA": "Fournisseur de routage le moins récemment utilisé (MRU)"
+    },
+    "isActive": true,
+    "values": {
+      "MaximumRoutingElapsedTimeInHours": {
+        "__type": "ValueOfInt32",
+        "value": 20
+      },
+      "MaximumDailyShipmentsPerStore": {
+        "__type": "ValueOfInt32",
+        "value": 100
+      },
+      "MaximumShipmentsPerOrder": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      },
+      "ItemOnlySplitLevelAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "ItemOrUnitSplitLevelAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "B9B0AFDA-CD7A-4631-A7F1-40D866E4D761",
+    "type": "FulfillmentRouting",
+    "scopeId": "BetterRetailGermany",
+    "name": "Competition Routing Provider",
+    "description": "The Competition Routing Provider is designed to provide high level routing principles for one or many different instances of Fulfillment Providers. It controls the Fulfillment Provider's routing priority phase by selecting all eligible Fulfillment Locations and offering a shipment too all of them, at the same time, to elicit a competition to seize it. Competition routing does not support order splitting.",
+    "implementationTypeName": "CompetitionFulfillmentRoutingProvider",
+    "displayName": {
+      "en-US": "Competition routing provider",
+      "en-CA": "Competition routing provider",
+      "fr-CA": "Fournisseur de routage (compétition)"
+    },
+    "isActive": true,
+    "values": {
+      "MaximumRoutingElapsedTimeInHours": {
+        "__type": "ValueOfInt32",
+        "value": 20
+      },
+      "MaximumDailyShipmentsPerStore": {
+        "__type": "ValueOfInt32",
+        "value": 100
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailGermany",
+    "name": "Buy-online-pick-up-in-store (LRU)",
+    "implementationTypeName": "BOPISFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying LRU Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "displayName": {
+      "en-US": "BOPIS Fulfillment Provider (LRU)",
+      "en-CA": "BOPIS Fulfillment Provider (LRU)",
+      "fr-CA": "Fournisseur BOPIS (LRU)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "E6A1386C-0984-4D38-A126-926FF1ABF84E",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailGermany",
+    "name": "Ship from store (LRU)",
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store LRU Fulfillment Provider is designed to sequentially route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase then determines the next Fulfillment location to select for the shipment. The underlying LRU Routing Provider controls splitting and prioritization. The provider then governs policies associated with in-store fulfillment, concluding with stores shipping the order shipments to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
+    "displayName": {
+      "en-US": "Ship From Store (LRU)",
+      "en-CA": "Ship From Store (LRU)",
+      "fr-CA": "Expédition à partir du magasin (LRU)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "E6A1386C-0984-4D38-A126-926FF1ABF84E",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailGermany",
+    "name": "Ship from store (Competition)",
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
+    "displayName": {
+      "en-US": "Ship From Store (Competition)",
+      "en-CA": "Ship From Store (Competition)",
+      "fr-CA": "Expédition à partir du magasin (Compétition)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "B9B0AFDA-CD7A-4631-A7F1-40D866E4D761",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailGermany",
+    "name": "Shipping",
+    "implementationTypeName": "FlatRateShippingProvider",
+    "displayName": {},
+    "isActive": true,
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 3
+      },
+      "EstimatedTransitInDays": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailGermany",
+    "name": "PickUp",
+    "implementationTypeName": "PickUpShippingProvider",
+    "displayName": {},
+    "isActive": true,
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 2
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Payment",
+    "scopeId": "BetterRetailGermany",
+    "name": "Onsite payment",
+    "implementationTypeName": "OnSitePOSPaymentProvider",
+    "displayName": {
+      "en-US": "In store payment",
+      "en-CA": "In store payment",
+      "fr-CA": "Paiement en magasin"
+    },
+    "isActive": true,
+    "values": {
+      "OnSiteCash": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OnSiteDebit": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OnSiteCredit": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OnSiteUnspecified": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "Cheque": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Tax",
+    "scopeId": "BetterRetailGermany",
     "name": "Default",
     "implementationTypeName": "DefaultTaxProvider",
     "displayName": {},
