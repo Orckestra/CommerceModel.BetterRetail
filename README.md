@@ -47,11 +47,7 @@ The sensitive information (usernames & passwords) have been scrubbed from the da
 
 ### Before doing a Git commit
 
-The build process will modify files which contain sensitive data and you will need to revert the changes to these file before adding the files to Git to prevent sensitive information to be committed to Git. You can run this command to revert the changes to known sensitive files:
-
-```powershell
-.\Build.ps1 -t UndoSensitiveData
-```
+The build process will modify files which contain sensitive data and revert them automatically. This is done during the Compile group of tasks. Compile also runs the UndoSensitiveData task. If build script fails, you may need to review the changes to sensitive information to prevent it from being committed to Git.
 
 ## Deployment
 

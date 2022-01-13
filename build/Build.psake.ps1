@@ -80,7 +80,8 @@ Task Compile      -depends RestorePackages,
                            InitializeDeploymentPackageManifestVersion,
                            DetectBuildStability,
                            CompileSolutions,
-                           GeneratePackages
+                           GeneratePackages,
+						   UndoSensitiveData
 
 Task Publish      -depends PublishPackages,
                            PublishArtifacts
