@@ -483,7 +483,7 @@
       {
         "groupId": "OrderEditSettings",
         "isRequired": false,
-        "displayOrder": 0,
+        "displayOrder": 1,
         "dataType": "Decimal",
         "isBuiltIn": false,
         "allowMultipleValues": false,
@@ -499,7 +499,7 @@
       {
         "groupId": "OrderEditSettings",
         "isRequired": false,
-        "displayOrder": 0,
+        "displayOrder": 1,
         "dataType": "DateTime",
         "isBuiltIn": false,
         "allowMultipleValues": false,
