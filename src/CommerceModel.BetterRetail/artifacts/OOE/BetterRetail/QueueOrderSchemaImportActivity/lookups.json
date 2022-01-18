@@ -27,7 +27,7 @@
         "displayName": {
           "en-US": "The shipment {ShipmentId} of the order {OrderNumber} ({OrderId}) is not ready for processing. Some line items are not in stock or have no planned or confirmed inventory reservations.",
           "en-CA": "The shipment {ShipmentId} of the order {OrderNumber} ({OrderId}) is not ready for processing. Some line items are not in stock or have no planned or confirmed inventory reservations.",
-          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) n'est pas prêt pour le traitement. Certains articles ne sont pas en stock ou n'ont aucune réservation de stocks planifiée ou confirmée.",
+          "fr-CA": "L'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) n'est pas prêt pour le traitement. Certains articles ne sont pas en stock ou n'ont aucune réservation de stocks planifiée ou confirmée."
         },
         "sortOrder": 0,
         "isActive": true
@@ -127,7 +127,7 @@
         "displayName": {
           "en-US": "The fulfillment location {FulfillmentLocationId} was not found for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}).",
           "en-CA": "The fulfillment location {FulfillmentLocationId} was not found for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}).",
-          "fr-CA": "Le centre de traitement {FulfillmentLocationId} est introuvable pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}).",
+          "fr-CA": "Le centre de traitement {FulfillmentLocationId} est introuvable pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId})."
         },
         "sortOrder": 0,
         "isActive": true
@@ -137,7 +137,7 @@
         "displayName": {
           "en-US": "The fulfillment location {FulfillmentLocationName} ({FulfillmentLocationId}) for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) does not support shipping.",
           "en-CA": "The fulfillment location {FulfillmentLocationName} ({FulfillmentLocationId}) for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) does not support shipping.",
-          "fr-CA": "Le centre de traitement {FulfillmentLocationName} ({FulfillmentLocationId}) pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) ne supporte pas l'expédition.",
+          "fr-CA": "Le centre de traitement {FulfillmentLocationName} ({FulfillmentLocationId}) pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) ne supporte pas l'expédition."
         },
         "sortOrder": 0,
         "isActive": true
@@ -147,7 +147,7 @@
         "displayName": {
           "en-US": "The fulfillment provider {FulfillmentProvider} for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) does not support a pickup location and will therefore be ignored.",
           "en-CA": "The fulfillment provider {FulfillmentProvider} for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) does not support a pickup location and will therefore be ignored.",
-          "fr-CA": "Le provider de traitement {FulfillmentProvider} pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) ne supporte pas la cueillette en magasin et sera en conséquence ignorée.",
+          "fr-CA": "Le provider de traitement {FulfillmentProvider} pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) ne supporte pas la cueillette en magasin et sera en conséquence ignorée."
         },
         "sortOrder": 0,
         "isActive": true
@@ -157,7 +157,7 @@
         "displayName": {
           "en-US": "Either a pickup location or a fulfillment location is required for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) when using the fulfillment method type '{FulfillmentMethodType}'.",
           "en-CA": "Either a pickup location or a fulfillment location is required for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) when using the fulfillment method type '{FulfillmentMethodType}'.",
-          "fr-CA": "Un point de cueillette ou un centre de traitement est requis pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) lorsque la méthode de traitement'{FulfillmentMethodType}' est sélectionnée.",
+          "fr-CA": "Un point de cueillette ou un centre de traitement est requis pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) lorsque la méthode de traitement'{FulfillmentMethodType}' est sélectionnée."
         },
         "sortOrder": 0,
         "isActive": true
@@ -167,7 +167,7 @@
         "displayName": {
           "en-US": "The  pickup location is missing for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) using the fulfillment method type '{FulfillmentMethodType}'. The fulfillment location {FulfillmentLocationName} ({FulfillmentLocationId}) will be used as the pickup location as well.",
           "en-CA": "The  pickup location is missing for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) using the fulfillment method type '{FulfillmentMethodType}'. The fulfillment location {FulfillmentLocationName} ({FulfillmentLocationId}) will be used as the pickup location as well.",
-          "fr-CA": "Un point de cueillette est manquant pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) et utilisant la méthode de traitement'{FulfillmentMethodType}'. Le centre de traitement {FulfillmentLocationName} ({FulfillmentLocationId}) sera donc utilisé comme point de cueillette.",
+          "fr-CA": "Un point de cueillette est manquant pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) et utilisant la méthode de traitement'{FulfillmentMethodType}'. Le centre de traitement {FulfillmentLocationName} ({FulfillmentLocationId}) sera donc utilisé comme point de cueillette."
         },
         "sortOrder": 0,
         "isActive": true
@@ -177,7 +177,7 @@
         "displayName": {
           "en-US": "The  fulfillment location is missing for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) using the fulfillment method type '{FulfillmentMethodType}' and with store transfer disabled. The pickup location {PickUpLocationName} ({PickUpLocationId}) will be used as the fulfillment location as well.",
           "en-CA": "The  fulfillment location is missing for the shipment {ShipmentId} in order {OrderNumber} ({OrderId}) using the fulfillment method type '{FulfillmentMethodType}' and with store transfer disabled. The pickup location {PickUpLocationName} ({PickUpLocationId}) will be used as the fulfillment location as well.",
-          "fr-CA": "Le centre de traitement est manquant pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) et utilisant la méthode de traitement'{FulfillmentMethodType}' et ayant le transfert entre magasins non disponible. Le point de cueillette {PickUpLocationName} ({PickUpLocationId}) sera donc utilisé comme centre de traitement.",
+          "fr-CA": "Le centre de traitement est manquant pour l'envoi {ShipmentId} de la commande {OrderNumber} ({OrderId}) et utilisant la méthode de traitement'{FulfillmentMethodType}' et ayant le transfert entre magasins non disponible. Le point de cueillette {PickUpLocationName} ({PickUpLocationId}) sera donc utilisé comme centre de traitement."
         },
         "sortOrder": 0,
         "isActive": true
@@ -1227,6 +1227,16 @@
           "en-US": "Carrier booking",
           "en-CA": "Carrier booking",
           "fr-CA": "Réservation du transporteur"
+        },
+        "sortOrder": 1,
+        "isActive": true
+      },
+      {
+        "value": "Preemptive Carrier booking",
+        "displayName": {
+          "en-US": "Preemptive Carrier booking",
+          "en-CA": "Preemptive Carrier booking",
+          "fr-CA": "Réservation préventive du transporteur"
         },
         "sortOrder": 1,
         "isActive": true

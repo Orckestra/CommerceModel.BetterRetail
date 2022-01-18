@@ -61,6 +61,10 @@
         "__type": "ValueOfInt32",
         "value": 30
       },
+      "PreemptivelyBookCarrier": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
       "DefaultDSPs": "[{\"name\": \"DoorDash\"}]",
       "DefaultDSPAttributes": ""
     },
@@ -881,6 +885,10 @@
         "__type": "ValueOfInt32",
         "value": 30
       },
+      "PreemptivelyBookCarrier": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
       "DefaultDSPs": "[{\"name\": \"DoorDash\"}]",
       "DefaultDSPAttributes": ""
     },
@@ -1430,6 +1438,10 @@
         "__type": "ValueOfInt32",
         "value": 30
       },
+      "PreemptivelyBookCarrier": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
       "DefaultDSPs": "[{\"name\": \"DoorDash\"}]",
       "DefaultDSPAttributes": ""
     },
@@ -1911,6 +1923,10 @@
       "TimeoutInSeconds": {
         "__type": "ValueOfInt32",
         "value": 30
+      },
+      "PreemptivelyBookCarrier": {
+        "__type": "ValueOfBoolean",
+        "value": false
       },
       "DefaultDSPs": "[{\"name\": \"DoorDash\"}]",
       "DefaultDSPAttributes": ""
