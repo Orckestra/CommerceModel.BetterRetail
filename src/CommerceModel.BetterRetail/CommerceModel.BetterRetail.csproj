@@ -691,10 +691,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets'))" />
-    <Error Condition="!Exists('..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.56\build\net\OrckestraCommerce.Packages.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.56\build\net\OrckestraCommerce.Packages.MSBuild.targets'))" />
+    <Error Condition="!Exists('..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.65\build\net\OrckestraCommerce.Packages.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.65\build\net\OrckestraCommerce.Packages.MSBuild.targets'))" />
   </Target>
   <Import Project="..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets" Condition="Exists('..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets')" />
-  <Import Project="..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.56\build\net\OrckestraCommerce.Packages.MSBuild.targets" Condition="Exists('..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.56\build\net\OrckestraCommerce.Packages.MSBuild.targets')" />
+  <Import Project="..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.65\build\net\OrckestraCommerce.Packages.MSBuild.targets" Condition="Exists('..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.65\build\net\OrckestraCommerce.Packages.MSBuild.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
