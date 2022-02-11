@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -153,15 +153,15 @@
         </tr>
         </thead>								
         <tbody>
-        {% for shipment in Cart.Shipments %}
-        {% for item in shipment.LineItems%}
+        <!--{% for shipment in Cart.Shipments %}
+        {% for item in shipment.LineItems%}-->
         <tr>
             <!--<td style="border-bottom: 1px solid #e1e4ea; padding: 20px 0;"><img src="{{item.ImageURL}}" width="76" alt="product-image" style="display: block;" /></td>-->
             <td colspan="2" style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
                 <strong>{{item.ProductSummary.DisplayName}}</strong><br />
-                {% for kva in item.kvaDisplayValues%}
+                <!--{% for kva in item.kvaDisplayValues%}-->
                 <span>{{kva}}</span><br />
-                {% endfor %}
+                <!--{% endfor %}-->
             </td>
             <td style="padding: 20px 0px; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
                 <strong>{{item.CurrentPrice | money:"en-CA" }}</strong></td>
@@ -169,13 +169,13 @@
                 <strong>{{item.Quantity}}</strong></td>
             <td style="padding: 20px 10px 20px 0px; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
                 <strong>{{item.Total | money:"en-CA" }}</strong>
-                {% for fee in item.additionalFees%}
-                <br><span style="font-size:11px;">+ {{fee.Amount | money:"en-CA" }}{% if fee.calculationRule == "PerUnit" %}/unit{% else %}{% endif %} of {{ fee.DisplayName | localize:"en-CA" }}</span>
-                {% endfor %}
+                <!--{% for fee in item.additionalFees%}-->
+                <br><span style="font-size:11px;">+ {{fee.Amount | money:"en-CA" }}<!--{% if fee.calculationRule == "PerUnit" %}-->/unit<!--{% else %}{% endif %}--> of {{ fee.DisplayName | localize:"en-CA" }}</span>
+                <!--{% endfor %}-->
             </td>
         </tr>
-        {% endfor %}
-        {% endfor %}
+        <!--{% endfor %}
+        {% endfor %}-->
         </tbody>
         <tfoot style="text-align: right;">
         <tr>
@@ -214,8 +214,8 @@
                 <strong>{{ Cart.SubTotal | money:"en-CA" }}</strong>
             </td>
         </tr>
-        {% for fee in Cart.ShipmentFees %}
-        {% if fee.Taxable == "true" %}
+        <!--{% for fee in Cart.ShipmentFees %}
+        {% if fee.Taxable == "true" %}-->
         <tr>
             <td colspan="2"></td>
             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
@@ -225,10 +225,10 @@
                 <strong>{{ fee.Amount | money:"en-CA" }}</strong>
             </td>
         </tr>
-        {% endif %}
+        <!--{% endif %}
         {% endfor %}	
         {% for fee in Cart.LineItemFees %}
-        {% if fee.Taxable == "true" %}
+        {% if fee.Taxable == "true" %}-->
         <tr>
             <td colspan="2"></td>
             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
@@ -238,9 +238,9 @@
                 <strong>{{ fee.Amount | money:"en-CA" }}</strong>
             </td>
         </tr>
-        {% endif %}
+        <!--{% endif %}
         {% endfor %}
-        {% for tax in Cart.AggregatedTaxes %}
+        {% for tax in Cart.AggregatedTaxes %}-->
         <tr>
             <td colspan="2"></td>
             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
@@ -250,9 +250,9 @@
                 <strong>{{ tax.TaxTotal | money:"en-CA" }}</strong>
             </td>
         </tr>
-        {% endfor %}
+        <!--{% endfor %}
         {% for fee in Cart.ShipmentFees %}
-        {% if fee.Taxable == "false" %}
+        {% if fee.Taxable == "false" %}-->
         <tr>
             <td colspan="2"></td>
             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
@@ -262,10 +262,10 @@
                 <strong>{{ fee.Amount | money:"en-CA" }}</strong>
             </td>
         </tr>
-        {% endif %}
+        <!--{% endif %}
         {% endfor %}
         {% for fee in Cart.LineItemFees %}
-        {% if fee.Taxable == "false" %}
+        {% if fee.Taxable == "false" %}-->
         <tr>
             <td colspan="2"></td>
             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
@@ -275,8 +275,8 @@
                 <strong>{{ fee.Amount | money:"en-CA" }}</strong>
             </td>
         </tr>
-        {% endif %}
-        {% endfor %}
+        <!--{% endif %}
+        {% endfor %}-->
         <tr>
             <td colspan="2"></td>
             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">

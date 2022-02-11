@@ -1,4 +1,4 @@
-﻿
+
 Bonjour {{Customer.FirstName}} {{Customer.LastName}},
 
 Vous trouverez dans ce courriel les produits qui ne vous seront plus envoyé de façon périodique.
@@ -10,19 +10,19 @@ L’équipe {{Variables.CompanyName}}
 PRODUITS QUI NE VOUS SERONT PLUS ENVOYÉ DE FAÇON PÉRIODIQUE
 ==============================
 
-{% for item in DeletedProducts %}
+<!--{% for item in DeletedProducts %}-->
 Produit: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
 Prix: {{item.TotalRegularPrice | money:"fr-CA" }}
-{% endfor %}
+<!--{% endfor %}-->
 
 
 TOUS LES PRODUITS QUI SERONT ENVOYÉS PÉRIODIQUEMENT
 ==============================
 
-{% for item in AllProducts %}
+<!--{% for item in AllProducts %}-->
 Produit: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
 Prix: {{item.TotalRegularPrice | money:"fr-CA" }}
-{% endfor %}
+<!--{% endfor %}-->
 
 
 INFORMATION ADDITIONNELLE
