@@ -149,7 +149,8 @@ $NugetArtifactsDirectory = "$ArtifactsStagingDirectory\Nuget"
 $VisualStudioVersion = '2019'
 $filesWithSensitiveData = @(
     (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\artifacts\OOE\BetterRetail\QueueOrderSchemaImportActivity\providers.json'),
-    (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\artifacts\OOE\BetterRetail\CreateUsersActivity\users.json')
+    (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\artifacts\OOE\BetterRetail\CreateUsersActivity\users.json'),
+    (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\Parameters.All.xml')
 )
 
 function Create-ArtifactsFolder {
