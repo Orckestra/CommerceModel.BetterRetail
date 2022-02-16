@@ -1,4 +1,4 @@
-﻿
+
 Hello {{Customer.FirstName}} {{Customer.LastName}},
 
 You just completed an order on {{Variables.RootUrl}} which contains products that will be sent to you periodically. You will find in the following e-mail the recurring products related to that order.
@@ -10,19 +10,19 @@ The {{Variables.CompanyName}} Team
 NEW PRODUCTS THAT WILL BE SENT PERIODICALLY
 ==============================
 
-{% for item in AddedProducts %}
+<!--{% for item in AddedProducts %}-->
 Item: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
 Price: {{item.TotalRegularPrice | money:"en-US" }}
-{% endfor %}
+<!--{% endfor %}-->
 
 
 COMPLETE LIST OF PRODUCTS THAT WILL BE SENT PERIODICALLY
 ==============================
 
-{% for item in AllProducts %}
+<!--{% for item in AllProducts %}-->
 Item: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
 Price: {{item.TotalRegularPrice | money:"en-US" }}
-{% endfor %}
+<!--{% endfor %}-->
 
 
 ADDITIONAL INFORMATION

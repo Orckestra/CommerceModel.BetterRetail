@@ -1,4 +1,4 @@
-﻿
+
 {{Variables.CompanyName}} | Shipment Notification
  
 Hello,<br />
@@ -11,19 +11,19 @@ The {{Variables.CompanyName}} Team
   
 ==============================
  
-{% for item in RescheduledProducts %}
+<!--{% for item in RescheduledProducts %}-->
 Item: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
 Price: {{item.TotalRegularPrice | money:"en-CA" }}
-{% endfor %}
+<!--{% endfor %}-->
  
   
 COMPLETE LIST OF PRODUCTS THAT WILL BE SENT PERIODICALLY
 ==============================
  
-{% for item in AllProducts %}
+<!--{% for item in AllProducts %}-->
 Item: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
 Price: {{item.TotalRegularPrice | money:"en-CA" }}
-{% endfor %}
+<!--{% endfor %}-->
  
   
 ADDITIONAL INFORMATION
