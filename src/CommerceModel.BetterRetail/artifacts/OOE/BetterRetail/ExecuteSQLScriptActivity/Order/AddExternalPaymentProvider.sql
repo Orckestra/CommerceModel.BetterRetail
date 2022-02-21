@@ -20,6 +20,8 @@ DECLARE @@paymentProviderType AS VARCHAR(25) = 'ExternalPaymentProvider'
 SELECT @@webAppPaymentURL =
     CASE 
         WHEN [Name] LIKE '%dev_commerce_order' THEN 'https://localhost:7107/'
+		WHEN [Name] LIKE '%int_commerce_order' THEN 'https://occintbamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
+		WHEN [Name] LIKE '%qa_commerce_order' THEN 'https://occqabamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
         ELSE 'https://occintbamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
     END
 FROM sys.databases WHERE [Name] like '%_commerce_order'
