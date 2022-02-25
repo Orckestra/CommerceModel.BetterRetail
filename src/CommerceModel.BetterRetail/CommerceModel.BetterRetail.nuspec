@@ -1,24 +1,24 @@
-﻿<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-	<metadata>
-		<version>0.0.0.0</version>
-		<authors>Orckestra Technologies Inc.</authors>
-		<owners>Orckestra Technologies Inc.</owners>
-		<licenseUrl>http://nuget.orckestra.com/license</licenseUrl>
-		<projectUrl>http://nuget.orckestra.com/docs/client</projectUrl>
-		<iconUrl>http://nuget.orckestra.com/overture.ico</iconUrl>
-		<id>CommerceModel.BetterRetail</id>
-		<title>CommerceModel.BetterRetail</title>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<summary>CommerceModel.BetterRetail</summary>
-		<description>CommerceModel.BetterRetail</description>
-		<releaseNotes>Orckestra Commerce 2020 release.</releaseNotes>
-		<copyright>Copyright Orckestra Technologies Inc. 2020</copyright>
-		<dependencies>
-			<dependency id="CommerceModel.BetterRetail" version="0.0.0" />
-		</dependencies>
-	</metadata>
-	<files>    
+  <metadata>
+    <version>0.0.0.0</version>
+    <authors>Orckestra Technologies Inc.</authors>
+    <owners>Orckestra Technologies Inc.</owners>
+    <licenseUrl>http://nuget.orckestra.com/license</licenseUrl>
+    <projectUrl>http://nuget.orckestra.com/docs/client</projectUrl>
+    <iconUrl>http://nuget.orckestra.com/overture.ico</iconUrl>
+    <id>CommerceModel.BetterRetail</id>
+    <title>CommerceModel.BetterRetail</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>CommerceModel.BetterRetail</summary>
+    <description>CommerceModel.BetterRetail</description>
+    <releaseNotes>Orckestra Commerce 2020 release.</releaseNotes>
+    <copyright>© 2022 Orckestra Technologies Inc. All rights reserved.</copyright>
+    <dependencies>
+      <dependency id="CommerceModel.BetterRetail" version="0.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
     <file src="package\artifacts\**\*.*" target="_pkg\artifacts" />
     <file src="package\scripts\**\*.*" target="_pkg\scripts" />
     <file src="package\parameters*.xml" target="_pkg" />

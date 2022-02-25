@@ -1,4 +1,4 @@
-﻿
+
 Bonjour {{Cart.Customer.FirstName}} {{Cart.Customer.LastName}},
 
 Une commande sera créée automatiquement pour vous dans quelques jours. Ce courriel contient tous les détails de la commande à venir.
@@ -6,7 +6,7 @@ Une commande sera créée automatiquement pour vous dans quelques jours. Ce cour
 Merci,
 L’équipe {{Variables.CompanyName}}
 
-{% for shipment in Cart.Shipments %}
+<!--{% for shipment in Cart.Shipments %}-->
 INFORMATION DE L’ENVOI
 ==============================
 
@@ -19,13 +19,13 @@ INFORMATION DE L’ENVOI
 {{shipment.ShippingAddress.CountryDisplayName}}
 {{shipment.ShippingAddress.PhoneNumber}} {{shipment.ShippingAddress.PhoneExtension}}
 
-{% endfor %}
+<!--{% endfor %}-->
 
 SOMMAIRE DE LA COMMANDE
 ==============================
-{% for item in Cart.LineItems%}
-Produit: {{item.Quantity}} x {{item.ProductDisplayName}} ${% if item.SalePrice < item.ListPrice %}{{item.SalePrice | number: "#,0.00"}}{% else %}{{item.ListPrice | number: "#,0.00"}}{% endif %}{% if item.DiscountAmount > 0 %} (includes a discount of ${{item.DiscountAmount | number: "#,0.00"}}){% endif %}
-{% endfor %}
+<!--{% for item in Cart.LineItems%}-->
+Produit: {{item.Quantity}} x {{item.ProductDisplayName}} $<!--{% if item.SalePrice < item.ListPrice %}-->{{item.SalePrice | number: "#,0.00"}}<!--{% else %}-->{{item.ListPrice | number: "#,0.00"}}<!--{% endif %}{% if item.DiscountAmount > 0 %}--> (includes a discount of ${{item.DiscountAmount | number: "#,0.00"}})<!--{% endif %}
+{% endfor %}-->
 Total des produits: ${{Cart.SubTotal | plus:Cart.DiscountTotal | number: "#,0.00" }}
 
 Rabais: ${{Cart.DiscountTotal | number: "#,0.00" }}
