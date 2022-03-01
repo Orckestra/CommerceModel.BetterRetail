@@ -252,7 +252,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="artifacts\OOE\BetterRetail\BetterRetailExecuteSQLScriptActivity\Product\AddConfigs.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Membership\InsertAuthorization.sql" />
+    <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddCustomLineItemAttributes.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddCustomAttributes.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddExternalPaymentProvider.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\FixProviders.sql" />
