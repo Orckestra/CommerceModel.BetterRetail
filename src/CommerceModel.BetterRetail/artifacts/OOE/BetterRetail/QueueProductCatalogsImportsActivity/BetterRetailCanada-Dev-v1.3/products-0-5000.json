@@ -24591,7 +24591,26 @@
     "hiddenInScope": false,
     "propertyBag": {
       "PrimaryParentCategoryId": "mens_shirts",
-      "TaxCategory": "Taxable"
+      "TaxCategory": "Taxable",
+      "LineItemTestBoolean": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "LineItemTestText": "Test string",
+      "LineItemTestLookup": "TestLookupValue1",
+      "LineItemTestMultiLookup": "TestLookupValue1|TestLookupValue2",
+      "LineItemTestDecimal": {
+        "__type": "ValueOfDecimal",
+        "value": 1.1
+      },
+      "LineItemTestInteger": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      },
+      "LineItemTestDatetime": {
+        "__type": "ValueOfDateTime",
+        "value": "2022-01-01T00:00:00Z"
+      }
     }
   },
   {

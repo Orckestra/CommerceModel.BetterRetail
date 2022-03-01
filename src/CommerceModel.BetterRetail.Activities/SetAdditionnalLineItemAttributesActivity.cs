@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Orckestra.Overture.Orders.Processing.Workflows.Activities;
+using Orckestra.Overture.ServiceModel;
 
 namespace CommerceModel.BetterRetail.Activities
 {
@@ -28,6 +30,11 @@ namespace CommerceModel.BetterRetail.Activities
         /// The message id for cultureName not found.
         /// </summary>
         public const string CultureNotFoundMessageId = "CultureNotFoundMessage";
+
+        /// <summary>
+        /// The starting characters of LineItem attributes used for testing
+        /// </summary>
+        public const string LineItemTest = nameof(LineItemTest);
 
         /// <summary>
         ///     Loads the product details in the line items of the cart.
@@ -75,6 +82,38 @@ namespace CommerceModel.BetterRetail.Activities
 
 
                     lineItem.PropertyBag.Remove(ImageUrlKey);
+                }
+
+                var testProductPropertyBag = product?.PropertyBag?.Where(p => p.Key.Contains(LineItemTest));
+
+                if (testProductPropertyBag != null && testProductPropertyBag.Any())
+                {
+                    foreach(var property in testProductPropertyBag)
+                    {
+                        var valueString = property.Value.ToString();
+                        if (bool.TryParse(valueString, out bool valueAsBoolean))
+                        {
+                            lineItem.PropertyBag[property.Key] = valueAsBoolean;
+                            continue;
+                        }
+
+                        if (int.TryParse(valueString, out int valueAsInt) && valueAsInt == int.Parse(valueString))
+                        {
+                            lineItem.PropertyBag[property.Key] = valueAsInt;
+                            continue;
+                        }
+                        if (decimal.TryParse(valueString, out decimal valueAsDecimal) && valueAsDecimal == decimal.Parse(valueString))
+                        {
+                            lineItem.PropertyBag[property.Key] = valueAsDecimal;
+                            continue;
+                        }
+                        if (DateTime.TryParse(valueString, out DateTime valueAsDateTime) && valueAsDateTime == DateTime.Parse(valueString))
+                        {
+                            lineItem.PropertyBag[property.Key] = valueAsDateTime;
+                            continue;
+                        }
+                        lineItem.PropertyBag[property.Key] = valueString;
+                    }
                 }
             }
 

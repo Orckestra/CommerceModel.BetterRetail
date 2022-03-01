@@ -252,6 +252,48 @@
           "sequenceNumber": 0,
           "isVariant": false,
           "isKeyVariant": false
+        },
+        {
+          "name": "LineItemTestBoolean",
+          "sequenceNumber": 0,
+          "isVariant": false,
+          "isKeyVariant": false
+        },
+        {
+          "name": "LineItemTestText",
+          "sequenceNumber": 0,
+          "isVariant": false,
+          "isKeyVariant": false
+        },
+        {
+          "name": "LineItemTestLookup",
+          "sequenceNumber": 0,
+          "isVariant": false,
+          "isKeyVariant": false
+        },
+        {
+          "name": "LineItemTestMultiLookup",
+          "sequenceNumber": 0,
+          "isVariant": false,
+          "isKeyVariant": false
+        },
+        {
+          "name": "LineItemTestDecimal",
+          "sequenceNumber": 0,
+          "isVariant": false,
+          "isKeyVariant": false
+        },
+        {
+          "name": "LineItemTestInteger",
+          "sequenceNumber": 0,
+          "isVariant": false,
+          "isKeyVariant": false
+        },
+        {
+          "name": "LineItemTestDatetime",
+          "sequenceNumber": 0,
+          "isVariant": false,
+          "isKeyVariant": false
         }
       ],
       "allowPriceLists": true
@@ -968,6 +1010,134 @@
       "groupName": "Default",
       "isHiddenInOrchestrator": false,
       "isSystem": false
+    },
+    {
+      "propertyName": "LineItemTestBoolean",
+      "displayName": {
+        "en-CA": "LineItem test boolean",
+        "en-US": "LineItem test boolean",
+        "fr-CA": "Booléen test pour article"
+      },
+      "minMultiplicity": "0",
+      "maxMultiplicity": "1",
+      "isMultilingual": false,
+      "dataType": "Boolean",
+      "includeInAllProductDefinition": false,
+      "includeInAllCategoryDefinition": false,
+      "includeInAllVariantDefinition": false,
+      "groupName": "Test",
+      "isHiddenInOrchestrator": false,
+      "isSystem": false
+    },
+    {
+      "propertyName": "LineItemTestText",
+      "displayName": {
+        "en-CA": "LineItem test text",
+        "en-US": "LineItem test text",
+        "fr-CA": "Texte test pour article"
+      },
+      "minMultiplicity": "0",
+      "maxMultiplicity": "1",
+      "isMultilingual": false,
+      "dataType": "Text",
+      "includeInAllProductDefinition": false,
+      "includeInAllCategoryDefinition": false,
+      "includeInAllVariantDefinition": false,
+      "groupName": "Test",
+      "isHiddenInOrchestrator": false,
+      "isSystem": false
+    },
+    {
+      "propertyName": "LineItemTestLookup",
+      "displayName": {
+        "en-CA": "LineItem test lookup",
+        "en-US": "LineItem test lookup",
+        "fr-CA": "Liste test pour article"
+      },
+      "minMultiplicity": "0",
+      "maxMultiplicity": "1",
+      "isMultilingual": false,
+      "referenceLookupName": "TestLookup",
+      "dataType": "Lookup",
+      "includeInAllProductDefinition": false,
+      "includeInAllCategoryDefinition": false,
+      "includeInAllVariantDefinition": false,
+      "groupName": "Test",
+      "isHiddenInOrchestrator": false,
+      "isSystem": false
+    },
+    {
+      "propertyName": "LineItemTestMultiLookup",
+      "displayName": {
+        "en-CA": "LineItem test multi lookup",
+        "en-US": "LineItem test multi lookup",
+        "fr-CA": "Bool\u00E9en test pour article"
+      },
+      "minMultiplicity": "0",
+      "maxMultiplicity": "*",
+      "isMultilingual": false,
+      "dataType": "Lookup",
+      "referenceLookupName": "TestLookup",
+      "includeInAllProductDefinition": false,
+      "includeInAllCategoryDefinition": false,
+      "includeInAllVariantDefinition": false,
+      "groupName": "Test",
+      "isHiddenInOrchestrator": false,
+      "isSystem": false
+    },
+    {
+      "propertyName": "LineItemTestDecimal",
+      "displayName": {
+        "en-CA": "LineItem test decimal",
+        "en-US": "LineItem test decimal",
+        "fr-CA": "D\u00E9cimal test pour article"
+      },
+      "minMultiplicity": "0",
+      "maxMultiplicity": "1",
+      "isMultilingual": false,
+      "dataType": "Decimal",
+      "includeInAllProductDefinition": false,
+      "includeInAllCategoryDefinition": false,
+      "includeInAllVariantDefinition": false,
+      "groupName": "Test",
+      "isHiddenInOrchestrator": false,
+      "isSystem": false
+    },
+    {
+      "propertyName": "LineItemTestInteger",
+      "displayName": {
+        "en-CA": "LineItem test integer",
+        "en-US": "LineItem test integer",
+        "fr-CA": "Entier test pour article"
+      },
+      "minMultiplicity": "0",
+      "maxMultiplicity": "1",
+      "isMultilingual": false,
+      "dataType": "Number",
+      "includeInAllProductDefinition": false,
+      "includeInAllCategoryDefinition": false,
+      "includeInAllVariantDefinition": false,
+      "groupName": "Test",
+      "isHiddenInOrchestrator": false,
+      "isSystem": false
+    },
+    {
+      "propertyName": "LineItemTestDatetime",
+      "displayName": {
+        "en-CA": "LineItem test datetime",
+        "en-US": "LineItem test datetime",
+        "fr-CA": "Date test pour article"
+      },
+      "minMultiplicity": "0",
+      "maxMultiplicity": "1",
+      "isMultilingual": false,
+      "dataType": "DateTime",
+      "includeInAllProductDefinition": false,
+      "includeInAllCategoryDefinition": false,
+      "includeInAllVariantDefinition": false,
+      "groupName": "Test",
+      "isHiddenInOrchestrator": false,
+      "isSystem": false
     }
   ],
   "attributeGroups": [
@@ -1062,6 +1232,16 @@
         "en-CA": "Recurring Orders",
         "en-US": "Recurring Orders",
         "fr-CA": "Récurrence de commandes"
+      },
+      "isSystem": false
+    },
+    {
+      "displayOrder": 0,
+      "name": "Test",
+      "displayName": {
+        "en-CA": "Test",
+        "en-US": "Test",
+        "fr-CA": "Test"
       },
       "isSystem": false
     }
@@ -22839,6 +23019,73 @@
       },
       "isActive": true,
       "isSystem": true
+    },
+    {
+      "id": "TestLookup",
+      "values": [
+        {
+          "value": "TestLookupValue1",
+          "displayName": {
+            "en-US": "Test lookup value 1",
+            "en-CA": "Test lookup value 1",
+            "fr-CA": "Valeur de liste test 2"
+          },
+          "sortOrder": 0,
+          "isActive": true,
+          "isSystem": false
+        },
+        {
+          "value": "TestLookupValue2",
+          "displayName": {
+            "en-US": "Test lookup value 2",
+            "en-CA": "Test lookup value 2",
+            "fr-CA": "Valeur de liste test 2"
+          },
+          "sortOrder": 1,
+          "isActive": true,
+          "isSystem": false
+        },
+        {
+          "value": "TestLookupValue3",
+          "displayName": {
+            "en-US": "Test lookup value 3",
+            "en-CA": "Test lookup value 3",
+            "fr-CA": "Valeur de liste test 3"
+          },
+          "sortOrder": 2,
+          "isActive": true,
+          "isSystem": false
+        },
+        {
+          "value": "TestLookupValue4",
+          "displayName": {
+            "en-US": "Test lookup value 4",
+            "en-CA": "Test lookup value 4",
+            "fr-CA": "Valeur de liste test 4"
+          },
+          "sortOrder": 3,
+          "isActive": true,
+          "isSystem": false
+        },
+        {
+          "value": "TestLookupValue5",
+          "displayName": {
+            "en-US": "Test lookup value 5",
+            "en-CA": "Test lookup value 5",
+            "fr-CA": "Valeur de liste test 5"
+          },
+          "sortOrder": 4,
+          "isActive": true,
+          "isSystem": false
+        }
+      ],
+      "displayName": {
+        "en-CA": "Test Lookup",
+        "en-US": "Test Lookup",
+        "fr-CA": "Liste test"
+      },
+      "isActive": true,
+      "isSystem": false
     }
   ]
 }
