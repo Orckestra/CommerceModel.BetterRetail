@@ -102,14 +102,14 @@ namespace CommerceModel.BetterRetail.Activities
                 lineItem.ProductSummary.AllowSelectionWithoutScan = allowSelectionWithoutScan;
 
                 if (!string.IsNullOrWhiteSpace(imageUrl))
+                {
                     lineItem.PropertyBag[ImageUrlKey] = imageUrl;
+                }
                 else
                 {
-                    context.ProcessingRecordTracker.TrackError(
-imageUrl ?? CultureNotFoundMessageId,
-"The cultureName of the cart was not provided in context.CurrentOrder.Cart.CultureName. Product information will not be retrieved.    " + imageUrl + "-----",
-new Dictionary<string, object> { { "CartId", context.CurrentOrder.Cart.Id } });
-
+                    context.ProcessingRecordTracker.TrackError(imageUrl ?? CultureNotFoundMessageId,
+                        "The cultureName of the cart was not provided in context.CurrentOrder.Cart.CultureName. Product information will not be retrieved.    " + imageUrl + "-----",
+                        new Dictionary<string, object> { { "CartId", context.CurrentOrder.Cart.Id } });
 
                     lineItem.PropertyBag.Remove(ImageUrlKey);
                 }
