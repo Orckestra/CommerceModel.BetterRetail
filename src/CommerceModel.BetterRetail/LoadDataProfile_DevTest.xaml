@@ -1,5 +1,6 @@
 ﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="CommerceModel.BetterRetail.LoadDataProfile_DevTest" this:LoadDataProfile_DevTest.SmtpPort="587"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:cba="clr-namespace:CommerceModel.BetterRetail.Activities;assembly=CommerceModel.BetterRetail.Activities"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
  xmlns:oct="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities;assembly=OrckestraCommerce.CommerceModelUtilities"
@@ -172,20 +173,20 @@
           </InArgument>
         </Assign.Value>
       </Assign>
-      <oct:ExecuteSQLScriptActivity ResultBlobUrl="{x:Null}" DisplayName="ExecutePreProductCatalogSQLScriptActivity" sap2010:WorkflowViewState.IdRef="ExecuteSQLScriptActivity_2">
-        <oct:ExecuteSQLScriptActivity.CommerceModelName>
+      <cba:BetterRetailExecuteSQLScriptActivity ResultBlobUrl="{x:Null}">
+        <cba:BetterRetailExecuteSQLScriptActivity.CommerceModelName>
           <InArgument x:TypeArguments="x:String">
             <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
           </InArgument>
-        </oct:ExecuteSQLScriptActivity.CommerceModelName>
-      </oct:ExecuteSQLScriptActivity>
-      <oct:WaitForCorrelatedTasksCompletionsActivity PollingDelay="{x:Null}" ResultBlobUrl="{x:Null}">
+        </cba:BetterRetailExecuteSQLScriptActivity.CommerceModelName>
+        <sap2010:WorkflowViewState.IdRef>BetterRetailExecuteSQLScriptActivity_1</sap2010:WorkflowViewState.IdRef>
+      </cba:BetterRetailExecuteSQLScriptActivity>
+      <oct:WaitForCorrelatedTasksCompletionsActivity PollingDelay="{x:Null}" ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="WaitForCorrelatedTasksCompletionsActivity_4">
         <oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
           <InArgument x:TypeArguments="s:Guid">
             <mca:CSharpValue x:TypeArguments="s:Guid">CorrelationId</mca:CSharpValue>
           </InArgument>
         </oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
-        <sap2010:WorkflowViewState.IdRef>WaitForCorrelatedTasksCompletionsActivity_4</sap2010:WorkflowViewState.IdRef>
       </oct:WaitForCorrelatedTasksCompletionsActivity>
       <octp:QueueProductCatalogsImportsActivity PimImportTaskIds="{x:Null}" ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueProductCatalogsImportsActivity_3">
         <octp:QueueProductCatalogsImportsActivity.CommerceModelName>
@@ -355,7 +356,7 @@
       </oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
     </oct:WaitForCorrelatedTasksCompletionsActivity>
     <octs:QueueSearchIndexingActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueSearchIndexingActivity_1" />
-    <sads:DebugSymbol.Symbol>d11DOlxHaXRcQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXExvYWREYXRhUHJvZmlsZV9EZXZUZXN0LnhhbWxEJwcnSQEEAY4BAZIBAQMiByJJAQKBAQPnAg4CAQGFATSFAUICAQKHAQWNASwDAb8DjgEFjgHnAQMBugOPAQWaASADAZ8DmwEFoQEpAwGQA6IBBaMCEAMBmQGkAgWkAooBAwGYAaUCBaUChgEDAZcBpgIFrAI6AwGJAa0CBdYCLgIBINcCBd0CJAIBEt4CBeQCNQIBBOUCBeUCggECAQOHAZ8BhwG9AQMBzQOKAQuKAVoDAcADjgHFAY4BzAEDAb4DjgGTAY4BuQEDAb0DjgHhAY4B5AEDAbwDjgHUAY4B2AEDAbsDlwELlwFaAwGtA5IBC5IBWgMBoAOeAQueAVoDAZIDmwFRmwF/AwGRA6MBB64BEAMB9QKvAQe1ASYDAecCtgEHvQE3AwHZAr4BB9sBMgMBsQLcAQfiAS4DAaMC4wEH6QEwAwGVAuoBB/ABNwMBhwLxAQf8ASgDAewB/QEHiAIkAwHRAYkCB48CNQMBwwGQAgebAkADAagBnAIHogI3AwGaAakCC6kCWgMBigG6Agu6AmsCAXy/Agu/AlECAW/JAgvJAlACAWLTAgvTAlUCAVXOAgvOAloCAUjEAgvEAlUCATuwAguwAmgCAS61Agu1AmsCASHaAgvaAloCARPhAgvhAlQCAQWrAQ2rAVcDAYMDpgENpgFeAwH2ArIBDbIBXAMB6AK5AQ25AVYDAdoC2AEN2AFeAwHMAsYBDdMBFAMBvwLBAQ3BAVwDAbIC3wEN3wFcAwGkAuYBDeYBXAMBlgLtAQ3tAVYDAYgC+QEN+QHlAQMB+gH0AQ30AVwDAe0BhQINhQLaBgMB3wGAAg2AAlwDAdIBjAINjAJcAwHEAZgCDZgCXgMBtgGTAg2TAmQDAakBnwINnwJWAwGbAQ==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d11DOlxHaXRcQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXExvYWREYXRhUHJvZmlsZV9EZXZUZXN0LnhhbWxEKAcoSQEEAY4BAZIBAQMjByNJAQKCAQPoAg4CAQGGATSGAUICAQKIAQWOASwDAb8DjwEFjwHnAQMBugOQAQWbASADAZ8DnAEFogEpAwGQA6MBBaQCEAMBmQGlAgWlAooBAwGYAaYCBaYChgEDAZcBpwIFrQI6AwGJAa4CBdcCLgIBINgCBd4CJAIBEt8CBeUCNQIBBOYCBeYCggECAQOIAZ8BiAG9AQMBzQOLAQuLAVoDAcADjwHFAY8BzAEDAb4DjwGTAY8BuQEDAb0DjwHhAY8B5AEDAbwDjwHUAY8B2AEDAbsDmAELmAFaAwGtA5MBC5MBWgMBoAOfAQufAVoDAZIDnAFRnAF/AwGRA6QBB68BEAMB9QKwAQe3ATIDAecCuAEHvgE3AwHZAr8BB9wBMgMBsQLdAQfjAS4DAaMC5AEH6gEwAwGVAusBB/EBNwMBhwLyAQf9ASgDAewB/gEHiQIkAwHRAYoCB5ACNQMBwwGRAgecAkADAagBnQIHowI3AwGaAaoCC6oCWgMBigG7Agu7AmsCAXzAAgvAAlECAW/KAgvKAlACAWLUAgvUAlUCAVXPAgvPAloCAUjFAgvFAlUCATuxAguxAmgCAS62Agu2AmsCASHbAgvbAloCARPiAgviAlQCAQWsAQ2sAVcDAYMDpwENpwFeAwH2ArMBDbMBXAMB6AK7AQ27AVYDAdoC2QEN2QFeAwHMAscBDdQBFAMBvwLCAQ3CAVwDAbIC4AEN4AFcAwGkAucBDecBXAMBlgLuAQ3uAVYDAYgC+gEN+gHlAQMB+gH1AQ31AVwDAe0BhgINhgLaBgMB3wGBAg2BAlwDAdIBjQINjQJcAwHEAZkCDZkCXgMBtgGUAg2UAmQDAakBoAINoAJWAwGbAQ==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -364,7 +365,7 @@
       <sap2010:ViewStateData Id="CreateUsersActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="ImportEmailTemplatesActivity_2" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="243.2,62.4" />
-      <sap2010:ViewStateData Id="ExecuteSQLScriptActivity_2" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
+      <sap2010:ViewStateData Id="BetterRetailExecuteSQLScriptActivity_1" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
       <sap2010:ViewStateData Id="WaitForCorrelatedTasksCompletionsActivity_4" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
       <sap2010:ViewStateData Id="QueueProductCatalogsImportsActivity_3" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
       <sap2010:ViewStateData Id="QueueOrderSchemaImportActivity_1" sap:VirtualizedContainerService.HintSize="243.2,22.4" />

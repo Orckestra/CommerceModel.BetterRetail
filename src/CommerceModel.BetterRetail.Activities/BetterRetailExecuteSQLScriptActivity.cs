@@ -10,8 +10,13 @@ using System.Threading.Tasks;
 
 namespace CommerceModel.BetterRetail.Activities
 {
+    /// <summary>
+    /// Custom implementation of ExecuteSQLScriptActivity for BetterRetail
+    /// that is required to run before QueueProductCatalogsImportsActivity
+    /// to set MaxNumberOfVariantAttributes and MaxNumberOfProductAttributes in product database
+    /// </summary>
 #pragma warning disable S101 // Types should be named in PascalCase
-    public class ExecutePreProductsCatalogSQLScriptActivity : TaskActivity
+    public class BetterRetailExecuteSQLScriptActivity : TaskActivity
 #pragma warning restore S101 // Types should be named in PascalCase
     {
         [RequiredArgument]
