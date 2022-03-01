@@ -254,43 +254,43 @@
           "isKeyVariant": false
         },
         {
-          "name": "LineItemTestBoolean",
+          "name": "TestBoolean",
           "sequenceNumber": 0,
           "isVariant": false,
           "isKeyVariant": false
         },
         {
-          "name": "LineItemTestText",
+          "name": "TestText",
           "sequenceNumber": 0,
           "isVariant": false,
           "isKeyVariant": false
         },
         {
-          "name": "LineItemTestLookup",
+          "name": "TestLookup",
           "sequenceNumber": 0,
           "isVariant": false,
           "isKeyVariant": false
         },
         {
-          "name": "LineItemTestMultiLookup",
+          "name": "TestMultiLookup",
           "sequenceNumber": 0,
           "isVariant": false,
           "isKeyVariant": false
         },
         {
-          "name": "LineItemTestDecimal",
+          "name": "TestDecimal",
           "sequenceNumber": 0,
           "isVariant": false,
           "isKeyVariant": false
         },
         {
-          "name": "LineItemTestInteger",
+          "name": "TestInteger",
           "sequenceNumber": 0,
           "isVariant": false,
           "isKeyVariant": false
         },
         {
-          "name": "LineItemTestDatetime",
+          "name": "TestDatetime",
           "sequenceNumber": 0,
           "isVariant": false,
           "isKeyVariant": false
@@ -1012,7 +1012,7 @@
       "isSystem": false
     },
     {
-      "propertyName": "LineItemTestBoolean",
+      "propertyName": "TestBoolean",
       "displayName": {
         "en-CA": "LineItem test boolean",
         "en-US": "LineItem test boolean",
@@ -1030,7 +1030,7 @@
       "isSystem": false
     },
     {
-      "propertyName": "LineItemTestText",
+      "propertyName": "TestText",
       "displayName": {
         "en-CA": "LineItem test text",
         "en-US": "LineItem test text",
@@ -1048,7 +1048,7 @@
       "isSystem": false
     },
     {
-      "propertyName": "LineItemTestLookup",
+      "propertyName": "TestLookup",
       "displayName": {
         "en-CA": "LineItem test lookup",
         "en-US": "LineItem test lookup",
@@ -1067,7 +1067,7 @@
       "isSystem": false
     },
     {
-      "propertyName": "LineItemTestMultiLookup",
+      "propertyName": "TestMultiLookup",
       "displayName": {
         "en-CA": "LineItem test multi lookup",
         "en-US": "LineItem test multi lookup",
@@ -1086,7 +1086,7 @@
       "isSystem": false
     },
     {
-      "propertyName": "LineItemTestDecimal",
+      "propertyName": "TestDecimal",
       "displayName": {
         "en-CA": "LineItem test decimal",
         "en-US": "LineItem test decimal",
@@ -1104,7 +1104,7 @@
       "isSystem": false
     },
     {
-      "propertyName": "LineItemTestInteger",
+      "propertyName": "TestInteger",
       "displayName": {
         "en-CA": "LineItem test integer",
         "en-US": "LineItem test integer",
@@ -1122,7 +1122,7 @@
       "isSystem": false
     },
     {
-      "propertyName": "LineItemTestDatetime",
+      "propertyName": "TestDatetime",
       "displayName": {
         "en-CA": "LineItem test datetime",
         "en-US": "LineItem test datetime",

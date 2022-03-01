@@ -24592,22 +24592,22 @@
     "propertyBag": {
       "PrimaryParentCategoryId": "mens_shirts",
       "TaxCategory": "Taxable",
-      "LineItemTestBoolean": {
+      "TestBoolean": {
         "__type": "ValueOfBoolean",
         "value": true
       },
-      "LineItemTestText": "Test string",
-      "LineItemTestLookup": "TestLookupValue1",
-      "LineItemTestMultiLookup": "TestLookupValue1|TestLookupValue2",
-      "LineItemTestDecimal": {
+      "TestText": "Test string",
+      "TestLookup": "TestLookupValue1",
+      "TestMultiLookup": "TestLookupValue1|TestLookupValue2",
+      "TestDecimal": {
         "__type": "ValueOfDecimal",
         "value": 1.1
       },
-      "LineItemTestInteger": {
+      "TestInteger": {
         "__type": "ValueOfInt32",
         "value": 1
       },
-      "LineItemTestDatetime": {
+      "TestDatetime": {
         "__type": "ValueOfDateTime",
         "value": "2022-01-01T00:00:00Z"
       }

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Orckestra.Overture.Orders.Processing.Workflows.Activities;
-using Orckestra.Overture.ServiceModel;
+using Orckestra.Overture.ServiceModel.Orders;
+using Orckestra.Overture.ServiceModel.Products;
 
 namespace CommerceModel.BetterRetail.Activities
 {
@@ -32,9 +32,39 @@ namespace CommerceModel.BetterRetail.Activities
         public const string CultureNotFoundMessageId = "CultureNotFoundMessage";
 
         /// <summary>
-        /// The starting characters of LineItem attributes used for testing
+        /// The TestBoolean property bag key
         /// </summary>
-        public const string LineItemTest = nameof(LineItemTest);
+        public const string TestBoolean = nameof(TestBoolean);
+
+        /// <summary>
+        /// The TestText property bag key
+        /// </summary>
+        public const string TestText = nameof(TestText);
+
+        /// <summary>
+        /// The TestLookup property bag key
+        /// </summary>
+        public const string TestLookup = nameof(TestLookup);
+
+        /// <summary>
+        /// The TestMultiLookup property bag key
+        /// </summary>
+        public const string TestMultiLookup = nameof(TestMultiLookup);
+
+        /// <summary>
+        /// The TestDecimal property bag key
+        /// </summary>
+        public const string TestDecimal = nameof(TestDecimal);
+
+        /// <summary>
+        /// The TestInteger property bag key
+        /// </summary>
+        public const string TestInteger = nameof(TestInteger);
+
+        /// <summary>
+        /// The TestDatetime property bag key
+        /// </summary>
+        public const string TestDatetime = nameof(TestDatetime);
 
         /// <summary>
         ///     Loads the product details in the line items of the cart.
@@ -75,52 +105,64 @@ namespace CommerceModel.BetterRetail.Activities
                     lineItem.PropertyBag[ImageUrlKey] = imageUrl;
                 else
                 {
-                                    context.ProcessingRecordTracker.TrackError(
-    imageUrl ?? CultureNotFoundMessageId,
-    "The cultureName of the cart was not provided in context.CurrentOrder.Cart.CultureName. Product information will not be retrieved.    " + imageUrl + "-----",
-    new Dictionary<string, object> { { "CartId", context.CurrentOrder.Cart.Id } });
+                    context.ProcessingRecordTracker.TrackError(
+imageUrl ?? CultureNotFoundMessageId,
+"The cultureName of the cart was not provided in context.CurrentOrder.Cart.CultureName. Product information will not be retrieved.    " + imageUrl + "-----",
+new Dictionary<string, object> { { "CartId", context.CurrentOrder.Cart.Id } });
 
 
                     lineItem.PropertyBag.Remove(ImageUrlKey);
                 }
 
-                var testProductPropertyBag = product?.PropertyBag?.Where(p => p.Key.Contains(LineItemTest));
-
-                if (testProductPropertyBag != null && testProductPropertyBag.Any())
-                {
-                    foreach(var property in testProductPropertyBag)
-                    {
-                        var valueString = property.Value.ToString();
-                        if (bool.TryParse(valueString, out bool valueAsBoolean))
-                        {
-                            lineItem.PropertyBag[property.Key] = valueAsBoolean;
-                            continue;
-                        }
-
-                        if (int.TryParse(valueString, out int valueAsInt) && valueAsInt == int.Parse(valueString))
-                        {
-                            lineItem.PropertyBag[property.Key] = valueAsInt;
-                            continue;
-                        }
-                        if (decimal.TryParse(valueString, out decimal valueAsDecimal) && valueAsDecimal == decimal.Parse(valueString))
-                        {
-                            lineItem.PropertyBag[property.Key] = valueAsDecimal;
-                            continue;
-                        }
-                        if (DateTime.TryParse(valueString, out DateTime valueAsDateTime) && valueAsDateTime == DateTime.Parse(valueString))
-                        {
-                            lineItem.PropertyBag[property.Key] = valueAsDateTime;
-                            continue;
-                        }
-                        lineItem.PropertyBag[property.Key] = valueString;
-                    }
-                }
+                AddPropertyBagForType(lineItem, product, nameof(Boolean), TestBoolean);
+                AddPropertyBagForType(lineItem, product, nameof(String), TestText);
+                AddPropertyBagForType(lineItem, product, nameof(String), TestLookup);
+                AddPropertyBagForType(lineItem, product, nameof(String), TestMultiLookup);
+                AddPropertyBagForType(lineItem, product, nameof(Decimal), TestDecimal);
+                AddPropertyBagForType(lineItem, product, nameof(Int32), TestInteger);
+                AddPropertyBagForType(lineItem, product, nameof(DateTime), TestDatetime);
             }
 
             return Task.CompletedTask;
         }
 
+        private void AddPropertyBagForType(LineItem lineItem,
+            Product product,
+            string type,
+            string key)
+        {
+            switch (type)
+            {
+                case nameof(String):
+                    string stringValue = product?.PropertyBag?.GetOrDefault(key, string.Empty);
+                    AddValueWhenDefined(lineItem, key, stringValue);
+                    break;
+                case nameof(Boolean):
+                    bool? booleanValue = product?.PropertyBag?.GetOrDefault(TestBoolean, false);
+                    AddValueWhenDefined(lineItem, key, booleanValue);
+                    break;
+                case nameof(Decimal):
+                    decimal? decimalValue = product?.PropertyBag?.GetOrDefault(TestDecimal, new decimal());
+                    AddValueWhenDefined(lineItem, key, decimalValue);
+                    break;
+                case nameof(Int32):
+                    int? integerValue = product?.PropertyBag?.GetOrDefault(TestInteger, new int());
+                    AddValueWhenDefined(lineItem, key, integerValue);
+                    break;
+                case nameof(DateTime):
+                    DateTime? dateTimeValue = product?.PropertyBag?.GetOrDefault(TestDatetime, new DateTime());
+                    AddValueWhenDefined(lineItem, key, dateTimeValue);
+                    break;
+                default:
+                    break;
+            }
+        }
 
+        private void AddValueWhenDefined<T>(LineItem lineItem, string key, T value)
+        {
+            if (value == null) return;
+            lineItem.PropertyBag[key] = value;
+        }
     }
 }
 ;

@@ -136,10 +136,10 @@ GO
 
 IF NOT EXISTS(SELECT 1 
 				FROM sys.columns
-				WHERE Name = N'LineItemTestBoolean'
+				WHERE Name = N'TestBoolean'
 				AND Object_ID = Object_ID(N'dbo.LINEITEM'))
 BEGIN
-		ALTER TABLE dbo.[LINEITEM] ADD LineItemTestBoolean BIT NULL;
+		ALTER TABLE dbo.[LINEITEM] ADD TestBoolean BIT NULL;
 END
 
 IF NOT EXISTS(SELECT 1
@@ -167,12 +167,12 @@ BEGIN
 			,[DataTypeSequence]
 		) VALUES (
 			'LineItem'
-			,'LineItemTestBoolean'
+			,'TestBoolean'
 			,0
 			,'Boolean'
 			,'False'
 			,'Test'
-			,'LineItem test boolean'
+			,'Test boolean'
 			,null
 			,null
 			,'0'
@@ -199,7 +199,7 @@ BEGIN
 				) VALUES (
 					'98a2cede-389c-467e-99b2-5350d113e921'
 					,'en-US'
-					,'LineItem Test Boolean'
+					,'Test Boolean'
 				)
 END
 
@@ -215,7 +215,7 @@ BEGIN
 				) VALUES (
 					'98a2cede-389c-467e-99b2-5350d113e921'
 					,'fr-CA'
-					,'Booléen test pour article'
+					,'Booléen test'
 				)
 END
 
@@ -223,10 +223,10 @@ END
 
 IF NOT EXISTS(SELECT 1 
 				FROM sys.columns
-				WHERE Name = N'LineItemTestText'
+				WHERE Name = N'TestText'
 				AND Object_ID = Object_ID(N'dbo.LINEITEM'))
 BEGIN
-	ALTER TABLE dbo.[LINEITEM] ADD LineItemTestText NVARCHAR(32) NULL;
+	ALTER TABLE dbo.[LINEITEM] ADD TestText NVARCHAR(32) NULL;
 END
 
 IF NOT EXISTS(SELECT 1
@@ -254,12 +254,12 @@ BEGIN
 			,[DataTypeSequence]
 		) VALUES (
 			'LineItem'
-			,'LineItemTestText'
+			,'TestText'
 			,0
 			,'Text'
 			,null
 			,'Test'
-			,'LineItem test text'
+			,'Test text'
 			,0
 			,32
 			,'0'
@@ -286,7 +286,7 @@ BEGIN
 				) VALUES (
 					'42ff767f-3398-43c6-a5d4-48a3f14a54d4'
 					,'en-US'
-					,'LineItem test text'
+					,'Test text'
 				)
 END
 
@@ -302,7 +302,7 @@ BEGIN
 				) VALUES (
 					'42ff767f-3398-43c6-a5d4-48a3f14a54d4'
 					,'fr-CA'
-					,'Texte test pour article'
+					,'Texte test'
 				)
 END
 
@@ -310,10 +310,10 @@ END
 
 IF NOT EXISTS(SELECT 1 
 				FROM sys.columns
-				WHERE Name = N'LineItemTestLookup'
+				WHERE Name = N'TestLookup'
 				AND Object_ID = Object_ID(N'dbo.LINEITEM'))
 BEGIN
-	ALTER TABLE dbo.[LINEITEM] ADD LineItemTestLookup NVARCHAR(MAX) NULL;
+	ALTER TABLE dbo.[LINEITEM] ADD TestLookup NVARCHAR(MAX) NULL;
 END
 
 IF NOT EXISTS(SELECT 1
@@ -341,12 +341,12 @@ BEGIN
 			,[DataTypeSequence]
 		) VALUES (
 			'LineItem'
-			,'LineItemTestLookup'
+			,'TestLookup'
 			,0
 			,'Lookup'
 			,null
 			,'Test'
-			,'LineItem test lookup'
+			,'Test lookup'
 			,null
 			,null
 			,'0'
@@ -373,7 +373,7 @@ BEGIN
 				) VALUES (
 					'5488db52-dce0-49fb-8b4f-bd7286218f16'
 					,'en-US'
-					,'LineItem test lookup'
+					,'Test lookup'
 				)
 END
 
@@ -389,7 +389,7 @@ BEGIN
 				) VALUES (
 					'5488db52-dce0-49fb-8b4f-bd7286218f16'
 					,'fr-CA'
-					,'Liste test pour article'
+					,'Liste test'
 				)
 END
 
@@ -397,10 +397,10 @@ END
 
 IF NOT EXISTS(SELECT 1 
 				FROM sys.columns
-				WHERE Name = N'LineItemTestMultiLookup'
+				WHERE Name = N'TestMultiLookup'
 				AND Object_ID = Object_ID(N'dbo.LINEITEM'))
 BEGIN
-	ALTER TABLE dbo.[LINEITEM] ADD LineItemTestMultiLookup NVARCHAR(MAX) NULL;
+	ALTER TABLE dbo.[LINEITEM] ADD TestMultiLookup NVARCHAR(MAX) NULL;
 END
 
 IF NOT EXISTS(SELECT 1
@@ -428,12 +428,12 @@ BEGIN
 			,[DataTypeSequence]
 		) VALUES (
 			'LineItem'
-			,'LineItemTestMultiLookup'
+			,'TestMultiLookup'
 			,0
 			,'Lookup'
 			,null
 			,'Test'
-			,'LineItem test multi lookup'
+			,'Test multi lookup'
 			,null
 			,null
 			,'0'
@@ -460,7 +460,7 @@ BEGIN
 				) VALUES (
 					'8a1a31cb-aaa0-43ce-9871-c98ae09735b2'
 					,'en-US'
-					,'LineItem test multi lookup'
+					,'Test multi lookup'
 				)
 END
 
@@ -476,7 +476,7 @@ BEGIN
 				) VALUES (
 					'8a1a31cb-aaa0-43ce-9871-c98ae09735b2'
 					,'fr-CA'
-					,'Liste à sélection multiple test pour article'
+					,'Liste à sélection multiple test'
 				)
 END
 
@@ -484,10 +484,10 @@ END
 
 IF NOT EXISTS(SELECT 1 
 				FROM sys.columns
-				WHERE Name = N'LineItemTestDecimal'
+				WHERE Name = N'TestDecimal'
 				AND Object_ID = Object_ID(N'dbo.LINEITEM'))
 BEGIN
-	ALTER TABLE dbo.[LINEITEM] ADD LineItemTestDecimal DECIMAL(19,5) NULL;
+	ALTER TABLE dbo.[LINEITEM] ADD TestDecimal DECIMAL(19,5) NULL;
 END
 
 IF NOT EXISTS(SELECT 1
@@ -515,7 +515,7 @@ BEGIN
 			,[DataTypeSequence]
 		) VALUES (
 			'LineItem'
-			,'LineItemTestDecimal'
+			,'TestDecimal'
 			,0
 			,'Decimal'
 			,null
@@ -547,7 +547,7 @@ BEGIN
 				) VALUES (
 					'35e62c7b-0318-42a5-bf30-56767d3874ad'
 					,'en-US'
-					,'LineItem test decimal'
+					,'Test decimal'
 				)
 END
 
@@ -563,7 +563,7 @@ BEGIN
 				) VALUES (
 					'35e62c7b-0318-42a5-bf30-56767d3874ad'
 					,'fr-CA'
-					,'Décimal test pour article'
+					,'Décimal test'
 				)
 END
 
@@ -571,10 +571,10 @@ END
 
 IF NOT EXISTS(SELECT 1 
 				FROM sys.columns
-				WHERE Name = N'LineItemTestInteger'
+				WHERE Name = N'TestInteger'
 				AND Object_ID = Object_ID(N'dbo.LINEITEM'))
 BEGIN
-	ALTER TABLE dbo.[LINEITEM] ADD LineItemTestInteger INT NULL;
+	ALTER TABLE dbo.[LINEITEM] ADD TestInteger INT NULL;
 END
 
 IF NOT EXISTS(SELECT 1
@@ -602,12 +602,12 @@ BEGIN
 			,[DataTypeSequence]
 		) VALUES (
 			'LineItem'
-			,'LineItemTestInteger'
+			,'TestInteger'
 			,0
 			,'Integer'
 			,null
 			,'Test'
-			,'LineItem test integer'
+			,'Test integer'
 			,null
 			,null
 			,'0'
@@ -634,7 +634,7 @@ BEGIN
 				) VALUES (
 					'ce5ee508-4c71-40f4-a587-99c7aa34a34e'
 					,'en-US'
-					,'LineItem test integer'
+					,'Test integer'
 				)
 END
 
@@ -650,7 +650,7 @@ BEGIN
 				) VALUES (
 					'ce5ee508-4c71-40f4-a587-99c7aa34a34e'
 					,'fr-CA'
-					,'Entier test pour article'
+					,'Entier test'
 				)
 END
 
@@ -658,10 +658,10 @@ END
 
 IF NOT EXISTS(SELECT 1 
 				FROM sys.columns
-				WHERE Name = N'LineItemTestDatetime'
+				WHERE Name = N'TestDatetime'
 				AND Object_ID = Object_ID(N'dbo.LINEITEM'))
 BEGIN
-	ALTER TABLE dbo.[LINEITEM] ADD LineItemTestDatetime DATETIME2(3) NULL;
+	ALTER TABLE dbo.[LINEITEM] ADD TestDatetime DATETIME2(3) NULL;
 END
 
 IF NOT EXISTS(SELECT 1
@@ -689,12 +689,12 @@ BEGIN
 			,[DataTypeSequence]
 		) VALUES (
 			'LineItem'
-			,'LineItemTestDatetime'
+			,'TestDatetime'
 			,0
 			,'Datetime'
 			,null
 			,'Test'
-			,'LineItem test datetime'
+			,'Test datetime'
 			,null
 			,null
 			,'0'
@@ -721,7 +721,7 @@ BEGIN
 				) VALUES (
 					'6c7fb2b8-2c3b-4f4c-a655-67eeb21ae7c8'
 					,'en-US'
-					,'LineItem test datetime'
+					,'Test datetime'
 				)
 END
 
@@ -737,6 +737,6 @@ BEGIN
 				) VALUES (
 					'6c7fb2b8-2c3b-4f4c-a655-67eeb21ae7c8'
 					,'fr-CA'
-					,'Date test pour article'
+					,'Date test'
 				)
 END
