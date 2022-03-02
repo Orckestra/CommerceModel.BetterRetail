@@ -1,11 +1,11 @@
 {
-  "number": "BRU-105",
+  "number": "BRU-100",
   "isActive": true,
-  "name": "BRU-El Paso",
+  "name": "BRU-NewYork",
   "displayName": {
-    "en-CA": "BRU-El Paso",
-    "en-US": "BRU-El Paso",
-    "fr-CA": "BRU-El Paso"
+    "en-CA": "BRU-NewYork",
+    "en-US": "BRU-NewYork",
+    "fr-CA": "BRU-NewYork"
   },
   "description": {
     "en-CA": "",
@@ -13,14 +13,14 @@
     "fr-CA": ""
   },
   "storeType": "Physical",
-  "phoneNumber": "915 584-6556",
-  "isPickUpLocation": false,
+  "phoneNumber": "12123810712",
+  "isPickUpLocation": true,
   "supportPickUp": false,
   "supportDelivery": false,
   "supportShipping": false,
-  "supportShipToStore": true,
+  "supportShipToStore": false,
   "operatingStatus": {
-    "id": "614E825E-6A50-4F38-A96A-345F1343B3A4",
+    "id": "825E33F8-1DE7-4E26-BDEF-D4A598232885",
     "availabilityStatus": {
       "isAvailable": true,
       "estimatedDuration": {
@@ -66,7 +66,7 @@
     }
   },
   "schedule": {
-    "fulfillmentLocationId": "614e825e-6a50-4f38-a96a-345f1343b3a4",
+    "fulfillmentLocationId": "825e33f8-1de7-4e26-bdef-d4a598232885",
     "openingHours": [
       {
         "isClosed": false,
@@ -115,39 +115,39 @@
     "scheduleType": "OpeningHours"
   },
   "pickUpSchedule": {
-    "fulfillmentLocationId": "614e825e-6a50-4f38-a96a-345f1343b3a4",
+    "fulfillmentLocationId": "825e33f8-1de7-4e26-bdef-d4a598232885",
     "openingHours": [],
     "openingHourExceptions": [],
     "scheduleType": "Pickup"
   },
   "deliverySchedule": {
-    "fulfillmentLocationId": "614e825e-6a50-4f38-a96a-345f1343b3a4",
+    "fulfillmentLocationId": "825e33f8-1de7-4e26-bdef-d4a598232885",
     "openingHours": [],
     "openingHourExceptions": [],
     "scheduleType": "Delivery"
   },
-  "timeZone": "Mountain Standard Time",
+  "timeZone": "Eastern Standard Time",
   "deliveryScheduleManaged": false,
   "pickUpScheduleManaged": false,
-  "inventoryLocationId": "BRU-105",
+  "inventoryLocationId": "BRU-103",
   "inventoryProviderId": "OvertureQuantitative",
   "isInventoryEnabled": true,
   "isAtpEnabled": true,
   "addresses": [
     {
-      "id": "cb97e5c2df7f40648a6f6a9cb914cc90",
-      "addressName": "MainAddress",
-      "city": "Sunland Park",
+      "id": "cabd5c08dde64de9a52c4211949b5735",
+      "addressName": "Store",
+      "city": "New York",
       "countryCode": "US",
-      "regionCode": "US-TX",
-      "line1": "801 Sunland Park Dr, Unit 346",
-      "postalCode": "79912",
+      "regionCode": "US-NY",
+      "line1": "113 Sullivan St",
+      "postalCode": "10012",
       "isPreferredBilling": false,
       "isPreferredShipping": false,
       "propertyBag": {
         "Address_Id": {
           "__type": "ValueOfInt32",
-          "value": 37487
+          "value": 37485
         }
       }
     }
