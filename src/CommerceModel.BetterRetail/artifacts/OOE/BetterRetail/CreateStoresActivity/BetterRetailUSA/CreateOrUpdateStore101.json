@@ -1,11 +1,11 @@
 {
-  "number": "BRU-100",
+  "number": "BRU-101",
   "isActive": true,
-  "name": "BRU-San Francisco",
+  "name": "BRU-NewYork",
   "displayName": {
-    "en-CA": "BRU-San Francisco",
-    "en-US": "BRU-San Francisco",
-    "fr-CA": "BRU-San Francisco"
+    "en-CA": "BRU-NewYork",
+    "en-US": "BRU-NewYork",
+    "fr-CA": "BRU-NewYork"
   },
   "description": {
     "en-CA": "",
@@ -13,14 +13,14 @@
     "fr-CA": ""
   },
   "storeType": "Physical",
-  "phoneNumber": "415 734-9373",
+  "phoneNumber": "12123810712",
   "isPickUpLocation": true,
   "supportPickUp": false,
   "supportDelivery": false,
   "supportShipping": false,
   "supportShipToStore": false,
   "operatingStatus": {
-    "id": "FDA044EA-1708-42C2-88CD-D3E80516171F",
+    "id": "825E33F8-1DE7-4E26-BDEF-D4A598232885",
     "availabilityStatus": {
       "isAvailable": true,
       "estimatedDuration": {
@@ -66,7 +66,7 @@
     }
   },
   "schedule": {
-    "fulfillmentLocationId": "fda044ea-1708-42c2-88cd-d3e80516171f",
+    "fulfillmentLocationId": "825e33f8-1de7-4e26-bdef-d4a598232885",
     "openingHours": [
       {
         "isClosed": false,
@@ -115,42 +115,42 @@
     "scheduleType": "OpeningHours"
   },
   "pickUpSchedule": {
-    "fulfillmentLocationId": "fda044ea-1708-42c2-88cd-d3e80516171f",
+    "fulfillmentLocationId": "825e33f8-1de7-4e26-bdef-d4a598232885",
     "openingHours": [],
     "openingHourExceptions": [],
     "scheduleType": "Pickup"
   },
   "deliverySchedule": {
-    "fulfillmentLocationId": "fda044ea-1708-42c2-88cd-d3e80516171f",
+    "fulfillmentLocationId": "825e33f8-1de7-4e26-bdef-d4a598232885",
     "openingHours": [],
     "openingHourExceptions": [],
     "scheduleType": "Delivery"
   },
-  "timeZone": "Pacific Standard Time",
+  "timeZone": "Eastern Standard Time",
   "deliveryScheduleManaged": false,
   "pickUpScheduleManaged": false,
-  "inventoryLocationId": "BRU-100",
+  "inventoryLocationId": "BRU-101",
   "inventoryProviderId": "OvertureQuantitative",
   "isInventoryEnabled": true,
   "isAtpEnabled": true,
   "addresses": [
     {
-      "id": "60c947fbc8154855950248a8779fd1ec",
-      "addressName": "MainAddress",
-      "city": "San Francisco",
+      "id": "cabd5c08dde64de9a52c4211949b5735",
+      "addressName": "Store",
+      "city": "New York",
       "countryCode": "US",
-      "regionCode": "US-CA",
-      "line1": "1690 Folsom St",
-      "postalCode": "94103",
+      "regionCode": "US-NY",
+      "line1": "113 Sullivan St",
+      "postalCode": "10012",
       "isPreferredBilling": false,
       "isPreferredShipping": false,
       "propertyBag": {
         "Address_Id": {
           "__type": "ValueOfInt32",
-          "value": 37483
+          "value": 37485
         }
       }
     }
   ],
   "scopeId": "BetterRetailUSA"
-} 
+}
