@@ -452,12 +452,6 @@
     <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore904.json" />
     <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore905.json" />
     <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStoreTaxTestStore.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\California\CreateOrUpdateStore100.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\CreateOrUpdateStore103.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\CreateOrUpdateStore104.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\CreateOrUpdateStore105.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\Florida\CreateOrUpdateStore101.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\Hawaii\CreateOrUpdateStore102.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\README.md" />
     <None Include="app.config" />
     <Content Include="CommerceModel.BetterRetail.nuspec">
@@ -605,6 +599,8 @@
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\products-10000-15000.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\products-5000-10000.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\relations.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\CreateOrUpdateStore100.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\CreateOrUpdateStore101.json" />
     <None Include="CopyArtifacts.targets" />
     <None Include="job_scheduling_data_2_0.xsd">
       <SubType>Designer</SubType>
@@ -685,6 +681,9 @@
     <Content Include="artifacts\OCS\App_Data\Workflows\Orders\BetterRetail\DefaultOrderTotalWorkflow.xaml">
       <SubType>Designer</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="artifacts\OOE\App_Data\Workflows\Orders\BetterRetailUSA\OrderPostProcessingWorkflow.xaml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(ProjectDir)\CopyArtifacts.targets" />
