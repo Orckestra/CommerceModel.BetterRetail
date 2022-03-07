@@ -160,7 +160,7 @@ namespace CommerceModel.BetterRetail.Activities
 
         private void AddValueWhenDefined<T>(LineItem lineItem, string key, T value)
         {
-            if (value == null) return;
+            if (value == null || lineItem.PropertyBag.ContainsKey(key)) return;
             lineItem.PropertyBag[key] = value;
         }
     }
