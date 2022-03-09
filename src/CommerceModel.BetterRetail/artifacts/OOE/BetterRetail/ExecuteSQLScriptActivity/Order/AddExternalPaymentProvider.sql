@@ -78,7 +78,6 @@ BEGIN
                 <GetPaymentMethodsByCartUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/get</GetPaymentMethodsByCartUrl>
                 <SetDefaultPaymentMethodUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/set</SetDefaultPaymentMethodUrl>
                 <InitializePaymentUrl Type="String">' + @@webAppPaymentURL + 'api/paymentprovider/initialize</InitializePaymentUrl>
-				<AddPaymentProfileUrl Type="String">' + @@webAppPaymentURL + '​api​/paymentprofile​/cart​/addpaymentprofile</AddPaymentProfileUrl>
                 <AuthenticationKey Type="String">SecureAndSecretKey</AuthenticationKey>
                 </Values>
                 <PropertyConfigurations Type="Dictionary" />
