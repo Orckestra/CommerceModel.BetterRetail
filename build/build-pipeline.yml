@@ -21,7 +21,7 @@ parameters:
 - name: BuildConfiguration
   displayName: Build configuration
   type: string
-  default: Release
+  default: 'Release'
 
 variables:
 - group: CMP - Connection API V2
