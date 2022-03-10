@@ -173,13 +173,12 @@
           </InArgument>
         </Assign.Value>
       </Assign>
-      <cba:BetterRetailExecuteSQLScriptActivity ResultBlobUrl="{x:Null}">
+      <cba:BetterRetailExecuteSQLScriptActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="BetterRetailExecuteSQLScriptActivity_1">
         <cba:BetterRetailExecuteSQLScriptActivity.CommerceModelName>
           <InArgument x:TypeArguments="x:String">
             <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
           </InArgument>
         </cba:BetterRetailExecuteSQLScriptActivity.CommerceModelName>
-        <sap2010:WorkflowViewState.IdRef>BetterRetailExecuteSQLScriptActivity_1</sap2010:WorkflowViewState.IdRef>
       </cba:BetterRetailExecuteSQLScriptActivity>
       <oct:WaitForCorrelatedTasksCompletionsActivity PollingDelay="{x:Null}" ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="WaitForCorrelatedTasksCompletionsActivity_4">
         <oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
@@ -232,6 +231,18 @@
           </InArgument>
         </octp1:QueueImportProfileSchemaActivity.CommerceModelName>
       </octp1:QueueImportProfileSchemaActivity>
+      <octp1:QueueProfilesImportActivity ResultBlobUrl="{x:Null}" FileImportName="BetterRetailProfiles.zip" sap2010:WorkflowViewState.IdRef="QueueProfilesImportActivity_1">
+        <octp1:QueueProfilesImportActivity.CommerceModelName>
+          <InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
+          </InArgument>
+        </octp1:QueueProfilesImportActivity.CommerceModelName>
+        <octp1:QueueProfilesImportActivity.CorrelationId>
+          <InArgument x:TypeArguments="s:Guid">
+            <mca:CSharpValue x:TypeArguments="s:Guid">new Guid()</mca:CSharpValue>
+          </InArgument>
+        </octp1:QueueProfilesImportActivity.CorrelationId>
+      </octp1:QueueProfilesImportActivity>
       <oct:WaitForCorrelatedTasksCompletionsActivity PollingDelay="{x:Null}" ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="WaitForCorrelatedTasksCompletionsActivity_1">
         <oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
           <InArgument x:TypeArguments="s:Guid">
@@ -356,7 +367,7 @@
       </oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
     </oct:WaitForCorrelatedTasksCompletionsActivity>
     <octs:QueueSearchIndexingActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueSearchIndexingActivity_1" />
-    <sads:DebugSymbol.Symbol>d11DOlxHaXRcQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXExvYWREYXRhUHJvZmlsZV9EZXZUZXN0LnhhbWxEKAcoSQEEAY4BAZIBAQMjByNJAQKCAQPoAg4CAQGGATSGAUICAQKIAQWOASwDAb8DjwEFjwHnAQMBugOQAQWbASADAZ8DnAEFogEpAwGQA6MBBaQCEAMBmQGlAgWlAooBAwGYAaYCBaYChgEDAZcBpwIFrQI6AwGJAa4CBdcCLgIBINgCBd4CJAIBEt8CBeUCNQIBBOYCBeYCggECAQOIAZ8BiAG9AQMBzQOLAQuLAVoDAcADjwHFAY8BzAEDAb4DjwGTAY8BuQEDAb0DjwHhAY8B5AEDAbwDjwHUAY8B2AEDAbsDmAELmAFaAwGtA5MBC5MBWgMBoAOfAQufAVoDAZIDnAFRnAF/AwGRA6QBB68BEAMB9QKwAQe3ATIDAecCuAEHvgE3AwHZAr8BB9wBMgMBsQLdAQfjAS4DAaMC5AEH6gEwAwGVAusBB/EBNwMBhwLyAQf9ASgDAewB/gEHiQIkAwHRAYoCB5ACNQMBwwGRAgecAkADAagBnQIHowI3AwGaAaoCC6oCWgMBigG7Agu7AmsCAXzAAgvAAlECAW/KAgvKAlACAWLUAgvUAlUCAVXPAgvPAloCAUjFAgvFAlUCATuxAguxAmgCAS62Agu2AmsCASHbAgvbAloCARPiAgviAlQCAQWsAQ2sAVcDAYMDpwENpwFeAwH2ArMBDbMBXAMB6AK7AQ27AVYDAdoC2QEN2QFeAwHMAscBDdQBFAMBvwLCAQ3CAVwDAbIC4AEN4AFcAwGkAucBDecBXAMBlgLuAQ3uAVYDAYgC+gEN+gHlAQMB+gH1AQ31AVwDAe0BhgINhgLaBgMB3wGBAg2BAlwDAdIBjQINjQJcAwHEAZkCDZkCXgMBtgGUAg2UAmQDAakBoAINoAJWAwGbAQ==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d11DOlxHaXRcQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXExvYWREYXRhUHJvZmlsZV9EZXZUZXN0LnhhbWxIKAcoSQEEAY4BAZIBAQMjByNJAQKCAQPzAg4CAQGGATSGAUICAQKIAQWOASwDAdsDjwEFjwHnAQMB1gOQAQWbASADAbsDnAEFogEpAwGsA6MBBa8CEAMBmQGwAgWwAooBAwGYAbECBbEChgEDAZcBsgIFuAI6AwGJAbkCBeICLgIBIOMCBekCJAIBEuoCBfACNQIBBPECBfECggECAQOIAZ8BiAG9AQMB6QOLAQuLAVoDAdwDjwHFAY8BzAEDAdoDjwGTAY8BuQEDAdkDjwHhAY8B5AEDAdgDjwHUAY8B2AEDAdcDmAELmAFaAwHJA5MBC5MBWgMBvAOfAQufAVoDAa4DnAFRnAF/AwGtA6QBB68BEAMBkQOwAQe2ATIDAYMDtwEHvQE3AwH1Ar4BB9sBMgMBzQLcAQfiAS4DAb8C4wEH6QEwAwGxAuoBB/UBKwMBlQL2AQf8ATcDAYcC/QEHiAIoAwHsAYkCB5QCJAMB0QGVAgebAjUDAcMBnAIHpwJAAwGoAagCB64CNwMBmgG1Agu1AloDAYoBxgILxgJrAgF8ywILywJRAgFv1QIL1QJQAgFi3wIL3wJVAgFV2gIL2gJaAgFI0AIL0AJVAgE7vAILvAJoAgEuwQILwQJrAgEh5gIL5gJaAgET7QIL7QJUAgEFrAENrAFXAwGfA6cBDacBXgMBkgOzAQ2zAVwDAYQDugENugFWAwH2AtgBDdgBXgMB6ALGAQ3TARQDAdsCwQENwQFcAwHOAt8BDd8BXAMBwALmAQ3mAVwDAbIC6gFS6gFsAwGwAvIBDfIBUwMBowLtAQ3tAVwDAZYC+QEN+QFWAwGIAoUCDYUC5QEDAfoBgAINgAJcAwHtAZECDZEC3gUDAd8BjAINjAJcAwHSAZgCDZgCXAMBxAGkAg2kAl4DAbYBnwINnwJkAwGpAasCDasCVgMBmwE=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -370,13 +381,14 @@
       <sap2010:ViewStateData Id="QueueProductCatalogsImportsActivity_3" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
       <sap2010:ViewStateData Id="QueueOrderSchemaImportActivity_1" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
       <sap2010:ViewStateData Id="QueueImportProfileSchemaActivity_1" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
+      <sap2010:ViewStateData Id="QueueProfilesImportActivity_1" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
       <sap2010:ViewStateData Id="WaitForCorrelatedTasksCompletionsActivity_1" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
       <sap2010:ViewStateData Id="CreateWarehousesActivity_1" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
       <sap2010:ViewStateData Id="CreateStoresActivity_1" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
       <sap2010:ViewStateData Id="ImportFulfillmentPackageTypesActivity_1" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
       <sap2010:ViewStateData Id="QueueFulfillmentLocationsInventoryImportActivity_1" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
       <sap2010:ViewStateData Id="WaitForCorrelatedTasksCompletionsActivity_2" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="265.6,873.6">
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="265.6,936">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -390,14 +402,14 @@
       <sap2010:ViewStateData Id="ExecuteSQLScriptActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="WaitForCorrelatedTasksCompletionsActivity_3" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="QueueSearchIndexingActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="288,1684.8">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="288,1747.2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="CommerceModel.BetterRetail.LoadDataProfile_DevTest_1" sap:VirtualizedContainerService.HintSize="328,1764.8" />
+      <sap2010:ViewStateData Id="CommerceModel.BetterRetail.LoadDataProfile_DevTest_1" sap:VirtualizedContainerService.HintSize="328,1827.2" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

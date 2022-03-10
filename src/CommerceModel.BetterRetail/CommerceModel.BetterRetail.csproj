@@ -601,6 +601,7 @@
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\relations.json" />
     <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\CreateOrUpdateStore100.json" />
     <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\CreateOrUpdateStore101.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\BetterRetailProfiles.zip" />
     <None Include="CopyArtifacts.targets" />
     <None Include="job_scheduling_data_2_0.xsd">
       <SubType>Designer</SubType>
