@@ -42,7 +42,7 @@ stages:
       displayName: 'Build BetterRetail'
       inputs:
         scriptName: build/Build.ps1
-        arguments: '-TaskList All -IsRunningOnBuildMachine -ExtraProperties @{ NugetFeeds=$(NugetFeeds); SensitiveData = $(SensitiveData) } -Configuration $(Build.Configuration) -Verbose:$(Build.Verbose) -BuildReason $(Build.Reason)'
+        arguments: '-TaskList All -IsRunningOnBuildMachine -ExtraProperties @{ NugetFeeds=$(NugetFeeds); SensitiveData = $(SensitiveData) } -Configuration:$(Build.Configuration) -Verbose:$(Build.Verbose) -BuildReason $(Build.Reason)'
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact: Troubleshooting'
       inputs:
