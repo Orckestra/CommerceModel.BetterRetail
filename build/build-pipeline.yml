@@ -21,7 +21,7 @@ parameters:
 - name: BuildConfiguration
   displayName: Build configuration
   type: string
-  default: 'Release'
+  default: Release
 
 variables:
 - group: CMP - Connection API V2
@@ -30,7 +30,7 @@ variables:
 - name: Build.Verbose
   value: $${{ parameters.BuildVerbosity }}
 - name: Build.Configuration
-  value: $${{ parameters.BuildConfiguration }}
+  value: ${{ parameters.BuildConfiguration }}
 
 stages:
 - stage: Build
@@ -42,7 +42,7 @@ stages:
       displayName: 'Build BetterRetail'
       inputs:
         scriptName: build/Build.ps1
-        arguments: '-TaskList All -IsRunningOnBuildMachine -ExtraProperties @{ NugetFeeds=$(NugetFeeds); SensitiveData = $(SensitiveData) } -Configuration:$(Build.Configuration) -Verbose:$(Build.Verbose) -BuildReason $(Build.Reason)'
+        arguments: '-TaskList All -IsRunningOnBuildMachine -ExtraProperties @{ NugetFeeds=$(NugetFeeds); SensitiveData = $(SensitiveData) } -Configuration $(Build.Configuration) -Verbose:$(Build.Verbose) -BuildReason $(Build.Reason)'
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact: Troubleshooting'
       inputs:
