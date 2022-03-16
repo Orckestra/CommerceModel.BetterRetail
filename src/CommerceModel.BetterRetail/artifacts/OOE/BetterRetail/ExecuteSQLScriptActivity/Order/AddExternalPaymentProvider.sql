@@ -78,6 +78,7 @@ BEGIN
                 <GetPaymentMethodsByCartUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/get</GetPaymentMethodsByCartUrl>
                 <SetDefaultPaymentMethodUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/set</SetDefaultPaymentMethodUrl>
                 <InitializePaymentUrl Type="String">' + @@webAppPaymentURL + 'api/paymentprovider/initialize</InitializePaymentUrl>
+				<AuthenticationKey Type="String">SecureAndSecretKey</AuthenticationKey>
 				<CreateCartPaymentVaultProfileUrl Type="String">' + @@webAppPaymentURL + '​api​/paymentprofile​/createcartpaymentvaultprofile</CreateCartPaymentVaultProfileUrl>
 				<SupportedCultureIds Type="String">en-US,en-CA,fr-CA</SupportedCultureIds
                 </Values>
