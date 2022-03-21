@@ -1,4 +1,4 @@
-﻿
+
 Bonjour {{Customer.FirstName}} {{Customer.LastName}},
 
 Il y a eu un problème lors de la création de votre commande récurrente.  Les produits de cette commande ont été reportés à une date ultérieure.
@@ -10,19 +10,19 @@ L’équipe {{Variables.CompanyName}}
 PRODUITS REPORTÉS
 ==============================
 
-{% for item in RescheduledProducts %}
+<!--{% for item in RescheduledProducts %}-->
 Produit: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
 Prix: {{item.TotalRegularPrice | money:"fr-CA" }}
-{% endfor %}
+<!--{% endfor %}-->
 
 
 TOUS LES PRODUITS QUI SERONT ENVOYÉS PÉRIODIQUEMENT
 ==============================
 
-{% for item in AllProducts %}
+<!--{% for item in AllProducts %}-->
 Produit: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
 Prix: {{item.TotalRegularPrice | money:"fr-CA" }}
-{% endfor %}
+<!--{% endfor %}-->
 
 
 INFORMATION ADDITIONNELLE
