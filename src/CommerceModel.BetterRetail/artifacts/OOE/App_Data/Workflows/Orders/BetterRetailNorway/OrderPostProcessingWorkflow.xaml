@@ -151,6 +151,38 @@
         </InOutArgument>
       </ooopwa:AssignFulfillmentScheduleDateTimeActivity.OrderProcessingResultArgument>
     </ooopwa:AssignFulfillmentScheduleDateTimeActivity>
+    <ooopwap:FulfillmentTransitionChangeStatusActivity FulfillmentKickOffStatuses="ReadyForPicking" sap2010:WorkflowViewState.IdRef="FulfillmentTransitionChangeStatusActivity_1">
+
+        <ooopwap:FulfillmentTransitionChangeStatusActivity.OrderFulfillmentStateArgument>
+
+            <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
+
+                <mca:CSharpValue x:TypeArguments="oosof:OrderFulfillmentState">OrderFulfillmentStateArgument</mca:CSharpValue>
+
+            </InArgument>
+
+        </ooopwap:FulfillmentTransitionChangeStatusActivity.OrderFulfillmentStateArgument>
+
+        <ooopwap:FulfillmentTransitionChangeStatusActivity.OrderProcessingContextArgument>
+
+            <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+
+                <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+
+            </InArgument>
+
+        </ooopwap:FulfillmentTransitionChangeStatusActivity.OrderProcessingContextArgument>
+
+        <ooopwap:FulfillmentTransitionChangeStatusActivity.OrderProcessingResultArgument>
+
+            <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+
+                <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+
+            </InOutArgument>
+
+        </ooopwap:FulfillmentTransitionChangeStatusActivity.OrderProcessingResultArgument>
+    </ooopwap:FulfillmentTransitionChangeStatusActivity>
     <ooopwap:EvaluateShipmentsFulfillmentReadinessActivity sap2010:WorkflowViewState.IdRef="EvaluateShipmentsFulfillmentReadinessActivity_1">
       <ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderFulfillmentStateArgument>
         <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
