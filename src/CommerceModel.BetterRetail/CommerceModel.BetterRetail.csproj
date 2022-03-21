@@ -156,8 +156,8 @@
     <Reference Include="Orckestra.SolrLib, Version=5.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.3.0-alpha0054\lib\net461\Orckestra.SolrLib.dll</HintPath>
     </Reference>
-    <Reference Include="OrckestraCommerce.CommerceModelUtilities, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.4.5.0-alpha0208\lib\net461\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
+    <Reference Include="OrckestraCommerce.CommerceModelUtilities, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.5.2.0\lib\net461\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
     </Reference>
     <Reference Include="OrckestraCommerce.DataExchange, Version=5.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.3.0-alpha0054\lib\net461\OrckestraCommerce.DataExchange.dll</HintPath>
@@ -234,7 +234,6 @@
     </Reference>
     <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.24.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Microsoft.Tpl.Dataflow.4.5.24\lib\portable-net45+win8+wpa81\System.Threading.Tasks.Dataflow.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -601,6 +600,15 @@
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\relations.json" />
     <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\CreateOrUpdateStore100.json" />
     <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\CreateOrUpdateStore101.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS - Header.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER - Header.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER_Scope - Header.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER_Scope.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\RELATION - Header.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\RELATION.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\BetterRetailProfiles.zip" />
     <None Include="CopyArtifacts.targets" />
     <None Include="job_scheduling_data_2_0.xsd">
       <SubType>Designer</SubType>
@@ -692,10 +700,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets'))" />
-    <Error Condition="!Exists('..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.65\build\net\OrckestraCommerce.Packages.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.65\build\net\OrckestraCommerce.Packages.MSBuild.targets'))" />
+    <Error Condition="!Exists('..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.67\build\net\OrckestraCommerce.Packages.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.67\build\net\OrckestraCommerce.Packages.MSBuild.targets'))" />
   </Target>
   <Import Project="..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets" Condition="Exists('..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets')" />
-  <Import Project="..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.65\build\net\OrckestraCommerce.Packages.MSBuild.targets" Condition="Exists('..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.65\build\net\OrckestraCommerce.Packages.MSBuild.targets')" />
+  <Import Project="..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.67\build\net\OrckestraCommerce.Packages.MSBuild.targets" Condition="Exists('..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.67\build\net\OrckestraCommerce.Packages.MSBuild.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

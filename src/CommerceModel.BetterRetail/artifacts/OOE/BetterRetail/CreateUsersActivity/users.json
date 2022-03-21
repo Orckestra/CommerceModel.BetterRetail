@@ -43,28 +43,6 @@
       ]
     },
     {
-      "userName": "QA_OrdersAdmUSA",
-	  "eMail": "brus@example.com",
-      "city": "New York",
-      "country": "United States",
-      "displayName": "Orders Administrator USA",
-      "firstName": "Orders",
-      "jobTitle": "Orders Admin BetterRetailUSA",
-      "lastName": "AdminUSA",
-      "password": "#NewUsersPassword#",
-      "address": "38 King St",
-      "postalCode": "10014",
-      "preferredLanguage": "en-US",
-      "state": "NY",
-      "roles": [
-        {
-          "roleName": "Administrator",
-          "moduleName": "Orders",
-          "scopeId": "BetterRetailUSA"
-        }
-      ]
-    },
-    {
       "userName": "QA_OrdersEditGlob",
       "city": "Longueuil",
       "country": "Canada",
@@ -103,28 +81,6 @@
           "roleName": "Editor",
           "moduleName": "Orders",
           "scopeId": "BetterRetailCanada"
-        }
-      ]
-    },
-    {
-      "userName": "QA_OrdersEditUSA",
-	  "eMail": "brus@example.com",
-      "city": "New York",
-      "country": "United States",
-      "displayName": "Orders Editor USA",
-      "firstName": "Orders",
-      "jobTitle": "Orders Editor BetterRetailUSA",
-      "lastName": "EditorUSA",
-      "password": "#NewUsersPassword#",
-      "address": "38 King St",
-      "postalCode": "10014",
-      "preferredLanguage": "en-US",
-      "state": "NY",
-      "roles": [
-        {
-          "roleName": "Editor",
-          "moduleName": "Orders",
-          "scopeId": "BetterRetailUSA"
         }
       ]
     },
@@ -171,28 +127,6 @@
       ]
     },
     {
-      "userName": "QA_OrdersReadUSA",
-	  "eMail": "brus@example.com",
-      "city": "New York",
-      "country": "Canada",
-      "displayName": "Orders Reader USA",
-      "firstName": "Orders",
-      "jobTitle": "Orders Reader BetterRetailUSA",
-      "lastName": "ReaderUSA",
-      "password": "#NewUsersPassword#",
-      "address": "38 King St",
-      "postalCode": "10014",
-      "preferredLanguage": "en-US",
-      "state": "NY",
-      "roles": [
-        {
-          "roleName": "Reader",
-          "moduleName": "Orders",
-          "scopeId": "BetterRetailUSA"
-        }
-      ]
-    },
-    {
       "userName": "QA_AnlsAdmGlob",
       "city": "Longueuil",
       "country": "Canada",
@@ -231,28 +165,6 @@
           "roleName": "Administrator",
           "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
-        }
-      ]
-    },
-    {
-      "userName": "QA_AnlsAdmUSA",
-	  "eMail": "brus@example.com",
-      "city": "New York",
-      "country": "US",
-      "displayName": "Analytics Administrator USA",
-      "firstName": "Analytics",
-      "jobTitle": "Analytics Administrator BetterRetailUSA",
-      "lastName": "AdministratorUSA",
-      "password": "#NewUsersPassword#",
-      "address": "38 King St",
-      "postalCode": "10014",
-      "preferredLanguage": "en-US",
-      "state": "NY",
-      "roles": [
-        {
-          "roleName": "Administrator",
-          "moduleName": "Report",
-          "scopeId": "BetterRetailUSA"
         }
       ]
     },
@@ -299,28 +211,6 @@
       ]
     },
     {
-      "userName": "QA_AnlsProdUSA",
-	  "eMail": "brus@example.com",
-      "city": "New York",
-      "country": "United States",
-      "displayName": "Analytics Products USA",
-      "firstName": "Analytics",
-      "jobTitle": "Analytics Products BetterRetailUSA",
-      "lastName": "ProductsUSA",
-      "password": "#NewUsersPassword#",
-      "address": "38 King St",
-      "postalCode": "10014",
-      "preferredLanguage": "en-US",
-      "state": "NY",
-      "roles": [
-        {
-          "roleName": "ProductsReportsReader",
-          "moduleName": "Report",
-          "scopeId": "BetterRetailUSA"
-        }
-      ]
-    },
-    {
       "userName": "QA_AnlsMarkGlob",
       "city": "Longueuil",
       "country": "Canada",
@@ -363,28 +253,6 @@
       ]
     },
     {
-      "userName": "QA_AnlsMarkUSA",
-	  "eMail": "brus@example.com",
-      "city": "New York",
-      "country": "United States",
-      "displayName": "Analytics Marketing USA",
-      "firstName": "Analytics",
-      "jobTitle": "Analytics Marketing BetterRetailUSA",
-      "lastName": "MarketingUSA",
-      "password": "#NewUsersPassword#",
-      "address": "38 King St",
-      "postalCode": "10014",
-      "preferredLanguage": "en-US",
-      "state": "NY",
-      "roles": [
-        {
-          "roleName": "MarketingReportsReader",
-          "moduleName": "Report",
-          "scopeId": "BetterRetailUSA"
-        }
-      ]
-    },
-    {
       "userName": "QA_AnlsOrderGlob",
       "city": "Longueuil",
       "country": "Canada",
@@ -423,28 +291,6 @@
           "roleName": "OrderReportsReader",
           "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
-        }
-      ]
-    },
-    {
-      "userName": "QA_AnlsOrderUSA",
-	  "eMail": "brus@example.com",
-      "city": "New York",
-      "country": "United States",
-      "displayName": "Analytics Order USA",
-      "firstName": "Analytics",
-      "jobTitle": "Analytics Order BetterRetailUSA",
-      "lastName": "OrderUSA",
-      "password": "#NewUsersPassword#",
-      "address": "38 King St",
-      "postalCode": "10014",
-      "preferredLanguage": "en-US",
-      "state": "NY",
-      "roles": [
-        {
-          "roleName": "OrderReportsReader",
-          "moduleName": "Report",
-          "scopeId": "BetterRetailUSA"
         }
       ]
     },
@@ -501,33 +347,6 @@
       ]
     },
     {
-      "userName": "QA_AnlsPrMkUSA",
-	  "eMail": "brus@example.com",
-      "city": "New York",
-      "country": "United States",
-      "displayName": "Analytics Products Marketing USA",
-      "firstName": "Analytics",
-      "jobTitle": "Analytics Products Marketing BetterRetailUSA",
-      "lastName": "ProductsMarketingUSA",
-      "password": "#NewUsersPassword#",
-      "address": "38 King St",
-      "postalCode": "10014",
-      "preferredLanguage": "en-US",
-      "state": "NY",
-      "roles": [
-        {
-          "roleName": "ProductsReportsReader",
-          "moduleName": "Report",
-          "scopeId": "BetterRetailUSA"
-        },
-        {
-          "roleName": "MarketingReportsReader",
-          "moduleName": "Report",
-          "scopeId": "BetterRetailUSA"
-        }
-      ]
-    },
-    {
       "userName": "QA_AnlsPrOrGlob",
       "city": "Longueuil",
       "country": "Canada",
@@ -580,33 +399,6 @@
       ]
     },
     {
-      "userName": "QA_AnlsPrOrUSA",
-	  "eMail": "brus@example.com",
-      "city": "New York",
-      "country": "United States",
-      "displayName": "Analytics Products Order USA",
-      "firstName": "Analytics",
-      "jobTitle": "Analytics Products Order BetterRetailUSA",
-      "lastName": "ProductsOrderUSA",
-      "password": "#NewUsersPassword#",
-      "address": "38 King St",
-      "postalCode": "10014",
-      "preferredLanguage": "en-US",
-      "state": "NY",
-      "roles": [
-        {
-          "roleName": "ProductsReportsReader",
-          "moduleName": "Report",
-          "scopeId": "BetterRetailUSA"
-        },
-        {
-          "roleName": "OrderReportsReader",
-          "moduleName": "Report",
-          "scopeId": "BetterRetailUSA"
-        }
-      ]
-    },
-    {
       "userName": "QA_AnlsMkOrGlob",
       "city": "Longueuil",
       "country": "Canada",
@@ -655,33 +447,6 @@
           "roleName": "OrderReportsReader",
           "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
-        }
-      ]
-    },
-    {
-      "userName": "QA_AnlsMkOrUSA",
-	  "eMail": "brus@example.com",
-      "city": "New York",
-      "country": "United States",
-      "displayName": "Analytics Marketing Order USA",
-      "firstName": "Analytics",
-      "jobTitle": "Analytics Marketing Order BetterRetailUSA",
-      "lastName": "MarketingOrderUSA",
-      "password": "#NewUsersPassword#",
-      "address": "38 King St",
-      "postalCode": "10014",
-      "preferredLanguage": "en-US",
-      "state": "NY",
-      "roles": [
-        {
-          "roleName": "MarketingReportsReader",
-          "moduleName": "Report",
-          "scopeId": "BetterRetailUSA"
-        },
-        {
-          "roleName": "OrderReportsReader",
-          "moduleName": "Report",
-          "scopeId": "BetterRetailUSA"
         }
       ]
     },
@@ -744,38 +509,6 @@
           "roleName": "OrderReportsReader",
           "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
-        }
-      ]
-    },
-    {
-      "userName": "QA_AnlsAllUSA",
-	  "eMail": "brus@example.com",
-      "city": "New York",
-      "country": "United States",
-      "displayName": "Analytics All USA",
-      "firstName": "Analytics",
-      "jobTitle": "Analytics All BetterRetailUSA",
-      "lastName": "AllUSA",
-      "password": "#NewUsersPassword#",
-      "address": "38 King St",
-      "postalCode": "10014",
-      "preferredLanguage": "en-US",
-      "state": "NY",
-      "roles": [
-        {
-          "roleName": "ProductsReportsReader",
-          "moduleName": "Report",
-          "scopeId": "BetterRetailUSA"
-        },
-        {
-          "roleName": "MarketingReportsReader",
-          "moduleName": "Report",
-          "scopeId": "BetterRetailUSA"
-        },
-        {
-          "roleName": "OrderReportsReader",
-          "moduleName": "Report",
-          "scopeId": "BetterRetailUSA"
         }
       ]
     }
