@@ -79,7 +79,7 @@ BEGIN
                 <SetDefaultPaymentMethodUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/set</SetDefaultPaymentMethodUrl>
                 <InitializePaymentUrl Type="String">' + @@webAppPaymentURL + 'api/paymentprovider/initialize</InitializePaymentUrl>
 				<CreateCartPaymentVaultProfileUrl Type="String">' + @@webAppPaymentURL + '​api​/paymentprofile​/createcartpaymentvaultprofile</CreateCartPaymentVaultProfileUrl>
-				<SupportedCultureIds Type="String">en-US,en-CA,fr-CA</SupportedCultureIds
+				<SupportedCultureIds Type="String">en-US,en-CA,fr-CA</SupportedCultureIds>
                 </Values>
                 <PropertyConfigurations Type="Dictionary" />
                 <FullTypeName Type="String">Orckestra.Overture.Entities.Providers.PaymentProvider, Orckestra.Overture.Entities</FullTypeName>
