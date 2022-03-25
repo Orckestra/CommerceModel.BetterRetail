@@ -204,10 +204,8 @@
 "BetterRetailUSA-Dev-v1.3",
 "BetterRetailNorway-Catalog-v1.0",
 "BetterRetailNorway-Dev-v1.0",
-"BetterRetailNetherlands-Catalog-v1.0",
-"BetterRetailNetherlands-Dev-v1.0",
-"BetterRetailGermany-Catalog-v1.0",
-"BetterRetailGermany-Dev-v1.3"
+"BetterRetailEuro-Catalog-v1.0",
+"BetterRetailEuro-Dev-v1.0"
 }</mca:CSharpValue>
           </InArgument>
         </octp:QueueProductCatalogsImportsActivity.PimImportFiles>
@@ -258,7 +256,7 @@
         </octc1:CreateWarehousesActivity.CommerceModelName>
         <octc1:CreateWarehousesActivity.WarehouseImportFilesSearchPatterns>
           <InArgument x:TypeArguments="s:String[]">
-            <mca:CSharpValue x:TypeArguments="s:String[]">new[] { "CreateOrUpdateWarehouse5000.json", "CreateOrUpdateWarehouse5001.json", "CreateOrUpdateWarehouse5003.json", "CreateOrUpdateWarehouse5004.json" }</mca:CSharpValue>
+            <mca:CSharpValue x:TypeArguments="s:String[]">new[] { "*.json" }</mca:CSharpValue>
           </InArgument>
         </octc1:CreateWarehousesActivity.WarehouseImportFilesSearchPatterns>
       </octc1:CreateWarehousesActivity>
@@ -270,7 +268,7 @@
         </octc1:CreateStoresActivity.CommerceModelName>
         <octc1:CreateStoresActivity.StoreImportFilesSearchPatterns>
           <InArgument x:TypeArguments="s:String[]">
-            <mca:CSharpValue x:TypeArguments="s:String[]">new[] { "CreateOrUpdateStore409.json", "CreateOrUpdateStore410.json", "CreateOrUpdateStore411.json", "CreateOrUpdateStore414.json", "CreateOrUpdateStore433.json", "CreateOrUpdateStore526.json", "CreateOrUpdateStore9101.json", "CreateOrUpdateStore9102.json", "CreateOrUpdateStore9103.json", "CreateOrUpdateStore9104.json", "CreateOrUpdateStore9105.json", "CreateOrUpdateStore9106.json", "CreateOrUpdateStore5101.json", "CreateOrUpdateStore5102.json", "CreateOrUpdateStore5103.json", "CreateOrUpdateStore5104.json", "CreateOrUpdateStore5105.json", "CreateOrUpdateStore5106.json", "CreateOrUpdateStore100.json", "CreateOrUpdateStore101.json", "BRDE-100.json" }</mca:CSharpValue>
+            <mca:CSharpValue x:TypeArguments="s:String[]">new[] { "*.json" }</mca:CSharpValue>
           </InArgument>
         </octc1:CreateStoresActivity.StoreImportFilesSearchPatterns>
       </octc1:CreateStoresActivity>
@@ -367,7 +365,7 @@
       </oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
     </oct:WaitForCorrelatedTasksCompletionsActivity>
     <octs:QueueSearchIndexingActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueSearchIndexingActivity_1" />
-    <sads:DebugSymbol.Symbol>d11DOlxHaXRcQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXExvYWREYXRhUHJvZmlsZV9EZXZUZXN0LnhhbWxIKAcoSQEEAY4BAZIBAQMjByNJAQKCAQPzAg4CAQGGATSGAUICAQKIAQWOASwDAdsDjwEFjwHnAQMB1gOQAQWbASADAbsDnAEFogEpAwGsA6MBBa8CEAMBmQGwAgWwAooBAwGYAbECBbEChgEDAZcBsgIFuAI6AwGJAbkCBeICLgIBIOMCBekCJAIBEuoCBfACNQIBBPECBfECggECAQOIAZ8BiAG9AQMB6QOLAQuLAVoDAdwDjwHFAY8BzAEDAdoDjwGTAY8BuQEDAdkDjwHhAY8B5AEDAdgDjwHUAY8B2AEDAdcDmAELmAFaAwHJA5MBC5MBWgMBvAOfAQufAVoDAa4DnAFRnAF/AwGtA6QBB68BEAMBkQOwAQe2ATIDAYMDtwEHvQE3AwH1Ar4BB9sBMgMBzQLcAQfiAS4DAb8C4wEH6QEwAwGxAuoBB/UBKwMBlQL2AQf8ATcDAYcC/QEHiAIoAwHsAYkCB5QCJAMB0QGVAgebAjUDAcMBnAIHpwJAAwGoAagCB64CNwMBmgG1Agu1AloDAYoBxgILxgJrAgF8ywILywJRAgFv1QIL1QJQAgFi3wIL3wJVAgFV2gIL2gJaAgFI0AIL0AJVAgE7vAILvAJoAgEuwQILwQJrAgEh5gIL5gJaAgET7QIL7QJUAgEFrAENrAFXAwGfA6cBDacBXgMBkgOzAQ2zAVwDAYQDugENugFWAwH2AtgBDdgBXgMB6ALGAQ3TARQDAdsCwQENwQFcAwHOAt8BDd8BXAMBwALmAQ3mAVwDAbIC6gFS6gFsAwGwAvIBDfIBUwMBowLtAQ3tAVwDAZYC+QEN+QFWAwGIAoUCDYUC5QEDAfoBgAINgAJcAwHtAZECDZEC3gUDAd8BjAINjAJcAwHSAZgCDZgCXAMBxAGkAg2kAl4DAbYBnwINnwJkAwGpAasCDasCVgMBmwE=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d11DOlxHaXRcQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXExvYWREYXRhUHJvZmlsZV9EZXZUZXN0LnhhbWxIKAcoSQEEAY4BAZIBAQMjByNJAQKCAQPxAg4CAQGGATSGAUICAQKIAQWOASwDAdsDjwEFjwHnAQMB1gOQAQWbASADAbsDnAEFogEpAwGsA6MBBa0CEAMBmQGuAgWuAooBAwGYAa8CBa8ChgEDAZcBsAIFtgI6AwGJAbcCBeACLgIBIOECBecCJAIBEugCBe4CNQIBBO8CBe8CggECAQOIAZ8BiAG9AQMB6QOLAQuLAVoDAdwDjwHFAY8BzAEDAdoDjwGTAY8BuQEDAdkDjwHhAY8B5AEDAdgDjwHUAY8B2AEDAdcDmAELmAFaAwHJA5MBC5MBWgMBvAOfAQufAVoDAa4DnAFRnAF/AwGtA6QBB68BEAMBkQOwAQe2ATIDAYMDtwEHvQE3AwH1Ar4BB9kBMgMBzQLaAQfgAS4DAb8C4QEH5wEwAwGxAugBB/MBKwMBlQL0AQf6ATcDAYcC+wEHhgIoAwHsAYcCB5ICJAMB0QGTAgeZAjUDAcMBmgIHpQJAAwGoAaYCB6wCNwMBmgGzAguzAloDAYoBxAILxAJrAgF8yQILyQJRAgFv0wIL0wJQAgFi3QIL3QJVAgFV2AIL2AJaAgFIzgILzgJVAgE7ugILugJoAgEuvwILvwJrAgEh5AIL5AJaAgET6wIL6wJUAgEFrAENrAFXAwGfA6cBDacBXgMBkgOzAQ2zAVwDAYQDugENugFWAwH2AtYBDdYBXgMB6ALGAQ3RARQDAdsCwQENwQFcAwHOAt0BDd0BXAMBwALkAQ3kAVwDAbIC6AFS6AFsAwGwAvABDfABUwMBowLrAQ3rAVwDAZYC9wEN9wFWAwGIAoMCDYMCXwMB+gH+AQ3+AVwDAe0BjwINjwJfAwHfAYoCDYoCXAMB0gGWAg2WAlwDAcQBogINogJeAwG2AZ0CDZ0CZAMBqQGpAg2pAlYDAZsB</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>

@@ -4,7 +4,7 @@
     "id": "Root",
     "definitionName": "RootCategory",
     "sequenceNumber": -1,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": false,
     "hiddenInScope": false,
     "displayName": {}
@@ -15,7 +15,7 @@
     "id": "womens_skirts",
     "definitionName": "ClothingType",
     "sequenceNumber": 13,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -30,7 +30,7 @@
     "id": "mens_suits",
     "definitionName": "ClothingType",
     "sequenceNumber": 6,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -45,7 +45,7 @@
     "id": "women",
     "definitionName": "ClothingType",
     "sequenceNumber": 1,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -60,7 +60,7 @@
     "id": "mens_shirts",
     "definitionName": "ClothingType",
     "sequenceNumber": 5,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -75,7 +75,7 @@
     "id": "womens_activewear",
     "definitionName": "ClothingType",
     "sequenceNumber": 8,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -90,7 +90,7 @@
     "id": "mens_mens_shoes",
     "definitionName": "ClothingType",
     "sequenceNumber": 3,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -105,7 +105,7 @@
     "id": "men",
     "definitionName": "ClothingType",
     "sequenceNumber": 2,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -120,7 +120,7 @@
     "id": "womens_pants__leggings",
     "definitionName": "ClothingType",
     "sequenceNumber": 10,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -135,7 +135,7 @@
     "id": "mens_pants",
     "definitionName": "ClothingType",
     "sequenceNumber": 4,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -150,7 +150,7 @@
     "id": "mens_activewear",
     "definitionName": "ClothingType",
     "sequenceNumber": 2,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -165,7 +165,7 @@
     "id": "mens_accessories",
     "definitionName": "ClothingType",
     "sequenceNumber": 1,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -180,7 +180,7 @@
     "id": "womens_tops",
     "definitionName": "ClothingType",
     "sequenceNumber": 14,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -195,7 +195,7 @@
     "id": "womens_dresses",
     "definitionName": "ClothingType",
     "sequenceNumber": 9,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -210,7 +210,7 @@
     "id": "womens_plus_size_outerwear",
     "definitionName": "ClothingType",
     "sequenceNumber": 12,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -225,7 +225,7 @@
     "id": "womens_petites_outerwear",
     "definitionName": "ClothingType",
     "sequenceNumber": 11,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
@@ -240,7 +240,7 @@
     "id": "shoes_womens_shoes",
     "definitionName": "ClothingType",
     "sequenceNumber": 7,
-    "catalogId": "BetterRetailUSA",
+    "catalogId": "BetterRetailEuro",
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {

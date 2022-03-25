@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "CustomerPasswordChanged",
   "description": {
     "en-US": "Notification email sent when customer password has been changed",

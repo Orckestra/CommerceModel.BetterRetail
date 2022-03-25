@@ -1,0 +1,495 @@
+{
+  "Number": "BRDE-101",
+  "IsActive": false,
+  "Name": "13444 Jack & Jones (Köln - Hohe Straße)",
+  "DisplayName": {
+    "en-US": "13444 Jack & Jones (Köln - Hohe Straße)"
+  },
+  "Description": {
+    "en-US": ""
+  },
+  "StoreType": 0,
+  "Manager": null,
+  "PhoneNumber": "49 0221 25852520",
+  "PhoneExtension": null,
+  "FaxNumber": null,
+  "FaxExtension": null,
+  "Email": "bsdeu13444@bestseller.com",
+  "IsPickUpLocation": false,
+  "SupportPickUp": true,
+  "SupportDelivery": true,
+  "SupportShipping": true,
+  "SupportShipToStore": true,
+  "OperatingStatus": {
+    "Id": "C8944531-A5F6-4ABF-5274-2B066E8D9201",
+    "AvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScales": 0
+      }
+    },
+    "DeliveryAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScales": 0
+      }
+    },
+    "DeliveryQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScales": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScales": 0
+      }
+    },
+    "PickupQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScales": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PropertyBag": null
+  },
+  "Schedule": {
+    "FulfillmentLocationId": "C8944531-A5F6-4ABF-5274-2B066E8D9201",
+    "OpeningHours": [
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "10:00:00",
+            "EndingTime": "20:00:00"
+          }
+        ],
+        "Day": 1,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "10:00:00",
+            "EndingTime": "20:00:00"
+          }
+        ],
+        "Day": 2,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "10:00:00",
+            "EndingTime": "20:00:00"
+          }
+        ],
+        "Day": 3,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "10:00:00",
+            "EndingTime": "20:00:00"
+          }
+        ],
+        "Day": 4,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "10:00:00",
+            "EndingTime": "20:00:00"
+          }
+        ],
+        "Day": 5,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "10:00:00",
+            "EndingTime": "20:00:00"
+          }
+        ],
+        "Day": 6,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": true,
+        "OpeningTimes": [],
+        "Day": 0,
+        "IsOpenedAllDay": false
+      }
+    ],
+    "OpeningHourExceptions": [
+      {
+        "Id": "3F3A4783-56DC-6238-4D6C-8F5EFA1681AA",
+        "Name": "Karfreitag 2019",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-04-19T00:00:00Z",
+        "EndDate": "2019-04-19T00:00:00Z",
+        "IsRecurrent": false
+      },
+      {
+        "Id": "AD52C9A5-1C72-10FA-91F9-FB6AD1117AB4",
+        "Name": "Karfreitag 2020",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2020-04-10T00:00:00Z",
+        "EndDate": "2020-04-10T00:00:00Z",
+        "IsRecurrent": false
+      },
+      {
+        "Id": "BB35EC95-3AAD-3FB4-0380-45CCF40F6281",
+        "Name": "Ostermontag 2019",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-04-22T00:00:00Z",
+        "EndDate": "2019-04-22T00:00:00Z",
+        "IsRecurrent": false
+      },
+      {
+        "Id": "97F5C8F1-6C43-0892-0267-69E6873D3248",
+        "Name": "Ostermontag 2020",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2020-04-13T00:00:00Z",
+        "EndDate": "2020-04-13T00:00:00Z",
+        "IsRecurrent": false
+      },
+      {
+        "Id": "18DEDC97-76FF-3335-8B3B-D9547AC20C92",
+        "Name": "Christi Himmelfahrt 2019",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-05-30T00:00:00Z",
+        "EndDate": "2019-05-30T00:00:00Z",
+        "IsRecurrent": false
+      },
+      {
+        "Id": "6150927C-02A0-6AF2-9482-DF9CA5064137",
+        "Name": "Christi Himmelfahrt 2020",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2020-05-21T00:00:00Z",
+        "EndDate": "2020-05-21T00:00:00Z",
+        "IsRecurrent": false
+      },
+      {
+        "Id": "CE8B01E5-79EC-42AF-129D-399DC0133C73",
+        "Name": "pfingstmontag 2019",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-06-10T00:00:00Z",
+        "EndDate": "2019-06-10T00:00:00Z",
+        "IsRecurrent": false
+      },
+      {
+        "Id": "896C4777-0345-4A58-7274-8987DE3D48F8",
+        "Name": "Pfingstmontag 2020",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2020-06-01T00:00:00Z",
+        "EndDate": "2020-06-01T00:00:00Z",
+        "IsRecurrent": false
+      },
+      {
+        "Id": "8971E3FB-1743-6E8D-4811-1447CF4A6069",
+        "Name": "Fronleichnam 2019",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-06-20T00:00:00Z",
+        "EndDate": "2019-06-20T00:00:00Z",
+        "IsRecurrent": false
+      },
+      {
+        "Id": "29137DC3-46EA-3A0E-7620-E0D3E15A6A79",
+        "Name": "Fronleichnam 2020",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2020-06-11T00:00:00Z",
+        "EndDate": "2020-06-11T00:00:00Z",
+        "IsRecurrent": false
+      },
+      {
+        "Id": "FC19FA8A-5684-5299-0B1F-D1B4AD368EF2",
+        "Name": "Buss und Bettag 2019",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-11-20T00:00:00Z",
+        "EndDate": "2019-11-20T00:00:00Z",
+        "IsRecurrent": false
+      },
+      {
+        "Id": "54323ADF-8CDC-4398-46A9-3758355329A6",
+        "Name": "Buss und Bettag 2020",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2020-11-18T00:00:00Z",
+        "EndDate": "2020-11-18T00:00:00Z",
+        "IsRecurrent": false
+      },
+      {
+        "Id": "7031B868-4351-2D1B-1668-89A2D3AE554C",
+        "Name": "Hellige Drei Könige",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-01-06T00:00:00Z",
+        "EndDate": "2019-01-06T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "20E603A6-4E2E-83F1-9F99-B83A59E09E92",
+        "Name": "Internationaler Frauentag",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-03-08T00:00:00Z",
+        "EndDate": "2019-03-08T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "774C6C61-0FC8-7040-229B-4B56912A0DCC",
+        "Name": "Tag der arbeit",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-05-01T00:00:00Z",
+        "EndDate": "2019-05-01T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "4001D8C1-45B5-A758-0F4A-59B49A6300B0",
+        "Name": "Maria Himmelfahrt",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-08-15T00:00:00Z",
+        "EndDate": "2019-08-15T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "68DACE0A-4F4B-8840-8875-8446BEC16513",
+        "Name": "Weltkindertag",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-09-20T00:00:00Z",
+        "EndDate": "2019-09-20T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "EEBACF97-8D96-9ED7-610C-F5598259A03B",
+        "Name": "Tag der Deutchen Einheit",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-10-03T00:00:00Z",
+        "EndDate": "2019-10-03T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "61F7622E-3AD9-A69A-6451-8543F5B92ED2",
+        "Name": "Reformationstag",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-10-31T00:00:00Z",
+        "EndDate": "2019-10-31T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "728AE402-6B98-5BFE-0B70-34F609AB03D6",
+        "Name": "Allerheiligen",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-11-01T00:00:00Z",
+        "EndDate": "2019-11-01T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "2B2FC0BE-5637-7DFC-51F7-B9C81F930715",
+        "Name": "New years day",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-01-01T00:00:00Z",
+        "EndDate": "2019-01-01T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "1D004B3F-169E-080C-47B5-DB804F540473",
+        "Name": "Christmas",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-12-25T00:00:00Z",
+        "EndDate": "2019-12-26T00:00:00Z",
+        "IsRecurrent": true
+      }
+    ],
+    "ScheduleType": 0,
+    "PropertyBag": null
+  },
+  "PickUpSchedule": {
+    "FulfillmentLocationId": "C8944531-A5F6-4ABF-5274-2B066E8D9201",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 2,
+    "PropertyBag": null
+  },
+  "DeliverySchedule": {
+    "FulfillmentLocationId": "C8944531-A5F6-4ABF-5274-2B066E8D9201",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 1,
+    "PropertyBag": null
+  },
+  "TimeZone": "W. Europe Standard Time",
+  "DeliveryScheduleManager": false,
+  "PickUpScheduleManaged": false,
+  "InventoryLocationId": "BRDE-101",
+  "InventoryProviderId": "OvertureQuantitative",
+  "IsInventoryEnabled": true,
+  "IsAtpEnabled": true,
+  "PropertyBag": {
+    "ShipmentAssignedEventDestinationEmailAddress": "bsdeu13444@bestseller.com",
+    "ShipmentSLANearingExpiryEventDestinationEmailAddress": "bsdeu13444@bestseller.com",
+    "FulfillmentCompetitionStatusOfferedDestinationEmailAddress": "bsdeu13444@bestseller.com",
+    "FulfillmentCompetitionStatusSeizedDestinationEmailAddress": "bsdeu13444@bestseller.com",
+    "StoreCustomerNumber": "13444"
+  },
+  "Addresses": [
+    {
+      "Id": "B7E501AA-20AB-3563-832C-73EA60AF288F",
+      "AddressName": "StoreAddress",
+      "City": "Köln",
+      "CountryCode": "DE",
+      "RegionCode": "DE-NW",
+      "LastModified": "2019-05-22T15:37:04.04Z",
+      "LastModifiedBy": "jc.mascolo@orckestra.com",
+      "Line1": "Hohe Straße 68-82",
+      "Line2": null,
+      "FirstName": null,
+      "LastName": null,
+      "PhoneNumber": "49 0221 25852520",
+      "PhoneExtension": null,
+      "PostalCode": "50667",
+      "Latitude": null,
+      "Longitude": null,
+      "Email": null,
+      "Notes": null,
+      "IsPreferredBilling": false,
+      "IsPreferredShipping": false
+    },
+    {
+      "Id": "10302D16-5605-6BD1-4CE5-C73305819FA7",
+      "AddressName": "LegalAddress",
+      "City": "Hamburg",
+      "CountryCode": "DE",
+      "RegionCode": "DE-HE",
+      "LastModified": "2019-05-23T13:07:45.45Z",
+      "LastModifiedBy": "jc.mascolo@orckestra.com",
+      "Line1": "Modering 1 Haus A",
+      "Line2": null,
+      "FirstName": null,
+      "LastName": null,
+      "PhoneNumber": null,
+      "PhoneExtension": null,
+      "PostalCode": "22457",
+      "Latitude": null,
+      "Longitude": null,
+      "Email": null,
+      "Notes": null,
+      "IsPreferredBilling": false,
+      "IsPreferredShipping": false
+    }
+  ],
+  "ScopeId": "BetterRetailEuro"
+}

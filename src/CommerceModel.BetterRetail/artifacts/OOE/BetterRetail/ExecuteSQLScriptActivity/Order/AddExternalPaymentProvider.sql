@@ -1,4 +1,4 @@
-﻿IF OBJECT_ID('tempdb..#ScopeToAdd') IS NOT NULL DROP TABLE #ScopeToAdd
+IF OBJECT_ID('tempdb..#ScopeToAdd') IS NOT NULL DROP TABLE #ScopeToAdd
 
 CREATE TABLE #ScopeToAdd (
     ScopeId VARCHAR(30),
@@ -8,7 +8,7 @@ CREATE TABLE #ScopeToAdd (
 INSERT INTO #ScopeToAdd 
 VALUES 
     ('BetterRetailCanada','7E5F8183-CBF4-467B-9200-6F39D586B64A')
-    ,('BetterRetailNetherlands','D4D01053-67A1-4CF4-A194-2B65DE20A63B')
+    ,('BetterRetailEuro','D4D01053-67A1-4CF4-A194-2B65DE20A63B')
     ,('BetterRetailNorway','997DADB2-49F1-4764-934F-9C6E530E8515')
     ,('BetterRetailUSA','13C0BA5C-2BF2-4DF1-813E-4342541BBCCF')
 
