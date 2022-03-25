@@ -40,8 +40,8 @@
   {
     "ratePercentage": 0.21,
     "taxCategoryName": "Taxable",
-    "taxJurisdictionGroupName": "BetterRetailNetherlands",
-    "scopeId": "BetterRetailNetherlands",
+    "taxJurisdictionGroupName": "Netherlands",
+    "scopeId": "BetterRetailEuro",
     "name": "Tax 1",
     "displayName": { "en-US": "Tax 1 (21%)" }
   }
