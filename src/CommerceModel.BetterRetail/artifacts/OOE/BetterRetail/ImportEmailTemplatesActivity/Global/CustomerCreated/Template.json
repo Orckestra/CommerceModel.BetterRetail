@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "CustomerCreated",
   "description": {
     "en-US": "Notification email sent when customer has been created",

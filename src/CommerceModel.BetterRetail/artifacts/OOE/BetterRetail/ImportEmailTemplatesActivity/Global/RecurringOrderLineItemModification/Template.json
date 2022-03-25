@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "RecurringOrderLineItemModification",
   "description": {
     "en-US": "Notification email sent when a product is set to recurring",

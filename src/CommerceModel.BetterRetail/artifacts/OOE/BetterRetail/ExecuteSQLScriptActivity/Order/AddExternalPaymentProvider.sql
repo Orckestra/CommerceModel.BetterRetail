@@ -1,4 +1,4 @@
-﻿IF OBJECT_ID('tempdb..#ScopeToAdd') IS NOT NULL DROP TABLE #ScopeToAdd
+IF OBJECT_ID('tempdb..#ScopeToAdd') IS NOT NULL DROP TABLE #ScopeToAdd
 
 CREATE TABLE #ScopeToAdd (
     ScopeId VARCHAR(30),

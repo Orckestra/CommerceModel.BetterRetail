@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "RecurringOrderUnableToCreateOrderFromCart",
   "description": {
     "en-US": "Notification email sent when a recurring order was not able to be created",

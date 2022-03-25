@@ -47,14 +47,14 @@
   "email": null,
   "faxExtension": null,
   "faxNumber": null,
-  "inventoryLocationId": "BRUS-Warehouse5001",
+  "inventoryLocationId": "BRU-Warehouse-5001",
   "inventoryProviderId": "OvertureQuantitative",
   "isActive": true,
   "isInventoryEnabled": true,
   "isAtpEnabled": true,
   "manager": null,
-  "name": "BRUS Warehouse 5001",
-  "number": "BRUS-Warehouse-5001",
+  "name": "BRU Warehouse 5001",
+  "number": "BRU-Warehouse-5001",
   "operatingStatus": {
     "id": "AA57BCC8-4DE5-402D-A22A-B13A339C252E",
     "availabilityStatus": {

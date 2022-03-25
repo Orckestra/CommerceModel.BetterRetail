@@ -5,7 +5,7 @@
     "category": "Regular",
     "sequenceNumber": 0,
     "displayName": {
-      "en-CA": "Regular Price",
+      "en-CA": "Regular Price List",
       "en-US": "Default Price List",
       "fr-CA": "Prix r\u00E9gulier"
     }
@@ -16,7 +16,7 @@
     "category": "OnSale",
     "sequenceNumber": 1,
     "displayName": {
-      "en-CA": "Sale Price",
+      "en-CA": "Sale Price List",
       "en-US": "Sale Price List",
       "fr-CA": "Prix de vente"
     }

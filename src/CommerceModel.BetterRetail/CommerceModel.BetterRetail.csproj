@@ -364,7 +364,7 @@
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderDelayed\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\CommerceModelDefinition.json" />
     <Content Include="artifacts\OOE\BetterRetail\CreateWarehousesActivity\BetterRetailCanada\BRC-Warehouse-5000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateWarehousesActivity\BetterRetailUSA\BRUS-Warehouse5001.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateWarehousesActivity\BetterRetailUSA\BRU-Warehouse-5001.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\CustomerPasswordResetRequested\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\CustomerPasswordChanged\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderCreated\Template.json" />
