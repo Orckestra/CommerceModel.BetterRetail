@@ -1,4 +1,4 @@
-﻿IF OBJECT_ID('tempdb..#ScopeToAdd') IS NOT NULL DROP TABLE #ScopeToAdd
+IF OBJECT_ID('tempdb..#ScopeToAdd') IS NOT NULL DROP TABLE #ScopeToAdd
 
 CREATE TABLE #ScopeToAdd (
     ScopeId VARCHAR(30),
@@ -20,8 +20,8 @@ DECLARE @@paymentProviderType AS VARCHAR(25) = 'ExternalPaymentProvider'
 SELECT @@webAppPaymentURL =
     CASE 
         WHEN [Name] LIKE '%dev_commerce_order' THEN 'https://localhost:7107/'
-		WHEN [Name] LIKE '%int_commerce_order' THEN 'https://occintbamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
-		WHEN [Name] LIKE '%qa_commerce_order' THEN 'https://occqabamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
+        WHEN [Name] LIKE '%int_commerce_order' THEN 'https://occintbamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
+        WHEN [Name] LIKE '%qa_commerce_order' THEN 'https://occqabamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
         ELSE 'https://occintbamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
     END
 FROM sys.databases WHERE [Name] like '%_commerce_order'
@@ -78,9 +78,9 @@ BEGIN
                 <GetPaymentMethodsByCartUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/get</GetPaymentMethodsByCartUrl>
                 <SetDefaultPaymentMethodUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/set</SetDefaultPaymentMethodUrl>
                 <InitializePaymentUrl Type="String">' + @@webAppPaymentURL + 'api/paymentprovider/initialize</InitializePaymentUrl>
-				<AuthenticationKey Type="String">SecureAndSecretKey</AuthenticationKey>
-				<CreateCartPaymentVaultProfileUrl Type="String">' + @@webAppPaymentURL + '​api​/paymentprofile​/createcartpaymentvaultprofile</CreateCartPaymentVaultProfileUrl>
-				<SupportedCultureIds Type="String">en-US,en-CA,fr-CA</SupportedCultureIds>
+                <AuthenticationKey Type="String">SecureAndSecretKey</AuthenticationKey>
+                <CreateCartPaymentVaultProfileUrl Type="String">' + @@webAppPaymentURL + 'api/paymentprofile/createcartpaymentvaultprofile</CreateCartPaymentVaultProfileUrl>
+                <SupportedCultureIds Type="String">en-US,en-CA,fr-CA</SupportedCultureIds>
                 </Values>
                 <PropertyConfigurations Type="Dictionary" />
                 <FullTypeName Type="String">Orckestra.Overture.Entities.Providers.PaymentProvider, Orckestra.Overture.Entities</FullTypeName>
