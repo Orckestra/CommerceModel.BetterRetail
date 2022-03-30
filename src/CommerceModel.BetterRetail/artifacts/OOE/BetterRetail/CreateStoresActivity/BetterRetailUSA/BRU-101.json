@@ -13,12 +13,13 @@
     "fr-CA": ""
   },
   "storeType": "Physical",
-  "phoneNumber": "12123810712",
+  "phoneNumber": "12125550123",
+  "manager": "Test Manager",
   "isPickUpLocation": true,
-  "supportPickUp": false,
-  "supportDelivery": false,
-  "supportShipping": false,
-  "supportShipToStore": false,
+  "supportPickUp": true,
+  "supportDelivery": true,
+  "supportShipping": true,
+  "supportShipToStore": true,
   "operatingStatus": {
     "id": "825E33F8-1DE7-4E26-BDEF-D4A598232885",
     "availabilityStatus": {
@@ -137,6 +138,10 @@
     {
       "id": "cabd5c08dde64de9a52c4211949b5735",
       "addressName": "Store",
+      "firstName": "Manager",
+      "lastName": "Test",
+      "email": "brus101@example.com",
+      "phoneNumber": "12125550123",
       "city": "New York",
       "countryCode": "US",
       "regionCode": "US-NY",
