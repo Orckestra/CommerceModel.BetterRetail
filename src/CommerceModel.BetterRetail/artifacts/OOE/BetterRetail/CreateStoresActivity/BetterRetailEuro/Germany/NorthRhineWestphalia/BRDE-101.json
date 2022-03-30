@@ -10,11 +10,11 @@
   },
   "StoreType": 0,
   "Manager": null,
-  "PhoneNumber": "49 0221 25852520",
+  "PhoneNumber": "49 0221 55501234",
   "PhoneExtension": null,
   "FaxNumber": null,
   "FaxExtension": null,
-  "Email": "bsdeu13444@bestseller.com",
+  "Email": "brde101@example.com",
   "IsPickUpLocation": false,
   "SupportPickUp": true,
   "SupportDelivery": true,
@@ -439,10 +439,10 @@
   "IsInventoryEnabled": true,
   "IsAtpEnabled": true,
   "PropertyBag": {
-    "ShipmentAssignedEventDestinationEmailAddress": "bsdeu13444@bestseller.com",
-    "ShipmentSLANearingExpiryEventDestinationEmailAddress": "bsdeu13444@bestseller.com",
-    "FulfillmentCompetitionStatusOfferedDestinationEmailAddress": "bsdeu13444@bestseller.com",
-    "FulfillmentCompetitionStatusSeizedDestinationEmailAddress": "bsdeu13444@bestseller.com",
+    "ShipmentAssignedEventDestinationEmailAddress": "brde101@example.com",
+    "ShipmentSLANearingExpiryEventDestinationEmailAddress": "brde101@example.com",
+    "FulfillmentCompetitionStatusOfferedDestinationEmailAddress": "brde101@example.com",
+    "FulfillmentCompetitionStatusSeizedDestinationEmailAddress": "brde101@example.com",
     "StoreCustomerNumber": "13444"
   },
   "Addresses": [

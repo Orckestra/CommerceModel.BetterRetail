@@ -13,12 +13,13 @@
     "fr-CA": ""
   },
   "storeType": "Physical",
-  "phoneNumber": "415 734-9373",
+  "phoneNumber": "16285550123",
+  "manager": "Test Manager",
   "isPickUpLocation": true,
-  "supportPickUp": false,
-  "supportDelivery": false,
-  "supportShipping": false,
-  "supportShipToStore": false,
+  "supportPickUp": true,
+  "supportDelivery": true,
+  "supportShipping": true,
+  "supportShipToStore": true,
   "operatingStatus": {
     "id": "FDA044EA-1708-42C2-88CD-D3E80516171F",
     "availabilityStatus": {
@@ -137,6 +138,10 @@
     {
       "id": "60c947fbc8154855950248a8779fd1ec",
       "addressName": "MainAddress",
+      "firstName": "Manager",
+      "lastName": "Test",
+      "email": "brus100@example.com",
+      "phoneNumber": "16285550123",
       "city": "San Francisco",
       "countryCode": "US",
       "regionCode": "US-CA",
