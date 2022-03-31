@@ -38,6 +38,11 @@ stages:
   jobs:
   - job: Build
     steps:
+    - checkout: self
+      clean: false
+      lfs: true
+      persistCredentials: True
+      
     - task: PowerShell@1
       displayName: 'Build BetterRetail'
       inputs:
