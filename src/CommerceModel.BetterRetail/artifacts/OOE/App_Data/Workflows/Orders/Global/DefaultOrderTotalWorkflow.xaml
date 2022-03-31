@@ -220,7 +220,7 @@
             </InOutArgument>
           </ooopwav:ValidateCustomerActivity.OrderProcessingResultArgument>
         </ooopwav:ValidateCustomerActivity>
-        <ooopwav:ValidateLineItemCountActivity sap2010:WorkflowViewState.IdRef="ValidateLineItemCountActivity_1" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger">
+        <ooopwav:ValidateLineItemCountActivity sap2010:WorkflowViewState.IdRef="ValidateLineItemCountActivity_1">
           <ooopwav:ValidateLineItemCountActivity.OrderProcessingContextArgument>
             <InArgument x:TypeArguments="oosop:OrderProcessingContext">
               <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
@@ -516,7 +516,6 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="ValidateCustomerActivity_1" sap:VirtualizedContainerService.HintSize="353,22" />
       <sap2010:ViewStateData Id="ValidateLineItemCountActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="ErrorActivity_1" sap:VirtualizedContainerService.HintSize="353,55" />
       <sap2010:ViewStateData Id="ValidateFulfillmentOptionSelectedActivity_1" sap:VirtualizedContainerService.HintSize="353,22" />
       <sap2010:ViewStateData Id="ValidateFulfillmentMethodHasChangedWhileFulfillmentStarted_1" sap:VirtualizedContainerService.HintSize="353,22" />
       <sap2010:ViewStateData Id="ValidateFulfillmentShippingActivity_1" sap:VirtualizedContainerService.HintSize="353,22" />
