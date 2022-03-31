@@ -1,0 +1,161 @@
+{
+  "number": "BRU-101",
+  "isActive": true,
+  "name": "BRU-NewYork",
+  "displayName": {
+    "en-CA": "BRU-NewYork",
+    "en-US": "BRU-NewYork",
+    "fr-CA": "BRU-NewYork"
+  },
+  "description": {
+    "en-CA": "",
+    "en-US": "",
+    "fr-CA": ""
+  },
+  "storeType": "Physical",
+  "phoneNumber": "12125550123",
+  "manager": "Test Manager",
+  "isPickUpLocation": true,
+  "supportPickUp": true,
+  "supportDelivery": true,
+  "supportShipping": true,
+  "supportShipToStore": true,
+  "operatingStatus": {
+    "id": "825E33F8-1DE7-4E26-BDEF-D4A598232885",
+    "availabilityStatus": {
+      "isAvailable": true,
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "deliveryAvailabilityStatus": {
+      "isAvailable": true,
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "deliveryQuoteTime": {
+      "duration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      },
+      "couldBeDelayed": false,
+      "delayEstimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "pickupAvailabilityStatus": {
+      "isAvailable": true,
+      "estimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    },
+    "pickupQuoteTime": {
+      "duration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      },
+      "couldBeDelayed": false,
+      "delayEstimatedDuration": {
+        "time": 0,
+        "timeScale": "Minutes"
+      }
+    }
+  },
+  "schedule": {
+    "fulfillmentLocationId": "825e33f8-1de7-4e26-bdef-d4a598232885",
+    "openingHours": [
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Monday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Tuesday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Wednesday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Thursday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Friday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Saturday",
+        "isOpenedAllDay": true
+      },
+      {
+        "isClosed": false,
+        "openingTimes": [],
+        "day": "Sunday",
+        "isOpenedAllDay": true
+      }
+    ],
+    "openingHourExceptions": [],
+    "scheduleType": "OpeningHours"
+  },
+  "pickUpSchedule": {
+    "fulfillmentLocationId": "825e33f8-1de7-4e26-bdef-d4a598232885",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": "Pickup"
+  },
+  "deliverySchedule": {
+    "fulfillmentLocationId": "825e33f8-1de7-4e26-bdef-d4a598232885",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": "Delivery"
+  },
+  "timeZone": "Eastern Standard Time",
+  "deliveryScheduleManaged": false,
+  "pickUpScheduleManaged": false,
+  "inventoryLocationId": "BRU-101",
+  "inventoryProviderId": "OvertureQuantitative",
+  "isInventoryEnabled": true,
+  "isAtpEnabled": true,
+  "addresses": [
+    {
+      "id": "cabd5c08dde64de9a52c4211949b5735",
+      "addressName": "Store",
+      "firstName": "Manager",
+      "lastName": "Test",
+      "email": "brus101@example.com",
+      "phoneNumber": "12125550123",
+      "city": "New York",
+      "countryCode": "US",
+      "regionCode": "US-NY",
+      "line1": "113 Sullivan St",
+      "postalCode": "10012",
+      "isPreferredBilling": false,
+      "isPreferredShipping": false,
+      "propertyBag": {
+        "Address_Id": {
+          "__type": "ValueOfInt32",
+          "value": 37485
+        }
+      }
+    }
+  ],
+  "scopeId": "BetterRetailUSA"
+}

@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "RecurringOrderReminder",
   "description": {
     "en-US": "Notification email sent when a reminder of an upcoming order must be sent",

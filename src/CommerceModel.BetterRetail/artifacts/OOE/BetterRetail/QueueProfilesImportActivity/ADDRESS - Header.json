@@ -1,0 +1,17 @@
+[
+	[
+		"Id",
+		"AddressName",
+		"Line1",
+		"City",
+		"ZipPostalCode",
+		"StateProvinceCode",
+		"CountryRegionCode",
+		"IsPreferredShipping",
+		"IsPreferredBilling",
+		"Created",
+		"CreatedBy",
+		"LastModified",
+		"LastModifiedBy"
+	]
+]

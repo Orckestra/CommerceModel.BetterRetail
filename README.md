@@ -19,7 +19,7 @@ You also need PowerShell 5.1 to execute the build script. The build script it no
 You can build the project by opening a PowerShell window in the `build` folder and executing this:
 
 ```powershell
-.\Build.ps1 -t all -ExtraProperties @{ SensitiveData= @{ NewUsersPassword = '<PWD>' ; ShippoApiKey = '<SkippoApiKey>'; TranssmartApiUsername = '<TranssmartApiUsername>'; TranssmartApiPassword = '<TranssmartApiPassword>'; TranssmartAccount = '<TranssmartAccount>'; TranssmartApiEndpoint = '<TranssmartApiEndpoint>'; AvalaraAccountNumber = '<AvalaraAccountNumber>' ; AvalaraCompanyCode = '<AvalaraCompanyCode>' ; AvalaraLicenceKey = '<AvalaraLicenceKey>' ; AvalaraServiceUrl = '<AvalaraServiceUrl>' ; DeliverySolutionsApiEndpoint = '<DeliverySolutionsApiEndpoint>' ; DeliverySolutionsApiKey = '<DeliverySolutionsApiKey>' ; DeliverySolutionsTenantId = '<DeliverySolutionsTenantId>'} }
+.\Build.ps1 -t all -ExtraProperties @{ SensitiveData= @{ NewUsersPassword = '<PWD>' ; ShippoApiKey = '<SkippoApiKey>'; TranssmartApiUsername = '<TranssmartApiUsername>'; TranssmartApiPassword = '<TranssmartApiPassword>'; TranssmartAccount = '<TranssmartAccount>'; TranssmartApiEndpoint = '<TranssmartApiEndpoint>'; AvalaraAccountNumber = '<AvalaraAccountNumber>' ; AvalaraCompanyCode = '<AvalaraCompanyCode>' ; AvalaraLicenceKey = '<AvalaraLicenceKey>' ; AvalaraServiceUrl = '<AvalaraServiceUrl>' ; DeliverySolutionsApiEndpoint = '<DeliverySolutionsApiEndpoint>' ; DeliverySolutionsApiKey = '<DeliverySolutionsApiKey>' ; DeliverySolutionsTenantId = '<DeliverySolutionsTenantId>' ; DeliverySolutionsSecretKey = '<DeliverySolutionsSecretKey>'} }
 ```
 
 The sensitive information (usernames & passwords) have been scrubbed from the dataset so you will need to fill in the values for the sensitive data at compile time with the values for your providers. `NewUsersPassword` is the only required value and you can omit the other values if you do not use [Shippo](https://goshippo.com/), [Transsmart](https://www.transsmart.com) or [Avalara](https://www.avalara.com).
@@ -41,17 +41,14 @@ The sensitive information (usernames & passwords) have been scrubbed from the da
 >   "AvalaraServiceUrl": "",
 >   "DeliverySolutionsApiEndpoint": "",
 >   "DeliverySolutionsApiKey": "",
->   "DeliverySolutionsTenantId": ""
+>   "DeliverySolutionsTenantId": "",
+>   "DeliverySolutionsSecretKey": ""
 > }
 > ```
 
 ### Before doing a Git commit
 
-The build process will modify files which contain sensitive data and you will need to revert the changes to these file before adding the files to Git to prevent sensitive information to be committed to Git. You can run this command to revert the changes to known sensitive files:
-
-```powershell
-.\Build.ps1 -t UndoSensitiveData
-```
+The build process will modify files which contain sensitive data and revert them automatically. This is done during the Compile group of tasks. Compile also runs the UndoSensitiveData task. If build script fails, you may need to review the changes to sensitive information to prevent it from being committed to Git.
 
 ## Deployment
 
@@ -180,7 +177,7 @@ By default, the deployment script `integration.psake.ps1` does not automatically
 
       | Variable      | Value                                                                                                                                                      | Comment                                                                         |
       | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-      | SensitiveData | @{ NewUsersPassword = '' ; ShippoApiKey = '; TranssmartApiUsername = '; TranssmartApiPassword = '; TranssmartAccount = '; TranssmartApiEndpoint = ''; AvalaraAccountNumber = '' ; AvalaraCompanyCode = '' ; AvalaraLicenceKey = '' ; AvalaraServiceUrl = '' ; DeliverySolutionsApiEndpoint = '' ; DeliverySolutionsApiKey = '' ; DeliverySolutionsTenantId = '' } | A PowerShell formatted Hashtable containing the ExtraProperties's SentitiveData. You can use the value shown on the left and fill in the values. |
+      | SensitiveData | @{ NewUsersPassword = '' ; ShippoApiKey = '; TranssmartApiUsername = '; TranssmartApiPassword = '; TranssmartAccount = '; TranssmartApiEndpoint = ''; AvalaraAccountNumber = '' ; AvalaraCompanyCode = '' ; AvalaraLicenceKey = '' ; AvalaraServiceUrl = '' ; DeliverySolutionsApiEndpoint = '' ; DeliverySolutionsApiKey = '' ; DeliverySolutionsTenantId = '' ; DeliverySolutionsSecretKey = '' } | A PowerShell formatted Hashtable containing the ExtraProperties's SentitiveData. You can use the value shown on the left and fill in the values. |
 
       Ask your Orckestra Support Specialist for your service account.
 

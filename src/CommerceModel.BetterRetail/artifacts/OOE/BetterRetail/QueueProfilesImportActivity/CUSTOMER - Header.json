@@ -1,0 +1,16 @@
+[
+	[
+		"Id",
+		"Username",
+		"FirstName",
+		"LastName",
+		"Email",
+		"PhoneNumber",
+		"CustomerType",
+		"AccountStatus",
+		"Created",
+		"CreatedBy",
+		"LastModified",
+		"LastModifiedBy"
+	]
+]

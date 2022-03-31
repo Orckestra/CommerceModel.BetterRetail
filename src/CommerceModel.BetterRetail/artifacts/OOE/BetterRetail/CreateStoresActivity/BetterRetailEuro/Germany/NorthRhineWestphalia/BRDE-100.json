@@ -1,0 +1,290 @@
+{
+  "Number": "BRDE-100",
+  "IsActive": true,
+  "Name": "BRDE-Bocholt",
+  "DisplayName": {
+    "en-US": "BRDE-Bocholt"
+  },
+  "Description": {
+    "en-US": ""
+  },
+  "StoreType": 0,
+  "Manager": null,
+  "PhoneNumber": "49 5555 5555555",
+  "PhoneExtension": null,
+  "FaxNumber": null,
+  "FaxExtension": null,
+  "Email": "brde100@example.com",
+  "IsPickUpLocation": false,
+  "SupportPickUp": true,
+  "SupportDelivery": true,
+  "SupportShipping": true,
+  "SupportShipToStore": true,
+  "OperatingStatus": {
+    "Id": "9EE31799-0309-3F44-4F2D-1518F06F5E34",
+    "AvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScales": 0
+      }
+    },
+    "DeliveryAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScales": 0
+      }
+    },
+    "DeliveryQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScales": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PickupAvailabilityStatus": {
+      "IsAvailable": true,
+      "Reason": null,
+      "EstimatedDuration": {
+        "Time": 0.0,
+        "TimeScales": 0
+      }
+    },
+    "PickupQuoteTime": {
+      "Duration": {
+        "Time": 0.0,
+        "TimeScales": 0
+      },
+      "CouldBeDelayed": false,
+      "DelayReason": null,
+      "DelayEstimatedDuration": {
+        "Time": 0.0,
+        "TimeScale": 0
+      }
+    },
+    "PropertyBag": null
+  },
+  "Schedule": {
+    "FulfillmentLocationId": "9EE31799-0309-3F44-4F2D-1518F06F5E34",
+    "OpeningHours": [
+      {
+        "IsClosed": false,
+        "OpeningTimes": [],
+        "Day": 1,
+        "IsOpenedAllDay": true
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [],
+        "Day": 2,
+        "IsOpenedAllDay": true
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [],
+        "Day": 3,
+        "IsOpenedAllDay": true
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [],
+        "Day": 4,
+        "IsOpenedAllDay": true
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [],
+        "Day": 5,
+        "IsOpenedAllDay": true
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [],
+        "Day": 6,
+        "IsOpenedAllDay": true
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [],
+        "Day": 0,
+        "IsOpenedAllDay": true
+      }
+    ],
+    "OpeningHourExceptions": [
+      {
+        "Id": "0279D6E9-929A-5852-462A-EFC1D8814390",
+        "Name": "Hellige Drei Könige",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-01-06T00:00:00Z",
+        "EndDate": "2019-01-06T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "7A889699-6474-04A1-05D7-06BC5EAE8BC1",
+        "Name": "Internationaler Frauentag",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-03-08T00:00:00Z",
+        "EndDate": "2019-03-08T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "CB0FA432-79C8-78D0-8FBD-0D7BB83F9D52",
+        "Name": "Tag der arbeit",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-05-01T00:00:00Z",
+        "EndDate": "2019-05-01T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "E6BD94B4-61F1-2A42-54D9-B815F48F0A69",
+        "Name": "Maria Himmelfahrt",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-08-15T00:00:00Z",
+        "EndDate": "2019-08-15T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "7B4B411D-11D6-57B3-953E-50CFA6BB2218",
+        "Name": "Weltkindertag",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-09-20T00:00:00Z",
+        "EndDate": "2019-09-20T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "B666CEDA-23AB-18D8-A0EC-C635506F1CB5",
+        "Name": "Tag der Deutchen Einheit",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-10-03T00:00:00Z",
+        "EndDate": "2019-10-03T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "45C78555-92C8-8894-257E-395429BAA05C",
+        "Name": "Reformationstag",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-10-31T00:00:00Z",
+        "EndDate": "2019-10-31T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "C1AD4203-087B-5CBC-3983-55B749CF00AC",
+        "Name": "Allerheiligen",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-11-01T00:00:00Z",
+        "EndDate": "2019-11-01T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "6D0D07F6-2829-8EBE-1918-480643D15F7B",
+        "Name": "New years day",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-01-01T00:00:00Z",
+        "EndDate": "2019-01-01T00:00:00Z",
+        "IsRecurrent": true
+      },
+      {
+        "Id": "C7CAE9ED-24FE-6F01-34D0-68D040DEA73E",
+        "Name": "Christmas",
+        "IsClosed": true,
+        "OpeningTime": {
+          "BeginingTime": "00:00:00",
+          "EndingTime": "1.00:00:00"
+        },
+        "StartDate": "2019-12-25T00:00:00Z",
+        "EndDate": "2019-12-26T00:00:00Z",
+        "IsRecurrent": true
+      }
+    ],
+    "ScheduleType": 0,
+    "PropertyBag": null
+  },
+  "PickUpSchedule": {
+    "FulfillmentLocationId": "9EE31799-0309-3F44-4F2D-1518F06F5E34",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 2,
+    "PropertyBag": null
+  },
+  "DeliverySchedule": {
+    "FulfillmentLocationId": "9EE31799-0309-3F44-4F2D-1518F06F5E34",
+    "OpeningHours": [],
+    "OpeningHourExceptions": [],
+    "ScheduleType": 1,
+    "PropertyBag": null
+  },
+  "TimeZone": "W. Europe Standard Time",
+  "DeliveryScheduleManager": false,
+  "PickUpScheduleManaged": false,
+  "InventoryLocationId": "BRDE-6100",
+  "InventoryProviderId": "OvertureQuantitative",
+  "IsInventoryEnabled": true,
+  "IsAtpEnabled": true,
+  "Addresses": [
+    {
+      "Id": "4BBE986D-5B95-9BB0-31CA-4E0359814795",
+      "AddressName": "StoreAddress",
+      "City": "Bocholt",
+      "CountryCode": "DE",
+      "RegionCode": "DE-NW",
+      "Line1": "Berliner Platz 2",
+      "Line2": null,
+      "FirstName": null,
+      "LastName": null,
+      "PhoneNumber": "49 5555 5555555",
+      "PhoneExtension": null,
+      "PostalCode": "46395",
+      "Latitude": null,
+      "Longitude": null,
+      "Email": null,
+      "Notes": null,
+      "IsPreferredBilling": false,
+      "IsPreferredShipping": false
+    }
+  ],
+  "ScopeId": "BetterRetailEuro"
+}

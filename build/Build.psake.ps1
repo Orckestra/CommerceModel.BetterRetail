@@ -78,9 +78,11 @@ Task Compile      -depends RestorePackages,
                            ReplaceSensitiveData,
                            InitializeAssemblyVersion,
                            InitializeDeploymentPackageManifestVersion,
+                           InitializeMetadata,
                            DetectBuildStability,
                            CompileSolutions,
-                           GeneratePackages
+                           GeneratePackages,
+						   UndoSensitiveData
 
 Task Publish      -depends PublishPackages,
                            PublishArtifacts
@@ -147,7 +149,8 @@ $NugetArtifactsDirectory = "$ArtifactsStagingDirectory\Nuget"
 $VisualStudioVersion = '2019'
 $filesWithSensitiveData = @(
     (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\artifacts\OOE\BetterRetail\QueueOrderSchemaImportActivity\providers.json'),
-    (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\artifacts\OOE\BetterRetail\CreateUsersActivity\users.json')
+    (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\artifacts\OOE\BetterRetail\CreateUsersActivity\users.json'),
+    (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\Parameters.All.xml')
 )
 
 function Create-ArtifactsFolder {
@@ -337,6 +340,22 @@ Task InitializeAssemblyVersion -precondition { $IsRunningOnBuildMachine } {
     $globalAssemblyInfoPath = Join-Path (Get-GitWorkspaceRoot) 'src\Common\GlobalAssemblyInfo.cs'
     $projectsDirectoryPaths = @('src', 'tests')
     InitializeAssemblyInfo -RootFolder $rootFolder -GlobalAssemblyInfoPath $globalAssemblyInfoPath -ProjectsDirectoryPaths $projectsDirectoryPaths
+}
+
+Task InitializeMetadata {
+    $utf8WithBomEncoding = New-Object System.Text.UTF8Encoding $True
+    $utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
+    $copyright = [char]0x00A9 # to avoid weird encoding issues
+    $currentYear = (Get-Date).Year
+
+    Edit-FileContent -path (Join-Path $WorkspaceRoot 'src\Common\GlobalAssemblyInfo.cs') `
+                     -pattern "\[assembly: AssemblyCopyright\([^()\]]*\)\]" `
+                     -replacement "[assembly: AssemblyCopyright(`"$($copyright) $($currentYear) Orckestra Technologies Inc. All rights reserved.`")]" `
+                     -encoding $utf8NoBomEncoding
+
+    Update-NuspecFile -path (Join-Path $WorkspaceRoot "src\CommerceModel.BetterRetail\CommerceModel.BetterRetail.nuspec") `
+                      -copyright "$($copyright) $($currentYear) Orckestra Technologies Inc. All rights reserved." `
+                      -encoding $utf8WithBomEncoding
 }
 
 function Get-SensitiveData {

@@ -1,4 +1,4 @@
-﻿
+
 Bonjour {{Customer.FirstName}} {{Customer.LastName}},
 
 Votre commande placée sur {{Variables.RootUrl}} contient des produits qui vous seront envoyés de façon périodique.  Ce courriel contient tous les détails de la commande pour ces produits:
@@ -9,19 +9,19 @@ L’équipe {{Variables.CompanyName}}
 NOUVEAUX PRODUITS QUI SERONT ENVOYÉS PÉRIODIQUEMENT
 ==============================
 
-{% for item in AddedProducts %}
+<!--{% for item in AddedProducts %}-->
 Produit: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
 Prix: {{item.TotalRegularPrice | money:"fr-CA" }}
-{% endfor %}
+<!--{% endfor %}-->
 
 
 TOUS LES PRODUITS QUI SERONT ENVOYÉS PÉRIODIQUEMENT
 ==============================
 
-{% for item in AllProducts %}
+<!--{% for item in AllProducts %}-->
 Produit: {{item.Quantity}} x {{item.ProductSummary.DisplayName}} -- {{item.RecurringOrderFrequencyDisplayName}}
 Prix: {{item.TotalRegularPrice | money:"fr-CA" }}
-{% endfor %}
+<!--{% endfor %}-->
 
 
 INFORMATION ADDITIONNELLE

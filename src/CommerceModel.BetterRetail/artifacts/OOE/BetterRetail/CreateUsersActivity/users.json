@@ -142,7 +142,7 @@
       "roles": [
         {
           "roleName": "Administrator",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "Global"
         }
       ]
@@ -163,7 +163,7 @@
       "roles": [
         {
           "roleName": "Administrator",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
         }
       ]
@@ -184,7 +184,7 @@
       "roles": [
         {
           "roleName": "ProductsReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "Global"
         }
       ]
@@ -205,7 +205,7 @@
       "roles": [
         {
           "roleName": "ProductsReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
         }
       ]
@@ -226,7 +226,7 @@
       "roles": [
         {
           "roleName": "MarketingReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "Global"
         }
       ]
@@ -247,7 +247,7 @@
       "roles": [
         {
           "roleName": "MarketingReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
         }
       ]
@@ -268,7 +268,7 @@
       "roles": [
         {
           "roleName": "OrderReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "Global"
         }
       ]
@@ -289,7 +289,7 @@
       "roles": [
         {
           "roleName": "OrderReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
         }
       ]
@@ -310,12 +310,12 @@
       "roles": [
         {
           "roleName": "ProductsReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "Global"
         },
         {
           "roleName": "MarketingReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "Global"
         }
       ]
@@ -336,12 +336,12 @@
       "roles": [
         {
           "roleName": "ProductsReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
         },
         {
           "roleName": "MarketingReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
         }
       ]
@@ -362,12 +362,12 @@
       "roles": [
         {
           "roleName": "ProductsReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "Global"
         },
         {
           "roleName": "OrderReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "Global"
         }
       ]
@@ -388,12 +388,12 @@
       "roles": [
         {
           "roleName": "ProductsReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
         },
         {
           "roleName": "OrderReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
         }
       ]
@@ -414,12 +414,12 @@
       "roles": [
         {
           "roleName": "MarketingReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "Global"
         },
         {
           "roleName": "OrderReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "Global"
         }
       ]
@@ -440,12 +440,12 @@
       "roles": [
         {
           "roleName": "MarketingReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
         },
         {
           "roleName": "OrderReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
         }
       ]
@@ -466,17 +466,17 @@
       "roles": [
         {
           "roleName": "ProductsReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "Global"
         },
         {
           "roleName": "MarketingReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "Global"
         },
         {
           "roleName": "OrderReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "Global"
         }
       ]
@@ -497,17 +497,17 @@
       "roles": [
         {
           "roleName": "ProductsReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
         },
         {
           "roleName": "MarketingReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
         },
         {
           "roleName": "OrderReportsReader",
-          "moduleName": "Analytics",
+          "moduleName": "Report",
           "scopeId": "BetterRetailCanada"
         }
       ]

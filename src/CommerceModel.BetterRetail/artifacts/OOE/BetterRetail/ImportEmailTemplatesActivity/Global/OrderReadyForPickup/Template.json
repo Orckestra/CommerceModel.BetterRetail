@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "OrderReadyForPickup",
   "description": {
     "en-US": "Notification email sent when order is ready to be picked up",
