@@ -151,6 +151,22 @@
                 },
                 "defaultCulture": "en-US",
                 "isActive": true
+              },
+              {
+                "id": "BRU-101",
+                "type": "Dependant",
+                "name": {
+                  "en-CA": "BRU-101",
+                  "en-US": "BRU-101",
+                  "fr-CA": "BRU-101"
+                },
+                "description": {
+                  "en-CA": "",
+                  "en-US": "",
+                  "fr-CA": ""
+                },
+                "defaultCulture": "en-US",
+                "isActive": true
               }
             ],
             "defaultCulture": "en-US",
