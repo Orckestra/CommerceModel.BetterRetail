@@ -151,7 +151,7 @@
         </InOutArgument>
       </ooopwa:AssignFulfillmentScheduleDateTimeActivity.OrderProcessingResultArgument>
     </ooopwa:AssignFulfillmentScheduleDateTimeActivity>
-	<ooopwap:FulfillmentTransitionChangeStatusActivity FulfillmentKickOffStatuses="ReadyForPicking" sap2010:WorkflowViewState.IdRef="FulfillmentTransitionChangeStatusActivity_1">
+	<ooopwap:FulfillmentTransitionChangeStatusActivity FulfillmentKickOffStatuses="ReadyForPicking|PickingInProgress" sap2010:WorkflowViewState.IdRef="FulfillmentTransitionChangeStatusActivity_1">
         <ooopwap:FulfillmentTransitionChangeStatusActivity.OrderFulfillmentStateArgument>
             <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
                 <mca:CSharpValue x:TypeArguments="oosof:OrderFulfillmentState">OrderFulfillmentStateArgument</mca:CSharpValue>
