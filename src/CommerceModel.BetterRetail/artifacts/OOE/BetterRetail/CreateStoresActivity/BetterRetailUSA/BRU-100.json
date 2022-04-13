@@ -15,7 +15,7 @@
   "storeType": "Physical",
   "phoneNumber": "16285550123",
   "manager": "Test Manager",
-  "isPickUpLocation": true,
+  "isPickUpLocation": false,
   "supportPickUp": true,
   "supportDelivery": true,
   "supportShipping": true,
@@ -113,19 +113,19 @@
       }
     ],
     "openingHourExceptions": [],
-    "scheduleType": "OpeningHours"
-  },
-  "pickUpSchedule": {
-    "fulfillmentLocationId": "fda044ea-1708-42c2-88cd-d3e80516171f",
-    "openingHours": [],
-    "openingHourExceptions": [],
-    "scheduleType": "Pickup"
+    "scheduleType": 0
   },
   "deliverySchedule": {
     "fulfillmentLocationId": "fda044ea-1708-42c2-88cd-d3e80516171f",
     "openingHours": [],
     "openingHourExceptions": [],
-    "scheduleType": "Delivery"
+    "scheduleType": 1
+  },
+  "pickUpSchedule": {
+    "fulfillmentLocationId": "fda044ea-1708-42c2-88cd-d3e80516171f",
+    "openingHours": [],
+    "openingHourExceptions": [],
+    "scheduleType": 2
   },
   "timeZone": "Pacific Standard Time",
   "deliveryScheduleManaged": false,
@@ -158,4 +158,4 @@
     }
   ],
   "scopeId": "BetterRetailUSA"
-} 
+}

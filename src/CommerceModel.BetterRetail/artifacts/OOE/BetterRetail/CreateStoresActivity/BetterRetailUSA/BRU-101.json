@@ -15,7 +15,7 @@
   "storeType": "Physical",
   "phoneNumber": "12125550123",
   "manager": "Test Manager",
-  "isPickUpLocation": true,
+  "isPickUpLocation": false,
   "supportPickUp": true,
   "supportDelivery": true,
   "supportShipping": true,
