@@ -279,7 +279,7 @@
         }
       },
       {
-        "groupId": "Default",
+        "groupId": "AttributesGroupTest",
         "isRequired": false,
         "displayOrder": 0,
         "dataType": "Boolean",
@@ -296,7 +296,7 @@
         }
       },
       {
-        "groupId": "Default",
+        "groupId": "AttributesGroupTest",
         "isRequired": false,
         "displayOrder": 0,
         "dataType": "DateTime",
@@ -313,7 +313,7 @@
         }
       },
       {
-        "groupId": "Default",
+        "groupId": "AttributesGroupTest",
         "isRequired": false,
         "displayOrder": 0,
         "dataType": "Decimal",
@@ -330,7 +330,7 @@
         }
       },
       {
-        "groupId": "Default",
+        "groupId": "AttributesGroupTest",
         "isRequired": false,
         "displayOrder": 0,
         "dataType": "Text",
@@ -347,7 +347,7 @@
         }
       },
       {
-        "groupId": "Default",
+        "groupId": "AttributesGroupTest",
         "isRequired": false,
         "displayOrder": 0,
         "dataType": "Integer",
@@ -364,7 +364,7 @@
         }
       },
       {
-        "groupId": "Default",
+        "groupId": "AttributesGroupTest",
         "isRequired": false,
         "displayOrder": 0,
         "dataType": "Lookup",
