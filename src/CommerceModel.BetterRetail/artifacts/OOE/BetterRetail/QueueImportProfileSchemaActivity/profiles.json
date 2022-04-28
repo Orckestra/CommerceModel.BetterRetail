@@ -237,23 +237,6 @@
         "groupId": "Default",
         "isRequired": false,
         "displayOrder": 0,
-        "dataType": "EntityReference",
-        "isBuiltIn": false,
-        "allowMultipleValues": true,
-        "multilingual": false,
-        "referenceTypeName": "Newsletter",
-        "isSearchable": false,
-        "name": "Newsletter",
-        "displayName": {
-          "en-US": "",
-          "fr-CA": "",
-          "fr-FR": ""
-        }
-      },
-      {
-        "groupId": "Default",
-        "isRequired": false,
-        "displayOrder": 0,
         "dataType": "Lookup",
         "isBuiltIn": false,
         "allowMultipleValues": false,
@@ -299,60 +282,100 @@
         "groupId": "Default",
         "isRequired": false,
         "displayOrder": 0,
-        "dataType": "Lookup",
+        "dataType": "Boolean",
         "isBuiltIn": false,
-        "allowMultipleValues": true,
+        "allowMultipleValues": false,
         "multilingual": false,
-        "referenceTypeName": "WineTypes",
+        "referenceTypeName": "TestBoolean",
         "isSearchable": false,
-        "name": "PreferredWineTypes",
+        "name": "TestBoolean",
         "displayName": {
-          "ar-QA": "",
-          "ar-YE": "",
-          "de-DE": "",
-          "en-CA": "",
-          "en-US": "Preferred Wine Types",
-          "es-AR": "",
-          "es-BO": "",
-          "es-CL": "",
-          "es-CO": "",
-          "es-CR": "",
-          "es-DO": "",
-          "es-EC": "",
-          "es-GT": "",
-          "es-HN": "",
-          "es-SV": "",
-          "fr-BE": "",
+          "en-US": "Test Boolean",
           "fr-CA": "",
-          "fr-FR": "",
-          "ja-JP": "",
-          "ko-KR": "",
-          "nb-NO": "",
-          "nl-BE": "",
-          "nl-NL": "",
-          "nn-NO": "",
-          "ru-RU": "",
-          "sa-IN": "",
-          "zh-CN": "",
-          "zh-HK": "",
-          "zh-MO": "",
-          "zh-SG": "",
-          "zh-TW": ""
+          "fr-FR": ""
         }
       },
       {
         "groupId": "Default",
         "isRequired": false,
         "displayOrder": 0,
-        "dataType": "EntityReference",
+        "dataType": "DateTime",
         "isBuiltIn": false,
         "allowMultipleValues": false,
         "multilingual": false,
-        "referenceTypeName": "AdditionalInformation",
+        "referenceTypeName": "TestDatetime",
         "isSearchable": false,
-        "name": "AdditionalInformation",
+        "name": "TestDatetime",
         "displayName": {
-          "en-US": "Additional Information",
+          "en-US": "Test DateTime",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      },
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Decimal",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "TestDecimal",
+        "isSearchable": false,
+        "name": "TestDecimal",
+        "displayName": {
+          "en-US": "Test Decimal",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      },
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Text",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "TestText",
+        "isSearchable": false,
+        "name": "TestText",
+        "displayName": {
+          "en-US": "Test Text",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      },
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Integer",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "TestInteger",
+        "isSearchable": false,
+        "name": "TestInteger",
+        "displayName": {
+          "en-US": "Test Integer",
+          "fr-CA": "",
+          "fr-FR": ""
+        }
+      },
+      {
+        "groupId": "Default",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Lookup",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "TestLookup",
+        "isSearchable": false,
+        "name": "TestLookup",
+        "displayName": {
+          "en-US": "Test Lookup",
           "fr-CA": "",
           "fr-FR": ""
         }
@@ -499,6 +522,26 @@
       "en-US": "Warehouse",
       "en-CA": "Warehouse",
       "fr-CA": "Entrepôt"
+    }
+  },
+  {
+    "attributes": [],
+    "isSharedEntity": true,
+    "name": "SharedProfile1",
+    "displayName": {
+      "en-US": "SharedProfile 1",
+      "en-CA": "SharedProfile 1",
+      "fr-CA": "SharedProfile 1"
+    }
+  },
+  {
+    "attributes": [],
+    "isSharedEntity": true,
+    "name": "SharedProfile2",
+    "displayName": {
+      "en-US": "SharedProfile 2",
+      "en-CA": "SharedProfile 2",
+      "fr-CA": "SharedProfile 2"
     }
   }
 ]
