@@ -359,8 +359,8 @@
         "name": "TestInteger",
         "displayName": {
           "en-US": "Test Integer",
-          "fr-CA": "Test Integer",
-          "fr-FR": "Test Integer"
+          "fr-CA": "Test entier",
+          "fr-FR": "Test entier"
         }
       },
       {
