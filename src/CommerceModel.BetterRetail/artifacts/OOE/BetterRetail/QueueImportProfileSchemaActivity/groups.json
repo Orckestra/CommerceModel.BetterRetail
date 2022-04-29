@@ -3,8 +3,10 @@
         "displayOrder": 1,
         "name": "AttributesGroupTest",
         "description": "",
-        "displayName": {
-            "en-US": "Attributes Group Test"
-        }
+      "displayName": {
+        "en-US": "Attributes Group Test",
+        "en-CA": "Attributes Group Test",
+        "fr-CA": "Test d'attributs de groupe"
+      }
     }
 ]
