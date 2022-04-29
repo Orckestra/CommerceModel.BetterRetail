@@ -13,6 +13,7 @@
 		"TestText",
 		"TestDatetime",
 		"TestInteger",
+		"TestLookup",
 		"Created",
 		"CreatedBy",
 		"LastModified",

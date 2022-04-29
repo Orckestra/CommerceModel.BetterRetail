@@ -379,6 +379,40 @@
           "fr-CA": "Test de lookup",
           "fr-FR": "Test de lookup"
         }
+      },
+      {
+        "groupId": "AttributesGroupTest",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "EntityReference",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "SharedProfile1",
+        "isSearchable": false,
+        "name": "SharedProfile",
+        "displayName": {
+          "en-CA": "Shared Profile",
+          "en-US": "Shared Profile",
+          "fr-CA": "Profil partagé"
+        }
+      },
+      {
+        "groupId": "AttributesGroupTest",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "EntityReference",
+        "isBuiltIn": false,
+        "allowMultipleValues": true,
+        "multilingual": false,
+        "referenceTypeName": "SharedProfile2",
+        "isSearchable": false,
+        "name": "SharedProfileMulti",
+        "displayName": {
+          "en-CA": "Shared Profile Multi",
+          "en-US": "Shared Profile Multi",
+          "fr-CA": "Profil partagé multi"
+        }
       }
     ],
     "isSharedEntity": true,
