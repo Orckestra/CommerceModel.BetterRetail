@@ -325,8 +325,8 @@
         "name": "TestDecimal",
         "displayName": {
           "en-US": "Test Decimal",
-          "fr-CA": "Test décimale",
-          "fr-FR": "Test décimale"
+          "fr-CA": "Test dÃ©cimale",
+          "fr-FR": "Test dÃ©cimale"
         }
       },
       {
@@ -342,8 +342,8 @@
         "name": "TestText",
         "displayName": {
           "en-US": "Test Text",
-          "fr-CA": "Test Texte",
-          "fr-FR": "Test Texte"
+          "fr-CA": "Test texte",
+          "fr-FR": "Test texte"
         }
       },
       {
@@ -394,7 +394,7 @@
         "displayName": {
           "en-CA": "Shared Profile",
           "en-US": "Shared Profile",
-          "fr-CA": "Profil partagé"
+          "fr-CA": "Profil partagÃ©"
         }
       },
       {
@@ -411,7 +411,7 @@
         "displayName": {
           "en-CA": "Shared Profile Multi",
           "en-US": "Shared Profile Multi",
-          "fr-CA": "Profil partagé multi"
+          "fr-CA": "Profil partagÃ© multi"
         }
       }
     ],
@@ -555,7 +555,7 @@
     "displayName": {
       "en-US": "Warehouse",
       "en-CA": "Warehouse",
-      "fr-CA": "Entrepôt"
+      "fr-CA": "EntrepÃ´t"
     }
   },
   {
