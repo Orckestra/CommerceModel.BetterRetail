@@ -211,8 +211,8 @@
 		"displayName": {
 			"en-CA": "Lookup List",
 			"en-US": "Lookup List",
-			"fr-CA": "Lookup List",
-			"fr-FR": "Lookup List"
+			"fr-CA": "Liste de lookup",
+			"fr-FR": "Liste de lookup"
 		},
 		"description": "",
 		"isActive": true

@@ -291,8 +291,8 @@
         "name": "TestBoolean",
         "displayName": {
           "en-US": "Test Boolean",
-          "fr-CA": "",
-          "fr-FR": ""
+          "fr-CA": "Test boolean",
+          "fr-FR": "Test boolean"
         }
       },
       {
@@ -308,8 +308,8 @@
         "name": "TestDatetime",
         "displayName": {
           "en-US": "Test DateTime",
-          "fr-CA": "",
-          "fr-FR": ""
+          "fr-CA": "Test date",
+          "fr-FR": "Test date"
         }
       },
       {
@@ -325,8 +325,8 @@
         "name": "TestDecimal",
         "displayName": {
           "en-US": "Test Decimal",
-          "fr-CA": "",
-          "fr-FR": ""
+          "fr-CA": "Test décimale",
+          "fr-FR": "Test décimale"
         }
       },
       {
@@ -342,8 +342,8 @@
         "name": "TestText",
         "displayName": {
           "en-US": "Test Text",
-          "fr-CA": "",
-          "fr-FR": ""
+          "fr-CA": "Test Texte",
+          "fr-FR": "Test Texte"
         }
       },
       {
@@ -359,8 +359,8 @@
         "name": "TestInteger",
         "displayName": {
           "en-US": "Test Integer",
-          "fr-CA": "",
-          "fr-FR": ""
+          "fr-CA": "Test Integer",
+          "fr-FR": "Test Integer"
         }
       },
       {
@@ -376,8 +376,8 @@
         "name": "TestLookup",
         "displayName": {
           "en-US": "Test Lookup",
-          "fr-CA": "",
-          "fr-FR": ""
+          "fr-CA": "Test de lookup",
+          "fr-FR": "Test de lookup"
         }
       }
     ],
