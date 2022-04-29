@@ -254,7 +254,6 @@
   <ItemGroup>
     <Content Include="artifacts\OOE\BetterRetail\BetterRetailExecuteSQLScriptActivity\Product\AddConfigs.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Membership\InsertAuthorization.sql" />
-    <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddAttributeGroup.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddCustomLineItemAttributes.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddCustomAttributes.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddExternalPaymentProvider.sql" />
