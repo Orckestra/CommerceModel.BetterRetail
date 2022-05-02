@@ -1,16 +1,16 @@
 [
 	[
+		"LastModified",
 		"Id",
+		"CreatedBy",
+		"IsPreferred",
+		"Created",
+		"LastModifiedBy",
 		"Name",
 		"Parent_EntityName",
 		"Parent_Guid",
 		"Child_EntityName",
 		"Child_Guid",
-		"Created",
-		"CreatedBy",
-		"LastModified",
-		"LastModifiedBy",
-		"IsDeleted",
-		"IsPreferred"
+		"IsDeleted"
 	]
 ]

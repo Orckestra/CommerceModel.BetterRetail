@@ -1,16 +1,58 @@
 [
 	[
+		"2022-01-01T00:00:00.0000000",
 		"76931a2d-8bc2-4aa3-a358-c00a758ba0c0",
+		"CommerceModel.BetterRetail",
+		"False",
+		"2022-01-01T00:00:00.0000000",
+		"CommerceModel.BetterRetail",
 		"Addresses",
 		"CUSTOMER",
 		"99f3eef0-d9c1-4692-9583-cbf9ec42f783",
 		"ADDRESS",
 		"7a3e1e55-9b0a-4d44-b95c-af5235c51b4d",
-		"2022-01-01T00:00:00.0000000",
-		"CommerceModel.BetterRetail",
-		"2022-01-01T00:00:00.0000000",
-		"CommerceModel.BetterRetail",
+		"False"
+	],
+	[
+		"2022-04-29T18:20:53.2400000",
+		"2bdcdf93-bb07-4007-9632-7d7b84379778",
+		"OrckestraCommerce.BetterRetail",
 		"False",
+		"2022-04-29T18:20:53.2400000",
+		"OrckestraCommerce.BetterRetail",
+		"SharedProfile",
+		"CUSTOMER",
+		"99f3eef0-d9c1-4692-9583-cbf9ec42f783",
+		"SharedProfile1",
+		"e8bec5ad-18b8-41de-9ed5-a63a8c0b164e",
+		"False"
+	],
+	[
+		"2022-04-29T18:20:53.6600000",
+		"c88363fc-d769-4cb5-bc0d-b42c46edb551",
+		"OrckestraCommerce.BetterRetail",
+		"False",
+		"2022-04-29T18:20:53.6600000",
+		"OrckestraCommerce.BetterRetail",
+		"SharedProfileMulti",
+		"CUSTOMER",
+		"99f3eef0-d9c1-4692-9583-cbf9ec42f783",
+		"SharedProfile2",
+		"2c6e0f11-4e68-47f2-b658-0658a89a4551",
+		"False"
+	],
+	[
+		"2022-04-29T18:20:53.6500000",
+		"0dd88ee8-23f3-47f8-a481-cfdc568df8d5",
+		"OrckestraCommerce.BetterRetail",
+		"False",
+		"2022-04-29T18:20:53.6500000",
+		"OrckestraCommerce.BetterRetail",
+		"SharedProfileMulti",
+		"CUSTOMER",
+		"99f3eef0-d9c1-4692-9583-cbf9ec42f783",
+		"SharedProfile2",
+		"adc074ba-007d-4b50-a7fd-b531cf133c21",
 		"False"
 	]
 ]

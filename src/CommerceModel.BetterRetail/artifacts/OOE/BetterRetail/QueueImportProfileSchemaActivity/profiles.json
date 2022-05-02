@@ -237,23 +237,6 @@
         "groupId": "Default",
         "isRequired": false,
         "displayOrder": 0,
-        "dataType": "EntityReference",
-        "isBuiltIn": false,
-        "allowMultipleValues": true,
-        "multilingual": false,
-        "referenceTypeName": "Newsletter",
-        "isSearchable": false,
-        "name": "Newsletter",
-        "displayName": {
-          "en-US": "",
-          "fr-CA": "",
-          "fr-FR": ""
-        }
-      },
-      {
-        "groupId": "Default",
-        "isRequired": false,
-        "displayOrder": 0,
         "dataType": "Lookup",
         "isBuiltIn": false,
         "allowMultipleValues": false,
@@ -296,65 +279,139 @@
         }
       },
       {
-        "groupId": "Default",
+        "groupId": "AttributesGroupTest",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Boolean",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "TestBoolean",
+        "isSearchable": false,
+        "name": "TestBoolean",
+        "displayName": {
+          "en-US": "Test Boolean",
+          "fr-CA": "Test boolean",
+          "fr-FR": "Test boolean"
+        }
+      },
+      {
+        "groupId": "AttributesGroupTest",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "DateTime",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "TestDatetime",
+        "isSearchable": false,
+        "name": "TestDatetime",
+        "displayName": {
+          "en-US": "Test DateTime",
+          "fr-CA": "Test date",
+          "fr-FR": "Test date"
+        }
+      },
+      {
+        "groupId": "AttributesGroupTest",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Decimal",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "TestDecimal",
+        "isSearchable": false,
+        "name": "TestDecimal",
+        "displayName": {
+          "en-US": "Test Decimal",
+          "fr-CA": "Test décimale",
+          "fr-FR": "Test décimale"
+        }
+      },
+      {
+        "groupId": "AttributesGroupTest",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Text",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "TestText",
+        "isSearchable": false,
+        "name": "TestText",
+        "displayName": {
+          "en-US": "Test Text",
+          "fr-CA": "Test texte",
+          "fr-FR": "Test texte"
+        }
+      },
+      {
+        "groupId": "AttributesGroupTest",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "Integer",
+        "isBuiltIn": false,
+        "allowMultipleValues": false,
+        "multilingual": false,
+        "referenceTypeName": "TestInteger",
+        "isSearchable": false,
+        "name": "TestInteger",
+        "displayName": {
+          "en-US": "Test Integer",
+          "fr-CA": "Test entier",
+          "fr-FR": "Test entier"
+        }
+      },
+      {
+        "groupId": "AttributesGroupTest",
         "isRequired": false,
         "displayOrder": 0,
         "dataType": "Lookup",
         "isBuiltIn": false,
-        "allowMultipleValues": true,
+        "allowMultipleValues": false,
         "multilingual": false,
-        "referenceTypeName": "WineTypes",
+        "referenceTypeName": "TestLookup",
         "isSearchable": false,
-        "name": "PreferredWineTypes",
+        "name": "TestLookup",
         "displayName": {
-          "ar-QA": "",
-          "ar-YE": "",
-          "de-DE": "",
-          "en-CA": "",
-          "en-US": "Preferred Wine Types",
-          "es-AR": "",
-          "es-BO": "",
-          "es-CL": "",
-          "es-CO": "",
-          "es-CR": "",
-          "es-DO": "",
-          "es-EC": "",
-          "es-GT": "",
-          "es-HN": "",
-          "es-SV": "",
-          "fr-BE": "",
-          "fr-CA": "",
-          "fr-FR": "",
-          "ja-JP": "",
-          "ko-KR": "",
-          "nb-NO": "",
-          "nl-BE": "",
-          "nl-NL": "",
-          "nn-NO": "",
-          "ru-RU": "",
-          "sa-IN": "",
-          "zh-CN": "",
-          "zh-HK": "",
-          "zh-MO": "",
-          "zh-SG": "",
-          "zh-TW": ""
+          "en-US": "Test Lookup",
+          "fr-CA": "Test de lookup",
+          "fr-FR": "Test de lookup"
         }
       },
       {
-        "groupId": "Default",
+        "groupId": "AttributesGroupTest",
         "isRequired": false,
         "displayOrder": 0,
         "dataType": "EntityReference",
         "isBuiltIn": false,
         "allowMultipleValues": false,
         "multilingual": false,
-        "referenceTypeName": "AdditionalInformation",
+        "referenceTypeName": "SharedProfile1",
         "isSearchable": false,
-        "name": "AdditionalInformation",
+        "name": "SharedProfile",
         "displayName": {
-          "en-US": "Additional Information",
-          "fr-CA": "",
-          "fr-FR": ""
+          "en-CA": "Shared Profile",
+          "en-US": "Shared Profile",
+          "fr-CA": "Profil partagé"
+        }
+      },
+      {
+        "groupId": "AttributesGroupTest",
+        "isRequired": false,
+        "displayOrder": 0,
+        "dataType": "EntityReference",
+        "isBuiltIn": false,
+        "allowMultipleValues": true,
+        "multilingual": false,
+        "referenceTypeName": "SharedProfile2",
+        "isSearchable": false,
+        "name": "SharedProfileMulti",
+        "displayName": {
+          "en-CA": "Shared Profile Multi",
+          "en-US": "Shared Profile Multi",
+          "fr-CA": "Profil partagé multi"
         }
       }
     ],
@@ -498,7 +555,27 @@
     "displayName": {
       "en-US": "Warehouse",
       "en-CA": "Warehouse",
-      "fr-CA": "Entrep�t"
+      "fr-CA": "Entrepôt"
+    }
+  },
+  {
+    "attributes": [],
+    "isSharedEntity": true,
+    "name": "SharedProfile1",
+    "displayName": {
+      "en-US": "SharedProfile 1",
+      "en-CA": "SharedProfile 1",
+      "fr-CA": "Profil partagé 1"
+    }
+  },
+  {
+    "attributes": [],
+    "isSharedEntity": true,
+    "name": "SharedProfile2",
+    "displayName": {
+      "en-US": "SharedProfile 2",
+      "en-CA": "SharedProfile 2",
+      "fr-CA": "Profil partagé 2"
     }
   }
 ]
