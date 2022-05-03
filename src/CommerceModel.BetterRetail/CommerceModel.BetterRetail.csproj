@@ -486,12 +486,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="artifacts\OOE\App_Data\Workflows\Orders\BetterRetailNetherlands\OrderPostProcessingWorkflow.xaml">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="artifacts\OOE\App_Data\Workflows\Orders\BetterRetailNorway\OrderPostProcessingWorkflow.xaml">
+    <Content Include="artifacts\OOE\App_Data\Workflows\Orders\BetterRetailEuro\OrderPostProcessingWorkflow.xaml">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
