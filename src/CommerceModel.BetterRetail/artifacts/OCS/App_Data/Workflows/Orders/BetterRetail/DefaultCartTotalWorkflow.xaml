@@ -228,7 +228,19 @@
         </InOutArgument>
       </ooopwav:ValidateCartCouponsActivity.OrderProcessingResultArgument>
     </ooopwav:ValidateCartCouponsActivity>
-    <ooopwa:AssignCartLineItemPricesActivity sap2010:WorkflowViewState.IdRef="AssignCartLineItemPricesActivity_1">
+      <ooopwav:ValidateInventoryAvailabilityActivity sap2010:WorkflowViewState.IdRef="ValidateInventoryAvailabilityActivity_1" IgnoreReservations="True">
+          <ooopwav:ValidateInventoryAvailabilityActivity.OrderProcessingContextArgument>
+              <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+                  <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+              </InArgument>
+          </ooopwav:ValidateInventoryAvailabilityActivity.OrderProcessingContextArgument>
+          <ooopwav:ValidateInventoryAvailabilityActivity.OrderProcessingResultArgument>
+              <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+                  <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+              </InOutArgument>
+          </ooopwav:ValidateInventoryAvailabilityActivity.OrderProcessingResultArgument>
+      </ooopwav:ValidateInventoryAvailabilityActivity>
+      <ooopwa:AssignCartLineItemPricesActivity sap2010:WorkflowViewState.IdRef="AssignCartLineItemPricesActivity_1">
       <ooopwa:AssignCartLineItemPricesActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
           <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
