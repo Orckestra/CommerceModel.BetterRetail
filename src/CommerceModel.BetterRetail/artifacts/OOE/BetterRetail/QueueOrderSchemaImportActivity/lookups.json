@@ -1333,5 +1333,20 @@
       "fr-CA": "Liste test"
     },
     "isActive": true
+  },
+  {
+    "lookupName": "ExternalPaymentMethodType",
+    "values": [
+      {
+        "value": "ApplePay",
+        "displayName": {
+          "en-US": "Apple pay",
+          "en-CA": "Apple pay",
+          "fr-CA": "Apple pay"
+        },
+        "sortOrder": 1,
+        "isActive": true
+      }
+	]
   }
 ]
