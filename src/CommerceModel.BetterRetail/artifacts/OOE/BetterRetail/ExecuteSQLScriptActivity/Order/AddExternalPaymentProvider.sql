@@ -8,7 +8,6 @@ CREATE TABLE #ScopeToAdd (
 INSERT INTO #ScopeToAdd 
 VALUES 
     ('BetterRetailCanada','7E5F8183-CBF4-467B-9200-6F39D586B64A')
-    ,('BetterRetailEuro','D4D01053-67A1-4CF4-A194-2B65DE20A63B')
     ,('BetterRetailNorway','997DADB2-49F1-4764-934F-9C6E530E8515')
     ,('BetterRetailUSA','13C0BA5C-2BF2-4DF1-813E-4342541BBCCF')
 
@@ -20,8 +19,9 @@ DECLARE @@paymentProviderType AS VARCHAR(25) = 'ExternalPaymentProvider'
 SELECT @@webAppPaymentURL =
     CASE 
         WHEN [Name] LIKE '%dev_commerce_order' THEN 'https://localhost:7107/'
-		WHEN [Name] LIKE '%int_commerce_order' THEN 'https://occintbamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
-		WHEN [Name] LIKE '%qa_commerce_order' THEN 'https://occqabamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
+        WHEN [Name] LIKE '%int_commerce_order' THEN 'https://occintbamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
+        WHEN [Name] LIKE '%qa_commerce_order' THEN 'https://occqabamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
+        WHEN [Name] LIKE '%qa2_commerce_order' THEN 'https://occqabamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
         ELSE 'https://occintbamborawa-webapp-u4oio7wixsviq.azurewebsites.net/'
     END
 FROM sys.databases WHERE [Name] like '%_commerce_order'
@@ -78,8 +78,9 @@ BEGIN
                 <GetPaymentMethodsByCartUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/get</GetPaymentMethodsByCartUrl>
                 <SetDefaultPaymentMethodUrl Type="String">' + @@webAppPaymentURL + 'api/paymentmethod/set</SetDefaultPaymentMethodUrl>
                 <InitializePaymentUrl Type="String">' + @@webAppPaymentURL + 'api/paymentprovider/initialize</InitializePaymentUrl>
-				<CreateCartPaymentVaultProfileUrl Type="String">' + @@webAppPaymentURL + '​api​/paymentprofile​/createcartpaymentvaultprofile</CreateCartPaymentVaultProfileUrl>
-				<SupportedCultureIds Type="String">en-US,en-CA,fr-CA</SupportedCultureIds>
+                <AuthenticationKey Type="String">SecureAndSecretKey</AuthenticationKey>
+                <CreateCartPaymentVaultProfileUrl Type="String">' + @@webAppPaymentURL + 'api/paymentprofile/createcartpaymentvaultprofile</CreateCartPaymentVaultProfileUrl>
+                <SupportedCultureIds Type="String">en-US,en-CA,fr-CA</SupportedCultureIds>
                 </Values>
                 <PropertyConfigurations Type="Dictionary" />
                 <FullTypeName Type="String">Orckestra.Overture.Entities.Providers.PaymentProvider, Orckestra.Overture.Entities</FullTypeName>
