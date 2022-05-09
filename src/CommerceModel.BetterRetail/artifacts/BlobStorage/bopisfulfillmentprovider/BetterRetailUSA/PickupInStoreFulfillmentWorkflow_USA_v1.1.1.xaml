@@ -1,0 +1,596 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Orders.Processing.Workflows.Workflows.Orders.Fulfillment.PickupInStoreFulfillmentWorkflow"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:ofc="clr-namespace:OrckestraCommerce.FulfillmentProviders.Core;assembly=OrckestraCommerce.FulfillmentProviders.Core"
+ xmlns:ooopwaf="clr-namespace:Orckestra.Overture.Orders.Processing.Workflows.Activities.Fuflillment;assembly=Orckestra.Overture.Orders.Processing.Workflows.Activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="OrderId" Type="InArgument(s:Guid)" />
+    <x:Property Name="ShipmentId" Type="InArgument(s:Guid)" />
+    <x:Property Name="ScopeId" Type="InArgument(x:String)" />
+    <x:Property Name="OrderNumber" Type="InArgument(x:String)" />
+    <x:Property Name="StartingShipmentFulfillmentStatus" Type="InArgument(ofc:KnownShipmentStatuses)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>Orckestra.Overture.Orders.Processing.Workflows.Workflows.Orders.Fulfillment.PickupInStoreFulfillmentWorkflow_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>OrckestraCommerce.FulfillmentProviders.Core</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Autofac</AssemblyReference>
+      <AssemblyReference>Common.Logging</AssemblyReference>
+      <AssemblyReference>Common.Logging.Core</AssemblyReference>
+      <AssemblyReference>Ionic.Zip</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
+      <AssemblyReference>Microsoft.Azure.KeyVault.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.Data.Edm</AssemblyReference>
+      <AssemblyReference>Microsoft.Data.OData</AssemblyReference>
+      <AssemblyReference>Microsoft.Data.Services.Client</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.SemanticLogging</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data</AssemblyReference>
+      <AssemblyReference>Microsoft.WindowsAzure.Storage</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>Orckestra.AsyncExtensions</AssemblyReference>
+      <AssemblyReference>Orckestra.Caching</AssemblyReference>
+      <AssemblyReference>Orckestra.Logging</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.DurableTask</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.DurableTask.Scheduling.Quartz</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Extensibility</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Interfaces</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.MessagingModel</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Orders.Processing.Workflows</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Orders.Processing.Workflows.Activities</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.ServiceModel</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.ServiceModel.Requests</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.SolrIndexing</AssemblyReference>
+      <AssemblyReference>Orckestra.SolrLib</AssemblyReference>
+      <AssemblyReference>OrckestraCommerce.DataExchange</AssemblyReference>
+      <AssemblyReference>Quartz</AssemblyReference>
+      <AssemblyReference>ServiceStack.Common</AssemblyReference>
+      <AssemblyReference>ServiceStack.Interfaces</AssemblyReference>
+      <AssemblyReference>ServiceStack.OrmLite</AssemblyReference>
+      <AssemblyReference>ServiceStack.Text</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Reactive.Core</AssemblyReference>
+      <AssemblyReference>System.Reactive.Interfaces</AssemblyReference>
+      <AssemblyReference>System.Reactive.Linq</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Spatial</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Dataflow</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Http</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>OrckestraCommerce.FulfillmentProviders.Core</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>OrckestraCommerce.FulfillmentProviders</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <StateMachine sap2010:WorkflowViewState.IdRef="StateMachine_1">
+    <StateMachine.InitialState>
+      <State x:Name="__ReferenceID4" DisplayName="New" sap2010:WorkflowViewState.IdRef="State_11">
+        <State.Transitions>
+          <Transition DisplayName="MarkReadyForPicking" sap2010:WorkflowViewState.IdRef="Transition_55">
+            <Transition.To>
+              <State x:Name="__ReferenceID0" DisplayName="ReadyForPicking" sap2010:WorkflowViewState.IdRef="State_21">
+                <State.Transitions>
+                  <Transition DisplayName="StartPicking" sap2010:WorkflowViewState.IdRef="Transition_34">
+                    <Transition.Trigger>
+                      <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="PickingInProgress" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_2" />
+                    </Transition.Trigger>
+                    <Transition.To>
+                      <State x:Name="__ReferenceID5" DisplayName="PickingInProgress" sap2010:WorkflowViewState.IdRef="State_20">
+                        <State.Transitions>
+                          <Transition DisplayName="StopPicking" sap2010:WorkflowViewState.IdRef="Transition_54">
+                            <Transition.Trigger>
+                              <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="ReadyForPicking" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_25" />
+                            </Transition.Trigger>
+                            <Transition.To>
+                              <x:Reference>__ReferenceID0</x:Reference>
+                            </Transition.To>
+                          </Transition>
+                          <Transition DisplayName="MarkAsCanceled" sap2010:WorkflowViewState.IdRef="Transition_59">
+                            <Transition.Trigger>
+                              <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="Canceled" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_28" />
+                            </Transition.Trigger>
+                            <Transition.To>
+                              <State x:Name="__ReferenceID1" DisplayName="Canceled" sap2010:WorkflowViewState.IdRef="State_25" IsFinal="True" />
+                            </Transition.To>
+                          </Transition>
+                          <Transition DisplayName="MT_RequestTransfer" sap2010:WorkflowViewState.IdRef="Transition_67">
+                            <Transition.Trigger>
+                              <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="TransferRequested" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_36" />
+                            </Transition.Trigger>
+                            <Transition.To>
+                              <State x:Name="__ReferenceID2" DisplayName="TransferRequested" sap2010:WorkflowViewState.IdRef="State_26" IsFinal="True" />
+                            </Transition.To>
+                          </Transition>
+                          <Transition DisplayName="CompletePicking" sap2010:WorkflowViewState.IdRef="Transition_32">
+                            <Transition.Trigger>
+                              <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="ReadyForPacking" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_15" />
+                            </Transition.Trigger>
+                            <Transition.To>
+                              <State x:Name="__ReferenceID3" DisplayName="ReadyForPacking" sap2010:WorkflowViewState.IdRef="State_19">
+                                <State.Transitions>
+                                  <Transition DisplayName="MarkAsCanceled" sap2010:WorkflowViewState.IdRef="Transition_60">
+                                    <Transition.Trigger>
+                                      <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="Canceled" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_29" />
+                                    </Transition.Trigger>
+                                    <Transition.To>
+                                      <x:Reference>__ReferenceID1</x:Reference>
+                                    </Transition.To>
+                                  </Transition>
+                                  <Transition DisplayName="MT_RequestTransfer" sap2010:WorkflowViewState.IdRef="Transition_65">
+                                    <Transition.Trigger>
+                                      <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="TransferRequested" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_34" />
+                                    </Transition.Trigger>
+                                    <Transition.To>
+                                      <x:Reference>__ReferenceID2</x:Reference>
+                                    </Transition.To>
+                                  </Transition>
+                                  <Transition DisplayName="MT_StartPacking" sap2010:WorkflowViewState.IdRef="Transition_30">
+                                    <Transition.Trigger>
+                                      <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="DefaultPackageCreation" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_16" />
+                                    </Transition.Trigger>
+                                    <Transition.To>
+                                      <State x:Name="__ReferenceID9" DisplayName="DefaultPackageCreation">
+                                        <State.Transitions>
+                                          <Transition DisplayName="Packing">
+                                            <Transition.To>
+                                              <State x:Name="__ReferenceID6" DisplayName="PackingInProgress" sap2010:WorkflowViewState.IdRef="State_18">
+                                                <State.Transitions>
+                                                  <Transition DisplayName="MT_CompletePacking" sap2010:WorkflowViewState.IdRef="Transition_39">
+                                                    <Transition.Trigger>
+                                                      <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="ReadyForPickup" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_17" />
+                                                    </Transition.Trigger>
+                                                    <Transition.To>
+                                                      <State x:Name="__ReferenceID7" DisplayName="ReadyForPickup" sap2010:WorkflowViewState.IdRef="State_16">
+                                                        <State.Transitions>
+                                                          <Transition DisplayName="MT_PickupComplete" sap2010:WorkflowViewState.IdRef="Transition_57">
+                                                            <Transition.Trigger>
+                                                              <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="PickupComplete" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_26" />
+                                                            </Transition.Trigger>
+                                                            <Transition.To>
+                                                              <State x:Name="__ReferenceID8" DisplayName="PickupComplete" sap2010:WorkflowViewState.IdRef="State_24" IsFinal="True" />
+                                                            </Transition.To>
+                                                          </Transition>
+                                                          <Transition DisplayName="MT_RequestTransfer" sap2010:WorkflowViewState.IdRef="Transition_63">
+                                                            <Transition.Trigger>
+                                                              <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="TransferRequested" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_32" />
+                                                            </Transition.Trigger>
+                                                            <Transition.To>
+                                                              <x:Reference>__ReferenceID2</x:Reference>
+                                                            </Transition.To>
+                                                          </Transition>
+                                                          <Transition DisplayName="MarkAsCanceled" sap2010:WorkflowViewState.IdRef="Transition_62">
+                                                            <Transition.Trigger>
+                                                              <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="Canceled" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_31" />
+                                                            </Transition.Trigger>
+                                                            <Transition.To>
+                                                              <x:Reference>__ReferenceID1</x:Reference>
+                                                            </Transition.To>
+                                                          </Transition>
+                                                        </State.Transitions>
+                                                      </State>
+                                                    </Transition.To>
+                                                  </Transition>
+                                                  <Transition DisplayName="MT_StopPacking" sap2010:WorkflowViewState.IdRef="Transition_53">
+                                                    <Transition.Trigger>
+                                                      <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="ReadyForPacking" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_24" />
+                                                    </Transition.Trigger>
+                                                    <Transition.To>
+                                                      <x:Reference>__ReferenceID3</x:Reference>
+                                                    </Transition.To>
+                                                  </Transition>
+                                                  <Transition DisplayName="MarkAsCanceled" sap2010:WorkflowViewState.IdRef="Transition_61">
+                                                    <Transition.Trigger>
+                                                      <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="Canceled" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_30" />
+                                                    </Transition.Trigger>
+                                                    <Transition.To>
+                                                      <x:Reference>__ReferenceID1</x:Reference>
+                                                    </Transition.To>
+                                                  </Transition>
+                                                  <Transition DisplayName="MT_RequestTransfer" sap2010:WorkflowViewState.IdRef="Transition_64">
+                                                    <Transition.Trigger>
+                                                      <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="TransferRequested" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_33" />
+                                                    </Transition.Trigger>
+                                                    <Transition.To>
+                                                      <x:Reference>__ReferenceID2</x:Reference>
+                                                    </Transition.To>
+                                                  </Transition>
+                                                </State.Transitions>
+                                              </State>
+                                            </Transition.To>
+                                            <sap2010:WorkflowViewState.IdRef>Transition_68</sap2010:WorkflowViewState.IdRef>
+                                          </Transition>
+                                        </State.Transitions>
+                                        <sap2010:WorkflowViewState.IdRef>State_27</sap2010:WorkflowViewState.IdRef>
+                                      </State>
+                                    </Transition.To>
+                                  </Transition>
+                                </State.Transitions>
+                              </State>
+                            </Transition.To>
+                          </Transition>
+                        </State.Transitions>
+                      </State>
+                    </Transition.To>
+                  </Transition>
+                  <Transition DisplayName="MarkAsCanceled" sap2010:WorkflowViewState.IdRef="Transition_58">
+                    <Transition.Trigger>
+                      <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="Canceled" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_27" />
+                    </Transition.Trigger>
+                    <Transition.To>
+                      <x:Reference>__ReferenceID1</x:Reference>
+                    </Transition.To>
+                  </Transition>
+                  <Transition DisplayName="MT_RequestTransfer" sap2010:WorkflowViewState.IdRef="Transition_66">
+                    <Transition.Trigger>
+                      <ooopwaf:WaitForShipmentStatusChangeRequest BookmarkName="TransferRequested" sap2010:WorkflowViewState.IdRef="WaitForShipmentStatusChangeRequest_35" />
+                    </Transition.Trigger>
+                    <Transition.To>
+                      <x:Reference>__ReferenceID2</x:Reference>
+                    </Transition.To>
+                  </Transition>
+                </State.Transitions>
+              </State>
+            </Transition.To>
+          </Transition>
+        </State.Transitions>
+      </State>
+    </StateMachine.InitialState>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
+    <sads:DebugSymbol.Symbol>d68BQzpcd29cQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXGFydGlmYWN0c1xCbG9iU3RvcmFnZVxib3Bpc2Z1bGZpbGxtZW50cHJvdmlkZXJcQmV0dGVyUmV0YWlsVVNBXFBpY2t1cEluU3RvcmVGdWxmaWxsbWVudFdvcmtmbG93X1VTQV92MS4xLjEueGFtbC1aA5ICEgIBAVwHhQIPAgE3YA+BAhcCAS9nF+0BHwIBJaEBL98BNwIBG4YBH+kBJwIBE6gBN8MBPwIBC68BP68BtwECAQl2H3aRAQIBB34ffpoBAgEFnQEn5QEvAgECZBdkrQECATXyARfyAaUBAgEz+gEX+gGuAQIBMWsfa7QBAgEtcx9zrQECASt7H3u2AQIBKYMBH4MBtAECASelATelAcsBAgEjyAE3yAHMAQIBIdABN9ABxQECAR/YATfYAc4BAgEdigEnigG1AQIBGZIBJ5IBvgECAReaASeaAb4BAgEVrAE/rAHTAQIBEbQBP7QB1gECAQ+8AT+8Ac0BAgENZFBkYwIBNvIBUPIBWgIBNPoBUPoBYwIBMmtYa2kCAS5zWHNiAgEse1h7awIBKoMBWIMBaQIBKKUBcKUBgAECASTIAXDIAYEBAgEi0AFw0AF6AgEg2AFw2AGDAQIBHooBYIoBagIBGpIBYJIBcwIBGJoBYJoBcwIBFqwBeKwBiAECARK0AXi0AYsBAgEQvAF4vAGCAQIBDg==</sads:DebugSymbol.Symbol>
+  </StateMachine>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_25" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Transition_54" sap:VirtualizedContainerService.HintSize="430,507">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">316.8,339.2 316.8,240.2</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">62</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">63</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_28" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="State_25" sap:VirtualizedContainerService.HintSize="156,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">182,559.5</av:Point>
+            <av:Size x:Key="ShapeSize">156,61</av:Size>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">142.22613065326641</x:Double>
+            <x:Double x:Key="StateContainerHeight">25</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_59" sap:VirtualizedContainerService.HintSize="430,242">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">270,400.2 270,426.04 267.8,426.04 267.8,559.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">42</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_36" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="State_26" sap:VirtualizedContainerService.HintSize="176,70">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">492,5</av:Point>
+            <av:Size x:Key="ShapeSize">176,70</av:Size>
+            <x:Double x:Key="StateContainerWidth">162</x:Double>
+            <x:Double x:Key="StateContainerHeight">34.079999999999984</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_67" sap:VirtualizedContainerService.HintSize="430,242">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">348,351.4 439.5,351.4 439.5,151.02 536,151.02 536,75</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">12</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">19</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_15" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_29" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Transition_60" sap:VirtualizedContainerService.HintSize="430,242">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">682,188.3 570.5,188.3 570.5,508.02 283.4,508.02 283.4,559.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">61</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">50</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_34" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Transition_65" sap:VirtualizedContainerService.HintSize="430,242">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">791.2,139.5 791.2,109.5 624,109.5 624,75</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">54</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">59</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_16" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_17" sap:VirtualizedContainerService.HintSize="200,22.4" />
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_26" sap:VirtualizedContainerService.HintSize="200,22.4" />
+      <sap2010:ViewStateData Id="State_24" sap:VirtualizedContainerService.HintSize="156,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">682,589.5</av:Point>
+            <av:Size x:Key="ShapeSize">156,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">142.22613065326641</x:Double>
+            <x:Double x:Key="StateContainerHeight">25</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_57" sap:VirtualizedContainerService.HintSize="429.6,512">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">767.8,550.5 767.8,589.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">42</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_32" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Transition_63" sap:VirtualizedContainerService.HintSize="430,242">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">838,513.9 1008.5,513.9 1008.5,19 668,19</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">28</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">12</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_31" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Transition_62" sap:VirtualizedContainerService.HintSize="430,242">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">682,495.6 652,495.6 652,593.05 338,593.05</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">5</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">40</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_16" sap:VirtualizedContainerService.HintSize="156,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">682,489.5</av:Point>
+            <av:Size x:Key="ShapeSize">156,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">141.67323383588268</x:Double>
+            <x:Double x:Key="StateContainerHeight">25</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_39" sap:VirtualizedContainerService.HintSize="429.6,512">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">760,440.5 760,489.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_24" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Transition_53" sap:VirtualizedContainerService.HintSize="430,507">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">814.6,379.5 814.6,200.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">66</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">67</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_30" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Transition_61" sap:VirtualizedContainerService.HintSize="430,242">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">682,388.65 652,388.65 652,529.5 306.8,529.5 306.8,559.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">9</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">62</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_33" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Transition_64" sap:VirtualizedContainerService.HintSize="430,242">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">838,400.85 868,400.85 868,36.5 668,36.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">24</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">32</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_18" sap:VirtualizedContainerService.HintSize="156,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">682,379.5</av:Point>
+            <av:Size x:Key="ShapeSize">156,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">141.67323383588268</x:Double>
+            <x:Double x:Key="StateContainerHeight">25</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_68">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">662.2,320.5 662.2,350.5 721,350.5 721,379.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">35</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">18</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_27" sap:VirtualizedContainerService.HintSize="156,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">592,259.5</av:Point>
+            <av:Size x:Key="ShapeSize">156,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">141.67323383588268</x:Double>
+            <x:Double x:Key="StateContainerHeight">25</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_30" sap:VirtualizedContainerService.HintSize="430,507">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">752.2,200.5 752.2,230.5 654.4,230.5 654.4,259.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">35</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">30</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_19" sap:VirtualizedContainerService.HintSize="156,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">682,139.5</av:Point>
+            <av:Size x:Key="ShapeSize">156,61</av:Size>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">141.67323383588268</x:Double>
+            <x:Double x:Key="StateContainerHeight">25</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_32" sap:VirtualizedContainerService.HintSize="430,242">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">348,372.75 510.5,372.75 510.5,170 682,170</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">40</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">37</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_20" sap:VirtualizedContainerService.HintSize="156,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">192,339.2</av:Point>
+            <av:Size x:Key="ShapeSize">156,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">141.67323383588268</x:Double>
+            <x:Double x:Key="StateContainerHeight">25</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_34" sap:VirtualizedContainerService.HintSize="430,242">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">223.2,240.2 223.2,339.2</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">15</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">14</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_27" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Transition_58" sap:VirtualizedContainerService.HintSize="430,242">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">192,185.3 94.5,185.3 94.5,529.5 228.8,529.5 228.8,559.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">5</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">22</x:Int32>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitForShipmentStatusChangeRequest_35" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Transition_66" sap:VirtualizedContainerService.HintSize="430,242">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">324.6,179.2 324.6,116.02 458.5,116.02 458.5,40 492,40</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">66</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">37</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_21" sap:VirtualizedContainerService.HintSize="156,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">192,179.2</av:Point>
+            <av:Size x:Key="ShapeSize">156,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">141.67323383588268</x:Double>
+            <x:Double x:Key="StateContainerHeight">25</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_55" sap:VirtualizedContainerService.HintSize="430,242">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">270,72 270,179.2</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_11" sap:VirtualizedContainerService.HintSize="155,64">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">192.4,8</av:Point>
+            <av:Size x:Key="ShapeSize">155,64</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">140.79652938224467</x:Double>
+            <x:Double x:Key="StateContainerHeight">27.546746629025137</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="StateMachine_1" sap:VirtualizedContainerService.HintSize="1067,700">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">40,12.4</av:Point>
+            <x:Double x:Key="StateContainerWidth">1053</x:Double>
+            <x:Double x:Key="StateContainerHeight">664.06</x:Double>
+            <av:PointCollection x:Key="ConnectorLocation">100,57.52 130,57.52 130,40 192.4,40</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Orckestra.Overture.Orders.Processing.Workflows.Workflows.Orders.Fulfillment.PickupInStoreFulfillmentWorkflow_1" sap:VirtualizedContainerService.HintSize="1107,780">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+            <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
