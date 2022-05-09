@@ -548,6 +548,22 @@
   <ItemGroup>
     <Content Include="artifacts\OOE\App_Data\Workflows\Orders\BetterRetailUSA\OrderPostProcessingWorkflow.xaml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="artifacts\BlobStorage\bopisfulfillmentprovider\BetterRetailUSA\PickupInStoreFulfillmentWorkflow_USA_v1.1.1.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="artifacts\BlobStorage\bopisfulfillmentprovider\BetterRetailUSA\TransferFulfillmentWorkflow_USA_v1.1.1.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="artifacts\BlobStorage\shipfromstorefulfillmentprovider\BetterRetailUSA\ShipFromStoreFulfillmentWorkflow_USA_v1.2.1.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(ProjectDir)\CopyArtifacts.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
