@@ -225,8 +225,8 @@
 				"displayName": {
 					"en-CA": "Value 1",
 					"en-US": "Value 1",
-					"fr-CA": "Value 1",
-					"fr-FR": "Value 1"
+					"fr-CA": "Valeur 1",
+					"fr-FR": "Valeur 1"
 				},
 				"sortOrder": 0,
 				"isActive": true
@@ -236,8 +236,8 @@
 				"displayName": {
 					"en-CA": "Value 2",
 					"en-US": "Value 2",
-					"fr-CA": "Value 2",
-					"fr-FR": "Value 2"
+					"fr-CA": "Valeur 2",
+					"fr-FR": "Valeur 2"
 				},
 				"sortOrder": 1,
 				"isActive": true
@@ -246,8 +246,8 @@
 		"displayName": {
 			"en-CA": "Lookup Multiple List",
 			"en-US": "Lookup Multiple List",
-			"fr-CA": "Liste de lookup multiple",
-			"fr-FR": "Liste de lookup multiple"
+			"fr-CA": "Liste à choix multiple",
+			"fr-FR": "Liste à choix multiple"
 		},
 		"description": "",
 		"isActive": true
