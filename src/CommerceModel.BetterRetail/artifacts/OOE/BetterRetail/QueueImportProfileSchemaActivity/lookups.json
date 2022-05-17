@@ -218,6 +218,41 @@
 		"isActive": true
 	},
 	{
+		"lookupName": "TestMultiLookup",
+		"values": [
+			{
+				"value": "Value1",
+				"displayName": {
+					"en-CA": "Value 1",
+					"en-US": "Value 1",
+					"fr-CA": "Value 1",
+					"fr-FR": "Value 1"
+				},
+				"sortOrder": 0,
+				"isActive": true
+			},
+			{
+				"value": "Value2",
+				"displayName": {
+					"en-CA": "Value 2",
+					"en-US": "Value 2",
+					"fr-CA": "Value 2",
+					"fr-FR": "Value 2"
+				},
+				"sortOrder": 1,
+				"isActive": true
+			}
+		],
+		"displayName": {
+			"en-CA": "Lookup Multiple List",
+			"en-US": "Lookup Multiple List",
+			"fr-CA": "Liste de lookup multiple",
+			"fr-FR": "Liste de lookup multiple"
+		},
+		"description": "",
+		"isActive": true
+	},
+	{
 		"lookupName": "Age",
 		"values": [
 			{

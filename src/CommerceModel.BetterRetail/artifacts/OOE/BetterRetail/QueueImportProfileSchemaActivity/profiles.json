@@ -384,6 +384,23 @@
         "groupId": "AttributesGroupTest",
         "isRequired": false,
         "displayOrder": 0,
+        "dataType": "Lookup",
+        "isBuiltIn": false,
+        "allowMultipleValues": true,
+        "multilingual": false,
+        "referenceTypeName": "TestMultiLookup",
+        "isSearchable": false,
+        "name": "TestMultiLookup",
+        "displayName": {
+          "en-US": "Test Multiple Lookup",
+          "en-CA": "Test Multiple Lookup",
+          "fr-CA": "Test de lookup multiple"
+        }
+      },
+      {
+        "groupId": "AttributesGroupTest",
+        "isRequired": false,
+        "displayOrder": 0,
         "dataType": "EntityReference",
         "isBuiltIn": false,
         "allowMultipleValues": false,
