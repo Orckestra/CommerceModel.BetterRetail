@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "OrderCreated",
   "description": {
     "en-US": "Notification email sent when order has been created",

@@ -1,7 +1,0 @@
-{
-  "id": "BetterRetailNetherlands",
-  "isActive": true,
-  "defaultLanguage": "en-CA",
-  "languages": [ "en-CA", "en-US", "fr-CA" ],
-  "overrideParent": false
-}

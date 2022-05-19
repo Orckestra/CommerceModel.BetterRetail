@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "CustomerPasswordResetRequested",
   "description": {
     "en-US": "Notification email sent when customer has requested a password reset",

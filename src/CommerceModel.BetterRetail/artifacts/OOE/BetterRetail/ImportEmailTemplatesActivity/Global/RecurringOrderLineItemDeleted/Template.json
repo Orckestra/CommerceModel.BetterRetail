@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "RecurringOrderLineItemDeleted",
   "description": {
     "en-US": "Notification email sent when a product is not longer set to be recurring",

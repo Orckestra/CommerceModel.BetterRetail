@@ -31,13 +31,13 @@
     }
   },
   {
-    "code": "BetterRetailNetherlands",
+    "code": "Netherlands",
     "countryCode": "NL",
     "fromPostalCode": "",
     "toPostalCode": "",
     "displayName": {
-      "en-CA": "BetterRetailNetherlands",
-      "fr-CA": "BetterRetailNetherlands"
+      "en-CA": "Netherlands",
+      "fr-CA": "Netherlands"
     }
   }
 ]
