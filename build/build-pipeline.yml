@@ -2,12 +2,14 @@
 trigger:
   branches:
     include:
-    - master
     - develop
     - feature*
     - hotfix*
     - bug*
     - release*
+    exclude:
+    - master
+    - main
 
 pool:
   vmImage: 'windows-2019'
