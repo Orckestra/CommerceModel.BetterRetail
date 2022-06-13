@@ -46,7 +46,6 @@
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.SemanticLogging</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data</AssemblyReference>
-      <AssemblyReference>Microsoft.WindowsAzure.Storage</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>Orckestra.AsyncExtensions</AssemblyReference>
       <AssemblyReference>Orckestra.Caching</AssemblyReference>
