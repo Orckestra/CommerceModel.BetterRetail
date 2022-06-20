@@ -71,6 +71,7 @@
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage</AssemblyReference>
+      <AssemblyReference>Microsoft.WindowsAzure.Storage</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>Orckestra.AsyncExtensions</AssemblyReference>
       <AssemblyReference>Orckestra.Caching</AssemblyReference>
@@ -100,6 +101,7 @@
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Net</AssemblyReference>
+      <AssemblyReference>System.Net.Http</AssemblyReference>
       <AssemblyReference>System.Net.Http.WinHttpHandler</AssemblyReference>
       <AssemblyReference>System.Numerics</AssemblyReference>
       <AssemblyReference>System.Numerics.Vectors</AssemblyReference>
@@ -108,6 +110,10 @@
       <AssemblyReference>System.Reactive.Linq</AssemblyReference>
       <AssemblyReference>System.Runtime.CompilerServices.Unsafe</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Algorithms</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Encoding</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.X509Certificates</AssemblyReference>
       <AssemblyReference>System.Spatial</AssemblyReference>
       <AssemblyReference>System.Threading.Tasks.Dataflow</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
