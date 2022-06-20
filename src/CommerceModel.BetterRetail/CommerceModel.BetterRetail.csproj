@@ -484,6 +484,7 @@
     <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\BRU-100.json" />
     <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\BRU-101.json" />
     <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailEuro\Germany\NorthRhineWestphalia\BRDE-101.json" />
+    <None Include="artifacts\OOE\BetterRetail\AddOrUpdateSearchQueryActivity\BetterRetailCanada.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS - Header.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER - Header.json" />

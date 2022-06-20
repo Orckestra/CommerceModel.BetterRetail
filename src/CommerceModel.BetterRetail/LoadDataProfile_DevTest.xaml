@@ -350,6 +350,14 @@
         </InArgument>
       </octf:ImportFoundationProvidersActivity.SmtpUserName>
     </octf:ImportFoundationProvidersActivity>
+    <cba:AddOrUpdateSearchQueryActivity ResultBlobUrl="{x:Null}">
+      <cba:AddOrUpdateSearchQueryActivity.CommerceModelName>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
+        </InArgument>
+      </cba:AddOrUpdateSearchQueryActivity.CommerceModelName>
+      <sap2010:WorkflowViewState.IdRef>AddOrUpdateSearchQueryActivity_1</sap2010:WorkflowViewState.IdRef>
+    </cba:AddOrUpdateSearchQueryActivity>
     <oct:ExecuteSQLScriptActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="ExecuteSQLScriptActivity_1">
       <oct:ExecuteSQLScriptActivity.CommerceModelName>
         <InArgument x:TypeArguments="x:String">
@@ -397,17 +405,18 @@
       <sap2010:ViewStateData Id="EnableSystemInventoryActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="AssignAvalaraTaxCategoriesToProductsActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="ImportFoundationProvidersActivity_2" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
+      <sap2010:ViewStateData Id="AddOrUpdateSearchQueryActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="ExecuteSQLScriptActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="WaitForCorrelatedTasksCompletionsActivity_3" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="QueueSearchIndexingActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="288,1747.2">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="288,1809.6">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="CommerceModel.BetterRetail.LoadDataProfile_DevTest_1" sap:VirtualizedContainerService.HintSize="328,1827.2" />
+      <sap2010:ViewStateData Id="CommerceModel.BetterRetail.LoadDataProfile_DevTest_1" sap:VirtualizedContainerService.HintSize="328,1889.6" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
