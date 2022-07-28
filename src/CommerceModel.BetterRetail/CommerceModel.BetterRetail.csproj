@@ -156,8 +156,8 @@
     <Reference Include="Orckestra.SolrLib, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.2.2\lib\net461\Orckestra.SolrLib.dll</HintPath>
     </Reference>
-    <Reference Include="OrckestraCommerce.CommerceModelUtilities, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.5.2.2\lib\net461\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
+    <Reference Include="OrckestraCommerce.CommerceModelUtilities, Version=5.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.5.4.0-move-confi0044\lib\net461\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
     </Reference>
     <Reference Include="OrckestraCommerce.DataExchange, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.2.2\lib\net461\OrckestraCommerce.DataExchange.dll</HintPath>
