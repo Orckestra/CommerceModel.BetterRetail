@@ -125,7 +125,7 @@
       <AssemblyReference>CommerceModel.BetterRetail.Activities</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>CommerceModel.BetterRetail</AssemblyReference>
-	    </sco:Collection>
+	</sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
