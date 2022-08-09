@@ -1440,11 +1440,11 @@
         "isActive": true
       },
       {
-        "value": "Void",
+        "value": "Voided",
         "displayName": {
-          "en-US": "Void",
-          "en-CA": "Void",
-          "fr-CA": "Annullé"
+          "en-US": "Voided",
+          "en-CA": "Voided",
+          "fr-CA": "Annulé"
         },
         "sortOrder": 9,
         "isActive": true
