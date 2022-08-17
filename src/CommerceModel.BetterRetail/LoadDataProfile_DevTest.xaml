@@ -130,7 +130,7 @@
       <AssemblyReference>CommerceModel.BetterRetail.Activities</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>CommerceModel.BetterRetail</AssemblyReference>
-    </sco:Collection>
+	</sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
@@ -355,13 +355,14 @@
         </InArgument>
       </octf:ImportFoundationProvidersActivity.SmtpUserName>
     </octf:ImportFoundationProvidersActivity>
-    <cba:AddOrUpdateSearchQueryActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="AddOrUpdateSearchQueryActivity_1">
-      <cba:AddOrUpdateSearchQueryActivity.CommerceModelName>
+    <oct:AddOrUpdateSearchQueryActivity ResultBlobUrl="{x:Null}">
+      <oct:AddOrUpdateSearchQueryActivity.CommerceModelName>
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
         </InArgument>
-      </cba:AddOrUpdateSearchQueryActivity.CommerceModelName>
-    </cba:AddOrUpdateSearchQueryActivity>
+      </oct:AddOrUpdateSearchQueryActivity.CommerceModelName>
+      <sap2010:WorkflowViewState.IdRef>AddOrUpdateSearchQueryActivity_1</sap2010:WorkflowViewState.IdRef>
+    </oct:AddOrUpdateSearchQueryActivity>
     <oct:ExecuteSQLScriptActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="ExecuteSQLScriptActivity_1">
       <oct:ExecuteSQLScriptActivity.CommerceModelName>
         <InArgument x:TypeArguments="x:String">
