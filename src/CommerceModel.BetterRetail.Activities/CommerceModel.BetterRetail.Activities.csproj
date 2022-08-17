@@ -285,6 +285,7 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="BetterRetailExecuteSQLScriptActivity.cs" />
+    <Compile Include="CustomExecuteSQLScriptActivity.cs" />
     <Compile Include="SetAdditionnalLineItemAttributesActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
