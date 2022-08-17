@@ -286,6 +286,7 @@
     </Compile>
     <Compile Include="AddOrUpdateSearchQueryActivity.cs" />
     <Compile Include="BetterRetailExecuteSQLScriptActivity.cs" />
+    <Compile Include="CustomExecuteSQLScriptActivity.cs" />
     <Compile Include="SetAdditionnalLineItemAttributesActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

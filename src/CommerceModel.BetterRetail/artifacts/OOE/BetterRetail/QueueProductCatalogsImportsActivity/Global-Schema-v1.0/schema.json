@@ -772,6 +772,44 @@
       "isSystem": true
     },
     {
+      "propertyName": "PromotionalBanner",
+      "displayName": {
+        "en-CA": "Promotional Banner",
+        "en-US": "Promotional Banner",
+        "fr-CA": "Bannière promotionnelle"
+      },
+      "minMultiplicity": "0",
+      "maxMultiplicity": "1",
+      "isMultilingual": false,
+      "referenceLookupName": "PromotionalBanner",
+      "dataType": "Lookup",
+      "includeInAllProductDefinition": true,
+      "includeInAllCategoryDefinition": false,
+      "includeInAllVariantDefinition": false,
+      "groupName": "Default",
+      "isHiddenInOrchestrator": false,
+      "isSystem": false
+    },
+    {
+      "propertyName": "PromotionalRibbon",
+      "displayName": {
+        "en-CA": "Promotional Ribbon",
+        "en-US": "Promotional Ribbon",
+        "fr-CA": "Ruban promotionnel"
+      },
+      "minMultiplicity": "0",
+      "maxMultiplicity": "1",
+      "isMultilingual": false,
+      "referenceLookupName": "PromotionalRibbon",
+      "dataType": "Lookup",
+      "includeInAllProductDefinition": true,
+      "includeInAllCategoryDefinition": false,
+      "includeInAllVariantDefinition": false,
+      "groupName": "Default",
+      "isHiddenInOrchestrator": false,
+      "isSystem": false
+    },
+    {
       "propertyName": "RetailSize",
       "displayName": {
         "en-CA": "RetailSize",
@@ -18174,6 +18212,96 @@
       },
       "isActive": true,
       "isSystem": true
+    },
+    {
+      "id": "PromotionalBanner",
+      "values": [
+        {
+          "value": "NewProduct",
+          "displayName": {
+            "en-CA": "New Product",
+            "en-US": "New Product",
+            "fr-CA": "Nouveau produit"
+          },
+          "sortOrder": 1,
+          "isActive": true,
+          "isSystem": false
+        },
+        {
+          "value": "SpecialProduct",
+          "displayName": {
+            "en-CA": "Special Product",
+            "en-US": "Special Product",
+            "fr-CA": "Produit spécial"
+          },
+          "sortOrder": 0,
+          "isActive": true,
+          "isSystem": false
+        },
+        {
+          "value": "Seasonal",
+          "displayName": {
+            "en-CA": "Seasonal",
+            "en-US": "Seasonal",
+            "fr-CA": "Saisonnier"
+          },
+          "sortOrder": 2,
+          "isActive": true,
+          "isSystem": false
+        }
+      ],
+      "displayName": {
+        "en-CA": "Promotional Banner",
+        "en-US": "Promotional Banner",
+        "fr-CA": "Bannière promotionnelle"
+      },
+      "isActive": true,
+      "isSystem": false
+    },
+    {
+      "id": "PromotionalRibbon",
+      "values": [
+        {
+          "value": "SpecialProduct",
+          "displayName": {
+            "en-CA": "Special",
+            "en-US": "Special",
+            "fr-CA": "Spéciale"
+          },
+          "sortOrder": 0,
+          "isActive": true,
+          "isSystem": false
+        },
+        {
+          "value": "NewProduct",
+          "displayName": {
+            "en-CA": "New",
+            "en-US": "New",
+            "fr-CA": "Nouvelle"
+          },
+          "sortOrder": 1,
+          "isActive": true,
+          "isSystem": false
+        },
+        {
+          "value": "Seasonal",
+          "displayName": {
+            "en-CA": "Seasonal",
+            "en-US": "Seasonal",
+            "fr-CA": "Saisonnière"
+          },
+          "sortOrder": 2,
+          "isActive": true,
+          "isSystem": false
+        }
+      ],
+      "displayName": {
+        "en-CA": "Promotional Ribbon",
+        "en-US": "Promotional Ribbon",
+        "fr-CA": "Ruban Promotionnel"
+      },
+      "isActive": true,
+      "isSystem": false
     },
     {
       "id": "RetailSize",

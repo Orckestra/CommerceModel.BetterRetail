@@ -278,6 +278,7 @@
     <Compile Include="..\Common\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Content Include="artifacts\OOE\BetterRetail\CustomExecuteSQLScriptActivity\Product\SetIsFacettableAdminToLookups.sql" />
     <Content Include="artifacts\OOE\BetterRetail\QueueImportProfileSchemaActivity\groups.json" />
     <Compile Include="DamProviders\BetterRetailDamProvider.cs" />
     <Compile Include="Plugin.cs" />
@@ -356,6 +357,7 @@
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReadyForPickup\Contents\Text\en-US.txt" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReadyForPickup\Contents\Text\en-CA.txt" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReadyForPickup\Contents\Html\en-US.html" />
+    <Content Include="artifacts\Solr\schema.all.xml" />
     <Content Include="Manifest.json">
     </Content>
     <Content Include="artifacts\OOE\BetterRetail\Campaigns\futurePromotions.json" />
