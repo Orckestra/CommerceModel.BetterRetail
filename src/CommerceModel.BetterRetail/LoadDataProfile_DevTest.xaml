@@ -54,16 +54,12 @@
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>Autofac</AssemblyReference>
-      <AssemblyReference>Azure.Core</AssemblyReference>
-      <AssemblyReference>Azure.Storage.Blobs</AssemblyReference>
-      <AssemblyReference>Azure.Storage.Common</AssemblyReference>
       <AssemblyReference>Common.Logging</AssemblyReference>
       <AssemblyReference>Common.Logging.Core</AssemblyReference>
       <AssemblyReference>Ionic.Zip</AssemblyReference>
       <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
       <AssemblyReference>Microsoft.Azure.Documents.Client</AssemblyReference>
       <AssemblyReference>Microsoft.Azure.KeyVault.Core</AssemblyReference>
-      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.Data.Edm</AssemblyReference>
       <AssemblyReference>Microsoft.Data.OData</AssemblyReference>
       <AssemblyReference>Microsoft.Data.Services.Client</AssemblyReference>
@@ -75,6 +71,7 @@
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage</AssemblyReference>
+	    <AssemblyReference>Microsoft.WindowsAzure.Storage</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>Orckestra.AsyncExtensions</AssemblyReference>
       <AssemblyReference>Orckestra.Caching</AssemblyReference>
@@ -102,10 +99,7 @@
       <AssemblyReference>System.ComponentModel.DataAnnotations</AssemblyReference>
       <AssemblyReference>System.Configuration</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
-      <AssemblyReference>System.IO.Hashing</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Net</AssemblyReference>
       <AssemblyReference>System.Net.Http.WinHttpHandler</AssemblyReference>
       <AssemblyReference>System.Numerics</AssemblyReference>
@@ -115,12 +109,12 @@
       <AssemblyReference>System.Reactive.Linq</AssemblyReference>
       <AssemblyReference>System.Runtime.CompilerServices.Unsafe</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+	    <AssemblyReference>System.Security.Cryptography.Algorithms</AssemblyReference>
+	    <AssemblyReference>System.Security.Cryptography.Encoding</AssemblyReference>
+	    <AssemblyReference>System.Security.Cryptography.Primitives</AssemblyReference>
+	    <AssemblyReference>System.Security.Cryptography.X509Certificates</AssemblyReference>
       <AssemblyReference>System.Spatial</AssemblyReference>
-      <AssemblyReference>System.Text.Encodings.Web</AssemblyReference>
-      <AssemblyReference>System.Text.Json</AssemblyReference>
       <AssemblyReference>System.Threading.Tasks.Dataflow</AssemblyReference>
-      <AssemblyReference>System.Threading.Tasks.Extensions</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
@@ -234,7 +228,7 @@
           </InArgument>
         </octp1:QueueImportProfileSchemaActivity.CommerceModelName>
       </octp1:QueueImportProfileSchemaActivity>
-      <octp1:QueueProfilesImportActivity RequiresCompression="{x:Null}" ResultBlobUrl="{x:Null}" FileImportName="BetterRetailProfiles.zip" sap2010:WorkflowViewState.IdRef="QueueProfilesImportActivity_1">
+      <octp1:QueueProfilesImportActivity ResultBlobUrl="{x:Null}" FileImportName="BetterRetailProfiles.zip" sap2010:WorkflowViewState.IdRef="QueueProfilesImportActivity_1">
         <octp1:QueueProfilesImportActivity.CommerceModelName>
           <InArgument x:TypeArguments="x:String">
             <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
