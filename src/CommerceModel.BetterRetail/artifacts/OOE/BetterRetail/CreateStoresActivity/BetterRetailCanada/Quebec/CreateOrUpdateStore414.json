@@ -1,4 +1,5 @@
 {
+  "Id": "D01EADD4-80BE-47CA-885B-CAA5E40E274F",
   "Number": "BRC-414",
   "IsActive": true,
   "Name": "BRC-Galeries d'Anjou",
@@ -24,7 +25,7 @@
   "SupportShipping": true,
   "ShipOrderFromOther": true,
   "OperatingStatus": {
-    "Id": "E10751DC-59F9-4618-93C9-FF1E4D857646",
+    "Id": "D01EADD4-80BE-47CA-885B-CAA5E40E274F",
     "AvailabilityStatus": {
       "IsAvailable": true,
       "Reason": null,
@@ -76,7 +77,7 @@
     "PropertyBag": null
   },
   "Schedule": {
-    "FulfillmentLocationId": "e10751dc-59f9-4618-93c9-ff1e4d857646",
+    "FulfillmentLocationId": "D01EADD4-80BE-47CA-885B-CAA5E40E274F",
     "OpeningHours": [
       {
         "IsClosed": false,
@@ -161,14 +162,14 @@
     "PropertyBag": null
   },
   "PickUpSchedule": {
-    "FulfillmentLocationId": "e10751dc-59f9-4618-93c9-ff1e4d857646",
+    "FulfillmentLocationId": "D01EADD4-80BE-47CA-885B-CAA5E40E274F",
     "OpeningHours": [],
     "OpeningHourExceptions": [],
     "ScheduleType": 2,
     "PropertyBag": null
   },
   "DeliverySchedule": {
-    "FulfillmentLocationId": "e10751dc-59f9-4618-93c9-ff1e4d857646",
+    "FulfillmentLocationId": "D01EADD4-80BE-47CA-885B-CAA5E40E274F",
     "OpeningHours": [],
     "OpeningHourExceptions": [],
     "ScheduleType": 1,

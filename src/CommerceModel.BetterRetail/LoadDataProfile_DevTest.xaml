@@ -3,8 +3,8 @@
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
  xmlns:oct="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities;assembly=OrckestraCommerce.CommerceModelUtilities"
- xmlns:octc="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.CommerceDefinition;assembly=OrckestraCommerce.CommerceModelUtilities"
- xmlns:octc1="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.CommerceManagement;assembly=OrckestraCommerce.CommerceModelUtilities"
+ xmlns:octc="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.CommerceManagement;assembly=OrckestraCommerce.CommerceModelUtilities"
+ xmlns:octc1="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.CommerceDefinition;assembly=OrckestraCommerce.CommerceModelUtilities"
  xmlns:octf="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.FoundationProviders;assembly=OrckestraCommerce.CommerceModelUtilities"
  xmlns:octn="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.Notifications;assembly=OrckestraCommerce.CommerceModelUtilities"
  xmlns:octp="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.Products;assembly=OrckestraCommerce.CommerceModelUtilities"
@@ -28,6 +28,7 @@
     <x:Property Name="SmtpDisallowedEmailAddressReceiver" Type="InArgument(x:String)" />
     <x:Property Name="SmtpAllowedReceiverDomainsRegex" Type="InArgument(x:String)" />
     <x:Property Name="AzureDirectoryProviderTempPassword" Type="InArgument(x:String)" />
+    <x:Property Name="SubstituteConfigurationsInput" Type="InArgument(octc:SubstituteConfigurationsInput)" />
   </x:Members>
   <this:LoadDataProfile_DevTest.DefaultDomainName>
     <InArgument x:TypeArguments="x:String">
@@ -48,6 +49,7 @@
       <x:String>System.Data</x:String>
       <x:String>System.Linq</x:String>
       <x:String>System.Text</x:String>
+      <x:String>OrckestraCommerce.CommerceModelUtilities.TaskActivities.CommerceManagement</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -132,26 +134,38 @@
       <Variable x:TypeArguments="s:Guid" Name="CorrelationId" />
       <Variable x:TypeArguments="x:String" Default="BetterRetail" Name="CommerceModelName" />
     </Sequence.Variables>
-    <octc:InitializeCommerceModelActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="InitializeCommerceModelActivity_1" InitializationFileName="CommerceModelDefinition.json">
-      <octc:InitializeCommerceModelActivity.CommerceModelName>
+    <octc1:InitializeCommerceModelActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="InitializeCommerceModelActivity_1" InitializationFileName="CommerceModelDefinition.json">
+      <octc1:InitializeCommerceModelActivity.CommerceModelName>
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
         </InArgument>
-      </octc:InitializeCommerceModelActivity.CommerceModelName>
-    </octc:InitializeCommerceModelActivity>
-    <octc:CreateUserAuthorizationsActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="CreateUserAuthorizationsActivity_1" ObjectId="eaed574f-ea9d-47e4-ba77-04306a5c4d03" ObjectType="Group" RoleId="-1" ScopeId="*" />
-    <octc:CreateUsersActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="CreateUsersActivity_1">
-      <octc:CreateUsersActivity.CommerceModelName>
+      </octc1:InitializeCommerceModelActivity.CommerceModelName>
+    </octc1:InitializeCommerceModelActivity>
+    <octc:SubstituteConfigurationsBeforeImportsActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="SubstituteConfigurationsBeforeImportsActivity_1">
+      <octc:SubstituteConfigurationsBeforeImportsActivity.CommerceModelName>
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
         </InArgument>
-      </octc:CreateUsersActivity.CommerceModelName>
-      <octc:CreateUsersActivity.DefaultUserDomain>
+      </octc:SubstituteConfigurationsBeforeImportsActivity.CommerceModelName>
+      <octc:SubstituteConfigurationsBeforeImportsActivity.SubstituteConfigurationsInput>
+        <InArgument x:TypeArguments="octc:SubstituteConfigurationsInput">
+          <mca:CSharpValue x:TypeArguments="octc:SubstituteConfigurationsInput">SubstituteConfigurationsInput</mca:CSharpValue>
+        </InArgument>
+      </octc:SubstituteConfigurationsBeforeImportsActivity.SubstituteConfigurationsInput>
+    </octc:SubstituteConfigurationsBeforeImportsActivity>
+    <octc1:CreateUserAuthorizationsActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="CreateUserAuthorizationsActivity_1" ObjectId="eaed574f-ea9d-47e4-ba77-04306a5c4d03" ObjectType="Group" RoleId="-1" ScopeId="*" />
+    <octc1:CreateUsersActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="CreateUsersActivity_1">
+      <octc1:CreateUsersActivity.CommerceModelName>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
+        </InArgument>
+      </octc1:CreateUsersActivity.CommerceModelName>
+      <octc1:CreateUsersActivity.DefaultUserDomain>
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String">DefaultDomainName</mca:CSharpValue>
         </InArgument>
-      </octc:CreateUsersActivity.DefaultUserDomain>
-    </octc:CreateUsersActivity>
+      </octc1:CreateUsersActivity.DefaultUserDomain>
+    </octc1:CreateUsersActivity>
     <octn:ImportEmailTemplatesActivity ResultBlobUrl="{x:Null}" AdditionalPaths="Features/FulfillmentProviders/EmailTemplates" sap2010:WorkflowViewState.IdRef="ImportEmailTemplatesActivity_2">
       <octn:ImportEmailTemplatesActivity.CommerceModelName>
         <InArgument x:TypeArguments="x:String">
@@ -202,13 +216,13 @@
           </InOutArgument>
         </octp:QueueProductCatalogsImportsActivity.TaskCorrelationId>
       </octp:QueueProductCatalogsImportsActivity>
-      <octc1:QueueOrderSchemaImportActivity ResultBlobUrl="{x:Null}" TaskCorrelationId="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueOrderSchemaImportActivity_1">
-        <octc1:QueueOrderSchemaImportActivity.CommerceModelName>
+      <octc:QueueOrderSchemaImportActivity ResultBlobUrl="{x:Null}" TaskCorrelationId="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueOrderSchemaImportActivity_1">
+        <octc:QueueOrderSchemaImportActivity.CommerceModelName>
           <InArgument x:TypeArguments="x:String">
             <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
           </InArgument>
-        </octc1:QueueOrderSchemaImportActivity.CommerceModelName>
-      </octc1:QueueOrderSchemaImportActivity>
+        </octc:QueueOrderSchemaImportActivity.CommerceModelName>
+      </octc:QueueOrderSchemaImportActivity>
       <octp1:QueueImportProfileSchemaActivity ResultBlobUrl="{x:Null}" TaskCorrelationId="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueImportProfileSchemaActivity_1">
         <octp1:QueueImportProfileSchemaActivity.CommerceModelName>
           <InArgument x:TypeArguments="x:String">
@@ -223,49 +237,49 @@
           </InArgument>
         </oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
       </oct:WaitForCorrelatedTasksCompletionsActivity>
-      <octc1:CreateWarehousesActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="CreateWarehousesActivity_1">
-        <octc1:CreateWarehousesActivity.CommerceModelName>
+      <octc:CreateWarehousesActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="CreateWarehousesActivity_1">
+        <octc:CreateWarehousesActivity.CommerceModelName>
           <InArgument x:TypeArguments="x:String">
             <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
           </InArgument>
-        </octc1:CreateWarehousesActivity.CommerceModelName>
-        <octc1:CreateWarehousesActivity.WarehouseImportFilesSearchPatterns>
+        </octc:CreateWarehousesActivity.CommerceModelName>
+        <octc:CreateWarehousesActivity.WarehouseImportFilesSearchPatterns>
           <InArgument x:TypeArguments="s:String[]">
             <mca:CSharpValue x:TypeArguments="s:String[]">new[] { "CreateOrUpdateWarehouse5000.json", "CreateOrUpdateWarehouse5001.json", "CreateOrUpdateWarehouse5003.json", "CreateOrUpdateWarehouse5004.json" }</mca:CSharpValue>
           </InArgument>
-        </octc1:CreateWarehousesActivity.WarehouseImportFilesSearchPatterns>
-      </octc1:CreateWarehousesActivity>
-      <octc1:CreateStoresActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="CreateStoresActivity_1">
-        <octc1:CreateStoresActivity.CommerceModelName>
+        </octc:CreateWarehousesActivity.WarehouseImportFilesSearchPatterns>
+      </octc:CreateWarehousesActivity>
+      <octc:CreateStoresActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="CreateStoresActivity_1">
+        <octc:CreateStoresActivity.CommerceModelName>
           <InArgument x:TypeArguments="x:String">
             <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
           </InArgument>
-        </octc1:CreateStoresActivity.CommerceModelName>
-        <octc1:CreateStoresActivity.StoreImportFilesSearchPatterns>
+        </octc:CreateStoresActivity.CommerceModelName>
+        <octc:CreateStoresActivity.StoreImportFilesSearchPatterns>
           <InArgument x:TypeArguments="s:String[]">
             <mca:CSharpValue x:TypeArguments="s:String[]">new[] { "CreateOrUpdateStore409.json", "CreateOrUpdateStore410.json", "CreateOrUpdateStore411.json", "CreateOrUpdateStore414.json", "CreateOrUpdateStore433.json", "CreateOrUpdateStore526.json", "CreateOrUpdateStore9101.json", "CreateOrUpdateStore9102.json", "CreateOrUpdateStore9103.json", "CreateOrUpdateStore9104.json", "CreateOrUpdateStore9105.json", "CreateOrUpdateStore9106.json", "CreateOrUpdateStore5101.json", "CreateOrUpdateStore5102.json", "CreateOrUpdateStore5103.json", "CreateOrUpdateStore5104.json", "CreateOrUpdateStore5105.json", "CreateOrUpdateStore5106.json", "CreateOrUpdateStore100.json", "CreateOrUpdateStore101.json", "CreateOrUpdateStore102.json", "CreateOrUpdateStore103.json", "CreateOrUpdateStore104.json", "CreateOrUpdateStore105.json", "BRDE-100.json" }</mca:CSharpValue>
           </InArgument>
-        </octc1:CreateStoresActivity.StoreImportFilesSearchPatterns>
-      </octc1:CreateStoresActivity>
-      <octc1:ImportFulfillmentPackageTypesActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="ImportFulfillmentPackageTypesActivity_1">
-        <octc1:ImportFulfillmentPackageTypesActivity.CommerceModelName>
+        </octc:CreateStoresActivity.StoreImportFilesSearchPatterns>
+      </octc:CreateStoresActivity>
+      <octc:ImportFulfillmentPackageTypesActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="ImportFulfillmentPackageTypesActivity_1">
+        <octc:ImportFulfillmentPackageTypesActivity.CommerceModelName>
           <InArgument x:TypeArguments="x:String">
             <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
           </InArgument>
-        </octc1:ImportFulfillmentPackageTypesActivity.CommerceModelName>
-      </octc1:ImportFulfillmentPackageTypesActivity>
-      <octc1:QueueFulfillmentLocationsInventoryImportActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueFulfillmentLocationsInventoryImportActivity_1">
-        <octc1:QueueFulfillmentLocationsInventoryImportActivity.CommerceModelName>
+        </octc:ImportFulfillmentPackageTypesActivity.CommerceModelName>
+      </octc:ImportFulfillmentPackageTypesActivity>
+      <octc:QueueFulfillmentLocationsInventoryImportActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueFulfillmentLocationsInventoryImportActivity_1">
+        <octc:QueueFulfillmentLocationsInventoryImportActivity.CommerceModelName>
           <InOutArgument x:TypeArguments="x:String">
             <mca:CSharpReference x:TypeArguments="x:String">CommerceModelName</mca:CSharpReference>
           </InOutArgument>
-        </octc1:QueueFulfillmentLocationsInventoryImportActivity.CommerceModelName>
-        <octc1:QueueFulfillmentLocationsInventoryImportActivity.TaskCorrelationId>
+        </octc:QueueFulfillmentLocationsInventoryImportActivity.CommerceModelName>
+        <octc:QueueFulfillmentLocationsInventoryImportActivity.TaskCorrelationId>
           <InOutArgument x:TypeArguments="s:Guid">
             <mca:CSharpReference x:TypeArguments="s:Guid">CorrelationId</mca:CSharpReference>
           </InOutArgument>
-        </octc1:QueueFulfillmentLocationsInventoryImportActivity.TaskCorrelationId>
-      </octc1:QueueFulfillmentLocationsInventoryImportActivity>
+        </octc:QueueFulfillmentLocationsInventoryImportActivity.TaskCorrelationId>
+      </octc:QueueFulfillmentLocationsInventoryImportActivity>
       <oct:WaitForCorrelatedTasksCompletionsActivity PollingDelay="{x:Null}" ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="WaitForCorrelatedTasksCompletionsActivity_2">
         <oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
           <InArgument x:TypeArguments="s:Guid">
@@ -276,13 +290,13 @@
     </Sequence>
     <octp:ActivateProductCatalogsActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivateProductCatalogsActivity_1" />
     <octp:EnableSystemInventoryActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="EnableSystemInventoryActivity_1" />
-    <octc1:AssignAvalaraTaxCategoriesToProductsActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="AssignAvalaraTaxCategoriesToProductsActivity_1">
-      <octc1:AssignAvalaraTaxCategoriesToProductsActivity.CommerceModelName>
+    <octc:AssignAvalaraTaxCategoriesToProductsActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="AssignAvalaraTaxCategoriesToProductsActivity_1">
+      <octc:AssignAvalaraTaxCategoriesToProductsActivity.CommerceModelName>
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
         </InArgument>
-      </octc1:AssignAvalaraTaxCategoriesToProductsActivity.CommerceModelName>
-    </octc1:AssignAvalaraTaxCategoriesToProductsActivity>
+      </octc:AssignAvalaraTaxCategoriesToProductsActivity.CommerceModelName>
+    </octc:AssignAvalaraTaxCategoriesToProductsActivity>
     <octf:ImportFoundationProvidersActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="ImportFoundationProvidersActivity_2">
       <octf:ImportFoundationProvidersActivity.AllowedReceiverDomainsRegex>
         <InArgument x:TypeArguments="x:String">
@@ -340,11 +354,12 @@
       </oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
     </oct:WaitForCorrelatedTasksCompletionsActivity>
     <octs:QueueSearchIndexingActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueSearchIndexingActivity_1" />
-    <sads:DebugSymbol.Symbol>d11DOlxHaXRcQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXExvYWREYXRhUHJvZmlsZV9EZXZUZXN0LnhhbWxAJwcnSQEEAY4BAZIBAQMiByJJAQKBAQPYAg4CAQGFATSFAUICAQKHAQWNASwDAaMDjgEFjgHnAQMBngOPAQWaASADAYMDmwEFoQEpAwH0AqIBBZQCEAMBmQGVAgWVAooBAwGYAZYCBZYChgEDAZcBlwIFnQI6AwGJAZ4CBccCLgIBIMgCBc4CJAIBEs8CBdUCNQIBBNYCBdYCggECAQOHAZ8BhwG9AQMBsQOKAQuKAVoDAaQDjgHFAY4BzAEDAaIDjgGTAY4BuQEDAaEDjgHhAY4B5AEDAaADjgHUAY4B2AEDAZ8DlwELlwFaAwGRA5IBC5IBWgMBhAOeAQueAVoDAfYCmwFRmwF/AwH1AqMBB64BEAMB2QKvAQfMATIDAbECzQEH0wEuAwGjAtQBB9oBMAMBlQLbAQfhATcDAYcC4gEH7QEoAwHsAe4BB/kBJAMB0QH6AQeAAjUDAcMBgQIHjAJAAwGoAY0CB5MCNwMBmgGaAguaAloDAYoBqwILqwJrAgF8sAILsAJRAgFvugILugJQAgFixAILxAJVAgFVvwILvwJaAgFItQILtQJVAgE7oQILoQJoAgEupgILpgJrAgEhywILywJaAgET0gIL0gJUAgEFqwENqwFXAwHnAqYBDaYBXgMB2gLJAQ3JAV4DAcwCtwENxAEUAwG/ArIBDbIBXAMBsgLQAQ3QAVwDAaQC1wEN1wFcAwGWAt4BDd4BVgMBiALqAQ3qAeUBAwH6AeUBDeUBXAMB7QH2AQ32AdoGAwHfAfEBDfEBXAMB0gH9AQ39AVwDAcQBiQINiQJeAwG2AYQCDYQCZAMBqQGQAg2QAlYDAZsB</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d11DOlxHaXRcQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXExvYWREYXRhUHJvZmlsZV9EZXZUZXN0LnhhbWxDKAcoSQEEAY4BAZIBAQMjByNJAQKDAQPmAg4CAQGHATSHAUICAQKJAQWPAS0DAd4DkAEFmwE6AwHBA5wBBZwB6AEDAbwDnQEFqAEhAwGfA6kBBa8BKQMBjwOwAQWiAhADAaQBowIFowKKAQMBowGkAgWkAoYBAwGiAaUCBasCOQMBkwGsAgXVAi4CASLWAgXcAiQCARPdAgXjAjUCAQTkAgXkAoIBAgEDiQGgAYkBvgEDAe0DjAELjAFaAwHfA5gBC5gBgAEDAdADkwELkwFaAwHCA5wBxgGcAc0BAwHAA5wBlAGcAboBAwG/A5wB4gGcAeUBAwG+A5wB1QGcAdkBAwG9A6UBC6UBWgMBrgOgAQugAVoDAaADrAELrAFaAwGRA6kBUakBfwMBkAOxAQe8ARADAfICvQEH2gEyAwHHAtsBB+EBLQMBuALiAQfoATADAakC6QEH7wE3AwGaAvABB/sBJwMB/QH8AQeHAiMDAeABiAIHjgI0AwHRAY8CB5oCPwMBtAGbAgehAjcDAaUBqAILqAJaAwGUAbkCC7kCawMBhQG+Agu+AlECAXfIAgvIAlACAWnSAgvSAlUCAVvNAgvNAloCAU3DAgvDAlUCAT+vAguvAmgCATG0Agu0AmsCASPZAgvZAloCARTgAgvgAlQCAQW5AQ25AVcDAYEDtAENtAFeAwHzAtcBDdcBXgMB5ALFAQ3SARQDAdYCwAENwAFcAwHIAt4BDd4BXAMBuQLlAQ3lAVwDAaoC7AEN7AFWAwGbAvgBDfgB5QEDAYwC8wEN8wFcAwH+AYQCDYQC2gYDAe8B/wEN/wFcAwHhAYsCDYsCXAMB0gGXAg2XAl4DAcMBkgINkgJkAwG1AZ4CDZ4CVgMBpgE=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
       <sap2010:ViewStateData Id="InitializeCommerceModelActivity_1" sap:VirtualizedContainerService.HintSize="264,22" />
+      <sap2010:ViewStateData Id="SubstituteConfigurationsBeforeImportsActivity_1" sap:VirtualizedContainerService.HintSize="264,22" />
       <sap2010:ViewStateData Id="CreateUserAuthorizationsActivity_1" sap:VirtualizedContainerService.HintSize="264,22" />
       <sap2010:ViewStateData Id="CreateUsersActivity_1" sap:VirtualizedContainerService.HintSize="264,22" />
       <sap2010:ViewStateData Id="ImportEmailTemplatesActivity_2" sap:VirtualizedContainerService.HintSize="264,22" />
@@ -372,14 +387,14 @@
       <sap2010:ViewStateData Id="ExecuteSQLScriptActivity_1" sap:VirtualizedContainerService.HintSize="264,22" />
       <sap2010:ViewStateData Id="WaitForCorrelatedTasksCompletionsActivity_3" sap:VirtualizedContainerService.HintSize="264,22" />
       <sap2010:ViewStateData Id="QueueSearchIndexingActivity_1" sap:VirtualizedContainerService.HintSize="264,22" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="286,1550">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="286,1612">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="CommerceModel.BetterRetail.LoadDataProfile_DevTest_1" sap:VirtualizedContainerService.HintSize="326,1630" />
+      <sap2010:ViewStateData Id="CommerceModel.BetterRetail.LoadDataProfile_DevTest_1" sap:VirtualizedContainerService.HintSize="326,1692" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
