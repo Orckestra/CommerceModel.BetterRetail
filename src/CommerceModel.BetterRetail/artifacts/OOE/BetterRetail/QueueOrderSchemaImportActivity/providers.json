@@ -785,7 +785,9 @@
       "GetPaymentMethodsByCartUrl": "@BamboraBasePath@/api/paymentmethod/get",
       "SetDefaultPaymentMethodUrl": "@BamboraBasePath@/api/paymentmethod/set",
       "InitializePaymentUrl": "@BamboraBasePath@/api/paymentprovider/initialize",
-      "AuthenticationKey": "SecureAndSecretKey",
+      "AuthenticationKey": "U2VjcmV0U2VjcmV0",
+      "Username": "Test",
+      "Password": "Passw0rd",
       "CreateCartPaymentVaultProfileUrl": "@BamboraBasePath@/api/paymentprofile/createcartpaymentvaultprofile",
       "SupportedCultureIds": "en-US,en-CA,fr-CA"
     },
