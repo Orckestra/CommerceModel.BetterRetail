@@ -491,13 +491,6 @@
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Qa-v1.2\media-0-5000.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Qa-v1.2\media-10000-15000.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Qa-v1.2\media-5000-10000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailCanada-Dev-v1.3\media-0-5000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailEuro-Dev-v1.0\media-0-5000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNorway-Dev-v1.0\media-0-5000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Dev-v1.3\media-0-5000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailCanada-Qa-v1.0\media-0-5000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailCanada-Qa-v1.0\media-10000-15000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailCanada-Qa-v1.0\media-5000-10000.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS - Header.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER - Header.json" />
