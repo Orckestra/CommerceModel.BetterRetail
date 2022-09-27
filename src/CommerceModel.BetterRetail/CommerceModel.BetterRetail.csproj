@@ -487,6 +487,10 @@
     <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\BRU-101.json" />
     <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailEuro\Germany\NorthRhineWestphalia\BRDE-101.json" />
     <Content Include="artifacts\OOE\BetterRetail\AddOrUpdateSearchQueryActivity\BetterRetailCanada.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Dev-v1.5\media-0-5000.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Qa-v1.2\media-0-5000.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Qa-v1.2\media-10000-15000.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Qa-v1.2\media-5000-10000.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS - Header.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER - Header.json" />

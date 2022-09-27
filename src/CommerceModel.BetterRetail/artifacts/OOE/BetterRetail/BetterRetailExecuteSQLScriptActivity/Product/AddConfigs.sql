@@ -24,3 +24,13 @@ if not exists (select 1 from CONFIG where [Key] = @@key)
 else if exists (select 1 from CONFIG where [Key] = @@key and NOT([Value] = '' or [Value] is null))
     update CONFIG set [Value] = @@value where [Key] = @@key
 end
+
+BEGIN
+SET @@key = 'MaxNumberOfMediaItems'
+SET @@value = '100'
+SET @@configGuid = 'FEF52F82-E0EF-4FFE-BD35-690C12C62F46'
+IF NOT EXISTS (SELECT 1 FROM CONFIG WHERE [Key] = @@key)
+    INSERT INTO CONFIG ([Key], [Value], [IsSystem], [Config_Guid]) VALUES (@@key, @@value, 1, @@configGuid)
+ELSE IF EXISTS (SELECT 1 FROM CONFIG WHERE [Key] = @@key AND NOT([Value] = '' OR [Value] IS NULL))
+    UPDATE CONFIG SET [Value] = @@value WHERE [Key] = @@key
+END
