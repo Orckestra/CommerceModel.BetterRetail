@@ -156,8 +156,8 @@
     <Reference Include="Orckestra.SolrLib, Version=5.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.3.0-beta0011\lib\net461\Orckestra.SolrLib.dll</HintPath>
     </Reference>
-    <Reference Include="OrckestraCommerce.CommerceModelUtilities, Version=5.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.5.3.0-beta0011\lib\net461\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
+    <Reference Include="OrckestraCommerce.CommerceModelUtilities, Version=5.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.5.4.0-alpha0406\lib\net461\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
     </Reference>
     <Reference Include="OrckestraCommerce.DataExchange, Version=5.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.3.0-beta0011\lib\net461\OrckestraCommerce.DataExchange.dll</HintPath>
@@ -255,7 +255,6 @@
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Membership\InsertAuthorization.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddCustomLineItemAttributes.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddCustomAttributes.sql" />
-    <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddExternalPaymentProvider.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\FixProviders.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\CustomerCreated\Contents\Html\en-CA.html" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\CustomerCreated\Contents\Html\en-US.html" />
