@@ -1,4 +1,5 @@
 {
+  "Id": "264DD3BC-CD62-4CC4-9044-69A3748E38BB",
   "scopeId": "BetterRetailCanada",
   "addresses": [
     {
@@ -29,7 +30,7 @@
     "BetterRetailCanada"
   ],
   "deliverySchedule": {
-    "fulfillmentLocationId": "570AB555-3856-47ED-BD35-94B720E8D02C",
+    "fulfillmentLocationId": "264DD3BC-CD62-4CC4-9044-69A3748E38BB",
     "openingHourExceptions": [],
     "openingHours": [],
     "propertyBag": null,
@@ -56,7 +57,7 @@
   "name": "BRC Warehouse 5000",
   "number": "BRC-Warehouse-5000",
   "operatingStatus": {
-    "id": "570AB555-3856-47ED-BD35-94B720E8D02C",
+    "id": "264DD3BC-CD62-4CC4-9044-69A3748E38BB",
     "availabilityStatus": {
       "isAvailable": true,
       "estimatedDuration": {
@@ -110,7 +111,7 @@
   "phoneExtension": null,
   "phoneNumber": "450 471-3688",
   "pickUpSchedule": {
-    "fulfillmentLocationId": "570AB555-3856-47ED-BD35-94B720E8D02C",
+    "fulfillmentLocationId": "264DD3BC-CD62-4CC4-9044-69A3748E38BB",
     "openingHourExceptions": [],
     "openingHours": [],
     "propertyBag": null,
@@ -124,7 +125,7 @@
     }
   },
   "schedule": {
-    "fulfillmentLocationId": "570AB555-3856-47ED-BD35-94B720E8D02C",
+    "fulfillmentLocationId": "264DD3BC-CD62-4CC4-9044-69A3748E38BB",
     "openingHourExceptions": [],
     "openingHours": [
       {
