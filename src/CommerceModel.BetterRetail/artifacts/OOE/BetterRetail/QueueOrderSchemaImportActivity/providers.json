@@ -1941,7 +1941,7 @@
   {
     "id": "2004498f-c911-4b9a-95f3-a531b9e6a5f9",
     "type": "Payment",
-    "scopeId": "BetterRetailNetherlands",
+    "scopeId": "BetterRetailEuro",
     "name": "Bambora",
     "implementationTypeName": "ExternalPaymentProvider",
     "displayName": {
@@ -2376,42 +2376,5 @@
 		"ServiceUrl": "#AvalaraServiceUrl#"
 	},
     "propertyConfigurations": {}
-  },
-  {
-    "id": "e1d66968-6690-466b-a3fc-3c15dc1dc722",
-    "type": "Payment",
-    "scopeId": "BetterRetailGermany",
-    "name": "Bambora",
-    "implementationTypeName": "ExternalPaymentProvider",
-    "displayName": {
-      "en-US": "Bambora",
-      "en-CA": "Bambora",
-      "fr-CA": "Bambora"
-    },
-    "isActive": true,
-    "values": {
-      "Timeout": {
-        "__type": "ValueOfInt32",
-        "value": 30
-      },
-      "IsRefreshOperationSupported": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "AuthorizePaymentUrl": "@BamboraBasePath@/api/paymentprovider/authorize",
-      "RefreshPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refresh",
-      "RefundPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refund",
-      "SettlePaymentUrl": "@BamboraBasePath@/api/paymentprovider/settle",
-      "VoidPaymentUrl": "@BamboraBasePath@/api/paymentprovider/void",
-      "DeletePaymentMethodUrl": "@BamboraBasePath@/api/paymentmethod/delete",
-      "GetPaymentMethodsByCustomerIdUrl": "@BamboraBasePath@/api/paymentmethod/getpaymentmethodsbycustomerid",
-      "GetPaymentMethodsByCartUrl": "@BamboraBasePath@/api/paymentmethod/get",
-      "SetDefaultPaymentMethodUrl": "@BamboraBasePath@/api/paymentmethod/set",
-      "InitializePaymentUrl": "@BamboraBasePath@/api/paymentprovider/initialize",
-      "AuthenticationKey": "SecureAndSecretKey",
-      "CreateCartPaymentVaultProfileUrl": "@BamboraBasePath@/api/paymentprofile/createcartpaymentvaultprofile",
-      "SupportedCultureIds": "en-US,en-CA,fr-CA"
-    },
-	"propertyConfigurations": {}
   }
 ]
