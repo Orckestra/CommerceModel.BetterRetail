@@ -172,6 +172,7 @@
     </Reference>
     <Reference Include="OrckestraCommerce.CommerceModelUtilities, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.5.5.0-alpha0002\lib\net461\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="OrckestraCommerce.DataExchange, Version=5.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.4.0-alpha0212\lib\net461\OrckestraCommerce.DataExchange.dll</HintPath>
