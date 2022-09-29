@@ -1,0 +1,6 @@
+<schema xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+	<fields>
+		<field name="PromotionalRibbon_Facet" type="text_facet" indexed="true" stored="false" multiValued="false" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)" />
+		<field name="PromotionalBanner_Facet" type="text_facet" indexed="true" stored="false" multiValued="false" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)" />
+	</fields>
+</schema>
