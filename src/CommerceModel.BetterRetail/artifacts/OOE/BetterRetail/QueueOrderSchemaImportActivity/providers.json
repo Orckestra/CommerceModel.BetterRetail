@@ -2356,25 +2356,32 @@
     "propertyConfigurations": {}
   },
   {
-	"isActive": true,
-	"values": {
-		"EnableLogging": {
-			"__type": "ValueOfBoolean",
-			"value": false
-		},
-		"EnableAddressValidation": {
-			"__type": "ValueOfBoolean",
-			"value": true
-		},
-		"Timeout": {
-			"__type": "ValueOfInt32",
-			"value": 3000
-		},
-		"AccountNumber": "#AvalaraAccountNumber#",
-		"CompanyCode": "#AvalaraCompanyCode#",
-		"LicenceKey": "#AvalaraLicenceKey#",
-		"ServiceUrl": "#AvalaraServiceUrl#"
-	},
+    "type": "Tax",
+    "scopeId": "BetterRetailUSA",
+    "name": "AvalaraTaxProvider",
+    "implementationTypeName": "AvalaraTaxProvider",
+    "displayName": {
+
+    },
+    "isActive": false,
+    "values": {
+      "EnableLogging": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "EnableAddressValidation": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "Timeout": {
+        "__type": "ValueOfInt32",
+        "value": 3000
+      },
+      "AccountNumber": "#AvalaraAccountNumber#",
+      "CompanyCode": "#AvalaraCompanyCode#",
+      "LicenceKey": "#AvalaraLicenceKey#",
+      "ServiceUrl": "#AvalaraServiceUrl#"
+    },
     "propertyConfigurations": {}
   }
 ]
