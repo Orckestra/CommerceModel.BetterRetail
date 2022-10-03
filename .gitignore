@@ -265,4 +265,4 @@ DynamicVersionInfo.cs
 # Visual Studio Code
 .vscode/
 
-build/build.sensitivedata.json
+build/build.sensitivedata*.json*
