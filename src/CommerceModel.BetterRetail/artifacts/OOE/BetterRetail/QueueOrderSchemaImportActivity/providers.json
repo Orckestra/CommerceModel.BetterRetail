@@ -794,6 +794,38 @@
     "propertyConfigurations": {}
   },
   {
+    "id": "d168e411-abdc-42c0-a9a9-a5d97e28847d",
+    "type": "Carrier",
+    "scopeId": "BetterRetailCanada",
+    "name": "CanadaPost",
+    "implementationTypeName": "ExternalCarrierProvider",
+    "displayName": {
+      "en-US": "Canada Post",
+      "en-CA": "Canada Post",
+      "fr-CA": "Poste Canada"
+    },
+    "isActive": true,
+    "values": {
+      "Timeout": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "ShouldBookReturnLabel": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "LogApiCalls": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "AuthenticationKey": "U2VjcmV0U2VjcmV0",
+      "BaseUrl": "@CanadaPostBasePath@/api",
+      "Username": "",
+      "Password": ""
+    },
+    "propertyConfigurations": {}
+  },
+  {
     "id": "e7d7a2c8-4be1-40bf-862e-2fe1013a3c78",
     "type": "FulfillmentCarrier",
     "scopeId": "BetterRetailNorway",
