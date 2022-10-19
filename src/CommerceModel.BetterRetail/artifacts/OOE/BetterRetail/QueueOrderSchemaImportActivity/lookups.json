@@ -1347,6 +1347,138 @@
         "sortOrder": 1,
         "isActive": true
       }
-	]
+    ]
+  },
+  {
+    "lookupName": "PaymentHistory",
+    "description": "Payment History subcategories and data lookups",
+    "displayName": {
+      "en-CA": "PaymentHistory",
+      "en-US": "PaymentHistory",
+      "fr-CA": "Historique de paiement"
+    },
+	"isActive": true,
+    "values": [
+      {
+        "value": "Authorized",
+        "displayName": {
+          "en-US": "Authorized",
+          "en-CA": "Authorized",
+          "fr-CA": "Autorisé"
+        },
+        "sortOrder": 1,
+        "isActive": true
+      },
+      {
+        "value": "AvsResult",
+        "displayName": {
+          "en-US": "AVS Result",
+          "en-CA": "AVS Result",
+          "fr-CA": "SVA Résultat"
+        },
+        "sortOrder": 2,
+        "isActive": true
+      },
+      {
+        "value": "Comment",
+        "displayName": {
+          "en-US": "Comment",
+          "en-CA": "Comment",
+          "fr-CA": "Commentaire"
+        },
+        "sortOrder": 3,
+        "isActive": true
+      },
+      {
+        "value": "Message",
+        "displayName": {
+          "en-US": "Message",
+          "en-CA": "Message",
+          "fr-CA": "Message"
+        },
+        "sortOrder": 4,
+        "isActive": true
+      },
+      {
+        "value": "Paid",
+        "displayName": {
+          "en-US": "Paid",
+          "en-CA": "Paid",
+          "fr-CA": "Payé"
+        },
+        "sortOrder": 5,
+        "isActive": true
+      },
+      {
+        "value": "Refunded",
+        "displayName": {
+          "en-US": "Refunded",
+          "en-CA": "Refunded",
+          "fr-CA": "Remboursé"
+        },
+        "sortOrder": 6,
+        "isActive": true
+      },
+      {
+        "value": "RefundFailed",
+        "displayName": {
+          "en-US": "Refund Failed",
+          "en-CA": "Refund Failed",
+          "fr-CA": "Échec du Remboursement"
+        },
+        "sortOrder": 7,
+        "isActive": true
+      },
+      {
+        "value": "PaymentFailed",
+        "displayName": {
+          "en-US": "Payment Failed",
+          "en-CA": "Payment Failed",
+          "fr-CA": "Échec du Paiement"
+        },
+        "sortOrder": 8,
+        "isActive": true
+      },
+      {
+        "value": "Voided",
+        "displayName": {
+          "en-US": "Voided",
+          "en-CA": "Voided",
+          "fr-CA": "Annulé"
+        },
+        "sortOrder": 9,
+        "isActive": true
+      },
+      {
+        "value": "PendingVoid",
+        "displayName": {
+          "en-CA": "Pending Void",
+          "en-US": "Pending Void",
+          "fr-CA": "Annulation en attente"
+        },
+        "sortOrder": 10,
+        "isActive": true
+      },
+      {
+        "value": "PartiallyRefunded",
+        "displayName": {
+          "en-CA": "Partially Refunded",
+          "en-US": "Partially Refunded",
+          "fr-CA": "Rembours\u00E9 partiellement"
+        },
+        "sortOrder": 11,
+        "isActive": true
+      },
+      {
+        "value": "Verified",
+        "displayName": {
+          "en-CA": "Verified",
+          "en-US": "Verified",
+          "fr-CA": "V\u00E9rifi\u00E9"
+        },
+        "sortOrder": 12,
+        "isActive": true
+      }
+    ]
   }
 ]

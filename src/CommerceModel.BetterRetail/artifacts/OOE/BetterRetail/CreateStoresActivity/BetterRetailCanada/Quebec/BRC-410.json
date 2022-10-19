@@ -1,4 +1,5 @@
 {
+  "Id": "E44C4222-9F8D-4199-BEAC-F7AAB9B7BA38",
   "Number": "BRC-410",
   "IsActive": true,
   "Name": "BRC-Galeries de Granby",
@@ -24,7 +25,7 @@
   "SupportShipping": true,
   "SupportShipToStore": true,
   "OperatingStatus": {
-    "Id": "FDB2F3C9-4A9D-43DD-BF51-7B7AED2194DB",
+    "Id": "E44C4222-9F8D-4199-BEAC-F7AAB9B7BA38",
     "AvailabilityStatus": {
       "IsAvailable": true,
       "Reason": null,
@@ -76,7 +77,7 @@
     "PropertyBag": null
   },
   "Schedule": {
-    "FulfillmentLocationId": "fdb2f3c9-4a9d-43dd-bf51-7b7aed2194db",
+    "FulfillmentLocationId": "E44C4222-9F8D-4199-BEAC-F7AAB9B7BA38",
     "OpeningHours": [
       {
         "IsClosed": false,
@@ -161,14 +162,14 @@
     "PropertyBag": null
   },
   "PickUpSchedule": {
-    "FulfillmentLocationId": "fdb2f3c9-4a9d-43dd-bf51-7b7aed2194db",
+    "FulfillmentLocationId": "E44C4222-9F8D-4199-BEAC-F7AAB9B7BA38",
     "OpeningHours": [],
     "OpeningHourExceptions": [],
     "ScheduleType": 2,
     "PropertyBag": null
   },
   "DeliverySchedule": {
-    "FulfillmentLocationId": "fdb2f3c9-4a9d-43dd-bf51-7b7aed2194db",
+    "FulfillmentLocationId": "E44C4222-9F8D-4199-BEAC-F7AAB9B7BA38",
     "OpeningHours": [],
     "OpeningHourExceptions": [],
     "ScheduleType": 1,

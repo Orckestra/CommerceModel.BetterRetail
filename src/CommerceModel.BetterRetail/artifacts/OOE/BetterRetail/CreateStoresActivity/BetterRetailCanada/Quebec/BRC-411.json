@@ -1,4 +1,5 @@
 {
+  "Id": "621A78C7-DF76-4B9D-9882-8F73FCBA8848",
   "Number": "BRC-411",
   "IsActive": true,
   "Name": "BRC-Champlain Mall",
@@ -24,7 +25,7 @@
   "SupportShipping": true,
   "ShipOrderFromOther": true,
   "OperatingStatus": {
-    "Id": "96EC5890-9A78-4E10-A41D-A8D0FD29B50B",
+    "Id": "621A78C7-DF76-4B9D-9882-8F73FCBA8848",
     "AvailabilityStatus": {
       "IsAvailable": true,
       "Reason": null,
@@ -76,7 +77,7 @@
     "PropertyBag": null
   },
   "Schedule": {
-    "FulfillmentLocationId": "96ec5890-9a78-4e10-a41d-a8d0fd29b50b",
+    "FulfillmentLocationId": "621A78C7-DF76-4B9D-9882-8F73FCBA8848",
     "OpeningHours": [
       {
         "IsClosed": false,
@@ -161,14 +162,14 @@
     "PropertyBag": null
   },
   "PickUpSchedule": {
-    "FulfillmentLocationId": "96ec5890-9a78-4e10-a41d-a8d0fd29b50b",
+    "FulfillmentLocationId": "621A78C7-DF76-4B9D-9882-8F73FCBA8848",
     "OpeningHours": [],
     "OpeningHourExceptions": [],
     "ScheduleType": 2,
     "PropertyBag": null
   },
   "DeliverySchedule": {
-    "FulfillmentLocationId": "96ec5890-9a78-4e10-a41d-a8d0fd29b50b",
+    "FulfillmentLocationId": "621A78C7-DF76-4B9D-9882-8F73FCBA8848",
     "OpeningHours": [],
     "OpeningHourExceptions": [],
     "ScheduleType": 1,

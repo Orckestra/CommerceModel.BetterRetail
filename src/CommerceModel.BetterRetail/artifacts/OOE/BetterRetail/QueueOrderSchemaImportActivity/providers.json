@@ -470,7 +470,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht1QCEDOPMJZ3QN",
+      "HostedCardTokenizationProfileId": "chktGRPHTtore5",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -563,7 +563,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht1QCEDOPMJZ3QN",
+      "HostedCardTokenizationProfileId": "ht52LVQM23AU1IC",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -751,6 +751,77 @@
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
       "HostedCardTokenizationProfileId": "ht2J2QIZZ2ZYYJC",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "7e5f8183-cbf4-467b-9200-6f39d586b64a",
+    "type": "Payment",
+    "scopeId": "BetterRetailCanada",
+    "name": "Bambora",
+    "implementationTypeName": "ExternalPaymentProvider",
+    "displayName": {
+      "en-US": "Bambora",
+      "en-CA": "Bambora",
+      "fr-CA": "Bambora"
+    },
+    "isActive": true,
+    "values": {
+      "Timeout": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "IsRefreshOperationSupported": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "AuthorizePaymentUrl": "@BamboraBasePath@/api/paymentprovider/authorize",
+      "RefreshPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refresh",
+      "RefundPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refund",
+      "SettlePaymentUrl": "@BamboraBasePath@/api/paymentprovider/settle",
+      "VoidPaymentUrl": "@BamboraBasePath@/api/paymentprovider/void",
+      "DeletePaymentMethodUrl": "@BamboraBasePath@/api/paymentmethod/delete",
+      "GetPaymentMethodsByCustomerIdUrl": "@BamboraBasePath@/api/paymentmethod/getpaymentmethodsbycustomerid",
+      "GetPaymentMethodsByCartUrl": "@BamboraBasePath@/api/paymentmethod/get",
+      "SetDefaultPaymentMethodUrl": "@BamboraBasePath@/api/paymentmethod/set",
+      "InitializePaymentUrl": "@BamboraBasePath@/api/paymentprovider/initialize",
+      "AuthenticationKey": "U2VjcmV0U2VjcmV0",
+      "Username": "Test",
+      "Password": "Passw0rd",
+      "CreateCartPaymentVaultProfileUrl": "@BamboraBasePath@/api/paymentprofile/createcartpaymentvaultprofile",
+      "SupportedCultureIds": "en-US,en-CA,fr-CA"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "d168e411-abdc-42c0-a9a9-a5d97e28847d",
+    "type": "Carrier",
+    "scopeId": "BetterRetailCanada",
+    "name": "CanadaPost",
+    "implementationTypeName": "ExternalCarrierProvider",
+    "displayName": {
+      "en-US": "Canada Post",
+      "en-CA": "Canada Post",
+      "fr-CA": "Poste Canada"
+    },
+    "isActive": true,
+    "values": {
+      "Timeout": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "ShouldBookReturnLabel": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "LogApiCalls": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "AuthenticationKey": "U2VjcmV0U2VjcmV0",
+      "BaseUrl": "@CanadaPostBasePath@/api",
+      "Username": "",
+      "Password": ""
     },
     "propertyConfigurations": {}
   },
@@ -1304,6 +1375,43 @@
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
       "HostedCardTokenizationProfileId": "ht1RRATIA38HFFK",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "id": "997dadb2-49f1-4764-934f-9c6e530e8515",
+    "type": "Payment",
+    "scopeId": "BetterRetailNorway",
+    "name": "Bambora",
+    "implementationTypeName": "ExternalPaymentProvider",
+    "displayName": {
+      "en-US": "Bambora",
+      "en-CA": "Bambora",
+      "fr-CA": "Bambora"
+    },
+    "isActive": true,
+    "values": {
+      "Timeout": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "IsRefreshOperationSupported": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "AuthorizePaymentUrl": "@BamboraBasePath@/api/paymentprovider/authorize",
+      "RefreshPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refresh",
+      "RefundPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refund",
+      "SettlePaymentUrl": "@BamboraBasePath@/api/paymentprovider/settle",
+      "VoidPaymentUrl": "@BamboraBasePath@/api/paymentprovider/void",
+      "DeletePaymentMethodUrl": "@BamboraBasePath@/api/paymentmethod/delete",
+      "GetPaymentMethodsByCustomerIdUrl": "@BamboraBasePath@/api/paymentmethod/getpaymentmethodsbycustomerid",
+      "GetPaymentMethodsByCartUrl": "@BamboraBasePath@/api/paymentmethod/get",
+      "SetDefaultPaymentMethodUrl": "@BamboraBasePath@/api/paymentmethod/set",
+      "InitializePaymentUrl": "@BamboraBasePath@/api/paymentprovider/initialize",
+      "AuthenticationKey": "SecureAndSecretKey",
+      "CreateCartPaymentVaultProfileUrl": "@BamboraBasePath@/api/paymentprofile/createcartpaymentvaultprofile",
+      "SupportedCultureIds": "en-US,en-CA,fr-CA"
     },
     "propertyConfigurations": {}
   },
@@ -1863,6 +1971,43 @@
     "propertyConfigurations": {}
   },
   {
+    "id": "2004498f-c911-4b9a-95f3-a531b9e6a5f9",
+    "type": "Payment",
+    "scopeId": "BetterRetailEuro",
+    "name": "Bambora",
+    "implementationTypeName": "ExternalPaymentProvider",
+    "displayName": {
+      "en-US": "Bambora",
+      "en-CA": "Bambora",
+      "fr-CA": "Bambora"
+    },
+    "isActive": true,
+    "values": {
+      "Timeout": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "IsRefreshOperationSupported": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "AuthorizePaymentUrl": "@BamboraBasePath@/api/paymentprovider/authorize",
+      "RefreshPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refresh",
+      "RefundPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refund",
+      "SettlePaymentUrl": "@BamboraBasePath@/api/paymentprovider/settle",
+      "VoidPaymentUrl": "@BamboraBasePath@/api/paymentprovider/void",
+      "DeletePaymentMethodUrl": "@BamboraBasePath@/api/paymentmethod/delete",
+      "GetPaymentMethodsByCustomerIdUrl": "@BamboraBasePath@/api/paymentmethod/getpaymentmethodsbycustomerid",
+      "GetPaymentMethodsByCartUrl": "@BamboraBasePath@/api/paymentmethod/get",
+      "SetDefaultPaymentMethodUrl": "@BamboraBasePath@/api/paymentmethod/set",
+      "InitializePaymentUrl": "@BamboraBasePath@/api/paymentprovider/initialize",
+      "AuthenticationKey": "SecureAndSecretKey",
+      "CreateCartPaymentVaultProfileUrl": "@BamboraBasePath@/api/paymentprofile/createcartpaymentvaultprofile",
+      "SupportedCultureIds": "en-US,en-CA,fr-CA"
+    },
+    "propertyConfigurations": {}
+  },
+  {
     "id": "FF8CFC29-66CC-405D-B6ED-3B8494A8E646",
     "type": "FulfillmentCarrier",
     "scopeId": "BetterRetailUSA",
@@ -2206,30 +2351,69 @@
     "propertyConfigurations": {}
   },
   {
-	"type": "Tax",
-	"scopeId": "BetterRetailUSA",
-	"name": "AvalaraTaxProvider",
-	"implementationTypeName": "AvalaraTaxProvider",
-	"displayName": {},
-	"isActive": true,
-	"values": {
-		"EnableLogging": {
-			"__type": "ValueOfBoolean",
-			"value": false
-		},
-		"EnableAddressValidation": {
-			"__type": "ValueOfBoolean",
-			"value": true
-		},
-		"Timeout": {
-			"__type": "ValueOfInt32",
-			"value": 3000
-		},
-		"AccountNumber": "#AvalaraAccountNumber#",
-		"CompanyCode": "#AvalaraCompanyCode#",
-		"LicenceKey": "#AvalaraLicenceKey#",
-		"ServiceUrl": "#AvalaraServiceUrl#"
-	},
-	"propertyConfigurations": {}
+    "id": "13c0ba5c-2bf2-4df1-813e-4342541bbccf",
+    "type": "Payment",
+    "scopeId": "BetterRetailUSA",
+    "name": "Bambora",
+    "implementationTypeName": "ExternalPaymentProvider",
+    "displayName": {
+      "en-US": "Bambora",
+      "en-CA": "Bambora",
+      "fr-CA": "Bambora"
+    },
+    "isActive": true,
+    "values": {
+      "Timeout": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "IsRefreshOperationSupported": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "AuthorizePaymentUrl": "@BamboraBasePath@/api/paymentprovider/authorize",
+      "RefreshPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refresh",
+      "RefundPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refund",
+      "SettlePaymentUrl": "@BamboraBasePath@/api/paymentprovider/settle",
+      "VoidPaymentUrl": "@BamboraBasePath@/api/paymentprovider/void",
+      "DeletePaymentMethodUrl": "@BamboraBasePath@/api/paymentmethod/delete",
+      "GetPaymentMethodsByCustomerIdUrl": "@BamboraBasePath@/api/paymentmethod/getpaymentmethodsbycustomerid",
+      "GetPaymentMethodsByCartUrl": "@BamboraBasePath@/api/paymentmethod/get",
+      "SetDefaultPaymentMethodUrl": "@BamboraBasePath@/api/paymentmethod/set",
+      "InitializePaymentUrl": "@BamboraBasePath@/api/paymentprovider/initialize",
+      "AuthenticationKey": "SecureAndSecretKey",
+      "CreateCartPaymentVaultProfileUrl": "@BamboraBasePath@/api/paymentprofile/createcartpaymentvaultprofile",
+      "SupportedCultureIds": "en-US,en-CA,fr-CA"
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Tax",
+    "scopeId": "BetterRetailUSA",
+    "name": "AvalaraTaxProvider",
+    "implementationTypeName": "AvalaraTaxProvider",
+    "displayName": {
+
+    },
+    "isActive": false,
+    "values": {
+      "EnableLogging": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "EnableAddressValidation": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "Timeout": {
+        "__type": "ValueOfInt32",
+        "value": 3000
+      },
+      "AccountNumber": "#AvalaraAccountNumber#",
+      "CompanyCode": "#AvalaraCompanyCode#",
+      "LicenceKey": "#AvalaraLicenceKey#",
+      "ServiceUrl": "#AvalaraServiceUrl#"
+    },
+    "propertyConfigurations": {}
   }
 ]

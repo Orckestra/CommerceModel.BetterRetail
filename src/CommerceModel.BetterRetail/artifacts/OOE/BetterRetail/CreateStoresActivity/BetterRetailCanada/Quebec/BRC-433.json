@@ -1,4 +1,5 @@
 {
+  "Id": "08564D4F-D4E4-464D-B191-FCE07E4C65B8",
   "Number": "BRC-433",
   "IsActive": true,
   "Name": "BRC-Rockland Centre",
@@ -24,7 +25,7 @@
   "SupportShipping": true,
   "ShipOrderFromOther": true,
   "OperatingStatus": {
-    "Id": "9E48DF11-5BF8-4E04-BA8C-3BC33C296F6E",
+    "Id": "08564D4F-D4E4-464D-B191-FCE07E4C65B8",
     "AvailabilityStatus": {
       "IsAvailable": true,
       "Reason": null,
@@ -76,7 +77,7 @@
     "PropertyBag": null
   },
   "Schedule": {
-    "FulfillmentLocationId": "9e48df11-5bf8-4e04-ba8c-3bc33c296f6e",
+    "FulfillmentLocationId": "08564D4F-D4E4-464D-B191-FCE07E4C65B8",
     "OpeningHours": [
       {
         "IsClosed": false,
@@ -161,14 +162,14 @@
     "PropertyBag": null
   },
   "PickUpSchedule": {
-    "FulfillmentLocationId": "9e48df11-5bf8-4e04-ba8c-3bc33c296f6e",
+    "FulfillmentLocationId": "08564D4F-D4E4-464D-B191-FCE07E4C65B8",
     "OpeningHours": [],
     "OpeningHourExceptions": [],
     "ScheduleType": 2,
     "PropertyBag": null
   },
   "DeliverySchedule": {
-    "FulfillmentLocationId": "9e48df11-5bf8-4e04-ba8c-3bc33c296f6e",
+    "FulfillmentLocationId": "08564D4F-D4E4-464D-B191-FCE07E4C65B8",
     "OpeningHours": [],
     "OpeningHourExceptions": [],
     "ScheduleType": 1,
