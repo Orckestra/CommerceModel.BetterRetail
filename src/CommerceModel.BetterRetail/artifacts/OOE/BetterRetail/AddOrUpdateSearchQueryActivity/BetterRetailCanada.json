@@ -1,0 +1,39 @@
+﻿[
+  {
+    "ScopeId": "BetterRetailCanada",
+    "QueryType": "ProductSet",
+    "Name": "FeaturedProducts",
+    "category": "",
+    "queryData": [
+      {
+        "productSkus": [ "85666587", "87214493", "86762279", "85161582", "60014693", "86486212", "87022437" ],
+        "cultureName": "*"
+      }
+    ]
+  },
+  {
+    "ScopeId": "BetterRetailCanada",
+    "QueryType": "Merchandising",
+    "Name": "SummerWear",
+    "category": "",
+    "queryData": [
+      {
+        "facetPredicates": [
+          {
+            "facetName": "CategoryLevel1_Facet",
+            "valueType": "Category",
+            "operatorType": "Or",
+            "values": [ "women" ]
+          },
+          {
+            "facetName": "SeasonWear",
+            "valueType": "Lookup",
+            "operatorType": "Or",
+            "values": [ "SeasonWear|summer-wear" ]
+          }
+        ],
+        "cultureName": "*"
+      }
+    ]
+  }
+]

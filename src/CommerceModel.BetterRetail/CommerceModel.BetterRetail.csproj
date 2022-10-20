@@ -9,10 +9,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CommerceModel.BetterRetail</RootNamespace>
     <AssemblyName>CommerceModel.BetterRetail</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,140 +35,155 @@
   <ItemGroup>
     <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
-      <Private>True</Private>
+    </Reference>
+    <Reference Include="Azure.Core, Version=1.24.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\Azure.Core.1.24.0\lib\net461\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Storage.Blobs, Version=12.12.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\Azure.Storage.Blobs.12.12.0\lib\netstandard2.0\Azure.Storage.Blobs.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Storage.Common, Version=12.11.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\Azure.Storage.Common.12.11.0\lib\netstandard2.0\Azure.Storage.Common.dll</HintPath>
     </Reference>
     <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\DotNetZip.1.9.1.8\lib\net20\Ionic.Zip.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Activities.Extensions, Version=2.0.6.9, Culture=neutral, PublicKeyToken=23b0c89d0d5ad43f, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Microsoft.Activities.Extensions.2.0.6.9\lib\Net45\Microsoft.Activities.Extensions.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Azure.Documents.Client, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\lib\net461\Microsoft.Azure.Documents.Client.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
-      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Data.Edm, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Microsoft.Data.Edm.5.7.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Data.OData, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Microsoft.Data.OData.5.7.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Data.Services.Client, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Microsoft.Data.Services.Client.5.7.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.SemanticLogging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\EnterpriseLibrary.SemanticLogging.2.0.1406.1\lib\net45\Microsoft.Practices.EnterpriseLibrary.SemanticLogging.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Orckestra.AsyncExtensions, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.AsyncExtensions.5.5.0-alpha0008\lib\net48\Orckestra.AsyncExtensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.WindowsAzure.Storage, Version=7.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\WindowsAzure.Storage.7.2.1\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    <Reference Include="Orckestra.Caching, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Common.5.5.0-alpha0008\lib\net48\Orckestra.Caching.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Orckestra.Data, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Data.5.5.0-alpha0008\lib\net48\Orckestra.Data.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.AsyncExtensions, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.AsyncExtensions.5.2.2\lib\net461\Orckestra.AsyncExtensions.dll</HintPath>
+    <Reference Include="Orckestra.Logging, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Common.5.5.0-alpha0008\lib\net48\Orckestra.Logging.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.Caching, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Common.5.2.2\lib\net461\Orckestra.Caching.dll</HintPath>
+    <Reference Include="Orckestra.Overture.DurableTask, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.5.0-alpha0008\lib\net48\Orckestra.Overture.DurableTask.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.Data, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Data.5.2.2\lib\net461\Orckestra.Data.dll</HintPath>
+    <Reference Include="Orckestra.Overture.DurableTask.Scheduling.Quartz, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.5.0-alpha0008\lib\net48\Orckestra.Overture.DurableTask.Scheduling.Quartz.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.Logging, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Common.5.2.2\lib\net461\Orckestra.Logging.dll</HintPath>
+    <Reference Include="Orckestra.Overture.Extensibility, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.5.0-alpha0008\lib\net48\Orckestra.Overture.Extensibility.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.Overture.DurableTask, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.2.2\lib\net461\Orckestra.Overture.DurableTask.dll</HintPath>
+    <Reference Include="Orckestra.Overture.Interfaces, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Interfaces.5.5.0-alpha0008\lib\net48\Orckestra.Overture.Interfaces.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.Overture.DurableTask.Scheduling.Quartz, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.2.2\lib\net461\Orckestra.Overture.DurableTask.Scheduling.Quartz.dll</HintPath>
+    <Reference Include="Orckestra.Overture.MessagingModel, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.5.0-alpha0008\lib\net48\Orckestra.Overture.MessagingModel.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.Overture.Extensibility, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.2.2\lib\net461\Orckestra.Overture.Extensibility.dll</HintPath>
+    <Reference Include="Orckestra.Overture.Orders.Processing.Workflows, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.5.0-alpha0008\lib\net48\Orckestra.Overture.Orders.Processing.Workflows.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.Overture.Interfaces, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Interfaces.5.2.2\lib\net461\Orckestra.Overture.Interfaces.dll</HintPath>
+    <Reference Include="Orckestra.Overture.Orders.Processing.Workflows.Activities, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.5.0-alpha0008\lib\net48\Orckestra.Overture.Orders.Processing.Workflows.Activities.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.Overture.MessagingModel, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.2.2\lib\net461\Orckestra.Overture.MessagingModel.dll</HintPath>
+    <Reference Include="Orckestra.Overture.ServiceModel, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.ServiceModel.5.5.0-alpha0008\lib\net48\Orckestra.Overture.ServiceModel.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.Overture.Orders.Processing.Workflows, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.2.2\lib\net461\Orckestra.Overture.Orders.Processing.Workflows.dll</HintPath>
+    <Reference Include="Orckestra.Overture.ServiceModel.Requests, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.ServiceModel.Requests.5.5.0-alpha0008\lib\net48\Orckestra.Overture.ServiceModel.Requests.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.Overture.Orders.Processing.Workflows.Activities, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.2.2\lib\net461\Orckestra.Overture.Orders.Processing.Workflows.Activities.dll</HintPath>
+    <Reference Include="Orckestra.Overture.SolrIndexing, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.5.0-alpha0008\lib\net48\Orckestra.Overture.SolrIndexing.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.Overture.ServiceModel, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.ServiceModel.5.2.2\lib\net461\Orckestra.Overture.ServiceModel.dll</HintPath>
+    <Reference Include="Orckestra.SolrLib, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.5.0-alpha0008\lib\net48\Orckestra.SolrLib.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.Overture.ServiceModel.Requests, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.ServiceModel.Requests.5.2.2\lib\net461\Orckestra.Overture.ServiceModel.Requests.dll</HintPath>
+    <Reference Include="OrckestraCommerce.CommerceModelUtilities, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.5.5.0-alpha0008\lib\net461\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Orckestra.Overture.SolrIndexing, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.2.2\lib\net461\Orckestra.Overture.SolrIndexing.dll</HintPath>
-    </Reference>
-    <Reference Include="Orckestra.SolrLib, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.2.2\lib\net461\Orckestra.SolrLib.dll</HintPath>
-    </Reference>
-    <Reference Include="OrckestraCommerce.CommerceModelUtilities, Version=5.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.5.4.0-move-confi0044\lib\net461\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
-    </Reference>
-    <Reference Include="OrckestraCommerce.DataExchange, Version=5.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.2.2\lib\net461\OrckestraCommerce.DataExchange.dll</HintPath>
+    <Reference Include="OrckestraCommerce.DataExchange, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.5.0-alpha0008\lib\net48\OrckestraCommerce.DataExchange.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Quartz, Version=2.3.1.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Quartz.2.3.1\lib\net40\Quartz.dll</HintPath>
-      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\ServiceStack.Common.5.9.0\lib\net45\ServiceStack.Common.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Interfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\ServiceStack.Interfaces.5.9.0\lib\net45\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\ServiceStack.OrmLite.5.9.0\lib\net45\ServiceStack.OrmLite.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite.SqlServer, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\ServiceStack.OrmLite.SqlServer.5.9.0\lib\net45\ServiceStack.OrmLite.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Text, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\ServiceStack.Text.5.9.0\lib\net45\ServiceStack.Text.dll</HintPath>
@@ -177,20 +193,35 @@
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.Diagnostics.DiagnosticSource.4.6.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Hashing, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.IO.Hashing.6.0.0\lib\net461\System.IO.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.Memory.Data.1.0.2\lib\net461\System.Memory.Data.dll</HintPath>
     </Reference>
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
       <Private>True</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http.WinHttpHandler, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\System.Net.Http.WinHttpHandler.4.5.0\lib\net461\System.Net.Http.WinHttpHandler.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -198,43 +229,64 @@
     </Reference>
     <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
       <Private>True</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
       <Private>True</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Spatial, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\System.Spatial.5.7.0\lib\net40\System.Spatial.dll</HintPath>
-      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.Text.Encodings.Web.4.7.2\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.Text.Json.4.7.2\lib\net461\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.24.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Microsoft.Tpl.Dataflow.4.5.24\lib\portable-net45+win8+wpa81\System.Threading.Tasks.Dataflow.dll</HintPath>
-      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -247,12 +299,16 @@
     <Compile Include="..\Common\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Content Include="artifacts\OOE\BetterRetail\CustomExecuteSQLScriptActivity\Product\SetIsFacettableAdminToLookups.sql" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueImportProfileSchemaActivity\groups.json" />
     <Compile Include="DamProviders\BetterRetailDamProvider.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="artifacts\OOE\BetterRetail\BetterRetailExecuteSQLScriptActivity\Product\AddConfigs.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Membership\InsertAuthorization.sql" />
+    <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddCustomLineItemAttributes.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddCustomAttributes.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\FixProviders.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\CustomerCreated\Contents\Html\en-CA.html" />
@@ -321,6 +377,7 @@
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReadyForPickup\Contents\Text\en-US.txt" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReadyForPickup\Contents\Text\en-CA.txt" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReadyForPickup\Contents\Html\en-US.html" />
+    <Content Include="artifacts\Solr\schema.all.xml" />
     <Content Include="Manifest.json">
     </Content>
     <Content Include="artifacts\OOE\BetterRetail\Campaigns\futurePromotions.json" />
@@ -330,131 +387,13 @@
     <Content Include="artifacts\OOE\BetterRetail\QueueOrderSchemaImportActivity\tax_categories.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueImportProfileSchemaActivity\lookups.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueImportProfileSchemaActivity\profiles.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Alberta\CreateOrUpdateStore3600.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Alberta\CreateOrUpdateStore3605.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Alberta\CreateOrUpdateStore725.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Alberta\CreateOrUpdateStore761.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Alberta\CreateOrUpdateStore765.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Alberta\CreateOrUpdateStore767.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Alberta\CreateOrUpdateStore792.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\BritishColombia\CreateOrUpdateStore615.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\BritishColombia\CreateOrUpdateStore750.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\BritishColombia\CreateOrUpdateStore902.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\CreateOrUpdateStore3396.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\NewFoundland\CreateOrUpdateStore3603.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Yukon\CreateOrUpdateStore770.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\NewBrunswick\CreateOrUpdateStore482.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\NewBrunswick\CreateOrUpdateStore693.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\NewBrunswick\CreateOrUpdateStore840.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Ontario\CreateOrUpdateStore413.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Ontario\CreateOrUpdateStore486.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Ontario\CreateOrUpdateStore499.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Ontario\CreateOrUpdateStore788.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Ontario\CreateOrUpdateStore794.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Ontario\CreateOrUpdateStore889.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Ontario\CreateOrUpdateStore901.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\PrinceEdwardIsland\CreateOrUpdateStore310.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore409.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore410.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore411.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore414.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore415.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore418.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore421.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore422.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore425.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore427.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore433.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore436.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore443.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore446.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore454.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore455.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore457.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore462.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore465.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore466.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore468.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore475.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore479.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore481.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore484.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore485.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore490.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore492.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore495.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore496.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore502.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore507.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore518.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore519.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore526.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore527.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore528.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore529.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore530.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore532.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore534.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore536.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore538.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore545.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore546.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore553.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore559.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore600.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore603.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore604.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore616.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore620.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore621.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore622.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore623.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore626.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore630.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore635.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore636.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore637.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore639.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore650.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore652.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore671.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore673.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore674.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore677.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore680.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore681.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore689.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore691.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore694.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore730.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore755.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore757.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore763.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore775.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore776.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore777.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore778.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore781.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore787.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore791.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore793.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore838.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore842.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore849.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore855.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore872.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore890.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore900.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore903.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore904.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStore905.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\CreateOrUpdateStoreTaxTestStore.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\California\CreateOrUpdateStore100.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\CreateOrUpdateStore103.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\CreateOrUpdateStore104.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\CreateOrUpdateStore105.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\Florida\CreateOrUpdateStore101.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\Hawaii\CreateOrUpdateStore102.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\BRC-409.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\BRC-410.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\BRC-411.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\BRC-414.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\BRC-415.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\BRC-433.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\BRC-526.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\README.md" />
     <None Include="app.config" />
     <Content Include="CommerceModel.BetterRetail.nuspec">
@@ -479,8 +418,8 @@
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReadyForPickup\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderDelayed\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\CommerceModelDefinition.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateWarehousesActivity\BetterRetailCanada\CreateOrUpdateWarehouse5000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateWarehousesActivity\BetterRetailUSA\CreateOrUpdateWarehouse5001.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateWarehousesActivity\BetterRetailCanada\BRC-Warehouse-5000.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateWarehousesActivity\BetterRetailUSA\BRU-Warehouse-5001.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\CustomerPasswordResetRequested\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\CustomerPasswordChanged\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderCreated\Template.json" />
@@ -514,20 +453,9 @@
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Catalog-v1.0\catalogs.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Dev-v1.3\associations.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Dev-v1.3\categories.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Dev-v1.3\indexing_strategies.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Dev-v1.3\pricelists.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Dev-v1.3\prices.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Dev-v1.3\products-0-5000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Dev-v1.3\relations.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Qa-v1.0\associations.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Qa-v1.0\categories.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Qa-v1.0\indexing_strategies.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Qa-v1.0\pricelists.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Qa-v1.0\prices.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Qa-v1.0\products-0-5000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Qa-v1.0\products-10000-15000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Qa-v1.0\products-5000-10000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailUSA-Qa-v1.0\relations.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Catalog-v1.0\catalogs.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Dev-v1.5\associations.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Dev-v1.5\categories.json" />
@@ -549,13 +477,9 @@
     <Content Include="artifacts\OOE\BetterRetail\QueueOrderSchemaImportActivity\lookups.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportFulfillmentPackageTypesActivity\Global\Package001.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportFulfillmentPackageTypesActivity\Global\Package002.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNorway\CreateOrUpdateStore9101.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNorway\CreateOrUpdateStore9102.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNorway\CreateOrUpdateStore9103.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNorway\CreateOrUpdateStore9104.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNorway\CreateOrUpdateStore9105.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNorway\CreateOrUpdateStore9106.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateWarehousesActivity\BetterRetailNorway\CreateOrUpdateWarehouse5003.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNorway\BRNO-9101.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNorway\BRNO-9102.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateWarehousesActivity\BetterRetailNorway\BRNO-Warehouse-5003.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNorway-Catalog-v1.0\catalogs.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNorway-Dev-v1.0\associations.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNorway-Dev-v1.0\categories.json" />
@@ -564,54 +488,54 @@
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNorway-Dev-v1.0\prices.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNorway-Dev-v1.0\products-0-5000.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNorway-Dev-v1.0\relations.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNetherlands\CreateOrUpdateStore5101.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNetherlands\CreateOrUpdateStore5102.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNetherlands\CreateOrUpdateStore5103.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNetherlands\CreateOrUpdateStore5104.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNetherlands\CreateOrUpdateStore5105.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailNetherlands\CreateOrUpdateStore5106.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNetherlands-Catalog-v1.0\catalogs.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNetherlands-Dev-v1.0\associations.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNetherlands-Dev-v1.0\categories.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNetherlands-Dev-v1.0\indexing_strategies.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNetherlands-Dev-v1.0\pricelists.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNetherlands-Dev-v1.0\prices.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNetherlands-Dev-v1.0\products-0-5000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailNetherlands-Dev-v1.0\relations.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateWarehousesActivity\BetterRetailNetherlands\CreateOrUpdateWarehouse5004.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailEuro\Netherlands\BRNL-100.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailEuro\Netherlands\BRNL-101.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailEuro-Catalog-v1.0\catalogs.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailEuro-Dev-v1.0\associations.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailEuro-Dev-v1.0\categories.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailEuro-Dev-v1.0\pricelists.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailEuro-Dev-v1.0\prices.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailEuro-Dev-v1.0\products-0-5000.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateWarehousesActivity\BetterRetailEuro\BRNL-Warehouse-5004.json" />
     <Content Include="artifacts\OCS-OOE\Search\solr.products.ALL.config" />
     <Content Include="artifacts\OCS-OOE\Search\solr.customers.ALL.config" />
     <Content Include="artifacts\OCS-OOE\Search\solr.inventories.ALL.config" />
     <Content Include="artifacts\OCS-OOE\Search\solr.stores.ALL.config" />
     <Content Include="artifacts\OOE\BetterRetail\CreateUsersActivity\users.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailGermany\NorthRhineWestphalia\BRDE-100.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Catalog-v1.0\catalogs.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Dev-v1.3\associations.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Dev-v1.3\categories.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Dev-v1.3\indexing_strategies.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Dev-v1.3\pricelists.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Dev-v1.3\prices.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Dev-v1.3\products-0-5000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Dev-v1.3\relations.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\associations.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\categories.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\indexing_strategies.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\pricelists.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\prices.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\products-0-5000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\products-10000-15000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\products-5000-10000.json" />
-    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\BetterRetailGermany-Qa-v1.0\relations.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailEuro\Germany\NorthRhineWestphalia\BRDE-100.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\BRU-100.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailUSA\BRU-101.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailEuro\Germany\NorthRhineWestphalia\BRDE-101.json" />
+    <Content Include="artifacts\OOE\BetterRetail\AddOrUpdateSearchQueryActivity\BetterRetailCanada.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Dev-v1.5\media-0-5000.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Qa-v1.2\media-0-5000.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Qa-v1.2\media-10000-15000.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Qa-v1.2\media-5000-10000.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS - Header.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER - Header.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER_Scope - Header.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER_Scope.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\RELATION - Header.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\RELATION.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\BetterRetailProfiles.zip" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\SHAREDPROFILE1 - Header.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\SHAREDPROFILE1.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\SHAREDPROFILE1_Scope - Header.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\SHAREDPROFILE1_Scope.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\SHAREDPROFILE2 - Header.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\SHAREDPROFILE2.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\SHAREDPROFILE2_Scope - Header.json" />
+    <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\SHAREDPROFILE2_Scope.json" />
     <None Include="CopyArtifacts.targets" />
-    <None Include="job_scheduling_data_2_0.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="scripts\Install-Database.ps1" />
     <Content Include="scripts\Publish-Database.ps1" />
     <Content Include="scripts\Uninstall-Database.ps1" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <XamlAppDef Include="LoadDataProfile_DevTest.xaml">
@@ -628,12 +552,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="artifacts\OOE\App_Data\Workflows\Orders\BetterRetailNetherlands\OrderPostProcessingWorkflow.xaml">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="artifacts\OOE\App_Data\Workflows\Orders\BetterRetailNorway\OrderPostProcessingWorkflow.xaml">
+    <Content Include="artifacts\OOE\App_Data\Workflows\Orders\BetterRetailEuro\OrderPostProcessingWorkflow.xaml">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
@@ -683,17 +602,49 @@
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="artifacts\OOE\App_Data\Workflows\Orders\BetterRetailUSA\OrderPostProcessingWorkflow.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="artifacts\BlobStorage\bopisfulfillmentprovider\BetterRetailUSA\PickupInStoreFulfillmentWorkflow_USA_v1.1.1.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="artifacts\BlobStorage\bopisfulfillmentprovider\BetterRetailUSA\TransferFulfillmentWorkflow_USA_v1.1.1.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="artifacts\BlobStorage\shipfromstorefulfillmentprovider\BetterRetailUSA\ShipFromStoreFulfillmentWorkflow_USA_v1.2.1.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(ProjectDir)\CopyArtifacts.targets" />
+  <Target Name="ReplaceNetFxNetStandardRefWithLib" AfterTargets="ImplicitlyExpandNETStandardFacades">
+    <ItemGroup>
+      <Reference Remove="@(_NETStandardLibraryNETFrameworkReference)" Condition="'%(FileName)' != 'netfx.force.conflicts'" />
+      <Reference Include="@(_NETStandardLibraryNETFrameworkLib)">
+        <Private>true</Private>
+      </Reference>
+    </ItemGroup>
+  </Target>
+  <Target Name="RemoveNetFxForceConflicts" AfterTargets="ResolveAssemblyReferences">
+    <ItemGroup>
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(FileName)' == 'netfx.force.conflicts'" />
+    </ItemGroup>
+  </Target>
+  <Import Project="..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.68\build\net\OrckestraCommerce.Packages.MSBuild.targets" Condition="Exists('..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.68\build\net\OrckestraCommerce.Packages.MSBuild.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
+    <Error Condition="!Exists('..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.68\build\net\OrckestraCommerce.Packages.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.68\build\net\OrckestraCommerce.Packages.MSBuild.targets'))" />
     <Error Condition="!Exists('..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets'))" />
-    <Error Condition="!Exists('..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.65\build\net\OrckestraCommerce.Packages.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.65\build\net\OrckestraCommerce.Packages.MSBuild.targets'))" />
   </Target>
   <Import Project="..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets" Condition="Exists('..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets')" />
-  <Import Project="..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.65\build\net\OrckestraCommerce.Packages.MSBuild.targets" Condition="Exists('..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.65\build\net\OrckestraCommerce.Packages.MSBuild.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

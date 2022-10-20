@@ -7,8 +7,7 @@
     "catalogId": "BetterRetailUSA",
     "includeInSearch": false,
     "hiddenInScope": false,
-    "displayName": {
-    }
+    "displayName": {}
   },
   {
     "primaryParentCategoryId": "women",
@@ -20,7 +19,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "Women's Skirts"
+      "en-CA": "Women's Skirts",
+      "en-US": "Women's Skirts",
+      "fr-CA": "Marques V\u00EAtements Femme Jupes"
     }
   },
   {
@@ -33,7 +34,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "Men's Suits"
+      "en-CA": "Men's Suits",
+      "en-US": "Men's Suits",
+      "fr-CA": "Hommes Complets"
     }
   },
   {
@@ -46,7 +49,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "Women"
+      "en-CA": "Women",
+      "en-US": "Women",
+      "fr-CA": "Femmes"
     }
   },
   {
@@ -59,7 +64,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "Men's Shirts"
+      "en-CA": "Men's Shirts",
+      "en-US": "Men's Shirts",
+      "fr-CA": "Hommes Chemises"
     }
   },
   {
@@ -72,7 +79,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "Women's Activewear"
+      "en-CA": "Women's Activewear",
+      "en-US": "Women's Activewear",
+      "fr-CA": "Marques V\u00EAtements Femme V\u00EAtements Sport"
     }
   },
   {
@@ -85,7 +94,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "MEN'S Men's Shoes"
+      "en-CA": "MEN'S Men's Shoes",
+      "en-US": "MEN'S Men's Shoes",
+      "fr-CA": "Marques Hommes Chaussures pour homme"
     }
   },
   {
@@ -98,7 +109,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "Men"
+      "en-CA": "Men",
+      "en-US": "Men",
+      "fr-CA": "Hommes"
     }
   },
   {
@@ -111,7 +124,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "Women's Pants & Leggings"
+      "en-CA": "Women's Pants & Leggings",
+      "en-US": "Women's Pants & Leggings",
+      "fr-CA": "Femmes Pantalons"
     }
   },
   {
@@ -124,7 +139,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "Men's Pants"
+      "en-CA": "Men's Pants",
+      "en-US": "Men's Pants",
+      "fr-CA": "Hommes Pantalons"
     }
   },
   {
@@ -137,7 +154,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "MEN'S Activewear"
+      "en-CA": "MEN'S Activewear",
+      "en-US": "MEN'S Activewear",
+      "fr-CA": "Marques Hommes V\u00EAtements d'exercice"
     }
   },
   {
@@ -150,7 +169,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "MEN'S Accessories"
+      "en-CA": "MEN'S Accessories",
+      "en-US": "MEN'S Accessories",
+      "fr-CA": "Marques Hommes Accessoires"
     }
   },
   {
@@ -163,7 +184,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "Women's Tops"
+      "en-CA": "Women's Tops",
+      "en-US": "Women's Tops",
+      "fr-CA": "Femmes Hauts"
     }
   },
   {
@@ -176,7 +199,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "Women's Dresses"
+      "en-CA": "Women's Dresses",
+      "en-US": "Women's Dresses",
+      "fr-CA": "Femmes Robes"
     }
   },
   {
@@ -189,7 +214,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "Women's Plus Size Outerwear"
+      "en-CA": "Women's Plus Size Outerwear",
+      "en-US": "Women's Plus Size Outerwear",
+      "fr-CA": "Marques V\u00EAtements Femme Grandes Tailles Vetements d'ext\u00E9rieur"
     }
   },
   {
@@ -202,7 +229,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "Women's Petites Outerwear"
+      "en-CA": "Women's Petites Outerwear",
+      "en-US": "Women's Petites Outerwear",
+      "fr-CA": "Marques V\u00EAtements Femme Tailles Petites Vetements d'ext\u00E9rieur"
     }
   },
   {
@@ -215,7 +244,9 @@
     "includeInSearch": true,
     "hiddenInScope": false,
     "displayName": {
-      "en-US": "Shoes Women's Shoes"
+      "en-CA": "Shoes Women's Shoes",
+      "en-US": "Shoes Women's Shoes",
+      "fr-CA": "Chaussures Chaussures pour femme"
     }
   }
 ]

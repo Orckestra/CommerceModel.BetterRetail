@@ -181,5 +181,121 @@
 		},
 		"description": "Avalara Tax exemption codes that can be associated to a customer",
 		"isActive": false
+	},
+	{
+		"lookupName": "TestLookup",
+		"values": [
+			{
+				"value": "Value1",
+				"displayName": {
+					"en-CA": "Value 1",
+					"en-US": "Value 1",
+					"fr-CA": "Value 1",
+					"fr-FR": "Value 1"
+				},
+				"sortOrder": 0,
+				"isActive": true
+			},
+			{
+				"value": "Value2",
+				"displayName": {
+					"en-CA": "Value 2",
+					"en-US": "Value 2",
+					"fr-CA": "Value 2",
+					"fr-FR": "Value 2"
+				},
+				"sortOrder": 1,
+				"isActive": true
+			}
+		],
+		"displayName": {
+			"en-CA": "Lookup List",
+			"en-US": "Lookup List",
+			"fr-CA": "Liste de lookup",
+			"fr-FR": "Liste de lookup"
+		},
+		"description": "",
+		"isActive": true
+	},
+	{
+		"lookupName": "TestMultiLookup",
+		"values": [
+			{
+				"value": "Value1",
+				"displayName": {
+					"en-CA": "Value 1",
+					"en-US": "Value 1",
+					"fr-CA": "Valeur 1",
+					"fr-FR": "Valeur 1"
+				},
+				"sortOrder": 0,
+				"isActive": true
+			},
+			{
+				"value": "Value2",
+				"displayName": {
+					"en-CA": "Value 2",
+					"en-US": "Value 2",
+					"fr-CA": "Valeur 2",
+					"fr-FR": "Valeur 2"
+				},
+				"sortOrder": 1,
+				"isActive": true
+			}
+		],
+		"displayName": {
+			"en-CA": "Lookup Multiple List",
+			"en-US": "Lookup Multiple List",
+			"fr-CA": "Liste à choix multiple",
+			"fr-FR": "Liste à choix multiple"
+		},
+		"description": "",
+		"isActive": true
+	},
+	{
+		"lookupName": "Age",
+		"values": [
+			{
+				"value": "10",
+				"displayName": {
+					"en-CA": "10",
+					"en-US": "10",
+					"fr-CA": "10",
+					"fr-FR": "10"
+				},
+				"sortOrder": 0,
+				"isActive": true
+			},
+			{
+				"value": "15",
+				"displayName": {
+					"en-CA": "15",
+					"en-US": "15",
+					"fr-CA": "15",
+					"fr-FR": "15"
+				},
+				"sortOrder": 1,
+				"isActive": true
+			},
+			{
+				"value": "20",
+				"displayName": {
+					"en-CA": "20",
+					"en-US": "20",
+					"fr-CA": "20",
+					"fr-FR": "20"
+				},
+				"sortOrder": 2,
+				"isActive": true
+			}
+		],
+		"displayName": {
+			"en-CA": "Age",
+			"en-US": "Age",
+			"fr-CA": "Age",
+			"fr-FR": "Age"
+		},
+		"description": "",
+		"isActive": true
 	}
 ]
