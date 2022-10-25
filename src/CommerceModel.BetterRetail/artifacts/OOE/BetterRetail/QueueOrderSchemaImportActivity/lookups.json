@@ -1357,7 +1357,7 @@
       "en-US": "PaymentHistory",
       "fr-CA": "Historique de paiement"
     },
-	"isActive": true,
+    "isActive": true,
     "values": [
       {
         "value": "Authorized",
@@ -1480,5 +1480,582 @@
         "isActive": true
       }
     ]
+  },
+  {
+    "lookupName": "ReturnLineItemStatus",
+    "values": [
+      {
+        "value": "New",
+        "displayName": {
+          "en-CA": "New",
+          "en-US": "New",
+          "fr-CA": "Nouveau",
+          "fr-FR": "Nouveau"
+        },
+        "sortOrder": 1,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Refunded",
+        "displayName": {
+          "en-CA": "Refunded",
+          "en-US": "Refunded",
+          "fr-CA": "Remboursé",
+          "fr-FR": "Remboursé"
+        },
+        "sortOrder": 3,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "ReadyForRefund",
+        "displayName": {
+          "en-CA": "Ready for refund",
+          "en-US": "Ready for refund",
+          "fr-CA": "Prêt pour le remboursement",
+          "fr-FR": "Prêt pour le remboursement"
+        },
+        "sortOrder": 2,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Rejected",
+        "displayName": {
+          "en-CA": "Rejected",
+          "en-US": "Rejected",
+          "fr-CA": "Rejeté"
+        },
+        "sortOrder": 4,
+        "isActive": true,
+        "isBuiltIn": false
+      }
+    ],
+    "displayName": {
+      "en-CA": "Return Item Statuses",
+      "en-US": "Return Item Statuses",
+      "fr-CA": "Statuts des retours des articles",
+      "fr-FR": "Statuts des retours des articles"
+    },
+    "description": "Reflects the status of a returned line item of a request return in the returns workflow.",
+    "isActive": true,
+    "isBuiltIn": true
+  },
+  {
+    "lookupName": "ReturnReasons",
+    "values": [
+      {
+        "value": "TooSmall",
+        "displayName": {
+          "en-CA": "Too small",
+          "en-US": "Too small",
+          "fr-CA": "Trop petit",
+          "fr-FR": "Trop petit"
+        },
+        "sortOrder": 1,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "DefectiveDamaged",
+        "displayName": {
+          "en-CA": "Defective/Damaged",
+          "en-US": "Defective/Damaged",
+          "fr-CA": "Défectueux/endommagé",
+          "fr-FR": "Défectueux/endommagé"
+        },
+        "sortOrder": 3,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "ReceivedTheWrongItem",
+        "displayName": {
+          "en-CA": "Received the wrong item",
+          "en-US": "Received the wrong item",
+          "fr-CA": "Mauvais article reçu",
+          "fr-FR": "Mauvais article reçu"
+        },
+        "sortOrder": 6,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "ArrivedLate",
+        "displayName": {
+          "en-CA": "Arrived late",
+          "en-US": "Arrived late",
+          "fr-CA": "Arrivé trop tard",
+          "fr-FR": "Arrivé trop tard"
+        },
+        "sortOrder": 7,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "UnacceptableCondition",
+        "displayName": {
+          "en-CA": "Unacceptable condition",
+          "en-US": "Unacceptable condition",
+          "fr-CA": "Condition inacceptable"
+        },
+        "sortOrder": 11,
+        "isActive": true,
+        "isBuiltIn": false
+      },
+      {
+        "value": "BetterProductPriceElsewhere",
+        "displayName": {
+          "en-CA": "Better product price elsewhere",
+          "en-US": "Better product price elsewhere",
+          "fr-CA": "Meilleur prix ailleurs",
+          "fr-FR": "Meilleur prix ailleurs"
+        },
+        "sortOrder": 9,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "ItemMissing",
+        "displayName": {
+          "en-CA": "Item missing",
+          "en-US": "Item missing",
+          "fr-CA": "Article manquant"
+        },
+        "sortOrder": 10,
+        "isActive": true,
+        "isBuiltIn": false
+      },
+      {
+        "value": "NotAsPictured",
+        "displayName": {
+          "en-CA": "Not as pictured",
+          "en-US": "Not as pictured",
+          "fr-CA": "Ne correspond pas à l’image",
+          "fr-FR": "Ne correspond pas à l’image"
+        },
+        "sortOrder": 5,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "TooBig",
+        "displayName": {
+          "en-CA": "Too big",
+          "en-US": "Too big",
+          "fr-CA": "Trop grand",
+          "fr-FR": "Trop grand"
+        },
+        "sortOrder": 2,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "NeverArrived",
+        "displayName": {
+          "en-CA": "Never arrived",
+          "en-US": "Never arrived",
+          "fr-CA": "Jamais reçu",
+          "fr-FR": "Jamais reçu"
+        },
+        "sortOrder": 8,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "DidNotLikeIt",
+        "displayName": {
+          "en-CA": "Did not like it",
+          "en-US": "Did not like it",
+          "fr-CA": "Ne l’aime pas",
+          "fr-FR": "Ne l’aime pas"
+        },
+        "sortOrder": 4,
+        "isActive": true,
+        "isBuiltIn": true
+      }
+    ],
+    "displayName": {
+      "en-CA": "Returns Reasons",
+      "en-US": "Returns Reasons",
+      "fr-CA": "Raisons des retours",
+      "fr-FR": "Raisons des retours"
+    },
+    "description": "Reflects the reason why the customer returned an item.",
+    "isActive": true,
+    "isBuiltIn": true
+  },
+  {
+    "lookupName": "ReturnStatus",
+    "values": [
+      {
+        "value": "New",
+        "displayName": {
+          "en-CA": "New",
+          "en-US": "New",
+          "fr-CA": "Nouveau",
+          "fr-FR": "Nouveau"
+        },
+        "sortOrder": 1,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "RefundInProgress",
+        "displayName": {
+          "en-CA": "Refund in progress",
+          "en-US": "Refund in progress",
+          "fr-CA": "Remboursement en cours",
+          "fr-FR": "Remboursement en cours"
+        },
+        "sortOrder": 2,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "PartiallyRefunded",
+        "displayName": {
+          "en-CA": "Partially refunded",
+          "en-US": "Partially refunded",
+          "fr-CA": " Remboursé partiellement"
+        },
+        "sortOrder": 4,
+        "isActive": true,
+        "isBuiltIn": false
+      },
+      {
+        "value": "Refunded",
+        "displayName": {
+          "en-CA": "Refunded",
+          "en-US": "Refunded",
+          "fr-CA": "Remboursé",
+          "fr-FR": "Remboursé"
+        },
+        "sortOrder": 3,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Closed",
+        "displayName": {
+          "en-CA": "Closed",
+          "en-US": "Closed",
+          "fr-CA": "Fermé"
+        },
+        "sortOrder": 6,
+        "isActive": true,
+        "isBuiltIn": false
+      },
+      {
+        "value": "ReadyForRefund",
+        "displayName": {
+          "en-CA": "Ready for refund",
+          "en-US": "Ready for refund",
+          "fr-CA": "Prêt pour le remboursement"
+        },
+        "sortOrder": 5,
+        "isActive": true,
+        "isBuiltIn": false
+      }
+    ],
+    "displayName": {
+      "en-CA": "Return Statuses",
+      "en-US": "Return Statuses",
+      "fr-CA": "Statuts des retours",
+      "fr-FR": "Statuts des retours"
+    },
+    "description": "Reflects the status of a request return in the returns workflow.",
+    "isActive": true,
+    "isBuiltIn": true
+  },
+  {
+    "lookupName": "RmaReason",
+    "values": [
+      {
+        "value": "Recieved wrong item",
+        "displayName": {
+          "en-CA": "Received wrong item",
+          "en-US": "Received wrong item",
+          "fr-CA": "Mauvais article reçu"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Color",
+        "displayName": {
+          "en-CA": "Color en-CA",
+          "en-US": "Color en-US",
+          "fr-CA": "Couleur fr-CA"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Too big",
+        "displayName": {
+          "en-CA": "Too big",
+          "en-US": "Too big",
+          "fr-CA": "Trop grand"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Defective/damaged",
+        "displayName": {
+          "en-CA": "Defective/damaged",
+          "en-US": "Defective/damaged",
+          "fr-CA": "Défectueux/endommagé"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Quality",
+        "displayName": {
+          "en-CA": "Quality",
+          "en-US": "Quality",
+          "fr-CA": "Qualité"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Changed my mind",
+        "displayName": {
+          "en-CA": "Changed my mind",
+          "en-US": "Changed my mind",
+          "fr-CA": "Changé d’idée"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Too small",
+        "displayName": {
+          "en-CA": "Too small",
+          "en-US": "Too small",
+          "fr-CA": "Trop petit"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Arrived late",
+        "displayName": {
+          "en-CA": "Arrived late",
+          "en-US": "Arrived late",
+          "fr-CA": "Arrivé trop tard"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Return a gift",
+        "displayName": {
+          "en-CA": "Return a gift",
+          "en-US": "Return a gift",
+          "fr-CA": "Retour de cadeau"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Not as pictured",
+        "displayName": {
+          "en-CA": "Not as pictured",
+          "en-US": "Not as pictured",
+          "fr-CA": "Ne correspond pas à l’image"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      }
+    ],
+    "displayName": {
+      "en-CA": "Returns Reason",
+      "en-US": "Returns Reason",
+      "fr-CA": "Raison des retours"
+    },
+    "isActive": true,
+    "isBuiltIn": true
+  },
+  {
+    "lookupName": "RmaResolution",
+    "values": [
+      {
+        "value": "Exchange",
+        "displayName": {
+          "en-CA": "Exchange",
+          "en-US": "Exchange",
+          "fr-CA": "Échange"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Refund",
+        "displayName": {
+          "en-CA": "Refund",
+          "en-US": "Refund",
+          "fr-CA": "Remboursement"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Repair",
+        "displayName": {
+          "en-CA": "Repair",
+          "en-US": "Repair",
+          "fr-CA": "Réparation"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      }
+    ],
+    "displayName": {
+      "en-CA": "Returns Resolution",
+      "en-US": "Returns Resolution",
+      "fr-CA": "Résolution des retours"
+    },
+    "isActive": true,
+    "isBuiltIn": true
+  },
+  {
+    "lookupName": "RmaStatus",
+    "values": [
+      {
+        "value": "New",
+        "displayName": {
+          "en-CA": "New",
+          "en-US": "New",
+          "fr-CA": "Nouveau"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Refunded",
+        "displayName": {
+          "en-CA": "Refunded",
+          "en-US": "Refunded",
+          "fr-CA": "Remboursé"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Restocked",
+        "displayName": {
+          "en-CA": "Restocked",
+          "en-US": "Restocked",
+          "fr-CA": "Remis en stock"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Rejected",
+        "displayName": {
+          "en-CA": "Rejected",
+          "en-US": "Rejected",
+          "fr-CA": "Rejeté"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Closed",
+        "displayName": {
+          "en-CA": "Closed",
+          "en-US": "Closed",
+          "fr-CA": "Fermé"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Authorized",
+        "displayName": {
+          "en-CA": "Authorized",
+          "en-US": "Authorized",
+          "fr-CA": "Autorisé"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Pending Arrival",
+        "displayName": {
+          "en-CA": "Pending Arrival",
+          "en-US": "Pending Arrival",
+          "fr-CA": "En route"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Received",
+        "displayName": {
+          "en-CA": "Received",
+          "en-US": "Received",
+          "fr-CA": "Reçu"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Cancelled",
+        "displayName": {
+          "en-CA": "Cancelled",
+          "en-US": "Cancelled",
+          "fr-CA": "Annulé"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      },
+      {
+        "value": "Partially Refunded",
+        "displayName": {
+          "en-CA": "Partially Refunded",
+          "en-US": "Partially Refunded",
+          "fr-CA": "Partiellement remboursé"
+        },
+        "sortOrder": 0,
+        "isActive": true,
+        "isBuiltIn": true
+      }
+    ],
+    "displayName": {
+      "en-CA": "Returns Statuses",
+      "en-US": "Returns Statuses",
+      "fr-CA": "Statut des retours"
+    },
+    "isActive": true,
+    "isBuiltIn": true
   }
 ]
