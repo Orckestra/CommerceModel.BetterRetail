@@ -42,7 +42,7 @@
                                                 <td style="vertical-align: top;padding-bottom: 30px;padding-right: 40px;">
 
                                                     <p style="font-size: 20px; margin-bottom: 0px; margin-top: 0px;">
-                                                        <strong>Return Request Number:</strong> {{Rma.ReturnNumber}}
+                                                        <strong>Return Request Number:</strong> {{Rma.ReturnReferenceNumber}}
                                                     </p>
                                                     <p style="font-size: 20px; margin-bottom: 0px; margin-top: 5px;">
                                                         <strong>Associated Order Number:</strong> {{Rma.OrderNumber}}
@@ -84,7 +84,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <!--{% for item in Rms.Items%}-->
+                                            <!--{% for item in Rma.Items%}-->
                                             <tr>
                                                 <!--<td style="border-bottom: 1px solid #e1e4ea; padding: 20px 0;"><img src="{{item.ImageURL}}" width="76" alt="product-image" style="display: block;" /></td>-->
                                                 <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;"
