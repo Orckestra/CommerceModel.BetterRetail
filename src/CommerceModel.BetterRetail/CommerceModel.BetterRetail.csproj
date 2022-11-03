@@ -311,6 +311,7 @@
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddCustomLineItemAttributes.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\AddCustomAttributes.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\FixProviders.sql" />
+    <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Product\AddConfigMedia.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\CustomerCreated\Contents\Html\en-CA.html" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\CustomerCreated\Contents\Html\en-US.html" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\CustomerCreated\Contents\Html\fr-CA.html" />

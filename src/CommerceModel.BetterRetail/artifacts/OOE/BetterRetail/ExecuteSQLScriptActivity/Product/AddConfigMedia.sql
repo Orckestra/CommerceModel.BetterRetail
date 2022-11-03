@@ -7,7 +7,7 @@ BEGIN
 	END
 	ELSE
 	BEGIN
-		UPDATE dbo.CONFIG SET [Value] = "L" WHERE [Key] = 'MediaCoverImageSize'
+		UPDATE dbo.CONFIG SET [Value] = 'L' WHERE [Key] = 'MediaCoverImageSize'
 	END
 
 
