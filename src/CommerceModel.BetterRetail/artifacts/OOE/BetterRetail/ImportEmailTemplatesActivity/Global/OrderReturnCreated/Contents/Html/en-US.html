@@ -24,14 +24,14 @@
                             <!-- intro text -->
                             <tr>
                                 <td style="padding: 20px 20px 36px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                    <h1 style="font-size: 32px;">Bonjour {{Rma.CustomerFirstName}} {{Rma.CustomerLastName}},</h1>
-                                    <p style="line-height: 20px;">Ceci est une confirmation de la réception de votre demande de retour. Vous serez informé de son traitement. </p>
-                                    <p>Vous pouvez consulter les détails de cette demande de retour dans l'e-mail suivant:</p>
+                                    <h1 style="font-size: 32px;">Hi {{Return.CustomerFirstName}} {{Return.CustomerLastName}},</h1>
+                                    <p style="line-height: 20px;">This is a confirmation of the reception of your return request. You will be notified upon its treatment. </p>
+                                    <p>You can review the details of that return request in the following email:</p>
                                 </td>
                             </tr>
                             <!-- shipment info -->
                             <tr>
-                                <td style="padding: 15px 20px;" colspan="2"><h1>Informations sur la demande de retour</h1></td>
+                                <td style="padding: 15px 20px;" colspan="2"><h1>Return Request Information</h1></td>
                             </tr>
                             <tr>
                                 <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
@@ -42,13 +42,13 @@
                                                 <td style="vertical-align: top;padding-bottom: 30px;padding-right: 40px;">
 
                                                     <p style="font-size: 20px; margin-bottom: 0px; margin-top: 0px;">
-                                                        <strong>Numéro de demande de retour:</strong> {{Rma.ReturnNumber}}
+                                                        <strong>Return Request Number:</strong> {{Return.ReturnNumber}}
                                                     </p>
                                                     <p style="font-size: 20px; margin-bottom: 0px; margin-top: 5px;">
-                                                        <strong>Numéro de commande associé:</strong> {{Rma.OrderNumber}}
+                                                        <strong>Associated Order Number:</strong> {{Return.OrderNumber}}
                                                     </p>
                                                     <p style="font-size: 20px; margin-top: 5px;">
-                                                        <strong>Date de création de la demande de retour:</strong> {{Rma.Created | date: "D"}}
+                                                        <strong>Return Request Creation Date:</strong> {{Return.Created | date: "D"}}
                                                     </p>
                                                 </td>
 
@@ -61,7 +61,7 @@
                             <!-- Return summary -->
                             <tr>
                                 <td style="padding: 15px 20px 60px;">
-                                    <p style="font-size: 18px; margin-top: 0px;"><strong>Détails du retour</strong></p>
+                                    <p style="font-size: 18px; margin-top: 0px;"><strong>Return details</strong></p>
                                     <table style="width: 100%; text-align: center; font-size: 14px; vertical-align: middle; border: 1px solid #eaeaea;"
                                            border="0" cellspacing="0" cellpadding="0">
                                         <thead style="background-color: #000000; color: #ffffff; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
@@ -84,7 +84,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <!--{% for item in Rma.Items%}-->
+                                            <!--{% for item in Return.Items%}-->
                                             <tr>
                                                 <!--<td style="border-bottom: 1px solid #e1e4ea; padding: 20px 0;"><img src="{{item.ImageURL}}" width="76" alt="product-image" style="display: block;" /></td>-->
                                                 <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;"
@@ -92,7 +92,7 @@
                                                     <strong>{{item.ProductDisplayName}}</strong><br />
                                                 </td>
                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                    <strong>{{item.ProductPrice | money:"fr-CA" }}</strong>
+                                                    <strong>{{item.ProductPrice | money:"en-CA" }}</strong>
                                                 </td>
                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
                                                     <strong>{{item.Quantity}}</strong>
@@ -102,7 +102,7 @@
                                                     <strong>{{item.Reason}}</strong>
                                                 </td>
                                                 <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                    <strong>{{item.SubTotal | money:"fr-CA" }}</strong>
+                                                    <strong>{{item.SubTotal | money:"en-CA" }}</strong>
                                                 </td>
                                             </tr>
                                             <!--{% endfor %}-->
@@ -113,51 +113,51 @@
                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                     colspan="2">
                                                     <span style="text-transform: none;">
-                                                        Marchandise totale:
+                                                        Merchandise total:
                                                     </span>
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
-                                                    <strong>{{ Rma.TotalMerchandise | money:"fr-CA" }}</strong>
+                                                    <strong>{{ Return.TotalMerchandise | money:"en-CA" }}</strong>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                     colspan="2">
-                                                    Remise:
+                                                    Discount :
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
-                                                    <strong>{{ Rma.TotalDiscount | money:"fr-CA" }}</strong>
+                                                    <strong>{{ Return.TotalDiscount | money:"en-CA" }}</strong>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                     colspan="2">
-                                                    Sous-total:
+                                                    Sub Total :
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
-                                                    <strong>{{ Rma.TotalSubtotal | money:"fr-CA" }}</strong>
+                                                    <strong>{{ Return.TotalSubtotal | money:"en-CA" }}</strong>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                     colspan="2">
-                                                    Sous-total:
+                                                    Tax Total:
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
-                                                    <strong>{{ Rma.TotalTax | money:"fr-CA" }}</strong>
+                                                    <strong>{{ Return.TotalTax | money:"en-CA" }}</strong>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                     colspan="2">
-                                                    Retour total:
+                                                    Return Total:
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
-                                                    <strong>{{ Rma.Total| money:"fr-CA" }}</strong>
+                                                    <strong>{{ Return.Total| money:"en-CA" }}</strong>
                                                 </td>
                                             </tr>
                                         </tfoot>
@@ -171,8 +171,8 @@
                         <tfoot style="background-color: #ffffff;">
                             <tr>
                                 <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                    <p>Veuillez ne pas répondre à cet e-mail. Il a été envoyé à partir d'une adresse qui ne peut pas accepter les e-mails entrants.</p>
-                                    <p style="font-size: 12px;">&copy;Droits d'auteur {{Variables.CopyrightsYear}} {{Variables.CompanyName}}.Tous les droits sont réservés.</p>
+                                    <p>Please do not reply to this email message. It was sent from an address that cannot accept incoming email.</p>
+                                    <p style="font-size: 12px;">&copy;Copyright {{Variables.CopyrightsYear}} {{Variables.CompanyName}}. All rights reserved.</p>
                             </tr>
 
                         </tfoot>
