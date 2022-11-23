@@ -1,0 +1,41 @@
+{
+  "name": "OrderReturnCreated",
+  "description": {
+    "en-US": "Notification email sent to customers when their Return Request has been created in the system.",
+    "en-CA": "Notification email sent to customers when their Return Request has been created in the system.",
+    "fr-CA": "Courriel de communication envoyé au client lorsque sa demande de retour a été créée."
+  },
+  "contents": [
+    {
+      "name": "SenderDisplayName",
+      "content": {
+        "en-CA": "{{Variables.CompanyName}}",
+        "en-US": "{{Variables.CompanyName}}",
+        "fr-CA": "{{Variables.CompanyName}}"
+      }
+    },
+    {
+      "name": "ReceiverDisplayName",
+      "content": {
+        "en-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
+        "en-US": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
+        "fr-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}"
+      }
+    },
+    {
+      "name": "Subject",
+      "content": {
+        "en-CA": "Return Request - {{Return.ReturnNumber}}",
+        "en-US": "Return Request - {{Return.ReturnNumber}}",
+        "fr-CA": "Demande de retour – {{Return.ReturnNumber}}"
+      }
+    }
+  ],
+  "displayName": {
+    "en-US": "Return Request Created",
+    "en-CA": "Return Request Created",
+    "fr-CA": "Demande de retour crée"
+  },
+  "isActive": true,
+  "type": "Email"
+}
