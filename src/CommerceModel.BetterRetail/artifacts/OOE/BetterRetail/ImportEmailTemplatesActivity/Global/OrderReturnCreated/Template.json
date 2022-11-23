@@ -1,5 +1,5 @@
 {
-  "name": "RmaCreated",
+  "name": "OrderReturnCreated",
   "description": {
     "en-US": "Notification email sent to customers when their Return Request has been created in the system.",
     "en-CA": "Notification email sent to customers when their Return Request has been created in the system.",
