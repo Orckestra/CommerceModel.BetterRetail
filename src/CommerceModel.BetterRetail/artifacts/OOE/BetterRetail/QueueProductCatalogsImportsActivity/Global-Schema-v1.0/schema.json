@@ -676,6 +676,31 @@
       "isSystem": false
     },
     {
+      "propertyName": "MaximumTimeLimitForReturnsInDays",
+      "displayName": {
+        "en-CA": "Maximum Time Limit For Returns In Days",
+        "en-US": "Maximum Time Limit For Returns In Days",
+        "fr-CA": "Délai maximum pour les retours en jours"
+      },
+      "minMultiplicity": "0",
+      "maxMultiplicity": "1",
+      "isMultilingual": false,
+      "dataType": "Number",
+      "description": "Maximum Time Limit For Returns In Days",
+      "includeInAllProductDefinition": false,
+      "includeInAllCategoryDefinition": false,
+      "includeInAllVariantDefinition": false,
+      "groupName": "Default",
+      "isHiddenInOrchestrator": false,
+      "isSystem": false,
+      "isSearchableAdmin": true,
+      "isSearchableWeb": false,
+      "isFacettableAdmin": false,
+      "isFacettableWeb": false,
+      "isTypeAheadAdmin": false,
+      "isTypeAheadWeb": false
+    },
+    {
       "propertyName": "MetaDescription",
       "displayName": {
         "en-CA": "Meta description",
@@ -749,6 +774,32 @@
       "groupName": "Default",
       "isHiddenInOrchestrator": false,
       "isSystem": true
+    },
+    {
+      "propertyName": "IsNotRefundable",
+      "displayName": {
+        "en-CA": "Is Not Refundable",
+        "en-US": "Is Not Refundable",
+        "fr-CA": "N'est pas remboursable"
+      },
+      "minMultiplicity": "0",
+      "maxMultiplicity": "1",
+      "isMultilingual": false,
+      "dataType": "Boolean",
+      "defaultValue": false,
+      "description": "Is Not Refundable",
+      "includeInAllProductDefinition": false,
+      "includeInAllCategoryDefinition": false,
+      "includeInAllVariantDefinition": false,
+      "groupName": "Default",
+      "isHiddenInOrchestrator": false,
+      "isSystem": false,
+      "isSearchableAdmin": true,
+      "isSearchableWeb": false,
+      "isFacettableAdmin": false,
+      "isFacettableWeb": false,
+      "isTypeAheadAdmin": false,
+      "isTypeAheadWeb": false
     },
     {
       "propertyName": "PrimaryParentCategoryId",
