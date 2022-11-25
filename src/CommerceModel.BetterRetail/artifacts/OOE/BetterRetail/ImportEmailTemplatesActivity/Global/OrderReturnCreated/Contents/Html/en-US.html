@@ -99,7 +99,7 @@
                                                 </td>
 
                                                 <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                    <strong>{{item.Reason}}</strong>
+                                                    <strong>{{item.ReturnReasonDisplayName| localize:"en-US" }}</strong>
                                                 </td>
                                                 <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
                                                     <strong>{{item.SubTotal | money:"en-CA" }}</strong>
@@ -124,7 +124,9 @@
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                     colspan="2">
-                                                    Discount :
+                                                    <span style="text-transform: none;">
+                                                        Discount:
+                                                    </span>
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
                                                     <strong>{{ Return.TotalDiscount | money:"en-CA" }}</strong>
@@ -134,7 +136,7 @@
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                     colspan="2">
-                                                    Sub Total :
+                                                    Sub Total:
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
                                                     <strong>{{ Return.TotalSubtotal | money:"en-CA" }}</strong>
@@ -154,10 +156,12 @@
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                     colspan="2">
-                                                    Return Total:
+                                                    <strong style="font-size: 18px;">
+                                                        Requested Refund Amount:
+                                                    </strong>
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
-                                                    <strong>{{ Return.Total| money:"en-CA" }}</strong>
+                                                    <strong style="font-size: 18px;">{{ Return.Total| money:"en-CA" }}</strong>
                                                 </td>
                                             </tr>
                                         </tfoot>
