@@ -1,0 +1,216 @@
+{
+  "scopeId": "BetterRetailNorway",
+  "addresses": [
+    {
+      "Id": "649383a6-eb47-484f-b631-29bcacfb9f3a",
+      "AddressName": "Address",
+      "City": "Oslo",
+      "CountryCode": "NO",
+      "RegionCode": "NO-03",
+      "Line1": "Stortorvet 2",
+      "Line2": null,
+      "FirstName": null,
+      "LastName": null,
+      "PhoneNumber": "4725550990",
+      "PhoneExtension": null,
+      "PostalCode": "0155",
+      "Latitude": null,
+      "Longitude": null,
+      "Email": null,
+      "Notes": null,
+      "IsPreferredBilling": false,
+      "IsPreferredShipping": false,
+      "PropertyBag": {
+        "Address_Id": 1
+      }
+    }
+  ],
+  "associatedScopes": [
+    "BetterRetailNorway"
+  ],
+  "deliverySchedule": {
+    "fulfillmentLocationId": "FB5B8F3A-6E1F-4D49-9638-949D81E807E8",
+    "openingHourExceptions": [],
+    "openingHours": [],
+    "propertyBag": null,
+    "scheduleType": 1
+  },
+  "deliveryScheduleManaged": false,
+  "description": {
+    "en-CA": "",
+    "fr-CA": ""
+  },
+  "displayName": {
+    "en-CA": "",
+    "fr-CA": ""
+  },
+  "email": null,
+  "faxExtension": null,
+  "faxNumber": null,
+  "inventoryLocationId": "BRNO-Warehouse-5003",
+  "inventoryProviderId": "OvertureQuantitative",
+  "isActive": true,
+  "isInventoryEnabled": true,
+  "isAtpEnabled": true,
+  "manager": null,
+  "name": "BRNO Warehouse 5003",
+  "number": "BRNO-Warehouse-5003",
+  "operatingStatus": {
+    "id": "FB5B8F3A-6E1F-4D49-9638-949D81E807E8",
+    "availabilityStatus": {
+      "isAvailable": true,
+      "estimatedDuration": {
+        "time": 0.0,
+        "timeScale": 0
+      },
+      "reason": null
+    },
+    "deliveryAvailabilityStatus": {
+      "estimatedDuration": {
+        "time": 0.0,
+        "timeScale": 0
+      },
+      "isAvailable": true,
+      "reason": null
+    },
+    "deliveryQuoteTime": {
+      "couldBeDelayed": false,
+      "delayEstimatedDuration": {
+        "time": 0.0,
+        "timeScale": 0
+      },
+      "delayReason": null,
+      "duration": {
+        "time": 0.0,
+        "timeScale": 0
+      }
+    },
+    "pickupAvailabilityStatus": {
+      "estimatedDuration": {
+        "time": 0.0,
+        "timeScale": 0
+      },
+      "isAvailable": true,
+      "reason": null
+    },
+    "pickupQuoteTime": {
+      "couldBeDelayed": false,
+      "delayEstimatedDuration": {
+        "time": 0.0,
+        "timeScale": 0
+      },
+      "delayReason": null,
+      "duration": {
+        "time": 0.0,
+        "timeScale": 0
+      }
+    },
+    "propertyBag": null
+  },
+  "phoneExtension": null,
+  "phoneNumber": "450 471-3688",
+  "pickUpSchedule": {
+    "fulfillmentLocationId": "FB5B8F3A-6E1F-4D49-9638-949D81E807E8",
+    "openingHourExceptions": [],
+    "openingHours": [],
+    "propertyBag": null,
+    "scheduleType": 2
+  },
+  "pickUpScheduleManaged": false,
+  "PropertyBag": {
+    "RequireScanToPick": {
+      "__type": "ValueOfBoolean",
+      "value": false
+    }
+  },
+  "schedule": {
+    "fulfillmentLocationId": "FB5B8F3A-6E1F-4D49-9638-949D81E807E8",
+    "openingHourExceptions": [],
+    "openingHours": [
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "08:00:00",
+            "EndingTime": "18:00:00"
+          }
+        ],
+        "Day": 1,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "08:00:00",
+            "EndingTime": "18:00:00"
+          }
+        ],
+        "Day": 2,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "08:00:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 3,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "08:00:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 4,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "08:00:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 5,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "08:00:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 6,
+        "IsOpenedAllDay": false
+      },
+      {
+        "IsClosed": false,
+        "OpeningTimes": [
+          {
+            "BeginingTime": "08:00:00",
+            "EndingTime": "21:00:00"
+          }
+        ],
+        "Day": 0,
+        "IsOpenedAllDay": false
+      }
+    ],
+    "propertyBag": null,
+    "scheduleType": 0
+  },
+  "supportDelivery": false,
+  "supportPickUp": false,
+  "supportShipping": true,
+  "supportShipToStore": false,
+  "timeZone": "Eastern Standard Time"
+}

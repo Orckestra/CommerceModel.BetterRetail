@@ -1,0 +1,254 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Orckestra.Overture.Services.Web.Host.OrderPostProcessingWorkflow2"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:ooopwa="clr-namespace:Orckestra.Overture.Orders.Processing.Workflows.Activities;assembly=Orckestra.Overture.Orders.Processing.Workflows.Activities"
+ xmlns:ooopwap="clr-namespace:Orckestra.Overture.Orders.Processing.Workflows.Activities.PostProcessing;assembly=Orckestra.Overture.Orders.Processing.Workflows.Activities"
+ xmlns:oosof="clr-namespace:Orckestra.Overture.ServiceModel.Orders.Fulfillment;assembly=Orckestra.Overture.ServiceModel"
+ xmlns:oosop="clr-namespace:Orckestra.Overture.ServiceModel.Orders.Processing;assembly=Orckestra.Overture.ServiceModel"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="OrderFulfillmentStateArgument" Type="InArgument(oosof:OrderFulfillmentState)" />
+    <x:Property Name="OrderProcessingResultArgument" Type="InOutArgument(oosop:OrderProcessingResult)" />
+    <x:Property Name="OrderProcessingContextArgument" Type="InArgument(oosop:OrderProcessingContext)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>Orckestra.Overture.Services.Web.Host.OrderPostProcessingWorkflow2_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>Orckestra.Overture.ServiceModel.Orders.Processing</x:String>
+      <x:String>Orckestra.Overture.ServiceModel.Orders.Fulfillment</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Autofac</AssemblyReference>
+      <AssemblyReference>Common.Logging</AssemblyReference>
+      <AssemblyReference>Common.Logging.Core</AssemblyReference>
+      <AssemblyReference>Ionic.Zip</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
+      <AssemblyReference>Microsoft.Azure.KeyVault.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.Data.Edm</AssemblyReference>
+      <AssemblyReference>Microsoft.Data.OData</AssemblyReference>
+      <AssemblyReference>Microsoft.Data.Services.Client</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.Common</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.SemanticLogging</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus</AssemblyReference>
+      <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>Orckestra.AsyncExtensions</AssemblyReference>
+      <AssemblyReference>Orckestra.Caching</AssemblyReference>
+      <AssemblyReference>Orckestra.Data</AssemblyReference>
+      <AssemblyReference>Orckestra.Logging</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.DurableTask</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.DurableTask.Scheduling.Quartz</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Extensibility</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Interfaces</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.MessagingModel</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Orders.Processing.Workflows</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Orders.Processing.Workflows.Activities</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.ServiceModel</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.ServiceModel.Requests</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.SolrIndexing</AssemblyReference>
+      <AssemblyReference>Orckestra.SolrLib</AssemblyReference>
+      <AssemblyReference>OrckestraCommerce.DataExchange</AssemblyReference>
+      <AssemblyReference>Quartz</AssemblyReference>
+      <AssemblyReference>ServiceStack.Common</AssemblyReference>
+      <AssemblyReference>ServiceStack.Interfaces</AssemblyReference>
+      <AssemblyReference>ServiceStack.OrmLite</AssemblyReference>
+      <AssemblyReference>ServiceStack.OrmLite.SqlServer</AssemblyReference>
+      <AssemblyReference>ServiceStack.Text</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Reactive.Core</AssemblyReference>
+      <AssemblyReference>System.Reactive.Interfaces</AssemblyReference>
+      <AssemblyReference>System.Reactive.Linq</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Spatial</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Dataflow</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Http</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>OrckestraCommerce.CommerceModelUtilities</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>CommerceModel.BetterRetail</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <If sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <mca:CSharpValue x:TypeArguments="x:Boolean">OrderFulfillmentStateArgument.ShipmentFulfillmentStates.Any(x =&gt; x.FulfillmentLocationId != Guid.Empty)</mca:CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <ooopwap:ReserveInventoryItemActivity sap2010:Annotation.AnnotationText="This task is only needed if using the older providers (non-fulfillment)" sap2010:WorkflowViewState.IdRef="ReserveInventoryItemActivity_1">
+          <ooopwap:ReserveInventoryItemActivity.OrderFulfillmentStateArgument>
+            <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
+              <mca:CSharpValue x:TypeArguments="oosof:OrderFulfillmentState">OrderFulfillmentStateArgument</mca:CSharpValue>
+            </InArgument>
+          </ooopwap:ReserveInventoryItemActivity.OrderFulfillmentStateArgument>
+          <ooopwap:ReserveInventoryItemActivity.OrderProcessingContextArgument>
+            <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+              <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+            </InArgument>
+          </ooopwap:ReserveInventoryItemActivity.OrderProcessingContextArgument>
+          <ooopwap:ReserveInventoryItemActivity.OrderProcessingResultArgument>
+            <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+              <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+            </InOutArgument>
+          </ooopwap:ReserveInventoryItemActivity.OrderProcessingResultArgument>
+        </ooopwap:ReserveInventoryItemActivity>
+      </If.Then>
+    </If>
+    <ooopwap:RouteFulfillmentsActivity sap2010:Annotation.AnnotationText="This activity will call the new fulfillment providers which perform tasks such as Reservering Inventory and assigning the fulfillment location." sap2010:WorkflowViewState.IdRef="RouteFulfillmentsActivity_1">
+      <ooopwap:RouteFulfillmentsActivity.OrderFulfillmentStateArgument>
+        <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
+          <mca:CSharpValue x:TypeArguments="oosof:OrderFulfillmentState">OrderFulfillmentStateArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwap:RouteFulfillmentsActivity.OrderFulfillmentStateArgument>
+      <ooopwap:RouteFulfillmentsActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwap:RouteFulfillmentsActivity.OrderProcessingContextArgument>
+      <ooopwap:RouteFulfillmentsActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwap:RouteFulfillmentsActivity.OrderProcessingResultArgument>
+    </ooopwap:RouteFulfillmentsActivity>
+    <ooopwa:SubmitOrderTaxesActivity sap2010:Annotation.AnnotationText="Send a SalesInvoice entry with the &quot;Uncommited&quot; status to Avalara. &#xA;&#xA;We may de-activate the previous CalculateCartTax Activity in the case we use only Avalara Tax Provider (to limit costs) since the SubmitOrderTaxes Activity uses almost the same GetTax call to Avalara service with only a few different parameters to save invoice details in Avalara system." sap2010:WorkflowViewState.IdRef="SubmitOrderTaxesActivity_1" OrderProcessingContextArgument="[OrderProcessingContextArgument]" OrderProcessingResultArgument="[OrderProcessingResultArgument]" />
+    <ooopwa:AssignFulfillmentScheduleDateTimeActivity AvailableSlotsMaximumTimeSpan="182" sap2010:WorkflowViewState.IdRef="AssignFulfillmentScheduleDateTimeActivity_1" TimeOffsetWithoutSlots="20">
+      <ooopwa:AssignFulfillmentScheduleDateTimeActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:AssignFulfillmentScheduleDateTimeActivity.OrderProcessingContextArgument>
+      <ooopwa:AssignFulfillmentScheduleDateTimeActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:AssignFulfillmentScheduleDateTimeActivity.OrderProcessingResultArgument>
+    </ooopwa:AssignFulfillmentScheduleDateTimeActivity>
+    <ooopwap:FulfillmentTransitionChangeStatusActivity FulfillmentKickOffStatuses="ReadyForPicking|PickingInProgress" sap2010:WorkflowViewState.IdRef="FulfillmentTransitionChangeStatusActivity_1">
+
+        <ooopwap:FulfillmentTransitionChangeStatusActivity.OrderFulfillmentStateArgument>
+
+            <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
+
+                <mca:CSharpValue x:TypeArguments="oosof:OrderFulfillmentState">OrderFulfillmentStateArgument</mca:CSharpValue>
+
+            </InArgument>
+
+        </ooopwap:FulfillmentTransitionChangeStatusActivity.OrderFulfillmentStateArgument>
+
+        <ooopwap:FulfillmentTransitionChangeStatusActivity.OrderProcessingContextArgument>
+
+            <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+
+                <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+
+            </InArgument>
+
+        </ooopwap:FulfillmentTransitionChangeStatusActivity.OrderProcessingContextArgument>
+
+        <ooopwap:FulfillmentTransitionChangeStatusActivity.OrderProcessingResultArgument>
+
+            <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+
+                <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+
+            </InOutArgument>
+
+        </ooopwap:FulfillmentTransitionChangeStatusActivity.OrderProcessingResultArgument>
+    </ooopwap:FulfillmentTransitionChangeStatusActivity>
+    <ooopwap:EvaluateShipmentsFulfillmentReadinessActivity sap2010:WorkflowViewState.IdRef="EvaluateShipmentsFulfillmentReadinessActivity_1">
+      <ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderFulfillmentStateArgument>
+        <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
+          <mca:CSharpValue x:TypeArguments="oosof:OrderFulfillmentState">OrderFulfillmentStateArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderFulfillmentStateArgument>
+      <ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderProcessingContextArgument>
+      <ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderProcessingResultArgument>
+    </ooopwap:EvaluateShipmentsFulfillmentReadinessActivity>
+    <sads:DebugSymbol.Symbol>d5EBRDpcY29kZVxDb21tZXJjZU1vZGVsc1xzcmNcQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcYXJ0aWZhY3RzXE9PRVxBcHBfRGF0YVxXb3JrZmxvd3NcT3JkZXJzXEJldHRlclJldGFpbENhbmFkYVxPcmRlclBvc3RQcm9jZXNzaW5nV29ya2Zsb3cueGFtbBVhA6wBDgIBAWIFewoCASp8BYwBKQIBHY0BBY0BggUCARiOAQWZATgCAQ+aAQWqAT0CAQJlC2W0AQIBK2kJeTACAS9/C395AgEmiQELiQGBAQIBIoQBC4QBewIBHo0B3gSNAf8EAgEbjQGdBI0BvwQCARmWAQuWAYEBAgEUkQELkQF7AgEQnQELnQF5AgELpwELpwGBAQIBB6IBC6IBewIBA2wPbH0CATh2D3aFAQIBNHEPcX8CATA=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="ReserveInventoryItemActivity_1" sap:VirtualizedContainerService.HintSize="200,75">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="464,225">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="RouteFulfillmentsActivity_1" sap:VirtualizedContainerService.HintSize="464,120">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="SubmitOrderTaxesActivity_1" sap:VirtualizedContainerService.HintSize="464,255">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AssignFulfillmentScheduleDateTimeActivity_1" sap:VirtualizedContainerService.HintSize="464,100" />
+      <sap2010:ViewStateData Id="EvaluateShipmentsFulfillmentReadinessActivity_1" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="486,1006">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Orckestra.Overture.Services.Web.Host.OrderPostProcessingWorkflow2_1" sap:VirtualizedContainerService.HintSize="526,1086">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+            <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

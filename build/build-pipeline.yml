@@ -10,7 +10,7 @@ trigger:
     - release*
 
 pool:
-  vmImage: 'windows-2019'
+  vmImage: 'windows-2022'
 
 # You can change the build verbosity by changing this build parameter
 parameters:
@@ -18,6 +18,10 @@ parameters:
   displayName: Build verbosity
   type: boolean
   default: false
+- name: BuildConfiguration
+  displayName: Build configuration
+  type: string
+  default: Release
 
 variables:
 - group: CMP - Connection API V2
@@ -25,6 +29,8 @@ variables:
 - group: BetterRetail Sensitive Data
 - name: Build.Verbose
   value: $${{ parameters.BuildVerbosity }}
+- name: Build.Configuration
+  value: ${{ parameters.BuildConfiguration }}
 
 stages:
 - stage: Build
@@ -32,11 +38,16 @@ stages:
   jobs:
   - job: Build
     steps:
+    - checkout: self
+      clean: false
+      lfs: true
+      persistCredentials: True
+      
     - task: PowerShell@1
       displayName: 'Build BetterRetail'
       inputs:
         scriptName: build/Build.ps1
-        arguments: '-TaskList All -IsRunningOnBuildMachine -ExtraProperties @{ NugetFeeds=$(NugetFeeds); SensitiveData = $(SensitiveData) } -Verbose:$(Build.Verbose) -BuildReason $(Build.Reason)'
+        arguments: '-TaskList All -IsRunningOnBuildMachine -ExtraProperties @{ NugetFeeds=$(NugetFeeds); SensitiveData = $(SensitiveData) } -Configuration $(Build.Configuration) -Verbose:$(Build.Verbose) -BuildReason $(Build.Reason)'
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact: Troubleshooting'
       inputs:

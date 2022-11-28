@@ -20,6 +20,24 @@ INSERT INTO [dbo].[AUTHORIZATION]
            ,'ExecuteSQLScriptActivity')
 END
 
+IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -20 AND [ScopeId] = 'BetterRetailUSA')
+BEGIN
+INSERT INTO [dbo].[AUTHORIZATION]
+           ([Role_Id]
+           ,[ScopeId]
+           ,[ObjectId]
+           ,[ObjectType]
+           ,[Created]
+           ,[CreatedBy])
+     VALUES
+           (-20 --OrderReader
+           ,'BetterRetailUSA'
+           ,@@objectId
+           ,'User'
+           ,GETDATE()
+           ,'ExecuteSQLScriptActivity')
+END
+
 IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -20 AND [ScopeId] = 'BetterRetailNorway')
 BEGIN
 INSERT INTO [dbo].[AUTHORIZATION]
@@ -38,7 +56,7 @@ INSERT INTO [dbo].[AUTHORIZATION]
            ,'ExecuteSQLScriptActivity')
 END
 
-IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -20 AND [ScopeId] = 'BetterRetailNetherlands')
+IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -20 AND [ScopeId] = 'BetterRetailEuro')
 BEGIN
 INSERT INTO [dbo].[AUTHORIZATION]
            ([Role_Id]
@@ -49,7 +67,7 @@ INSERT INTO [dbo].[AUTHORIZATION]
            ,[CreatedBy])
      VALUES
            (-20 --OrderReader
-           ,'BetterRetailNetherlands'
+           ,'BetterRetailEuro'
            ,@@objectId
            ,'User'
            ,GETDATE()
@@ -92,6 +110,24 @@ INSERT INTO [dbo].[AUTHORIZATION]
            ,'ExecuteSQLScriptActivity')
 END
 
+IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -54 AND [ScopeId] = 'BetterRetailUSA')
+BEGIN
+INSERT INTO [dbo].[AUTHORIZATION]
+           ([Role_Id]
+           ,[ScopeId]
+           ,[ObjectId]
+           ,[ObjectType]
+           ,[Created]
+           ,[CreatedBy])
+     VALUES
+           (-54 --PriceListReader
+           ,'BetterRetailUSA'
+           ,@@objectId
+           ,'User'
+           ,GETDATE()
+           ,'ExecuteSQLScriptActivity')
+END
+
 IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -54 AND [ScopeId] = 'BetterRetailNorway')
 BEGIN
 INSERT INTO [dbo].[AUTHORIZATION]
@@ -110,7 +146,7 @@ INSERT INTO [dbo].[AUTHORIZATION]
            ,'ExecuteSQLScriptActivity')
 END
 
-IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -54 AND [ScopeId] = 'BetterRetailNetherlands')
+IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -54 AND [ScopeId] = 'BetterRetailEuro')
 BEGIN
 INSERT INTO [dbo].[AUTHORIZATION]
            ([Role_Id]
@@ -121,7 +157,7 @@ INSERT INTO [dbo].[AUTHORIZATION]
            ,[CreatedBy])
      VALUES
            (-54 --PriceListReader
-           ,'BetterRetailNetherlands'
+           ,'BetterRetailEuro'
            ,@@objectId
            ,'User'
            ,GETDATE()
@@ -167,6 +203,24 @@ INSERT INTO [dbo].[AUTHORIZATION]
            ,'ExecuteSQLScriptActivity')
 END
 
+IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -1001 AND [ScopeId] = 'BetterRetailUSA')
+BEGIN
+INSERT INTO [dbo].[AUTHORIZATION]
+           ([Role_Id]
+           ,[ScopeId]
+           ,[ObjectId]
+           ,[ObjectType]
+           ,[Created]
+           ,[CreatedBy])
+     VALUES
+           (-1001 --Picker
+           ,'BetterRetailUSA'
+           ,@@objectId
+           ,'User'
+           ,GETDATE()
+           ,'ExecuteSQLScriptActivity')
+END
+
 IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -1001 AND [ScopeId] = 'BetterRetailNorway')
 BEGIN
 INSERT INTO [dbo].[AUTHORIZATION]
@@ -185,7 +239,7 @@ INSERT INTO [dbo].[AUTHORIZATION]
            ,'ExecuteSQLScriptActivity')
 END
 
-IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -1001 AND [ScopeId] = 'BetterRetailNetherlands')
+IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -1001 AND [ScopeId] = 'BetterRetailEuro')
 BEGIN
 INSERT INTO [dbo].[AUTHORIZATION]
            ([Role_Id]
@@ -196,7 +250,7 @@ INSERT INTO [dbo].[AUTHORIZATION]
            ,[CreatedBy])
      VALUES
            (-1001 --Picker
-           ,'BetterRetailNetherlands'
+           ,'BetterRetailEuro'
            ,@@objectId
            ,'User'
            ,GETDATE()
@@ -224,6 +278,24 @@ INSERT INTO [dbo].[AUTHORIZATION]
            ,'ExecuteSQLScriptActivity')
 END
 
+IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -1001 AND [ScopeId] = 'BetterRetailUSA')
+BEGIN
+INSERT INTO [dbo].[AUTHORIZATION]
+           ([Role_Id]
+           ,[ScopeId]
+           ,[ObjectId]
+           ,[ObjectType]
+           ,[Created]
+           ,[CreatedBy])
+     VALUES
+           (-1001 --Picker
+           ,'BetterRetailUSA'
+           ,@@objectId
+           ,'User'
+           ,GETDATE()
+           ,'ExecuteSQLScriptActivity')
+END
+
 IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -1001 AND [ScopeId] = 'BetterRetailNorway')
 BEGIN
 INSERT INTO [dbo].[AUTHORIZATION]
@@ -242,7 +314,7 @@ INSERT INTO [dbo].[AUTHORIZATION]
            ,'ExecuteSQLScriptActivity')
 END
 
-IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -1001 AND [ScopeId] = 'BetterRetailNetherlands')
+IF NOT EXISTS (SELECT * FROM [dbo].[AUTHORIZATION] WHERE [ObjectId] = @@objectId AND [Role_Id] = -1001 AND [ScopeId] = 'BetterRetailEuro')
 BEGIN
 INSERT INTO [dbo].[AUTHORIZATION]
            ([Role_Id]
@@ -253,7 +325,7 @@ INSERT INTO [dbo].[AUTHORIZATION]
            ,[CreatedBy])
      VALUES
            (-1001 --Picker
-           ,'BetterRetailNetherlands'
+           ,'BetterRetailEuro'
            ,@@objectId
            ,'User'
            ,GETDATE()

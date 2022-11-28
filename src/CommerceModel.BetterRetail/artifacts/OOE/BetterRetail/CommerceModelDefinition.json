@@ -137,114 +137,12 @@
             },
             "children": [
               {
-                "id": "California",
-                "type": "Virtual",
-                "name": {
-                  "en-CA": "California",
-                  "en-US": "California",
-                  "fr-CA": "California"
-                },
-                "description": {
-                  "en-CA": "",
-                  "en-US": "",
-                  "fr-CA": ""
-                },
-                "defaultCulture": "en-US",
-                "isActive": true,
-                "children": [
-                  {
-                    "id": "BRU-100",
-                    "type": "Dependant",
-                    "name": {
-                      "en-CA": "BRU-100",
-                      "en-US": "BRU-100",
-                      "fr-CA": "BRU-100"
-                    },
-                    "description": {
-                      "en-CA": "",
-                      "en-US": "",
-                      "fr-CA": ""
-                    },
-                    "defaultCulture": "en-US",
-                    "isActive": true
-                  }
-                ]
-              },
-              {
-                "id": "Florida",
-                "type": "Virtual",
-                "name": {
-                  "en-CA": "Florida",
-                  "en-US": "Florida",
-                  "fr-CA": "Florida"
-                },
-                "description": {
-                  "en-CA": "",
-                  "en-US": "",
-                  "fr-CA": ""
-                },
-                "defaultCulture": "en-US",
-                "isActive": true,
-                "children": [
-                  {
-                    "id": "BRU-101",
-                    "type": "Dependant",
-                    "name": {
-                      "en-CA": "BRU-101",
-                      "en-US": "BRU-101",
-                      "fr-CA": "BRU-101"
-                    },
-                    "description": {
-                      "en-CA": "",
-                      "en-US": "",
-                      "fr-CA": ""
-                    },
-                    "defaultCulture": "en-US",
-                    "isActive": true
-                  }
-                ]
-              },
-              {
-                "id": "Hawaii",
-                "type": "Virtual",
-                "name": {
-                  "en-CA": "Hawaii",
-                  "en-US": "Hawaii",
-                  "fr-CA": "Hawaii"
-                },
-                "description": {
-                  "en-CA": "",
-                  "en-US": "",
-                  "fr-CA": ""
-                },
-                "defaultCulture": "en-US",
-                "isActive": true,
-                "children": [
-                  {
-                    "id": "BRU-102",
-                    "type": "Dependant",
-                    "name": {
-                      "en-CA": "BRU-102",
-                      "en-US": "BRU-102",
-                      "fr-CA": "BRU-102"
-                    },
-                    "description": {
-                      "en-CA": "",
-                      "en-US": "",
-                      "fr-CA": ""
-                    },
-                    "defaultCulture": "en-US",
-                    "isActive": true
-                  }
-                ]
-              },
-              {
-                "id": "BRU-103",
+                "id": "BRU-100",
                 "type": "Dependant",
                 "name": {
-                  "en-CA": "BRU-103",
-                  "en-US": "BRU-103",
-                  "fr-CA": "BRU-103"
+                  "en-CA": "BRU-100",
+                  "en-US": "BRU-100",
+                  "fr-CA": "BRU-100"
                 },
                 "description": {
                   "en-CA": "",
@@ -255,28 +153,12 @@
                 "isActive": true
               },
               {
-                "id": "BRU-104",
+                "id": "BRU-101",
                 "type": "Dependant",
                 "name": {
-                  "en-CA": "BRU-104",
-                  "en-US": "BRU-104",
-                  "fr-CA": "BRU-104"
-                },
-                "description": {
-                  "en-CA": "",
-                  "en-US": "",
-                  "fr-CA": ""
-                },
-                "defaultCulture": "en-US",
-                "isActive": true
-              },
-              {
-                "id": "BRU-105",
-                "type": "Dependant",
-                "name": {
-                  "en-CA": "BRU-105",
-                  "en-US": "BRU-105",
-                  "fr-CA": "BRU-105"
+                  "en-CA": "BRU-101",
+                  "en-US": "BRU-101",
+                  "fr-CA": "BRU-101"
                 },
                 "description": {
                   "en-CA": "",
@@ -316,7 +198,7 @@
                 },
                 "children": [
                   {
-                    "id": "JJ-9101",
+                    "id": "BRNO-9101",
                     "type": "Dependant",
                     "name": {
                       "en-CA": "Jack & Jones 9101",
@@ -333,7 +215,7 @@
 
                   },
                   {
-                    "id": "JJ-9102",
+                    "id": "BRNO-9102",
                     "type": "Dependant",
                     "name": {
                       "en-CA": "Jack & Jones 9102",
@@ -357,119 +239,136 @@
             "currencyIso": "NOK"
           },
           {
-            "id": "BetterRetailNetherlands",
+            "id": "BetterRetailEuro",
             "type": "Sale",
             "isActive": true,
             "name": {
-              "en-CA": "Better Retail Netherlands",
-              "en-US": "Better Retail Netherlands",
-              "fr-CA": "Better Retail Netherlands"
+              "en-CA": "Better Retail Euro",
+              "en-US": "Better Retail Euro",
+              "fr-CA": "Better Retail Euro"
             },
             "description": {
-              "en-CA": "Better Retail Netherlands",
-              "en-US": "Better Retail Netherlands",
-              "fr-CA": "Better Retail Netherlands"
-            },
-            "children": [
-              {
-                "id": "JackAndJonesNL",
-                "type": "Virtual",
-                "name": {
-                  "en-US": "Jack & Jones"
-                },
-                "description": {
-                  "en-US": "Jack & Jones"
-                },
-                "children": [
-                  {
-                    "id": "JJ-5101",
-                    "type": "Dependant",
-                    "name": {
-                      "en-CA": "Jack & Jones 5101",
-                      "en-US": "Jack & Jones 5101",
-                      "fr-CA": "Jack & Jones 5101"
-                    },
-                    "description": {
-                      "en-CA": "Jack & Jones 5101",
-                      "en-US": "Jack & Jones 5101",
-                      "fr-CA": "Jack & Jones 5101"
-                    },
-                    "defaultCulture": "en-US",
-                    "isActive": true
-
-                  },
-                  {
-                    "id": "JJ-5102",
-                    "type": "Dependant",
-                    "name": {
-                      "en-CA": "Jack & Jones 5102",
-                      "en-US": "Jack & Jones 5102",
-                      "fr-CA": "Jack & Jones 5102"
-                    },
-                    "description": {
-                      "en-CA": "Jack & Jones 5102",
-                      "en-US": "Jack & Jones 5102",
-                      "fr-CA": "Jack & Jones 5102"
-                    },
-                    "defaultCulture": "en-US",
-                    "isActive": true
-                  }
-                ],
-                "defaultCulture": "en-US",
-                "isActive": true
-              }
-            ],
-            "defaultCulture": "en-US",
-            "currencyIso": "EUR"
-          },
-          {
-            "id": "BetterRetailGermany",
-            "type": "Sale",
-            "isActive": true,
-            "name": {
-              "en-CA": "Better Retail Germany",
-              "en-US": "Better Retail Germany",
-              "fr-CA": "Better Retail Germany"
-            },
-            "description": {
-              "en-CA": "Better Retail Germany",
-              "en-US": "Better Retail Germany",
-              "fr-CA": "Better Retail Germany"
+              "en-CA": "Better Retail Europe",
+              "en-US": "Better Retail Europe",
+              "fr-CA": "Better Retail Europe"
             },
             "defaultCulture": "en-US",
             "currencyIso": "EUR",
             "children": [
               {
-                "id": "NorthRhineWestphalia",
+                "id": "Netherlands",
                 "type": "Virtual",
+                "isActive": true,
                 "name": {
-                  "en-CA": "North Rhine-Westphalia (DE-NW)",
-                  "en-US": "North Rhine-Westphalia (DE-NW)",
-                  "fr-CA": "North Rhine-Westphalia (DE-NW)"
+                  "en-CA": "Netherlands",
+                  "en-US": "Netherlands",
+                  "fr-CA": "Netherlands"
                 },
                 "description": {
-                  "en-CA": "",
-                  "en-US": "",
-                  "fr-CA": ""
+                  "en-CA": "Netherlands",
+                  "en-US": "Netherlands",
+                  "fr-CA": "Netherlands"
                 },
-                "defaultCulture": "en-US",
-                "isActive": true,
                 "children": [
                   {
-                    "id": "BRDE-100",
+                    "id": "BRNL-100",
                     "type": "Dependant",
                     "name": {
-                      "en-CA": "BRDE-100",
-                      "en-US": "BRDE-100",
-                      "fr-CA": "BRDE-100"
+                      "en-CA": "BRNL-100",
+                      "en-US": "BRNL-100",
+                      "fr-CA": "BRNL-100"
                     },
                     "description": {
-                      "en-CA": "",
-                      "en-US": "",
-                      "fr-CA": ""
+                      "en-CA": "BRNL-100",
+                      "en-US": "BRNL-100",
+                      "fr-CA": "BRNL-100"
                     },
                     "defaultCulture": "en-US",
                     "isActive": true
+                  },
+                  {
+                    "id": "BRNL-101",
+                    "type": "Dependant",
+                    "name": {
+                      "en-CA": "BRNL-101",
+                      "en-US": "BRNL-101",
+                      "fr-CA": "BRNL-101"
+                    },
+                    "description": {
+                      "en-CA": "BRNL-101",
+                      "en-US": "BRNL-101",
+                      "fr-CA": "BRNL-101"
+                    },
+                    "defaultCulture": "en-US",
+                    "isActive": true
+                  }
+                ]
+              },
+              {
+                "id": "Germany",
+                "type": "Virtual",
+                "isActive": true,
+                "name": {
+                  "en-CA": "Germany",
+                  "en-US": "Germany",
+                  "fr-CA": "Germany"
+                },
+                "description": {
+                  "en-CA": "Germany",
+                  "en-US": "Germany",
+                  "fr-CA": "Germany"
+                },
+                "defaultCulture": "en-US",
+                "children": [
+                  {
+                    "id": "NorthRhineWestphalia",
+                    "type": "Virtual",
+                    "name": {
+                      "en-CA": "North Rhine-Westphalia (DE-NW)",
+                      "en-US": "North Rhine-Westphalia (DE-NW)",
+                      "fr-CA": "North Rhine-Westphalia (DE-NW)"
+                    },
+                    "description": {
+                      "en-CA": "North Rhine-Westphalia (DE-NW)",
+                      "en-US": "North Rhine-Westphalia (DE-NW)",
+                      "fr-CA": "North Rhine-Westphalia (DE-NW)"
+                    },
+                    "defaultCulture": "en-US",
+                    "isActive": true,
+                    "children": [
+                      {
+                        "id": "BRDE-100",
+                        "type": "Dependant",
+                        "name": {
+                          "en-CA": "BRDE-100",
+                          "en-US": "BRDE-100",
+                          "fr-CA": "BRDE-100"
+                        },
+                        "description": {
+                          "en-CA": "BRDE-100",
+                          "en-US": "BRDE-100",
+                          "fr-CA": "BRDE-100"
+                        },
+                        "defaultCulture": "en-US",
+                        "isActive": true
+                      },
+                      {
+                        "id": "BRDE-101",
+                        "type": "Dependant",
+                        "name": {
+                          "en-CA": "BRDE-101",
+                          "en-US": "BRDE-101",
+                          "fr-CA": "BRDE-101"
+                        },
+                        "description": {
+                          "en-CA": "BRDE-101",
+                          "en-US": "BRDE-101",
+                          "fr-CA": "BRDE-101"
+                        },
+                        "defaultCulture": "en-US",
+                        "isActive": true
+                      }
+                    ]
                   }
                 ]
               }

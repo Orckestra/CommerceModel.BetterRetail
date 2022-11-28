@@ -1,0 +1,46 @@
+[
+	[
+		"0",
+		"OrckestraCommerce.BetterRetail",
+		"2022-04-29T14:25:54.4100000",
+		"BRU Shared Profile 1",
+		"OrckestraCommerce.BetterRetail",
+		"8f0df08b-cbbe-4821-8586-42200ba194ac",
+		"True",
+		"2022-04-29T14:25:54.4100000",
+		"False"
+	],
+	[
+		"0",
+		"OrckestraCommerce.BetterRetail",
+		"2022-04-29T14:26:03.2800000",
+		"BRU Shared Profile 2",
+		"OrckestraCommerce.BetterRetail",
+		"f20b9959-337c-4a59-98b9-205499877fdb",
+		"True",
+		"2022-04-29T14:26:03.2800000",
+		"False"
+	],
+	[
+		"0",
+		"OrckestraCommerce.BetterRetail",
+		"2022-04-29T17:55:15.4400000",
+		"BRU Multi Shared Profile 1",
+		"OrckestraCommerce.BetterRetail",
+		"adc074ba-007d-4b50-a7fd-b531cf133c21",
+		"True",
+		"2022-04-29T17:55:15.4400000",
+		"False"
+	],
+	[
+		"0",
+		"OrckestraCommerce.BetterRetail",
+		"2022-04-29T17:55:22.4300000",
+		"BRU Multi Shared Profile 2",
+		"OrckestraCommerce.BetterRetail",
+		"2c6e0f11-4e68-47f2-b658-0658a89a4551",
+		"True",
+		"2022-04-29T17:55:22.4300000",
+		"False"
+	]
+]
