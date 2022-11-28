@@ -167,7 +167,7 @@
         </ooopwav:ValidateOrderingProductActivity.OrderProcessingResultArgument>
       </ooopwav:ValidateOrderingProductActivity>
     </Sequence>
-    <ooopwa:FetchLineItemsProductInformationActivity CustomPropertiesToReturn="Country|Appellations|Region|Score" CustomVariantPropertiesToReturn="*" sap2010:WorkflowViewState.IdRef="FetchLineItemsProductInformationActivity_1" RefreshInformationInterval="900">
+    <ooopwa:FetchLineItemsProductInformationActivity  CustomReturnsInfoFields="MaximumTimeLimitForReturnsInDays|IsNotRefundable" CustomPropertiesToReturn="Country|Appellations|Region|Score" CustomVariantPropertiesToReturn="*" sap2010:WorkflowViewState.IdRef="FetchLineItemsProductInformationActivity_1" RefreshInformationInterval="900">
       <ooopwa:FetchLineItemsProductInformationActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
           <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
