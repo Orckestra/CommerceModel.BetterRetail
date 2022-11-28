@@ -354,6 +354,18 @@
         </InOutArgument>
       </ooopwav:ValidateInventoryAvailabilityActivity.OrderProcessingResultArgument>
     </ooopwav:ValidateInventoryAvailabilityActivity>
+	<ooopwa:ChangeOrderScopeActivity sap2010:WorkflowViewState.IdRef="ChangeOrderScopeActivity_1">
+      <ooopwa:ChangeOrderScopeActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:ChangeOrderScopeActivity.OrderProcessingContextArgument>
+      <ooopwa:ChangeOrderScopeActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:ChangeOrderScopeActivity.OrderProcessingResultArgument>
+    </ooopwa:ChangeOrderScopeActivity>
     <ooopwa:AssignCartLineItemPricesActivity sap2010:WorkflowViewState.IdRef="AssignCartLineItemPricesActivity_1">
       <ooopwa:AssignCartLineItemPricesActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
@@ -530,6 +542,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="ValidateInventoryAvailabilityActivity_1" sap:VirtualizedContainerService.HintSize="443,51" />
+	  <sap2010:ViewStateData Id="ChangeOrderScopeActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="AssignCartLineItemPricesActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="MergeEquivalentLineItemsActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="RetrieveFulfillmentMethodsActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
