@@ -144,6 +144,18 @@
         </InOutArgument>
       </ooopwa:AssignFirstActiveStoreInScopeActivity.OrderProcessingResultArgument>
     </ooopwa:AssignFirstActiveStoreInScopeActivity>
+		<ooopwa:ChangeOrderScopeActivity sap2010:WorkflowViewState.IdRef="ChangeOrderScopeActivity_1">
+			<ooopwa:ChangeOrderScopeActivity.OrderProcessingContextArgument>
+				<InArgument x:TypeArguments="oosop:OrderProcessingContext">
+					<mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+				</InArgument>
+			</ooopwa:ChangeOrderScopeActivity.OrderProcessingContextArgument>
+			<ooopwa:ChangeOrderScopeActivity.OrderProcessingResultArgument>
+				<InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+					<mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+				</InOutArgument>
+			</ooopwa:ChangeOrderScopeActivity.OrderProcessingResultArgument>
+		</ooopwa:ChangeOrderScopeActivity>
     <ooopwa:FetchLineItemsProductInformationActivity CustomPropertiesToReturn="Country|Appellations|Region|Score" CustomVariantPropertiesToReturn="*" sap2010:WorkflowViewState.IdRef="FetchLineItemsProductInformationActivity_1" RefreshInformationInterval="0">
       <ooopwa:FetchLineItemsProductInformationActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
@@ -506,6 +518,7 @@
     <sap2010:ViewStateManager>
       <sap2010:ViewStateData Id="AssignShipmentProcessingDateTimeActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="AssignFirstActiveStoreInScopeActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
+			<sap2010:ViewStateData Id="ChangeOrderScopeActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="FetchLineItemsProductInformationActivity_1" sap:VirtualizedContainerService.HintSize="443,190" />
       <sap2010:ViewStateData Id="SetAdditionnalLineItemAttributesActivity_2" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="ValidateCartCouponsActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
