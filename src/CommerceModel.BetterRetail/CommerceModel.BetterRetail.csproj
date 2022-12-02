@@ -306,6 +306,12 @@
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreated\Contents\Text\en-CA.txt" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreated\Contents\Text\en-US.txt" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreated\Contents\Text\fr-CA.txt" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnReadyForRefund\Contents\Html\en-CA.html" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnReadyForRefund\Contents\Html\en-US.html" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnReadyForRefund\Contents\Html\fr-CA.html" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnReadyForRefund\Contents\Text\en-CA.txt" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnReadyForRefund\Contents\Text\en-US.txt" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnReadyForRefund\Contents\Text\fr-CA.txt" />
     <Content Include="artifacts\OOE\BetterRetail\QueueImportProfileSchemaActivity\groups.json" />
     <Compile Include="DamProviders\BetterRetailDamProvider.cs" />
     <Compile Include="Plugin.cs" />
@@ -519,6 +525,7 @@
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Qa-v1.2\media-10000-15000.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProductCatalogsImportsActivity\Global-Qa-v1.2\media-5000-10000.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreated\Template.json" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnReadyForRefund\Template.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS - Header.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER - Header.json" />
