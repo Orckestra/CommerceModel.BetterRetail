@@ -1,5 +1,5 @@
 {
-  "name": "OrderReturnReadyForRefund",
+  "name": "OrderReturnStatusReadyForRefund",
   "description": {
     "en-US": "Notification Email sent to the customer to tell them their order will have a refund after revision.",
     "en-CA": "Notification Email sent to the customer to tell them their order will have a refund after revision.",
