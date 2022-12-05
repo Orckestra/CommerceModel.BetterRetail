@@ -1,0 +1,41 @@
+{
+  "name": "OrderReturnStatusReadyForRefund",
+  "description": {
+    "en-US": "Notification Email sent to the customer to tell them their order will have a refund after revision.",
+    "en-CA": "Notification Email sent to the customer to tell them their order will have a refund after revision.",
+    "fr-CA": "Courriel de notification envoyé au client pour l'aviser que sa commande aura un remboursement après sa révision."
+  },
+  "contents": [
+    {
+      "name": "SenderDisplayName",
+      "content": {
+        "en-CA": "{{Variables.CompanyName}}",
+        "en-US": "{{Variables.CompanyName}}",
+        "fr-CA": "{{Variables.CompanyName}}"
+      }
+    },
+    {
+      "name": "ReceiverDisplayName",
+      "content": {
+        "en-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
+        "en-US": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
+        "fr-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}"
+      }
+    },
+    {
+      "name": "Subject",
+      "content": {
+        "en-CA": "Your return request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}} is being reviewed for a refund",
+        "en-US": "Your return request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}} is being reviewed for a refund",
+        "fr-CA": "Votre requête de retour #{{Return.ReturnNumber}}  pour la commande  #{{Return.OrderNumber}} est en processus de révision pour un remboursement"
+      }
+    }
+  ],
+  "displayName": {
+    "en-US": "Return Ready for Refund",
+    "en-CA": "Return Ready for Refund",
+    "fr-CA": "Retour prêt au remboursement"
+  },
+  "isActive": true,
+  "type": "Email"
+}
