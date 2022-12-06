@@ -341,7 +341,7 @@ function Get-SensitiveData {
         # we assume that the file is in the correct format if it exists
         $sensitiveFile = Join-Path $WorkspaceRoot "build\build.sensitivedata.json"
         if (-not (Test-Path $sensitiveFile)) {
-            return $null
+            return @{}
         }
         Write-Host "Loading sensitive data from file"
         $json = Get-Content -Path $sensitiveFile | ConvertFrom-Json
