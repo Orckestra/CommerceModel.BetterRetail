@@ -795,7 +795,7 @@
   },
   {
     "id": "d168e411-abdc-42c0-a9a9-a5d97e28847d",
-    "type": "Carrier",
+    "type": "FulfillmentCarrier",
     "scopeId": "BetterRetailCanada",
     "name": "CanadaPost",
     "implementationTypeName": "ExternalCarrierProvider",
