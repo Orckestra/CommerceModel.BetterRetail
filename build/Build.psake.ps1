@@ -112,7 +112,7 @@ $WorkspaceRoot = Split-Path $psake.build_script_dir -Parent
 # (i.e. before RestorePackages is called)
 $packages = Copy-Item "$WorkspaceRoot\build\packages.bootstrap.config" -Destination (Join-Path $env:TEMP 'packages.config') -Force -PassThru
 Exec { & "$WorkspaceRoot\lib\nuget\nuget.exe" restore $packages.FullName -PackagesDirectory "$WorkspaceRoot\packages\NuGet" -ConfigFile "$WorkspaceRoot\nuget.config" -Verbosity quiet }
-Get-ChildItem "$WorkspaceRoot\packages\NuGet" -Recurse -Include Orckestra.PsUtil.psd1 |
+Get-ChildItem "$WorkspaceRoot\packages\NuGet" -Recurse -Include @('Orckestra.PsUtil.psd1', 'Orckestra.Versioning.psd1') |
 ForEach-Object { Import-Module $_.FullName -Global -Force -Verbose:$false } 
 
 $ArtifactsStagingDirectory = "$WorkspaceRoot\artifacts"
