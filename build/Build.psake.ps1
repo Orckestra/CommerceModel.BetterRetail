@@ -138,7 +138,7 @@ $WorkspaceRoot = Split-Path $psake.build_script_dir -Parent
 # (i.e. before RestorePackages is called)
 $packages = Copy-Item "$WorkspaceRoot\build\packages.bootstrap.config" -Destination (Join-Path $env:TEMP 'packages.config') -Force -PassThru
 Exec { & "$WorkspaceRoot\lib\nuget\nuget.exe" restore $packages.FullName -PackagesDirectory "$WorkspaceRoot\packages\NuGet" -ConfigFile "$WorkspaceRoot\nuget.config" -Verbosity quiet }
-Get-ChildItem "$WorkspaceRoot\packages\NuGet" -Recurse -Include Orckestra.PsUtil.psd1 |
+Get-ChildItem "$WorkspaceRoot\packages\NuGet" -Recurse -Include @('Orckestra.PsUtil.psd1', 'Orckestra.Versioning.psd1') |
 ForEach-Object { Import-Module $_.FullName -Global -Force -Verbose:$false } 
 
 $ArtifactsStagingDirectory = "$WorkspaceRoot\artifacts"
@@ -320,7 +320,7 @@ Task PublishArtifacts {
 Task InitializeDeploymentPackageManifestVersion -precondition { $IsRunningOnBuildMachine } {
     $sourceDirectory = (Get-Item (Join-Path $PSScriptRoot '..\src')).FullName  # Using Get-Item removes the '..' from the path.
 
-    $version = (Get-CachedGitVersion).NuGetVersion -replace "^(\d+\.\d+\.\d+)-\d+-", '$1-'
+    $version = (Get-CachedSemanticVersion).NuGetVersionV1
 
     Write-Host "Updating Manifest.json ($($sourceDirectory.Replace($WorkspaceRoot, ''))) versions to '$($version)'."
     Get-ChildItem $sourceDirectory -Include Manifest.json -Recurse -ErrorAction SilentlyContinue `
@@ -331,15 +331,12 @@ Task InitializeDeploymentPackageManifestVersion -precondition { $IsRunningOnBuil
 }
 
 Task DetectBuildStability -precondition { $IsRunningOnBuildMachine } {
-    $gitversionOutput = Get-CachedGitVersion
-    Write-BuildStability -gitversionOutput $gitversionOutput
+    Write-BuildStability -gitversionOutput (Get-CachedSemanticVersion)
 }
 
 Task InitializeAssemblyVersion -precondition { $IsRunningOnBuildMachine } {
     $rootFolder = Get-GitWorkspaceRoot
-    $globalAssemblyInfoPath = Join-Path (Get-GitWorkspaceRoot) 'src\Common\GlobalAssemblyInfo.cs'
-    $projectsDirectoryPaths = @('src', 'tests')
-    InitializeAssemblyInfo -RootFolder $rootFolder -GlobalAssemblyInfoPath $globalAssemblyInfoPath -ProjectsDirectoryPaths $projectsDirectoryPaths
+    InitializeAssemblyInfoUsingSemVerGit -RootFolder $rootFolder -SemVerResults (Get-CachedSemanticVersion) -GlobalAssemblyInfoPath (Join-Path $rootFolder 'src\Common\GlobalAssemblyInfo.cs') -ProjectsDirectoryPaths @('src', 'tests')
 }
 
 Task InitializeMetadata {
@@ -363,7 +360,7 @@ function Get-SensitiveData {
         # we assume that the file is in the correct format if it exists
         $sensitiveFile = Join-Path $WorkspaceRoot "build\build.sensitivedata.json"
         if (-not (Test-Path $sensitiveFile)) {
-            return $null
+            return @{}
         }
         Write-Host "Loading sensitive data from file"
         $json = Get-Content -Path $sensitiveFile | ConvertFrom-Json
@@ -387,8 +384,8 @@ function Get-NugetPackagesVersion {
         #
         #   https://github.com/NuGet/Home/issues/1359
         #
-        # To workaround this limitation, we remove the leading number in the pre-release tag.
-        $version = (Get-CachedGitVersion).NuGetVersion -replace "^(\d+\.\d+\.\d+)-\d+-", '$1-'
+        # To workaround this limitation, we use NuGetVersionV1 from which the leading number in the pre-release label is removed.
+        $version = (Get-CachedSemanticVersion).NuGetVersionV1
     }
     else {
         $version = "0.0.0"
@@ -396,12 +393,15 @@ function Get-NugetPackagesVersion {
     return $version
 }
 
-function Get-CachedGitVersion {
-    if (-not $gitVersionOutput) {
-        $gitVersionOutput = Get-GitVersion
+function Get-CachedSemanticVersion {
+    if (-not $cachedSemanticVersion) {
+        $cachedSemanticVersion = Get-SemVer
+        Set-Variable -Name "cachedSemanticVersion" -Value $cachedSemanticVersion -Scope Global
+
+        Write-Host "##vso[build.updatebuildnumber]$($cachedSemanticVersion.NugetVersionV1)"
     }
 
-    return $gitVersionOutput
+    return $cachedSemanticVersion
 }
 
 function Set-DeploymentPackageManifestVersion($filePath, $version) {
