@@ -1,0 +1,5 @@
+{
+	"MainlineBranchRegex" : "^version\/(?<Major>\\d+)\\.(?<Minor>\\d+)$",
+	"StartTagRegex"       : "^(?<Version>\\d+\\.\\d+)(?:-(?<Stability>[a-zA-Z0-9]+))?$",
+	"ReleaseTagRegex"     : "^(?<Version>\\d+\\.\\d+\\.\\d+)$"
+}
