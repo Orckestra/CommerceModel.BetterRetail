@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body style="margin: 0; padding: 0;">
+    <table style="width: 100%; color: #222426; font-family: Arial, Helvetica, sans-serif; font-size: 14px;" border="0"
+           cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td>
+                    <table style="margin: 0px auto; width: 800px; text-align: left; font-size: 14px; border-collapse: collapse;page-break-after: always;"
+                           cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td colspan="2">
+                                    <div style="padding-top: 5px; padding-bottom: 10px; border-bottom: 1px solid #d0d8de;">
+                                        <img class="title-icon" src="https://occdev0localdeployment.blob.core.windows.net/images/better-retail.png" alt="icon" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- //// -->
+                            <!-- intro text -->
+                            <tr>
+                                <td style="padding: 20px 20px 36px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
+                                    <h1>Hi {{Return.CustomerFirstName}} {{Return.CustomerLastName}},</h1>
+                                    <p style="line-height: 20px;">This is to inform you that your return request is under review for a refund. A confirmation with the amount refunded will be sent to you when completed.</p>
+                                </td>
+                            </tr>
+                            <!-- shipment info -->
+                            <tr>
+                                <td style="padding: 15px 20px;" colspan="2"><h2>Return Request Information</h2></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
+                                    <table style="width: 100%; font-size: 14px;" border="0" cellspacing="0"
+                                           cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="vertical-align: top;padding-bottom: 30px;padding-right: 40px;">
+                                                    <p style="font-size: 16px; margin-bottom: 0px; margin-top: 0px;">
+                                                        <strong>Return Status:</strong> {{Return.ReturnStatusDisplayName | localize:"en-CA"}}
+                                                    </p>
+                                                    <p style="font-size: 16px; margin-bottom: 0px; margin-top: 5px;">
+                                                        <strong>Return Request Number:</strong> {{Return.ReturnNumber}}
+                                                    </p>
+                                                    <p style="font-size: 16px; margin-bottom: 0px; margin-top: 5px;">
+                                                        <strong>Associated Order Number:</strong> {{Return.OrderNumber}}
+                                                    </p>
+                                                    <p style="font-size: 16px; margin-top: 5px;">
+                                                        <strong>Return Request Creation Date:</strong> {{Return.Created | date: "D"}}
+                                                    </p>
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- //// -->
+
+                        </tbody>
+                        <!-- footer -->
+                        <tfoot style="background-color: #ffffff;">
+                            <tr>
+                                <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
+                                    <p>Please do not reply to this email message. It was sent from an address that cannot accept incoming email.</p>
+                                    <p style="font-size: 12px;">&copy;Copyright {{Variables.CopyrightsYear}} {{Variables.CompanyName}}. All rights reserved.</p>
+                            </tr>
+
+                        </tfoot>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

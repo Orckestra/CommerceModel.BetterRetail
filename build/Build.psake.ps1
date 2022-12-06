@@ -146,7 +146,7 @@ $TroubleshootingArtifactsStagingDirectory = "$ArtifactsStagingDirectory\Troubles
 $CentralLogsFolder = "$TroubleshootingArtifactsStagingDirectory\Logs"
 $TestResultsCentralDirectory = "$TroubleshootingArtifactsStagingDirectory\Tests"
 $NugetArtifactsDirectory = "$ArtifactsStagingDirectory\Nuget"
-$VisualStudioVersion = '2019'
+$VisualStudioVersion = '2022'
 $filesWithSensitiveData = @(
     (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\artifacts\OOE\BetterRetail\QueueOrderSchemaImportActivity\providers.json'),
     (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\artifacts\OOE\BetterRetail\CreateUsersActivity\users.json'),

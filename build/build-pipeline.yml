@@ -7,7 +7,7 @@ trigger:
     - version/*
 
 pool:
-  vmImage: 'windows-2019'
+  vmImage: 'windows-2022'
 
 # You can change the build verbosity by changing this build parameter
 parameters:
