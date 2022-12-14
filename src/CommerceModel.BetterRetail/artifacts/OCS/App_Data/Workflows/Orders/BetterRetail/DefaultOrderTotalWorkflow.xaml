@@ -144,6 +144,18 @@
         </InOutArgument>
       </ooopwa:AssignFirstActiveStoreInScopeActivity.OrderProcessingResultArgument>
     </ooopwa:AssignFirstActiveStoreInScopeActivity>
+		<ooopwa:ChangeOrderScopeActivity sap2010:WorkflowViewState.IdRef="ChangeOrderScopeActivity_1">
+			<ooopwa:ChangeOrderScopeActivity.OrderProcessingContextArgument>
+				<InArgument x:TypeArguments="oosop:OrderProcessingContext">
+					<mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+				</InArgument>
+			</ooopwa:ChangeOrderScopeActivity.OrderProcessingContextArgument>
+			<ooopwa:ChangeOrderScopeActivity.OrderProcessingResultArgument>
+				<InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+					<mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+				</InOutArgument>
+			</ooopwa:ChangeOrderScopeActivity.OrderProcessingResultArgument>
+		</ooopwa:ChangeOrderScopeActivity>
     <ooopwa:FetchLineItemsProductInformationActivity CustomPropertiesToReturn="Country|Appellations|Region|Score" CustomVariantPropertiesToReturn="*" sap2010:WorkflowViewState.IdRef="FetchLineItemsProductInformationActivity_1" RefreshInformationInterval="900">
       <ooopwa:FetchLineItemsProductInformationActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
@@ -353,7 +365,7 @@
           <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
         </InOutArgument>
       </ooopwav:ValidateInventoryAvailabilityActivity.OrderProcessingResultArgument>
-    </ooopwav:ValidateInventoryAvailabilityActivity>
+    </ooopwav:ValidateInventoryAvailabilityActivity>	  
     <ooopwa:AssignCartLineItemPricesActivity sap2010:WorkflowViewState.IdRef="AssignCartLineItemPricesActivity_1">
       <ooopwa:AssignCartLineItemPricesActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
@@ -476,12 +488,13 @@
         </InOutArgument>
       </ooopwav:ValidateCartAttributesActivity.OrderProcessingResultArgument>
     </ooopwav:ValidateCartAttributesActivity>
-    <sads:DebugSymbol.Symbol>d40BQzpcV29cQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXGFydGlmYWN0c1xPT0VcQXBwX0RhdGFcV29ya2Zsb3dzXE9yZGVyc1xHbG9iYWxcRGVmYXVsdE9yZGVyVG90YWxXb3JrZmxvdy54YW1sXHoD4AMOAgEBewWGATcDAcoBhwEFkgE0AwHDAZMBBZ4BNwMBvAGfAQWqATQDAbUBqwEFtgErAwGuAbcBBdgCEAIBUNkCBeQCNQIBSeUCBfACLwIBQvECBfwCLwIBO/0CBa4DEAIBHq8DBboDPAIBF7sDBcYDLQIBEMcDBdIDNgIBCdMDBd4DLgIBAoMBC4MBgQEDAc4Bfgt+ewMBywGPAQuPAYEBAwHHAYoBC4oBewMBxAGbAQubAYEBAwHAAZYBC5YBewMBvQGnAQunAYEBAwG5AaIBC6IBewMBtgGzAQuzAYEBAwGyAa4BC64BewMBrwG4AQfRARIDAZ8B0gEHvwISAgFfwAIHywIxAgFYzAIH1wIvAgFR4QIL4QKBAQIBTdwCC9wCewIBSu0CC+0CgQECAUboAgvoAnsCAUP5Agv5AoEBAgE/9AIL9AJ7AgE8/gIHiQMzAgE0igMHlQMqAgEtlgMHoQMnAgEmogMHrQMrAgEftwMLtwOBAQIBG7IDC7IDewIBGMMDC8MDgQECARS+Awu+A3sCARHPAwvPA4EBAgENygMLygN7AgEK2wML2wOBAQIBBtYDC9YDewIBA7kBCcQBMwMBpwHFAQnQATMDAaAB0wEJ3gEsAwGYAd8BCeoBPAMBkQHrAQn2AT0DAYoB9wEJggJOAwGDAYMCCY4CNwIBfI8CCZoCNQIBdZsCCaYCNwIBbqcCCbICOgIBZ7MCCb4CMgIBYMgCDcgCgwECAVzDAg3DAn0CAVnUAg3UAoMBAgFVzwINzwJ9AgFShgMNhgODAQIBOIEDDYEDfQIBNZIDDZIDgwECATGNAw2NA30CAS6eAw2eA4MBAgEqmQMNmQN9AgEnqgMNqgODAQIBI6UDDaUDfQIBIMEBD8EBhQEDAasBvAEPvAF/AwGoAc0BD80BhQEDAaQByAEPyAF/AwGhAdsBD9sBhQEDAZwB1gEP1gF/AwGZAecBD+cBhQEDAZUB4gEP4gF/AwGSAfMBD/MBhQEDAY4B7gEP7gF/AwGLAf8BD/8BhQEDAYcB+gEP+gF/AwGEAYsCD4sChQEDAYABhgIPhgJ/AgF9lwIPlwKFAQIBeZICD5ICfwIBdqMCD6MChQECAXKeAg+eAn8CAW+vAg+vAoUBAgFrqgIPqgJ/AgFouwIPuwKFAQIBZLYCD7YCfwIBYQ==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d5QBQzpcZ2l0XENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXHNyY1xDb21tZXJjZU1vZGVsLkJldHRlclJldGFpbFxhcnRpZmFjdHNcT0NTXEFwcF9EYXRhXFdvcmtmbG93c1xPcmRlcnNcQmV0dGVyUmV0YWlsXERlZmF1bHRPcmRlclRvdGFsV29ya2Zsb3cueGFtbF96A+0DDgIBAXsFhgE3AwHRAYcBBZIBNAMBygGTAQWeATcDAcMBnwEFqgE0AwG8AasBBbYBKwMBtQG3AQXYAhACAVfZAgXkAjUCAVDlAgXxAi8CAUnyAgX9Ai8CAUL+AgWJAy8CATuKAwW7AxACAR68AwXHAzwCARfIAwXTAy0CARDUAwXfAzYCAQngAwXrAy4CAQKDAQuDAYEBAwHVAX4LfnsDAdIBjwELjwGBAQMBzgGKAQuKAXsDAcsBmwELmwGBAQMBxwGWAQuWAXsDAcQBpwELpwGBAQMBwAGiAQuiAXsDAb0BswELswGBAQMBuQGuAQuuAXsDAbYBuAEH0QESAwGmAdIBB78CEgIBZsACB8sCMQIBX8wCB9cCLwIBWOECC+ECgQECAVTcAgvcAnsCAVHtAgvtAoEBAgFN6AIL6AJ7AgFK+gIL+gKBAQIBRvUCC/UCewIBQ4YDC4YDgQECAT+BAwuBA3sCATyLAweWAzMCATSXAweiAyoCAS2jAweuAycCASavAwe6AysCAR/EAwvEA4EBAgEbvwMLvwN7AgEY0AML0AOBAQIBFMsDC8sDewIBEdwDC9wDgQECAQ3XAwvXA3sCAQroAwvoA4EBAgEG4wML4wN7AgEDuQEJxAEzAwGuAcUBCdABMwMBpwHTAQneASwDAZ8B3wEJ6gExAwGYAesBCfYBPQMBkQH3AQmCAk4DAYoBgwIJjgI3AwGDAY8CCZoCNQIBfJsCCaYCNwIBdacCCbICOgIBbrMCCb4CMgIBZ8gCDcgCgwECAWPDAg3DAn0CAWDUAg3UAoMBAgFczwINzwJ9AgFZkwMNkwODAQIBOI4DDY4DfQIBNZ8DDZ8DgwECATGaAw2aA30CAS6rAw2rA4MBAgEqpgMNpgN9AgEntwMNtwODAQIBI7IDDbIDfQIBIMEBD8EBhQEDAbIBvAEPvAF/AwGvAc0BD80BhQEDAasByAEPyAF/AwGoAdsBD9sBhQEDAaMB1gEP1gF/AwGgAecBD+cBhQEDAZwB4gEP4gF/AwGZAfMBD/MBhQEDAZUB7gEP7gF/AwGSAf8BD/8BhQEDAY4B+gEP+gF/AwGLAYsCD4sChQEDAYcBhgIPhgJ/AwGEAZcCD5cChQEDAYABkgIPkgJ/AgF9owIPowKFAQIBeZ4CD54CfwIBdq8CD68ChQECAXKqAg+qAn8CAW+7Ag+7AoUBAgFrtgIPtgJ/AgFo</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
       <sap2010:ViewStateData Id="AssignShipmentProcessingDateTimeActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="AssignFirstActiveStoreInScopeActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
+			<sap2010:ViewStateData Id="ChangeOrderScopeActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="FetchLineItemsProductInformationActivity_1" sap:VirtualizedContainerService.HintSize="443,190">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -529,7 +542,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ValidateInventoryAvailabilityActivity_1" sap:VirtualizedContainerService.HintSize="443,51" />
+      <sap2010:ViewStateData Id="ValidateInventoryAvailabilityActivity_1" sap:VirtualizedContainerService.HintSize="443,51" />      
       <sap2010:ViewStateData Id="AssignCartLineItemPricesActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="MergeEquivalentLineItemsActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="RetrieveFulfillmentMethodsActivity_1" sap:VirtualizedContainerService.HintSize="421,22" />
@@ -548,14 +561,14 @@
       <sap2010:ViewStateData Id="ValidateOrderPaymentsActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="ValidateCartCouponsEligibilityActivity_1" sap:VirtualizedContainerService.HintSize="443,36" />
       <sap2010:ViewStateData Id="ValidateCartAttributesActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="465,2757">
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="465,2819">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Orders.Processing.Workflows.Workflows.Orders.DefaultOrderTotalWorkflow_1" sap:VirtualizedContainerService.HintSize="505,2837" />
+      <sap2010:ViewStateData Id="Orders.Processing.Workflows.Workflows.Orders.DefaultOrderTotalWorkflow_1" sap:VirtualizedContainerService.HintSize="505,2899" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
