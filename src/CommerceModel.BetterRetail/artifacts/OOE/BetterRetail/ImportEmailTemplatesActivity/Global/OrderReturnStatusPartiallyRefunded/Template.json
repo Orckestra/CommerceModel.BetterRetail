@@ -1,0 +1,41 @@
+{
+  "name": "OrderReturnStatusPartiallyRefunded",
+  "description": {
+    "en-US": "Notification Email sent to the customer to tell them that a partial refund of their return request has been processed.",
+    "en-CA": "Notification Email sent to the customer to tell them that a partial refund of their return request has been processed.",
+    "fr-CA": "Courriel de notification envoyé au client pour l'aviser qu'un remboursement partiel de sa requête de retour a été complétée."
+  },
+  "contents": [
+    {
+      "name": "SenderDisplayName",
+      "content": {
+        "en-CA": "{{Variables.CompanyName}}",
+        "en-US": "{{Variables.CompanyName}}",
+        "fr-CA": "{{Variables.CompanyName}}"
+      }
+    },
+    {
+      "name": "ReceiverDisplayName",
+      "content": {
+        "en-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
+        "en-US": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
+        "fr-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}"
+      }
+    },
+    {
+      "name": "Subject",
+      "content": {
+        "en-CA": "Your return request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}} has been processed",
+        "en-US": "Your return request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}} has been processed",
+        "fr-CA": "Votre requête de retour #{{Return.ReturnNumber}}  pour la commande  #{{Return.OrderNumber}} a été complétée"
+      }
+    }
+  ],
+  "displayName": {
+    "en-US": "Return Request Partially Refunded",
+    "en-CA": "Return Request Partially Refunded",
+    "fr-CA": "Requête de retour partiellement remboursée"
+  },
+  "isActive": true,
+  "type": "Email"
+}
