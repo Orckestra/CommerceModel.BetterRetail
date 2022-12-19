@@ -45,7 +45,7 @@
                                             <tr>
                                                 <td style="vertical-align: top;padding-bottom: 30px;padding-right: 40px;">
                                                     <p style="font-size: 16px; margin-bottom: 0px; margin-top: 0px;">
-                                                        <strong>Statut de la requête de retour :</strong> {{Return.Status}}
+                                                        <strong>Statut de la requête de retour :</strong> {{Return.ReturnStatusDisplayName | localize:"en-CA"}}
                                                     </p>
                                                     <p style="font-size: 16px; margin-bottom: 0px; margin-top: 5px;">
                                                         <strong>Numéro de la requête de retour :</strong> {{Return.ReturnNumber}}
@@ -103,14 +103,14 @@
                                                                     <strong>{{item.ProductDisplayName}}</strong><br />
                                                                 </td>
                                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                    <strong>{{item.PlacedPrice | money:"fr-CA" }}</strong>
+                                                                    <strong>{{item.ProductPrice | money:"fr-CA" }}</strong>
                                                                 </td>
                                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
                                                                     <strong>{{item.Quantity}}</strong>
                                                                 </td>
 
                                                                 <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                    <strong>{{item.ReturnReasonDisplayName | localize:"fr-CA"}}</strong>
+                                                                    <strong>{{item.RejectReasonDisplayName | localize:"fr-CA"}}</strong>
                                                                 </td>
                                                             </tr>
                                                             <!--{% endfor %}-->
