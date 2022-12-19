@@ -97,17 +97,17 @@
                                                                         <strong>{{item.ProductDisplayName}}</strong><br />
                                                                     </td>
                                                                     <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                        <strong>{{item.PlacedPrice | money:"en-CA" }}</strong>
+                                                                        <strong>{{item.ProductPrice | money:"en-CA" }}</strong>
                                                                     </td>
                                                                     <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
                                                                         <strong>{{item.Quantity}}</strong>
                                                                     </td>
 
                                                                     <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                        <strong>{{item.ReturnReasonDisplayName | localize:"en-CA"}}</strong>
+                                                                        <strong>{{item.RejectReasonDisplayName | localize:"en-CA"}}</strong>
                                                                     </td>
                                                                     <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                        <strong>{{item.Total | money:"en-CA" }}</strong>
+                                                                        <strong>{{item.SubTotal | money:"en-CA" }}</strong>
                                                                     </td>
                                                                 </tr>
                                                             <!--{% endif %}
@@ -203,14 +203,14 @@
                                                                     <strong>{{item.ProductDisplayName}}</strong><br />
                                                                 </td>
                                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                    <strong>{{item.PlacedPrice | money:"en-CA" }}</strong>
+                                                                    <strong>{{item.ProductPrice | money:"en-CA" }}</strong>
                                                                 </td>
                                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
                                                                     <strong>{{item.Quantity}}</strong>
                                                                 </td>
 
                                                                 <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                    <strong>{{item.ReturnReasonDisplayName | localize:"en-CA"}}</strong>
+                                                                    <strong>{{item.RejectReasonDisplayName | localize:"en-CA"}}</strong>
                                                                 </td>
                                                             </tr>
                                                             <!--{% endif %}
