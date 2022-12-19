@@ -1,0 +1,41 @@
+{
+  "name": "OrderReturnStatusClosed",
+  "description": {
+    "en-US": "Notification Email sent to the customer to tell them their return request has been rejected.",
+    "en-CA": "Notification Email sent to the customer to tell them their return request has been rejected.",
+    "fr-CA": "Courriel de notification envoyé au client pour l'aviser que la requête de retour a été refusée."
+  },
+  "contents": [
+    {
+      "name": "SenderDisplayName",
+      "content": {
+        "en-CA": "{{Variables.CompanyName}}",
+        "en-US": "{{Variables.CompanyName}}",
+        "fr-CA": "{{Variables.CompanyName}}"
+      }
+    },
+    {
+      "name": "ReceiverDisplayName",
+      "content": {
+        "en-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
+        "en-US": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
+        "fr-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}"
+      }
+    },
+    {
+      "name": "Subject",
+      "content": {
+        "en-CA": "Your return request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}} has been rejected",
+        "en-US": "Your return request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}} has been rejected",
+        "fr-CA": "Votre requête de retour #{{Return.ReturnNumber}}  pour la commande  #{{Return.OrderNumber}} a été rejetée"
+      }
+    }
+  ],
+  "displayName": {
+    "en-US": "Return Request Rejected",
+    "en-CA": "Return Request Rejected",
+    "fr-CA": "Requête de retour rejetée"
+  },
+  "isActive": true,
+  "type": "Email"
+}
