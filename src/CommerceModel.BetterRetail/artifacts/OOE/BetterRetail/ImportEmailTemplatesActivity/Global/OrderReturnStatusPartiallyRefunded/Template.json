@@ -1,9 +1,9 @@
 {
-  "name": "OrderReturnStatusReadyForRefund",
+  "name": "OrderReturnStatusPartiallyRefunded",
   "description": {
-    "en-US": "Notification Email sent to the customer to tell them their order will have a refund after revision.",
-    "en-CA": "Notification Email sent to the customer to tell them their order will have a refund after revision.",
-    "fr-CA": "Courriel de notification envoyé au client pour l'aviser que sa commande aura un remboursement après sa révision."
+    "en-US": "Notification Email sent to the customer to tell them that a partial refund of their return request has been processed.",
+    "en-CA": "Notification Email sent to the customer to tell them that a partial refund of their return request has been processed.",
+    "fr-CA": "Courriel de notification envoyé au client pour l'aviser qu'un remboursement partiel de sa requête de retour a été complétée."
   },
   "contents": [
     {
@@ -25,16 +25,16 @@
     {
       "name": "Subject",
       "content": {
-        "en-CA": "Your return request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}} is being reviewed for a refund",
-        "en-US": "Your return request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}} is being reviewed for a refund",
-        "fr-CA": "Votre requête de retour #{{Return.ReturnNumber}}  pour la commande  #{{Return.OrderNumber}} est en processus de révision pour un remboursement"
+        "en-CA": "Your return request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}} has been processed",
+        "en-US": "Your return request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}} has been processed",
+        "fr-CA": "Votre requête de retour #{{Return.ReturnNumber}}  pour la commande  #{{Return.OrderNumber}} a été complétée"
       }
     }
   ],
   "displayName": {
-    "en-US": "Return Ready for Refund",
-    "en-CA": "Return Ready for Refund",
-    "fr-CA": "Retour prêt au remboursement"
+    "en-US": "Return Request Partially Refunded",
+    "en-CA": "Return Request Partially Refunded",
+    "fr-CA": "Requête de retour partiellement remboursée"
   },
   "isActive": true,
   "type": "Email"
