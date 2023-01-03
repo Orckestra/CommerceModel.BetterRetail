@@ -73,7 +73,7 @@
                                                                 <th style="padding: 10px;" colspan="2">
                                                                     <span style="font-weight: normal;">Product</span>
                                                                 </th>
-                                                                <th style="padding: 10px;">
+                                                                <th style="padding: 10px;" width="110">
                                                                     <span style="font-weight: normal;">Unit Price</span>
                                                                 </th>
                                                                 <th style="padding: 10px;">
@@ -82,36 +82,36 @@
                                                                 <th style="padding: 10px;">
                                                                     <span style="font-weight: normal;">Return Reason</span>
                                                                 </th>
-                                                                <th style="padding: 10px;">
-                                                                    <span style="font-weight: normal;">Sub-total</span>
+                                                                <th style="padding: 10px;" width="110">
+                                                                    <span style="font-weight: normal;text-align:right;">Sub-total</span>
                                                                 </th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <!--{% for item in Return.Items%}
                                                             {% if item.Status != "Rejected" %}-->
-                                                                <tr>
-                                                                    <!--<td style="border-bottom: 1px solid #e1e4ea; padding: 20px 0;"><img src="{{item.ImageURL}}" width="76" alt="product-image" style="display: block;" /></td>-->
-                                                                    <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;"
-                                                                        colspan="2">
-                                                                        <strong>{{item.ProductDisplayName}}</strong><br />
-                                                                    </td>
-                                                                    <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                        <strong>{{item.ProductPrice | money:"en-CA" }}</strong>
-                                                                    </td>
-                                                                    <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                        <strong>{{item.Quantity}}</strong>
-                                                                    </td>
+                                                            <tr>
+                                                                <!--<td style="border-bottom: 1px solid #e1e4ea; padding: 20px 0;"><img src="{{item.ImageURL}}" width="76" alt="product-image" style="display: block;" /></td>-->
+                                                                <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;"
+                                                                    colspan="2">
+                                                                    <strong>{{item.ProductDisplayName}}</strong><br />
+                                                                </td>
+                                                                <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
+                                                                    <strong>{{item.ProductPrice | money:"en-CA" }}</strong>
+                                                                </td>
+                                                                <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
+                                                                    <strong>{{item.Quantity}}</strong>
+                                                                </td>
 
-                                                                    <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                        <strong>{{item.ReturnReasonDisplayName | localize:"en-CA"}}</strong>
-                                                                    </td>
-                                                                    <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                        <strong>{{item.SubTotal | money:"en-CA" }}</strong>
-                                                                    </td>
-                                                                </tr>
-                                                            <!--{% endif %}
-                                                            {% endfor %}-->
+                                                                <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
+                                                                    <strong>{{item.ReturnReasonDisplayName | localize:"en-CA"}}</strong>
+                                                                </td>
+                                                                <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;text-align:right;">
+                                                                    <strong>{{item.Total | money:"en-CA" }}</strong>
+                                                                </td>
+                                                            </tr>
+                                                        <!--{% endif %}
+                                                        <!--{% endfor %}-->
                                                         </tbody>
                                                         <tfoot style="text-align: right;">
                                                             <tr>
@@ -164,7 +164,7 @@
                                                                 </td>
                                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
                                                                     <strong style="font-size: 18px;">
-                                                                        {{ Return.Total| money:"en-CA" }}
+                                                                        {{ Return.SubTotal| money:"en-CA" }}
                                                                     </strong>
                                                                 </td>
                                                             </tr>
@@ -214,7 +214,7 @@
                                                                 </td>
                                                             </tr>
                                                             <!--{% endif %}
-                                                            {% endfor %}-->
+                                                            <!--{% endfor %}-->
                                                         </tbody>
                                                     </table>
                                                 </td>
@@ -232,6 +232,7 @@
                                     <p>Please do not reply to this email message. It was sent from an address that cannot accept incoming emails.</p>
                                     <p style="font-size: 12px;">&copy;Copyright {{Variables.CopyrightsYear}} {{Variables.CompanyName}}. All rights reserved.</p>
                             </tr>
+
                         </tfoot>
                     </table>
                 </td>
