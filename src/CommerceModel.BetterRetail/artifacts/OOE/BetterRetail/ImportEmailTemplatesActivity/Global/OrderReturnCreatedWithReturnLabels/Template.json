@@ -34,7 +34,7 @@
   "displayName": {
     "en-US": "Return Request Created with Return Labels",
     "en-CA": "Return Request Created with Return Labels",
-    "fr-CA": "Création de la requête de retour avec étiquettes de retour"
+    "fr-CA": "Requête de retour créée avec étiquettes de retour"
   },
   "isActive": true,
   "type": "Email"
