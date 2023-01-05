@@ -154,7 +154,7 @@
         </InOutArgument>
       </ooopwa:AssignFirstActiveStoreInScopeActivity.OrderProcessingResultArgument>
     </ooopwa:AssignFirstActiveStoreInScopeActivity>
-    <ooopwa:FetchLineItemsProductInformationActivity RefreshInformationInterval="{x:Null}" CustomPropertiesToReturn="Brand" CustomVariantPropertiesToReturn="*" sap2010:WorkflowViewState.IdRef="FetchLineItemsProductInformationActivity_1">
+    <ooopwa:FetchLineItemsProductInformationActivity RefreshInformationInterval="{x:Null}" CustomReturnsInfoFields="MaximumTimeLimitForReturnsInDays|IsNotRefundable" CustomPropertiesToReturn="Brand" CustomVariantPropertiesToReturn="*" sap2010:WorkflowViewState.IdRef="FetchLineItemsProductInformationActivity_1">
       <ooopwa:FetchLineItemsProductInformationActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
           <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
