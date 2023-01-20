@@ -32,9 +32,9 @@
         }
     ],
     "displayName": {
-        "en-US": "Return request created with configured return docs",
-        "en-CA": "Return request created with configured return docs",
-        "fr-CA": "Création de la requête de retour avec les documents de retour"
+        "en-US": "Return request created with return docs",
+        "en-CA": "Return request created with return docs",
+        "fr-CA": "Requête de retour créée avec documents de retour"
     },
     "isActive": true,
     "type": "Email"

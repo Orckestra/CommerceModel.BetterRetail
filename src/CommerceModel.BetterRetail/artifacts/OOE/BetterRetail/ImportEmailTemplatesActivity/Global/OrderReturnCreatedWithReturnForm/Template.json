@@ -32,9 +32,9 @@
         }
     ],
     "displayName": {
-        "en-US": "Return request created with configured return request form",
-        "en-CA": "Return request created with configured return request form",
-        "fr-CA": "Création de la requête de retour avec le formulaire de retour"
+        "en-US": "Return request created with return form",
+        "en-CA": "Return request created with return form",
+        "fr-CA": "Requête de retour créée avec formulaire de retour"
     },
     "isActive": true,
     "type": "Email"
