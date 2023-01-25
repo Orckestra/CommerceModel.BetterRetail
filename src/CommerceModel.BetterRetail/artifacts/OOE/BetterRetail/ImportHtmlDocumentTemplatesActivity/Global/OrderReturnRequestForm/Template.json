@@ -1,0 +1,41 @@
+{
+    "name": "OrderReturnRequestForm",
+    "description": {
+        "en-US": "This is a Return Request Form for a shipment. It is needed if the Return Request Form is configured in the Return provider.",
+        "en-CA": "This is a Return Request Form for a shipment. It is needed if the Return Request Form is configured in the Return provider.",
+        "fr-CA": "The return authorization form format displays all the information submitted on a Return."
+    },
+    "contents": [
+        {
+            "name": "SenderDisplayName",
+            "content": {
+                "en-CA": "{{Variables.CompanyName}}",
+                "en-US": "{{Variables.CompanyName}}",
+                "fr-CA": "{{Variables.CompanyName}}"
+            }
+        },
+        {
+            "name": "ReceiverDisplayName",
+            "content": {
+                "en-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
+                "en-US": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
+                "fr-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}"
+            }
+        },
+        {
+            "name": "Subject",
+            "content": {
+                "en-CA": "Return Request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}}",
+                "en-US": "Return Request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}}",
+                "fr-CA": "Requête de retour #{{Return.ReturnNumber}} pour la commande  #{{Return.OrderNumber}}"
+            }
+        }
+    ],
+    "displayName": {
+        "en-US": "Return Request Form",
+        "en-CA": "Return Request Form",
+        "fr-CA": "Formulaire de retour"
+    },
+    "isActive": true,
+    "type": "HtmlDocument"
+}
