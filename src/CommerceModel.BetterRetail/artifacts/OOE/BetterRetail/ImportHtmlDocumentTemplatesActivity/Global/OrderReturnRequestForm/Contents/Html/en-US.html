@@ -10,71 +10,47 @@
         <tbody>
             <tr>
                 <td>
-                    <table style="margin: 0px auto; width: 800px; text-align: left; font-size: 14px; border-collapse: collapse;page-break-after: always;"
+                    <table style="margin: 0px auto; width: 100%; text-align: left; font-size: 14px; border-collapse: collapse;"
                            cellspacing="0" cellpadding="0">
                         <tbody>
-                            <tr>
-                                <td colspan="2">
-                                    <div style="padding-top: 5px; padding-bottom: 10px; border-bottom: 1px solid #d0d8de;">
-                                        <img class="title-icon"
-                                             src="https://occdev0localdeployment.blob.core.windows.net/images/better-retail.png"
-                                             alt="icon" />
-                                    </div>
-                                </td>
-                            </tr>
                             <!-- //// -->
-                            <!-- intro text -->
-                            <tr>
-                                <td style="padding: 20px 20px 36px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                    <h1 style="font-size: 32px;">
-                                        Hi {{Return.CustomerFirstName}} {{Return.CustomerLastName}},
-                                    </h1>
-                                    <p style="line-height: 20px;">This is a confirmation of the reception of your return request. You will be notified when your return request is reviewed.</p>
-                                    <p style="line-height: 20px;">
-                                        To return us your items, first print the return
-                                        authorization form found in attachment, then insert it with your items inside
-                                        the package before sending it back to us according to our <a href="">return policy's instructions.</a>
-                                    </p>
-                                    <p>You can review the details of this return request in the following email:</p>
-                                </td>
-                            </tr>
                             <!-- shipment info -->
-                            <tr>
-                                <td style="padding: 15px 20px;" colspan="2">
-                                    <h1>Return Request Information</h1>
-                                </td>
-                            </tr>
                             <tr>
                                 <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
                                     <table style="width: 100%; font-size: 14px;" border="0" cellspacing="0"
                                            cellpadding="0">
                                         <tbody>
                                             <tr>
-                                                <td style="vertical-align: top;padding-bottom: 30px;padding-right: 40px;">
+                                                <td colspan="3">
+                                                    <div style="padding-top: 5px; padding-bottom: 10px; border-bottom: 1px solid #d0d8de;">
+                                                        <img class="title-icon" src="https://occdev0localdeployment.blob.core.windows.net/images/better-retail.png" alt="icon" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="vertical-align: top;padding-bottom: 30px;padding-right: 40px;" width="70%">
 
-                                                    <p style="font-size: 20px; margin-bottom: 0px; margin-top: 0px;">
-                                                        <strong>Return Request Number:</strong> {{Return.ReturnNumber}}
-                                                    </p>
-                                                    <p style="font-size: 20px; margin-bottom: 0px; margin-top: 5px;">
-                                                        <strong>Associated Order Number:</strong> {{Return.OrderNumber}}
-                                                    </p>
-                                                    <p style="font-size: 20px; margin-top: 5px;">
-                                                        <strong>Return Request Creation Date:</strong> {{Return.Created | localize_date: "en-US","D"}}
-                                                    </p>
+                                                    <h1>Return Request Form</h1>
+                                                    <h2 style="font-size: 24px; margin-bottom: 0px; margin-top: 0px;">Order: {{Return.OrderNumber}}</h2>
+                                                    <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Return Number:</strong>{{Return.ReturnNumber | code128}}</p>
+                                                    <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Return Status:</strong>{{Return.ReturnStatusDisplayName | localize:"en-US"}}</p>
+                                                    <p style="font-size: 18px; margin-top: 0px;"><strong>Return Request Creation Date:</strong>{{Return.Created | localize_date: "en-US","D"}}</p>
                                                 </td>
 
-                                            </tr>
+                                                <td style="vertical-align: top; padding-top:20px">
+                                                    <!-- TEMPORARY URL --  Need to do POC to find proper way to render Barcode -->
+                                                    <img src="https://barcodeapi.org/api/39/1024" alt="{{Return.ReturnNumber | code128}}" />
+                                                </td>
                                         </tbody>
                                     </table>
                                 </td>
                             </tr>
                             <!-- //// -->
-                            <!-- //// --> <!-- Return summary -->
+                            <!-- Return Form -->
                             <tr>
-                                <td style="padding: 15px 20px 60px;">
-                                    <p style="font-size: 18px; margin-top: 0px;"><strong>Return Details</strong></p>
-                                    <table style="width: 100%; text-align: center; font-size: 14px; vertical-align: middle; border: 1px solid #eaeaea;"
-                                           border="0" cellspacing="0" cellpadding="0">
+                                <td style="padding: 15px 20px 20px;">
+                                    <p style="font-size: 18px; margin-top: 0px;"><strong>Returned Items</strong></p>
+                                    <table style="width: 100%; text-align: center; font-size: 14px; vertical-align: middle; border: 1px solid #eaeaea;" border="0" cellspacing="0" cellpadding="0">
                                         <thead style="background-color: #000000; color: #ffffff; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
                                             <tr>
                                                 <th style="padding: 10px;" colspan="2"><span style="font-weight: normal;">Product</span></th>
@@ -85,76 +61,56 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <!--{% for item in Return.Items%}-->
+                                            <!--{% for item in Return.Items%}
+                                                {% if item.Status != "Rejected" %}-->
                                             <tr>
                                                 <!--<td style="border-bottom: 1px solid #e1e4ea; padding: 20px 0;"><img src="{{item.ImageURL}}" width="76" alt="product-image" style="display: block;" /></td>-->
-                                                <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;"
-                                                    colspan="2">
-                                                    <strong>{{item.ProductDisplayName}}</strong>
-                                                </td>
-                                                <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                    <strong>{{item.ProductPrice | money:"en-US" }}</strong>
-                                                </td>
-                                                <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                    <strong>{{item.Quantity}}</strong>
-                                                </td>
-                                                <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                    <strong>{{item.ReturnReasonDisplayName| localize:"en-US" }}</strong>
-                                                </td>
-                                                <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid; text-align: right;">
-                                                    <strong>{{item.SubTotal | money:"en-US" }}</strong>
-                                                </td>
+                                                <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;" colspan="2">{{item.ProductDisplayName}}</td>
+                                                <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">{{item.ProductPrice | money:"en-US" }}</td>
+                                                <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">{{item.Quantity}}</td>
+                                                <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">{{item.ReturnReasonDisplayName | localize:"en-US"}}</td>
+                                                <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid; text-align: right;"><strong>{{item.SubTotal | money:"en-US" }}</strong></td>
                                             </tr>
+                                            <!--{% endif %} -->
                                             <!--{% endfor %}-->
                                         </tbody>
                                         <tfoot style="text-align: right;">
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2"><span style="text-transform: none;"> Merchandise total: </span></td>
-                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ Return.TotalMerchandise | money:"en-US" }}</strong></td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2">Merchandise total:</td>
+                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">{{ Return.TotalMerchandise | money:"en-US" }}</td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2"><span style="text-transform: none;"> Discount: </span></td>
-                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ Return.TotalDiscount | money:"en-US" }}</strong></td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2">Discount: </td>
+                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">{{ Return.TotalDiscount | money:"en-US" }}</td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2">Sub Total: </td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2"><strong>Sub total:</strong></td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ Return.TotalSubtotal | money:"en-US" }}</strong></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2">Tax Total: </td>
-                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ Return.TotalTax | money:"en-US" }}</strong></td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2">Tax total:</td>
+                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">{{ Return.TotalTax | money:"en-US" }}</td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2"><strong style="font-size: 18px;"> Requested Refund Amount: </strong></td>
-                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong style="font-size: 18px;">{{ Return.Total| money:"en-US" }}</strong></td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2"><strong style="font-size: 18px;">Estimated Refund Amount:</strong></td>
+                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong style="font-size: 18px;"> {{ Return.Total| money:"en-US" }} </strong></td>
                                             </tr>
                                         </tfoot>
                                     </table>
                                 </td>
                             </tr>
-                            <!-- //// -->
                         </tbody>
-                        <!-- footer -->
-                        <tfoot style="background-color: #ffffff;">
-                            <tr>
-                                <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                    <p>
-                                        Please do not reply to this email message. It was sent from an address that cannot accept incoming emails.
-                                    </p>
-                                    <p style="font-size: 12px;">&copy;Copyright {{Variables.CopyrightsYear}} {{Variables.CompanyName}}. All rights reserved.</p>
-                                </td>
-                            </tr>
-                        </tfoot>
                     </table>
                 </td>
             </tr>
         </tbody>
     </table>
+    <p>&nbsp;</p>
 </body>
 
 </html>
