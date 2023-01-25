@@ -1478,6 +1478,26 @@
         },
         "sortOrder": 12,
         "isActive": true
+      },
+      {
+        "value": "avsResultCode",
+        "displayName": {
+          "en-CA": "Result Code",
+          "en-US": "Result Code",
+          "fr-CA": "Résultat SVA"
+        },
+        "sortOrder": 13,
+        "isActive": true
+      },
+      {
+        "value": "returnNumber",
+        "displayName": {
+          "en-CA": "Return Number",
+          "en-US": "Return Number",
+          "fr-CA": "Numéro du retour"
+        },
+        "sortOrder": 14,
+        "isActive": true
       }
     ]
   }
