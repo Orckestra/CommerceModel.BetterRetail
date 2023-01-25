@@ -351,12 +351,6 @@
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnStatusReadyForRefund\Contents\Text\en-CA.txt" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnStatusReadyForRefund\Contents\Text\en-US.txt" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnStatusReadyForRefund\Contents\Text\fr-CA.txt" />
-    <Content Include="artifacts\OOE\BetterRetail\ImportHtmlDocumentTemplatesActivity\Global\OrderReturnRequestForm\Contents\Html\en-CA.html" />
-    <Content Include="artifacts\OOE\BetterRetail\ImportHtmlDocumentTemplatesActivity\Global\OrderReturnRequestForm\Contents\Html\en-US.html" />
-    <Content Include="artifacts\OOE\BetterRetail\ImportHtmlDocumentTemplatesActivity\Global\OrderReturnRequestForm\Contents\Html\fr-CA.html" />
-    <Content Include="artifacts\OOE\BetterRetail\ImportHtmlDocumentTemplatesActivity\Global\OrderReturnRequestForm\Contents\Text\en-CA.txt" />
-    <Content Include="artifacts\OOE\BetterRetail\ImportHtmlDocumentTemplatesActivity\Global\OrderReturnRequestForm\Contents\Text\en-US.txt" />
-    <Content Include="artifacts\OOE\BetterRetail\ImportHtmlDocumentTemplatesActivity\Global\OrderReturnRequestForm\Contents\Text\fr-CA.txt" />
     <Content Include="artifacts\OOE\BetterRetail\QueueImportProfileSchemaActivity\groups.json" />
     <Compile Include="DamProviders\BetterRetailDamProvider.cs" />
     <Compile Include="Plugin.cs" />
@@ -577,7 +571,6 @@
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreatedWithReturnLabels\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreatedWithReturnForm\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreatedWithReturnDocs\Template.json" />
-    <None Include="artifacts\OOE\BetterRetail\ImportHtmlDocumentTemplatesActivity\Global\OrderReturnRequestForm\Template.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS - Header.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER - Header.json" />
