@@ -18,7 +18,8 @@
  xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
  xmlns:this="clr-namespace:CommerceModel.BetterRetail"
- xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:htmlDocumentTemplates="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.HtmlDocumentTemplates;assembly=OrckestraCommerce.CommerceModelUtilities">
   <x:Members>
     <x:Property Name="DefaultDomainName" Type="InArgument(x:String)" />
     <x:Property Name="SmtpHost" Type="InArgument(x:String)" />
@@ -73,7 +74,7 @@
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage</AssemblyReference>
-	    <AssemblyReference>Microsoft.WindowsAzure.Storage</AssemblyReference>
+      <AssemblyReference>Microsoft.WindowsAzure.Storage</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>Orckestra.AsyncExtensions</AssemblyReference>
       <AssemblyReference>Orckestra.Caching</AssemblyReference>
@@ -111,10 +112,10 @@
       <AssemblyReference>System.Reactive.Linq</AssemblyReference>
       <AssemblyReference>System.Runtime.CompilerServices.Unsafe</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-	    <AssemblyReference>System.Security.Cryptography.Algorithms</AssemblyReference>
-	    <AssemblyReference>System.Security.Cryptography.Encoding</AssemblyReference>
-	    <AssemblyReference>System.Security.Cryptography.Primitives</AssemblyReference>
-	    <AssemblyReference>System.Security.Cryptography.X509Certificates</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Algorithms</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Encoding</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.X509Certificates</AssemblyReference>
       <AssemblyReference>System.Spatial</AssemblyReference>
       <AssemblyReference>System.Threading.Tasks.Dataflow</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
@@ -126,7 +127,7 @@
       <AssemblyReference>CommerceModel.BetterRetail.Activities</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>CommerceModel.BetterRetail</AssemblyReference>
-	</sco:Collection>
+    </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
@@ -173,6 +174,13 @@
         </InArgument>
       </octn:ImportEmailTemplatesActivity.CommerceModelName>
     </octn:ImportEmailTemplatesActivity>
+    <htmlDocumentTemplates:ImportHtmlDocumentTemplatesActivity ResultBlobUrl="{x:Null}" AdditionalPaths="Features/FulfillmentProviders/HtmlTemplates" sap2010:WorkflowViewState.IdRef="ImportHtmlDocumentTemplatesActivity_2">
+      <htmlDocumentTemplates:ImportHtmlDocumentTemplatesActivity.CommerceModelName>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
+        </InArgument>
+      </htmlDocumentTemplates:ImportHtmlDocumentTemplatesActivity.CommerceModelName>
+    </htmlDocumentTemplates:ImportHtmlDocumentTemplatesActivity>
     <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
@@ -407,6 +415,7 @@
       <sap2010:ViewStateData Id="CreateUserAuthorizationsActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="CreateUsersActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="ImportEmailTemplatesActivity_2" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
+      <sap2010:ViewStateData Id="ImportHtmlDocumentTemplatesActivity_2" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="243.2,62.4" />
       <sap2010:ViewStateData Id="BetterRetailExecuteSQLScriptActivity_1" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
       <sap2010:ViewStateData Id="WaitForCorrelatedTasksCompletionsActivity_4" sap:VirtualizedContainerService.HintSize="243.2,22.4" />
