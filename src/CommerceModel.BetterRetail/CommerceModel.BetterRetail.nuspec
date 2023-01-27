@@ -13,7 +13,7 @@
     <summary>CommerceModel.BetterRetail</summary>
     <description>CommerceModel.BetterRetail</description>
     <releaseNotes>Orckestra Commerce 2020 release.</releaseNotes>
-    <copyright>© 2022 Orckestra Technologies Inc. All rights reserved.</copyright>
+    <copyright>© 2023 Orckestra Technologies Inc. All rights reserved.</copyright>
     <dependencies>
       <dependency id="CommerceModel.BetterRetail" version="0.0.0" />
     </dependencies>

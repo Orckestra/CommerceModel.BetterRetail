@@ -163,7 +163,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="OrckestraCommerce.CommerceModelUtilities, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.5.5.0-alpha0073\lib\net48\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.5.5.0-alpha0175\lib\net48\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="OrckestraCommerce.DataExchange, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -571,6 +571,7 @@
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreatedWithReturnLabels\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreatedWithReturnForm\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreatedWithReturnDocs\Template.json" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportHtmlDocumentTemplatesActivity\Global\OrderReturnRequestForm\Template.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS - Header.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER - Header.json" />
