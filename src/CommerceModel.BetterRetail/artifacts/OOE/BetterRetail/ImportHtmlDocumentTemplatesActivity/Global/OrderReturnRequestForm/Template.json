@@ -1,9 +1,9 @@
 {
     "name": "OrderReturnRequestForm",
     "description": {
-        "en-US": "This is a Return Request Form for a shipment. It is needed if the Return Request Form is configured in the Return provider.",
-        "en-CA": "This is a Return Request Form for a shipment. It is needed if the Return Request Form is configured in the Return provider.",
-        "fr-CA": "The return authorization form format displays all the information submitted on a Return."
+        "en-US": "This is a return request form for a shipment. It is needed if the return request form is configured in the return provider.",
+        "en-CA": "This is a return request form for a shipment. It is needed if the return request form is configured in the return provider.",
+        "fr-CA": "Formulaire de requête de retour pour un envoi. Il est requis lorsque la requête de retour est configurée dans le fournisseur de retour."
     },
     "contents": [
         {
