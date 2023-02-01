@@ -64,7 +64,12 @@
                                                 {% if item.Status != "Rejected" %}-->
                                             <tr>
                                                 <!--<td style="border-bottom: 1px solid #e1e4ea; padding: 20px 0;"><img src="{{item.ImageURL}}" width="76" alt="product-image" style="display: block;" /></td>-->
-                                                <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;" colspan="2">{{item.ProductDisplayName}}</td>
+                                                <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;" colspan="2">
+                                                    {{item.ProductDisplayName}} <br />
+                                                    <!--{% for kva in item.KvaDisplayValues%}-->
+                                                    <span>{{kva}}</span><br />
+                                                    <!--{% endfor %}-->
+                                                </td>
                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">{{item.ProductPrice | money:"en-CA" }}</td>
                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">{{item.Quantity}}</td>
                                                 <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">{{item.ReturnReasonDisplayName | localize:"en-CA"}}</td>

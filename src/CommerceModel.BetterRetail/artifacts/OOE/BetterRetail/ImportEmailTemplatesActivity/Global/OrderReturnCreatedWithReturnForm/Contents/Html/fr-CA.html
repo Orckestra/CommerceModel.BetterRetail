@@ -72,7 +72,12 @@
                                             <!--{% for item in Return.Items%}-->
                                             <tr>
                                                 <!--<td style="border-bottom: 1px solid #e1e4ea; padding: 20px 0;"><img src="{{item.ImageURL}}" width="76" alt="product-image" style="display: block;" /></td>-->
-                                                <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;" colspan="2"><strong>{{item.ProductDisplayName}}</strong></td>
+                                                <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;" colspan="2">
+                                                    <strong>{{item.ProductDisplayName}}</strong> <br />
+                                                    <!--{% for kva in item.KvaDisplayValues%}-->
+                                                    <span>{{kva}}</span><br />
+                                                    <!--{% endfor %}-->
+                                                </td>
                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
                                                     <strong>{{item.ProductPrice | money:"fr-CA" }}</strong>
                                                 </td>
