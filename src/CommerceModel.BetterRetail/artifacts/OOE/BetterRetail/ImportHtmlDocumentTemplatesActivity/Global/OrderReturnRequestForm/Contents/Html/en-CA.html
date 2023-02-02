@@ -94,6 +94,13 @@
                                                 <td style="line-height: 20px; text-align: left;" colspan="2"><strong>Sub total:</strong></td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ Return.TotalSubtotal | money:"en-CA" }}</strong></td>
                                             </tr>
+                                            <!--{% for tax in Return.AggregatedTaxes %}-->
+                                            <tr>
+                                                <td colspan="3">&nbsp;</td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2">{{ tax.DisplayName| localize:"en-CA"}}</td>
+                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ tax.TaxTotal | money:"en-CA" }}</strong></td>
+                                            </tr>
+                                            <!--{% endfor %} -->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="line-height: 20px; text-align: left;" colspan="2">Tax total:</td>
