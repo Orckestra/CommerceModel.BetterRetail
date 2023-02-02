@@ -135,13 +135,13 @@
   {
     "type": "Shipping",
     "scopeId": "BetterRetailCanada",
-    "name": "Buy-online-pick-up-in-store (LRU)",
+    "name": "Buy-online-pick-up-in-store (Load Balanced)",
     "implementationTypeName": "BOPISFulfillmentProvider",
-    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying LRU Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
     "displayName": {
-      "en-US": "BOPIS Fulfillment Provider (LRU)",
-      "en-CA": "BOPIS Fulfillment Provider (LRU)",
-      "fr-CA": "Fournisseur BOPIS (LRU)"
+      "en-US": "BOPIS Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS (Charge équilibrée)"
     },
     "isActive": true,
     "values": {
@@ -188,9 +188,9 @@
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "description": "The Ship from Store LRU Fulfillment Provider is designed to sequentially route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase then determines the next Fulfillment location to select for the shipment. The underlying LRU Routing Provider controls splitting and prioritization. The provider then governs policies associated with in-store fulfillment, concluding with stores shipping the order shipments to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
     "displayName": {
-      "en-US": "Ship From Store (LRU)",
-      "en-CA": "Ship From Store (LRU)",
-      "fr-CA": "Expédition à partir du magasin (LRU)"
+      "en-US": "SFS Fulfillment Provider (Load Balanced)",
+      "en-CA": "SFS Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur SFS (Charge équilibrée)"
     },
     "isActive": true,
     "values": {
@@ -233,9 +233,9 @@
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
     "displayName": {
-      "en-US": "Ship From Store (Competition)",
-      "en-CA": "Ship From Store (Competition)",
-      "fr-CA": "Expédition à partir du magasin (Compétition)"
+      "en-US": "SFS Fulfillment Provider (Competition)",
+      "en-CA": "SFS Fulfillment Provider (Competition)",
+      "fr-CA": "Fournisseur SFS (Compétition)"
     },
     "isActive": true,
     "values": {
@@ -1030,12 +1030,12 @@
     "id": "7275307C-36D2-4580-AAFF-920293B2250C",
     "type": "Shipping",
     "scopeId": "BetterRetailNorway",
-    "name": "Ship from store (LRU)",
+    "name": "Ship from store (Load Balanced)",
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "displayName": {
-      "en-US": "Ship From Store (LRU)",
-      "en-CA": "Ship From Store (LRU)",
-      "fr-CA": "Expédition à partir du magasin (LRU)"
+      "en-US": "SFS Fulfillment Provider (Load Balanced)",
+      "en-CA": "SFS Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur SFS (Charge équilibrée)"
     },
     "description": "The Ship from Store Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
     "isActive": true,
@@ -1075,13 +1075,13 @@
   {
     "type": "Shipping",
     "scopeId": "BetterRetailNorway",
-    "name": "Buy-online-pick-up-in-store (LRU)",
+    "name": "Buy-online-pick-up-in-store (Load Balanced)",
     "implementationTypeName": "BOPISFulfillmentProvider",
     "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying LRU Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
     "displayName": {
-      "en-US": "BOPIS Fulfillment Provider (LRU)",
-      "en-CA": "BOPIS Fulfillment Provider (LRU)",
-      "fr-CA": "Fournisseur BOPIS (LRU)"
+      "en-US": "BOPIS Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS (Charge équilibrée)"
     },
     "isActive": true,
     "values": {
@@ -1129,9 +1129,9 @@
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
     "displayName": {
-      "en-US": "Ship From Store (Competition)",
-      "en-CA": "Ship From Store (Competition)",
-      "fr-CA": "Expédition à partir du magasin (Compétition)"
+      "en-US": "SFS Fulfillment Provider (Competition)",
+      "en-CA": "SFS Fulfillment Provider (Competition)",
+      "fr-CA": "Fournisseur SFS (Compétition)"
     },
     "isActive": true,
     "values": {
@@ -1620,12 +1620,12 @@
     "id": "2F036881-2E6C-4317-B343-60B8FE29A0C9",
     "type": "Shipping",
     "scopeId": "BetterRetailEuro",
-    "name": "Ship from store (LRU)",
+    "name": "Ship from store (Load Balanced)",
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "displayName": {
-      "en-US": "Ship From Store (LRU)",
-      "en-CA": "Ship From Store (LRU)",
-      "fr-CA": "Expédition à partir du magasin (LRU)"
+      "en-US": "Ship From Store (Load Balanced)",
+      "en-CA": "Ship From Store (Load Balanced)",
+      "fr-CA": "Fournisseur SFS (Charge équilibrée)"
     },
     "description": "The Ship from Store Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
     "isActive": true,
@@ -1666,13 +1666,13 @@
   {
     "type": "Shipping",
     "scopeId": "BetterRetailEuro",
-    "name": "Buy-online-pick-up-in-store (LRU)",
+    "name": "Buy-online-pick-up-in-store (Load Balanced)",
     "implementationTypeName": "BOPISFulfillmentProvider",
     "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying LRU Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
     "displayName": {
-      "en-US": "BOPIS Fulfillment Provider (LRU)",
-      "en-CA": "BOPIS Fulfillment Provider (LRU)",
-      "fr-CA": "Fournisseur BOPIS (LRU)"
+      "en-US": "BOPIS Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS (Charge équilibrée)"
     },
     "isActive": true,
     "values": {
@@ -1720,9 +1720,9 @@
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
     "displayName": {
-      "en-US": "Ship From Store (Competition)",
-      "en-CA": "Ship From Store (Competition)",
-      "fr-CA": "Expédition à partir du magasin (Compétition)"
+      "en-US": "SFS Fulfillment Provider (Competition)",
+      "en-CA": "SFS Fulfillment Provider (Competition)",
+      "fr-CA": "Fournisseur SFS (Compétition)"
     },
     "isActive": true,
     "values": {
@@ -2143,13 +2143,13 @@
   {
     "type": "Shipping",
     "scopeId": "BetterRetailUSA",
-    "name": "Buy-online-pick-up-in-store (LRU)",
+    "name": "Buy-online-pick-up-in-store (Load Balanced)",
     "implementationTypeName": "BOPISFulfillmentProvider",
     "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying LRU Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
     "displayName": {
-      "en-US": "BOPIS Fulfillment Provider (LRU)",
-      "en-CA": "BOPIS Fulfillment Provider (LRU)",
-      "fr-CA": "Fournisseur BOPIS (LRU)"
+      "en-US": "BOPIS Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS (Charge équilibrée)"
     },
     "isActive": true,
     "values": {
@@ -2196,9 +2196,9 @@
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "description": "The Ship from Store LRU Fulfillment Provider is designed to sequentially route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase then determines the next Fulfillment location to select for the shipment. The underlying LRU Routing Provider controls splitting and prioritization. The provider then governs policies associated with in-store fulfillment, concluding with stores shipping the order shipments to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
     "displayName": {
-      "en-US": "Ship From Store (LRU)",
-      "en-CA": "Ship From Store (LRU)",
-      "fr-CA": "Expédition à partir du magasin (LRU)"
+      "en-US": "SFS Fulfillment Provider (Load Balanced)",
+      "en-CA": "SFS Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur SFS (Charge équilibrée)"
     },
     "isActive": true,
     "values": {
@@ -2242,9 +2242,9 @@
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
     "displayName": {
-      "en-US": "Ship From Store (Competition)",
-      "en-CA": "Ship From Store (Competition)",
-      "fr-CA": "Expédition à partir du magasin (Compétition)"
+      "en-US": "SFS Fulfillment Provider (Competition)",
+      "en-CA": "SFS Fulfillment Provider (Competition)",
+      "fr-CA": "Fournisseur SFS (Compétition)"
     },
     "isActive": true,
     "values": {
