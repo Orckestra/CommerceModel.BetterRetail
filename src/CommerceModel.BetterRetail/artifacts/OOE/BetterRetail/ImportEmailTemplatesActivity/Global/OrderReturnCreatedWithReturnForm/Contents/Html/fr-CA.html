@@ -128,11 +128,13 @@
                                                 <td style="line-height: 20px; text-align: left;" colspan="2">Total des taxes :</td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ Return.TotalTax | money:"fr-CA" }}</strong></td>
                                             </tr>
+                                            <!--{% if Return.TotalAdjustment != 0 and Return.TotalAdjustment != null and  Return.TotalAdjustment !='' %} -->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2">Ajustement total :</td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2">Montant de l'ajustement:</td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ Return.TotalAdjustment | money:"fr-CA" }}</strong></td>
                                             </tr>
+                                            <!--{% endif %}-->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="line-height: 20px; text-align: left;" colspan="2"><strong style="font-size: 18px;"> Montant du remboursement demand&eacute; : </strong></td>
