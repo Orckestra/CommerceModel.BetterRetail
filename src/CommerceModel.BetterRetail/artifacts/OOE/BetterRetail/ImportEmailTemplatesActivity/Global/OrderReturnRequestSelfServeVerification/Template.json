@@ -34,7 +34,7 @@
     "displayName": {
         "en-US": "Order Return Request Form Self Service",
         "en-CA": "Order Return Request Form Self Service",
-        "fr-CA": "Formulaire de requête de retour de commande libre-service"
+        "fr-CA": "Formulaire libre-service de requête de retour"
     },
     "isActive": true,
     "type": "Email"
