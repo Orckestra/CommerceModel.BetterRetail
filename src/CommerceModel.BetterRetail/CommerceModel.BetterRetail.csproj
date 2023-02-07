@@ -330,6 +330,12 @@
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreated\Contents\Text\en-CA.txt" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreated\Contents\Text\en-US.txt" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreated\Contents\Text\fr-CA.txt" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnRequestSelfServeVerification\Contents\Html\en-CA.html" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnRequestSelfServeVerification\Contents\Html\en-US.html" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnRequestSelfServeVerification\Contents\Html\fr-CA.html" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnRequestSelfServeVerification\Contents\Text\en-CA.txt" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnRequestSelfServeVerification\Contents\Text\en-US.txt" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnRequestSelfServeVerification\Contents\Text\fr-CA.txt" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnStatusClosed\Contents\Html\en-CA.html" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnStatusClosed\Contents\Html\en-US.html" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnStatusClosed\Contents\Html\fr-CA.html" />
@@ -581,6 +587,7 @@
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreatedWithReturnForm\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreatedWithReturnDocs\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportHtmlDocumentTemplatesActivity\Global\OrderReturnRequestForm\Template.json" />
+    <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnRequestSelfServeVerification\Template.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS - Header.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER - Header.json" />
