@@ -7,6 +7,7 @@
  xmlns:octc="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.CommerceManagement;assembly=OrckestraCommerce.CommerceModelUtilities"
  xmlns:octc1="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.CommerceDefinition;assembly=OrckestraCommerce.CommerceModelUtilities"
  xmlns:octf="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.FoundationProviders;assembly=OrckestraCommerce.CommerceModelUtilities"
+ xmlns:octh="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.HtmlDocumentTemplates;assembly=OrckestraCommerce.CommerceModelUtilities"
  xmlns:octn="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.Notifications;assembly=OrckestraCommerce.CommerceModelUtilities"
  xmlns:octp="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.Products;assembly=OrckestraCommerce.CommerceModelUtilities"
  xmlns:octp1="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.Profiles;assembly=OrckestraCommerce.CommerceModelUtilities"
@@ -18,8 +19,7 @@
  xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
  xmlns:this="clr-namespace:CommerceModel.BetterRetail"
- xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
- xmlns:htmlDocumentTemplates="clr-namespace:OrckestraCommerce.CommerceModelUtilities.TaskActivities.HtmlDocumentTemplates;assembly=OrckestraCommerce.CommerceModelUtilities">
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="DefaultDomainName" Type="InArgument(x:String)" />
     <x:Property Name="SmtpHost" Type="InArgument(x:String)" />
@@ -57,12 +57,16 @@
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>Autofac</AssemblyReference>
+      <AssemblyReference>Azure.Core</AssemblyReference>
+      <AssemblyReference>Azure.Storage.Blobs</AssemblyReference>
+      <AssemblyReference>Azure.Storage.Common</AssemblyReference>
       <AssemblyReference>Common.Logging</AssemblyReference>
       <AssemblyReference>Common.Logging.Core</AssemblyReference>
       <AssemblyReference>Ionic.Zip</AssemblyReference>
       <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
       <AssemblyReference>Microsoft.Azure.Documents.Client</AssemblyReference>
       <AssemblyReference>Microsoft.Azure.KeyVault.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.Data.Edm</AssemblyReference>
       <AssemblyReference>Microsoft.Data.OData</AssemblyReference>
       <AssemblyReference>Microsoft.Data.Services.Client</AssemblyReference>
@@ -74,7 +78,6 @@
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage</AssemblyReference>
-      <AssemblyReference>Microsoft.WindowsAzure.Storage</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>Orckestra.AsyncExtensions</AssemblyReference>
       <AssemblyReference>Orckestra.Caching</AssemblyReference>
@@ -94,30 +97,45 @@
       <AssemblyReference>OrckestraCommerce.CommerceModelUtilities</AssemblyReference>
       <AssemblyReference>OrckestraCommerce.DataExchange</AssemblyReference>
       <AssemblyReference>Quartz</AssemblyReference>
+      <AssemblyReference>ServiceStack.Common</AssemblyReference>
       <AssemblyReference>ServiceStack.Interfaces</AssemblyReference>
+      <AssemblyReference>ServiceStack.OrmLite</AssemblyReference>
+      <AssemblyReference>ServiceStack.OrmLite.SqlServer</AssemblyReference>
       <AssemblyReference>ServiceStack.Text</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>System.Buffers</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ComponentModel.DataAnnotations</AssemblyReference>
       <AssemblyReference>System.Configuration</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.IO</AssemblyReference>
+      <AssemblyReference>System.IO.Hashing</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Net</AssemblyReference>
+      <AssemblyReference>System.Net.Http</AssemblyReference>
       <AssemblyReference>System.Net.Http.WinHttpHandler</AssemblyReference>
       <AssemblyReference>System.Numerics</AssemblyReference>
       <AssemblyReference>System.Numerics.Vectors</AssemblyReference>
       <AssemblyReference>System.Reactive.Core</AssemblyReference>
       <AssemblyReference>System.Reactive.Interfaces</AssemblyReference>
       <AssemblyReference>System.Reactive.Linq</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
       <AssemblyReference>System.Runtime.CompilerServices.Unsafe</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Security.Cryptography.Algorithms</AssemblyReference>
       <AssemblyReference>System.Security.Cryptography.Encoding</AssemblyReference>
       <AssemblyReference>System.Security.Cryptography.Primitives</AssemblyReference>
       <AssemblyReference>System.Security.Cryptography.X509Certificates</AssemblyReference>
       <AssemblyReference>System.Spatial</AssemblyReference>
+      <AssemblyReference>System.Text.Encodings.Web</AssemblyReference>
+      <AssemblyReference>System.Text.Json</AssemblyReference>
       <AssemblyReference>System.Threading.Tasks.Dataflow</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Extensions</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
@@ -174,13 +192,13 @@
         </InArgument>
       </octn:ImportEmailTemplatesActivity.CommerceModelName>
     </octn:ImportEmailTemplatesActivity>
-    <htmlDocumentTemplates:ImportHtmlDocumentTemplatesActivity ResultBlobUrl="{x:Null}" AdditionalPaths="Features/FulfillmentProviders/HtmlTemplates" sap2010:WorkflowViewState.IdRef="ImportHtmlDocumentTemplatesActivity_2">
-      <htmlDocumentTemplates:ImportHtmlDocumentTemplatesActivity.CommerceModelName>
+    <octh:ImportHtmlDocumentTemplatesActivity ResultBlobUrl="{x:Null}" AdditionalPaths="Features/FulfillmentProviders/HtmlTemplates" sap2010:WorkflowViewState.IdRef="ImportHtmlDocumentTemplatesActivity_2">
+      <octh:ImportHtmlDocumentTemplatesActivity.CommerceModelName>
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
         </InArgument>
-      </htmlDocumentTemplates:ImportHtmlDocumentTemplatesActivity.CommerceModelName>
-    </htmlDocumentTemplates:ImportHtmlDocumentTemplatesActivity>
+      </octh:ImportHtmlDocumentTemplatesActivity.CommerceModelName>
+    </octh:ImportHtmlDocumentTemplatesActivity>
     <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
@@ -250,7 +268,7 @@
           </InArgument>
         </octp1:QueueImportProfileSchemaActivity.CommerceModelName>
       </octp1:QueueImportProfileSchemaActivity>
-      <octp1:QueueProfilesImportActivity ResultBlobUrl="{x:Null}" FileImportName="BetterRetailProfiles.zip" sap2010:WorkflowViewState.IdRef="QueueProfilesImportActivity_1">
+      <octp1:QueueProfilesImportActivity RequiresCompression="{x:Null}" ResultBlobUrl="{x:Null}" FileImportName="BetterRetailProfiles.zip" sap2010:WorkflowViewState.IdRef="QueueProfilesImportActivity_1">
         <octp1:QueueProfilesImportActivity.CommerceModelName>
           <InArgument x:TypeArguments="x:String">
             <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
@@ -371,13 +389,12 @@
         </InArgument>
       </octf:ImportFoundationProvidersActivity.SmtpUserName>
     </octf:ImportFoundationProvidersActivity>
-    <oct:AddOrUpdateSearchQueryActivity ResultBlobUrl="{x:Null}">
+    <oct:AddOrUpdateSearchQueryActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="AddOrUpdateSearchQueryActivity_1">
       <oct:AddOrUpdateSearchQueryActivity.CommerceModelName>
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
         </InArgument>
       </oct:AddOrUpdateSearchQueryActivity.CommerceModelName>
-      <sap2010:WorkflowViewState.IdRef>AddOrUpdateSearchQueryActivity_1</sap2010:WorkflowViewState.IdRef>
     </oct:AddOrUpdateSearchQueryActivity>
     <oct:ExecuteSQLScriptActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="ExecuteSQLScriptActivity_1">
       <oct:ExecuteSQLScriptActivity.CommerceModelName>
@@ -394,7 +411,7 @@
       </cba:CustomExecuteSQLScriptActivity.CommerceModelName>
       <cba:CustomExecuteSQLScriptActivity.FilesToExecute>
         <InArgument x:TypeArguments="s:String[]">
-          <mca:CSharpValue x:TypeArguments="s:String[]">new[] { "SetIsFacettableAdminToLookups.sql" }</mca:CSharpValue>
+          <mca:CSharpValue x:TypeArguments="s:String[]">new[] { "AddTemplateVariables.sql", "SetIsFacettableAdminToLookups.sql" }</mca:CSharpValue>
         </InArgument>
       </cba:CustomExecuteSQLScriptActivity.FilesToExecute>
     </cba:CustomExecuteSQLScriptActivity>
@@ -406,12 +423,12 @@
       </oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
     </oct:WaitForCorrelatedTasksCompletionsActivity>
     <octs:QueueSearchIndexingActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueSearchIndexingActivity_1" />
-    <sads:DebugSymbol.Symbol>d11DOlxHaXRcQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXExvYWREYXRhUHJvZmlsZV9EZXZUZXN0LnhhbWxDKAcoSQEEAY4BAZIBAQMjByNJAQKDAQPmAg4CAQGHATSHAUICAQKJAQWPAS0DAd4DkAEFmwE6AwHBA5wBBZwB6AEDAbwDnQEFqAEhAwGfA6kBBa8BKQMBjwOwAQWiAhADAaQBowIFowKKAQMBowGkAgWkAoYBAwGiAaUCBasCOQMBkwGsAgXVAi4CASLWAgXcAiQCARPdAgXjAjUCAQTkAgXkAoIBAgEDiQGgAYkBvgEDAe0DjAELjAFaAwHfA5gBC5gBgAEDAdADkwELkwFaAwHCA5wBxgGcAc0BAwHAA5wBlAGcAboBAwG/A5wB4gGcAeUBAwG+A5wB1QGcAdkBAwG9A6UBC6UBWgMBrgOgAQugAVoDAaADrAELrAFaAwGRA6kBUakBfwMBkAOxAQe8ARADAfICvQEH2gEyAwHHAtsBB+EBLQMBuALiAQfoATADAakC6QEH7wE3AwGaAvABB/sBJwMB/QH8AQeHAiMDAeABiAIHjgI0AwHRAY8CB5oCPwMBtAGbAgehAjcDAaUBqAILqAJaAwGUAbkCC7kCawMBhQG+Agu+AlECAXfIAgvIAlACAWnSAgvSAlUCAVvNAgvNAloCAU3DAgvDAlUCAT+vAguvAmgCATG0Agu0AmsCASPZAgvZAloCARTgAgvgAlQCAQW5AQ25AVcDAYEDtAENtAFeAwHzAtcBDdcBXgMB5ALFAQ3SARQDAdYCwAENwAFcAwHIAt4BDd4BXAMBuQLlAQ3lAVwDAaoC7AEN7AFWAwGbAvgBDfgB5QEDAYwC8wEN8wFcAwH+AYQCDYQC2gYDAe8B/wEN/wFcAwHhAYsCDYsCXAMB0gGXAg2XAl4DAcMBkgINkgJkAwG1AZ4CDZ4CVgMBpgE=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d2JDOlxQcm9qZWN0c1xDb21tZXJjZU1vZGVsLkJldHRlclJldGFpbFxzcmNcQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcTG9hZERhdGFQcm9maWxlX0RldlRlc3QueGFtbFMqBypJAQQBjgEBkgEBAyUHJUkBApYBA6sDDgIBAZoBNJoBQgIBApwBBaIBLQMB1gSjAQWuAToDAbkErwEFrwHoAQMBtASwAQW7ASEDAZcEvAEFwgEpAwGHBMMBBckBMAMB9wPKAQXUAhADAdAB1QIF1QKKAQMBzwHWAgXWAoYBAwHOAdcCBd0COQMBvwHeAgWHAy4CAU6IAwWOAyoCAT+PAwWVAyQCATCWAwWhAyoCAROiAwWoAzUCAQSpAwWpA4IBAgEDnAGgAZwBvgEDAeUEnwELnwFaAwHXBKsBC6sBgAEDAcgEpgELpgFaAwG6BK8BxgGvAc0BAwG4BK8BlAGvAboBAwG3BK8B4gGvAeUBAwG2BK8B1QGvAdkBAwG1BLgBC7gBWgMBpgSzAQuzAVoDAZgEvwELvwFaAwGJBLwBUbwBfwMBiATGAQvGAVoDAfkDwwFYwwGFAQMB+APLAQfWARADAdoD1wEH3QEyAwHLA94BB+QBNwMBvAPlAQeAAjIDAZEDgQIHhwItAwGCA4gCB44CMAMB8wKPAgeaAisDAdUCmwIHoQI3AwHGAqICB60CJwMBqQKuAge5AiMDAYwCugIHwAI0AwH9AcECB8wCPwMB4AHNAgfTAjcDAdEB2gIL2gJaAwHAAesCC+sCawMBsQHwAgvwAlEDAaMB+gIL+gJQAwGVAYQDC4QDVQMBhwH/Agv/AloCAXn1Agv1AlUCAWvhAgvhAmgCAV3mAgvmAmsCAU+LAwuLA1oCAUCSAwuSA1oCATGZAwuZA1oCASKeAwueA5QBAgEUpQMLpQNUAgEF0wEN0wFXAwHpA84BDc4BXgMB2wPaAQ3aAVwDAcwD4QEN4QFWAwG9A/0BDf0BXgMBrgPtAQ34ARQDAaAD6AEN6AFcAwGSA4QCDYQCXAMBgwOLAg2LAlwDAfQCjwJxjwKLAQMB8gKXAg2XAlMDAeQCkgINkgJcAwHWAp4CDZ4CVgMBxwKqAg2qAl8DAbgCpQINpQJcAwGqArYCDbYCXwMBmwKxAg2xAlwDAY0CvQINvQJcAwH+AckCDckCXgMB7wHEAg3EAmQDAeEB0AIN0AJWAwHSAQ==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
       <sap2010:ViewStateData Id="InitializeCommerceModelActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
-      <sap2010:ViewStateData Id="SubstituteConfigurationsBeforeImportsActivity_1" sap:VirtualizedContainerService.HintSize="264,22" />
+      <sap2010:ViewStateData Id="SubstituteConfigurationsBeforeImportsActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="CreateUserAuthorizationsActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="CreateUsersActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="ImportEmailTemplatesActivity_2" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
@@ -445,14 +462,14 @@
       <sap2010:ViewStateData Id="CustomExecuteSQLScriptActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="WaitForCorrelatedTasksCompletionsActivity_3" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
       <sap2010:ViewStateData Id="QueueSearchIndexingActivity_1" sap:VirtualizedContainerService.HintSize="265.6,22.4" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="286,1612">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="288,1996.8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="CommerceModel.BetterRetail.LoadDataProfile_DevTest_1" sap:VirtualizedContainerService.HintSize="326,1692" />
+      <sap2010:ViewStateData Id="CommerceModel.BetterRetail.LoadDataProfile_DevTest_1" sap:VirtualizedContainerService.HintSize="328,2076.8" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
