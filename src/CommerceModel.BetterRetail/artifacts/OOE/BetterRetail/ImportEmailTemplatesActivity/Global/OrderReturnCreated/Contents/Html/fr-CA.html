@@ -148,7 +148,7 @@
                                             <!--{% for additionalFee in Return.AggregatedAdditionalFees %}-->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2">{{additionalFee.DisplayName | localize:"fr-CA"}}:</td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2">{{additionalFee.DisplayName | localize:"fr-CA", additionalFee.Name}}:</td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{additionalFee.TotalAmount| money:"fr-CA" }}</strong></td>
                                             </tr>
                                             <!--{% endfor %} -->
