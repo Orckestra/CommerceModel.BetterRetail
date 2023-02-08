@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+</head>
+
+<body style="margin: 0; padding: 0;">
+    <table style="width: 100%; color: #222426; font-family: Arial, Helvetica, sans-serif; font-size: 14px;" border="0"
+           cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td>
+                    <table style="margin: 0px auto; width: 70%; text-align: left; font-size: 14px; border-collapse: collapse;"
+                           cellspacing="0" cellpadding="0">
+                        <thead>
+
+                            <tr>
+                                <td colspan="2">
+                                    <div style="padding-top: 5px; padding-bottom: 10px; border-bottom: 1px solid #d0d8de;">
+                                        <img class="title-icon" src="https://occdev0localdeployment.blob.core.windows.net/images/better-retail.png" alt="icon" />
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody style="border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
+                            <!-- intro text -->
+                            <tr>
+                                <td style="padding: 20px 20px 36px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
+                                    <h1 style="font-size: 32px;">Hi {{Order.Cart.Customer.FirstName}} {{Order.Cart.Customer.LastName}},</h1>
+                                    <p style="line-height: 20px;">You have requested to initiate a return for <strong>{{Order.OrderNumber}}</strong>. Click "Start your Return" to continue with your request.</p>
+                                    <p style="line-height: 20px;">If you didn't request a return, please ignore this email.</p>
+                                    <p style="line-height: 40px">
+                                        <a style="background-color: #0f4e66; padding: 10px 20px; text-transform: uppercase; color: #ffffff; text-decoration: none; border-radius: 3px; font-size: 13px" href="{{Variables.OrderReturnCenterBaseUrl}}#/token/{{Order.OrderNumber}}/{{Token}}" target="_blank"
+                                           rel="noopener">Start your Return</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- footer -->
+                        <tfoot style="background-color: #ffffff;">
+                            <tr>
+                                <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
+                                    <p>Please do not reply to this email message. It was sent from an address that cannot accept incoming emails.</p>
+                                    <p style="font-size: 12px;">&copy;Copyright {{Variables.CopyrightsYear}} {{Variables.CompanyName}}. All rights reserved.</p>
+                            </tr>
+
+                        </tfoot>
+                        <!-- //// -->
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>&nbsp;</p>
+</body>
+
+</html>
