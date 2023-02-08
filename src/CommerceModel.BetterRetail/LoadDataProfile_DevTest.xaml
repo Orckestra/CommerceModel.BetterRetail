@@ -394,7 +394,7 @@
       </cba:CustomExecuteSQLScriptActivity.CommerceModelName>
       <cba:CustomExecuteSQLScriptActivity.FilesToExecute>
         <InArgument x:TypeArguments="s:String[]">
-          <mca:CSharpValue x:TypeArguments="s:String[]">new[] { "SetIsFacettableAdminToLookups.sql" }</mca:CSharpValue>
+          <mca:CSharpValue x:TypeArguments="s:String[]">new[] {"AddTemplateVariables.sql", "SetIsFacettableAdminToLookups.sql" }</mca:CSharpValue>
         </InArgument>
       </cba:CustomExecuteSQLScriptActivity.FilesToExecute>
     </cba:CustomExecuteSQLScriptActivity>
