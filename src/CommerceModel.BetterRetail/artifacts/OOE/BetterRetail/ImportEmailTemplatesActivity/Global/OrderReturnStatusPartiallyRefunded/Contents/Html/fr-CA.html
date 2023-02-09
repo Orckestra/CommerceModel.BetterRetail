@@ -27,7 +27,7 @@
                                     <h1>Bonjour {{Return.CustomerFirstName}} {{Return.CustomerLastName}},</h1>
                                     <p style="line-height: 20px;">
                                         Nous désirons vous informer que votre requête de retour a été complétée. Un remboursement partiel de {{ Return.TotalRefunded| money:"fr-CA" }} a été autorisé et certains articles ont été rejetés puisqu'ils enfreignent notre politique de retours et remboursements. Le remboursement sera appliqué dans 5 jours ouvrables et sera indiqué sur votre relevé. <br />
-                                        Pour plus d'informations concernant les articles rejetés, vous pouvez contacter le service à la clientèle au numéro {{Contact.PhoneNumber}} ou par courriel {{Contact.Email}}.
+                                        Pour plus d'informations concernant les articles rejetés, vous pouvez contacter le service à la clientèle au numéro {{Variables.OrderReturnCenterContactPhoneNumber}} ou par courriel {{Variables.OrderReturnCenterContactEmail}}.
                                     </p>
                                 </td>
                             </tr>
