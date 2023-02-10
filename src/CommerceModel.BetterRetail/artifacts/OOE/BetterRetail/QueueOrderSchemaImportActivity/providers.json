@@ -184,6 +184,59 @@
   {
     "type": "Shipping",
     "scopeId": "BetterRetailCanada",
+    "name": "Buy-online-pick-up-in-store Short (Load Balanced)",
+    "implementationTypeName": "BOPISShortFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store Short fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "displayName": {
+      "en-US": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS court (Charge équilibrée)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequiredForTransfer": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
     "name": "Ship from store (Load Balanced)",
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "description": "The Ship from Store Load Balanced Fulfillment Provider is designed to sequentially route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase then determines the next Fulfillment location to select for the shipment. The underlying Load Balanced Routing Provider controls splitting and prioritization. The provider then governs policies associated with in-store fulfillment, concluding with stores shipping the order shipments to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
@@ -229,6 +282,55 @@
   {
     "type": "Shipping",
     "scopeId": "BetterRetailCanada",
+    "name": "Ship from store Short (Load Balanced)",
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "displayName": {
+      "en-US": "SFS Short Fulfillment Provider (Load Balanced)",
+      "en-CA": "SFS Short Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur SFS court (Charge équilibrée)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
     "name": "Ship from store (Competition)",
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
@@ -257,6 +359,47 @@
         "value": 15
       },
       "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "Ship from store Short (Competition)",
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
+    "displayName": {
+      "en-US": "SFS Short Fulfillment Provider (Competition)",
+      "en-CA": "SFS Short Fulfillment Provider (Competition)",
+      "fr-CA": "Fournisseur SFS court (Compétition)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "7A169585-DA71-442D-8F74-02BEAFB03B3C",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
         "__type": "ValueOfBoolean",
         "value": false
       }
@@ -359,7 +502,7 @@
     "displayName": {
 
     },
-    "isActive": true,
+    "isActive": false,
     "values": {
       "EnableLogging": {
         "__type": "ValueOfBoolean",
@@ -1075,6 +1218,55 @@
   {
     "type": "Shipping",
     "scopeId": "BetterRetailNorway",
+    "name": "Ship from store Short (Load Balanced)",
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "displayName": {
+      "en-US": "SFS Short Fulfillment Provider (Load Balanced)",
+      "en-CA": "SFS Short Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur SFS court (Charge équilibrée)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "3D5F3AA6-CCAD-4B20-AA5C-92BAAB283F96",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
     "name": "Buy-online-pick-up-in-store (Load Balanced)",
     "implementationTypeName": "BOPISFulfillmentProvider",
     "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
@@ -1122,6 +1314,59 @@
     "propertyConfigurations": {}
   },
   {
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "Buy-online-pick-up-in-store Short (Load Balanced)",
+    "implementationTypeName": "BOPISShortFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store Short fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "displayName": {
+      "en-US": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS court (Charge équilibrée)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "3D5F3AA6-CCAD-4B20-AA5C-92BAAB283F96",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequiredForTransfer": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
     "id": "670B239B-61C4-6749-08DA-31D0CA0B4039",
     "type": "Shipping",
     "scopeId": "BetterRetailNorway",
@@ -1161,6 +1406,47 @@
         "value": false
       },
       "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "Ship from store Short (Competition)",
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
+    "displayName": {
+      "en-US": "SFS Short Fulfillment Provider (Competition)",
+      "en-CA": "SFS Short Fulfillment Provider (Competition)",
+      "fr-CA": "Fournisseur SFS court (Compétition)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "9B058102-9D34-70C3-6ACC-2B66E3200241",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
         "__type": "ValueOfBoolean",
         "value": false
       }
@@ -1262,7 +1548,7 @@
     "displayName": {
 
     },
-    "isActive": true,
+    "isActive": false,
     "values": {
       "EnableLogging": {
         "__type": "ValueOfBoolean",
@@ -1623,8 +1909,8 @@
     "name": "Ship from store (Load Balanced)",
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "displayName": {
-      "en-US": "Ship From Store (Load Balanced)",
-      "en-CA": "Ship From Store (Load Balanced)",
+      "en-US": "SFS Fulfillment Provider (Load Balanced)",
+      "en-CA": "SFS Fulfillment Provider (Load Balanced)",
       "fr-CA": "Fournisseur SFS (Charge équilibrée)"
     },
     "description": "The Ship from Store Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
@@ -1657,6 +1943,56 @@
         "value": false
       },
       "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailEuro",
+    "name": "Ship from store Short (Load Balanced)",
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "displayName": {
+      "en-US": "SFS Short Fulfillment Provider (Load Balanced)",
+      "en-CA": "SFS Short Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur SFS court (Charge équilibrée)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "01F61BCF-9885-4F1E-B03A-F86294E13BA4",
+      "FulfillmentCarrierProviderId": "c850b1c9-ea17-448e-aac2-7e82d794d207",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
         "__type": "ValueOfBoolean",
         "value": false
       }
@@ -1713,6 +2049,59 @@
     "propertyConfigurations": {}
   },
   {
+    "type": "Shipping",
+    "scopeId": "BetterRetailEuro",
+    "name": "Buy-online-pick-up-in-store Short (Load Balanced)",
+    "implementationTypeName": "BOPISShortFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store Short fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "displayName": {
+      "en-US": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS court (Charge équilibrée)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "01F61BCF-9885-4F1E-B03A-F86294E13BA4",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequiredForTransfer": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
     "id": "13DAC5EC-475E-4639-A152-9E695FB0AA2F",
     "type": "Shipping",
     "scopeId": "BetterRetailEuro",
@@ -1753,6 +2142,48 @@
         "value": false
       },
       "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailEuro",
+    "name": "Ship from store Short (Competition)",
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
+    "displayName": {
+      "en-US": "SFS Short Fulfillment Provider (Competition)",
+      "en-CA": "SFS Short Fulfillment Provider (Competition)",
+      "fr-CA": "Fournisseur SFS court (Compétition)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "4BB38EF2-0D3D-4489-A826-E7FB44000107",
+      "FulfillmentCarrierProviderId": "c850b1c9-ea17-448e-aac2-7e82d794d207",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
         "__type": "ValueOfBoolean",
         "value": false
       }
@@ -1854,7 +2285,7 @@
     "displayName": {
 
     },
-    "isActive": true,
+    "isActive": false,
     "values": {
       "EnableLogging": {
         "__type": "ValueOfBoolean",
@@ -2192,6 +2623,59 @@
   {
     "type": "Shipping",
     "scopeId": "BetterRetailUSA",
+    "name": "Buy-online-pick-up-in-store Short (Load Balanced)",
+    "implementationTypeName": "BOPISShortFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store Short fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "displayName": {
+      "en-US": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS court (Charge équilibrée)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "CEBEDCDD-7281-43EA-8F75-C927FAAC7EB7",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequiredForTransfer": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailUSA",
     "name": "Ship from store (Load Balanced)",
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "description": "The Ship from Store Load Balanced Fulfillment Provider is designed to sequentially route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase then determines the next Fulfillment location to select for the shipment. The underlying Load Balanced Routing Provider controls splitting and prioritization. The provider then governs policies associated with in-store fulfillment, concluding with stores shipping the order shipments to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
@@ -2238,6 +2722,56 @@
   {
     "type": "Shipping",
     "scopeId": "BetterRetailUSA",
+    "name": "Ship from store Short (Load Balanced)",
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "displayName": {
+      "en-US": "SFS Short Fulfillment Provider (Load Balanced)",
+      "en-CA": "SFS Short Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur SFS court (Charge équilibrée)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentCarrierProviderId": "9DCCD461-EB20-4990-992B-F3C4F277B560",
+      "FulfillmentRoutingProviderId": "CEBEDCDD-7281-43EA-8F75-C927FAAC7EB7",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailUSA",
     "name": "Ship from store (Competition)",
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
@@ -2266,6 +2800,47 @@
         "value": 15
       },
       "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "type": "Shipping",
+    "scopeId": "BetterRetailUSA",
+    "name": "Ship from store Short (Competition)",
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
+    "displayName": {
+      "en-US": "SFS Short Fulfillment Provider (Competition)",
+      "en-CA": "SFS Short Fulfillment Provider (Competition)",
+      "fr-CA": "Fournisseur SFS court (Compétition)"
+    },
+    "isActive": true,
+    "values": {
+      "FulfillmentRoutingProviderId": "6FCB318C-AEE8-4BF6-89B5-34745E9573F0",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
         "__type": "ValueOfBoolean",
         "value": false
       }
