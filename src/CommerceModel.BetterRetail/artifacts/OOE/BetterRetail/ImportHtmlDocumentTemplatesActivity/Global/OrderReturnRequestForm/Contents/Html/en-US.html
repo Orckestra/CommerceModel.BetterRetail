@@ -37,8 +37,9 @@
                                                     <p style="font-size: 18px; margin-top: 0px;"><strong>Return Request Creation Date: </strong>{{Return.Created | localize_date: "en-US","D"}}</p>
                                                 </td>
 
-                                                <td style="vertical-align: top; padding-top:20px">
-                                                    {{Return.ReturnNumber | code128}}
+                                                <td style="vertical-align: top; padding-top: 20px; text-align: center; font-size: 24px;">
+                                                    {{Return.ReturnNumber | barcode: 4}}
+                                                    <p style="margin: 0;">{{Return.ReturnNumber}}</p>
                                                 </td>
                                         </tbody>
                                     </table>
