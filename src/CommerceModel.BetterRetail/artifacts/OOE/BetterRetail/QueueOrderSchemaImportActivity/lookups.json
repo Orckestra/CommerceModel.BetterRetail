@@ -683,6 +683,16 @@
         },
         "sortOrder": 0,
         "isActive": true
+      },
+      {
+        "value": "MT_CompleteTransfer",
+        "displayName": {
+          "en-US": "Complete transfer",
+          "en-CA": "Complete Transfer",
+          "fr-CA": "Compléter le transfert"
+        },
+        "sortOrder": 10,
+        "isActive": true
       }
     ],
     "displayName": {
