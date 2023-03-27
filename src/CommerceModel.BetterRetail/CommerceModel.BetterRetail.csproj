@@ -306,6 +306,7 @@
     </Compile>
     <Content Include="artifacts\OOE\BetterRetail\CustomExecuteSQLScriptActivity\Product\SetIsFacettableAdminToLookups.sql" />
     <Content Include="artifacts\OOE\BetterRetail\CustomExecuteSQLScriptActivity\Foundation\AddTemplateVariables.sql" />
+    <Content Include="artifacts\OOE\BetterRetail\ExecuteSQLScriptActivity\Order\EnableOrderReturns.sql" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreatedWithReturnDocs\Contents\Html\en-CA.html" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreatedWithReturnDocs\Contents\Html\en-US.html" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnCreatedWithReturnDocs\Contents\Html\fr-CA.html" />
