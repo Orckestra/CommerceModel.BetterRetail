@@ -25,9 +25,9 @@
     {
       "name": "Subject",
       "content": {
-        "en-CA": "Return Request #{{OrderReturn.ReturnNumber}} for order #{{OrderReturn.OrderNumber}}",
-        "en-US": "Return Request #{{OrderReturn.ReturnNumber}} for order #{{OrderReturn.OrderNumber}}",
-        "fr-CA": "Requête de retour #{{OrderReturn.ReturnNumber}} pour la commande  #{{OrderReturn.OrderNumber}}"
+        "en-CA": "Return Request #{{OrderReturn.OrderReturnNumber}} for order #{{OrderReturn.OrderNumber}}",
+        "en-US": "Return Request #{{OrderReturn.OrderReturnNumber}} for order #{{OrderReturn.OrderNumber}}",
+        "fr-CA": "Requête de retour #{{OrderReturn.OrderReturnNumber}} pour la commande  #{{OrderReturn.OrderNumber}}"
       }
     }
   ],

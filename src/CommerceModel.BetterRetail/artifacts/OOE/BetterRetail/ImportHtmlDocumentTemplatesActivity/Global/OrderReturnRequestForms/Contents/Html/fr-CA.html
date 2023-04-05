@@ -32,14 +32,14 @@
 
                                                     <h1>Formulaire de retour</h1>
                                                     <h2 style="font-size: 24px; margin-bottom: 0px; margin-top: 0px;">Num&eacute;ro de la commande: {{OrderReturn.OrderNumber}}</h2>
-                                                    <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Num&eacute;ro de la requ&ecirc;te de retour: </strong>{{OrderReturn.ReturnNumber}}</p>
+                                                    <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Num&eacute;ro de la requ&ecirc;te de retour: </strong>{{OrderReturn.OrderReturnNumber}}</p>
                                                     <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Statut de la requ&ecirc;te de retour: </strong>{{OrderReturn.ReturnStatusDisplayName | localize:"fr-CA"}}</p>
                                                     <p style="font-size: 18px; margin-top: 0px;"><strong>Date de cr&eacute;ation de la requ&ecirc;te de retour: </strong>{{OrderReturn.Created | localize_date: "fr-CA","D"}}</p>
                                                 </td>
 
                                                 <td style="vertical-align: top; padding-top: 20px; text-align: center; font-size: 24px;">
-                                                    {{OrderReturn.ReturnNumber | barcode: 4}}
-                                                    <p style="margin: 0;">{{OrderReturn.ReturnNumber}}</p>
+                                                    {{OrderReturn.OrderReturnNumber | barcode: 4}}
+                                                    <p style="margin: 0;">{{OrderReturn.OrderReturnNumber}}</p>
                                                 </td>
                                         </tbody>
                                     </table>

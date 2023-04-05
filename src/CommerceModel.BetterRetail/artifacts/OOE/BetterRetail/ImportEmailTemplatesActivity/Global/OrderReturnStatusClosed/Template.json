@@ -25,9 +25,9 @@
     {
       "name": "Subject",
       "content": {
-        "en-CA": "Your return request #{{OrderReturn.ReturnNumber}} for order #{{OrderReturn.OrderNumber}} has been rejected",
-        "en-US": "Your return request #{{OrderReturn.ReturnNumber}} for order #{{OrderReturn.OrderNumber}} has been rejected",
-        "fr-CA": "Votre requête de retour #{{OrderReturn.ReturnNumber}}  pour la commande  #{{OrderReturn.OrderNumber}} a été rejetée"
+        "en-CA": "Your return request #{{OrderReturn.OrderReturnNumber}} for order #{{OrderReturn.OrderNumber}} has been rejected",
+        "en-US": "Your return request #{{OrderReturn.OrderReturnNumber}} for order #{{OrderReturn.OrderNumber}} has been rejected",
+        "fr-CA": "Votre requête de retour #{{OrderReturn.OrderReturnNumber}}  pour la commande  #{{OrderReturn.OrderNumber}} a été rejetée"
       }
     }
   ],

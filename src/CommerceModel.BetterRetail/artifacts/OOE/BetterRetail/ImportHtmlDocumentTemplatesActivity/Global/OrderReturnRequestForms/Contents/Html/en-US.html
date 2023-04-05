@@ -32,14 +32,14 @@
 
                                                     <h1>Return Request Form</h1>
                                                     <h2 style="font-size: 24px; margin-bottom: 0px; margin-top: 0px;">Order: {{OrderReturn.OrderNumber}}</h2>
-                                                    <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Return Number: </strong>{{OrderReturn.ReturnNumber}}</p>
+                                                    <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Return Number: </strong>{{OrderReturn.OrderReturnNumber}}</p>
                                                     <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Return Status: </strong>{{OrderReturn.ReturnStatusDisplayName | localize:"en-US"}}</p>
                                                     <p style="font-size: 18px; margin-top: 0px;"><strong>Return Request Creation Date: </strong>{{OrderReturn.Created | localize_date: "en-US","D"}}</p>
                                                 </td>
 
                                                 <td style="vertical-align: top; padding-top: 20px; text-align: center; font-size: 24px;">
-                                                    {{OrderReturn.ReturnNumber | barcode: 4}}
-                                                    <p style="margin: 0;">{{OrderReturn.ReturnNumber}}</p>
+                                                    {{OrderReturn.OrderReturnNumber | barcode: 4}}
+                                                    <p style="margin: 0;">{{OrderReturn.OrderReturnNumber}}</p>
                                                 </td>
                                         </tbody>
                                     </table>

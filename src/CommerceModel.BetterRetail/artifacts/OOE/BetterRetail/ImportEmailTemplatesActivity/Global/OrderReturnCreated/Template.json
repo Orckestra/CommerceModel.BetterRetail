@@ -25,9 +25,9 @@
     {
       "name": "Subject",
       "content": {
-        "en-CA": "Return Request - {{OrderReturn.ReturnNumber}}",
-        "en-US": "Return Request - {{OrderReturn.ReturnNumber}}",
-        "fr-CA": "Demande de retour – {{OrderReturn.ReturnNumber}}"
+        "en-CA": "Return Request - {{OrderReturn.OrderReturnNumber}}",
+        "en-US": "Return Request - {{OrderReturn.OrderReturnNumber}}",
+        "fr-CA": "Demande de retour – {{OrderReturn.OrderReturnNumber}}"
       }
     }
   ],

@@ -25,9 +25,9 @@
     {
       "name": "Subject",
       "content": {
-        "en-CA": "Your refund request #{{OrderReturn.ReturnNumber}} for order #{{OrderReturn.OrderNumber}} has been processed",
-        "en-US": "Your refund request #{{OrderReturn.ReturnNumber}} for order #{{OrderReturn.OrderNumber}} has been processed",
-        "fr-CA": "Votre requête de remboursement #{{OrderReturn.ReturnNumber}} pour la commande #{{OrderReturn.OrderNumber}} a été émis"
+        "en-CA": "Your refund request #{{OrderReturn.OrderReturnNumber}} for order #{{OrderReturn.OrderNumber}} has been processed",
+        "en-US": "Your refund request #{{OrderReturn.OrderReturnNumber}} for order #{{OrderReturn.OrderNumber}} has been processed",
+        "fr-CA": "Votre requête de remboursement #{{OrderReturn.OrderReturnNumber}} pour la commande #{{OrderReturn.OrderNumber}} a été émis"
       }
     }
   ],
