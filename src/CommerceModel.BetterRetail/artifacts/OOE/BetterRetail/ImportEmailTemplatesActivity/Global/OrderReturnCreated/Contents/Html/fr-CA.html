@@ -24,7 +24,7 @@
                             <!-- intro text -->
                             <tr>
                                 <td style="padding: 20px 20px 36px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                    <h1 style="font-size: 32px;">Bonjour {{Return.CustomerFirstName}} {{Return.CustomerLastName}},</h1>
+                                    <h1 style="font-size: 32px;">Bonjour {{OrderReturn.CustomerFirstName}} {{OrderReturn.CustomerLastName}},</h1>
                                     <p style="line-height: 20px;">Ceci est une confirmation de la réception de votre demande de retour. Vous serez informé de son traitement. </p>
                                     <p>Vous pouvez consulter les détails de cette demande de retour dans l'e-mail suivant:</p>
                                 </td>
@@ -42,13 +42,13 @@
                                                 <td style="vertical-align: top;padding-bottom: 30px;padding-right: 40px;">
 
                                                     <p style="font-size: 20px; margin-bottom: 0px; margin-top: 0px;">
-                                                        <strong>Numéro de demande de retour:</strong> {{Return.ReturnNumber}}
+                                                        <strong>Numéro de demande de retour:</strong> {{OrderReturn.ReturnNumber}}
                                                     </p>
                                                     <p style="font-size: 20px; margin-bottom: 0px; margin-top: 5px;">
-                                                        <strong>Numéro de commande associé:</strong> {{Return.OrderNumber}}
+                                                        <strong>Numéro de commande associé:</strong> {{OrderReturn.OrderNumber}}
                                                     </p>
                                                     <p style="font-size: 20px; margin-top: 5px;">
-                                                        <strong>Date de création de la demande de retour:</strong> {{Return.Created | localize_date: "fr-CA","D"}}
+                                                        <strong>Date de création de la demande de retour:</strong> {{OrderReturn.Created | localize_date: "fr-CA","D"}}
                                                     </p>
                                                 </td>
 
@@ -84,7 +84,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <!--{% for item in Return.Items%}-->
+                                            <!--{% for item in OrderReturn.Items%}-->
                                             <tr>
                                                 <!--<td style="border-bottom: 1px solid #e1e4ea; padding: 20px 0;"><img src="{{item.ImageURL}}" width="76" alt="product-image" style="display: block;" /></td>-->
                                                 <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;"
@@ -120,7 +120,7 @@
                                                     </span>
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
-                                                    <strong>{{ Return.TotalMerchandise | money:"fr-CA" }}</strong>
+                                                    <strong>{{ OrderReturn.TotalMerchandise | money:"fr-CA" }}</strong>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -132,7 +132,7 @@
                                                     </span>
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
-                                                    <strong>{{ Return.TotalDiscount | money:"fr-CA" }}</strong>
+                                                    <strong>{{ OrderReturn.TotalDiscount | money:"fr-CA" }}</strong>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -142,17 +142,17 @@
                                                     Sous-total:
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
-                                                    <strong>{{ Return.TotalSubtotal | money:"fr-CA" }}</strong>
+                                                    <strong>{{ OrderReturn.TotalSubtotal | money:"fr-CA" }}</strong>
                                                 </td>
                                             </tr>
-                                            <!--{% for additionalFee in Return.AggregatedAdditionalFees %}-->
+                                            <!--{% for additionalFee in OrderReturn.AggregatedAdditionalFees %}-->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="line-height: 20px; text-align: left;" colspan="2">{{additionalFee.DisplayName | localize:"fr-CA", additionalFee.Name}}:</td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{additionalFee.TotalAmount| money:"fr-CA" }}</strong></td>
                                             </tr>
                                             <!--{% endfor %} -->
-                                            <!--{% for tax in Return.AggregatedTaxes %}-->
+                                            <!--{% for tax in OrderReturn.AggregatedTaxes %}-->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="line-height: 20px; text-align: left;" colspan="2">{{ tax.DisplayName| localize:"fr-CA"}}:</td>
@@ -166,14 +166,14 @@
                                                     Total des taxes:
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
-                                                    <strong>{{ Return.TotalTax | money:"fr-CA" }}</strong>
+                                                    <strong>{{ OrderReturn.TotalTax | money:"fr-CA" }}</strong>
                                                 </td>
                                             </tr>
-                                            <!--{% if Return.TotalAdjustment != 0 and Return.TotalAdjustment != null and  Return.TotalAdjustment !='' %} -->
+                                            <!--{% if OrderReturn.TotalAdjustment != 0 and OrderReturn.TotalAdjustment != null and  OrderReturn.TotalAdjustment !='' %} -->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="line-height: 20px; text-align: left;" colspan="2">Montant de l'ajustement:</td>
-                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ Return.TotalAdjustment | money:"fr-CA" }}</strong></td>
+                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ OrderReturn.TotalAdjustment | money:"fr-CA" }}</strong></td>
                                             </tr>
                                             <!--{% endif %}-->
                                             <tr>
@@ -185,7 +185,7 @@
                                                     </strong>
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
-                                                    <strong style="font-size: 18px;">{{ Return.Total| money:"fr-CA" }}</strong>
+                                                    <strong style="font-size: 18px;">{{ OrderReturn.Total| money:"fr-CA" }}</strong>
                                                 </td>
                                             </tr>
                                         </tfoot>

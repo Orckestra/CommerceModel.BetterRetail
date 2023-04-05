@@ -17,17 +17,17 @@
     {
       "name": "ReceiverDisplayName",
       "content": {
-        "en-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
-        "en-US": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
-        "fr-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}"
+        "en-CA": "{{OrderReturn.CustomerFirstName}} {{OrderReturn.CustomerLastName}}",
+        "en-US": "{{OrderReturn.CustomerFirstName}} {{OrderReturn.CustomerLastName}}",
+        "fr-CA": "{{OrderReturn.CustomerFirstName}} {{OrderReturn.CustomerLastName}}"
       }
     },
     {
       "name": "Subject",
       "content": {
-        "en-CA": "Your return request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}} has been processed",
-        "en-US": "Your return request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}} has been processed",
-        "fr-CA": "Votre requête de retour #{{Return.ReturnNumber}}  pour la commande  #{{Return.OrderNumber}} a été complétée"
+        "en-CA": "Your return request #{{OrderReturn.ReturnNumber}} for order #{{OrderReturn.OrderNumber}} has been processed",
+        "en-US": "Your return request #{{OrderReturn.ReturnNumber}} for order #{{OrderReturn.OrderNumber}} has been processed",
+        "fr-CA": "Votre requête de retour #{{OrderReturn.ReturnNumber}}  pour la commande  #{{OrderReturn.OrderNumber}} a été complétée"
       }
     }
   ],

@@ -10,50 +10,43 @@
         <tbody>
             <tr>
                 <td>
-                    <table style="margin: 0px auto; width: 800px; text-align: left; font-size: 14px; border-collapse: collapse;page-break-after: always;"
+                    <table style="margin: 0px auto; width: 100%; text-align: left; font-size: 14px; border-collapse: collapse;"
                            cellspacing="0" cellpadding="0">
                         <tbody>
-                            <tr>
-                                <td colspan="2">
-                                    <div style="padding-top: 5px; padding-bottom: 10px; border-bottom: 1px solid #d0d8de;">
-                                        <img class="title-icon"
-                                             src="https://occdev0localdeployment.blob.core.windows.net/images/better-retail.png"
-                                             alt="icon" />
-                                    </div>
-                                </td>
-                            </tr>
                             <!-- //// -->
-                            <!-- intro text -->
-                            <tr>
-                                <td style="padding: 20px 20px 36px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                    <h1 style="font-size: 32px;">Bonjour {{Return.CustomerFirstName}} {{Return.CustomerLastName}}, </h1>
-                                    <p style="line-height: 20px;">Ceci est une confirmation de la réception de votre requête de retour. Vous serez informés lorsque le traitement de votre requête sera complété.</</p>
-                                    <p style="line-height: 20px;">Pour retourner vos articles, veuillez imprimer  la requête d'autorisation de retour attachée à ce courriel. Ensuite, le formulaire de retour avec vos articles à l'intérieur de votre colis avant de nous les retourner tel que précisé dans notre <a href=""> politique de retour.</a>
-                                    <p>Vous pouvez réviser les détails de la requête de retour dans ce courriel :</p>
-                                </td>
-                            </tr>
                             <!-- shipment info -->
                             <tr>
-                                <td style="padding: 15px 20px;" colspan="2">
-                                    <h1>Information de la requête de retour</h1>
-                                </td>
-                            </tr>
-                            <tr>
                                 <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                    <table style="width: 100%; font-size: 14px;" border="0" cellspacing="0" cellpadding="0">
+                                    <table style="width: 100%; font-size: 14px;" border="0" cellspacing="0"
+                                           cellpadding="0">
                                         <tbody>
                                             <tr>
-                                                <td style="vertical-align: top; padding-bottom: 30px; padding-right: 40px;">
-                                                    <p style="font-size: 20px; margin-bottom: 0px; margin-top: 0px;"><strong>Num&eacute;ro de la requ&ecirc;te de retour :</strong> {{Return.ReturnNumber}}</p>
-                                                    <p style="font-size: 20px; margin-bottom: 0px; margin-top: 5px;"><strong>Num&eacute;ro de la commande associ&eacute;e :</strong> {{Return.OrderNumber}}</p>
-                                                    <p style="font-size: 20px; margin-top: 5px;"><strong>Date de cr&eacute;ation de la requ&ecirc;te de retour :</strong> {{Return.Created | localize_date: "fr-CA","D"}}</p>
+                                                <td colspan="3">
+                                                    <div style="padding-top: 5px; padding-bottom: 10px; border-bottom: 1px solid #d0d8de;">
+                                                        <img class="title-icon" src="https://occdev0localdeployment.blob.core.windows.net/images/better-retail.png" alt="icon" />
+                                                    </div>
                                                 </td>
                                             </tr>
+                                            <tr>
+                                                <td style="vertical-align: top;padding-bottom: 30px;padding-right: 40px;" width="70%">
+
+                                                    <h1>Formulaire de retour</h1>
+                                                    <h2 style="font-size: 24px; margin-bottom: 0px; margin-top: 0px;">Num&eacute;ro de la commande: {{OrderReturn.OrderNumber}}</h2>
+                                                    <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Num&eacute;ro de la requ&ecirc;te de retour: </strong>{{OrderReturn.ReturnNumber}}</p>
+                                                    <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Statut de la requ&ecirc;te de retour: </strong>{{OrderReturn.ReturnStatusDisplayName | localize:"fr-CA"}}</p>
+                                                    <p style="font-size: 18px; margin-top: 0px;"><strong>Date de cr&eacute;ation de la requ&ecirc;te de retour: </strong>{{OrderReturn.Created | localize_date: "fr-CA","D"}}</p>
+                                                </td>
+
+                                                <td style="vertical-align: top; padding-top: 20px; text-align: center; font-size: 24px;">
+                                                    {{OrderReturn.ReturnNumber | barcode: 4}}
+                                                    <p style="margin: 0;">{{OrderReturn.ReturnNumber}}</p>
+                                                </td>
                                         </tbody>
                                     </table>
                                 </td>
                             </tr>
-                            <!-- //// --> <!-- Return summary -->
+                            <!-- //// -->
+                            <!-- //// --> <!-- Return Form -->
                             <tr>
                                 <td style="padding: 15px 20px 60px;">
                                     <p style="font-size: 18px; margin-top: 0px;"><strong>D&eacute;tails du retour</strong></p>
@@ -69,7 +62,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <!--{% for item in Return.Items%}-->
+                                            <!--{% for item in OrderReturn.Items%}-->
                                             <tr>
                                                 <!--<td style="border-bottom: 1px solid #e1e4ea; padding: 20px 0;"><img src="{{item.ImageURL}}" width="76" alt="product-image" style="display: block;" /></td>-->
                                                 <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;" colspan="2">
@@ -97,26 +90,26 @@
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="line-height: 20px; text-align: left;" colspan="2"><span style="text-transform: none;"> Total de la marchandise : </span></td>
-                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ Return.TotalMerchandise | money:"fr-CA" }}</strong></td>
+                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ OrderReturn.TotalMerchandise | money:"fr-CA" }}</strong></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="line-height: 20px; text-align: left;" colspan="2"><span style="text-transform: none;"> Rabais : </span></td>
-                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ Return.TotalDiscount | money:"fr-CA" }}</strong></td>
+                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ OrderReturn.TotalDiscount | money:"fr-CA" }}</strong></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="line-height: 20px; text-align: left;" colspan="2">Sous-total :</td>
-                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ Return.TotalSubtotal | money:"fr-CA" }}</strong></td>
+                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ OrderReturn.TotalSubtotal | money:"fr-CA" }}</strong></td>
                                             </tr>
-                                            <!--{% for additionalFee in Return.AggregatedAdditionalFees %}-->
+                                            <!--{% for additionalFee in OrderReturn.AggregatedAdditionalFees %}-->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="line-height: 20px; text-align: left;" colspan="2">{{additionalFee.DisplayName | localize:"fr-CA", additionalFee.Name}}:</td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{additionalFee.TotalAmount| money:"fr-CA" }}</strong></td>
                                             </tr>
                                             <!--{% endfor %} -->
-                                            <!--{% for tax in Return.AggregatedTaxes %}-->
+                                            <!--{% for tax in OrderReturn.AggregatedTaxes %}-->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="line-height: 20px; text-align: left;" colspan="2">{{ tax.DisplayName| localize:"fr-CA"}}:</td>
@@ -126,19 +119,19 @@
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="line-height: 20px; text-align: left;" colspan="2">Total des taxes :</td>
-                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ Return.TotalTax | money:"fr-CA" }}</strong></td>
+                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ OrderReturn.TotalTax | money:"fr-CA" }}</strong></td>
                                             </tr>
-                                            <!--{% if Return.TotalAdjustment != 0 and Return.TotalAdjustment != null and  Return.TotalAdjustment !='' %} -->
+                                            <!--{% if OrderReturn.TotalAdjustment != 0 and OrderReturn.TotalAdjustment != null and  OrderReturn.TotalAdjustment !='' %} -->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="line-height: 20px; text-align: left;" colspan="2">Montant de l'ajustement:</td>
-                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ Return.TotalAdjustment | money:"fr-CA" }}</strong></td>
+                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ OrderReturn.TotalAdjustment | money:"fr-CA" }}</strong></td>
                                             </tr>
                                             <!--{% endif %}-->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2"><strong style="font-size: 18px;"> Montant du remboursement demand&eacute; : </strong></td>
-                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong style="font-size: 18px;">{{ Return.Total| money:"fr-CA" }}</strong></td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2"><strong style="font-size: 18px;"> Estimation du remboursement demand&eacute; : </strong></td>
+                                                <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong style="font-size: 18px;">{{ OrderReturn.Total| money:"fr-CA" }}</strong></td>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -146,21 +139,6 @@
                             </tr>
                             <!-- //// -->
                         </tbody>
-                        <!-- footer -->
-                        <tfoot style="background-color: #ffffff;">
-                            <tr>
-                                <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                    <p>
-                                        Veuillez ne pas r&eacute;pondre &agrave; ce courriel. Il a &eacute;t&eacute; envoy&eacute; &agrave;
-                                        partir d'une adresse qui n'accepte pas les courriels. P
-                                    </p>
-                                    <p style="font-size: 12px;">
-                                        &copy; Droits d'auteur {{Variables.CopyrightsYear}} {{Variables.CompanyName}}
-                                        Tous droits r&eacute;serv&eacute;s.
-                                    </p>
-                                </td>
-                            </tr>
-                        </tfoot>
                     </table>
                 </td>
             </tr>

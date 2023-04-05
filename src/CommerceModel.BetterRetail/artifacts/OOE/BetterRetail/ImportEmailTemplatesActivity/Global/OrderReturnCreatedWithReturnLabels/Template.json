@@ -17,17 +17,17 @@
     {
       "name": "ReceiverDisplayName",
       "content": {
-        "en-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
-        "en-US": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
-        "fr-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}"
+        "en-CA": "{{OrderReturn.CustomerFirstName}} {{OrderReturn.CustomerLastName}}",
+        "en-US": "{{OrderReturn.CustomerFirstName}} {{OrderReturn.CustomerLastName}}",
+        "fr-CA": "{{OrderReturn.CustomerFirstName}} {{OrderReturn.CustomerLastName}}"
       }
     },
     {
       "name": "Subject",
       "content": {
-        "en-CA": "Return Request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}}",
-        "en-US": "Return Request #{{Return.ReturnNumber}} for order #{{Return.OrderNumber}}",
-        "fr-CA": "Requête de retour #{{Return.ReturnNumber}} pour la commande  #{{Return.OrderNumber}}"
+        "en-CA": "Return Request #{{OrderReturn.ReturnNumber}} for order #{{OrderReturn.OrderNumber}}",
+        "en-US": "Return Request #{{OrderReturn.ReturnNumber}} for order #{{OrderReturn.OrderNumber}}",
+        "fr-CA": "Requête de retour #{{OrderReturn.ReturnNumber}} pour la commande  #{{OrderReturn.OrderNumber}}"
       }
     }
   ],
