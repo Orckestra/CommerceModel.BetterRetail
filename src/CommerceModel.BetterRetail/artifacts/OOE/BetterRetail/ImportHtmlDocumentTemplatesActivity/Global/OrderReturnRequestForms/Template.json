@@ -1,5 +1,5 @@
 {
-    "name": "OrderReturnRequestForm",
+    "name": "OrderReturnRequestForms",
     "description": {
         "en-US": "This is a return request form for a shipment. It is needed if the return request form is configured in the return provider.",
         "en-CA": "This is a return request form for a shipment. It is needed if the return request form is configured in the return provider.",

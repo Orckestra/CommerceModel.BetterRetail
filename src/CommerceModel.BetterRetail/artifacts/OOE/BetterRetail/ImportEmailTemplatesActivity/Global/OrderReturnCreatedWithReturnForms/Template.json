@@ -1,5 +1,5 @@
 {
-    "name": "OrderReturnCreatedWithReturnForm",
+    "name": "OrderReturnCreatedWithReturnForms",
     "description": {
         "en-US": "Notification Email sent to the customers when their Return Request has been created with the configured return request form doc in the system.",
         "en-CA": "Notification Email sent to the customers when their Return Request has been created with the configured return request form doc in the system.",
