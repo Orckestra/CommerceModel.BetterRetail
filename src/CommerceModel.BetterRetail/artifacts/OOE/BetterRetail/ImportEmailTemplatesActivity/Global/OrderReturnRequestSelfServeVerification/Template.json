@@ -17,9 +17,9 @@
         {
             "name": "ReceiverDisplayName",
             "content": {
-                "en-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
-                "en-US": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}",
-                "fr-CA": "{{Return.CustomerFirstName}} {{Return.CustomerLastName}}"
+                "en-CA": "{{OrderReturn.CustomerFirstName}} {{OrderReturn.CustomerLastName}}",
+                "en-US": "{{OrderReturn.CustomerFirstName}} {{OrderReturn.CustomerLastName}}",
+                "fr-CA": "{{OrderReturn.CustomerFirstName}} {{OrderReturn.CustomerLastName}}"
             }
         },
         {

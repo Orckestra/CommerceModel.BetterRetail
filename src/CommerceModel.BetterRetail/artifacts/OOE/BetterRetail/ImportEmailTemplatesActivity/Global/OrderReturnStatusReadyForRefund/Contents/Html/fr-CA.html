@@ -24,7 +24,7 @@
                             <!-- intro text -->
                             <tr>
                                 <td style="padding: 20px 20px 36px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                    <h1>Bonjour {{Return.CustomerFirstName}} {{Return.CustomerLastName}},</h1>
+                                    <h1>Bonjour {{OrderReturn.CustomerFirstName}} {{OrderReturn.CustomerLastName}},</h1>
                                     <p style="line-height: 20px;">Ceci est pour vous informer que votre requête de retour est en cours de révision pour un remboursement. Une confirmation incluant le montant remboursé vous sera acheminé lorsque la requête sera complétée.</p>
                                 </td>
                             </tr>
@@ -40,16 +40,16 @@
                                             <tr>
                                                 <td style="vertical-align: top;padding-bottom: 30px;padding-right: 40px;">
                                                     <p style="font-size: 16px; margin-bottom: 0px; margin-top: 0px;">
-                                                        <strong>Statut du retour :</strong> {{Return.ReturnStatusDisplayName | localize:"fr-CA"}}
+                                                        <strong>Statut du retour :</strong> {{OrderReturn.ReturnStatusDisplayName | localize:"fr-CA"}}
                                                     </p>
                                                     <p style="font-size: 16px; margin-bottom: 0px; margin-top: 5px;">
-                                                        <strong>Numéro de la requête de retour :</strong> {{Return.ReturnNumber}}
+                                                        <strong>Numéro de la requête de retour :</strong> {{OrderReturn.OrderReturnNumber}}
                                                     </p>
                                                     <p style="font-size: 16px; margin-bottom: 0px; margin-top: 5px;">
-                                                        <strong>Numéro de commande associée :</strong> {{Return.OrderNumber}}
+                                                        <strong>Numéro de commande associée :</strong> {{OrderReturn.OrderNumber}}
                                                     </p>
                                                     <p style="font-size: 16px; margin-top: 5px;">
-                                                        <strong>Date de création de la requête de retour :</strong> {{Return.Created | localize_date: "fr-CA","D"}}
+                                                        <strong>Date de création de la requête de retour :</strong> {{OrderReturn.Created | localize_date: "fr-CA","D"}}
                                                     </p>
                                                 </td>
 
