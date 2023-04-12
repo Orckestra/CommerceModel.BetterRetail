@@ -4,6 +4,8 @@
 <head>
 </head>
 
+<!--{% assign templateCulture = "en-US" %}-->
+
 <body style="margin: 0; padding: 0;">
     <table style="width: 100%; color: #222426; font-family: Arial, Helvetica, sans-serif; font-size: 14px;" border="0"
            cellspacing="0" cellpadding="0">
@@ -43,7 +45,7 @@
                                             <tr>
                                                 <td style="vertical-align: top;padding-bottom: 30px;padding-right: 40px;">
                                                     <p style="font-size: 16px; margin-bottom: 0px; margin-top: 0px;">
-                                                        <strong>Return Status:</strong> {{OrderReturn.ReturnStatusDisplayName | localize:"en-US"}}
+                                                        <strong>Return Status:</strong> {{OrderReturn.Status | localize_lookup: "order", "ReturnStatus", templateCulture}}
                                                     </p>
                                                     <p style="font-size: 16px; margin-bottom: 0px; margin-top: 5px;">
                                                         <strong>Return Request Number:</strong> {{OrderReturn.OrderReturnNumber}}
@@ -52,13 +54,13 @@
                                                         <strong>Associated Order Number:</strong> {{OrderReturn.OrderNumber}}
                                                     </p>
                                                     <p style="font-size: 16px; margin-bottom: 0px; margin-top: 5px;">
-                                                        <strong>Return Request Creation Date:</strong> {{OrderReturn.Created | localize_date: "en-US","D"}}
+                                                        <strong>Return Request Creation Date:</strong> {{OrderReturn.Created | localize_date: templateCulture,"D"}}
                                                     </p>
                                                     <p style="font-size: 16px; margin-bottom: 0px; margin-top: 5px;">
-                                                        <strong>Return Request Modified Date:</strong> {{OrderReturn.LastModified | localize_date: "en-US","D"}}
+                                                        <strong>Return Request Modified Date:</strong> {{OrderReturn.LastModified | localize_date: templateCulture,"D"}}
                                                     </p>
                                                     <p style="font-size: 16px; margin-bottom: 0px; margin-top: 5px;">
-                                                        <strong>Return Request Amount:</strong> {{ OrderReturn.Total| money:"en-US" }}
+                                                        <strong>Return Request Amount:</strong> {{ OrderReturn.Total| money:templateCulture }}
                                                     </p>
                                                 </td>
                                             </tr>
@@ -104,14 +106,14 @@
                                                                     <!--{% endfor %}-->
                                                                 </td>
                                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                    <strong>{{item.ProductPrice | money:"en-US" }}</strong>
+                                                                    <strong>{{item.ProductPrice | money:templateCulture }}</strong>
                                                                 </td>
                                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
                                                                     <strong>{{item.Quantity}}</strong>
                                                                 </td>
 
                                                                 <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                    <strong>{{item.RejectReasonDisplayName | localize:"en-US"}}</strong>
+                                                                    <strong>{{item.RejectReasonDisplayName | localize:templateCulture}}</strong>
                                                                 </td>
                                                             </tr>
                                                             <!--{% endfor %}-->
