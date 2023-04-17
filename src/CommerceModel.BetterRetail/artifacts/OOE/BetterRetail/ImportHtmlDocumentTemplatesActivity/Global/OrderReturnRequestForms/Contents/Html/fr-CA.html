@@ -35,7 +35,7 @@
                                                     <h1>Formulaire de retour</h1>
                                                     <h2 style="font-size: 24px; margin-bottom: 0px; margin-top: 0px;">Num&eacute;ro de la commande: {{OrderReturn.OrderNumber}}</h2>
                                                     <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Num&eacute;ro de la requ&ecirc;te de retour: </strong>{{OrderReturn.OrderReturnNumber}}</p>
-                                                    <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Statut de la requ&ecirc;te de retour: </strong>{{OrderReturn.Status | localize_lookup: "order", "ReturnStatus", templateCulture}}</p>
+                                                    <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Statut de la requ&ecirc;te de retour: </strong>{{OrderReturn.Status | localize_lookup: "order", "OrderReturnStatus", templateCulture}}</p>
                                                     <p style="font-size: 18px; margin-top: 0px;"><strong>Date de cr&eacute;ation de la requ&ecirc;te de retour: </strong>{{OrderReturn.Created | localize_date: templateCulture,"D"}}</p>
                                                 </td>
 
@@ -80,7 +80,7 @@
                                                     <strong>{{item.Quantity}}</strong>
                                                 </td>
                                                 <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                    <strong>{{item.Reason | localize_lookup: "order", "ReturnReasons", templateCulture}}</strong>
+                                                    <strong>{{item.Reason | localize_lookup: "order", "OrderReturnReasons", templateCulture}}</strong>
                                                 </td>
                                                 <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid; text-align: right;">
                                                     <strong>{{item.SubTotal | money:templateCulture }}</strong>

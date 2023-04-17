@@ -35,7 +35,7 @@
                                                     <h1>Return Request Form</h1>
                                                     <h2 style="font-size: 24px; margin-bottom: 0px; margin-top: 0px;">Order: {{OrderReturn.OrderNumber}}</h2>
                                                     <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Return Number: </strong>{{OrderReturn.OrderReturnNumber}}</p>
-                                                    <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Return Status: </strong>{{OrderReturn.Status | localize_lookup: "order", "ReturnStatus", templateCulture}}</p>
+                                                    <p style="font-size: 18px; margin-top: 0px;margin-bottom: 0px; "><strong>Return Status: </strong>{{OrderReturn.Status | localize_lookup: "order", "OrderReturnStatus", templateCulture}}</p>
                                                     <p style="font-size: 18px; margin-top: 0px;"><strong>Return Request Creation Date: </strong>{{OrderReturn.Created | localize_date: templateCulture,"D"}}</p>
                                                 </td>
 
@@ -75,7 +75,7 @@
                                                 </td>
                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">{{item.ProductPrice | money:templateCulture }}</td>
                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">{{item.Quantity}}</td>
-                                                <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">{{item.Reason | localize_lookup: "order", "ReturnReasons", templateCulture}}</td>
+                                                <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">{{item.Reason | localize_lookup: "order", "OrderReturnReasons", templateCulture}}</td>
                                                 <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid; text-align: right;"><strong>{{item.SubTotal | money:templateCulture }}</strong></td>
                                             </tr>
                                             <!--{% endif %} -->

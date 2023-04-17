@@ -45,7 +45,7 @@
                                             <tr>
                                                 <td style="vertical-align: top;padding-bottom: 30px;padding-right: 40px;">
                                                     <p style="font-size: 16px; margin-bottom: 0px; margin-top: 0px;">
-                                                        <strong>Statut du retour :</strong> {{OrderReturn.Status | localize_lookup: "order", "ReturnStatus", templateCulture}}
+                                                        <strong>Statut du retour :</strong> {{OrderReturn.Status | localize_lookup: "order", "OrderReturnStatus", templateCulture}}
                                                     </p>
                                                     <p style="font-size: 16px; margin-bottom: 0px; margin-top: 5px;">
                                                         <strong>Numéro de la requête de retour :</strong> {{OrderReturn.OrderReturnNumber}}
@@ -109,7 +109,7 @@
                                                                 </td>
 
                                                                 <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                                                    <strong>{{item.Reason | localize_lookup: "order", "ReturnReasons", templateCulture}}</strong>
+                                                                    <strong>{{item.Reason | localize_lookup: "order", "OrderReturnReasons", templateCulture}}</strong>
                                                                 </td>
                                                                 <td style="padding: 20px 10px 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;text-align:right;">
                                                                     <strong>{{item.SubTotal | money:templateCulture }}</strong>
