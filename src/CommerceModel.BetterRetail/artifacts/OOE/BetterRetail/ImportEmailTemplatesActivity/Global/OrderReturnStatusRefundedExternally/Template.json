@@ -1,9 +1,9 @@
 {
   "name": "OrderReturnStatusRefunded",
   "description": {
-    "en-US": "Notification Email sent to the customer to tell them that the refund of their return request has been processed.",
-    "en-CA": "Notification Email sent to the customer to tell them that the refund of their return request has been processed.",
-    "fr-CA": "Courriel de notification envoyé au client pour l'aviser qu'un remboursement de retour a été émis."
+    "en-US": "Notification Email sent to the customer to tell them that the refund of their return request has been processed externally.",
+    "en-CA": "Notification Email sent to the customer to tell them that the refund of their return request has been processed externally.",
+    "fr-CA": "Courriel de notification envoyé au client pour l'aviser qu'un remboursement de retour a été émis en externe."
   },
   "contents": [
     {
@@ -27,7 +27,7 @@
       "content": {
         "en-CA": "Your refund request #{{OrderReturn.OrderReturnNumber}} for order #{{OrderReturn.OrderNumber}} has been processed",
         "en-US": "Your refund request #{{OrderReturn.OrderReturnNumber}} for order #{{OrderReturn.OrderNumber}} has been processed",
-        "fr-CA": "Votre requête de remboursement #{{OrderReturn.OrderReturnNumber}} pour la commande #{{OrderReturn.OrderNumber}} a été émis"
+        "fr-CA": "Votre requête de remboursement #{{OrderReturn.OrderReturnNumber}} pour la commande #{{OrderReturn.OrderNumber}} a été émis en externe"
       }
     }
   ],
