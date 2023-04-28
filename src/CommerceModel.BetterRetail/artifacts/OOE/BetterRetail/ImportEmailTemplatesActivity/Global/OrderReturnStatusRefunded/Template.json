@@ -3,7 +3,7 @@
   "description": {
     "en-US": "Notification Email sent to the customer to tell them that the refund of their return request has been processed.",
     "en-CA": "Notification Email sent to the customer to tell them that the refund of their return request has been processed.",
-    "fr-CA": "Courriel de notification envoyé au client pour l'aviser qu'un remboursement de retour a été émis."
+    "fr-CA": "Courriel de notification envoyé au client pour l'aviser qu'un remboursement pour leur retour a été émis."
   },
   "contents": [
     {
