@@ -2990,5 +2990,35 @@
       "ServiceUrl": "#AvalaraServiceUrl#"
     },
     "propertyConfigurations": {}
+  },
+  {
+    "id": "3c36adbf-be2c-4204-ad71-7d92633aa980",
+    "name": "Default Order Return Provider",
+    "type": "OrderReturns",
+    "scopeId": "BetterRetailCanada",
+    "implementationTypeName": "UniqueOrderReturnsCenterProvider",
+    "isActive": true,
+    "values": {
+      "MaximumTimeLimitForReturnsInDays": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "DefaultReturnCountry": "ca",
+      "FulfillmentCarrierProviderId": "d168e411abdc42c0a9a9a5d97e28847d",
+      "DefaultReturnZipPostalCode": "J4K5G4",
+      "GenerateOrderReturnLabels": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "DefaultReturnRecipientLastName": "Smith",
+      "GenerateOrderReturnRequestForm": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "DefaultReturnRecipientFirstName": "John",
+      "DefaultReturnAddressLine1": "1111 Rue Saint-Charles O #255",
+      "DefaultReturnCity": "longueuil",
+      "DefaultReturnStateProvinceCode": "qc"
+    }
   }
 ]
