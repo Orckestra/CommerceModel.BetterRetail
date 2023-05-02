@@ -26,7 +26,7 @@
                             <!-- intro text -->
                             <tr>
                                 <td style="padding: 20px 20px 36px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                    <h1>Bonjour {{OrderReturn.CustomerFirstName}} {{OrderReturn.CustomerLastName}},</h1>
+                                    <h1>Bonjour {{OrderReturn.CustomerAddress.FirstName}} {{OrderReturn.CustomerAddress.LastName}},</h1>
                                     <p style="line-height: 20px;">
                                         Nous désirons vous informer que votre requête de retour a été complétée. Un remboursement partiel de {{ OrderReturn.TotalRefunded| money:templateCulture }} a été autorisé et certains articles ont été rejetés puisqu'ils enfreignent notre politique de retours et remboursements. Le remboursement sera appliqué dans 5 jours ouvrables et sera indiqué sur votre relevé. <br />
                                         Pour plus d'informations concernant les articles rejetés, vous pouvez contacter le service à la clientèle au numéro {{Variables.OrderReturnCenterContactPhoneNumber}} ou par courriel {{Variables.OrderReturnCenterContactEmail}}.
@@ -186,7 +186,7 @@
                                                                 <td colspan="3">&nbsp;</td>
                                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                                     colspan="2">
-                                                                    <strong style="font-size: 18px;">Montant de la requête de remboursement</strong>
+                                                                    <strong style="font-size: 18px;">Montant de la requête de remboursement:</strong>
                                                                 </td>
                                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
                                                                     <strong style="font-size: 18px;">

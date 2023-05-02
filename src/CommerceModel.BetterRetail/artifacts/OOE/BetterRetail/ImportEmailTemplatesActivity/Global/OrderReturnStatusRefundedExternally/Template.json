@@ -32,9 +32,9 @@
     }
   ],
   "displayName": {
-    "en-US": "Return Request Refunded",
-    "en-CA": "Return Request Refunded",
-    "fr-CA": "Requête de retour remboursée"
+    "en-US": "Return Request Refunded Externally",
+    "en-CA": "Return Request Refunded Externally",
+    "fr-CA": "Requête de retour externe remboursée"
   },
   "isActive": true,
   "type": "Email"
