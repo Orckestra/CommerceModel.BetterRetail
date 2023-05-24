@@ -1,5 +1,5 @@
 {
-  "name": "OrderReturnStatusRefunded",
+  "name": "OrderReturnStatusRefundedExternally",
   "description": {
     "en-US": "Notification Email sent to the customer to tell them that the refund of their return request has been processed.",
     "en-CA": "Notification Email sent to the customer to tell them that the refund of their return request has been processed.",
