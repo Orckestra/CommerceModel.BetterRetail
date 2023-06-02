@@ -96,23 +96,9 @@ namespace CommerceModel.BetterRetail.Activities
                 var product = products.SingleOrDefault(p => p.Id.Equals(lineItem.ProductId, StringComparison.InvariantCultureIgnoreCase));
 
                 var allowSelectionWithoutScan = product?.PropertyBag?.GetOrDefault<bool>(AllowSelectionWithoutScanKey, false) ?? false;
-                var imageUrl = product?.PropertyBag?.GetOrDefault<string>(ImageUrlKey, null);
 
                 lineItem.PropertyBag = lineItem.PropertyBag ?? new Orckestra.Overture.ServiceModel.PropertyBag();
                 lineItem.ProductSummary.AllowSelectionWithoutScan = allowSelectionWithoutScan;
-
-                if (!string.IsNullOrWhiteSpace(imageUrl))
-                {
-                    lineItem.PropertyBag[ImageUrlKey] = imageUrl;
-                }
-                else
-                {
-                    context.ProcessingRecordTracker.TrackError(imageUrl ?? CultureNotFoundMessageId,
-                        "The cultureName of the cart was not provided in context.CurrentOrder.Cart.CultureName. Product information will not be retrieved.    " + imageUrl + "-----",
-                        new Dictionary<string, object> { { "CartId", context.CurrentOrder.Cart.Id } });
-
-                    lineItem.PropertyBag.Remove(ImageUrlKey);
-                }
 
                 AddPropertyBagForType(lineItem, product, nameof(Boolean), TestBoolean);
                 AddPropertyBagForType(lineItem, product, nameof(String), TestText);
