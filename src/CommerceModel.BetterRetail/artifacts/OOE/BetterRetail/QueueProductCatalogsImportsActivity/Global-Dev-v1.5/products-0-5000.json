@@ -72809,7 +72809,10 @@
 				"sequenceNumber": 0,
 				"catalogId": "Global",
 				"hiddenInScope": false,
-				"propertyBag": {}
+				"propertyBag": {
+					"Colour": "black",
+					"RetailSize": "10w"
+				}
 			},
 			{
 				"isActive": true,
@@ -72819,7 +72822,10 @@
 				"sequenceNumber": 1,
 				"catalogId": "Global",
 				"hiddenInScope": false,
-				"propertyBag": {}
+				"propertyBag": {
+					"Colour": "black",
+					"RetailSize": "105w"
+				}
 			},
 			{
 				"isActive": true,
@@ -72829,7 +72835,10 @@
 				"sequenceNumber": 2,
 				"catalogId": "Global",
 				"hiddenInScope": false,
-				"propertyBag": {}
+				"propertyBag": {
+					"Colour": "black",
+					"RetailSize": "11w"
+				}
 			}
 		],
 		"isActive": true,
@@ -72838,8 +72847,11 @@
 		"sequenceNumber": 0,
 		"catalogId": "Global",
 		"hiddenInScope": false,
-		"weightUOM": "Kilogram",
-		"weight": 12.92,
+		"displayName": {
+			"en-CA": "Special active wear",
+			"en-US": "Special active wear",
+			"fr-CA": "Vêtements de sport spéciaux"
+		},
 		"sku": "4242-KG0092",
 		"propertyBag": {
 			"PrimaryParentCategoryId": "mens_activewear",
@@ -72858,8 +72870,11 @@
 		"sequenceNumber": 0,
 		"catalogId": "Global",
 		"hiddenInScope": false,
-		"weightUOM": "Kilogram",
-		"weight": 12.93,
+		"displayName": {
+			"en-CA": "Professional active wear",
+			"en-US": "Professional active wear",
+			"fr-CA": "Vêtements de sport professionnels"
+		},
 		"sku": "4242-KG0093",
 		"propertyBag": {
 			"PrimaryParentCategoryId": "mens_activewear",
@@ -72876,7 +72891,10 @@
 				"sequenceNumber": 0,
 				"catalogId": "Global",
 				"hiddenInScope": false,
-				"propertyBag": {}
+				"propertyBag": {
+					"Colour": "black",
+					"RetailSize": "10w"
+				}
 			},
 			{
 				"isActive": true,
@@ -72886,7 +72904,10 @@
 				"sequenceNumber": 1,
 				"catalogId": "Global",
 				"hiddenInScope": false,
-				"propertyBag": {}
+				"propertyBag": {
+					"Colour": "black",
+					"RetailSize": "105w"
+				}
 			},
 			{
 				"isActive": true,
@@ -72896,7 +72917,10 @@
 				"sequenceNumber": 2,
 				"catalogId": "Global",
 				"hiddenInScope": false,
-				"propertyBag": {}
+				"propertyBag": {
+					"Colour": "black",
+					"RetailSize": "11w"
+				}
 			}
 		],
 		"isActive": true,
@@ -72905,8 +72929,11 @@
 		"sequenceNumber": 0,
 		"catalogId": "Global",
 		"hiddenInScope": false,
-		"weightUOM": "Kilogram",
-		"weight": 12.94,
+		"displayName": {
+			"en-CA": "Elite active wear",
+			"en-US": "Elite active wear",
+			"fr-CA": "Vêtements de sport d'élite"
+		},
 		"sku": "4242-KG0094",
 		"propertyBag": {
 			"PrimaryParentCategoryId": "mens_activewear",
