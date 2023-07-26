@@ -955,6 +955,14 @@
         "__type": "ValueOfBoolean",
         "value": true
       },
+      "SupportSale": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "SupportRefund": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
       "AuthorizePaymentUrl": "@BamboraBasePath@/api/paymentprovider/authorize",
       "RefreshPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refresh",
       "RefundPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refund",
@@ -1722,6 +1730,14 @@
         "__type": "ValueOfBoolean",
         "value": true
       },
+      "SupportSale": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "SupportRefund": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
       "AuthorizePaymentUrl": "@BamboraBasePath@/api/paymentprovider/authorize",
       "RefreshPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refresh",
       "RefundPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refund",
@@ -2459,6 +2475,14 @@
         "__type": "ValueOfBoolean",
         "value": true
       },
+      "SupportSale": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "SupportRefund": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
       "AuthorizePaymentUrl": "@BamboraBasePath@/api/paymentprovider/authorize",
       "RefreshPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refresh",
       "RefundPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refund",
@@ -2980,6 +3004,14 @@
         "value": 30
       },
       "IsRefreshOperationSupported": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "SupportSale": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "SupportRefund": {
         "__type": "ValueOfBoolean",
         "value": true
       },
