@@ -524,6 +524,43 @@
     "propertyConfigurations": {}
   },
   {
+    "id": "9d07d9c5-2298-40e7-80da-33d14646b725",
+    "type": "Payment",
+    "scopeId": "BetterRetailCanada",
+    "name": "External Refund",
+    "implementationTypeName": "UnmanagedRefundPaymentProvider",
+    "description": "The External Refund Payment Provider is designed to present refunds issued outside the scope of a payment settlement processed within the Orckestra Commerce Platform. External refunds may be required when a refund is sent by mail or issued though credits in loyalty points.",
+    "displayName": {
+      "en-US": "External Refund",
+      "en-CA": "External Refund",
+      "fr-CA": "Remboursement externe"
+    },
+    "isActive": true,
+    "values": {
+      "Cheque": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "LoyaltyPointCredit": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "MoneyTransfer": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "Other": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "StoreCredit": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
     "type": "Payment",
     "scopeId": "BetterRetailCanada",
     "name": "Moneris",
@@ -915,6 +952,14 @@
         "value": 30
       },
       "IsRefreshOperationSupported": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "SupportSale": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "SupportRefund": {
         "__type": "ValueOfBoolean",
         "value": true
       },
@@ -1685,6 +1730,14 @@
         "__type": "ValueOfBoolean",
         "value": true
       },
+      "SupportSale": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "SupportRefund": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
       "AuthorizePaymentUrl": "@BamboraBasePath@/api/paymentprovider/authorize",
       "RefreshPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refresh",
       "RefundPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refund",
@@ -2422,6 +2475,14 @@
         "__type": "ValueOfBoolean",
         "value": true
       },
+      "SupportSale": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "SupportRefund": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
       "AuthorizePaymentUrl": "@BamboraBasePath@/api/paymentprovider/authorize",
       "RefreshPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refresh",
       "RefundPaymentUrl": "@BamboraBasePath@/api/paymentprovider/refund",
@@ -2943,6 +3004,14 @@
         "value": 30
       },
       "IsRefreshOperationSupported": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "SupportSale": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "SupportRefund": {
         "__type": "ValueOfBoolean",
         "value": true
       },
