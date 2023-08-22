@@ -977,6 +977,8 @@
       "Username": "Test",
       "Password": "Passw0rd",
       "CreateCartPaymentVaultProfileUrl": "@BamboraBasePath@/api/paymentprofile/createcartpaymentvaultprofile",
+      "PaymentRefundOptionsUrl": "@BamboraBasePath@/api/paymentprovider/refundOptions",
+      "ComputeRefundsToProcessUrl": "@BamboraBasePath@/api/paymentprovider/refundOptions/process",
       "SupportedCultureIds": "en-US,en-CA,fr-CA"
     },
     "propertyConfigurations": {}
@@ -1750,6 +1752,8 @@
       "InitializePaymentUrl": "@BamboraBasePath@/api/paymentprovider/initialize",
       "AuthenticationKey": "SecureAndSecretKey",
       "CreateCartPaymentVaultProfileUrl": "@BamboraBasePath@/api/paymentprofile/createcartpaymentvaultprofile",
+      "PaymentRefundOptionsUrl": "@BamboraBasePath@/api/paymentprovider/refundOptions",
+      "ComputeRefundsToProcessUrl": "@BamboraBasePath@/api/paymentprovider/refundOptions/process",
       "SupportedCultureIds": "en-US,en-CA,fr-CA"
     },
     "propertyConfigurations": {}
@@ -2495,6 +2499,8 @@
       "InitializePaymentUrl": "@BamboraBasePath@/api/paymentprovider/initialize",
       "AuthenticationKey": "SecureAndSecretKey",
       "CreateCartPaymentVaultProfileUrl": "@BamboraBasePath@/api/paymentprofile/createcartpaymentvaultprofile",
+      "PaymentRefundOptionsUrl": "@BamboraBasePath@/api/paymentprovider/refundOptions",
+      "ComputeRefundsToProcessUrl": "@BamboraBasePath@/api/paymentprovider/refundOptions/process",
       "SupportedCultureIds": "en-US,en-CA,fr-CA"
     },
     "propertyConfigurations": {}
@@ -3027,6 +3033,8 @@
       "InitializePaymentUrl": "@BamboraBasePath@/api/paymentprovider/initialize",
       "AuthenticationKey": "SecureAndSecretKey",
       "CreateCartPaymentVaultProfileUrl": "@BamboraBasePath@/api/paymentprofile/createcartpaymentvaultprofile",
+      "PaymentRefundOptionsUrl": "@BamboraBasePath@/api/paymentprovider/refundOptions",
+      "ComputeRefundsToProcessUrl": "@BamboraBasePath@/api/paymentprovider/refundOptions/process",
       "SupportedCultureIds": "en-US,en-CA,fr-CA"
     },
     "propertyConfigurations": {}
