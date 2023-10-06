@@ -97,20 +97,6 @@ stages:
               currentBuildNumber: '$(Build.BuildNumber)'
 
           - task: PublishToCMP@1
-            name: PublishSales
-            displayName: Publish package for Sales
-            inputs:
-              cmpUrl: '$(CMP.Url)'
-              cmpUsername: '$(CMP.UserName)'
-              cmpPassword: '$(CMP.Password)'
-              cmpClientCode: 'sales'
-              cmpPackageFolder: '$(Pipeline.Workspace)/Nuget'
-              cmpStability: '$(CmpStability)'
-              cmpPackagesList: 'CommerceModel*.nupkg'
-              cmpPackagesListFilterType: 'FilePattern'
-              currentBuildNumber: '$(Build.BuildNumber)'
-
-          - task: PublishToCMP@1
             name: PublishSLS
             displayName: Publish package for SLS
             inputs:
