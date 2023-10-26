@@ -112,7 +112,7 @@
     "type": "FulfillmentRouting",
     "scopeId": "BetterRetailCanada",
     "name": "Multi-Segment Routing Provider",
-    "implementationTypeName": "MultiSegmentsFulfillmentRoutingProvider",
+    "implementationTypeName": "MultiSegmentFulfillmentRoutingProvider",
     "description": "The Multi-Segment Routing Provider is designed to provide configurable multi-phase routing for one or many instances of fulfillment providers. It proceeds through a set of segments, each presenting individual conditions and configurations. Each segment has eligibility and priority and splitting configurations.",
     "displayName": {
       "en-US": "Multi-Segment Routing Provider",
