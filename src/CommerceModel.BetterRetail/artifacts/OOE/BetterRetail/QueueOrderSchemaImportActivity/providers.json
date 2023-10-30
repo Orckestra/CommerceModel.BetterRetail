@@ -130,7 +130,81 @@
         "value": 1
       }
     },
-    "propertyConfigurations": {}
+    "propertyConfigurations": {},
+    "fulfillmentRoutingSegments": [
+      {
+        "code": "Warehouses segment",
+        "description": "Warehouses segment",
+        "displayName": {
+          "en-US": "Warehouses segment",
+          "en-CA": "Warehouses segment",
+          "fr-CA": "Segment pour les entrepôts"
+        },
+        "isActive": true,
+        "entryConditions": {
+          "implementationTypeName": "DefaultFulfillmentSegmentRoutingEntryCondition",
+          "values": {
+            "MaximumDurationInHours": {
+              "__type": "ValueOfInt32",
+              "value": 20
+            }
+          }
+        },
+        "routingStrategy": {
+          "implementationTypeName": "LRUFulfillmentRoutingStrategy",
+          "values": {
+          }
+        }
+      },
+      {
+        "code": "Stores segment",
+        "description": "Stores segment",
+        "displayName": {
+          "en-CA": "Stores segment",
+          "en-US": "Stores segment",
+          "fr-CA": "Segment pour les magasins"
+        },
+        "isActive": true,
+        "entryConditions": {
+          "implementationTypeName": "DefaultFulfillmentSegmentRoutingEntryCondition",
+          "values": {
+            "MaximumDurationInHours": {
+              "__type": "ValueOfInt32",
+              "value": 30
+            }
+          }
+        },
+        "routingStrategy": {
+          "implementationTypeName": "LRUFulfillmentRoutingStrategy",
+          "values": {
+          }
+        }
+      },
+      {
+        "code": "Default Segment",
+        "description": "Default Segment",
+        "displayName": {
+          "en-CA": "Default Segment",
+          "en-US": "Default Segment",
+          "fr-CA": "Segment  par défaut"
+        },
+        "isActive": true,
+        "entryConditions": {
+          "implementationTypeName": "DefaultFulfillmentSegmentRoutingEntryCondition",
+          "values": {
+            "MaximumDurationInHours": {
+              "__type": "ValueOfInt32",
+              "value": 40
+            }
+          }
+        },
+        "routingStrategy": {
+          "implementationTypeName": "LRUFulfillmentRoutingStrategy",
+          "values": {
+          }
+        }
+      }
+    ]
   },
   {
     "id": "7A169585-DA71-442D-8F74-02BEAFB03B3C",
