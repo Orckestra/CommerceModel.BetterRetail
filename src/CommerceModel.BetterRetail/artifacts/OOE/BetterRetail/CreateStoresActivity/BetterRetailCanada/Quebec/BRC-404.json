@@ -2,11 +2,11 @@
   "Id": "5a4113ae-f2dc-4ee1-81dc-fd2222da3662",
   "Number": "BRC-404",
   "IsActive": true,
-  "Name": "BRC-Promenades de Sorel",
+  "Name": "BRC-Promenades Gatineau",
   "DisplayName": {
-    "en-CA": "Promenades de Sorel",
-    "en-US": "Promenades de Sorel",
-    "fr-CA": "Promenades de Sorel"
+    "en-CA": "Promenades Gatineau",
+    "en-US": "Promenades Gatineau",
+    "fr-CA": "Promenades Gatineau"
   },
   "Description": {
     "en-CA": "",
@@ -15,7 +15,7 @@
   },
   "StoreType": 0,
   "Manager": null,
-  "PhoneNumber": "450 746-1213",
+  "PhoneNumber": "819 568-1158",
   "PhoneExtension": null,
   "FaxNumber": null,
   "FaxExtension": null,
