@@ -39,12 +39,19 @@ $ErrorActionPreference = 'Stop'
 #---------------------------------------------------------------------------------------
 
 properties {
+    [Diagnostics.CodeAnalysis.SuppressMessageAttribute('UseDeclaredVarsMoreThanAssignments', '')]  # parameters seem to have no effect!  # https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/using-scriptanalyzer?view=ps-modules#suppressing-rules
     $Configuration = 'Debug'   # Can be: Debug, Release
+    [Diagnostics.CodeAnalysis.SuppressMessageAttribute('UseDeclaredVarsMoreThanAssignments', '')]
     $IsRunningOnBuildMachine = $false
+    [Diagnostics.CodeAnalysis.SuppressMessageAttribute('UseDeclaredVarsMoreThanAssignments', '')]
     $MsbuildVerbosity = 'normal'  # Can be: q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic]
+    [Diagnostics.CodeAnalysis.SuppressMessageAttribute('UseDeclaredVarsMoreThanAssignments', '')]
     $NugetVerbosity = 'quiet'   # Can be: normal, quiet, detailed
+    [Diagnostics.CodeAnalysis.SuppressMessageAttribute('UseDeclaredVarsMoreThanAssignments', '')]
     $NugetFeeds = $null     # Will be set only when running on build machine.
+    [Diagnostics.CodeAnalysis.SuppressMessageAttribute('UseDeclaredVarsMoreThanAssignments', '')]
     $SensitiveData = $null
+    [Diagnostics.CodeAnalysis.SuppressMessageAttribute('UseDeclaredVarsMoreThanAssignments', '')]
     $BuildReason = $null
 }
 
@@ -153,7 +160,7 @@ $filesWithSensitiveData = @(
     (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\Parameters.All.xml')
 )
 
-function Create-ArtifactsFolder {
+function New-ArtifactsFolder {
     New-FolderIfNotExists $ArtifactsStagingDirectory
     New-FolderIfNotExists $TroubleshootingArtifactsStagingDirectory
     New-FolderIfNotExists $CentralLogsFolder
@@ -161,7 +168,7 @@ function Create-ArtifactsFolder {
     New-FolderIfNotExists $NugetArtifactsDirectory
 }
 
-Create-ArtifactsFolder
+New-ArtifactsFolder
 
 
 #---------------------------------------------------------------------------------------
@@ -184,7 +191,7 @@ Task CleanSolutions {
 
 Task CleanArtifacts {
     Remove-FolderIfExists -Folder $ArtifactsStagingDirectory
-    Create-ArtifactsFolder
+    New-ArtifactsFolder
 }
 
 Task RestorePackages {
@@ -310,7 +317,7 @@ Task PublishPackages {
 
 Task PublishArtifacts {
     if (IsRunningOnVstsHostedAgent) {
-        Upload-ArtifactToVsts -ArtifactName 'nuget' -ContainerFolder 'nuget' -Path "$WorkspaceRoot\Artifacts\nuget"
+        Publish-ArtifactToVsts -ArtifactName 'nuget' -ContainerFolder 'nuget' -Path "$WorkspaceRoot\Artifacts\nuget"
     }
     else {
         Write-Host "PublishArtifacts skipped on local machine..."
@@ -437,7 +444,7 @@ function IsRunningOnVstsHostedAgent {
     return Test-Path env:BUILD_ARTIFACTSTAGINGDIRECTORY
 }
 
-function Upload-ArtifactToVsts([string]$ArtifactName, [string]$ContainerFolder, [string]$Path) {
+function Publish-ArtifactToVsts([string]$ArtifactName, [string]$ContainerFolder, [string]$Path) {
     Write-Host "Publishing '$ArtifactName' to VSTS..."
     # Artifacts are uploaded through VSTS logging commands:
     #
