@@ -119,7 +119,7 @@ The hierarchy of the tasks is also displayed.
 '
             $printedTasks = @()
 
-            Get-TaskSubTree -Indent 2 -Task $tasksHashTable['all'] -TasksHashTable $tasksHashTable | % {
+            Get-TaskSubTree -Indent 2 -Task $tasksHashTable['all'] -TasksHashTable $tasksHashTable | ForEach-Object {
                 $printedTasks += $_
             }
 
@@ -127,7 +127,7 @@ The hierarchy of the tasks is also displayed.
             if ($extraTasks) {
                 Write-Host '***********************************************************'
                 Write-Host 'Extra tasks:'
-                $extraTasks | % { Write-Host "  $($_.Name)" }
+                $extraTasks | ForEach-Object { Write-Host "  $($_.Name)" }
                 Write-Host '***********************************************************'
             }
             Write-Host ''
