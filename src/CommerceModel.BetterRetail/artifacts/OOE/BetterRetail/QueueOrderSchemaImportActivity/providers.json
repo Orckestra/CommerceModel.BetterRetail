@@ -127,80 +127,107 @@
       },
       "MaximumShipmentsPerOrder": {
         "__type": "ValueOfInt32",
-        "value": 1
+        "value": 5
       }
     },
     "propertyConfigurations": {},
     "fulfillmentRoutingSegments": [
       {
-        "code": "Warehouses segment",
-        "description": "Warehouses segment",
+        "code": "Splitting disabled segment",
+        "description": "Splitting disabled segment",
         "displayName": {
-          "en-US": "Warehouses segment",
-          "en-CA": "Warehouses segment",
-          "fr-CA": "Segment pour les entrepôts"
+          "en-US": "Splitting disabled segment",
+          "en-CA": "Splitting disabled segment",
+          "fr-CA": "Segment sans fragmentation"
         },
         "isActive": true,
         "entryConditions": {
           "implementationTypeName": "DefaultFulfillmentSegmentRoutingEntryCondition",
           "values": {
-            "MaximumDurationInHours": {
+            "MaximumSegmentDurationInHours": {
+              "__type": "ValueOfDouble",
+              "value": 1
+            },
+            "MaximumExecutionPerOrder": {
               "__type": "ValueOfInt32",
-              "value": 20
+              "value": 1
+            },
+            "MaximumExecutionPerShipment": {
+              "__type": "ValueOfInt32",
+              "value": 1
             }
           }
         },
         "routingStrategy": {
           "implementationTypeName": "LRUFulfillmentRoutingStrategy",
           "values": {
+            "SplittingAuthorization": "SplittingDisabled"
           }
         }
       },
       {
-        "code": "Stores segment",
-        "description": "Stores segment",
+        "code": "Line items only splitting segment",
+        "description": "Line items only splitting segment",
         "displayName": {
-          "en-CA": "Stores segment",
-          "en-US": "Stores segment",
-          "fr-CA": "Segment pour les magasins"
+          "en-CA": "Line items only splitting segment",
+          "en-US": "Line items only splitting segment",
+          "fr-CA": "Segment avec fragmentation sur items complets"
         },
         "isActive": true,
         "entryConditions": {
           "implementationTypeName": "DefaultFulfillmentSegmentRoutingEntryCondition",
           "values": {
-            "MaximumDurationInHours": {
+            "MaximumSegmentDurationInHours": {
+              "__type": "ValueOfDouble",
+              "value": 0.5
+            },
+            "MaximumExecutionPerOrder": {
               "__type": "ValueOfInt32",
-              "value": 30
+              "value": 2
+            },
+            "MaximumExecutionPerShipment": {
+              "__type": "ValueOfInt32",
+              "value": 2
             }
           }
         },
         "routingStrategy": {
           "implementationTypeName": "LRUFulfillmentRoutingStrategy",
           "values": {
+            "SplittingAuthorization": "SplittingOnWholeLineItemsOnly"
           }
         }
       },
       {
-        "code": "Default Segment",
-        "description": "Default Segment",
+        "code": "Splitting on all segment",
+        "description": "Splitting on all segment",
         "displayName": {
-          "en-CA": "Default Segment",
-          "en-US": "Default Segment",
-          "fr-CA": "Segment  par défaut"
+          "en-CA": "Splitting on all segment",
+          "en-US": "Splitting on all segment",
+          "fr-CA": "Segment avec fragmentation"
         },
         "isActive": true,
         "entryConditions": {
           "implementationTypeName": "DefaultFulfillmentSegmentRoutingEntryCondition",
           "values": {
-            "MaximumDurationInHours": {
+            "MaximumSegmentDurationInHours": {
+              "__type": "ValueOfDouble",
+              "value": 0.25
+            },
+            "MaximumExecutionPerOrder": {
               "__type": "ValueOfInt32",
-              "value": 40
+              "value": 4
+            },
+            "MaximumExecutionPerShipment": {
+              "__type": "ValueOfInt32",
+              "value": 4
             }
           }
         },
         "routingStrategy": {
           "implementationTypeName": "LRUFulfillmentRoutingStrategy",
           "values": {
+            "SplittingAuthorization": "SplittingOnLineItemsAndUnits"
           }
         }
       }
