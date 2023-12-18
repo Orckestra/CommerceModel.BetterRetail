@@ -596,7 +596,7 @@
     <Content Include="artifacts\OOE\BetterRetail\ImportHtmlDocumentTemplatesActivity\Global\OrderReturnRequestForms\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnRequestSelfServeVerification\Template.json" />
     <Content Include="artifacts\OOE\BetterRetail\ImportEmailTemplatesActivity\Global\OrderReturnStatusRefundedExternally\Template.json" />
-    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\BRC-404.json" />
+    <Content Include="artifacts\OOE\BetterRetail\CreateStoresActivity\BetterRetailCanada\Quebec\BRC-444.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS - Header.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\ADDRESS.json" />
     <None Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER - Header.json" />

@@ -1,6 +1,6 @@
 {
   "Id": "5a4113ae-f2dc-4ee1-81dc-fd2222da3662",
-  "Number": "BRC-404",
+  "Number": "BRC-444",
   "IsActive": true,
   "Name": "BRC-Promenades Gatineau",
   "DisplayName": {
@@ -178,7 +178,7 @@
   "TimeZone": "Eastern Standard Time",
   "DeliveryScheduleManaged": false,
   "PickUpScheduleManaged": false,
-  "InventoryLocationId": "BRC-404",
+  "InventoryLocationId": "BRC-444",
   "InventoryProviderId": "OvertureScheduled",
   "IsInventoryEnabled": true,
   "IsAtpEnabled": true,
