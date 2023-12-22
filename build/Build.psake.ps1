@@ -157,6 +157,7 @@ $VisualStudioVersion = '2022'
 $filesWithSensitiveData = @(
     (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\artifacts\OOE\BetterRetail\QueueOrderSchemaImportActivity\providers.json'),
     (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\artifacts\OOE\BetterRetail\CreateUsersActivity\users.json'),
+    (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\artifacts\OOE\BetterRetail\QueueProfilesImportActivity\CUSTOMER.json'),
     (Join-Path $WorkspaceRoot 'src\CommerceModel.BetterRetail\Parameters.All.xml')
 )
 
@@ -270,8 +271,10 @@ Task UndoSensitiveData {
         foreach ($data in $replacements.GetEnumerator()) {
             # adding quotes to the search & replace to lower the chance of a false replacement
 
-            $token = "`"#" + $data.Name + "#`""
-            $content = $content.Replace("`"" + $data.Value + "`"", $token)
+            if ($data.Value) {
+                $token = "`"#" + $data.Name + "#`""
+                $content = $content.Replace("`"" + $data.Value + "`"", $token)
+            }
         }
 
         $content | Set-Content -Path $file -NoNewline
@@ -366,12 +369,14 @@ function Get-SensitiveData {
     if (-not $SensitiveData) {
         # we assume that the file is in the correct format if it exists
         $sensitiveFile = Join-Path $WorkspaceRoot "build\build.sensitivedata.json"
+        $SensitiveData = @{
+            CurrentDateUtcIso = ((Get-Date).ToUniversalTime().ToString("yyyy-MM-01T12:00:00")); # hardcoding the first day of the current month to allow UndoSensitiveData to put back the original value after the build
+        }
         if (-not (Test-Path $sensitiveFile)) {
-            return @{}
+            return $SensitiveData
         }
         Write-Host "Loading sensitive data from file"
         $json = Get-Content -Path $sensitiveFile | ConvertFrom-Json
-        $SensitiveData = @{}
         $json.psobject.properties | ForEach-Object { $SensitiveData[$_.Name] = $_.Value }
     }
 
