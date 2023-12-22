@@ -83,6 +83,7 @@ function ConfigureNugetAuthentication {
 }
 
 $originalPsModulePath = $env:PSModulePath
+$global:cachedSensitiveData = $null
 try {
     $env:PSModulePath = (Join-Path (Split-Path $PSScriptRoot -Parent) 'lib\PowerShellModules;') + $env:PSModulePath
     
@@ -184,4 +185,5 @@ The hierarchy of the tasks is also displayed.
 }
 finally {
     $env:PSModulePath = $originalPsModulePath 
+    $global:cachedSensitiveData = $null
 }

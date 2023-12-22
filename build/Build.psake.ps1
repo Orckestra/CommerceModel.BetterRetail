@@ -366,21 +366,28 @@ Task InitializeMetadata {
 }
 
 function Get-SensitiveData {
-    if (-not $SensitiveData) {
-        # we assume that the file is in the correct format if it exists
-        $sensitiveFile = Join-Path $WorkspaceRoot "build\build.sensitivedata.json"
-        $SensitiveData = @{
-            CurrentDateUtcIso = ((Get-Date).ToUniversalTime().ToString("yyyy-MM-01T12:00:00")); # hardcoding the first day of the current month to allow UndoSensitiveData to put back the original value after the build
+    if (-not $cachedSensitiveData) {
+        if (-not $SensitiveData) {
+            # we assume that the file is in the correct format if it exists
+            $sensitiveFile = Join-Path $WorkspaceRoot "build\build.sensitivedata.json"
+            $cachedSensitiveData = @{}
+            if ((Test-Path $sensitiveFile)) {
+                Write-Host "Loading sensitive data from file"
+                $json = Get-Content -Path $sensitiveFile | ConvertFrom-Json
+                $json.psobject.properties | ForEach-Object { $cachedSensitiveData[$_.Name] = $_.Value }
+            }
         }
-        if (-not (Test-Path $sensitiveFile)) {
-            return $SensitiveData
+        else {
+            Write-Host "Using SensitiveData parameter"
+            $cachedSensitiveData = $SensitiveData
         }
-        Write-Host "Loading sensitive data from file"
-        $json = Get-Content -Path $sensitiveFile | ConvertFrom-Json
-        $json.psobject.properties | ForEach-Object { $SensitiveData[$_.Name] = $_.Value }
+    
+        $cachedSensitiveData.CurrentDateUtcIso = ((Get-Date).ToUniversalTime().ToString("yyyy-MM-01T12:00:00")); # hardcoding the first day of the current month to allow UndoSensitiveData to put back the original value after the build
+
+        Set-Variable -Name "cachedSensitiveData" -Value $cachedSensitiveData -Scope Global
     }
 
-    return $SensitiveData
+    return $cachedSensitiveData
 }
 
 function Get-NugetPackagesVersion {
