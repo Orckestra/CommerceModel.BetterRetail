@@ -147,6 +147,8 @@
       "regionCode": "US-CA",
       "line1": "1690 Folsom St",
       "postalCode": "94103",
+      "latitude": 37.770038,
+      "longitude": -122.416198,
       "isPreferredBilling": false,
       "isPreferredShipping": false,
       "propertyBag": {
