@@ -147,6 +147,8 @@
       "regionCode": "US-NY",
       "line1": "113 Sullivan St",
       "postalCode": "10012",
+      "latitude": 40.725944,
+      "longitude": -74.002635,
       "isPreferredBilling": false,
       "isPreferredShipping": false,
       "propertyBag": {
