@@ -1,0 +1,20 @@
+[
+  {
+    "id": "0b1bd81d-eb1f-c204-405f-d1d1a5651d10",
+    "type": "Geolocation",
+    "scopeId": "Global",
+    "name": "GoogleGeolocationProvider",
+    "displayName": {
+      "en-US": "Google Geo-location Provider",
+      "en-CA": "Google Geo-location Provider",
+      "fr-CA": "Fournisseur de géolocalization Google"
+    },
+    "implementationTypeName": "GoogleGeolocationProvider",
+    "description": "Provide a way to get information of one or many addresses.",
+    "isActive": true,
+    "values": {
+      "ApiKey": "#GoogleApiKey#"
+    },
+    "propertyConfigurations": {}
+  }
+]
