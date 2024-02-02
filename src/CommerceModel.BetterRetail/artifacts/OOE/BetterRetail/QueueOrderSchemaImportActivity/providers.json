@@ -158,6 +158,12 @@
             }
           }
         },
+        "routingStrategy": {
+          "implementationTypeName": "LRUFulfillmentRoutingStrategy",
+          "values": {
+            "SplittingAuthorization": "SplittingDisabled"
+          }
+        },
         "routingTarget": {
           "implementationTypeName": "DefaultFulfillmentSegmentRoutingTarget",
           "values": {
