@@ -158,10 +158,18 @@
             }
           }
         },
-        "routingStrategy": {
-          "implementationTypeName": "LRUFulfillmentRoutingStrategy",
+        "routingTarget": {
+          "implementationTypeName": "DefaultFulfillmentSegmentRoutingTarget",
           "values": {
-            "SplittingAuthorization": "SplittingDisabled"
+            "FulfillmentLocationIds": {
+              "__type": "ValueOfString[]",
+              "value": [
+                "ead2a957838943fc915dfc9b926d8da1",
+                "d215dc2c931b48d286cf3ee1574e2280",
+                "b6635601c9864b2c8b0ef8aa3c2bdff8",
+                "0c4cedea79cc4dd0813f8a335a46c56d"
+              ]
+            }
           }
         }
       },
@@ -196,6 +204,20 @@
           "values": {
             "SplittingAuthorization": "SplittingOnWholeLineItemsOnly"
           }
+        },
+        "routingTarget": {
+          "implementationTypeName": "DefaultFulfillmentSegmentRoutingTarget",
+          "values": {
+            "FulfillmentLocationIds": {
+              "__type": "ValueOfString[]",
+              "value": [
+                "ead2a957838943fc915dfc9b926d8da1",
+                "d215dc2c931b48d286cf3ee1574e2280",
+                "b6635601c9864b2c8b0ef8aa3c2bdff8",
+                "0c4cedea79cc4dd0813f8a335a46c56d"
+              ]
+            }
+          }
         }
       },
       {
@@ -228,6 +250,20 @@
           "implementationTypeName": "LRUFulfillmentRoutingStrategy",
           "values": {
             "SplittingAuthorization": "SplittingOnLineItemsAndUnits"
+          }
+        },
+        "routingTarget": {
+          "implementationTypeName": "DefaultFulfillmentSegmentRoutingTarget",
+          "values": {
+            "FulfillmentLocationIds": {
+              "__type": "ValueOfString[]",
+              "value": [
+                "ead2a957838943fc915dfc9b926d8da1",
+                "d215dc2c931b48d286cf3ee1574e2280",
+                "b6635601c9864b2c8b0ef8aa3c2bdff8",
+                "0c4cedea79cc4dd0813f8a335a46c56d"
+              ]
+            }
           }
         }
       }
