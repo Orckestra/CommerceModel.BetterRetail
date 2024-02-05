@@ -163,6 +163,20 @@
           "values": {
             "SplittingAuthorization": "SplittingDisabled"
           }
+        },
+        "routingTarget": {
+          "implementationTypeName": "DefaultFulfillmentSegmentRoutingTarget",
+          "values": {
+            "FulfillmentLocationIds": {
+              "__type": "ValueOfString[]",
+              "value": [
+                "621a78c7df764b9d98828f73fcba8848",
+                "d01eadd480be47ca885bcaa5e40e274f",
+                "45ff7192b7134a51ae097fd126e6c96d",
+                "5a4113aef2dc4ee181dcfd2222da3662"
+              ]
+            }
+          }
         }
       },
       {
@@ -196,6 +210,20 @@
           "values": {
             "SplittingAuthorization": "SplittingOnWholeLineItemsOnly"
           }
+        },
+        "routingTarget": {
+          "implementationTypeName": "DefaultFulfillmentSegmentRoutingTarget",
+          "values": {
+            "FulfillmentLocationIds": {
+              "__type": "ValueOfString[]",
+              "value": [
+                "621a78c7df764b9d98828f73fcba8848",
+                "d01eadd480be47ca885bcaa5e40e274f",
+                "45ff7192b7134a51ae097fd126e6c96d",
+                "5a4113aef2dc4ee181dcfd2222da3662"
+              ]
+            }
+          }
         }
       },
       {
@@ -228,6 +256,20 @@
           "implementationTypeName": "LRUFulfillmentRoutingStrategy",
           "values": {
             "SplittingAuthorization": "SplittingOnLineItemsAndUnits"
+          }
+        },
+        "routingTarget": {
+          "implementationTypeName": "DefaultFulfillmentSegmentRoutingTarget",
+          "values": {
+            "FulfillmentLocationIds": {
+              "__type": "ValueOfString[]",
+              "value": [
+                "621a78c7df764b9d98828f73fcba8848",
+                "d01eadd480be47ca885bcaa5e40e274f",
+                "45ff7192b7134a51ae097fd126e6c96d",
+                "5a4113aef2dc4ee181dcfd2222da3662"
+              ]
+            }
           }
         }
       }
