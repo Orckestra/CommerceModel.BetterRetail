@@ -1247,8 +1247,8 @@
         "__type": "ValueOfBoolean",
         "value": true
       },
-      "ReturnCarrierCode": "BRINGZOLL",
-      "ReturnServiceLevel": "STANDARD, EXPRESS"
+      "ReturnCarrierCode": "UPS",
+      "ReturnServiceLevel": "STANDARD"
     },
     "propertyConfigurations": {}
   },
@@ -1990,8 +1990,8 @@
         "__type": "ValueOfBoolean",
         "value": true
       },
-      "ReturnCarrierCode": "PNL",
-      "ReturnServiceLevel": "3085"
+      "ReturnCarrierCode": "UPS",
+      "ReturnServiceLevel": "STANDARD"
     },
     "propertyConfigurations": {}
   },
