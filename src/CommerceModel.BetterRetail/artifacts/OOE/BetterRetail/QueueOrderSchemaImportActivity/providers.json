@@ -1242,13 +1242,13 @@
       "MapperPackageType": "Boîte Std.|Std. 31 kg pkg.|Std. Box=BOX",
       "MapperWeightUOM": "Pound=LB,Ounce=OZ,Kilogram=KG",
       "MapperQuantityUOM": "",
-      "CarrierMappingConfiguration": "{'STANDARD_BRINGZOLL_HOME':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD_BRINGZOLL_PICKUP':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD_BRINGZOLL_CC':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD_BRING_HOME':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD_BRING_PICKUP':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD_BRING_CC':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD_BRINGZOLL_BRING':{'SERVICEPARCEL':{'BRING':'BNG'}},'STANDARD':{'SERVICEPARCEL':{'BRING':'BNG'}}}",
+      "CarrierMappingConfiguration": "{'STANDARD':{'STANDARD':{'UPS':'UPS'}},'SAVER':{'SAVER':{'UPS':'UPS'}}}",
       "ReverseAddressesForReturns": {
         "__type": "ValueOfBoolean",
         "value": true
       },
-      "ReturnCarrierCode": "BRINGZOLL",
-      "ReturnServiceLevel": "STANDARD, EXPRESS"
+      "ReturnCarrierCode": "UPS",
+      "ReturnServiceLevel": "STANDARD"
     },
     "propertyConfigurations": {}
   },
@@ -1985,13 +1985,13 @@
       "MapperPackageType": "Boîte Std.|Std. 31 kg pkg.|Std. Box=BOX",
       "MapperWeightUOM": "Pound=LB,Ounce=OZ,Kilogram=KG",
       "MapperQuantityUOM": "",
-      "CarrierMappingConfiguration": "{'STANDARD_POSTNL_HOME':{'3085':{'POSTNL':'PNL'}},'STANDARD_POSTNL_PICKUP':{'3533':{'POSTNL':'PNL'}},'STANDARD_POSTNL_CC':{'3533':{'POSTNL':'PNL'}},'STANDARD':{'3085':{'POSTNL':'PNL'}},'EXPRESS':{'3085':{'POSTNL':'PNL'}},'EXPRESS_HOME':{'3085':{'POSTNL':'PNL'}}}",
+      "CarrierMappingConfiguration": "{'STANDARD':{'STANDARD':{'UPS':'UPS'}},'SAVER':{'SAVER':{'UPS':'UPS'}}}",
       "ReverseAddressesForReturns": {
         "__type": "ValueOfBoolean",
         "value": true
       },
-      "ReturnCarrierCode": "PNL",
-      "ReturnServiceLevel": "3085"
+      "ReturnCarrierCode": "UPS",
+      "ReturnServiceLevel": "STANDARD"
     },
     "propertyConfigurations": {}
   },
