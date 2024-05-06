@@ -42,14 +42,14 @@
     <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="Azure.Core, Version=1.24.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\Azure.Core.1.24.0\lib\net461\Azure.Core.dll</HintPath>
+    <Reference Include="Azure.Core, Version=1.37.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\Azure.Core.1.37.0\lib\net472\Azure.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Azure.Storage.Blobs, Version=12.12.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\Azure.Storage.Blobs.12.12.0\lib\netstandard2.0\Azure.Storage.Blobs.dll</HintPath>
+    <Reference Include="Azure.Storage.Blobs, Version=12.19.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\Azure.Storage.Blobs.12.19.1\lib\netstandard2.0\Azure.Storage.Blobs.dll</HintPath>
     </Reference>
-    <Reference Include="Azure.Storage.Common, Version=12.11.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\Azure.Storage.Common.12.11.0\lib\netstandard2.0\Azure.Storage.Common.dll</HintPath>
+    <Reference Include="Azure.Storage.Common, Version=12.18.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\Azure.Storage.Common.12.18.1\lib\netstandard2.0\Azure.Storage.Common.dll</HintPath>
     </Reference>
     <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
@@ -69,8 +69,8 @@
     <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.TimeProvider, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Microsoft.Bcl.TimeProvider.8.0.0\lib\net462\Microsoft.Bcl.TimeProvider.dll</HintPath>
@@ -111,57 +111,56 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.AsyncExtensions, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.AsyncExtensions.5.7.0-alpha0106\lib\net48\Orckestra.AsyncExtensions.dll</HintPath>
+    <Reference Include="Orckestra.AsyncExtensions, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.AsyncExtensions.5.7.1-beta0019\lib\net48\Orckestra.AsyncExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.Caching, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Common.5.7.0-alpha0106\lib\net48\Orckestra.Caching.dll</HintPath>
+    <Reference Include="Orckestra.Caching, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Common.5.7.1-beta0019\lib\net48\Orckestra.Caching.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.Data, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Data.5.7.0-alpha0106\lib\net48\Orckestra.Data.dll</HintPath>
+    <Reference Include="Orckestra.Data, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Data.5.7.1-beta0019\lib\net48\Orckestra.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.Logging, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Common.5.7.0-alpha0106\lib\net48\Orckestra.Logging.dll</HintPath>
+    <Reference Include="Orckestra.Logging, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Common.5.7.1-beta0019\lib\net48\Orckestra.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.Overture.DurableTask, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.0-alpha0106\lib\net48\Orckestra.Overture.DurableTask.dll</HintPath>
+    <Reference Include="Orckestra.Overture.DurableTask, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.1-beta0019\lib\net48\Orckestra.Overture.DurableTask.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.Overture.DurableTask.Scheduling.Quartz, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.0-alpha0106\lib\net48\Orckestra.Overture.DurableTask.Scheduling.Quartz.dll</HintPath>
+    <Reference Include="Orckestra.Overture.DurableTask.Scheduling.Quartz, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.1-beta0019\lib\net48\Orckestra.Overture.DurableTask.Scheduling.Quartz.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.Overture.Extensibility, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.0-alpha0106\lib\net48\Orckestra.Overture.Extensibility.dll</HintPath>
+    <Reference Include="Orckestra.Overture.Extensibility, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.1-beta0019\lib\net48\Orckestra.Overture.Extensibility.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.Overture.Interfaces, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Interfaces.5.7.0-alpha0106\lib\net48\Orckestra.Overture.Interfaces.dll</HintPath>
+    <Reference Include="Orckestra.Overture.Interfaces, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Interfaces.5.7.1-beta0019\lib\net48\Orckestra.Overture.Interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.Overture.MessagingModel, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.0-alpha0106\lib\net48\Orckestra.Overture.MessagingModel.dll</HintPath>
+    <Reference Include="Orckestra.Overture.MessagingModel, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.1-beta0019\lib\net48\Orckestra.Overture.MessagingModel.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.Overture.Orders.Processing.Workflows, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.0-alpha0106\lib\net48\Orckestra.Overture.Orders.Processing.Workflows.dll</HintPath>
+    <Reference Include="Orckestra.Overture.Orders.Processing.Workflows, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.1-beta0019\lib\net48\Orckestra.Overture.Orders.Processing.Workflows.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.Overture.Orders.Processing.Workflows.Activities, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.0-alpha0106\lib\net48\Orckestra.Overture.Orders.Processing.Workflows.Activities.dll</HintPath>
+    <Reference Include="Orckestra.Overture.Orders.Processing.Workflows.Activities, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.1-beta0019\lib\net48\Orckestra.Overture.Orders.Processing.Workflows.Activities.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.Overture.ServiceModel, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.ServiceModel.5.7.0-alpha0106\lib\net48\Orckestra.Overture.ServiceModel.dll</HintPath>
+    <Reference Include="Orckestra.Overture.ServiceModel, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.ServiceModel.5.7.1-beta0019\lib\net48\Orckestra.Overture.ServiceModel.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.Overture.ServiceModel.Requests, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.ServiceModel.Requests.5.7.0-alpha0106\lib\net48\Orckestra.Overture.ServiceModel.Requests.dll</HintPath>
+    <Reference Include="Orckestra.Overture.ServiceModel.Requests, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.ServiceModel.Requests.5.7.1-beta0019\lib\net48\Orckestra.Overture.ServiceModel.Requests.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.Overture.SolrIndexing, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.0-alpha0106\lib\net48\Orckestra.Overture.SolrIndexing.dll</HintPath>
+    <Reference Include="Orckestra.Overture.SolrIndexing, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.1-beta0019\lib\net48\Orckestra.Overture.SolrIndexing.dll</HintPath>
     </Reference>
-    <Reference Include="Orckestra.SolrLib, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.0-alpha0106\lib\net48\Orckestra.SolrLib.dll</HintPath>
+    <Reference Include="Orckestra.SolrLib, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.1-beta0019\lib\net48\Orckestra.SolrLib.dll</HintPath>
     </Reference>
-    <Reference Include="OrckestraCommerce.CommerceModelUtilities, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.5.7.0\lib\net48\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="OrckestraCommerce.CommerceModelUtilities, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.CommerceModelUtilities.5.7.1-beta0019\lib\net48\OrckestraCommerce.CommerceModelUtilities.dll</HintPath>
     </Reference>
-    <Reference Include="OrckestraCommerce.DataExchange, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.0-alpha0106\lib\net48\OrckestraCommerce.DataExchange.dll</HintPath>
+    <Reference Include="OrckestraCommerce.DataExchange, Version=5.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\OrckestraCommerce.Extensibility.5.7.1-beta0019\lib\net48\OrckestraCommerce.DataExchange.dll</HintPath>
     </Reference>
     <Reference Include="Polly, Version=8.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Polly.8.2.1\lib\net472\Polly.dll</HintPath>
@@ -202,8 +201,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\System.Diagnostics.DiagnosticSource.4.6.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.Diagnostics.DiagnosticSource.6.0.1\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
@@ -278,11 +277,11 @@
     <Reference Include="System.Spatial, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\System.Spatial.5.7.0\lib\net40\System.Spatial.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json, Version=6.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NuGet\System.Text.Json.6.0.6\lib\net461\System.Text.Json.dll</HintPath>
+    <Reference Include="System.Text.Json, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\NuGet\System.Text.Json.8.0.1\lib\net462\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.24.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NuGet\Microsoft.Tpl.Dataflow.4.5.24\lib\portable-net45+win8+wpa81\System.Threading.Tasks.Dataflow.dll</HintPath>
@@ -327,10 +326,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.90\build\net\OrckestraCommerce.Packages.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Packages\NuGet\OrckestraCommerce.Packages.MSBuild.4.0.90\build\net\OrckestraCommerce.Packages.MSBuild.targets'))" />
     <Error Condition="!Exists('..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets'))" />
-    <Error Condition="!Exists('..\..\Packages\NuGet\System.Text.Json.6.0.6\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Packages\NuGet\System.Text.Json.6.0.6\build\System.Text.Json.targets'))" />
   </Target>
   <Import Project="..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets" Condition="Exists('..\..\Packages\NuGet\Microsoft.Azure.DocumentDB.2.2.3\build\Microsoft.Azure.DocumentDB.targets')" />
-  <Import Project="..\..\Packages\NuGet\System.Text.Json.6.0.6\build\System.Text.Json.targets" Condition="Exists('..\..\Packages\NuGet\System.Text.Json.6.0.6\build\System.Text.Json.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

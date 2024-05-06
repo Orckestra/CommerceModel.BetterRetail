@@ -137,11 +137,6 @@
           <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
         </InOutArgument>
       </ooopwap:RouteFulfillmentsActivity.OrderProcessingResultArgument>
-      <ooopwap:RouteFulfillmentsActivity.ShipmentStatusesToIgnore>
-        <InArgument x:TypeArguments="s:String[]">
-          <mca:CSharpValue x:TypeArguments="s:String[]">new string[] {"UnableToRoute"}</mca:CSharpValue>
-        </InArgument>
-      </ooopwap:RouteFulfillmentsActivity.ShipmentStatusesToIgnore>
     </ooopwap:RouteFulfillmentsActivity>
     <ooopwa:SubmitOrderTaxesActivity sap2010:Annotation.AnnotationText="Send a SalesInvoice entry with the &quot;Uncommited&quot; status to Avalara. &#xA;&#xA;We may de-activate the previous CalculateCartTax Activity in the case we use only Avalara Tax Provider (to limit costs) since the SubmitOrderTaxes Activity uses almost the same GetTax call to Avalara service with only a few different parameters to save invoice details in Avalara system." sap2010:WorkflowViewState.IdRef="SubmitOrderTaxesActivity_1" OrderProcessingContextArgument="[OrderProcessingContextArgument]" OrderProcessingResultArgument="[OrderProcessingResultArgument]" />
     <ooopwa:AssignFulfillmentScheduleDateTimeActivity AvailableSlotsMaximumTimeSpan="182" sap2010:WorkflowViewState.IdRef="AssignFulfillmentScheduleDateTimeActivity_1" TimeOffsetWithoutSlots="20">
