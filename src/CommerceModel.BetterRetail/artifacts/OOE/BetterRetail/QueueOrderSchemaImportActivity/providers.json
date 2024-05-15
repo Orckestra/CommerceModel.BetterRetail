@@ -613,7 +613,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "chktGRPHTtore5",
+      "HostedCardTokenizationProfileId": "ht7RKY52KIYQLIC",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -706,7 +706,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht52LVQM23AU1IC",
+      "HostedCardTokenizationProfileId": "ht7RKY52KIYQLIC",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -799,7 +799,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht2MXFAOQ31FERQ",
+      "HostedCardTokenizationProfileId": "htVUTDDDD82V5UN",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -892,7 +892,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht2J2QIZZ2ZYYJC",
+      "HostedCardTokenizationProfileId": "htOB38AX7J6I6R9",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -1659,7 +1659,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht1RRATIA38HFFK",
+      "HostedCardTokenizationProfileId": "ht7RKY52KIYQLIC",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
@@ -2396,7 +2396,7 @@
       "ApiToken": "yesguy",
       "PaymentCaptureUrl": "{PaymentCaptureUrl}",
       "HostedCardTokenizationBaseUrl": "https://esqa.moneris.com/HPPtoken/index.php",
-      "HostedCardTokenizationProfileId": "ht1RRATIA38HFFK",
+      "HostedCardTokenizationProfileId": "ht7RKY52KIYQLIC",
       "HostedCardTokenizationStyleParameters": "css_body=background-color:F2F0EB;&css_textbox=border-color:E8E4DA;border-style:solid;border-width:2px;font-family:Verdana;font-size:12px;line-height:22px;height:28px;margin-bottom:10px;&css_textbox_pan=width:190px;&enable_exp=1&css_textbox_exp=width:100px;&enable_cvd=1&css_textbox_cvd=width:70px"
     },
     "propertyConfigurations": {}
