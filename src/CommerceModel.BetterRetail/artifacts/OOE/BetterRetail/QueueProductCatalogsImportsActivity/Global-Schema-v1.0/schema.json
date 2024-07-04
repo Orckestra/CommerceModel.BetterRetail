@@ -515,7 +515,7 @@
       "isMultilingual": true,
       "dataType": "Text",
       "minimumValue": 0,
-      "maximumValue": 128,
+      "maximumValue": 256,
       "includeInAllProductDefinition": true,
       "includeInAllCategoryDefinition": true,
       "includeInAllVariantDefinition": true,
