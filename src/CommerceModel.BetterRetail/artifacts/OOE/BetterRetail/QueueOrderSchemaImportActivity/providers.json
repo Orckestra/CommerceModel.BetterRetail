@@ -3237,6 +3237,266 @@
     "propertyConfigurations": {}
   },
   {
+    "fulfillmentRoutingSegments": [],
+    "id": "f1b78649331b4ea7a5fb1c38f9bcb159",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "SFS (Multi Segment)",
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "displayName": {
+      "en-US": "SFS (Multi Segment)",
+      "en-CA": "SFS (Multi Segment)",
+      "fr-CA": "SFS (Multi Segment)"
+    },
+    "isActive": true,
+    "values": {
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "DefaultFulfillmentCost": {
+        "__type": "ValueOfDouble",
+        "value": 42
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "FulfillmentRoutingProviderId": "521e1f1c0d0f49bfa6134d4f1f8d38db",
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "fulfillmentRoutingSegments": [],
+    "id": "a45dc1d7a7a84134b336549138a285c5",
+    "type": "FulfillmentRouting",
+    "scopeId": "BetterRetailCanada",
+    "name": "Shortest Distance",
+    "implementationTypeName": "ShortestDistanceFulfillmentRoutingProvider",
+    "displayName": {
+      "en-US": "Shortest Distance",
+      "en-CA": "Shortest Distance",
+      "fr-CA": "Shortest Distance"
+    },
+    "description": "Created for US : #75127",
+    "isActive": true,
+    "values": {
+      "MaximumShipmentsPerOrder": {
+        "__type": "ValueOfInt32",
+        "value": 10
+      },
+      "UnitOfMeasure": "Kilometers",
+      "DistanceType": "Driving",
+      "MaximumDrivingDistance": {
+        "__type": "ValueOfDouble",
+        "value": 30
+      },
+      "MaximumNumberOfLocationsForDrivingDistance": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "MaximumDistanceInAStraightLine": {
+        "__type": "ValueOfDouble",
+        "value": 30
+      },
+      "MaximumRoutingElapsedTimeInHours": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      },
+      "MaximumDailyShipmentsPerStore": {
+        "__type": "ValueOfInt32",
+        "value": 30
+      },
+      "ItemOrUnitSplitLevelAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "ItemOnlySplitLevelAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "fulfillmentRoutingSegments": [],
+    "id": "020f55e6a7d246b392b46271c1e6fe9d",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "SFS (Shortest Distance)",
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "displayName": {
+      "en-US": "SFS (Shortest Distance)",
+      "en-CA": "SFS (Shortest Distance)",
+      "fr-CA": "SFS (Shortest Distance)"
+    },
+    "isActive": true,
+    "values": {
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "DefaultFulfillmentCost": {
+        "__type": "ValueOfDouble",
+        "value": 20.5
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "FulfillmentRoutingProviderId": "a45dc1d7a7a84134b336549138a285c5",
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "fulfillmentRoutingSegments": [],
+    "id": "b0257d21aef943ae8444a7a57244db63",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "SFS Short (Multi Segment)",
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "displayName": {
+      "en-US": "SFS Short (Multi Segment)",
+      "en-CA": "SFS Short (Multi Segment)",
+      "fr-CA": "SFS Short (Multi Segment)"
+    },
+    "isActive": true,
+    "values": {
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "DefaultFulfillmentCost": {
+        "__type": "ValueOfDouble",
+        "value": 30.5
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "FulfillmentRoutingProviderId": "521e1f1c0d0f49bfa6134d4f1f8d38db",
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
+    "fulfillmentRoutingSegments": [],
+    "id": "7420fd9df7114006ad50ea565c6fb6f1",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "SFS Short (Shortest Distance)",
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "displayName": {
+      "en-US": "SFS Short (Shortest Distance)",
+      "en-CA": "SFS Short (Shortest Distance)",
+      "fr-CA": "SFS Short (Shortest Distance)"
+    },
+    "isActive": true,
+    "values": {
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "DefaultFulfillmentCost": {
+        "__type": "ValueOfDouble",
+        "value": 10.25
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "FulfillmentRoutingProviderId": "a45dc1d7a7a84134b336549138a285c5",
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    },
+    "propertyConfigurations": {}
+  },
+  {
     "id": "3c36adbf-be2c-4204-ad71-7d92633aa980",
     "name": "Default Order Return Provider",
     "type": "OrderReturns",
