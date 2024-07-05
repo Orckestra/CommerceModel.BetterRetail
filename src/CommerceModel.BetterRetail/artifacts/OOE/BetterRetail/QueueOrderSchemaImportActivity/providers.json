@@ -3298,7 +3298,7 @@
       "en-CA": "Shortest Distance",
       "fr-CA": "Shortest Distance"
     },
-    "description": "Created for US : #75127",
+    "description": "",
     "isActive": true,
     "values": {
       "MaximumShipmentsPerOrder": {
