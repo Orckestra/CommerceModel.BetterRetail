@@ -133,6 +133,7 @@
     "propertyConfigurations": {},
     "fulfillmentRoutingSegments": [
       {
+        "id": "6E54D797-9237-4C07-91CA-AFC17FC6A2D8",
         "code": "Splitting disabled segment",
         "description": "Splitting disabled segment",
         "displayName": {
@@ -180,6 +181,7 @@
         }
       },
       {
+        "id": "E5187A2D-43AF-42D4-926B-640B854FEF93",
         "code": "Line items only splitting segment",
         "description": "Line items only splitting segment",
         "displayName": {
@@ -227,6 +229,7 @@
         }
       },
       {
+        "id": "6625CEF7-5364-4A04-BD69-9C120306B4C7",
         "code": "Splitting on all segment",
         "description": "Splitting on all segment",
         "displayName": {
@@ -256,6 +259,68 @@
           "implementationTypeName": "LRUFulfillmentRoutingStrategy",
           "values": {
             "SplittingAuthorization": "SplittingOnLineItemsAndUnits"
+          }
+        },
+        "routingTarget": {
+          "implementationTypeName": "DefaultFulfillmentSegmentRoutingTarget",
+          "values": {
+            "FulfillmentLocationIds": {
+              "__type": "ValueOfString[]",
+              "value": [
+                "621a78c7df764b9d98828f73fcba8848",
+                "d01eadd480be47ca885bcaa5e40e274f",
+                "45ff7192b7134a51ae097fd126e6c96d",
+                "5a4113aef2dc4ee181dcfd2222da3662"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "DE82F4DD-BAAE-4EFB-BFCC-347D74F247B0",
+        "code": "Shortest Distance",
+        "description": "Shortest Distance",
+        "displayName": {
+          "en-CA": "Shortest Distance",
+          "en-US": "Shortest Distance",
+          "fr-CA": "Shortest Distance"
+        },
+        "isActive": true,
+        "entryConditions": {
+          "implementationTypeName": "DefaultFulfillmentSegmentRoutingEntryCondition",
+          "values": {
+            "MaximumSegmentDurationInHours": {
+              "__type": "ValueOfDouble",
+              "value": 0.25
+            },
+            "MaximumExecutionPerOrder": {
+              "__type": "ValueOfInt32",
+              "value": 10
+            },
+            "MaximumExecutionPerShipment": {
+              "__type": "ValueOfInt32",
+              "value": 10
+            }
+          }
+        },
+        "routingStrategy": {
+          "implementationTypeName": "ShortestDistanceFulfillmentRoutingStrategy",
+          "values": {
+            "SplittingAuthorization": "SplittingOnLineItemsAndUnits",
+            "UnitOfMeasure": "Kilometers",
+            "DistanceType": "Driving",
+            "MaximumDrivingDistance": {
+              "__type": "ValueOfDouble",
+              "value": 100
+            },
+            "MaximumNumberOfLocationsForDrivingDistance": {
+              "__type": "ValueOfInt32",
+              "value": 2
+            },
+            "MaximumDistanceInAStraightLine": {
+              "__type": "ValueOfDouble",
+              "value": 20
+            }
           }
         },
         "routingTarget": {
