@@ -308,7 +308,7 @@
           "values": {
             "SplittingAuthorization": "SplittingOnLineItemsAndUnits",
             "UnitOfMeasure": "Kilometers",
-            "DistanceType": "Driving",
+            "DistanceType": "StraightLine",
             "MaximumDrivingDistance": {
               "__type": "ValueOfDouble",
               "value": 100
