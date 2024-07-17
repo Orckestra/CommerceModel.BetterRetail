@@ -604,6 +604,12 @@
     <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\SHAREDPROFILE2_Scope - Header.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\SHAREDPROFILE2_Scope.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueFoundationSchemaImportActivity\providers.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\FULFILLMENTLOCATIONTIMESLOT - Header.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\FULFILLMENTLOCATIONTIMESLOT.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\FULFILLMENTLOCATIONTIMESLOTQUOTAEXCEPTION - Header.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\FULFILLMENTLOCATIONTIMESLOTQUOTAEXCEPTION.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\FULFILLMENTLOCATIONTIMESLOTTYPEDEFINITION - Header.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\FULFILLMENTLOCATIONTIMESLOTTYPEDEFINITION.json" />
     <None Include="CopyArtifacts.targets" />
     <Content Include="scripts\Install-Database.ps1" />
     <Content Include="scripts\Publish-Database.ps1" />
