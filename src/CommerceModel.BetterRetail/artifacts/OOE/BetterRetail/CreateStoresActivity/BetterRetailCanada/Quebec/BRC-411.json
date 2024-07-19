@@ -176,7 +176,7 @@
     "PropertyBag": null
   },
   "TimeZone": "Eastern Standard Time",
-  "DeliveryScheduleManaged": false,
+  "DeliveryScheduleManaged": true,
   "PickUpScheduleManaged": false,
   "InventoryLocationId": "BRC-411",
   "InventoryProviderId": "OvertureQuantitative",
