@@ -263,13 +263,12 @@
           </InArgument>
         </octc:QueueOrderSchemaImportActivity.CommerceModelName>
       </octc:QueueOrderSchemaImportActivity>
-      <octc:QueueFoundationSchemaImportActivity ResultBlobUrl="{x:Null}" TaskCorrelationId="{x:Null}">
+      <octc:QueueFoundationSchemaImportActivity ResultBlobUrl="{x:Null}" TaskCorrelationId="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueFoundationSchemaImportActivity_1">
         <octc:QueueFoundationSchemaImportActivity.CommerceModelName>
           <InArgument x:TypeArguments="x:String">
             <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
           </InArgument>
         </octc:QueueFoundationSchemaImportActivity.CommerceModelName>
-        <sap2010:WorkflowViewState.IdRef>QueueFoundationSchemaImportActivity_1</sap2010:WorkflowViewState.IdRef>
       </octc:QueueFoundationSchemaImportActivity>
       <octp1:QueueImportProfileSchemaActivity ResultBlobUrl="{x:Null}" TaskCorrelationId="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueImportProfileSchemaActivity_1">
         <octp1:QueueImportProfileSchemaActivity.CommerceModelName>
@@ -278,30 +277,6 @@
           </InArgument>
         </octp1:QueueImportProfileSchemaActivity.CommerceModelName>
       </octp1:QueueImportProfileSchemaActivity>
-      <octp1:QueueProfilesImportActivity ResultBlobUrl="{x:Null}" FileImportName="BetterRetailProfiles.zip" sap2010:WorkflowViewState.IdRef="QueueProfilesImportActivity_1">
-        <octp1:QueueProfilesImportActivity.CommerceModelName>
-          <InArgument x:TypeArguments="x:String">
-            <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
-          </InArgument>
-        </octp1:QueueProfilesImportActivity.CommerceModelName>
-        <octp1:QueueProfilesImportActivity.CorrelationId>
-          <InArgument x:TypeArguments="s:Guid">
-            <mca:CSharpValue x:TypeArguments="s:Guid">new Guid()</mca:CSharpValue>
-          </InArgument>
-        </octp1:QueueProfilesImportActivity.CorrelationId>
-        <octp1:QueueProfilesImportActivity.RequiresCompression>
-          <InArgument x:TypeArguments="s:Nullable(x:Boolean)">
-            <mca:CSharpValue x:TypeArguments="s:Nullable(x:Boolean)">true</mca:CSharpValue>
-          </InArgument>
-        </octp1:QueueProfilesImportActivity.RequiresCompression>
-      </octp1:QueueProfilesImportActivity>
-      <oct:WaitForCorrelatedTasksCompletionsActivity PollingDelay="{x:Null}" ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="WaitForCorrelatedTasksCompletionsActivity_1">
-        <oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
-          <InArgument x:TypeArguments="s:Guid">
-            <mca:CSharpValue x:TypeArguments="s:Guid">CorrelationId</mca:CSharpValue>
-          </InArgument>
-        </oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
-      </oct:WaitForCorrelatedTasksCompletionsActivity>
       <octc:CreateWarehousesActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="CreateWarehousesActivity_1">
         <octc:CreateWarehousesActivity.CommerceModelName>
           <InArgument x:TypeArguments="x:String">
@@ -326,6 +301,30 @@
           </InArgument>
         </octc:CreateStoresActivity.StoreImportFilesSearchPatterns>
       </octc:CreateStoresActivity>
+      <octp1:QueueProfilesImportActivity ResultBlobUrl="{x:Null}" FileImportName="BetterRetailProfiles.zip" sap2010:WorkflowViewState.IdRef="QueueProfilesImportActivity_1">
+        <octp1:QueueProfilesImportActivity.CommerceModelName>
+          <InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">CommerceModelName</mca:CSharpValue>
+          </InArgument>
+        </octp1:QueueProfilesImportActivity.CommerceModelName>
+        <octp1:QueueProfilesImportActivity.CorrelationId>
+          <InArgument x:TypeArguments="s:Guid">
+            <mca:CSharpValue x:TypeArguments="s:Guid">new Guid()</mca:CSharpValue>
+          </InArgument>
+        </octp1:QueueProfilesImportActivity.CorrelationId>
+        <octp1:QueueProfilesImportActivity.RequiresCompression>
+          <InArgument x:TypeArguments="s:Nullable(x:Boolean)">
+            <mca:CSharpValue x:TypeArguments="s:Nullable(x:Boolean)">true</mca:CSharpValue>
+          </InArgument>
+        </octp1:QueueProfilesImportActivity.RequiresCompression>
+      </octp1:QueueProfilesImportActivity>
+      <oct:WaitForCorrelatedTasksCompletionsActivity PollingDelay="{x:Null}" ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="WaitForCorrelatedTasksCompletionsActivity_1">
+        <oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
+          <InArgument x:TypeArguments="s:Guid">
+            <mca:CSharpValue x:TypeArguments="s:Guid">CorrelationId</mca:CSharpValue>
+          </InArgument>
+        </oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
+      </oct:WaitForCorrelatedTasksCompletionsActivity>
       <octc:ImportFulfillmentPackageTypesActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="ImportFulfillmentPackageTypesActivity_1">
         <octc:ImportFulfillmentPackageTypesActivity.CommerceModelName>
           <InArgument x:TypeArguments="x:String">
@@ -438,7 +437,7 @@
       </oct:WaitForCorrelatedTasksCompletionsActivity.CorrelatedTasksId>
     </oct:WaitForCorrelatedTasksCompletionsActivity>
     <octs:QueueSearchIndexingActivity ResultBlobUrl="{x:Null}" sap2010:WorkflowViewState.IdRef="QueueSearchIndexingActivity_1" />
-    <sads:DebugSymbol.Symbol>d11DOlxnaXRcQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXExvYWREYXRhUHJvZmlsZV9EZXZUZXN0LnhhbWxWKgcqSQEEAY4BAZIBAQMlByVJAQKYAQO6Aw4CAQGcATScAUICAQKeAQWkAS0DAfMEpQEFsAE6AwHWBLEBBbEB6AEDAdEEsgEFvQEhAwG0BL4BBcQBKQMBpATFAQXLATADAZQEzAEF4wIQAwHQAeQCBeQCigEDAc8B5QIF5QKGAQMBzgHmAgXsAjkDAb8B7QIFlgMuAgFOlwMFnQMqAgE/ngMFpAMkAgEwpQMFsAMqAgETsQMFtwM1AgEEuAMFuAOCAQIBA54BoAGeAb4BAwGCBaEBC6EBWgMB9AStAQutAYABAwHlBKgBC6gBWgMB1wSxAcYBsQHNAQMB1QSxAZQBsQG6AQMB1ASxAeIBsQHlAQMB0wSxAdUBsQHZAQMB0gS6AQu6AVoDAcMEtQELtQFaAwG1BMEBC8EBWgMBpgS+AVG+AX8DAaUEyAELyAFaAwGWBMUBWMUBhQEDAZUEzQEH2AEQAwH3A9kBB98BMgMB6APgAQfmATcDAdkD5wEHggIyAwGuA4MCB4kCLQMBnwOKAgeRAjIDAZADkgIHmAIwAwGBA5kCB6kCKwMB1QKqAgewAjcDAcYCsQIHvAInAwGpAr0CB8gCIwMBjALJAgfPAjQDAf0B0AIH2wI/AwHgAdwCB+ICNwMB0QHpAgvpAloDAcAB+gIL+gJrAwGxAf8CC/8CUQMBowGJAwuJA1ADAZUBkwMLkwNVAwGHAY4DC44DWgIBeYQDC4QDVQIBa/ACC/ACaAIBXfUCC/UCawIBT5oDC5oDWgIBQKEDC6EDWgIBMagDC6gDWgIBIq0DC60DkwECARS0Awu0A1QCAQXVAQ3VAVcDAYYE0AEN0AFeAwH4A9wBDdwBXAMB6QPjAQ3jAVYDAdoD/wEN/wFeAwHLA+8BDfoBFAMBvQPqAQ3qAVwDAa8DhgINhgJcAwGgA40CDY0CXAMBkQOVAg2VAlwDAYIDmQJSmQJsAwGAA6ECDaECUwMB8gKmAg2mAlwDAeQCnAINnAJcAwHWAq0CDa0CVgMBxwK5Ag25Al8DAbgCtAINtAJcAwGqAsUCDcUCXwMBmwLAAg3AAlwDAY0CzAINzAJcAwH+AdgCDdgCXgMB7wHTAg3TAmQDAeEB3wIN3wJWAwHSAQ==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d11DOlxnaXRcQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXExvYWREYXRhUHJvZmlsZV9EZXZUZXN0LnhhbWxWKgcqSQEEAY4BAZIBAQMlByVJAQKYAQO5Aw4CAQGcATScAUICAQKeAQWkAS0DAfMEpQEFsAE6AwHWBLEBBbEB6AEDAdEEsgEFvQEhAwG0BL4BBcQBKQMBpATFAQXLATADAZQEzAEF4gIQAwHQAeMCBeMCigEDAc8B5AIF5AKGAQMBzgHlAgXrAjkDAb8B7AIFlQMuAgFOlgMFnAMqAgE/nQMFowMkAgEwpAMFrwMqAgETsAMFtgM1AgEEtwMFtwOCAQIBA54BoAGeAb4BAwGCBaEBC6EBWgMB9AStAQutAYABAwHlBKgBC6gBWgMB1wSxAcYBsQHNAQMB1QSxAZQBsQG6AQMB1ASxAeIBsQHlAQMB0wSxAdUBsQHZAQMB0gS6AQu6AVoDAcMEtQELtQFaAwG1BMEBC8EBWgMBpgS+AVG+AX8DAaUEyAELyAFaAwGWBMUBWMUBhQEDAZUEzQEH2AEQAwH3A9kBB98BMgMB6APgAQfmATcDAdkD5wEHggIyAwGuA4MCB4kCLQMBnwOKAgeQAjIDAZADkQIHlwIwAwGBA5gCB6MCJwMB5AKkAgevAiMDAccCsAIHwAIrAwGbAsECB8cCNwMBjALIAgfOAjQDAf0BzwIH2gI/AwHgAdsCB+ECNwMB0QHoAgvoAloDAcAB+QIL+QJrAwGxAf4CC/4CUQMBowGIAwuIA1ADAZUBkgMLkgNVAwGHAY0DC40DWgIBeYMDC4MDVQIBa+8CC+8CaAIBXfQCC/QCawIBT5kDC5kDWgIBQKADC6ADWgIBMacDC6cDWgIBIqwDC6wDkwECARSzAwuzA1QCAQXVAQ3VAVcDAYYE0AEN0AFeAwH4A9wBDdwBXAMB6QPjAQ3jAVYDAdoD/wEN/wFeAwHLA+8BDfoBFAMBvQPqAQ3qAVwDAa8DhgINhgJcAwGgA40CDY0CXAMBkQOUAg2UAlwDAYIDoAINoAJfAwHzApsCDZsCXAMB5QKsAg2sAl8DAdYCpwINpwJcAwHIArACUrACbAMBxgK4Ag24AlMDAbgCvQINvQJcAwGqArMCDbMCXAMBnALEAg3EAlYDAY0CywINywJcAwH+AdcCDdcCXgMB7wHSAg3SAmQDAeEB3gIN3gJWAwHSAQ==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -455,10 +454,10 @@
       <sap2010:ViewStateData Id="QueueOrderSchemaImportActivity_1" sap:VirtualizedContainerService.HintSize="242,22" />
       <sap2010:ViewStateData Id="QueueFoundationSchemaImportActivity_1" sap:VirtualizedContainerService.HintSize="242,22" />
       <sap2010:ViewStateData Id="QueueImportProfileSchemaActivity_1" sap:VirtualizedContainerService.HintSize="242,22" />
-      <sap2010:ViewStateData Id="QueueProfilesImportActivity_1" sap:VirtualizedContainerService.HintSize="242,22" />
-      <sap2010:ViewStateData Id="WaitForCorrelatedTasksCompletionsActivity_1" sap:VirtualizedContainerService.HintSize="242,22" />
       <sap2010:ViewStateData Id="CreateWarehousesActivity_1" sap:VirtualizedContainerService.HintSize="242,22" />
       <sap2010:ViewStateData Id="CreateStoresActivity_1" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="QueueProfilesImportActivity_1" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="WaitForCorrelatedTasksCompletionsActivity_1" sap:VirtualizedContainerService.HintSize="242,22" />
       <sap2010:ViewStateData Id="ImportFulfillmentPackageTypesActivity_1" sap:VirtualizedContainerService.HintSize="242,22" />
       <sap2010:ViewStateData Id="QueueFulfillmentLocationsInventoryImportActivity_1" sap:VirtualizedContainerService.HintSize="242,22" />
       <sap2010:ViewStateData Id="WaitForCorrelatedTasksCompletionsActivity_2" sap:VirtualizedContainerService.HintSize="242,22" />
