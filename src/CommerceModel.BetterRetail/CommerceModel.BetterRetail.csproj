@@ -610,6 +610,8 @@
     <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\FULFILLMENTLOCATIONTIMESLOTQUOTAEXCEPTION.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\FULFILLMENTLOCATIONTIMESLOTTYPEDEFINITION - Header.json" />
     <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\FULFILLMENTLOCATIONTIMESLOTTYPEDEFINITION.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\FULFILLMENTLOCATIONHOUR - Header.json" />
+    <Content Include="artifacts\OOE\BetterRetail\QueueProfilesImportActivity\FULFILLMENTLOCATIONHOUR.json" />
     <None Include="CopyArtifacts.targets" />
     <Content Include="scripts\Install-Database.ps1" />
     <Content Include="scripts\Publish-Database.ps1" />
