@@ -410,6 +410,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
       }
     },
     "propertyConfigurations": {}
@@ -463,6 +467,10 @@
       "IsAcceptanceRequiredForTransfer": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
       }
     },
     "propertyConfigurations": {}
@@ -508,6 +516,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -557,6 +569,10 @@
       "IsAcceptanceRequired": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -594,6 +610,10 @@
       "ForceManualCarrierSelection": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -635,6 +655,10 @@
       "IsAcceptanceRequired": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -1491,6 +1515,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -1540,6 +1568,10 @@
       "IsAcceptanceRequired": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -1589,6 +1621,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
       }
     },
     "propertyConfigurations": {}
@@ -1642,6 +1678,10 @@
       "IsAcceptanceRequiredForTransfer": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
       }
     },
     "propertyConfigurations": {}
@@ -1688,6 +1728,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -1729,6 +1773,10 @@
       "IsAcceptanceRequired": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -2235,6 +2283,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -2285,6 +2337,10 @@
       "IsAcceptanceRequired": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -2334,6 +2390,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
       }
     },
     "propertyConfigurations": {}
@@ -2387,6 +2447,10 @@
       "IsAcceptanceRequiredForTransfer": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
       }
     },
     "propertyConfigurations": {}
@@ -2434,6 +2498,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -2476,6 +2544,10 @@
       "IsAcceptanceRequired": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -2916,6 +2988,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
       }
     },
     "propertyConfigurations": {}
@@ -2969,6 +3045,10 @@
       "IsAcceptanceRequiredForTransfer": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
       }
     },
     "propertyConfigurations": {}
@@ -3015,6 +3095,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -3065,6 +3149,10 @@
       "IsAcceptanceRequired": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -3102,6 +3190,10 @@
       "ForceManualCarrierSelection": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -3143,6 +3235,10 @@
       "IsAcceptanceRequired": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -3347,6 +3443,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -3449,6 +3549,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -3503,6 +3607,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
@@ -3557,6 +3665,10 @@
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
       }
     },
     "propertyConfigurations": {}
