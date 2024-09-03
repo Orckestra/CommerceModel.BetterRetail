@@ -49,7 +49,6 @@
       <AssemblyReference>Common.Logging.Core</AssemblyReference>
       <AssemblyReference>Ionic.Zip</AssemblyReference>
       <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
-      <AssemblyReference>Microsoft.Azure.Documents.Client</AssemblyReference>
       <AssemblyReference>Microsoft.Azure.KeyVault.Core</AssemblyReference>
       <AssemblyReference>Microsoft.Data.Edm</AssemblyReference>
       <AssemblyReference>Microsoft.Data.OData</AssemblyReference>
