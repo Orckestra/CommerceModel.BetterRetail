@@ -135,7 +135,9 @@
                                 Sous-total: ${{Order.Cart.SubTotal | number: "#,0.00" }}<br />
                                 Total des frais d’expédition: ${{Order.Cart.FulfillmentCost | number: "#,0.00"}}<br />
                                 Taxes de vente: ${{Order.Cart.TaxTotal | number: "#,0.00"}}<br />
+                                <!--{% if Order.Cart.AdjustmentTotal != 0 %}-->
                                 Ajustement: ${{Order.Cart.AdjustmentTotal | number: "#,0.00"}}<br />
+                                <!--{% endif %}-->
                                 Total: ${{Order.Cart.Total | number: "#,0.00"}}
                             </div>
                             <br />

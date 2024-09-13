@@ -129,7 +129,9 @@
                                 Sub-total: ${{Order.Cart.SubTotal | number: "#,0.00" }}<br/>
                                 Shipping Total: ${{Order.Cart.FulfillmentCost | number: "#,0.00"}}<br/>
                                 Sales Tax: ${{Order.Cart.TaxTotal | number: "#,0.00"}}<br/>
+                                <!--{% if Order.Cart.AdjustmentTotal != 0 %}-->
                                 Adjustment: ${{Order.Cart.AdjustmentTotal | number: "#,0.00"}}<br />
+                                <!--{% endif %}-->
                                 Total: ${{Order.Cart.Total | number: "#,0.00"}}
                             </div>
                             <br />
