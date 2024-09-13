@@ -291,13 +291,24 @@
 											</tr>
 											<!--{% endif %}
 										{% endfor %}-->
+										<!--{% if Order.Cart.AdjustmentTotal != 0 Order.Cart.AdjustmentTotal != null %}-->
+										<tr>
+											<td colspan="2"></td>
+											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
+												<strong style="font-size: 18px;">Adjustment</strong>
+											</td>
+											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
+												<strong style="font-size: 18px;">{{ Order.Cart.AdjustmentTotal | money:"en-US" }}</strong>
+											</td>
+										</tr>
+										<!--{% endif %}-->
 										<tr>
 											<td colspan="2"></td>
 											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
 												<strong style="font-size: 18px;">Total</strong>
 											</td>
 											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
-												<strong style="font-size: 18px;">{{ Order.Cart.Total | money:"en-US" }} {{Order.Cart.BillingCurrency}}</strong>
+												<strong style="font-size: 18px;">{{ Order.Cart.Total | money:"en-US" }}</strong>
 											</td>
 										</tr>
 									</tfoot>
