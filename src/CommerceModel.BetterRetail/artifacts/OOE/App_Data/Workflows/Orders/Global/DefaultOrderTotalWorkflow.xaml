@@ -142,18 +142,6 @@
         </InOutArgument>
       </ooopwa:AssignFirstActiveStoreInScopeActivity.OrderProcessingResultArgument>
     </ooopwa:AssignFirstActiveStoreInScopeActivity>
-    <ooopwa:AssignFulfillmentAttributesActivity sap2010:WorkflowViewState.IdRef="AssignFulfillmentAttributesActivity_1">
-      <ooopwa:AssignFulfillmentAttributesActivity.OrderProcessingContextArgument>
-        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
-          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
-        </InArgument>
-      </ooopwa:AssignFulfillmentAttributesActivity.OrderProcessingContextArgument>
-      <ooopwa:AssignFulfillmentAttributesActivity.OrderProcessingResultArgument>
-        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
-          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
-        </InOutArgument>
-      </ooopwa:AssignFulfillmentAttributesActivity.OrderProcessingResultArgument>
-    </ooopwa:AssignFulfillmentAttributesActivity>
     <ooopwa:ChangeOrderScopeActivity sap2010:WorkflowViewState.IdRef="ChangeOrderScopeActivity_1">
       <ooopwa:ChangeOrderScopeActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
@@ -166,6 +154,18 @@
         </InOutArgument>
       </ooopwa:ChangeOrderScopeActivity.OrderProcessingResultArgument>
     </ooopwa:ChangeOrderScopeActivity>
+    <ooopwa:AssignFulfillmentAttributesActivity sap2010:WorkflowViewState.IdRef="AssignFulfillmentAttributesActivity_1">
+      <ooopwa:AssignFulfillmentAttributesActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:AssignFulfillmentAttributesActivity.OrderProcessingContextArgument>
+      <ooopwa:AssignFulfillmentAttributesActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:AssignFulfillmentAttributesActivity.OrderProcessingResultArgument>
+    </ooopwa:AssignFulfillmentAttributesActivity>
     <ooopwa:FetchLineItemsProductInformationActivity CustomReturnsInfoFields="{x:Null}" CustomPropertiesToReturn="Country|Appellations|Region|Score" CustomVariantPropertiesToReturn="*" sap2010:WorkflowViewState.IdRef="FetchLineItemsProductInformationActivity_1" RefreshInformationInterval="900">
       <ooopwa:FetchLineItemsProductInformationActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
@@ -510,14 +510,14 @@
         </InOutArgument>
       </ooopwav:ValidateCartAttributesActivity.OrderProcessingResultArgument>
     </ooopwav:ValidateCartAttributesActivity>
-    <sads:DebugSymbol.Symbol>d40BQzpcd29cQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXGFydGlmYWN0c1xPT0VcQXBwX0RhdGFcV29ya2Zsb3dzXE9yZGVyc1xHbG9iYWxcRGVmYXVsdE9yZGVyVG90YWxXb3JrZmxvdy54YW1sZXkDgwQOAgEBegWFATcDAd8BhgEFkQE0AwHYAZIBBZ0BMgMB0QGeAQWpAScDAcoBqgEFtQE3AwHDAbYBBcEBNAMBvAHCAQXNASsDAbUBzgEF7wIQAgFX8AIF+wI1AgFQ/AIFhwMvAgFJiAMFkwMvAgFClAMFxQMQAgElxgMF0QM8AgEe0gMF3QMtAgEX3gMF6QM2AgEQ6gMF9QM3AgEJ9gMFgQQuAgECggELggGBAQMB4wF9C317AwHgAY4BC44BgQEDAdwBiQELiQF7AwHZAZoBC5oBgQEDAdUBlQELlQF7AwHSAaYBC6YBgQEDAc4BoQELoQF7AwHLAbIBC7IBgQEDAccBrQELrQF7AwHEAb4BC74BgQEDAcABuQELuQF7AwG9AcoBC8oBgQEDAbkBxQELxQF7AwG2Ac8BB+gBEgMBpgHpAQfWAhICAWbXAgfiAjECAV/jAgfuAi8CAVj4Agv4AoEBAgFU8wIL8wJ7AgFRhAMLhAOBAQIBTf8CC/8CewIBSpADC5ADgQECAUaLAwuLA3sCAUOVAwegAzMCATuhAwesAyoCATStAwe4AycCAS25AwfEAysCASbOAwvOA4EBAgEiyQMLyQN7AgEf2gML2gOBAQIBG9UDC9UDewIBGOYDC+YDgQECARThAwvhA3sCARHyAwvyA4EBAgEN7QML7QN7AgEK/gML/gOBAQIBBvkDC/kDewIBA9ABCdsBMwMBrgHcAQnnATMDAacB6gEJ9QEsAwGfAfYBCYECMQMBmAGCAgmNAj0DAZEBjgIJmQJOAwGKAZoCCaUCNwMBgwGmAgmxAjUCAXyyAgm9AjcCAXW+AgnJAjoCAW7KAgnVAjICAWffAg3fAoMBAgFj2gIN2gJ9AgFg6wIN6wKDAQIBXOYCDeYCfQIBWZ0DDZ0DgwECAT+YAw2YA30CATypAw2pA4MBAgE4pAMNpAN9AgE1tQMNtQODAQIBMbADDbADfQIBLsEDDcEDgwECASq8Aw28A30CASfYAQ/YAYUBAwGyAdMBD9MBfwMBrwHkAQ/kAYUBAwGrAd8BD98BfwMBqAHyAQ/yAYUBAwGjAe0BD+0BfwMBoAH+AQ/+AYUBAwGcAfkBD/kBfwMBmQGKAg+KAoUBAwGVAYUCD4UCfwMBkgGWAg+WAoUBAwGOAZECD5ECfwMBiwGiAg+iAoUBAwGHAZ0CD50CfwMBhAGuAg+uAoUBAwGAAakCD6kCfwIBfboCD7oChQECAXm1Ag+1An8CAXbGAg/GAoUBAgFywQIPwQJ/AgFv0gIP0gKFAQIBa80CD80CfwIBaA==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d40BQzpcd29cQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXGFydGlmYWN0c1xPT0VcQXBwX0RhdGFcV29ya2Zsb3dzXE9yZGVyc1xHbG9iYWxcRGVmYXVsdE9yZGVyVG90YWxXb3JrZmxvdy54YW1sZXgDggQOAgEBeQWEATcDAd8BhQEFkAE0AwHYAZEBBZwBJwMB0QGdAQWoATIDAcoBqQEFtAE3AwHDAbUBBcABNAMBvAHBAQXMASsDAbUBzQEF7gIQAgFX7wIF+gI1AgFQ+wIFhgMvAgFJhwMFkgMvAgFCkwMFxAMQAgElxQMF0AM8AgEe0QMF3AMtAgEX3QMF6AM2AgEQ6QMF9AM3AgEJ9QMFgAQuAgECgQELgQGBAQMB4wF8C3x7AwHgAY0BC40BgQEDAdwBiAELiAF7AwHZAZkBC5kBgQEDAdUBlAELlAF7AwHSAaUBC6UBgQEDAc4BoAELoAF7AwHLAbEBC7EBgQEDAccBrAELrAF7AwHEAb0BC70BgQEDAcABuAELuAF7AwG9AckBC8kBgQEDAbkBxAELxAF7AwG2Ac4BB+cBEgMBpgHoAQfVAhICAWbWAgfhAjECAV/iAgftAi8CAVj3Agv3AoEBAgFU8gIL8gJ7AgFRgwMLgwOBAQIBTf4CC/4CewIBSo8DC48DgQECAUaKAwuKA3sCAUOUAwefAzMCATugAwerAyoCATSsAwe3AycCAS24AwfDAysCASbNAwvNA4EBAgEiyAMLyAN7AgEf2QML2QOBAQIBG9QDC9QDewIBGOUDC+UDgQECARTgAwvgA3sCARHxAwvxA4EBAgEN7AML7AN7AgEK/QML/QOBAQIBBvgDC/gDewIBA88BCdoBMwMBrgHbAQnmATMDAacB6QEJ9AEsAwGfAfUBCYACMQMBmAGBAgmMAj0DAZEBjQIJmAJOAwGKAZkCCaQCNwMBgwGlAgmwAjUCAXyxAgm8AjcCAXW9AgnIAjoCAW7JAgnUAjICAWfeAg3eAoMBAgFj2QIN2QJ9AgFg6gIN6gKDAQIBXOUCDeUCfQIBWZwDDZwDgwECAT+XAw2XA30CATyoAw2oA4MBAgE4owMNowN9AgE1tAMNtAODAQIBMa8DDa8DfQIBLsADDcADgwECASq7Aw27A30CASfXAQ/XAYUBAwGyAdIBD9IBfwMBrwHjAQ/jAYUBAwGrAd4BD94BfwMBqAHxAQ/xAYUBAwGjAewBD+wBfwMBoAH9AQ/9AYUBAwGcAfgBD/gBfwMBmQGJAg+JAoUBAwGVAYQCD4QCfwMBkgGVAg+VAoUBAwGOAZACD5ACfwMBiwGhAg+hAoUBAwGHAZwCD5wCfwMBhAGtAg+tAoUBAwGAAagCD6gCfwIBfbkCD7kChQECAXm0Ag+0An8CAXbFAg/FAoUBAgFywAIPwAJ/AgFv0QIP0QKFAQIBa8wCD8wCfwIBaA==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
       <sap2010:ViewStateData Id="AssignShipmentProcessingDateTimeActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="AssignFirstActiveStoreInScopeActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
-      <sap2010:ViewStateData Id="AssignFulfillmentAttributesActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="ChangeOrderScopeActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
+      <sap2010:ViewStateData Id="AssignFulfillmentAttributesActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="FetchLineItemsProductInformationActivity_1" sap:VirtualizedContainerService.HintSize="443,190">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
