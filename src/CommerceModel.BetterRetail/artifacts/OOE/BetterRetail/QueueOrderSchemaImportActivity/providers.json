@@ -3671,6 +3671,102 @@
         "value": 1
       }
     },
+    "fulfillmentFeeOptions": [
+      {
+        "id": "c9a9e78ac6164c2daf7234595bf29421",
+        "code": "OrderValue",
+        "displayName": {
+          "en-US": "Regular by order value",
+          "en-CA": "Regular by order value",
+          "fr-CA": "Régulier par valeur de commande"
+        },
+        "isActive": true,
+        "implementationTypeName": "DefaultFulfillmentFeeOption",
+        "values": {
+          "Price": {
+            "__type": "ValueOfDecimal",
+            "value": 15
+          }
+        },
+        "fulfillmentFeeCriteria": [
+          {
+            "implementationTypeName": "OrderValueFulfillmentFeeCriterion",
+            "values": {
+              "Value": {
+                "__type": "ValueOfDecimal",
+                "value": 100
+              },
+              "LogicalOperator": {
+                "__type": "ValueOfString",
+                "value": "LessThanOrEqual"
+              }
+            }
+          },
+          {
+            "implementationTypeName": "SimpleFulfillmentFeeCriterion",
+            "values": {
+              "NonSensitiveField": {
+                "__type": "ValueOfDecimal",
+                "value": 100
+              },
+              "SensitiveField": {
+                "__type": "ValueOfDecimal",
+                "value": 100
+              }
+            }
+          },
+          {
+            "implementationTypeName": "CustomerNameFulfillmentFeeCriterion",
+            "values": {
+              "Value": {
+                "__type": "ValueOfString",
+                "value": "Dami"
+              },
+              "LogicalOperator": {
+                "__type": "ValueOfString",
+                "value": "Contains"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "c9a9e78ac6164c2daf7234595bf29422",
+        "code": "Simple",
+        "displayName": {
+          "en-US": "Testing fulfillment fee option",
+          "en-CA": "Testing fulfillment fee option",
+          "fr-CA": "Test de l'option de frais de traitement"
+        },
+        "isActive": true,
+        "implementationTypeName": "SimpleFulfillmentFeeOption",
+        "values": {
+          "NonSensitiveField": {
+            "__type": "ValueOfDecimal",
+            "value": 15
+          },
+          "SensitiveField": {
+            "__type": "ValueOfDecimal",
+            "value": 15
+          }
+        },
+        "fulfillmentFeeCriteria": [
+          {
+            "implementationTypeName": "OrderValueFulfillmentFeeCriterion",
+            "values": {
+              "Value": {
+                "__type": "ValueOfDecimal",
+                "value": 1000
+              },
+              "LogicalOperator": {
+                "__type": "ValueOfString",
+                "value": "GreaterThanOrEqual"
+              }
+            }
+          }
+        ]
+      }
+    ],
     "propertyConfigurations": {}
   },
   {
