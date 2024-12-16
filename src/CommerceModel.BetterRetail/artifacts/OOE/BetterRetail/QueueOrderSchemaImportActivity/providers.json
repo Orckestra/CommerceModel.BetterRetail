@@ -3736,7 +3736,7 @@
         "displayName": {
           "en-US": "Testing fulfillment fee option",
           "en-CA": "Testing fulfillment fee option",
-          "fr-CA": "Test de l'option de frais de réalisation"
+          "fr-CA": "Test de l'option de frais de traitement"
         },
         "isActive": true,
         "implementationTypeName": "SimpleFulfillmentFeeOption",
