@@ -3675,6 +3675,7 @@
       {
         "id": "c9a9e78ac6164c2daf7234595bf29421",
         "code": "ExpensiveOrders",
+        "description": "Fulfillment Fee Options for expensive orders",
         "displayName": {
           "en-US": "Expensive orders",
           "en-CA": "Expensive orders",
@@ -3707,6 +3708,7 @@
       {
         "id": "c9a9e78ac6164c2daf7234595bf29422",
         "code": "RegularOrders",
+        "description": "Fulfillment Fee Options for regular orders",
         "displayName": {
           "en-US": "Regular orders",
           "en-CA": "Regular orders",
