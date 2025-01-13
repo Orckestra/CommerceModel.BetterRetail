@@ -3682,12 +3682,17 @@
           "fr-CA": "Commandes coûteuses"
         },
         "isActive": true,
-        "implementationTypeName": "DefaultFulfillmentFeeOption",
+        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
         "values": {
           "Price": {
             "__type": "ValueOfDecimal",
             "value": 5
-          }
+          },
+          "DaysMinimum": {
+            "__type": "ValueOfInt32",
+            "value": 5
+          },
+          "ServiceLevel": "Regular Parcel"
         },
         "fulfillmentFeeCriteria": [
           {
@@ -3715,12 +3720,21 @@
           "fr-CA": "Commandes régulières"
         },
         "isActive": true,
-        "implementationTypeName": "DefaultFulfillmentFeeOption",
+        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
         "values": {
           "Price": {
             "__type": "ValueOfDecimal",
             "value": 8
-          }
+          },
+          "DaysMinimum": {
+            "__type": "ValueOfInt32",
+            "value": 5
+          },
+          "DaysMaximum": {
+            "__type": "ValueOfInt32",
+            "value": 10
+          },
+          "ServiceLevel": "Express Parcel"
         },
         "fulfillmentFeeCriteria": [
           {
