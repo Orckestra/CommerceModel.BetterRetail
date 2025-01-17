@@ -127,7 +127,7 @@
                                 Merchandise Total: ${{Order.Cart.SubTotal | plus:Order.Cart.DiscountTotal | number: "#,0.00" }}<br />
                                 Discount: ${{Order.Cart.DiscountTotal | number: "#,0.00" }}<br />
                                 Sub-total: ${{Order.Cart.SubTotal | number: "#,0.00" }}<br />
-                                Shipping Total: ${{Order.Cart.FulfillmentCost | number: "#,0.00"}}<br />
+                                Fulfillment Total: ${{Order.Cart.FulfillmentCost | number: "#,0.00"}}<br />
                                 Sales Tax: ${{Order.Cart.TaxTotal | number: "#,0.00"}}<br />
                                 <!--{% if Order.Cart.AdjustmentTotal != 0 %}-->
                                 Adjustment: ${{Order.Cart.AdjustmentTotal | number: "#,0.00"}}<br />

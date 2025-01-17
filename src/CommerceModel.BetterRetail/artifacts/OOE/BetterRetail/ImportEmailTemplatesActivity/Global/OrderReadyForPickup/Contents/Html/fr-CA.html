@@ -109,16 +109,17 @@
                                 DÉTAILS DE LA COMMANDE<br />
                                 ==============================<br />
                                 <!--{% for shipment in Order.Cart.Shipments %}
-                                {% for item in shipment.LineItems%}--><br />
+    {% for item in shipment.LineItems%}-->
+                                <br />
                                 {{item.Quantity}} x {{item.ProductSummary.DisplayName}} $<!--{% if item.SalePrice &lt; item.ListPrice %}-->{{item.SalePrice | number: "#,0.00"}}<!--{% else %}-->{{item.ListPrice | number: "#,0.00"}}<!--{% endif %}--><br />
                                 <!--{% endfor %}
-                                {% endfor %}-->
+    {% endfor %}-->
                                 <br />
                                 <br />
                                 Total de la marchandise: ${{Order.Cart.SubTotal | plus:Order.Cart.DiscountTotal | number: "#,0.00" }}<br />
                                 Rabais: ${{Order.Cart.DiscountTotal | number: "#,0.00" }}<br />
                                 Sous-total: ${{Order.Cart.SubTotal | number: "#,0.00" }}<br />
-                                Total des frais d’expédition: ${{Order.Cart.FulfillmentCost | number: "#,0.00"}}<br />
+                                Total des frais de traitement: ${{Order.Cart.FulfillmentCost | number: "#,0.00"}}<br />
                                 Taxes de vente: ${{Order.Cart.TaxTotal | number: "#,0.00"}}<br />
                                 <!--{% if Order.Cart.AdjustmentTotal != 0 %}-->
                                 Ajustement: ${{Order.Cart.AdjustmentTotal | number: "#,0.00"}}<br />
