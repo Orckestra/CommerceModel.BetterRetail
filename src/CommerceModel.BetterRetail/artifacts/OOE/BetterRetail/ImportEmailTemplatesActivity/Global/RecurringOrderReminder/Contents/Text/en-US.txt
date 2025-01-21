@@ -32,7 +32,7 @@ Discount: ${{Cart.DiscountTotal | number: "#,0.00" }}
 
 Sub-total: ${{Cart.SubTotal | number: "#,0.00" }}
 
-Shipping Total: ${{Cart.ShippingTotal | number: "#,0.00"}}
+Fulfillment Total: ${{Cart.ShippingTotal | number: "#,0.00"}}
 
 Sales Tax: ${{Cart.TaxTotal | number: "#,0.00"}}
 
