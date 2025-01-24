@@ -489,6 +489,7 @@
     "isActive": true,
     "values": {
       "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
+      "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
       "AcceptanceSLAInMinutes": {
         "__type": "ValueOfInt32",
         "value": 60
@@ -538,6 +539,7 @@
     "isActive": true,
     "values": {
       "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
+      "FulfillmentCarrierProviderId": "D168E411-ABDC-42C0-A9A9-A5D97E28847D",
       "AcceptanceSLAInMinutes": {
         "__type": "ValueOfInt32",
         "value": 60
@@ -575,6 +577,106 @@
         "value": 1
       }
     },
+    "fulfillmentServiceLevels": [
+      {
+        "id": "c9a9e78ac6164c2daf7234595bf29221",
+        "code": "Regular",
+        "description": "Regular service level",
+        "displayName": {
+          "en-US": "Regular service",
+          "en-CA": "Regular serivce",
+          "fr-CA": "Service régulier"
+        },
+        "isActive": true,
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "fulfillmentCarrierServices": [
+          {
+            "Id": "037b05c0b6e74becb58ce5f55d3f4a90",
+            "Name": "Canada Post",
+            "CarrierName": "Canada Post",
+            "CarrierServiceLevel": "canada_post_regular_parcel",
+            "implementationTypeName": "DefaultFulfillmentCarrierService"
+          },
+          {
+            "Id": "037b05c0b6e74becb58ce5f55d3f4a91",
+            "Name": "Purolator",
+            "CarrierName": "Purolator",
+            "CarrierServiceLevel": "purolator_ground",
+            "implementationTypeName": "DefaultFulfillmentCarrierService"
+          },
+          {
+            "Id": "037b05c0b6e74becb58ce5f55d3f4a92",
+            "Name": "UPS",
+            "CarrierName": "UPS",
+            "CarrierServiceLevel": "ups_standard",
+            "implementationTypeName": "DefaultFulfillmentCarrierService"
+          }
+        ]
+      },
+      {
+        "id": "c9a9e78ac6164c2daf7234595bf29222",
+        "code": "Express",
+        "description": "Express service level",
+        "displayName": {
+          "en-US": "Express service",
+          "en-CA": "Express serivce",
+          "fr-CA": "Service express"
+        },
+        "isActive": true,
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "fulfillmentCarrierServices": [
+          {
+            "Id": "037b05c0b6e74becb58ce5f55d3f4a93",
+            "Name": "Canada Post Expedited",
+            "CarrierName": "Canada Post",
+            "CarrierServiceLevel": "canada_post_expedited_parcel",
+            "implementationTypeName": "DefaultFulfillmentCarrierService"
+          },
+          {
+            "Id": "037b05c0b6e74becb58ce5f55d3f4a94",
+            "Name": "Canada Post Xpresspost",
+            "CarrierName": "Canada Post",
+            "CarrierServiceLevel": "canada_post_xpresspost",
+            "implementationTypeName": "DefaultFulfillmentCarrierService"
+          },
+          {
+            "Id": "037b05c0b6e74becb58ce5f55d3f4a95",
+            "Name": "Purolator",
+            "CarrierName": "Purolator",
+            "CarrierServiceLevel": "purolator_express",
+            "implementationTypeName": "DefaultFulfillmentCarrierService"
+          },
+          {
+            "Id": "037b05c0b6e74becb58ce5f55d3f4a96",
+            "Name": "UPS",
+            "CarrierName": "UPS",
+            "CarrierServiceLevel": "ups_express",
+            "implementationTypeName": "DefaultFulfillmentCarrierService"
+          }
+        ]
+      },
+      {
+        "id": "c9a9e78ac6164c2daf7234595bf29223",
+        "code": "Same-day",
+        "description": "Same-day service level",
+        "displayName": {
+          "en-US": "Same-day",
+          "en-CA": "Same-day",
+          "fr-CA": "Le jour même"
+        },
+        "isActive": true,
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "fulfillmentCarrierServices": [
+          {
+            "Id": "037b05c0b6e74becb58ce5f55d3f4a97",
+            "Name": "DoorDash",
+            "CarrierName": "DoorDash",
+            "CarrierServiceLevel": "delivery",
+            "implementationTypeName": "DefaultFulfillmentCarrierService"
+          }
+        ]
+      }
+    ],
     "propertyConfigurations": {}
   },
   {
@@ -588,9 +690,10 @@
       "en-CA": "SFS Fulfillment Provider (Competition)",
       "fr-CA": "Fournisseur SFS (Compétition)"
     },
-    "isActive": true,
+    "isActive": false,
     "values": {
       "FulfillmentRoutingProviderId": "7A169585-DA71-442D-8F74-02BEAFB03B3C",
+      "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
       "AcceptanceSLAInMinutes": {
         "__type": "ValueOfInt32",
         "value": 60
@@ -629,9 +732,10 @@
       "en-CA": "SFS Short Fulfillment Provider (Competition)",
       "fr-CA": "Fournisseur SFS court (Compétition)"
     },
-    "isActive": true,
+    "isActive": false,
     "values": {
       "FulfillmentRoutingProviderId": "7A169585-DA71-442D-8F74-02BEAFB03B3C",
+      "FulfillmentCarrierProviderId": "D168E411-ABDC-42C0-A9A9-A5D97E28847D",
       "AcceptanceSLAInMinutes": {
         "__type": "ValueOfInt32",
         "value": 60
@@ -671,7 +775,7 @@
     "displayName": {
 
     },
-    "isActive": true,
+    "isActive": false,
     "values": {
       "Cost": {
         "__type": "ValueOfDouble",
@@ -692,7 +796,7 @@
     "displayName": {
 
     },
-    "isActive": true,
+    "isActive": false,
     "values": {
       "Cost": {
         "__type": "ValueOfDouble",
@@ -3409,7 +3513,7 @@
       "en-CA": "SFS (Multi Segment)",
       "fr-CA": "SFS (Multi Segment)"
     },
-    "isActive": true,
+    "isActive": false,
     "values": {
       "ForceManualCarrierSelection": {
         "__type": "ValueOfBoolean",
@@ -3439,7 +3543,8 @@
         "__type": "ValueOfInt32",
         "value": 60
       },
-      "FulfillmentRoutingProviderId": "521e1f1c0d0f49bfa6134d4f1f8d38db",
+      "FulfillmentRoutingProviderId": "521E1F1C-0D0F-49BF-A613-4D4F1F8D38DB",
+      "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
@@ -3515,7 +3620,7 @@
       "en-CA": "SFS (Shortest Distance)",
       "fr-CA": "SFS (Shortest Distance)"
     },
-    "isActive": true,
+    "isActive": false,
     "values": {
       "ForceManualCarrierSelection": {
         "__type": "ValueOfBoolean",
@@ -3545,7 +3650,8 @@
         "__type": "ValueOfInt32",
         "value": 60
       },
-      "FulfillmentRoutingProviderId": "a45dc1d7a7a84134b336549138a285c5",
+      "FulfillmentRoutingProviderId": "A45DC1D7-A7A8-4134-B336-549138A285C5",
+      "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
@@ -3603,7 +3709,8 @@
         "__type": "ValueOfInt32",
         "value": 60
       },
-      "FulfillmentRoutingProviderId": "521e1f1c0d0f49bfa6134d4f1f8d38db",
+      "FulfillmentRoutingProviderId": "521E1F1C-0D0F-49BF-A613-4D4F1F8D38DB",
+      "FulfillmentCarrierProviderId": "D168E411-ABDC-42C0-A9A9-A5D97E28847D",
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
@@ -3662,6 +3769,7 @@
         "value": 60
       },
       "FulfillmentRoutingProviderId": "a45dc1d7a7a84134b336549138a285c5",
+      "FulfillmentCarrierProviderId": "D168E411-ABDC-42C0-A9A9-A5D97E28847D",
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
@@ -3781,7 +3889,7 @@
         "value": 30
       },
       "DefaultReturnCountry": "ca",
-      "FulfillmentCarrierProviderId": "d168e411abdc42c0a9a9a5d97e28847d",
+      "FulfillmentCarrierProviderId": "D168E411-ABDC-42C0-A9A9-A5D97E28847D",
       "DefaultReturnZipPostalCode": "J4K5G4",
       "GenerateOrderReturnLabels": {
         "__type": "ValueOfBoolean",
