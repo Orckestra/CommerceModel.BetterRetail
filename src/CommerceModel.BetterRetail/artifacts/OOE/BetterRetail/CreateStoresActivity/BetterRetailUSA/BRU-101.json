@@ -146,12 +146,12 @@
       "city": "New York",
       "countryCode": "US",
       "regionCode": "US-NY",
-      "line1": "113 Sullivan St",
-      "postalCode": "10012",
+      "line1": "4 Concord Ave",
+      "postalCode": "12901",
       "latitude": 40.725944,
       "longitude": -74.002635,
-      "isPreferredBilling": false,
-      "isPreferredShipping": false,
+      "isPreferredBilling": true,
+      "isPreferredShipping": true,
       "propertyBag": {
         "Address_Id": {
           "__type": "ValueOfInt32",
