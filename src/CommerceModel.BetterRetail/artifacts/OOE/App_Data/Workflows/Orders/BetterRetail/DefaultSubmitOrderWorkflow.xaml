@@ -326,6 +326,18 @@
             </InOutArgument>
           </ooopwav:ValidateFulfilmentTimeActivity.OrderProcessingResultArgument>
         </ooopwav:ValidateFulfilmentTimeActivity>
+        <ooopwav:ValidateFulfilmentFeeOptionActivity sap2010:WorkflowViewState.IdRef="ValidateFulfilmentFeeOptionActivity_1">
+          <ooopwav:ValidateFulfilmentFeeOptionActivity.OrderProcessingContextArgument>
+            <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+              <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+            </InArgument>
+          </ooopwav:ValidateFulfilmentFeeOptionActivity.OrderProcessingContextArgument>
+          <ooopwav:ValidateFulfilmentFeeOptionActivity.OrderProcessingResultArgument>
+            <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+              <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+            </InOutArgument>
+          </ooopwav:ValidateFulfilmentFeeOptionActivity.OrderProcessingResultArgument>
+        </ooopwav:ValidateFulfilmentFeeOptionActivity>
       </Sequence>
       <ooopwav:ValidatePaymentsOptionsActivity sap2010:WorkflowViewState.IdRef="ValidatePaymentsOptionsActivity_1">
         <ooopwav:ValidatePaymentsOptionsActivity.OrderProcessingContextArgument>
@@ -546,6 +558,7 @@
       <sap2010:ViewStateData Id="ValidateFulfillmentDeliveryActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
       <sap2010:ViewStateData Id="ValidateFulfillmentShipToStoreActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
       <sap2010:ViewStateData Id="ValidateFulfilmentTimeActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ValidateFulfilmentFeeOptionActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
       <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="222,642">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
