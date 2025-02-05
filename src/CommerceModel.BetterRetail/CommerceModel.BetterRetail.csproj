@@ -711,6 +711,11 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="artifacts\OCS\App_Data\Workflows\Orders\BetterRetail\DefaultSubmitOrderWorkflow.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(ProjectDir)\CopyArtifacts.targets" />
   <Target Name="ReplaceNetFxNetStandardRefWithLib" AfterTargets="ImplicitlyExpandNETStandardFacades">
