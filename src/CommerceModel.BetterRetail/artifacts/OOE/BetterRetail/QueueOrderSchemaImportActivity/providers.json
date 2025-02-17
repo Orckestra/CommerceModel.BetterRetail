@@ -593,6 +593,7 @@
           {
             "Id": "037b05c0b6e74becb58ce5f55d3f4a90",
             "Name": "Canada Post",
+            "isActive": true,
             "CarrierName": "Canada Post",
             "CarrierServiceLevel": "canada_post_regular_parcel",
             "implementationTypeName": "DefaultFulfillmentCarrierService"
@@ -600,6 +601,7 @@
           {
             "Id": "037b05c0b6e74becb58ce5f55d3f4a91",
             "Name": "Purolator",
+            "isActive": true,
             "CarrierName": "Purolator",
             "CarrierServiceLevel": "purolator_ground",
             "implementationTypeName": "DefaultFulfillmentCarrierService"
@@ -607,6 +609,7 @@
           {
             "Id": "037b05c0b6e74becb58ce5f55d3f4a92",
             "Name": "UPS",
+            "isActive": true,
             "CarrierName": "UPS",
             "CarrierServiceLevel": "ups_standard",
             "implementationTypeName": "DefaultFulfillmentCarrierService"
@@ -628,6 +631,7 @@
           {
             "Id": "037b05c0b6e74becb58ce5f55d3f4a93",
             "Name": "Canada Post Expedited",
+            "isActive": true,
             "CarrierName": "Canada Post",
             "CarrierServiceLevel": "canada_post_expedited_parcel",
             "implementationTypeName": "DefaultFulfillmentCarrierService"
@@ -635,6 +639,7 @@
           {
             "Id": "037b05c0b6e74becb58ce5f55d3f4a94",
             "Name": "Canada Post Xpresspost",
+            "isActive": true,
             "CarrierName": "Canada Post",
             "CarrierServiceLevel": "canada_post_xpresspost",
             "implementationTypeName": "DefaultFulfillmentCarrierService"
@@ -642,6 +647,7 @@
           {
             "Id": "037b05c0b6e74becb58ce5f55d3f4a95",
             "Name": "Purolator",
+            "isActive": true,
             "CarrierName": "Purolator",
             "CarrierServiceLevel": "purolator_express",
             "implementationTypeName": "DefaultFulfillmentCarrierService"
@@ -649,6 +655,7 @@
           {
             "Id": "037b05c0b6e74becb58ce5f55d3f4a96",
             "Name": "UPS",
+            "isActive": true,
             "CarrierName": "UPS",
             "CarrierServiceLevel": "ups_express",
             "implementationTypeName": "DefaultFulfillmentCarrierService"
@@ -670,6 +677,7 @@
           {
             "Id": "037b05c0b6e74becb58ce5f55d3f4a97",
             "Name": "DoorDash",
+            "isActive": true,
             "CarrierName": "DoorDash",
             "CarrierServiceLevel": "delivery",
             "implementationTypeName": "DefaultFulfillmentCarrierService"
