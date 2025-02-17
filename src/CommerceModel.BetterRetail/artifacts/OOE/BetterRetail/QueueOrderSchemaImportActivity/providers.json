@@ -523,6 +523,90 @@
         "value": 1
       }
     },
+    "fulfillmentServiceLevels": [
+      {
+        "id": "c9a9e78ac6164c2daf7234595bf29221",
+        "code": "Regular",
+        "description": "Regular service level",
+        "displayName": {
+          "en-US": "Regular service",
+          "en-CA": "Regular serivce",
+          "fr-CA": "Service régulier"
+        },
+        "isActive": true,
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "fulfillmentCarrierServices": [
+          {
+            "Id": "037b05c0b6e74becb58ce5f55d3f4a90",
+            "Name": "Canada Post",
+            "isActive": true,
+            "CarrierName": "Canada Post",
+            "CarrierServiceLevel": "canada_post_regular_parcel",
+            "implementationTypeName": "DefaultFulfillmentCarrierService"
+          },
+          {
+            "Id": "037b05c0b6e74becb58ce5f55d3f4a91",
+            "Name": "Purolator",
+            "isActive": true,
+            "CarrierName": "Purolator",
+            "CarrierServiceLevel": "purolator_ground",
+            "implementationTypeName": "DefaultFulfillmentCarrierService"
+          }
+        ]
+      },
+      {
+        "id": "c9a9e78ac6164c2daf7234595bf29222",
+        "code": "Express",
+        "description": "Express service level",
+        "displayName": {
+          "en-US": "Express service",
+          "en-CA": "Express serivce",
+          "fr-CA": "Service express"
+        },
+        "isActive": true,
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "fulfillmentCarrierServices": [
+          {
+            "Id": "037b05c0b6e74becb58ce5f55d3f4a94",
+            "Name": "Canada Post Xpresspost",
+            "isActive": true,
+            "CarrierName": "Canada Post",
+            "CarrierServiceLevel": "canada_post_xpresspost",
+            "implementationTypeName": "DefaultFulfillmentCarrierService"
+          },
+          {
+            "Id": "037b05c0b6e74becb58ce5f55d3f4a95",
+            "Name": "Purolator",
+            "isActive": true,
+            "CarrierName": "Purolator",
+            "CarrierServiceLevel": "purolator_express",
+            "implementationTypeName": "DefaultFulfillmentCarrierService"
+          }
+        ]
+      },
+      {
+        "id": "c9a9e78ac6164c2daf7234595bf29223",
+        "code": "Same-day",
+        "description": "Same-day service level",
+        "displayName": {
+          "en-US": "Same-day",
+          "en-CA": "Same-day",
+          "fr-CA": "Le jour même"
+        },
+        "isActive": true,
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "fulfillmentCarrierServices": [
+          {
+            "Id": "037b05c0b6e74becb58ce5f55d3f4a93",
+            "Name": "Canada Post Expedited",
+            "isActive": true,
+            "CarrierName": "Canada Post",
+            "CarrierServiceLevel": "canada_post_expedited_parcel",
+            "implementationTypeName": "DefaultFulfillmentCarrierService"
+          }
+        ]
+      }
+    ],
     "propertyConfigurations": {}
   },
   {
@@ -595,23 +679,7 @@
             "Name": "Canada Post",
             "isActive": true,
             "CarrierName": "Canada Post",
-            "CarrierServiceLevel": "canada_post_regular_parcel",
-            "implementationTypeName": "DefaultFulfillmentCarrierService"
-          },
-          {
-            "Id": "037b05c0b6e74becb58ce5f55d3f4a91",
-            "Name": "Purolator",
-            "isActive": true,
-            "CarrierName": "Purolator",
-            "CarrierServiceLevel": "purolator_ground",
-            "implementationTypeName": "DefaultFulfillmentCarrierService"
-          },
-          {
-            "Id": "037b05c0b6e74becb58ce5f55d3f4a92",
-            "Name": "UPS",
-            "isActive": true,
-            "CarrierName": "UPS",
-            "CarrierServiceLevel": "ups_standard",
+            "CarrierServiceLevel": "Regular Parcel",
             "implementationTypeName": "DefaultFulfillmentCarrierService"
           }
         ]
@@ -633,7 +701,7 @@
             "Name": "Canada Post Expedited",
             "isActive": true,
             "CarrierName": "Canada Post",
-            "CarrierServiceLevel": "canada_post_expedited_parcel",
+            "CarrierServiceLevel": "Expedited Parcel",
             "implementationTypeName": "DefaultFulfillmentCarrierService"
           },
           {
@@ -641,45 +709,7 @@
             "Name": "Canada Post Xpresspost",
             "isActive": true,
             "CarrierName": "Canada Post",
-            "CarrierServiceLevel": "canada_post_xpresspost",
-            "implementationTypeName": "DefaultFulfillmentCarrierService"
-          },
-          {
-            "Id": "037b05c0b6e74becb58ce5f55d3f4a95",
-            "Name": "Purolator",
-            "isActive": true,
-            "CarrierName": "Purolator",
-            "CarrierServiceLevel": "purolator_express",
-            "implementationTypeName": "DefaultFulfillmentCarrierService"
-          },
-          {
-            "Id": "037b05c0b6e74becb58ce5f55d3f4a96",
-            "Name": "UPS",
-            "isActive": true,
-            "CarrierName": "UPS",
-            "CarrierServiceLevel": "ups_express",
-            "implementationTypeName": "DefaultFulfillmentCarrierService"
-          }
-        ]
-      },
-      {
-        "id": "c9a9e78ac6164c2daf7234595bf29223",
-        "code": "Same-day",
-        "description": "Same-day service level",
-        "displayName": {
-          "en-US": "Same-day",
-          "en-CA": "Same-day",
-          "fr-CA": "Le jour même"
-        },
-        "isActive": true,
-        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
-        "fulfillmentCarrierServices": [
-          {
-            "Id": "037b05c0b6e74becb58ce5f55d3f4a97",
-            "Name": "DoorDash",
-            "isActive": true,
-            "CarrierName": "DoorDash",
-            "CarrierServiceLevel": "delivery",
+            "CarrierServiceLevel": "Xpresspost",
             "implementationTypeName": "DefaultFulfillmentCarrierService"
           }
         ]
