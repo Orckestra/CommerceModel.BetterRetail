@@ -530,7 +530,7 @@
         "description": "Regular service level",
         "displayName": {
           "en-US": "Regular service",
-          "en-CA": "Regular serivce",
+          "en-CA": "Regular service",
           "fr-CA": "Service régulier"
         },
         "isActive": true,
@@ -560,7 +560,7 @@
         "description": "Express service level",
         "displayName": {
           "en-US": "Express service",
-          "en-CA": "Express serivce",
+          "en-CA": "Express service",
           "fr-CA": "Service express"
         },
         "isActive": true,
@@ -668,7 +668,7 @@
         "description": "Regular service level",
         "displayName": {
           "en-US": "Regular service",
-          "en-CA": "Regular serivce",
+          "en-CA": "Regular service",
           "fr-CA": "Service régulier"
         },
         "isActive": true,
@@ -690,7 +690,7 @@
         "description": "Express service level",
         "displayName": {
           "en-US": "Express service",
-          "en-CA": "Express serivce",
+          "en-CA": "Express service",
           "fr-CA": "Service express"
         },
         "isActive": true,
