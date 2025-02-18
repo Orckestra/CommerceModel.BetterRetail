@@ -359,13 +359,13 @@ Task InitializeMetadata {
     $currentYear = (Get-Date).Year
 
     Edit-FileContent -path (Join-Path $WorkspaceRoot 'src\Common\GlobalAssemblyInfo.cs') `
-                     -pattern "\[assembly: AssemblyCopyright\([^()\]]*\)\]" `
-                     -replacement "[assembly: AssemblyCopyright(`"$($copyright) $($currentYear) Orckestra Technologies Inc. All rights reserved.`")]" `
-                     -encoding $utf8NoBomEncoding
+        -pattern "\[assembly: AssemblyCopyright\([^()\]]*\)\]" `
+        -replacement "[assembly: AssemblyCopyright(`"$($copyright) $($currentYear) Orckestra Technologies Inc. All rights reserved.`")]" `
+        -encoding $utf8NoBomEncoding
 
     Update-NuspecFile -path (Join-Path $WorkspaceRoot "src\CommerceModel.BetterRetail\CommerceModel.BetterRetail.nuspec") `
-                      -copyright "$($copyright) $($currentYear) Orckestra Technologies Inc. All rights reserved." `
-                      -encoding $utf8WithBomEncoding
+        -copyright "$($copyright) $($currentYear) Orckestra Technologies Inc. All rights reserved." `
+        -encoding $utf8WithBomEncoding
 }
 
 function Get-SensitiveData {
