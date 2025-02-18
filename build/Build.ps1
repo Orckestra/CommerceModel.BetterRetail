@@ -67,7 +67,7 @@ param(
 
 # Fail on first error.
 $ErrorActionPreference = 'Stop'
-
+$global:cachedSemanticVersion = $null
 
 function ConfigureNugetAuthentication {
     if ($ExtraProperties -and $ExtraProperties.NugetFeeds) {
@@ -184,6 +184,7 @@ The hierarchy of the tasks is also displayed.
     }
 }
 finally {
-    $env:PSModulePath = $originalPsModulePath 
+    $env:PSModulePath = $originalPsModulePath
+    $global:cachedSemanticVersion = $null
     $global:cachedSensitiveData = $null
 }
