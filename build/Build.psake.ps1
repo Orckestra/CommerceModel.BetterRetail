@@ -79,7 +79,7 @@ Task All          -depends Clean,
 Task Clean        -depends CleanPackages,
                            CleanSolutions,
                            CleanArtifacts `
-    -precondition { $IsRunningOnBuildMachine -eq $false }   # No need to clean on build machine since we always start from a brand new workspace.
+                  -precondition { $IsRunningOnBuildMachine -eq $false }   # No need to clean on build machine since we always start from a brand new workspace.
 
 Task Compile      -depends RestorePackages,
                            ReplaceSensitiveData,
@@ -236,6 +236,8 @@ Task GeneratePackages {
 Task ReplaceSensitiveData {
     $replacements = Get-SensitiveData
 
+    if (-not $replacements.Count) { return }
+
     foreach ($file in $filesWithSensitiveData) {
         $content = Get-Content -Path $file -Raw
 
@@ -272,7 +274,7 @@ Task UndoSensitiveData {
         foreach ($data in $replacements.GetEnumerator()) {
             # adding quotes to the search & replace to lower the chance of a false replacement
 
-            if ($data.Value) {
+            if ($data.Value) { 
                 $token = "`"#" + $data.Name + "#`""
                 $content = $content.Replace("`"" + $data.Value + "`"", $token)
             }
@@ -296,7 +298,7 @@ Task PublishPackages {
             $NugetFeed = $NugetFeeds[$BuildStability.nuget].url
             $NugetUser = $NugetFeeds[$BuildStability.nuget].username
             $NugetPassword = $NugetFeeds[$BuildStability.nuget].password
-    
+
             if ($NugetUser -and $NugetPassword -and $NugetFeed) {
                 # Only publish packages in build jobs that have the nuget 
                 # publishing information. 
@@ -357,17 +359,17 @@ Task InitializeMetadata {
     $currentYear = (Get-Date).Year
 
     Edit-FileContent -path (Join-Path $WorkspaceRoot 'src\Common\GlobalAssemblyInfo.cs') `
-                     -pattern "\[assembly: AssemblyCopyright\([^()\]]*\)\]" `
-                     -replacement "[assembly: AssemblyCopyright(`"$($copyright) $($currentYear) Orckestra Technologies Inc. All rights reserved.`")]" `
-                     -encoding $utf8NoBomEncoding
+        -pattern "\[assembly: AssemblyCopyright\([^()\]]*\)\]" `
+        -replacement "[assembly: AssemblyCopyright(`"$($copyright) $($currentYear) Orckestra Technologies Inc. All rights reserved.`")]" `
+        -encoding $utf8NoBomEncoding
 
     Update-NuspecFile -path (Join-Path $WorkspaceRoot "src\CommerceModel.BetterRetail\CommerceModel.BetterRetail.nuspec") `
-                      -copyright "$($copyright) $($currentYear) Orckestra Technologies Inc. All rights reserved." `
-                      -encoding $utf8WithBomEncoding
+        -copyright "$($copyright) $($currentYear) Orckestra Technologies Inc. All rights reserved." `
+        -encoding $utf8WithBomEncoding
 }
 
 function Get-SensitiveData {
-    if (-not $cachedSensitiveData) {
+    if (-not $cachedSensitiveData) { 
         if (-not $SensitiveData) {
             # we assume that the file is in the correct format if it exists
             $sensitiveFile = Join-Path $WorkspaceRoot "build\build.sensitivedata.json"
