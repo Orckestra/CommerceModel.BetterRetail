@@ -3842,7 +3842,7 @@
         },
         "fulfillmentFeeCriteria": [
           {
-            "implementationTypeName": "OrderValueFulfillmentFeeCriterion",
+            "implementationTypeName": "MerchandiseTotalFulfillmentFeeCriterion",
             "values": {
               "Value": {
                 "__type": "ValueOfDecimal",
@@ -3884,7 +3884,7 @@
         },
         "fulfillmentFeeCriteria": [
           {
-            "implementationTypeName": "OrderValueFulfillmentFeeCriterion",
+            "implementationTypeName": "MerchandiseTotalFulfillmentFeeCriterion",
             "values": {
               "Value": {
                 "__type": "ValueOfDecimal",
@@ -3897,7 +3897,7 @@
             }
           },
           {
-            "implementationTypeName": "OrderValueFulfillmentFeeCriterion",
+            "implementationTypeName": "MerchandiseTotalFulfillmentFeeCriterion",
             "values": {
               "Value": {
                 "__type": "ValueOfDecimal",
