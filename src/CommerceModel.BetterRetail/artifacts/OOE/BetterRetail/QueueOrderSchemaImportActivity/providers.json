@@ -1473,7 +1473,6 @@
       "MapperPackageType": "Boîte Std.|Std. Box|1x1x1 ft|1x1x1 pied|30x25x25 cm=BOX",
       "MapperWeightUOM": "Pound=LB,Ounce=OZ,Kilogram=KG",
       "MapperQuantityUOM": "",
-      "CarrierMappingConfiguration": "{'STANDARD':{'STANDARD':{'UPS':'UPS'}},'SAVER':{'SAVER':{'UPS':'UPS'}}}",
       "ReverseAddressesForReturns": {
         "__type": "ValueOfBoolean",
         "value": true
@@ -2240,7 +2239,6 @@
       "MapperPackageType": "Boîte Std.|Std. Box|1x1x1 ft|1x1x1 pied|30x25x25 cm=BOX",
       "MapperWeightUOM": "Pound=LB,Ounce=OZ,Kilogram=KG",
       "MapperQuantityUOM": "",
-      "CarrierMappingConfiguration": "{'STANDARD':{'STANDARD':{'UPS':'UPS'}},'SAVER':{'SAVER':{'UPS':'UPS'}}}",
       "ReverseAddressesForReturns": {
         "__type": "ValueOfBoolean",
         "value": true
