@@ -178,6 +178,8 @@
   "TimeZone": "Eastern Standard Time",
   "DeliveryScheduleManaged": true,
   "PickUpScheduleManaged": true,
+  "DeliveryExceptionManaged": true,
+  "PickUpExceptionManaged": true,
   "InventoryLocationId": "BRC-409",
   "InventoryProviderId": "OvertureQuantitative",
   "IsInventoryEnabled": true,
