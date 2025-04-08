@@ -91,8 +91,7 @@ Task Compile      -depends RestorePackages,
                            GeneratePackages,
 						   UndoSensitiveData
 
-Task Publish      -depends PublishPackages,
-                           PublishArtifacts
+Task Publish      -depends PublishPackages
 
 #---------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------
@@ -321,15 +320,6 @@ Task PublishPackages {
     }
 }
 
-Task PublishArtifacts {
-    if (IsRunningOnVstsHostedAgent) {
-        Publish-ArtifactToVsts -ArtifactName 'nuget' -ContainerFolder 'nuget' -Path "$WorkspaceRoot\Artifacts\nuget"
-    }
-    else {
-        Write-Host "PublishArtifacts skipped on local machine..."
-    }
-}
-
 Task InitializeDeploymentPackageManifestVersion -precondition { $IsRunningOnBuildMachine } {
     $sourceDirectory = (Get-Item (Join-Path $PSScriptRoot '..\src')).FullName  # Using Get-Item removes the '..' from the path.
 
@@ -457,15 +447,6 @@ function IsRunningOnVstsHostedAgent {
     # environment variable that is only defined on build machines.
 
     return Test-Path env:BUILD_ARTIFACTSTAGINGDIRECTORY
-}
-
-function Publish-ArtifactToVsts([string]$ArtifactName, [string]$ContainerFolder, [string]$Path) {
-    Write-Host "Publishing '$ArtifactName' to VSTS..."
-    # Artifacts are uploaded through VSTS logging commands:
-    #
-    #    https://github.com/Microsoft/vso-agent-tasks/blob/master/docs/authoring/commands.md
-    #
-    Write-Host "##vso[artifact.upload containerfolder=$ContainerFolder;artifactname=$ArtifactName;]$Path"
 }
 
 Task Test {
