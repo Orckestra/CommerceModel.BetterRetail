@@ -56,7 +56,7 @@ stages:
       displayName: 'Publish Artifact: Nuget'
       inputs:
         PathToPublish: 'artifacts\Nuget'
-        ArtifactName: Nuget
+        ArtifactName: NugetPackages
       condition: succeededOrFailed()
 
     # this task exports a variable from the Build stage to make it available to the Publish stage
