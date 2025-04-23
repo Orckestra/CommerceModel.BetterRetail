@@ -32,7 +32,7 @@ Rabais: ${{Cart.DiscountTotal | number: "#,0.00" }}
 
 Sous-total: ${{Cart.SubTotal | number: "#,0.00" }}
 
-Frais de livraison: ${{Cart.ShippingTotal | number: "#,0.00"}}
+Coût du traitement: ${{Cart.ShippingTotal | number: "#,0.00"}}
 
 Taxes: ${{Cart.TaxTotal | number: "#,0.00"}}
 
