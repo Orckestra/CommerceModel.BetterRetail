@@ -317,7 +317,7 @@ IF NOT EXISTS(SELECT 1
 				WHERE Name = N'CustomLookupAtt'
 				AND Object_ID = Object_ID(N'dbo.ORDER'))
 BEGIN
-	ALTER TABLE dbo.[ORDER] ADD CustomLookupAtt NVARCHAR(MAX) NULL;
+	ALTER TABLE dbo.[ORDER] ADD CustomLookupAtt NVARCHAR(512) NULL;
 END
 
 IF NOT EXISTS(SELECT 1
@@ -338,6 +338,7 @@ BEGIN
 			,[MaxMultiplicity]
 			,[IsMultilingual]
 			,[IsSearchable]
+			,[IsSortable]
 			,[ReferenceLookUpName]
 			,[SequenceNumber]
 			,[IsDeleted]
@@ -356,7 +357,8 @@ BEGIN
 			,'0'
 			,'1'
 			,0
-			,0
+			,1
+			,1
 			,'ValidationsFulfillment'
 			,1
 			,0
