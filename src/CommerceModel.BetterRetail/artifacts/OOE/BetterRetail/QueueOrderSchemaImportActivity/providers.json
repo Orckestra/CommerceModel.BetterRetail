@@ -490,6 +490,8 @@
     "values": {
       "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
       "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
+      "CarrierReferenceField1": "OrderNumber",
+      "CarrierReferenceField2": "OrderSource",
       "AcceptanceSLAInMinutes": {
         "__type": "ValueOfInt32",
         "value": 60
@@ -732,6 +734,8 @@
     "values": {
       "FulfillmentRoutingProviderId": "7A169585-DA71-442D-8F74-02BEAFB03B3C",
       "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
+      "CarrierReferenceField1": "OrderNumber",
+      "CarrierReferenceField2": "OrderSource",
       "AcceptanceSLAInMinutes": {
         "__type": "ValueOfInt32",
         "value": 60
@@ -3581,6 +3585,8 @@
       },
       "FulfillmentRoutingProviderId": "521E1F1C-0D0F-49BF-A613-4D4F1F8D38DB",
       "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
+      "CarrierReferenceField1": "OrderNumber",
+      "CarrierReferenceField2": "OrderSource",
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
@@ -3688,6 +3694,8 @@
       },
       "FulfillmentRoutingProviderId": "A45DC1D7-A7A8-4134-B336-549138A285C5",
       "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
+      "CarrierReferenceField1": "OrderNumber",
+      "CarrierReferenceField2": "OrderSource",
       "OrderSplitOnItemsAndUnitsAllowed": {
         "__type": "ValueOfBoolean",
         "value": false
