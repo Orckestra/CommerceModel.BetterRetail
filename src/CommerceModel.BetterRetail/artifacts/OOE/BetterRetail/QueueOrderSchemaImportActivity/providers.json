@@ -3734,11 +3734,11 @@
     "id": "30b12d775d764d16bcf51454cb36fe58",
     "type": "Shipping",
     "scopeId": "BetterRetailEuro",
-    "name": "SFS Short (Load Balanced, Canada Post)",
+    "name": "SFS Short (Load Balanced, Transsmart)",
     "displayName": {
-      "en-US": "SFS Short (Load Balanced, Canada post)",
-      "en-CA": "SFS Short (Load Balanced, Canada post)",
-      "fr-CA": "SFS court (Charge \u00e9quilibr\u00e9e, Poste Canada)"
+      "en-US": "SFS Short (Load Balanced, Transsmart)",
+      "en-CA": "SFS Short (Load Balanced, Transsmart)",
+      "fr-CA": "SFS court (Charge \u00e9quilibr\u00e9e, Transsmart)"
     },
     "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
     "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
@@ -3921,11 +3921,11 @@
     "id": "2f0368812e6c4317b34360b8fe29a0c9",
     "type": "Shipping",
     "scopeId": "BetterRetailEuro",
-    "name": "SFS (Load Balanced, Shippo)",
+    "name": "SFS (Load Balanced, Transsmart)",
     "displayName": {
-      "en-US": "SFS (Load Balanced, Shippo)",
-      "en-CA": "SFS (Load Balanced, Shippo)",
-      "fr-CA": "SFS (Charge \u00e9quilibr\u00e9e, Shippo)"
+      "en-US": "SFS (Load Balanced, Transsmart)",
+      "en-CA": "SFS (Load Balanced, Transsmart)",
+      "fr-CA": "SFS (Charge \u00e9quilibr\u00e9e, Transsmart)"
     },
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "description": "The Ship from Store Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
@@ -3973,11 +3973,11 @@
     "id": "13dac5ec475e4639a1529e695fb0aa2f",
     "type": "Shipping",
     "scopeId": "BetterRetailEuro",
-    "name": "SFS (Competition, Shippo)",
+    "name": "SFS (Competition, Transsmart)",
     "displayName": {
-      "en-US": "SFS (Competition, Shippo)",
-      "en-CA": "SFS (Competition, Shippo)",
-      "fr-CA": "SFS (Comp\u00e9tition, Shippo)"
+      "en-US": "SFS (Competition, Transsmart)",
+      "en-CA": "SFS (Competition, Transsmart)",
+      "fr-CA": "SFS (Comp\u00e9tition, Transsmart)"
     },
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
@@ -4046,11 +4046,11 @@
     "id": "b0589f24ef714d539b4ff1e8a6e8a434",
     "type": "Shipping",
     "scopeId": "BetterRetailEuro",
-    "name": "SFS Short (Competition, Canada Post)",
+    "name": "SFS Short (Competition, Transsmart)",
     "displayName": {
-      "en-US": "SFS Short (Competition, Canada Post)",
-      "en-CA": "SFS Short (Competition, Canada Post)",
-      "fr-CA": "SFS court (Comp\u00e9tition, Poste Canada)"
+      "en-US": "SFS Short (Competition, Transsmart)",
+      "en-CA": "SFS Short (Competition, Transsmart)",
+      "fr-CA": "SFS court (Comp\u00e9tition, Transsmart)"
     },
     "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
     "description": "The Ship from Store Short Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location\u2019s own inventory.",
@@ -4450,11 +4450,11 @@
     "id": "2063c27c1ce64e17bb2923844dda6264",
     "type": "Shipping",
     "scopeId": "BetterRetailUSA",
-    "name": "SFS (Load Balanced, Shippo)",
+    "name": "SFS (Load Balanced, DS)",
     "displayName": {
-      "en-US": "SFS (Load Balanced, Shippo)",
-      "en-CA": "SFS (Load Balanced, Shippo)",
-      "fr-CA": "SFS (Charge \u00e9quilibr\u00e9e, Shippo)"
+      "en-US": "SFS (Load Balanced, Delivery Solution)",
+      "en-CA": "SFS (Load Balanced, Delivery Solution)",
+      "fr-CA": "SFS (Charge \u00e9quilibr\u00e9e, Delivery Solution)"
     },
     "implementationTypeName": "ShipFromStoreFulfillmentProvider",
     "description": "The Ship from Store Load Balanced Fulfillment Provider is designed to sequentially route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase then determines the next Fulfillment location to select for the shipment. The underlying Load Balanced Routing Provider controls splitting and prioritization. The provider then governs policies associated with in-store fulfillment, concluding with stores shipping the order shipments to the customer. Ship From Store fulfills orders using the fulfillment location\u2019s own inventory.",
@@ -4723,11 +4723,11 @@
     "id": "49fa612c76f747219608e23261c55fa9",
     "type": "Shipping",
     "scopeId": "BetterRetailUSA",
-    "name": "SFS Short (Load Balanced, Canada Post)",
+    "name": "SFS Short (Load Balanced, DS)",
     "displayName": {
-      "en-US": "SFS Short (Load Balanced, Canada Post)",
-      "en-CA": "SFS Short (Load Balanced, Canada Post)",
-      "fr-CA": "SFS court (Charge \u00e9quilibr\u00e9e, Poste Canada)"
+      "en-US": "SFS Short (Load Balanced, Delivery Solution)",
+      "en-CA": "SFS Short (Load Balanced, Delivery Solution)",
+      "fr-CA": "SFS court (Charge \u00e9quilibr\u00e9e, Delivery Solution)"
     },
     "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
     "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
