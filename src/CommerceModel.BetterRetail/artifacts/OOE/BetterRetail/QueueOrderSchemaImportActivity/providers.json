@@ -366,490 +366,6 @@
     "propertyConfigurations": {}
   },
   {
-    "type": "Shipping",
-    "scopeId": "BetterRetailCanada",
-    "name": "Buy-online-pick-up-in-store (Load Balanced)",
-    "implementationTypeName": "BOPISFulfillmentProvider",
-    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
-    "displayName": {
-      "en-US": "BOPIS Fulfillment Provider (Load Balanced)",
-      "en-CA": "BOPIS Fulfillment Provider (Load Balanced)",
-      "fr-CA": "Fournisseur BOPIS (Charge équilibrée)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "TransferSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 4320
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "StoreToStoreTransfersEnabled": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailCanada",
-    "name": "Buy-online-pick-up-in-store Short (Load Balanced)",
-    "implementationTypeName": "BOPISShortFulfillmentProvider",
-    "description": "The Buy-online-pick-up-in-store Short fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
-    "displayName": {
-      "en-US": "BOPIS Short Fulfillment Provider (Load Balanced)",
-      "en-CA": "BOPIS Short Fulfillment Provider (Load Balanced)",
-      "fr-CA": "Fournisseur BOPIS court (Charge équilibrée)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "TransferSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 4320
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "StoreToStoreTransfersEnabled": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "IsAcceptanceRequiredForTransfer": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailCanada",
-    "name": "SFS (Load Balanced, Shippo)",
-    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
-    "description": "The Ship from Store Load Balanced Fulfillment Provider is designed to sequentially route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase then determines the next Fulfillment location to select for the shipment. The underlying Load Balanced Routing Provider controls splitting and prioritization. The provider then governs policies associated with in-store fulfillment, concluding with stores shipping the order shipments to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
-    "displayName": {
-      "en-US": "SFS (Load Balanced, Shippo)",
-      "en-CA": "SFS (Load Balanced, Shippo)",
-      "fr-CA": "SFS (Charge équilibrée, Shippo)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
-      "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
-      "CarrierReferenceField1": "OrderNumber",
-      "CarrierReferenceField2": "OrderSource",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "fulfillmentServiceLevels": [
-      {
-        "id": "c9a9e78ac6164c2daf7234595bf29221",
-        "code": "Regular",
-        "description": "Regular service level",
-        "displayName": {
-          "en-US": "Regular service",
-          "en-CA": "Regular service",
-          "fr-CA": "Service régulier"
-        },
-        "isActive": true,
-        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
-        "fulfillmentCarrierServices": [
-          {
-            "Id": "037b05c0b6e74becb58ce5f55d3f4a90",
-            "Name": "Canada Post",
-            "isActive": true,
-            "CarrierName": "Canada Post",
-            "CarrierServiceLevel": "canada_post_regular_parcel",
-            "implementationTypeName": "DefaultFulfillmentCarrierService"
-          },
-          {
-            "Id": "037b05c0b6e74becb58ce5f55d3f4a91",
-            "Name": "Purolator",
-            "isActive": true,
-            "CarrierName": "Purolator",
-            "CarrierServiceLevel": "purolator_ground",
-            "implementationTypeName": "DefaultFulfillmentCarrierService"
-          }
-        ]
-      },
-      {
-        "id": "c9a9e78ac6164c2daf7234595bf29222",
-        "code": "Express",
-        "description": "Express service level",
-        "displayName": {
-          "en-US": "Express service",
-          "en-CA": "Express service",
-          "fr-CA": "Service express"
-        },
-        "isActive": true,
-        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
-        "fulfillmentCarrierServices": [
-          {
-            "Id": "037b05c0b6e74becb58ce5f55d3f4a94",
-            "Name": "Canada Post Xpresspost",
-            "isActive": true,
-            "CarrierName": "Canada Post",
-            "CarrierServiceLevel": "canada_post_xpresspost",
-            "implementationTypeName": "DefaultFulfillmentCarrierService"
-          },
-          {
-            "Id": "037b05c0b6e74becb58ce5f55d3f4a95",
-            "Name": "Purolator",
-            "isActive": true,
-            "CarrierName": "Purolator",
-            "CarrierServiceLevel": "purolator_express",
-            "implementationTypeName": "DefaultFulfillmentCarrierService"
-          }
-        ]
-      },
-      {
-        "id": "c9a9e78ac6164c2daf7234595bf29223",
-        "code": "Same-day",
-        "description": "Same-day service level",
-        "displayName": {
-          "en-US": "Same-day",
-          "en-CA": "Same-day",
-          "fr-CA": "Le jour même"
-        },
-        "isActive": true,
-        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
-        "fulfillmentCarrierServices": [
-          {
-            "Id": "037b05c0b6e74becb58ce5f55d3f4a93",
-            "Name": "Canada Post Expedited",
-            "isActive": true,
-            "CarrierName": "Canada Post",
-            "CarrierServiceLevel": "canada_post_expedited_parcel",
-            "implementationTypeName": "DefaultFulfillmentCarrierService"
-          }
-        ]
-      }
-    ],
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailCanada",
-    "name": "SFS Short (Load Balanced, Canada Post)",
-    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
-    "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
-    "displayName": {
-      "en-US": "SFS Short (Load Balanced, Canada Post)",
-      "en-CA": "SFS Short (Load Balanced, Canada Post)",
-      "fr-CA": "SFS court (Charge équilibrée, Poste Canada)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
-      "FulfillmentCarrierProviderId": "D168E411-ABDC-42C0-A9A9-A5D97E28847D",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "IsAcceptanceRequired": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "fulfillmentServiceLevels": [
-      {
-        "id": "c9a9e78ac6164c2daf7234595bf29221",
-        "code": "Regular",
-        "description": "Regular service level",
-        "displayName": {
-          "en-US": "Regular service",
-          "en-CA": "Regular service",
-          "fr-CA": "Service régulier"
-        },
-        "isActive": true,
-        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
-        "fulfillmentCarrierServices": [
-          {
-            "Id": "037b05c0b6e74becb58ce5f55d3f4a90",
-            "Name": "Canada Post",
-            "isActive": true,
-            "CarrierName": "Canada Post",
-            "CarrierServiceLevel": "Regular Parcel",
-            "implementationTypeName": "DefaultFulfillmentCarrierService"
-          }
-        ]
-      },
-      {
-        "id": "c9a9e78ac6164c2daf7234595bf29222",
-        "code": "Express",
-        "description": "Express service level",
-        "displayName": {
-          "en-US": "Express service",
-          "en-CA": "Express service",
-          "fr-CA": "Service express"
-        },
-        "isActive": true,
-        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
-        "fulfillmentCarrierServices": [
-          {
-            "Id": "037b05c0b6e74becb58ce5f55d3f4a93",
-            "Name": "Canada Post Expedited",
-            "isActive": true,
-            "CarrierName": "Canada Post",
-            "CarrierServiceLevel": "Expedited Parcel",
-            "implementationTypeName": "DefaultFulfillmentCarrierService"
-          },
-          {
-            "Id": "037b05c0b6e74becb58ce5f55d3f4a94",
-            "Name": "Canada Post Xpresspost",
-            "isActive": true,
-            "CarrierName": "Canada Post",
-            "CarrierServiceLevel": "Xpresspost",
-            "implementationTypeName": "DefaultFulfillmentCarrierService"
-          }
-        ]
-      }
-    ],
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailCanada",
-    "name": "SFS (Competition, Shippo)",
-    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
-    "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
-    "displayName": {
-      "en-US": "SFS (Competition, Shippo)",
-      "en-CA": "SFS (Competition, Shippo)",
-      "fr-CA": "SFS (Compétition, Shippo)"
-    },
-    "isActive": false,
-    "values": {
-      "FulfillmentRoutingProviderId": "7A169585-DA71-442D-8F74-02BEAFB03B3C",
-      "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
-      "CarrierReferenceField1": "OrderNumber",
-      "CarrierReferenceField2": "OrderSource",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailCanada",
-    "name": "SFS Short (Competition, Canada Post)",
-    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
-    "description": "The Ship from Store Short Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
-    "displayName": {
-      "en-US": "SFS Short (Competition, Canada Post)",
-      "en-CA": "SFS Short (Competition, Canada Post)",
-      "fr-CA": "SFS court (Compétition, Poste Canada)"
-    },
-    "isActive": false,
-    "values": {
-      "FulfillmentRoutingProviderId": "7A169585-DA71-442D-8F74-02BEAFB03B3C",
-      "FulfillmentCarrierProviderId": "D168E411-ABDC-42C0-A9A9-A5D97E28847D",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "IsAcceptanceRequired": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailCanada",
-    "name": "Shipping",
-    "implementationTypeName": "FlatRateShippingProvider",
-    "displayName": {
-
-    },
-    "isActive": false,
-    "values": {
-      "Cost": {
-        "__type": "ValueOfDouble",
-        "value": 3
-      },
-      "EstimatedTransitInDays": {
-        "__type": "ValueOfInt32",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailCanada",
-    "name": "PickUp",
-    "implementationTypeName": "PickUpShippingProvider",
-    "displayName": {
-
-    },
-    "isActive": false,
-    "values": {
-      "Cost": {
-        "__type": "ValueOfDouble",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {
-
-    }
-  },
-  {
     "type": "Payment",
     "scopeId": "BetterRetailCanada",
     "name": "Onsite payment",
@@ -1619,314 +1135,6 @@
     "propertyConfigurations": {}
   },
   {
-    "id": "7275307C-36D2-4580-AAFF-920293B2250C",
-    "type": "Shipping",
-    "scopeId": "BetterRetailNorway",
-    "name": "Ship from store (Load Balanced)",
-    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
-    "displayName": {
-      "en-US": "SFS Fulfillment Provider (Load Balanced)",
-      "en-CA": "SFS Fulfillment Provider (Load Balanced)",
-      "fr-CA": "Fournisseur SFS (Charge équilibrée)"
-    },
-    "description": "The Ship from Store Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "3D5F3AA6-CCAD-4B20-AA5C-92BAAB283F96",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailNorway",
-    "name": "Ship from store Short (Load Balanced)",
-    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
-    "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
-    "displayName": {
-      "en-US": "SFS Short Fulfillment Provider (Load Balanced)",
-      "en-CA": "SFS Short Fulfillment Provider (Load Balanced)",
-      "fr-CA": "Fournisseur SFS court (Charge équilibrée)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "3D5F3AA6-CCAD-4B20-AA5C-92BAAB283F96",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "IsAcceptanceRequired": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailNorway",
-    "name": "Buy-online-pick-up-in-store (Load Balanced)",
-    "implementationTypeName": "BOPISFulfillmentProvider",
-    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
-    "displayName": {
-      "en-US": "BOPIS Fulfillment Provider (Load Balanced)",
-      "en-CA": "BOPIS Fulfillment Provider (Load Balanced)",
-      "fr-CA": "Fournisseur BOPIS (Charge équilibrée)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "3D5F3AA6-CCAD-4B20-AA5C-92BAAB283F96",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "TransferSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 4320
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "StoreToStoreTransfersEnabled": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailNorway",
-    "name": "Buy-online-pick-up-in-store Short (Load Balanced)",
-    "implementationTypeName": "BOPISShortFulfillmentProvider",
-    "description": "The Buy-online-pick-up-in-store Short fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
-    "displayName": {
-      "en-US": "BOPIS Short Fulfillment Provider (Load Balanced)",
-      "en-CA": "BOPIS Short Fulfillment Provider (Load Balanced)",
-      "fr-CA": "Fournisseur BOPIS court (Charge équilibrée)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "3D5F3AA6-CCAD-4B20-AA5C-92BAAB283F96",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "TransferSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 4320
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "StoreToStoreTransfersEnabled": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "IsAcceptanceRequiredForTransfer": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "id": "670B239B-61C4-6749-08DA-31D0CA0B4039",
-    "type": "Shipping",
-    "scopeId": "BetterRetailNorway",
-    "name": "Ship from store (Competition)",
-    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
-    "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
-    "displayName": {
-      "en-US": "SFS Fulfillment Provider (Competition)",
-      "en-CA": "SFS Fulfillment Provider (Competition)",
-      "fr-CA": "Fournisseur SFS (Compétition)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "9B058102-9D34-70C3-6ACC-2B66E3200241",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailNorway",
-    "name": "Ship from store Short (Competition)",
-    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
-    "description": "The Ship from Store Short Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
-    "displayName": {
-      "en-US": "SFS Short Fulfillment Provider (Competition)",
-      "en-CA": "SFS Short Fulfillment Provider (Competition)",
-      "fr-CA": "Fournisseur SFS court (Compétition)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "9B058102-9D34-70C3-6ACC-2B66E3200241",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "IsAcceptanceRequired": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
     "id": "B08B42C7-FD0D-4F13-9993-F3803AC7B719",
     "type": "Payment",
     "scopeId": "BetterRetailNorway",
@@ -1959,46 +1167,6 @@
       }
     },
     "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailNorway",
-    "name": "Shipping",
-    "implementationTypeName": "FlatRateShippingProvider",
-    "displayName": {
-
-    },
-    "isActive": true,
-    "values": {
-      "Cost": {
-        "__type": "ValueOfDouble",
-        "value": 3
-      },
-      "EstimatedTransitInDays": {
-        "__type": "ValueOfInt32",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailNorway",
-    "name": "PickUp",
-    "implementationTypeName": "PickUpShippingProvider",
-    "displayName": {
-
-    },
-    "isActive": true,
-    "values": {
-      "Cost": {
-        "__type": "ValueOfDouble",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {
-
-    }
   },
   {
     "type": "Tax",
@@ -2385,318 +1553,6 @@
     "propertyConfigurations": {}
   },
   {
-    "id": "2F036881-2E6C-4317-B343-60B8FE29A0C9",
-    "type": "Shipping",
-    "scopeId": "BetterRetailEuro",
-    "name": "SFS (Load Balanced, Shippo)",
-    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
-    "displayName": {
-      "en-US": "SFS (Load Balanced, Shippo)",
-      "en-CA": "SFS (Load Balanced, Shippo)",
-      "fr-CA": "SFS (Charge équilibrée, Shippo)"
-    },
-    "description": "The Ship from Store Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "01F61BCF-9885-4F1E-B03A-F86294E13BA4",
-      "FulfillmentCarrierProviderId": "c850b1c9-ea17-448e-aac2-7e82d794d207",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailEuro",
-    "name": "SFS Short (Load Balanced, Canada Post)",
-    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
-    "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
-    "displayName": {
-      "en-US": "SFS Short (Load Balanced, Canada post)",
-      "en-CA": "SFS Short (Load Balanced, Canada post)",
-      "fr-CA": "SFS court (Charge équilibrée, Poste Canada)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "01F61BCF-9885-4F1E-B03A-F86294E13BA4",
-      "FulfillmentCarrierProviderId": "c850b1c9-ea17-448e-aac2-7e82d794d207",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "IsAcceptanceRequired": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailEuro",
-    "name": "Buy-online-pick-up-in-store (Load Balanced)",
-    "implementationTypeName": "BOPISFulfillmentProvider",
-    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
-    "displayName": {
-      "en-US": "BOPIS Fulfillment Provider (Load Balanced)",
-      "en-CA": "BOPIS Fulfillment Provider (Load Balanced)",
-      "fr-CA": "Fournisseur BOPIS (Charge équilibrée)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "01F61BCF-9885-4F1E-B03A-F86294E13BA4",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "TransferSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 4320
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "StoreToStoreTransfersEnabled": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailEuro",
-    "name": "Buy-online-pick-up-in-store Short (Load Balanced)",
-    "implementationTypeName": "BOPISShortFulfillmentProvider",
-    "description": "The Buy-online-pick-up-in-store Short fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
-    "displayName": {
-      "en-US": "BOPIS Short Fulfillment Provider (Load Balanced)",
-      "en-CA": "BOPIS Short Fulfillment Provider (Load Balanced)",
-      "fr-CA": "Fournisseur BOPIS court (Charge équilibrée)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "01F61BCF-9885-4F1E-B03A-F86294E13BA4",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "TransferSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 4320
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "StoreToStoreTransfersEnabled": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "IsAcceptanceRequiredForTransfer": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "id": "13DAC5EC-475E-4639-A152-9E695FB0AA2F",
-    "type": "Shipping",
-    "scopeId": "BetterRetailEuro",
-    "name": "SFS (Competition, Shippo)",
-    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
-    "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
-    "displayName": {
-      "en-US": "SFS (Competition, Shippo)",
-      "en-CA": "SFS (Competition, Shippo)",
-      "fr-CA": "SFS (Compétition, Shippo)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "4BB38EF2-0D3D-4489-A826-E7FB44000107",
-      "FulfillmentCarrierProviderId": "c850b1c9-ea17-448e-aac2-7e82d794d207",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailEuro",
-    "name": "SFS Short (Competition, Canada Post)",
-    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
-    "description": "The Ship from Store Short Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
-    "displayName": {
-      "en-US": "SFS Short (Competition, Canada Post)",
-      "en-CA": "SFS Short (Competition, Canada Post)",
-      "fr-CA": "SFS court (Compétition, Poste Canada)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "4BB38EF2-0D3D-4489-A826-E7FB44000107",
-      "FulfillmentCarrierProviderId": "c850b1c9-ea17-448e-aac2-7e82d794d207",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "IsAcceptanceRequired": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
     "id": "B2F92C17-8457-487E-B77C-0B2E1EDF3B68",
     "type": "Payment",
     "scopeId": "BetterRetailEuro",
@@ -2729,46 +1585,6 @@
       }
     },
     "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailEuro",
-    "name": "Shipping",
-    "implementationTypeName": "FlatRateShippingProvider",
-    "displayName": {
-
-    },
-    "isActive": true,
-    "values": {
-      "Cost": {
-        "__type": "ValueOfDouble",
-        "value": 3
-      },
-      "EstimatedTransitInDays": {
-        "__type": "ValueOfInt32",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailEuro",
-    "name": "PickUp",
-    "implementationTypeName": "PickUpShippingProvider",
-    "displayName": {
-
-    },
-    "isActive": true,
-    "values": {
-      "Cost": {
-        "__type": "ValueOfDouble",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {
-
-    }
   },
   {
     "type": "Tax",
@@ -3088,340 +1904,6 @@
     "propertyConfigurations": {}
   },
   {
-    "type": "Shipping",
-    "scopeId": "BetterRetailUSA",
-    "name": "Buy-online-pick-up-in-store (Load Balanced)",
-    "implementationTypeName": "BOPISFulfillmentProvider",
-    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
-    "displayName": {
-      "en-US": "BOPIS Fulfillment Provider (Load Balanced)",
-      "en-CA": "BOPIS Fulfillment Provider (Load Balanced)",
-      "fr-CA": "Fournisseur BOPIS (Charge équilibrée)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "CEBEDCDD-7281-43EA-8F75-C927FAAC7EB7",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "TransferSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 4320
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "StoreToStoreTransfersEnabled": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailUSA",
-    "name": "Buy-online-pick-up-in-store Short (Load Balanced)",
-    "implementationTypeName": "BOPISShortFulfillmentProvider",
-    "description": "The Buy-online-pick-up-in-store Short fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
-    "displayName": {
-      "en-US": "BOPIS Short Fulfillment Provider (Load Balanced)",
-      "en-CA": "BOPIS Short Fulfillment Provider (Load Balanced)",
-      "fr-CA": "Fournisseur BOPIS court (Charge équilibrée)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "CEBEDCDD-7281-43EA-8F75-C927FAAC7EB7",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "TransferSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 4320
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "StoreToStoreTransfersEnabled": {
-        "__type": "ValueOfBoolean",
-        "value": true
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "IsAcceptanceRequiredForTransfer": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailUSA",
-    "name": "SFS (Load Balanced, Shippo)",
-    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
-    "description": "The Ship from Store Load Balanced Fulfillment Provider is designed to sequentially route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase then determines the next Fulfillment location to select for the shipment. The underlying Load Balanced Routing Provider controls splitting and prioritization. The provider then governs policies associated with in-store fulfillment, concluding with stores shipping the order shipments to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
-    "displayName": {
-      "en-US": "SFS (Load Balanced, Shippo)",
-      "en-CA": "SFS (Load Balanced, Shippo)",
-      "fr-CA": "SFS (Charge équilibrée, Shippo)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentCarrierProviderId": "9DCCD461-EB20-4990-992B-F3C4F277B560",
-      "FulfillmentRoutingProviderId": "CEBEDCDD-7281-43EA-8F75-C927FAAC7EB7",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailUSA",
-    "name": "SFS Short (Load Balanced, Canada Post)",
-    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
-    "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
-    "displayName": {
-      "en-US": "SFS Short (Load Balanced, Canada Post)",
-      "en-CA": "SFS Short (Load Balanced, Canada Post)",
-      "fr-CA": "SFS court (Charge équilibrée, Poste Canada)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentCarrierProviderId": "9DCCD461-EB20-4990-992B-F3C4F277B560",
-      "FulfillmentRoutingProviderId": "CEBEDCDD-7281-43EA-8F75-C927FAAC7EB7",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "IsAcceptanceRequired": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailUSA",
-    "name": "Ship from store (Competition)",
-    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
-    "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
-    "displayName": {
-      "en-US": "SFS Fulfillment Provider (Competition)",
-      "en-CA": "SFS Fulfillment Provider (Competition)",
-      "fr-CA": "Fournisseur SFS (Compétition)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "6FCB318C-AEE8-4BF6-89B5-34745E9573F0",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailUSA",
-    "name": "Ship from store Short (Competition)",
-    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
-    "description": "The Ship from Store Short Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location’s own inventory.",
-    "displayName": {
-      "en-US": "SFS Short Fulfillment Provider (Competition)",
-      "en-CA": "SFS Short Fulfillment Provider (Competition)",
-      "fr-CA": "Fournisseur SFS court (Compétition)"
-    },
-    "isActive": true,
-    "values": {
-      "FulfillmentRoutingProviderId": "6FCB318C-AEE8-4BF6-89B5-34745E9573F0",
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "IsAcceptanceRequired": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailUSA",
-    "name": "Shipping",
-    "implementationTypeName": "FlatRateShippingProvider",
-    "displayName": {},
-    "isActive": true,
-    "values": {
-      "Cost": {
-        "__type": "ValueOfDouble",
-        "value": 3
-      },
-      "EstimatedTransitInDays": {
-        "__type": "ValueOfInt32",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "type": "Shipping",
-    "scopeId": "BetterRetailUSA",
-    "name": "PickUp",
-    "implementationTypeName": "PickUpShippingProvider",
-    "displayName": {},
-    "isActive": true,
-    "values": {
-      "Cost": {
-        "__type": "ValueOfDouble",
-        "value": 2
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
     "type": "Payment",
     "scopeId": "BetterRetailUSA",
     "name": "Onsite payment",
@@ -3543,63 +2025,6 @@
   },
   {
     "fulfillmentRoutingSegments": [],
-    "id": "f1b78649331b4ea7a5fb1c38f9bcb159",
-    "type": "Shipping",
-    "scopeId": "BetterRetailCanada",
-    "name": "SFS (Multi Segment, Shippo)",
-    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
-    "displayName": {
-      "en-US": "SFS (Multi Segment, Shippo)",
-      "en-CA": "SFS (Multi Segment, Shippo)",
-      "fr-CA": "SFS (Multi Segment, Shippo)"
-    },
-    "isActive": false,
-    "values": {
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "DefaultFulfillmentCost": {
-        "__type": "ValueOfDouble",
-        "value": 42
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "FulfillmentRoutingProviderId": "521E1F1C-0D0F-49BF-A613-4D4F1F8D38DB",
-      "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
-      "CarrierReferenceField1": "OrderNumber",
-      "CarrierReferenceField2": "OrderSource",
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "fulfillmentRoutingSegments": [],
     "id": "a45dc1d7a7a84134b336549138a285c5",
     "type": "FulfillmentRouting",
     "scopeId": "BetterRetailCanada",
@@ -3651,276 +2076,6 @@
     "propertyConfigurations": {}
   },
   {
-    "fulfillmentRoutingSegments": [],
-    "id": "020f55e6a7d246b392b46271c1e6fe9d",
-    "type": "Shipping",
-    "scopeId": "BetterRetailCanada",
-    "name": "SFS (Shortest Distance, Shippo)",
-    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
-    "displayName": {
-      "en-US": "SFS (Shortest Distance, Shippo)",
-      "en-CA": "SFS (Shortest Distance, Shippo)",
-      "fr-CA": "SFS (Shortest Distance, Shippo)"
-    },
-    "isActive": false,
-    "values": {
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "DefaultFulfillmentCost": {
-        "__type": "ValueOfDouble",
-        "value": 20.5
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "FulfillmentRoutingProviderId": "A45DC1D7-A7A8-4134-B336-549138A285C5",
-      "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
-      "CarrierReferenceField1": "OrderNumber",
-      "CarrierReferenceField2": "OrderSource",
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "fulfillmentRoutingSegments": [],
-    "id": "b0257d21aef943ae8444a7a57244db63",
-    "type": "Shipping",
-    "scopeId": "BetterRetailCanada",
-    "name": "SFS Short (Multi Segment, Canada Post)",
-    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
-    "displayName": {
-      "en-US": "SFS Short (Multi Segment, Canada Post)",
-      "en-CA": "SFS Short (Multi Segment, Canada Post)",
-      "fr-CA": "SFS Short (Multi Segment, Poste Canada)"
-    },
-    "isActive": true,
-    "values": {
-      "IsAcceptanceRequired": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "DefaultFulfillmentCost": {
-        "__type": "ValueOfDouble",
-        "value": 30.5
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "FulfillmentRoutingProviderId": "521E1F1C-0D0F-49BF-A613-4D4F1F8D38DB",
-      "FulfillmentCarrierProviderId": "D168E411-ABDC-42C0-A9A9-A5D97E28847D",
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "propertyConfigurations": {}
-  },
-  {
-    "fulfillmentRoutingSegments": [],
-    "id": "7420fd9df7114006ad50ea565c6fb6f1",
-    "type": "Shipping",
-    "scopeId": "BetterRetailCanada",
-    "name": "SFS Short (Shortest Distance, Canada Post)",
-    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
-    "displayName": {
-      "en-US": "SFS Short (Shortest Distance, Canada Post)",
-      "en-CA": "SFS Short (Shortest Distance, Canada Post)",
-      "fr-CA": "SFS Short (Shortest Distance, Poste Canada)"
-    },
-    "isActive": true,
-    "values": {
-      "IsAcceptanceRequired": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "ForceManualCarrierSelection": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "AcceptanceSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "DefaultFulfillmentCost": {
-        "__type": "ValueOfDouble",
-        "value": 10.25
-      },
-      "SLAExpiryWarningTimeInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 15
-      },
-      "CompletionSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 480
-      },
-      "OrderSplitOnItemsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "PickingSLAInMinutes": {
-        "__type": "ValueOfInt32",
-        "value": 60
-      },
-      "FulfillmentRoutingProviderId": "a45dc1d7a7a84134b336549138a285c5",
-      "FulfillmentCarrierProviderId": "D168E411-ABDC-42C0-A9A9-A5D97E28847D",
-      "OrderSplitOnItemsAndUnitsAllowed": {
-        "__type": "ValueOfBoolean",
-        "value": false
-      },
-      "MaximumEligibleLocationForEvaluation": {
-        "__type": "ValueOfInt32",
-        "value": 1
-      }
-    },
-    "fulfillmentFeeOptions": [
-      {
-        "id": "c9a9e78ac6164c2daf7234595bf29421",
-        "code": "ExpensiveOrders",
-        "description": "Fulfillment Fee Options for expensive orders",
-        "displayName": {
-          "en-US": "Expensive orders",
-          "en-CA": "Expensive orders",
-          "fr-CA": "Commandes coûteuses"
-        },
-        "isActive": true,
-        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
-        "values": {
-          "Price": {
-            "__type": "ValueOfDecimal",
-            "value": 5
-          },
-          "DaysMinimum": {
-            "__type": "ValueOfInt32",
-            "value": 5
-          },
-          "ServiceLevel": "Regular Parcel"
-        },
-        "fulfillmentFeeCriteria": [
-          {
-            "implementationTypeName": "MerchandiseTotalFulfillmentFeeCriterion",
-            "values": {
-              "Value": {
-                "__type": "ValueOfDecimal",
-                "value": 100
-              },
-              "LogicalOperator": {
-                "__type": "ValueOfString",
-                "value": "GreaterThan"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "c9a9e78ac6164c2daf7234595bf29422",
-        "code": "RegularOrders",
-        "description": "Fulfillment Fee Options for regular orders",
-        "displayName": {
-          "en-US": "Regular orders",
-          "en-CA": "Regular orders",
-          "fr-CA": "Commandes régulières"
-        },
-        "isActive": true,
-        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
-        "values": {
-          "Price": {
-            "__type": "ValueOfDecimal",
-            "value": 8
-          },
-          "DaysMinimum": {
-            "__type": "ValueOfInt32",
-            "value": 5
-          },
-          "DaysMaximum": {
-            "__type": "ValueOfInt32",
-            "value": 10
-          },
-          "ServiceLevel": "Express Parcel"
-        },
-        "fulfillmentFeeCriteria": [
-          {
-            "implementationTypeName": "MerchandiseTotalFulfillmentFeeCriterion",
-            "values": {
-              "Value": {
-                "__type": "ValueOfDecimal",
-                "value": 10
-              },
-              "LogicalOperator": {
-                "__type": "ValueOfString",
-                "value": "GreaterThan"
-              }
-            }
-          },
-          {
-            "implementationTypeName": "MerchandiseTotalFulfillmentFeeCriterion",
-            "values": {
-              "Value": {
-                "__type": "ValueOfDecimal",
-                "value": 100
-              },
-              "LogicalOperator": {
-                "__type": "ValueOfString",
-                "value": "LessThanOrEqual"
-              }
-            }
-          }
-        ]
-      }
-    ],
-    "propertyConfigurations": {}
-  },
-  {
     "id": "3c36adbf-be2c-4204-ad71-7d92633aa980",
     "name": "Default Order Return Provider",
     "type": "OrderReturns",
@@ -3948,6 +2103,2697 @@
       "DefaultReturnAddressLine1": "1111 Rue Saint-Charles O #255",
       "DefaultReturnCity": "longueuil",
       "DefaultReturnStateProvinceCode": "qc"
+    }
+  },
+  {
+    "id": "f1b78649331b4ea7a5fb1c38f9bcb159",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "SFS (Multi Segment, Shippo)",
+    "displayName": {
+      "en-US": "SFS (Multi Segment, Shippo)",
+      "en-CA": "SFS (Multi Segment, Shippo)",
+      "fr-CA": "SFS (Multi Segment, Shippo)"
+    },
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "isActive": false,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "DefaultFulfillmentCost": {
+        "__type": "ValueOfDouble",
+        "value": 34
+      },
+      "CarrierReferenceField1": "CustomerLastName",
+      "CarrierReferenceField2": "CustomerFirstName",
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "FulfillmentRoutingProviderId": "521E1F1C-0D0F-49BF-A613-4D4F1F8D38DB",
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 6
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "ScheduleRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "TimeslotRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    }
+  },
+  {
+    "id": "ddd3c8bcc1c24810aa8c37e3aa95b088",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "Buy-online-pick-up-in-store (Load Balanced)",
+    "displayName": {
+      "en-US": "BOPIS Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS (Charge \u00e9quilibr\u00e9e)"
+    },
+    "implementationTypeName": "BOPISFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [
+      {
+        "id": "41d4168f6dbe40819598c25195d2bc2b",
+        "code": "Priority",
+        "displayName": {
+          "en-US": "Priority",
+          "en-CA": "Priority",
+          "fr-CA": "Priority"
+        },
+        "isActive": false,
+        "fulfillmentCarrierServices": [
+          {
+            "id": "39f4dad4bbe04f57b0d6cb67361729db",
+            "name": "Priority",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Priority",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          }
+        ],
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "values": {}
+      },
+      {
+        "id": "7106e62251244d5dadf6721bc4a156db",
+        "code": "Xpresspost",
+        "displayName": {
+          "en-US": "Xpresspost",
+          "en-CA": "Xpresspost",
+          "fr-CA": "Xpresspost"
+        },
+        "isActive": true,
+        "fulfillmentCarrierServices": [
+          {
+            "id": "bd5c1bc5fede42e2ba1af5c130358859",
+            "name": "Xpresspost",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Xpresspost",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          }
+        ],
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "values": {
+          "PreferredCarrier": "Canada Post"
+        }
+      }
+    ],
+    "fulfillmentFeeOptions": [
+      {
+        "id": "0b813ea057f64c32a1723bdb50bb2c1d",
+        "code": "Express",
+        "displayName": {
+          "fr-CA": "Express",
+          "en-US": "Express",
+          "en-CA": "Express"
+        },
+        "isActive": true,
+        "fulfillmentFeeCriteria": [
+          {
+            "implementationTypeName": "MerchandiseTotalFulfillmentFeeCriterion",
+            "values": {
+              "Value": {
+                "__type": "ValueOfDecimal",
+                "value": 100
+              },
+              "LogicalOperator": "GreaterThanOrEqual"
+            }
+          }
+        ],
+        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
+        "values": {
+          "Price": {
+            "__type": "ValueOfDecimal",
+            "value": 6.98
+          },
+          "ServiceLevelValidationRequired": {
+            "__type": "ValueOfBoolean",
+            "value": false
+          }
+        }
+      }
+    ],
+    "values": {
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "FulfillmentCarrierProviderId": "d168e411abdc42c0a9a9a5d97e28847d",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "DefaultFulfillmentCost": {
+        "__type": "ValueOfDouble",
+        "value": 0
+      },
+      "TimeslotRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
+      "ScheduleRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 5
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    }
+  },
+  {
+    "id": "020f55e6a7d246b392b46271c1e6fe9d",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "SFS (Shortest Distance, DS)",
+    "displayName": {
+      "en-US": "SFS (Shortest Distance, Delivery Solution)",
+      "en-CA": "SFS (Shortest Distance, Delivery Solution)",
+      "fr-CA": "SFS (Shortest Distance, Delivery Solution)"
+    },
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "isActive": false,
+    "fulfillmentServiceLevels": [
+      {
+        "id": "630fe0eccfc34a1dbe619bddb365e7fb",
+        "code": "Door Dash",
+        "displayName": {
+          "en-US": "Door Dash",
+          "en-CA": "Door Dash",
+          "fr-CA": "Door Dash"
+        },
+        "isActive": true,
+        "fulfillmentCarrierServices": [
+          {
+            "id": "4ffe2f202079441ab7b0962f3322b9f4",
+            "name": "Door Dash",
+            "carrierName": "DoorDash",
+            "carrierServiceLevel": "delivery",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          }
+        ],
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "values": {}
+      }
+    ],
+    "fulfillmentFeeOptions": [
+      {
+        "id": "c22df9b540ac44a0916306744fe2589f",
+        "code": "Same Day",
+        "displayName": {
+          "en-US": "Same Day",
+          "en-CA": "Same Day",
+          "fr-CA": "Jour m\u00eame"
+        },
+        "isActive": true,
+        "fulfillmentFeeCriteria": [],
+        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
+        "values": {
+          "Price": {
+            "__type": "ValueOfDecimal",
+            "value": 5
+          },
+          "ServiceLevelValidationRequired": {
+            "__type": "ValueOfBoolean",
+            "value": false
+          }
+        }
+      }
+    ],
+    "values": {
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "FulfillmentCarrierProviderId": "9857dd1f89844fc499e59a2e84d72bef",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "DefaultFulfillmentCost": {
+        "__type": "ValueOfDouble",
+        "value": 19.95
+      },
+      "TimeslotRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "FulfillmentRoutingProviderId": "A45DC1D7-A7A8-4134-B336-549138A285C5",
+      "ScheduleRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 3
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    }
+  },
+  {
+    "id": "8fa12478688f400a93776db42a04cc89",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "Provider Fee Config",
+    "displayName": {
+      "en-US": "Provider SFS short LRU - Fee configuration",
+      "en-CA": "Provider SFS short LRU - Fee configuration",
+      "fr-CA": "Provider SFS short LRU - Fee configuration"
+    },
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "Provider with Fee configuration",
+    "isActive": true,
+    "fulfillmentServiceLevels": [
+      {
+        "id": "360ced34b5bf45ec9e0b9644e0213f6b",
+        "code": "Express - Canada Post",
+        "displayName": {
+          "en-US": "Express - Canada Post",
+          "en-CA": "Express - Canada Post",
+          "fr-CA": "Express - Canada Post"
+        },
+        "isActive": true,
+        "fulfillmentCarrierServices": [
+          {
+            "id": "bbb6dd8f0a4945f2ac2111546b2071ca",
+            "name": "Xpresspost",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Xpresspost",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "149dd491b3d54f87b449cccc712ffd72",
+            "name": "Priority - Canada Post",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Priority",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "dca619cdd8c64272bb5ef9dbd8150854",
+            "name": "purolator_express",
+            "carrierName": "Purolator",
+            "carrierServiceLevel": "purolator_express",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          }
+        ],
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "values": {}
+      },
+      {
+        "id": "2f535014e33a4aa9a3fc257571157b90",
+        "code": "Regular CanadaPost",
+        "description": "Regular service level",
+        "displayName": {
+          "en-US": "Regular CanadaPost",
+          "en-CA": "Regular CanadaPost",
+          "fr-CA": "Regular CanadaPost"
+        },
+        "isActive": true,
+        "fulfillmentCarrierServices": [
+          {
+            "id": "1982266d1d704b5cb83c0112a57e6723",
+            "name": "Door Dash",
+            "carrierName": "DoorDash",
+            "carrierServiceLevel": "Delivery",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "3264f90b20d742fea1e330c2eaf4cb9d",
+            "name": "Canada Post Expedited",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "canada_post_expedited_parcel",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "e7e04ed7c2e84bedb5f728dbeda8c3a3",
+            "name": "Canada Post expresspost",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "canada_post_xpresspost",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "8266cc8c8ae94c908e71fe103fbe0cb0",
+            "name": "Canada Post Priority",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "canada_post_priority",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "1439b2cbf41544579866486f4530e741",
+            "name": "Regular Parcel CanadaPost",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Regular Parcel",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "573c208a61934f44a4646d5988e10cbd",
+            "name": "Expedited Parcel CanadaPost",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Expedited Parcel",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "9512555f1a1944adaf552ebfb22d7a97",
+            "name": "Priority CanadaPost",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Priority",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "df03afbe33dd46c5bad45a7fb41523e9",
+            "name": "Xpresspost CanadaPost",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Xpresspost",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "62b2728b79b84198b3e5b694e229425c",
+            "name": "canada_post_expedited_parcel",
+            "carrierName": "Purolator",
+            "carrierServiceLevel": "canada_post_expedited_parcel",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          }
+        ],
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "values": {}
+      }
+    ],
+    "fulfillmentFeeOptions": [
+      {
+        "id": "0e3da0dea4cf421f86171ddbe7c21cba",
+        "code": "Express cp",
+        "displayName": {
+          "en-US": "Express cp",
+          "en-CA": "Express cp",
+          "fr-CA": "Express cp"
+        },
+        "isActive": true,
+        "fulfillmentFeeCriteria": [
+          {
+            "implementationTypeName": "MerchandiseTotalFulfillmentFeeCriterion",
+            "values": {
+              "Value": {
+                "__type": "ValueOfDecimal",
+                "value": 150
+              },
+              "LogicalOperator": "LessThanOrEqual"
+            }
+          }
+        ],
+        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
+        "values": {
+          "Price": {
+            "__type": "ValueOfDecimal",
+            "value": 9.98
+          },
+          "ServiceLevelValidationRequired": {
+            "__type": "ValueOfBoolean",
+            "value": false
+          },
+          "DaysMinimum": {
+            "__type": "ValueOfInt32",
+            "value": 1
+          },
+          "DaysMaximum": {
+            "__type": "ValueOfInt32",
+            "value": 2
+          }
+        }
+      },
+      {
+        "id": "6b5968efc69f414ba1db1fc7ade5697b",
+        "code": "Regular cp",
+        "displayName": {
+          "en-US": "Regular cp",
+          "en-CA": "Regular cp",
+          "fr-CA": "Regular cp"
+        },
+        "isActive": true,
+        "fulfillmentFeeCriteria": [
+          {
+            "implementationTypeName": "MerchandiseTotalFulfillmentFeeCriterion",
+            "values": {
+              "Value": {
+                "__type": "ValueOfDecimal",
+                "value": 150
+              },
+              "LogicalOperator": "GreaterThan"
+            }
+          }
+        ],
+        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
+        "values": {
+          "Price": {
+            "__type": "ValueOfDecimal",
+            "value": 11.98
+          },
+          "ServiceLevelValidationRequired": {
+            "__type": "ValueOfBoolean",
+            "value": false
+          },
+          "DaysMinimum": {
+            "__type": "ValueOfInt32",
+            "value": 3
+          },
+          "DaysMaximum": {
+            "__type": "ValueOfInt32",
+            "value": 5
+          }
+        }
+      }
+    ],
+    "values": {
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "FulfillmentCarrierProviderId": "d168e411abdc42c0a9a9a5d97e28847d",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "DefaultFulfillmentCost": {
+        "__type": "ValueOfDouble",
+        "value": 15.98
+      },
+      "TimeslotRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "FulfillmentRoutingProviderId": "7957a7f8e6284613979cf65fcf59ad4d",
+      "ScheduleRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 10
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    }
+  },
+  {
+    "id": "3546d6a3bb73485abac273c1f8eeeffa",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "PickUp",
+    "displayName": {},
+    "implementationTypeName": "PickUpShippingProvider",
+    "isActive": false,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 2
+      }
+    }
+  },
+  {
+    "id": "9ba71b68f0b0476dab678d478df084eb",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "SFS Short (Load Balanced, Canada Post)",
+    "displayName": {
+      "en-US": "SFS Short (Load Balanced, Canada Post)",
+      "en-CA": "SFS Short (Load Balanced, Canada Post)",
+      "fr-CA": "SFS court (Charge \u00e9quilibr\u00e9e, Poste Canada)"
+    },
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [
+      {
+        "id": "81a86e62b22749858f9641af2b17e37a",
+        "code": "Express&Regular (SFSShort)",
+        "displayName": {
+          "en-US": "Express&Regular (SFSShort)",
+          "en-CA": "Express&Regular (SFSShort)",
+          "fr-CA": "Express&Regular (SFSShort)"
+        },
+        "isActive": false,
+        "fulfillmentCarrierServices": [
+          {
+            "id": "d681eb50937f4a78a0a9eafaa966fe8e",
+            "name": "Xpresspost",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Xpresspost",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "d12311b041924bd1b72b00ffe2e89c3f",
+            "name": "Priority",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Priority",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "f32c62ebd972467486bccf8a04049b9f",
+            "name": "Regular Parcel",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Regular Parcel",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "43e6350c23834ef086f3b4c1605982ab",
+            "name": "purolator_express",
+            "carrierName": "Purolator",
+            "carrierServiceLevel": "purolator_express",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "dc0f384270184521a77bdff92c24d73d",
+            "name": "canada_post_expedited_parcel",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "canada_post_expedited_parcel",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          }
+        ],
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "values": {}
+      }
+    ],
+    "fulfillmentFeeOptions": [
+      {
+        "id": "cf9dcdca49124d41b547dee8723b42c2",
+        "code": "Express&Regular (SFSShort)",
+        "displayName": {
+          "en-US": "Express&Regular (SFSShort)",
+          "en-CA": "Express&Regular (SFSShort)",
+          "fr-CA": "Express&Regular (SFSShort)"
+        },
+        "isActive": false,
+        "fulfillmentFeeCriteria": [
+          {
+            "implementationTypeName": "MerchandiseTotalFulfillmentFeeCriterion",
+            "values": {
+              "Value": {
+                "__type": "ValueOfDecimal",
+                "value": 100
+              },
+              "LogicalOperator": "GreaterThanOrEqual"
+            }
+          }
+        ],
+        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
+        "values": {
+          "Price": {
+            "__type": "ValueOfDecimal",
+            "value": 20.5
+          },
+          "ServiceLevelValidationRequired": {
+            "__type": "ValueOfBoolean",
+            "value": false
+          },
+          "DaysMinimum": {
+            "__type": "ValueOfInt32",
+            "value": 1
+          },
+          "DaysMaximum": {
+            "__type": "ValueOfInt32",
+            "value": 7
+          }
+        }
+      }
+    ],
+    "values": {
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "FulfillmentCarrierProviderId": "D168E411-ABDC-42C0-A9A9-A5D97E28847D",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "DefaultFulfillmentCost": {
+        "__type": "ValueOfDouble",
+        "value": 30.99
+      },
+      "TimeslotRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
+      "ScheduleRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 3
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    }
+  },
+  {
+    "id": "b0257d21aef943ae8444a7a57244db63",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "SFS Short (Multi Segment, Canada Post)",
+    "displayName": {
+      "en-US": "SFS Short (Multi Segment, Canada Post)",
+      "en-CA": "SFS Short (Multi Segment, Canada Post)",
+      "fr-CA": "SFS Short (Multi Segment, Poste Canada)"
+    },
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "isActive": false,
+    "fulfillmentServiceLevels": [
+      {
+        "id": "189eb1d8483a495dafa800369f327bdc",
+        "code": "Regular Parcel",
+        "displayName": {
+          "en-US": "Regular Parcel",
+          "en-CA": "Regular Parcel",
+          "fr-CA": "Regular Parcel"
+        },
+        "isActive": false,
+        "fulfillmentCarrierServices": [
+          {
+            "id": "1932348d955f42ff984355b537e2eae4",
+            "name": "Regular Parcel",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Regular Parcel",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "80d5093905f647b2a423b984ed12913d",
+            "name": "Expedited Parcel",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Expedited Parcel",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          }
+        ],
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "values": {}
+      }
+    ],
+    "fulfillmentFeeOptions": [
+      {
+        "id": "c771f63380ae4c2a922bdb7eaf305c45",
+        "code": "Regular for MultiShipment",
+        "displayName": {
+          "en-US": "Regular for MultiShipment",
+          "en-CA": "Regular for MultiShipment",
+          "fr-CA": "Regular for MultiShipment"
+        },
+        "isActive": false,
+        "fulfillmentFeeCriteria": [],
+        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
+        "values": {
+          "Price": {
+            "__type": "ValueOfDecimal",
+            "value": 19
+          },
+          "ServiceLevelValidationRequired": {
+            "__type": "ValueOfBoolean",
+            "value": false
+          }
+        }
+      }
+    ],
+    "values": {
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "FulfillmentCarrierProviderId": "D168E411-ABDC-42C0-A9A9-A5D97E28847D",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "DefaultFulfillmentCost": {
+        "__type": "ValueOfDouble",
+        "value": 14.25
+      },
+      "TimeslotRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "FulfillmentRoutingProviderId": "521E1F1C-0D0F-49BF-A613-4D4F1F8D38DB",
+      "ScheduleRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 4
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    }
+  },
+  {
+    "id": "f986faa817744fd4be7fa9ca28916fa7",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "SFS Short (Competition, Canada Post)",
+    "displayName": {
+      "en-US": "SFS Short (Competition, Canada Post)",
+      "en-CA": "SFS Short (Competition, Canada Post)",
+      "fr-CA": "SFS court (Comp\u00e9tition, Poste Canada)"
+    },
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location\u2019s own inventory.",
+    "isActive": false,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "7A169585-DA71-442D-8F74-02BEAFB03B3C",
+      "FulfillmentCarrierProviderId": "D168E411-ABDC-42C0-A9A9-A5D97E28847D",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      }
+    }
+  },
+  {
+    "id": "f9a4e28478b44034a5cfb9bc00f99ae3",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "Shipping",
+    "displayName": {},
+    "implementationTypeName": "FlatRateShippingProvider",
+    "isActive": false,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 3
+      },
+      "EstimatedTransitInDays": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
+    }
+  },
+  {
+    "id": "eaed8b1db5854c638ccac40e973a351d",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "SFS (Load Balanced, Shippo)",
+    "displayName": {
+      "en-US": "SFS (Load Balanced, Shippo)",
+      "en-CA": "SFS (Load Balanced, Shippo)",
+      "fr-CA": "SFS (Charge \u00e9quilibr\u00e9e, Shippo)"
+    },
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store Load Balanced Fulfillment Provider is designed to sequentially route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase then determines the next Fulfillment location to select for the shipment. The underlying Load Balanced Routing Provider controls splitting and prioritization. The provider then governs policies associated with in-store fulfillment, concluding with stores shipping the order shipments to the customer. Ship From Store fulfills orders using the fulfillment location\u2019s own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [
+      {
+        "id": "b8f52ce282e745779772208deb81ffec",
+        "code": "Express",
+        "displayName": {
+          "en-US": "Express",
+          "en-CA": "Express",
+          "fr-CA": "Express"
+        },
+        "isActive": true,
+        "fulfillmentCarrierServices": [
+          {
+            "id": "1403b85dca70424cad6f7fbdd708435d",
+            "name": "Xpresspost",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "canada_post_xpresspost",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "fc3c2847247240768c4ee3b4ab29a8ea",
+            "name": "Priority",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "canada_post_priority",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "b855ac3353474481bbe842a6d4842389",
+            "name": "express Purolator",
+            "carrierName": "Purolator",
+            "carrierServiceLevel": "purolator_express",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          }
+        ],
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "values": {}
+      },
+      {
+        "id": "131ffe65d850457ab5532cbaa64df0a4",
+        "code": "Regular",
+        "displayName": {
+          "en-US": "Regular",
+          "en-CA": "Regular",
+          "fr-CA": "Regular"
+        },
+        "isActive": true,
+        "fulfillmentCarrierServices": [
+          {
+            "id": "65e9aa08b86e4532a37f290de68a7e89",
+            "name": "Regular",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "canada_post_regular_parcel",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "c98b8816068f4c22a25ee6b4b4f17557",
+            "name": "Expedited",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "canada_post_expedited_parcel",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "67fa7fded1fb4fa5ae2f3a18f4e57ce7",
+            "name": "Ground Purolator",
+            "carrierName": "Purolator",
+            "carrierServiceLevel": "purolator_ground",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          }
+        ],
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "values": {}
+      }
+    ],
+    "fulfillmentFeeOptions": [
+      {
+        "id": "17a2925e419948edbcac60b4a90b666a",
+        "code": "Express Shippo",
+        "displayName": {
+          "en-US": "Express Shippo",
+          "en-CA": "Express Shippo",
+          "fr-CA": "Express Shippo"
+        },
+        "isActive": true,
+        "fulfillmentFeeCriteria": [],
+        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
+        "values": {
+          "Price": {
+            "__type": "ValueOfDecimal",
+            "value": 12.94
+          },
+          "ServiceLevelValidationRequired": {
+            "__type": "ValueOfBoolean",
+            "value": false
+          },
+          "ServiceLevel": "Express"
+        }
+      },
+      {
+        "id": "c7e4081ccc974b8ca6f97dcbbe6611ac",
+        "code": "Regular Shippo",
+        "displayName": {
+          "en-US": "Regular Shippo",
+          "en-CA": "Regular Shippo",
+          "fr-CA": "Regular Shippo"
+        },
+        "isActive": true,
+        "fulfillmentFeeCriteria": [],
+        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
+        "values": {
+          "Price": {
+            "__type": "ValueOfDecimal",
+            "value": 9.94
+          },
+          "ServiceLevelValidationRequired": {
+            "__type": "ValueOfBoolean",
+            "value": false
+          },
+          "ServiceLevel": "Regular"
+        }
+      }
+    ],
+    "values": {
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "DefaultFulfillmentCost": {
+        "__type": "ValueOfDouble",
+        "value": 15.94
+      },
+      "TimeslotRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "CarrierReferenceField1": "OrderNumber",
+      "CarrierReferenceField2": "CustomerLastName",
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
+      "ScheduleRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    }
+  },
+  {
+    "id": "43b34819f3374bbdadeee4ab501b58ce",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "SFS (Competition, Shippo)",
+    "displayName": {
+      "en-US": "SFS (Competition, Shippo)",
+      "en-CA": "SFS (Competition, Shippo)",
+      "fr-CA": "SFS (Comp\u00e9tition, Shippo)"
+    },
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location\u2019s own inventory.",
+    "isActive": false,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "FulfillmentCarrierProviderId": "873ED561-3FD3-4DFA-9FAE-CFECDDCB2CCD",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CarrierReferenceField1": "OrderNumber",
+      "CarrierReferenceField2": "CustomerFirstName",
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "FulfillmentRoutingProviderId": "7A169585-DA71-442D-8F74-02BEAFB03B3C",
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 6
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "ScheduleRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "TimeslotRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      }
+    }
+  },
+  {
+    "id": "7420fd9df7114006ad50ea565c6fb6f1",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "SFS Short (Shortest Distance, Canada Post)",
+    "displayName": {
+      "en-US": "SFS Short (Shortest Distance, Canada Post)",
+      "en-CA": "SFS Short (Shortest Distance, Canada Post)",
+      "fr-CA": "SFS Short (Shortest Distance, Poste Canada)"
+    },
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "isActive": true,
+    "fulfillmentServiceLevels": [
+      {
+        "id": "71a507818d1b47ff9ee406cfb4670eef",
+        "code": "DoorDash",
+        "displayName": {
+          "en-US": "DoorDash ",
+          "en-CA": "DoorDash ",
+          "fr-CA": "DoorDash "
+        },
+        "isActive": false,
+        "fulfillmentCarrierServices": [
+          {
+            "id": "2186503994f546be90f43262123b4207",
+            "name": "DoorDash",
+            "carrierName": "Delivery solution",
+            "carrierServiceLevel": "DoorDash",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          }
+        ],
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "values": {}
+      },
+      {
+        "id": "f7a5645f9a9d4d87974f89b706a56163",
+        "code": "Express",
+        "displayName": {
+          "en-US": "Express",
+          "en-CA": "Express",
+          "fr-CA": "Express"
+        },
+        "isActive": true,
+        "fulfillmentCarrierServices": [
+          {
+            "id": "27a629fd59d241c4a2788910e66671be",
+            "name": "Express - Purolator",
+            "carrierName": "Purolator",
+            "carrierServiceLevel": "purolator_express",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "357136180bcf4c0f97bd503e5a6e4146",
+            "name": "Priority",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Priority",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "fed2f42ed4d14d9daf37aa4685fd79aa",
+            "name": "Xpresspost",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Xpresspost",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          }
+        ],
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "values": {}
+      },
+      {
+        "id": "127dece1260f40f79943f1a65fedadfb",
+        "code": "Regular",
+        "displayName": {
+          "en-US": "Regular",
+          "en-CA": "Regular",
+          "fr-CA": "Regular"
+        },
+        "isActive": true,
+        "fulfillmentCarrierServices": [
+          {
+            "id": "f08e7651a5c848898a71ee901cacfe81",
+            "name": "Regular Parcel",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Regular Parcel",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "3376052cd9de4ee2a38c0afbd65069e5",
+            "name": "Expedited Parcel",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Expedited Parcel",
+            "isActive": true,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          }
+        ],
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "values": {}
+      }
+    ],
+    "fulfillmentFeeOptions": [
+      {
+        "id": "2b907138d32547dea80030f4fb144844",
+        "code": "Express",
+        "displayName": {
+          "en-US": "Express",
+          "en-CA": "Express",
+          "fr-CA": "Express"
+        },
+        "isActive": true,
+        "fulfillmentFeeCriteria": [
+          {
+            "implementationTypeName": "MerchandiseTotalFulfillmentFeeCriterion",
+            "values": {
+              "Value": {
+                "__type": "ValueOfDecimal",
+                "value": 150
+              },
+              "LogicalOperator": "LessThanOrEqual"
+            }
+          }
+        ],
+        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
+        "values": {
+          "Price": {
+            "__type": "ValueOfDecimal",
+            "value": 11.98
+          },
+          "ServiceLevelValidationRequired": {
+            "__type": "ValueOfBoolean",
+            "value": false
+          },
+          "DaysMinimum": {
+            "__type": "ValueOfInt32",
+            "value": 1
+          },
+          "DaysMaximum": {
+            "__type": "ValueOfInt32",
+            "value": 2
+          },
+          "ServiceLevel": "Express"
+        }
+      },
+      {
+        "id": "7e43c440ee384132ba13a0535d4fc4bf",
+        "code": "Regular",
+        "displayName": {
+          "en-US": "Regular",
+          "en-CA": "Regular",
+          "fr-CA": "Regular"
+        },
+        "isActive": true,
+        "fulfillmentFeeCriteria": [],
+        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
+        "values": {
+          "Price": {
+            "__type": "ValueOfDecimal",
+            "value": 13.98
+          },
+          "ServiceLevelValidationRequired": {
+            "__type": "ValueOfBoolean",
+            "value": false
+          },
+          "DaysMinimum": {
+            "__type": "ValueOfInt32",
+            "value": 2
+          },
+          "DaysMaximum": {
+            "__type": "ValueOfInt32",
+            "value": 7
+          },
+          "ServiceLevel": "Regular"
+        }
+      }
+    ],
+    "values": {
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "FulfillmentCarrierProviderId": "d168e411abdc42c0a9a9a5d97e28847d",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "DefaultFulfillmentCost": {
+        "__type": "ValueOfDouble",
+        "value": 15.25
+      },
+      "TimeslotRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "FulfillmentRoutingProviderId": "a45dc1d7a7a84134b336549138a285c5",
+      "ScheduleRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    }
+  },
+  {
+    "id": "f7e0cb9f948c4858a941edde4cbb328c",
+    "type": "Shipping",
+    "scopeId": "BetterRetailCanada",
+    "name": "Buy-online-pick-up-in-store Short (Load Balanced)",
+    "displayName": {
+      "en-US": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS court (Charge \u00e9quilibr\u00e9e)"
+    },
+    "implementationTypeName": "BOPISShortFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store Short fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [
+      {
+        "id": "00435982519546d68ee2b20624f3dce4",
+        "code": "Regular",
+        "displayName": {
+          "en-US": "Regular",
+          "en-CA": "Regular",
+          "fr-CA": "Regular"
+        },
+        "isActive": false,
+        "fulfillmentCarrierServices": [
+          {
+            "id": "f77fc000375a4f6e89fe699bbd4c85c8",
+            "name": "Regular Parcel",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Regular Parcel",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          },
+          {
+            "id": "b76717ba687e40d1863cf7e9dc4593d1",
+            "name": "Expedited Parcel",
+            "carrierName": "Canada Post",
+            "carrierServiceLevel": "Expedited Parcel",
+            "isActive": false,
+            "implementationTypeName": "DefaultFulfillmentCarrierService",
+            "values": {}
+          }
+        ],
+        "implementationTypeName": "PreferredCarrierFulfillmentServiceLevel",
+        "values": {}
+      }
+    ],
+    "fulfillmentFeeOptions": [
+      {
+        "id": "282194368da640ffb16b84620397b84f",
+        "code": "Regular",
+        "displayName": {
+          "en-US": "Regular",
+          "en-CA": "Regular",
+          "fr-CA": "Regular"
+        },
+        "isActive": false,
+        "fulfillmentFeeCriteria": [],
+        "implementationTypeName": "FixedPeriodFulfillmentFeeOption",
+        "values": {
+          "Price": {
+            "__type": "ValueOfDecimal",
+            "value": 9.98
+          },
+          "ServiceLevelValidationRequired": {
+            "__type": "ValueOfBoolean",
+            "value": false
+          }
+        }
+      }
+    ],
+    "values": {
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "DefaultFulfillmentCost": {
+        "__type": "ValueOfDouble",
+        "value": 9.99
+      },
+      "TimeslotRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "IsAcceptanceRequiredForTransfer": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "FulfillmentRoutingProviderId": "7957A7F8-E628-4613-979C-F65FCF59AD4D",
+      "ScheduleRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 5
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      }
+    }
+  },
+  {
+    "id": "30b12d775d764d16bcf51454cb36fe58",
+    "type": "Shipping",
+    "scopeId": "BetterRetailEuro",
+    "name": "SFS Short (Load Balanced, Transsmart)",
+    "displayName": {
+      "en-US": "SFS Short (Load Balanced, Transsmart)",
+      "en-CA": "SFS Short (Load Balanced, Transsmart)",
+      "fr-CA": "SFS court (Charge \u00e9quilibr\u00e9e, Transsmart)"
+    },
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "01F61BCF-9885-4F1E-B03A-F86294E13BA4",
+      "FulfillmentCarrierProviderId": "c850b1c9-ea17-448e-aac2-7e82d794d207",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      }
+    }
+  },
+  {
+    "id": "5207427830654395b67c1a003365bb20",
+    "type": "Shipping",
+    "scopeId": "BetterRetailEuro",
+    "name": "PickUp",
+    "displayName": {},
+    "implementationTypeName": "PickUpShippingProvider",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 2
+      }
+    }
+  },
+  {
+    "id": "cf7a96721fab4d24a93f1b9f357809e4",
+    "type": "Shipping",
+    "scopeId": "BetterRetailEuro",
+    "name": "Buy-online-pick-up-in-store Short (Load Balanced)",
+    "displayName": {
+      "en-US": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS court (Charge \u00e9quilibr\u00e9e)"
+    },
+    "implementationTypeName": "BOPISShortFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store Short fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "01F61BCF-9885-4F1E-B03A-F86294E13BA4",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequiredForTransfer": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
+    }
+  },
+  {
+    "id": "d676149e9eb84e1885cb3c86f02884d9",
+    "type": "Shipping",
+    "scopeId": "BetterRetailEuro",
+    "name": "Buy-online-pick-up-in-store (Load Balanced)",
+    "displayName": {
+      "en-US": "BOPIS Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS (Charge \u00e9quilibr\u00e9e)"
+    },
+    "implementationTypeName": "BOPISFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "01F61BCF-9885-4F1E-B03A-F86294E13BA4",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
+    }
+  },
+  {
+    "id": "2f0368812e6c4317b34360b8fe29a0c9",
+    "type": "Shipping",
+    "scopeId": "BetterRetailEuro",
+    "name": "SFS (Load Balanced, Transsmart)",
+    "displayName": {
+      "en-US": "SFS (Load Balanced, Transsmart)",
+      "en-CA": "SFS (Load Balanced, Transsmart)",
+      "fr-CA": "SFS (Charge \u00e9quilibr\u00e9e, Transsmart)"
+    },
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "01F61BCF-9885-4F1E-B03A-F86294E13BA4",
+      "FulfillmentCarrierProviderId": "c850b1c9-ea17-448e-aac2-7e82d794d207",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      }
+    }
+  },
+  {
+    "id": "13dac5ec475e4639a1529e695fb0aa2f",
+    "type": "Shipping",
+    "scopeId": "BetterRetailEuro",
+    "name": "SFS (Competition, Transsmart)",
+    "displayName": {
+      "en-US": "SFS (Competition, Transsmart)",
+      "en-CA": "SFS (Competition, Transsmart)",
+      "fr-CA": "SFS (Comp\u00e9tition, Transsmart)"
+    },
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "4BB38EF2-0D3D-4489-A826-E7FB44000107",
+      "FulfillmentCarrierProviderId": "c850b1c9-ea17-448e-aac2-7e82d794d207",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      }
+    }
+  },
+  {
+    "id": "04926e70fe2e4db88c34ae5f25554fed",
+    "type": "Shipping",
+    "scopeId": "BetterRetailEuro",
+    "name": "Shipping",
+    "displayName": {},
+    "implementationTypeName": "FlatRateShippingProvider",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 3
+      },
+      "EstimatedTransitInDays": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
+    }
+  },
+  {
+    "id": "b0589f24ef714d539b4ff1e8a6e8a434",
+    "type": "Shipping",
+    "scopeId": "BetterRetailEuro",
+    "name": "SFS Short (Competition, Transsmart)",
+    "displayName": {
+      "en-US": "SFS Short (Competition, Transsmart)",
+      "en-CA": "SFS Short (Competition, Transsmart)",
+      "fr-CA": "SFS court (Comp\u00e9tition, Transsmart)"
+    },
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location\u2019s own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "4BB38EF2-0D3D-4489-A826-E7FB44000107",
+      "FulfillmentCarrierProviderId": "c850b1c9-ea17-448e-aac2-7e82d794d207",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      }
+    }
+  },
+  {
+    "id": "656e9efe59714dd88b8c006f363fbbf5",
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "Shipping",
+    "displayName": {},
+    "implementationTypeName": "FlatRateShippingProvider",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 3
+      },
+      "EstimatedTransitInDays": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
+    }
+  },
+  {
+    "id": "8505fe79644a44a9978e2f1581e49115",
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "Buy-online-pick-up-in-store (Load Balanced)",
+    "displayName": {
+      "en-US": "BOPIS Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS (Charge \u00e9quilibr\u00e9e)"
+    },
+    "implementationTypeName": "BOPISFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "3D5F3AA6-CCAD-4B20-AA5C-92BAAB283F96",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
+    }
+  },
+  {
+    "id": "670b239b61c4674908da31d0ca0b4039",
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "Ship from store (Competition)",
+    "displayName": {
+      "en-US": "SFS Fulfillment Provider (Competition)",
+      "en-CA": "SFS Fulfillment Provider (Competition)",
+      "fr-CA": "Fournisseur SFS (Comp\u00e9tition)"
+    },
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "9B058102-9D34-70C3-6ACC-2B66E3200241",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      }
+    }
+  },
+  {
+    "id": "583d3a293cde4f489571870de3ca0c5a",
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "Buy-online-pick-up-in-store Short (Load Balanced)",
+    "displayName": {
+      "en-US": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS court (Charge \u00e9quilibr\u00e9e)"
+    },
+    "implementationTypeName": "BOPISShortFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store Short fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "3D5F3AA6-CCAD-4B20-AA5C-92BAAB283F96",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequiredForTransfer": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
+    }
+  },
+  {
+    "id": "7275307c36d24580aaff920293b2250c",
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "Ship from store (Load Balanced)",
+    "displayName": {
+      "en-US": "SFS Fulfillment Provider (Load Balanced)",
+      "en-CA": "SFS Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur SFS (Charge \u00e9quilibr\u00e9e)"
+    },
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "3D5F3AA6-CCAD-4B20-AA5C-92BAAB283F96",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      }
+    }
+  },
+  {
+    "id": "5f503d2182dd478ea0f0b26bd5101570",
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "Ship from store Short (Competition)",
+    "displayName": {
+      "en-US": "SFS Short Fulfillment Provider (Competition)",
+      "en-CA": "SFS Short Fulfillment Provider (Competition)",
+      "fr-CA": "Fournisseur SFS court (Comp\u00e9tition)"
+    },
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location\u2019s own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "9B058102-9D34-70C3-6ACC-2B66E3200241",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      }
+    }
+  },
+  {
+    "id": "2e35b8cff782435dad59bcbf864cdece",
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "PickUp",
+    "displayName": {},
+    "implementationTypeName": "PickUpShippingProvider",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 2
+      }
+    }
+  },
+  {
+    "id": "570cc8da11824a0db9e0ca89df9555a4",
+    "type": "Shipping",
+    "scopeId": "BetterRetailNorway",
+    "name": "Ship from store Short (Load Balanced)",
+    "displayName": {
+      "en-US": "SFS Short Fulfillment Provider (Load Balanced)",
+      "en-CA": "SFS Short Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur SFS court (Charge \u00e9quilibr\u00e9e)"
+    },
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "3D5F3AA6-CCAD-4B20-AA5C-92BAAB283F96",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      }
+    }
+  },
+  {
+    "id": "2063c27c1ce64e17bb2923844dda6264",
+    "type": "Shipping",
+    "scopeId": "BetterRetailUSA",
+    "name": "SFS (Load Balanced, DS)",
+    "displayName": {
+      "en-US": "SFS (Load Balanced, Delivery Solution)",
+      "en-CA": "SFS (Load Balanced, Delivery Solution)",
+      "fr-CA": "SFS (Charge \u00e9quilibr\u00e9e, Delivery Solution)"
+    },
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store Load Balanced Fulfillment Provider is designed to sequentially route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase then determines the next Fulfillment location to select for the shipment. The underlying Load Balanced Routing Provider controls splitting and prioritization. The provider then governs policies associated with in-store fulfillment, concluding with stores shipping the order shipments to the customer. Ship From Store fulfills orders using the fulfillment location\u2019s own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentCarrierProviderId": "9DCCD461-EB20-4990-992B-F3C4F277B560",
+      "FulfillmentRoutingProviderId": "CEBEDCDD-7281-43EA-8F75-C927FAAC7EB7",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      }
+    }
+  },
+  {
+    "id": "5d3f68ca66c440e49fa533afb5e89652",
+    "type": "Shipping",
+    "scopeId": "BetterRetailUSA",
+    "name": "Buy-online-pick-up-in-store (Load Balanced)",
+    "displayName": {
+      "en-US": "BOPIS Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS (Charge \u00e9quilibr\u00e9e)"
+    },
+    "implementationTypeName": "BOPISFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "CEBEDCDD-7281-43EA-8F75-C927FAAC7EB7",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
+    }
+  },
+  {
+    "id": "e1d7286edb624ba99f3562493b9c6fe0",
+    "type": "Shipping",
+    "scopeId": "BetterRetailUSA",
+    "name": "Buy-online-pick-up-in-store Short (Load Balanced)",
+    "displayName": {
+      "en-US": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "en-CA": "BOPIS Short Fulfillment Provider (Load Balanced)",
+      "fr-CA": "Fournisseur BOPIS court (Charge \u00e9quilibr\u00e9e)"
+    },
+    "implementationTypeName": "BOPISShortFulfillmentProvider",
+    "description": "The Buy-online-pick-up-in-store Short fulfillment provider is designed to complete the fulfillment process at specific pickup locations chosen by end users. It then governs polices associated with fulfillment concluding with the end customer picking up the shipment. For pure pickup scenarios, shipments are fulfilled using pickup locations' own inventory. For ship-to-store scenarios, fulfillment is handled by fulfillment locations and shipments are transferred to pickup locations chosen by customers. Ship-to-store fulfills orders using a fulfillment location different from the pickup location. Supported by its underlying Load Balanced Routing Provider, the fulfillment provider governs routing and fulfillment activities at both locations. The fulfilling end deals with picking, packing and transferring while the receiving end deals with pickers accepting shipments delivered to their pickup locations and concluding with the end customer picking up the shipment.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "CEBEDCDD-7281-43EA-8F75-C927FAAC7EB7",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "TransferSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 4320
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "StoreToStoreTransfersEnabled": {
+        "__type": "ValueOfBoolean",
+        "value": true
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequiredForTransfer": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
+    }
+  },
+  {
+    "id": "dc39196e16814746b55a934aa6c6c1af",
+    "type": "Shipping",
+    "scopeId": "BetterRetailUSA",
+    "name": "Ship from store (Competition)",
+    "displayName": {
+      "en-US": "SFS Fulfillment Provider (Competition)",
+      "en-CA": "SFS Fulfillment Provider (Competition)",
+      "fr-CA": "Fournisseur SFS (Comp\u00e9tition)"
+    },
+    "implementationTypeName": "ShipFromStoreFulfillmentProvider",
+    "description": "The Ship from Store Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location\u2019s own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "6FCB318C-AEE8-4BF6-89B5-34745E9573F0",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      }
+    }
+  },
+  {
+    "id": "3af3e03e76d8401895eea087a003cf2b",
+    "type": "Shipping",
+    "scopeId": "BetterRetailUSA",
+    "name": "PickUp",
+    "displayName": {},
+    "implementationTypeName": "PickUpShippingProvider",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 2
+      }
+    }
+  },
+  {
+    "id": "59aed65c9d22484087a9b0f6a9b6f568",
+    "type": "Shipping",
+    "scopeId": "BetterRetailUSA",
+    "name": "Ship from store Short (Competition)",
+    "displayName": {
+      "en-US": "SFS Short Fulfillment Provider (Competition)",
+      "en-CA": "SFS Short Fulfillment Provider (Competition)",
+      "fr-CA": "Fournisseur SFS court (Comp\u00e9tition)"
+    },
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Competition Fulfillment Provider is designed to offer order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order. The priority phase then offers the shipment to all eligible Fulfillment Locations in order to elicit a competition to seize it. The underlying Competition Routing Provider controls splitting and competition prioritization. The provider then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location\u2019s own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentRoutingProviderId": "6FCB318C-AEE8-4BF6-89B5-34745E9573F0",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      }
+    }
+  },
+  {
+    "id": "49fa612c76f747219608e23261c55fa9",
+    "type": "Shipping",
+    "scopeId": "BetterRetailUSA",
+    "name": "SFS Short (Load Balanced, DS)",
+    "displayName": {
+      "en-US": "SFS Short (Load Balanced, Delivery Solution)",
+      "en-CA": "SFS Short (Load Balanced, Delivery Solution)",
+      "fr-CA": "SFS court (Charge \u00e9quilibr\u00e9e, Delivery Solution)"
+    },
+    "implementationTypeName": "ShipFromStoreShortFulfillmentProvider",
+    "description": "The Ship from Store Short Fulfillment Provider is designed to route order shipments, to ship to customers, to one of many fulfillment locations and to offer them for fulfillment. Routing is performed in two phases. The eligibility phase elects a group of fulfillment locations able to fulfill the order, or part of the order if more than one shipment per order is allowed. The priority phase determines the next Fulfillment location to select for the order. It then governs policies associated with in-store fulfillment, concluding with the store shipping the order shipment to the customer. Ship From Store fulfills orders using the fulfillment location's own inventory.",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "FulfillmentCarrierProviderId": "9DCCD461-EB20-4990-992B-F3C4F277B560",
+      "FulfillmentRoutingProviderId": "CEBEDCDD-7281-43EA-8F75-C927FAAC7EB7",
+      "AcceptanceSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "PickingSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 60
+      },
+      "CompletionSLAInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 480
+      },
+      "SLAExpiryWarningTimeInMinutes": {
+        "__type": "ValueOfInt32",
+        "value": 15
+      },
+      "ForceManualCarrierSelection": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "OrderSplitOnItemsAndUnitsAllowed": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "IsAcceptanceRequired": {
+        "__type": "ValueOfBoolean",
+        "value": false
+      },
+      "MaximumEligibleLocationForEvaluation": {
+        "__type": "ValueOfInt32",
+        "value": 1
+      }
+    }
+  },
+  {
+    "id": "3507e01fee2a40899c5bf89c31438ac2",
+    "type": "Shipping",
+    "scopeId": "BetterRetailUSA",
+    "name": "Shipping",
+    "displayName": {},
+    "implementationTypeName": "FlatRateShippingProvider",
+    "isActive": true,
+    "fulfillmentServiceLevels": [],
+    "fulfillmentFeeOptions": [],
+    "values": {
+      "Cost": {
+        "__type": "ValueOfDouble",
+        "value": 3
+      },
+      "EstimatedTransitInDays": {
+        "__type": "ValueOfInt32",
+        "value": 2
+      }
     }
   }
 ]
