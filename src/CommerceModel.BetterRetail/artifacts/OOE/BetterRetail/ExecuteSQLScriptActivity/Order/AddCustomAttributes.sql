@@ -682,3 +682,242 @@ BEGIN
 			,1
 		)
 END
+
+
+
+
+--- Custom groups
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.[GROUP]
+				WHERE Group_Guid='ba934047-acdb-43c2-8337-ad5ca87cb12b')
+BEGIN
+	INSERT INTO [dbo].[GROUP] (
+			[IsDeleted]
+			,[GroupName]
+			,[IsSystem]
+			,[Description]
+			,[SequenceNumber]
+			,[Group_Guid]
+		) VALUES (
+			0
+			,'BetterCustomer'
+			,0
+			,'Customer information'
+			,0
+			,'ba934047-acdb-43c2-8337-ad5ca87cb12b'
+		)
+END
+GO
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.GROUP_LOCALIZE
+				WHERE Group_Localize_Guid='7f99b340-68ca-4028-ac52-94bf476e4a97')
+BEGIN
+	INSERT INTO [dbo].[GROUP_LOCALIZE] (
+			[GroupName]
+			,[CultureIso]
+			,[DisplayName]
+			,[Group_Localize_Guid]
+		) VALUES (
+			'BetterCustomer'
+			,'en-US'
+			,'Additional Customer Information'
+			,'7f99b340-68ca-4028-ac52-94bf476e4a97'
+		)
+END
+GO
+
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.GROUP_LOCALIZE
+				WHERE Group_Localize_Guid='f92fdd2f-6f2c-4c57-bc2a-c735ccff5e00')
+BEGIN
+	INSERT INTO [dbo].[GROUP_LOCALIZE] (
+			[GroupName]
+			,[CultureIso]
+			,[DisplayName]
+			,[Group_Localize_Guid]
+		) VALUES (
+			'BetterCustomer'
+			,'fr-CA'
+			,'Information additionnelle sur le client'
+			,'f92fdd2f-6f2c-4c57-bc2a-c735ccff5e00'
+		)
+END
+GO
+
+
+
+IF NOT EXISTS(SELECT 1 
+				FROM sys.columns
+				WHERE Name = N'BetterIsVIP'
+				AND Object_ID = Object_ID(N'dbo.ORDER'))
+BEGIN
+		ALTER TABLE dbo.[ORDER] ADD BetterIsVIP BIT NULL;
+END
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE
+				WHERE Entity_Attribute_Guid='dd53f50e-ae95-4d12-a596-c62c272445ed')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE] (
+			[EntityName]
+			,[AttributeName]
+			,[IsSystemAttribute]
+			,[DataType]
+			,[DefaultValue]
+			,[GroupName]
+			,[Description]
+			,[MinValue]
+			,[MaxValue]
+			,[MinMultiplicity]
+			,[MaxMultiplicity]
+			,[IsMultilingual]
+			,[IsSearchable]
+			,[ReferenceLookUpName]
+			,[SequenceNumber]
+			,[IsDeleted]
+			,[Entity_Attribute_Guid]
+			,[DataTypeSequence]
+		) VALUES (
+			'Order'
+			,'BetterIsVIP'
+			,0
+			,'Boolean'
+			,'False'
+			,'BetterVIP'
+			,'Is the customer a VIP?'
+			,null
+			,null
+			,'0'
+			,'1'
+			,0
+			,0
+			,null
+			,1
+			,0
+			,'dd53f50e-ae95-4d12-a596-c62c272445ed'
+			,2
+		)
+END
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='dd53f50e-ae95-4d12-a596-c62c272445ed'
+				  AND CultureIso='en-US')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'dd53f50e-ae95-4d12-a596-c62c272445ed'
+					,'en-US'
+					,'Is the customer a VIP?'
+				)
+END
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='dd53f50e-ae95-4d12-a596-c62c272445ed'
+				  AND CultureIso='fr-CA')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'dd53f50e-ae95-4d12-a596-c62c272445ed'
+					,'fr-CA'
+					,'Est-ce que le client est un VIP?'
+				)
+END
+
+
+
+
+IF NOT EXISTS(SELECT 1 
+				FROM sys.columns
+				WHERE Name = N'BetterVIPMessage'
+				AND Object_ID = Object_ID(N'dbo.ORDER'))
+BEGIN
+		ALTER TABLE dbo.[ORDER] ADD BetterVIPMessage BIT NULL;
+END
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE
+				WHERE Entity_Attribute_Guid='27e35413-e3ae-4140-a16b-498c82fa2ce6')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE] (
+			[EntityName]
+			,[AttributeName]
+			,[IsSystemAttribute]
+			,[DataType]
+			,[DefaultValue]
+			,[GroupName]
+			,[Description]
+			,[MinValue]
+			,[MaxValue]
+			,[MinMultiplicity]
+			,[MaxMultiplicity]
+			,[IsMultilingual]
+			,[IsSearchable]
+			,[ReferenceLookUpName]
+			,[SequenceNumber]
+			,[IsDeleted]
+			,[Entity_Attribute_Guid]
+			,[DataTypeSequence]
+		) VALUES (
+			'Order'
+			,'BetterVIPMessage'
+			,0
+			,'Boolean'
+			,'False'
+			,'BetterVIP'
+			,'VIP Message'
+			,null
+			,null
+			,'0'
+			,'1'
+			,0
+			,0
+			,null
+			,2
+			,0
+			,'27e35413-e3ae-4140-a16b-498c82fa2ce6'
+			,3
+		)
+END
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='27e35413-e3ae-4140-a16b-498c82fa2ce6'
+				  AND CultureIso='en-US')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'27e35413-e3ae-4140-a16b-498c82fa2ce6'
+					,'en-US'
+					,'VIP Message'
+				)
+END
+
+IF NOT EXISTS(SELECT 1
+				FROM dbo.ENTITY_ATTRIBUTE_LOCALIZE
+				WHERE Entity_Attribute_Guid='27e35413-e3ae-4140-a16b-498c82fa2ce6'
+				  AND CultureIso='fr-CA')
+BEGIN
+	INSERT INTO [dbo].[ENTITY_ATTRIBUTE_LOCALIZE] (
+					[Entity_Attribute_Guid]
+					,[CultureIso]
+					,[DisplayName]
+				) VALUES (
+					'27e35413-e3ae-4140-a16b-498c82fa2ce6'
+					,'fr-CA'
+					,'Message pour le VIP'
+				)
+END
