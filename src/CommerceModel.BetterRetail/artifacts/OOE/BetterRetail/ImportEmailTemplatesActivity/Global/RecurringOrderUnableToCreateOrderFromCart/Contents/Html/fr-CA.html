@@ -116,7 +116,7 @@
                                         <strong>{{item.ProductSummary.DisplayName}}</strong><br />
                                         {{item.RecurringOrderFrequencyDisplayName}}<br />
                                         <!--{% for kva in item.kvaDisplayValues%}-->
-                                        <span>{{kva}}</span><br />
+                                        <span>{{ kva[0] }}: {{ kva[1] }}</span><br />
                                         <!--{% endfor %}-->
                                     </td>
                                     <td style="padding: 20px 0px; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
@@ -156,7 +156,7 @@
                                         <strong>{{item.ProductSummary.DisplayName}}</strong><br />
                                         {{item.RecurringOrderFrequencyDisplayName}}<br />
                                         <!--{% for kva in item.kvaDisplayValues%}-->
-                                        <span>{{kva}}</span><br />
+                                        <span>{{ kva[0] }}: {{ kva[1] }}</span><br />
                                         <!--{% endfor %}-->
                                     </td>
                                     <td style="padding: 20px 0px; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
