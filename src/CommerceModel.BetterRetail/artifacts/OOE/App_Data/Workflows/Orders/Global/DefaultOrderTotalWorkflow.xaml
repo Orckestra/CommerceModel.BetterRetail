@@ -46,11 +46,18 @@
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>Autofac</AssemblyReference>
+      <AssemblyReference>Azure.Core</AssemblyReference>
+      <AssemblyReference>Azure.Core.Amqp</AssemblyReference>
+      <AssemblyReference>Azure.Messaging.ServiceBus</AssemblyReference>
+      <AssemblyReference>Azure.Storage.Blobs</AssemblyReference>
+      <AssemblyReference>Azure.Storage.Common</AssemblyReference>
       <AssemblyReference>Common.Logging</AssemblyReference>
       <AssemblyReference>Common.Logging.Core</AssemblyReference>
       <AssemblyReference>Ionic.Zip</AssemblyReference>
       <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
-      <AssemblyReference>Microsoft.Azure.KeyVault.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.Azure.Amqp</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.TimeProvider</AssemblyReference>
       <AssemblyReference>Microsoft.Data.Edm</AssemblyReference>
       <AssemblyReference>Microsoft.Data.OData</AssemblyReference>
       <AssemblyReference>Microsoft.Data.Services.Client</AssemblyReference>
@@ -80,16 +87,28 @@
       <AssemblyReference>Orckestra.SolrLib</AssemblyReference>
       <AssemblyReference>OrckestraCommerce.CommerceModelUtilities</AssemblyReference>
       <AssemblyReference>OrckestraCommerce.DataExchange</AssemblyReference>
+      <AssemblyReference>Polly</AssemblyReference>
+      <AssemblyReference>Polly.Core</AssemblyReference>
       <AssemblyReference>Quartz</AssemblyReference>
+      <AssemblyReference>ServiceStack.Common</AssemblyReference>
       <AssemblyReference>ServiceStack.Interfaces</AssemblyReference>
+      <AssemblyReference>ServiceStack.OrmLite</AssemblyReference>
+      <AssemblyReference>ServiceStack.OrmLite.SqlServer</AssemblyReference>
       <AssemblyReference>ServiceStack.Text</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>System.Buffers</AssemblyReference>
+      <AssemblyReference>System.ClientModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Annotations</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ComponentModel.DataAnnotations</AssemblyReference>
       <AssemblyReference>System.Configuration</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.IO</AssemblyReference>
+      <AssemblyReference>System.IO.Hashing</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Net</AssemblyReference>
       <AssemblyReference>System.Net.Http</AssemblyReference>
       <AssemblyReference>System.Net.Http.WinHttpHandler</AssemblyReference>
@@ -98,14 +117,22 @@
       <AssemblyReference>System.Reactive.Core</AssemblyReference>
       <AssemblyReference>System.Reactive.Interfaces</AssemblyReference>
       <AssemblyReference>System.Reactive.Linq</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
       <AssemblyReference>System.Runtime.CompilerServices.Unsafe</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Security.Cryptography.Algorithms</AssemblyReference>
       <AssemblyReference>System.Security.Cryptography.Encoding</AssemblyReference>
       <AssemblyReference>System.Security.Cryptography.Primitives</AssemblyReference>
       <AssemblyReference>System.Security.Cryptography.X509Certificates</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>System.Spatial</AssemblyReference>
+      <AssemblyReference>System.Text.Encodings.Web</AssemblyReference>
+      <AssemblyReference>System.Text.Json</AssemblyReference>
       <AssemblyReference>System.Threading.Tasks.Dataflow</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Extensions</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
@@ -338,6 +365,18 @@
             </InOutArgument>
           </ooopwav:ValidateFulfilmentTimeActivity.OrderProcessingResultArgument>
         </ooopwav:ValidateFulfilmentTimeActivity>
+        <ooopwav:ValidateTimeSlotReservationsActivity DisplayName="ValidateTimeSlotReservationsActivity" sap2010:WorkflowViewState.IdRef="ValidateTimeSlotReservationsActivity_1" WarningOnly="True">
+          <ooopwav:ValidateTimeSlotReservationsActivity.OrderProcessingContextArgument>
+            <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+              <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+            </InArgument>
+          </ooopwav:ValidateTimeSlotReservationsActivity.OrderProcessingContextArgument>
+          <ooopwav:ValidateTimeSlotReservationsActivity.OrderProcessingResultArgument>
+            <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+              <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+            </InOutArgument>
+          </ooopwav:ValidateTimeSlotReservationsActivity.OrderProcessingResultArgument>
+        </ooopwav:ValidateTimeSlotReservationsActivity>
       </Sequence>
       <ooopwav:ValidatePaymentsOptionsActivity sap2010:WorkflowViewState.IdRef="ValidatePaymentsOptionsActivity_1">
         <ooopwav:ValidatePaymentsOptionsActivity.OrderProcessingContextArgument>
@@ -510,7 +549,7 @@
         </InOutArgument>
       </ooopwav:ValidateCartAttributesActivity.OrderProcessingResultArgument>
     </ooopwav:ValidateCartAttributesActivity>
-    <sads:DebugSymbol.Symbol>d40BQzpcd29cQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXGFydGlmYWN0c1xPT0VcQXBwX0RhdGFcV29ya2Zsb3dzXE9yZGVyc1xHbG9iYWxcRGVmYXVsdE9yZGVyVG90YWxXb3JrZmxvdy54YW1sZXgDggQOAgEBeQWEATcDAd8BhQEFkAE0AwHYAZEBBZwBJwMB0QGdAQWoATIDAcoBqQEFtAE3AwHDAbUBBcABNAMBvAHBAQXMASsDAbUBzQEF7gIQAgFX7wIF+gI1AgFQ+wIFhgMvAgFJhwMFkgMvAgFCkwMFxAMQAgElxQMF0AM8AgEe0QMF3AMtAgEX3QMF6AM2AgEQ6QMF9AM3AgEJ9QMFgAQuAgECgQELgQGBAQMB4wF8C3x7AwHgAY0BC40BgQEDAdwBiAELiAF7AwHZAZkBC5kBgQEDAdUBlAELlAF7AwHSAaUBC6UBgQEDAc4BoAELoAF7AwHLAbEBC7EBgQEDAccBrAELrAF7AwHEAb0BC70BgQEDAcABuAELuAF7AwG9AckBC8kBgQEDAbkBxAELxAF7AwG2Ac4BB+cBEgMBpgHoAQfVAhICAWbWAgfhAjECAV/iAgftAi8CAVj3Agv3AoEBAgFU8gIL8gJ7AgFRgwMLgwOBAQIBTf4CC/4CewIBSo8DC48DgQECAUaKAwuKA3sCAUOUAwefAzMCATugAwerAyoCATSsAwe3AycCAS24AwfDAysCASbNAwvNA4EBAgEiyAMLyAN7AgEf2QML2QOBAQIBG9QDC9QDewIBGOUDC+UDgQECARTgAwvgA3sCARHxAwvxA4EBAgEN7AML7AN7AgEK/QML/QOBAQIBBvgDC/gDewIBA88BCdoBMwMBrgHbAQnmATMDAacB6QEJ9AEsAwGfAfUBCYACMQMBmAGBAgmMAj0DAZEBjQIJmAJOAwGKAZkCCaQCNwMBgwGlAgmwAjUCAXyxAgm8AjcCAXW9AgnIAjoCAW7JAgnUAjICAWfeAg3eAoMBAgFj2QIN2QJ9AgFg6gIN6gKDAQIBXOUCDeUCfQIBWZwDDZwDgwECAT+XAw2XA30CATyoAw2oA4MBAgE4owMNowN9AgE1tAMNtAODAQIBMa8DDa8DfQIBLsADDcADgwECASq7Aw27A30CASfXAQ/XAYUBAwGyAdIBD9IBfwMBrwHjAQ/jAYUBAwGrAd4BD94BfwMBqAHxAQ/xAYUBAwGjAewBD+wBfwMBoAH9AQ/9AYUBAwGcAfgBD/gBfwMBmQGJAg+JAoUBAwGVAYQCD4QCfwMBkgGVAg+VAoUBAwGOAZACD5ACfwMBiwGhAg+hAoUBAwGHAZwCD5wCfwMBhAGtAg+tAoUBAwGAAagCD6gCfwIBfbkCD7kChQECAXm0Ag+0An8CAXbFAg/FAoUBAgFywAIPwAJ/AgFv0QIP0QKFAQIBa8wCD8wCfwIBaA==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d44BQzpcZ2l0XENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXHNyY1xDb21tZXJjZU1vZGVsLkJldHRlclJldGFpbFxhcnRpZmFjdHNcT09FXEFwcF9EYXRhXFdvcmtmbG93c1xPcmRlcnNcR2xvYmFsXERlZmF1bHRPcmRlclRvdGFsV29ya2Zsb3cueGFtbGmTAQOpBA4CAQGUAQWfATcDAecBoAEFqwE0AwHgAawBBbcBJwMB2QG4AQXDATIDAdIBxAEFzwE3AwHLAdABBdsBNAMBxAHcAQXnASsDAb0B6AEFlQMQAgFXlgMFoQM1AgFQogMFrQMvAgFJrgMFuQMvAgFCugMF6wMQAgEl7AMF9wM8AgEe+AMFgwQtAgEXhAQFjwQ2AgEQkAQFmwQ3AgEJnAQFpwQuAgECnAELnAGBAQMB6wGXAQuXAXsDAegBqAELqAGBAQMB5AGjAQujAXsDAeEBtAELtAGBAQMB3QGvAQuvAXsDAdoBwAELwAGBAQMB1gG7AQu7AXsDAdMBzAELzAGBAQMBzwHHAQvHAXsDAcwB2AEL2AGBAQMByAHTAQvTAXsDAcUB5AEL5AGBAQMBwQHfAQvfAXsDAb4B6QEHggISAwGuAYMCB/wCEgIBZv0CB4gDMQIBX4kDB5QDLwIBWJ4DC54DgQECAVSZAwuZA3sCAVGqAwuqA4EBAgFNpQMLpQN7AgFKtgMLtgOBAQIBRrEDC7EDewIBQ7sDB8YDMwIBO8cDB9IDKgIBNNMDB94DJwIBLd8DB+oDKwIBJvQDC/QDgQECASLvAwvvA3sCAR+ABAuABIEBAgEb+wML+wN7AgEYjAQLjASBAQIBFIcEC4cEewIBEZgEC5gEgQECAQ2TBAuTBHsCAQqkBAukBIEBAgEGnwQLnwR7AgED6gEJ9QEzAwG2AfYBCYECMwMBrwGEAgmPAiwDAacBkAIJmwIxAwGgAZwCCacCPQMBmQGoAgmzAk4DAZIBtAIJvwI3AwGLAcACCcsCNQMBhAHMAgnXAjcCAX3YAgnjAjoCAXbkAgnvAjICAW/wAgn7AjgCAWeFAw2FA4MBAgFjgAMNgAN9AgFgkQMNkQODAQIBXIwDDYwDfQIBWcMDDcMDgwECAT++Aw2+A30CATzPAw3PA4MBAgE4ygMNygN9AgE12wMN2wODAQIBMdYDDdYDfQIBLucDDecDgwECASriAw3iA30CASfyAQ/yAYUBAwG6Ae0BD+0BfwMBtwH+AQ/+AYUBAwGzAfkBD/kBfwMBsAGMAg+MAoUBAwGrAYcCD4cCfwMBqAGYAg+YAoUBAwGkAZMCD5MCfwMBoQGkAg+kAoUBAwGdAZ8CD58CfwMBmgGwAg+wAoUBAwGWAasCD6sCfwMBkwG8Ag+8AoUBAwGPAbcCD7cCfwMBjAHIAg/IAoUBAwGIAcMCD8MCfwMBhQHUAg/UAoUBAwGBAc8CD88CfwIBfuACD+AChQECAXrbAg/bAn8CAXfsAg/sAoUBAgFz5wIP5wJ/AgFw+AIP+AKFAQIBbPMCD/MCfwIBafACvwHwAsUBAgFo</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -530,7 +569,7 @@
       <sap2010:ViewStateData Id="ValidateCartCouponsActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="ValidateOrderingCatalogActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
       <sap2010:ViewStateData Id="ValidateOrderingProductActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="375,208">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="222,208">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -538,16 +577,17 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ValidateCustomerActivity_1" sap:VirtualizedContainerService.HintSize="353,22" />
+      <sap2010:ViewStateData Id="ValidateCustomerActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
       <sap2010:ViewStateData Id="ValidateLineItemCountActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="ValidateFulfillmentOptionSelectedActivity_1" sap:VirtualizedContainerService.HintSize="353,22" />
-      <sap2010:ViewStateData Id="ValidateFulfillmentMethodHasChangedWhileFulfillmentStarted_1" sap:VirtualizedContainerService.HintSize="353,22" />
-      <sap2010:ViewStateData Id="ValidateFulfillmentShippingActivity_1" sap:VirtualizedContainerService.HintSize="353,22" />
-      <sap2010:ViewStateData Id="ValidateFulfillmentPickUpActivity_1" sap:VirtualizedContainerService.HintSize="353,22" />
-      <sap2010:ViewStateData Id="ValidateFulfillmentDeliveryActivity_1" sap:VirtualizedContainerService.HintSize="353,22" />
-      <sap2010:ViewStateData Id="ValidateFulfillmentShipToStoreActivity_1" sap:VirtualizedContainerService.HintSize="353,22" />
-      <sap2010:ViewStateData Id="ValidateFulfilmentTimeActivity_1" sap:VirtualizedContainerService.HintSize="353,22" />
-      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="375,675">
+      <sap2010:ViewStateData Id="ValidateFulfillmentOptionSelectedActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ValidateFulfillmentMethodHasChangedWhileFulfillmentStarted_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ValidateFulfillmentShippingActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ValidateFulfillmentPickUpActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ValidateFulfillmentDeliveryActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ValidateFulfillmentShipToStoreActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ValidateFulfilmentTimeActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ValidateTimeSlotReservationsActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="222,704">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -555,9 +595,9 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ValidatePaymentsOptionsActivity_1" sap:VirtualizedContainerService.HintSize="375,22" />
-      <sap2010:ViewStateData Id="ValidateCartDiscountsActivity_1" sap:VirtualizedContainerService.HintSize="375,22" />
-      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="443,1171">
+      <sap2010:ViewStateData Id="ValidatePaymentsOptionsActivity_1" sap:VirtualizedContainerService.HintSize="222,22" />
+      <sap2010:ViewStateData Id="ValidateCartDiscountsActivity_1" sap:VirtualizedContainerService.HintSize="222,22" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="443,1200">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -585,14 +625,14 @@
       <sap2010:ViewStateData Id="ValidateCartCouponsEligibilityActivity_1" sap:VirtualizedContainerService.HintSize="443,36" />
       <sap2010:ViewStateData Id="SurfaceLineItemsErrorsAsMessagesActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="ValidateCartAttributesActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="465,2976">
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="465,3005">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Orders.Processing.Workflows.Workflows.Orders.DefaultOrderTotalWorkflow_1" sap:VirtualizedContainerService.HintSize="505,3056" />
+      <sap2010:ViewStateData Id="Orders.Processing.Workflows.Workflows.Orders.DefaultOrderTotalWorkflow_1" sap:VirtualizedContainerService.HintSize="505,3085" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
