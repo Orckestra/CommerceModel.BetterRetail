@@ -708,7 +708,6 @@ BEGIN
 			,'ba934047-acdb-43c2-8337-ad5ca87cb12b'
 		)
 END
-GO
 
 IF NOT EXISTS(SELECT 1
 				FROM dbo.GROUP_LOCALIZE
@@ -726,7 +725,6 @@ BEGIN
 			,'7f99b340-68ca-4028-ac52-94bf476e4a97'
 		)
 END
-GO
 
 
 IF NOT EXISTS(SELECT 1
@@ -745,7 +743,6 @@ BEGIN
 			,'f92fdd2f-6f2c-4c57-bc2a-c735ccff5e00'
 		)
 END
-GO
 
 
 
