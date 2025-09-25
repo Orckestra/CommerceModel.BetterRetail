@@ -52,6 +52,7 @@
                                 <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
                                     <p style="font-size: 18px; margin-top: 0px; margin-bottom: 5px;"><strong>Payment Method(s)</strong></p>
                                     <!--{% for payment in Order.Cart.Payments %}-->
+                                    <!--{% if payment.PaymentStatus == "Paid" or payment.PaymentStatus == "Authorized" %}-->
                                         <!--{% case payment.PaymentMethod.Type %}-->
                                                 <!--{% when "CreditCard", "SavedCreditCard" %}-->
                                                     <span>{{payment.PaymentMethod.CreditCardBrand}}</span>
@@ -65,6 +66,7 @@
                                                     <span>{{payment.PaymentMethod.Type | localize_lookup: "order", "PaymentMethodType", "en-CA"}}</span>
                                         <!--{% endcase %}-->
                                         <br />
+                                    <!--{% endif %}-->
                                     <!--{% endfor %}-->
                                 </td>
                             </tr>
