@@ -522,6 +522,16 @@
         },
         "sortOrder": 0,
         "isActive": true
+      },
+      {
+        "value": "ConfirmInventoryReservation",
+        "displayName": {
+          "en-US": "Confirm inventory reservation",
+          "en-CA": "Confirm inventory reservation",
+          "fr-CA": "Confirmation des réservations d'inventaire"
+        },
+        "sortOrder": 0,
+        "isActive": true
       }
     ],
     "displayName": {
