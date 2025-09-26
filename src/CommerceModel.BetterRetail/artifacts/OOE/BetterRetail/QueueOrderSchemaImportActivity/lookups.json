@@ -526,8 +526,8 @@
       {
         "value": "ConfirmInventoryReservation",
         "displayName": {
-          "en-US": "Confirm inventory reservation",
-          "en-CA": "Confirm inventory reservation",
+          "en-US": "Confirm inventory reservations",
+          "en-CA": "Confirm inventory reservations",
           "fr-CA": "Confirmation des réservations d'inventaire"
         },
         "sortOrder": 0,
