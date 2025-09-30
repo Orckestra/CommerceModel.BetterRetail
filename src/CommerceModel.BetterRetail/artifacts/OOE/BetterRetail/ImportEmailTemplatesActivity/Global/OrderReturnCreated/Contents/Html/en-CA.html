@@ -75,7 +75,7 @@
                                                         <span> {{payment.PaymentMethod.ExpiryDate}}</span>
                                                     <!--{% endif %}-->
                                                 <!--{% else %}-->
-                                                    <span>{{payment.PaymentMethod.Type | localize_lookup: "order", "PaymentMethodType", "en-CA"}}</span>
+                                                    <span>{{payment.PaymentMethod.Type | localize_lookup: "order", "PaymentMethodType", templateCulture}}</span>
                                         <!--{% endcase %}-->
                                         <br />
                                     <!--{% endif %}-->
