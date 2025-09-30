@@ -71,6 +71,28 @@
                                 </td>
                             </tr>
                             <!-- //// -->
+                            <tr>
+                                <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
+                                    <p style="font-size: 18px; margin-top: 0px; margin-bottom: 5px;"><strong>Payment Method(s)</strong></p>
+                                    <!--{% for payment in Order.Cart.Payments %}-->
+                                    <!--{% if payment.PaymentStatus == "Paid" or payment.PaymentStatus == "Authorized" %}-->
+                                        <!--{% case payment.PaymentMethod.Type %}-->
+                                                <!--{% when "CreditCard", "SavedCreditCard" %}-->
+                                                    <span>{{payment.PaymentMethod.CreditCardBrand}}</span>
+                                                    <span>{{payment.PaymentMethod.CreditCardNumberLastDigits}}</span>
+                                                    <!--{% if payment.PaymentMethod.CreditCardExpiryDate != null and payment.PaymentMethod.CreditCardExpiryDate != "" %}-->
+                                                        <span> {{payment.PaymentMethod.CreditCardExpiryDate}}</span>
+                                                    <!--{% elsif payment.PaymentMethod.ExpiryDate != null and payment.PaymentMethod.ExpiryDate != "" %}-->
+                                                        <span> {{payment.PaymentMethod.ExpiryDate}}</span>
+                                                    <!--{% endif %}-->
+                                                <!--{% else %}-->
+                                                    <span>{{payment.PaymentMethod.Type | localize_lookup: "order", "PaymentMethodType", "en-CA"}}</span>
+                                        <!--{% endcase %}-->
+                                        <br />
+                                    <!--{% endif %}-->
+                                    <!--{% endfor %}-->
+                                </td>
+                            </tr>
                             <!-- //// --> <!-- Return summary -->
                             <tr>
                                 <td style="padding: 15px 20px 60px;">
