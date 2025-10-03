@@ -54,7 +54,7 @@
                             </tr>
                             <!-- shipment info -->
                             <tr>
-                                <td style="padding: 15px 20px;" colspan="2"><h2>Informations de la requête de retour/h2></h2></td>
+                                <td style="padding: 15px 20px;" colspan="2"><h2>Informations de la requête de retour></h2></td>
                             </tr>
                             <tr>
                                 <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
@@ -206,7 +206,7 @@
                                                                 </td>
                                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
                                                                     <strong style="font-size: 18px;">
-                                                                        {{ OrderReturn.SubTotal | money:templateCulture}}
+                                                                        {{ OrderReturn.Total | money:templateCulture}}
                                                                     </strong>
                                                                 </td>
                                                             </tr>
@@ -228,7 +228,7 @@
                         <tfoot style="background-color: #ffffff;">
                             <tr>
                                 <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
-                                    <p>Veuillez ne pas répondre à ce courriel. Il a été envoyé à partir d'une adresse qui n'accepte pas les courriels. P</p>
+                                    <p>Veuillez ne pas répondre à ce courriel. Il a été envoyé à partir d'une adresse qui n'accepte pas les courriels.</p>
                                     <p style="font-size: 12px;">&copy; Droits d'auteur {{Variables.CopyrightsYear}} {{Variables.CompanyName}} Tous droits réservés. </p>
                             </tr>
 
