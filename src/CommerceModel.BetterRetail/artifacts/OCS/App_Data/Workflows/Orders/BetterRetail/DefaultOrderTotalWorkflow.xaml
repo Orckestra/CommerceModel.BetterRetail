@@ -365,6 +365,18 @@
             </InOutArgument>
           </ooopwav:ValidateFulfilmentTimeActivity.OrderProcessingResultArgument>
         </ooopwav:ValidateFulfilmentTimeActivity>
+        <ooopwav:ReserveTimeSlotReservationsActivity DisplayName="ReserveTimeSlotReservationsActivity" sap2010:WorkflowViewState.IdRef="ReserveTimeSlotReservationsActivity_1">
+          <ooopwav:ReserveTimeSlotReservationsActivity.OrderProcessingContextArgument>
+            <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+              <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+            </InArgument>
+          </ooopwav:ReserveTimeSlotReservationsActivity.OrderProcessingContextArgument>
+          <ooopwav:ReserveTimeSlotReservationsActivity.OrderProcessingResultArgument>
+            <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+              <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+            </InOutArgument>
+          </ooopwav:ReserveTimeSlotReservationsActivity.OrderProcessingResultArgument>
+        </ooopwav:ReserveTimeSlotReservationsActivity>
         <ooopwav:ValidateTimeSlotReservationsActivity DisplayName="ValidateTimeSlotReservationsActivity" sap2010:WorkflowViewState.IdRef="ValidateTimeSlotReservationsActivity_1" WarningOnly="True" HandleOrderDraftTimeslotReservation="True" ValidateTimeSlotReservationExpiryWarning="False">
           <ooopwav:ValidateTimeSlotReservationsActivity.OrderProcessingContextArgument>
             <InArgument x:TypeArguments="oosop:OrderProcessingContext">
@@ -549,7 +561,7 @@
         </InOutArgument>
       </ooopwav:ValidateCartAttributesActivity.OrderProcessingResultArgument>
     </ooopwav:ValidateCartAttributesActivity>
-    <sads:DebugSymbol.Symbol>d5QBQzpcZ2l0XENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXHNyY1xDb21tZXJjZU1vZGVsLkJldHRlclJldGFpbFxhcnRpZmFjdHNcT0NTXEFwcF9EYXRhXFdvcmtmbG93c1xPcmRlcnNcQmV0dGVyUmV0YWlsXERlZmF1bHRPcmRlclRvdGFsV29ya2Zsb3cueGFtbGmTAQOpBA4CAQGUAQWfATcDAecBoAEFqwE0AwHgAawBBbcBJwMB2QG4AQXDATIDAdIBxAEFzwE3AwHLAdABBdsBNAMBxAHcAQXnASsDAb0B6AEFlQMQAgFXlgMFoQM1AgFQogMFrQMvAgFJrgMFuQMvAgFCugMF6wMQAgEl7AMF9wM8AgEe+AMFgwQtAgEXhAQFjwQ2AgEQkAQFmwQ3AgEJnAQFpwQuAgECnAELnAGBAQMB6wGXAQuXAXsDAegBqAELqAGBAQMB5AGjAQujAXsDAeEBtAELtAGBAQMB3QGvAQuvAXsDAdoBwAELwAGBAQMB1gG7AQu7AXsDAdMBzAELzAGBAQMBzwHHAQvHAXsDAcwB2AEL2AGBAQMByAHTAQvTAXsDAcUB5AEL5AGBAQMBwQHfAQvfAXsDAb4B6QEHggISAwGuAYMCB/wCEgIBZv0CB4gDMQIBX4kDB5QDLwIBWJ4DC54DgQECAVSZAwuZA3sCAVGqAwuqA4EBAgFNpQMLpQN7AgFKtgMLtgOBAQIBRrEDC7EDewIBQ7sDB8YDMwIBO8cDB9IDKgIBNNMDB94DJwIBLd8DB+oDKwIBJvQDC/QDgQECASLvAwvvA3sCAR+ABAuABIEBAgEb+wML+wN7AgEYjAQLjASBAQIBFIcEC4cEewIBEZgEC5gEgQECAQ2TBAuTBHsCAQqkBAukBIEBAgEGnwQLnwR7AgED6gEJ9QEzAwG2AfYBCYECMwMBrwGEAgmPAiwDAacBkAIJmwIxAwGgAZwCCacCPQMBmQGoAgmzAk4DAZIBtAIJvwI3AwGLAcACCcsCNQMBhAHMAgnXAjcCAX3YAgnjAjoCAXbkAgnvAjICAW/wAgn7AjgCAWeFAw2FA4MBAgFjgAMNgAN9AgFgkQMNkQODAQIBXIwDDYwDfQIBWcMDDcMDgwECAT++Aw2+A30CATzPAw3PA4MBAgE4ygMNygN9AgE12wMN2wODAQIBMdYDDdYDfQIBLucDDecDgwECASriAw3iA30CASfyAQ/yAYUBAwG6Ae0BD+0BfwMBtwH+AQ/+AYUBAwGzAfkBD/kBfwMBsAGMAg+MAoUBAwGrAYcCD4cCfwMBqAGYAg+YAoUBAwGkAZMCD5MCfwMBoQGkAg+kAoUBAwGdAZ8CD58CfwMBmgGwAg+wAoUBAwGWAasCD6sCfwMBkwG8Ag+8AoUBAwGPAbcCD7cCfwMBjAHIAg/IAoUBAwGIAcMCD8MCfwMBhQHUAg/UAoUBAwGBAc8CD88CfwIBfuACD+AChQECAXrbAg/bAn8CAXfsAg/sAoUBAgFz5wIP5wJ/AgFw+AIP+AKFAQIBbPMCD/MCfwIBafACvwHwAsUBAgFo</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d5QBQzpcZ2l0XENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXHNyY1xDb21tZXJjZU1vZGVsLkJldHRlclJldGFpbFxhcnRpZmFjdHNcT0NTXEFwcF9EYXRhXFdvcmtmbG93c1xPcmRlcnNcQmV0dGVyUmV0YWlsXERlZmF1bHRPcmRlclRvdGFsV29ya2Zsb3cueGFtbHGTAQO2BA4CAQGUAQWfATcDAfMBoAEFqwE0AwHsAawBBbcBJwMB5QG4AQXDATIDAd4BxAEFzwE3AwHXAdABBdsBNAMB0AHcAQXnASsDAckB6AEFogMQAgFXowMFrgM1AgFQrwMFugMvAgFJuwMFxgMvAgFCxwMF+AMQAgEl+QMFhAQ8AgEehQQFkAQtAgEXkQQFnAQ2AgEQnQQFqAQ3AgEJqQQFtAQuAgECnAELnAGBAQMB9wGXAQuXAXsDAfQBqAELqAGBAQMB8AGjAQujAXsDAe0BtAELtAGBAQMB6QGvAQuvAXsDAeYBwAELwAGBAQMB4gG7AQu7AXsDAd8BzAELzAGBAQMB2wHHAQvHAXsDAdgB2AEL2AGBAQMB1AHTAQvTAXsDAdEB5AEL5AGBAQMBzQHfAQvfAXsDAcoB6QEHggISAwG6AYMCB4kDEgIBZooDB5UDMQIBX5YDB6EDLwIBWKsDC6sDgQECAVSmAwumA3sCAVG3Awu3A4EBAgFNsgMLsgN7AgFKwwMLwwOBAQIBRr4DC74DewIBQ8gDB9MDMwIBO9QDB98DKgIBNOADB+sDJwIBLewDB/cDKwIBJoEEC4EEgQECASL8Awv8A3sCAR+NBAuNBIEBAgEbiAQLiAR7AgEYmQQLmQSBAQIBFJQEC5QEewIBEaUEC6UEgQECAQ2gBAugBHsCAQqxBAuxBIEBAgEGrAQLrAR7AgED6gEJ9QEzAwHCAfYBCYECMwMBuwGEAgmPAiwDAbMBkAIJmwIxAwGsAZwCCacCPQMBpQGoAgmzAk4DAZ4BtAIJvwI3AwGXAcACCcsCNQMBkAHMAgnXAjcDAYkB2AIJ4wI6AwGCAeQCCe8CMgIBe/ACCfsCOAIBcfwCCYgDOAIBZ5IDDZIDgwECAWONAw2NA30CAWCeAw2eA4MBAgFcmQMNmQN9AgFZ0AMN0AODAQIBP8sDDcsDfQIBPNwDDdwDgwECATjXAw3XA30CATXoAw3oA4MBAgEx4wMN4wN9AgEu9AMN9AODAQIBKu8DDe8DfQIBJ/IBD/IBhQEDAcYB7QEP7QF/AwHDAf4BD/4BhQEDAb8B+QEP+QF/AwG8AYwCD4wChQEDAbcBhwIPhwJ/AwG0AZgCD5gChQEDAbABkwIPkwJ/AwGtAaQCD6QChQEDAakBnwIPnwJ/AwGmAbACD7AChQEDAaIBqwIPqwJ/AwGfAbwCD7wChQEDAZsBtwIPtwJ/AwGYAcgCD8gChQEDAZQBwwIPwwJ/AwGRAdQCD9QChQEDAY0BzwIPzwJ/AwGKAeACD+AChQEDAYYB2wIP2wJ/AwGDAewCD+wChQECAX/nAg/nAn8CAXzwAo0B8AKTAQIBevAChgLwAo0CAgF5+AIP+AKFAQIBdvMCD/MCfwIBc/ACmgLwAqACAgFy/AKOAfwClAECAXD8Ar4B/ALFAQIBb4QDD4QDhQECAWz/Ag//An8CAWn8AtIB/ALYAQIBaA==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -586,8 +598,9 @@
       <sap2010:ViewStateData Id="ValidateFulfillmentDeliveryActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
       <sap2010:ViewStateData Id="ValidateFulfillmentShipToStoreActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
       <sap2010:ViewStateData Id="ValidateFulfilmentTimeActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ReserveTimeSlotReservationsActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
       <sap2010:ViewStateData Id="ValidateTimeSlotReservationsActivity_1" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="222,704">
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="222,766">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -597,7 +610,7 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="ValidatePaymentsOptionsActivity_1" sap:VirtualizedContainerService.HintSize="222,22" />
       <sap2010:ViewStateData Id="ValidateCartDiscountsActivity_1" sap:VirtualizedContainerService.HintSize="222,22" />
-      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="443,1200">
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="443,1262">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -625,14 +638,14 @@
       <sap2010:ViewStateData Id="ValidateCartCouponsEligibilityActivity_1" sap:VirtualizedContainerService.HintSize="443,36" />
       <sap2010:ViewStateData Id="SurfaceLineItemsErrorsAsMessagesActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="ValidateCartAttributesActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="465,3005">
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="465,3067">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Orders.Processing.Workflows.Workflows.Orders.DefaultOrderTotalWorkflow_1" sap:VirtualizedContainerService.HintSize="505,3085" />
+      <sap2010:ViewStateData Id="Orders.Processing.Workflows.Workflows.Orders.DefaultOrderTotalWorkflow_1" sap:VirtualizedContainerService.HintSize="505,3147" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
