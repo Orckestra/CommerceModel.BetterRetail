@@ -235,19 +235,19 @@
 										<tr>
 											<td colspan="2"></td>
 											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-												<span style="text-transform: none;">Fulfillment total: </span>
+												<span>Sub-Total :</span>
 											</td>
 											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
-												<strong>{{ Order.Cart.FulfillmentCost | money:"en-US" }}</strong>
+												<strong>{{ Order.Cart.SubTotal | money:"en-US" }}</strong>
 											</td>
 										</tr>
 										<tr>
 											<td colspan="2"></td>
 											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-												<span>Sub-Total :</span>
+												<span style="text-transform: none;">Fulfillment total: </span>
 											</td>
 											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
-												<strong>{{ Order.Cart.SubTotal | money:"en-US" }}</strong>
+												<strong>{{ Order.Cart.FulfillmentCost | money:"en-US" }}</strong>
 											</td>
 										</tr>
 										<!--{% for fee in Order.Cart.ShipmentFees %}
