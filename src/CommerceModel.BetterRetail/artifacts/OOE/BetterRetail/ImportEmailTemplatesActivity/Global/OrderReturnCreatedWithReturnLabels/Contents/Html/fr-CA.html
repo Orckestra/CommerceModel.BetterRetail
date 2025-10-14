@@ -119,7 +119,7 @@
                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                     colspan="2">
                                                     <span style="text-transform: none;">
-                                                        Total de la marchandise:
+                                                        Total de la marchandise :
                                                     </span>
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
@@ -131,7 +131,7 @@
                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                     colspan="2">
                                                     <span style="text-transform: none;">
-                                                        Remise:
+                                                        Remise :
                                                     </span>
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
@@ -142,7 +142,7 @@
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                     colspan="2">
-                                                    Sous-total:
+                                                    Sous-total :
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
                                                     <strong>{{ OrderReturn.TotalSubtotal | money:templateCulture }}</strong>
@@ -151,14 +151,14 @@
                                             <!--{% for additionalFee in OrderReturn.AggregatedAdditionalFees %}-->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2">{{additionalFee.DisplayName | localize:templateCulture, additionalFee.Name}}:</td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2">{{additionalFee.DisplayName | localize:templateCulture, additionalFee.Name}} :</td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{additionalFee.TotalAmount| money:templateCulture }}</strong></td>
                                             </tr>
                                             <!--{% endfor %} -->
                                             <!--{% for tax in OrderReturn.AggregatedTaxes %}-->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2">{{ tax.DisplayName| localize:templateCulture}}:</td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2">{{ tax.DisplayName| localize:templateCulture}} :</td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ tax.TaxTotal | money:templateCulture }}</strong></td>
                                             </tr>
                                             <!--{% endfor %} -->
@@ -166,7 +166,7 @@
                                                 <td colspan="3">&nbsp;</td>
                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                     colspan="2">
-                                                    Total des taxes:
+                                                    Total des taxes :
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">
                                                     <strong>{{ OrderReturn.TotalTax | money:templateCulture }}</strong>
@@ -175,7 +175,7 @@
                                             <!--{% if OrderReturn.TotalAdjustment != 0 and OrderReturn.TotalAdjustment != null and  OrderReturn.TotalAdjustment !='' %} -->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2">Montant de l'ajustement:</td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2">Montant de l'ajustement :</td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ OrderReturn.TotalAdjustment | money:templateCulture }}</strong></td>
                                             </tr>
                                             <!--{% endif %}-->
@@ -184,7 +184,7 @@
                                                 <td style="text-transform: uppercase; line-height: 20px; text-align: left;"
                                                     colspan="2">
                                                     <strong style="font-size: 18px;">
-                                                        Montant du remboursement demandé:
+                                                        Montant du remboursement demandé :
                                                     </strong>
                                                 </td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1">

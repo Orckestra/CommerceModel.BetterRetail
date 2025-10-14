@@ -175,7 +175,7 @@
                                             <td colspan="2" style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
                                                 <strong>{{item.ProductSummary.DisplayName}}</strong><br />
                                                 <!--{% for kva in item.kvaDisplayValues%}-->
-                                                <span>{{ kva[0] }}: {{ kva[1] }}</span><br />
+                                                <span>{{ kva[0] }} : {{ kva[1] }}</span><br />
                                                 <!--{% endfor %}-->
                                             </td>
                                             <td style="padding: 20px 0px; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
@@ -198,7 +198,7 @@
                                         <tr>
                                             <td colspan="2"></td>
                                             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-                                                <span style="text-transform: none;">Total Marchandise: </span>
+                                                <span style="text-transform: none;">Total Marchandise : </span>
                                             </td>
                                             <td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
                                                 <strong>{{ Cart.MerchandiseTotal | money:"fr-CA" }}</strong>
@@ -207,7 +207,7 @@
                                         <tr>
                                             <td colspan="2"></td>
                                             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-                                                <span style="text-transform: none;">Rabais: </span>
+                                                <span style="text-transform: none;">Rabais : </span>
                                             </td>
                                             <td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
                                                 <strong>{{ Cart.DiscountTotal | money:"fr-CA" }}</strong>
@@ -216,7 +216,7 @@
                                         <tr>
                                             <td colspan="2"></td>
                                             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-                                                <span style="text-transform: none;">Coût du traitement: </span>
+                                                <span style="text-transform: none;">Coût du traitement : </span>
                                             </td>
                                             <td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
                                                 <strong>{{ Cart.FulfillmentCost | money:"fr-CA" }}</strong>
@@ -236,7 +236,7 @@
                                         <tr>
                                             <td colspan="2"></td>
                                             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-                                                <span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }}</span>
+                                                <span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }} :</span>
                                             </td>
                                             <td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
                                                 <strong>{{ fee.Amount | money:"fr-CA" }}</strong>
@@ -249,7 +249,7 @@
                                         <tr>
                                             <td colspan="2"></td>
                                             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-                                                <span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }}</span>
+                                                <span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }} :</span>
                                             </td>
                                             <td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
                                                 <strong>{{ fee.Amount | money:"fr-CA" }}</strong>
@@ -261,7 +261,7 @@
                                         <tr>
                                             <td colspan="2"></td>
                                             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-                                                <span style="text-transform: none;">{{ tax.DisplayName | localize:"fr-CA" }}</span>
+                                                <span style="text-transform: none;">{{ tax.DisplayName | localize:"fr-CA" }} :</span>
                                             </td>
                                             <td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
                                                 <strong>{{ tax.TaxTotal | money:"fr-CA" }}</strong>
@@ -273,7 +273,7 @@
                                         <tr>
                                             <td colspan="2"></td>
                                             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-                                                <span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }}</span>
+                                                <span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }} :</span>
                                             </td>
                                             <td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
                                                 <strong>{{ fee.Amount | money:"fr-CA" }}</strong>
@@ -286,7 +286,7 @@
                                         <tr>
                                             <td colspan="2"></td>
                                             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-                                                <span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }}</span>
+                                                <span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }} :</span>
                                             </td>
                                             <td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
                                                 <strong>{{ fee.Amount | money:"fr-CA" }}</strong>
@@ -297,7 +297,7 @@
                                         <tr>
                                             <td colspan="2"></td>
                                             <td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-                                                <strong style="font-size: 18px;">Total</strong>
+                                                <strong style="font-size: 18px;">Total :</strong>
                                             </td>
                                             <td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
                                                 <strong style="font-size: 18px;">{{ Cart.Total | money:"fr-CA" }} {{Cart.BillingCurrency}}</strong>
