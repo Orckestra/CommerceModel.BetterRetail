@@ -88,7 +88,7 @@
                 <!-- 600px container (white background) -->
                 <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" style="width:600px;max-width:600px">
                     <tr>
-                        <td class="container-padding header" align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:30px;font-weight:bold;padding-bottom:12px;color:#black;padding-left:24px; padding-right: 24px;vertical-align:middle">
+                        <td class="container-padding header" align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:30px;font-weight:bold;padding-bottom:12px;color:black;padding-left:24px; padding-right: 24px;vertical-align:middle">
                             <img src="https://www.orckestra.com/media/896696f3-81c6-401c-bca3-ec07ed913afc/696gyQ/products/icons/Commerce_80.png" alt="icon" class="title-icon">
                             Commerce Management
                         </td>
@@ -116,15 +116,15 @@
     {% endfor %}-->
                                 <br />
                                 <br />
-                                Total de la marchandise: ${{Order.Cart.SubTotal | plus:Order.Cart.DiscountTotal | number: "#,0.00" }}<br />
-                                Rabais: ${{Order.Cart.DiscountTotal | number: "#,0.00" }}<br />
-                                Sous-total: ${{Order.Cart.SubTotal | number: "#,0.00" }}<br />
-                                Total des frais de traitement: ${{Order.Cart.FulfillmentCost | number: "#,0.00"}}<br />
-                                Taxes de vente: ${{Order.Cart.TaxTotal | number: "#,0.00"}}<br />
+                                Total de la marchandise : ${{Order.Cart.SubTotal | plus:Order.Cart.DiscountTotal | number: "#,0.00" }}<br />
+                                Rabais : ${{Order.Cart.DiscountTotal | number: "#,0.00" }}<br />
+                                Sous-total : ${{Order.Cart.SubTotal | number: "#,0.00" }}<br />
+                                Total des frais de traitement : ${{Order.Cart.FulfillmentCost | number: "#,0.00"}}<br />
+                                Taxes de vente : ${{Order.Cart.TaxTotal | number: "#,0.00"}}<br />
                                 <!--{% if Order.Cart.AdjustmentTotal != 0 %}-->
-                                Ajustement: ${{Order.Cart.AdjustmentTotal | number: "#,0.00"}}<br />
+                                Ajustement : ${{Order.Cart.AdjustmentTotal | number: "#,0.00"}}<br />
                                 <!--{% endif %}-->
-                                Total: ${{Order.Cart.Total | number: "#,0.00"}}
+                                Total : ${{Order.Cart.Total | number: "#,0.00"}}
                             </div>
                             <br />
                             <br />

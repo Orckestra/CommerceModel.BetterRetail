@@ -96,7 +96,7 @@
                             <div class="title" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; color: #374550">
                                 Bonjour {{Order.Cart.Customer.FirstName}} {{Order.Cart.Customer.LastName}},<br />
 
-                                Votre commande a été placée sur <a href="{{Variables.RootUrl}}" style="color: #0984b2;" target="_blank">{{Variables.RootUrl}}</a>. Ce courriel contient tous les détails de la commande:
+                                Votre commande a été placée sur <a href="{{Variables.RootUrl}}" style="color: #0984b2;" target="_blank">{{Variables.RootUrl}}</a>. Ce courriel contient tous les détails de la commande :
                             </div>                                                        
                             <div class="body-text">
                                 <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; font-size: 14px;">
@@ -104,9 +104,9 @@
 										<tr>
 											<td style="padding-bottom: 30px;">
 												<h2 style="font-size: 24px; margin-bottom: 0px;">
-													Commande: {{Order.OrderNumber}}</h2>
+													Commande : {{Order.OrderNumber}}</h2>
 												<p style="font-size: 18px; margin-top: 0px;">
-													<strong>Date de la commande: {{Order.Created | localize_date: "fr-CA","D"}}</strong></p>
+													<strong>Date de la commande : {{Order.Created | localize_date: "fr-CA","D"}}</strong></p>
 											</td>
 											<td style="padding-bottom: 30px;">
 												&nbsp;</td>
@@ -194,7 +194,7 @@
 											<td colspan="2" style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
 												<strong>{{item.ProductSummary.DisplayName}}</strong><br />
 												<!--{% for kva in item.kvaDisplayValues%}-->
-												<span>{{ kva[0] }}: {{ kva[1] }}</span><br />
+												<span>{{ kva[0] }} : {{ kva[1] }}</span><br />
 												<!--{% endfor %}-->
 											</td>
 											<td style="padding: 20px 0px; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
@@ -215,7 +215,7 @@
 										<tr>
 											<td colspan="2"></td>
 											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-												<span style="text-transform: none;">Total Marchandise: </span>
+												<span style="text-transform: none;">Total Marchandise :</span>
 											</td>
 											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
 												<strong>{{ Order.Cart.MerchandiseTotal | money:"fr-CA" }}</strong>
@@ -224,7 +224,7 @@
 										<tr>
 											<td colspan="2"></td>
 											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-												<span style="text-transform: none;">Rabais: </span>
+												<span style="text-transform: none;">Rabais :</span>
 											</td>
 											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
 												<strong>{{ Order.Cart.DiscountTotal | money:"fr-CA" }}</strong>
@@ -233,7 +233,7 @@
 										<tr>
 											<td colspan="2"></td>
 											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-												<span style="text-transform: none;">Coût du traitement: </span>
+												<span style="text-transform: none;">Coût du traitement :</span>
 											</td>
 											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
 												<strong>{{ Order.Cart.FulfillmentCost | money:"fr-CA" }}</strong>
@@ -266,7 +266,7 @@
 											<tr>
 												<td colspan="2"></td>
 												<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-													<span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }}</span>
+													<span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }} :</span>
 												</td>
 												<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
 													<strong>{{ fee.Amount | money:"fr-CA" }}</strong>
@@ -278,7 +278,7 @@
 											<tr>
 												<td colspan="2"></td>
 												<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-													<span style="text-transform: none;">{{ tax.DisplayName | localize:"fr-CA" }}</span>
+													<span style="text-transform: none;">{{ tax.DisplayName | localize:"fr-CA" }} :</span>
 												</td>
 												<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
 													<strong>{{ tax.TaxTotal | money:"fr-CA" }}</strong>
@@ -290,7 +290,7 @@
 											<tr>
 												<td colspan="2"></td>
 												<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-													<span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }}</span>
+													<span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }} :</span>
 												</td>
 												<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
 													<strong>{{ fee.Amount | money:"fr-CA" }}</strong>
@@ -303,7 +303,7 @@
 											<tr>
 												<td colspan="2"></td>
 												<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-													<span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }}</span>
+													<span style="text-transform: none;">{{ fee.DisplayName | localize:"fr-CA" }} :</span>
 												</td>
 												<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
 													<strong>{{ fee.Amount | money:"fr-CA" }}</strong>
@@ -315,7 +315,7 @@
 										<tr>
 											<td colspan="2"></td>
 											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-												<span style="text-transform: none;">Ajustement</span>
+												<span style="text-transform: none;">Ajustement :</span>
 											</td>
 											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
 												<strong>{{ Order.Cart.AdjustmentTotal | money:"fr-CA" }}</strong>
@@ -325,7 +325,7 @@
 										<tr>
 											<td colspan="2"></td>
 											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-												<strong style="font-size: 18px;">Total</strong>
+												<strong style="font-size: 18px;">Total :</strong>
 											</td>
 											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
 												<strong style="font-size: 18px;">{{ Order.Cart.Total | money:"fr-CA" }}</strong>

@@ -112,14 +112,14 @@
                                             <!--{% for additionalFee in OrderReturn.AggregatedAdditionalFees %}-->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2">{{additionalFee.DisplayName | localize:templateCulture, additionalFee.Name}}:</td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2">{{additionalFee.DisplayName | localize:templateCulture, additionalFee.Name}} :</td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{additionalFee.TotalAmount| money:templateCulture }}</strong></td>
                                             </tr>
                                             <!--{% endfor %} -->
                                             <!--{% for tax in OrderReturn.AggregatedTaxes %}-->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2">{{ tax.DisplayName| localize:templateCulture}}:</td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2">{{ tax.DisplayName| localize:templateCulture}} :</td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ tax.TaxTotal | money:templateCulture }}</strong></td>
                                             </tr>
                                             <!--{% endfor %} -->
@@ -131,7 +131,7 @@
                                             <!--{% if OrderReturn.TotalAdjustment != 0 and OrderReturn.TotalAdjustment != null and  OrderReturn.TotalAdjustment !='' %} -->
                                             <tr>
                                                 <td colspan="3">&nbsp;</td>
-                                                <td style="line-height: 20px; text-align: left;" colspan="2">Montant de l'ajustement:</td>
+                                                <td style="line-height: 20px; text-align: left;" colspan="2">Montant de l'ajustement :</td>
                                                 <td style="line-height: 20px; padding: 5px 10px 5px 0px;" colspan="1"><strong>{{ OrderReturn.TotalAdjustment | money:templateCulture }}</strong></td>
                                             </tr>
                                             <!--{% endif %}-->
