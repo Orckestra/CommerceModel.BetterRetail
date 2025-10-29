@@ -182,12 +182,7 @@
   "InventoryProviderId": "OvertureScheduled",
   "IsInventoryEnabled": true,
   "IsAtpEnabled": true,
-  "PropertyBag": {
-    "RequireScanToPick": {
-      "__type": "ValueOfBoolean",
-      "value": false
-    }
-  },
+  "RequireScanToPick": false,
   "Addresses": [
     {
       "Id": "96ac6b05-9a68-4c70-8ac3-f9c025216405",

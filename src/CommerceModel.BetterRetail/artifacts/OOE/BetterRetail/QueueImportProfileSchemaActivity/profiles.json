@@ -501,41 +501,6 @@
           "en-CA": "Destination email addresses for seized shipments",
           "fr-CA": "Courriel de destination pour les envois saisis"
         }
-      },
-      {
-        "groupId": "Default",
-        "isRequired": false,
-        "displayOrder": 0,
-        "dataType": "Text",
-        "isBuiltIn": false,
-        "allowMultipleValues": false,
-        "multilingual": false,
-        "isSearchable": false,
-        "name": "CarrierAccountList",
-        "description": "List of Shippo carrier accounts associated to a store and considered valid for shipping",
-        "displayName": {
-          "en-US": "Carrier Account List",
-          "en-CA": "Carrier Account List",
-          "fr-CA": "Liste de comptes de transporteur"
-        }
-      },
-      {
-        "groupId": "Default",
-        "isRequired": false,
-        "displayOrder": 0,
-        "dataType": "Boolean",
-        "isBuiltIn": false,
-        "allowMultipleValues": false,
-        "multilingual": false,
-        "isSearchable": false,
-        "defaultValue": false,
-        "name": "RequireScanToPick",
-        "description": "Imposes scanning of line item barcodes to capture unit quantities during picking",
-        "displayName": {
-          "en-US": "Require Scan to pick in MSF",
-          "en-CA": "Require Scan to pick in MSF",
-          "fr-CA": "Exiger le scan pour la cueillette dans MSF"
-        }
       }
     ],
     "isSharedEntity": true,
@@ -547,26 +512,7 @@
     }
   },
   {
-    "attributes": [
-      {
-        "groupId": "Default",
-        "isRequired": false,
-        "displayOrder": 0,
-        "dataType": "Boolean",
-        "isBuiltIn": false,
-        "allowMultipleValues": false,
-        "multilingual": false,
-        "isSearchable": false,
-        "defaultValue": false,
-        "name": "RequireScanToPick",
-        "description": "Imposes scanning of line item barcodes to capture unit quantities during picking",
-        "displayName": {
-          "en-US": "Require Scan to pick in MSF",
-          "en-CA": "Require Scan to pick in MSF",
-          "fr-CA": "Exiger le scan pour la cueillette dans MSF"
-        }
-      }
-    ],
+    "attributes": [],
     "isSharedEntity": true,
     "name": "WAREHOUSE",
     "displayName": {
