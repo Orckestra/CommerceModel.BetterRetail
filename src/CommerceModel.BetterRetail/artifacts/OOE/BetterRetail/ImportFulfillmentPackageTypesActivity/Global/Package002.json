@@ -19,5 +19,7 @@
   "distanceUOM": "Centimetre",
   "height": "30",
   "length": "25",
-  "width": "25"
+  "width": "25",
+  "tare": 0.5,
+  "tareUOM": "Pound"
 }
