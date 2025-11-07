@@ -118,12 +118,7 @@
     "scheduleType": 2
   },
   "pickUpScheduleManaged": false,
-  "PropertyBag": {
-    "RequireScanToPick": {
-      "__type": "ValueOfBoolean",
-      "value": false
-    }
-  },
+  "RequireScanToPick": false,
   "schedule": {
     "fulfillmentLocationId": "C3EBBA51-20B6-4E54-AA6F-36D157FA9241",
     "openingHourExceptions": [],
