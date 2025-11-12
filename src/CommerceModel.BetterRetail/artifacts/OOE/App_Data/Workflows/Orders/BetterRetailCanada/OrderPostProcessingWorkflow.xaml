@@ -137,7 +137,25 @@
         </InOutArgument>
       </ooopwap:RouteFulfillmentsActivity.OrderProcessingResultArgument>
     </ooopwap:RouteFulfillmentsActivity>
-    <ooopwa:RetrieveFulfillmentMethodsActivity>
+    <ooopwap:UpdateReservationAndSplitShipmentActivity sap2010:Annotation.AnnotationText="This activity will update reservations and if necessary and allowed split the shipments of an order to fulfill future reservations." DisplayName="UpdateReservationAndSplitShipmentActivity">
+        <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderFulfillmentStateArgument>
+            <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
+                <mca:CSharpValue x:TypeArguments="oosof:OrderFulfillmentState">OrderFulfillmentStateArgument</mca:CSharpValue>
+            </InArgument>
+        </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderFulfillmentStateArgument>
+        <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingContextArgument>
+            <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+                <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+            </InArgument>
+        </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingContextArgument>
+        <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingResultArgument>
+            <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+                <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+            </InOutArgument>
+        </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingResultArgument>
+        <sap2010:WorkflowViewState.IdRef>UpdateReservationAndSplitShipmentActivity_1</sap2010:WorkflowViewState.IdRef>
+    </ooopwap:UpdateReservationAndSplitShipmentActivity>
+    <ooopwa:RetrieveFulfillmentMethodsActivity sap2010:WorkflowViewState.IdRef="RetrieveFulfillmentMethodsActivity_1">
       <ooopwa:RetrieveFulfillmentMethodsActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
           <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
@@ -148,7 +166,6 @@
           <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
         </InOutArgument>
       </ooopwa:RetrieveFulfillmentMethodsActivity.OrderProcessingResultArgument>
-      <sap2010:WorkflowViewState.IdRef>RetrieveFulfillmentMethodsActivity_1</sap2010:WorkflowViewState.IdRef>
     </ooopwa:RetrieveFulfillmentMethodsActivity>
     <ooopwa:SubmitOrderTaxesActivity sap2010:Annotation.AnnotationText="Send a SalesInvoice entry with the &quot;Uncommited&quot; status to Avalara. &#xA;&#xA;We may de-activate the previous CalculateCartTax Activity in the case we use only Avalara Tax Provider (to limit costs) since the SubmitOrderTaxes Activity uses almost the same GetTax call to Avalara service with only a few different parameters to save invoice details in Avalara system." sap2010:WorkflowViewState.IdRef="SubmitOrderTaxesActivity_1" OrderProcessingContextArgument="[OrderProcessingContextArgument]" OrderProcessingResultArgument="[OrderProcessingResultArgument]" />
     <ooopwa:AssignFulfillmentScheduleDateTimeActivity AvailableSlotsMaximumTimeSpan="182" sap2010:WorkflowViewState.IdRef="AssignFulfillmentScheduleDateTimeActivity_1" TimeOffsetWithoutSlots="20">
@@ -197,7 +214,7 @@
         </InOutArgument>
       </ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderProcessingResultArgument>
     </ooopwap:EvaluateShipmentsFulfillmentReadinessActivity>
-    <sads:DebugSymbol.Symbol>d5wBQzpcZ2l0XENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXHNyY1xDb21tZXJjZU1vZGVsLkJldHRlclJldGFpbFxhcnRpZmFjdHNcT09FXEFwcF9EYXRhXFdvcmtmbG93c1xPcmRlcnNcQmV0dGVyUmV0YWlsQ2FuYWRhXE9yZGVyUG9zdFByb2Nlc3NpbmdXb3JrZmxvdy54YW1sHIUBA+4BDgIBAYYBBZ8BCgIBQKABBbABKQIBM7EBBb0BMQIBKr4BBb4BggUCASW/AQXKATgCARzLAQXbATkCAQ/cAQXsAT0CAQKJAQuJAbQBAgFBjQEJnQEwAgFFowELowF5AgE8rQELrQGBAQIBOKgBC6gBewIBNLkBC7kBgQECAS+0AQu0AXsCASu+Ad4EvgH/BAIBKL4BnQS+Ab8EAgEmxwELxwGBAQIBIcIBC8IBewIBHc4BC84BeQIBGNgBC9gBgQECARTTAQvTAXsCARDfAQvfAXkCAQvpAQvpAYEBAgEH5AEL5AF7AgEDkAEPkAF9AgFOmgEPmgGFAQIBSpUBD5UBfwIBRg==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d5wBQzpcZ2l0XENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXHNyY1xDb21tZXJjZU1vZGVsLkJldHRlclJldGFpbFxhcnRpZmFjdHNcT09FXEFwcF9EYXRhXFdvcmtmbG93c1xPcmRlcnNcQmV0dGVyUmV0YWlsQ2FuYWRhXE9yZGVyUG9zdFByb2Nlc3NpbmdXb3JrZmxvdy54YW1sIGAD2gEOAgEBYQV6CgIBTXsFiwEpAgFAjAEFnQEpAgEzngEFqQExAgEqqgEFqgGCBQIBJasBBbYBOAIBHLcBBccBOQIBD8gBBdgBPQIBAmQLZLQBAgFOaAl4MAIBUn4LfnkCAUmIAQuIAYEBAgFFgwELgwF7AgFBjwELjwF5AgE8mQELmQGBAQIBOJQBC5QBewIBNKYBC6YBgQECAS+hAQuhAXsCASuqAd4EqgH/BAIBKKoBnQSqAb8EAgEmswELswGBAQIBIa4BC64BewIBHboBC7oBeQIBGMQBC8QBgQECARS/AQu/AXsCARDLAQvLAXkCAQvVAQvVAYEBAgEH0AEL0AF7AgEDaw9rfQIBW3UPdYUBAgFXcA9wfwIBUw==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -208,40 +225,47 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="464,225">
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="425,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="RouteFulfillmentsActivity_1" sap:VirtualizedContainerService.HintSize="464,120">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="RetrieveFulfillmentMethodsActivity_1" sap:VirtualizedContainerService.HintSize="464,22" />
-      <sap2010:ViewStateData Id="SubmitOrderTaxesActivity_1" sap:VirtualizedContainerService.HintSize="464,255">
+      <sap2010:ViewStateData Id="RouteFulfillmentsActivity_1" sap:VirtualizedContainerService.HintSize="425,120">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="AssignFulfillmentScheduleDateTimeActivity_1" sap:VirtualizedContainerService.HintSize="464,100" />
-      <sap2010:ViewStateData Id="FulfillmentTransitionChangeStatusActivity_1" sap:VirtualizedContainerService.HintSize="464,68" />
-      <sap2010:ViewStateData Id="EvaluateShipmentsFulfillmentReadinessActivity_1" sap:VirtualizedContainerService.HintSize="464,22" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="486,1176">
+      <sap2010:ViewStateData Id="UpdateReservationAndSplitShipmentActivity_1" sap:VirtualizedContainerService.HintSize="200,105">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="RetrieveFulfillmentMethodsActivity_1" sap:VirtualizedContainerService.HintSize="425,22" />
+      <sap2010:ViewStateData Id="SubmitOrderTaxesActivity_1" sap:VirtualizedContainerService.HintSize="425,255">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AssignFulfillmentScheduleDateTimeActivity_1" sap:VirtualizedContainerService.HintSize="425,100" />
+      <sap2010:ViewStateData Id="FulfillmentTransitionChangeStatusActivity_1" sap:VirtualizedContainerService.HintSize="425,68" />
+      <sap2010:ViewStateData Id="EvaluateShipmentsFulfillmentReadinessActivity_1" sap:VirtualizedContainerService.HintSize="425,22" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="447,1162">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Orckestra.Overture.Services.Web.Host.OrderPostProcessingWorkflow2_1" sap:VirtualizedContainerService.HintSize="526,1256">
+      <sap2010:ViewStateData Id="Orckestra.Overture.Services.Web.Host.OrderPostProcessingWorkflow2_1" sap:VirtualizedContainerService.HintSize="487,1242">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
