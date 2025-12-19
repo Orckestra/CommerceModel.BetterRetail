@@ -314,10 +314,10 @@ END
 
 IF NOT EXISTS(SELECT 1 
 				FROM sys.columns
-				WHERE Name = N'CustomLookupAtt'
+				WHERE Name = N'CustomOrderChannel'
 				AND Object_ID = Object_ID(N'dbo.ORDER'))
 BEGIN
-	ALTER TABLE dbo.[ORDER] ADD CustomLookupAtt NVARCHAR(512) NULL;
+	ALTER TABLE dbo.[ORDER] ADD CustomOrderChannel NVARCHAR(512) NULL;
 END
 
 IF NOT EXISTS(SELECT 1
@@ -346,7 +346,7 @@ BEGIN
 			,[DataTypeSequence]
 		) VALUES (
 			'Order'
-			,'CustomLookupAtt'
+			,'CustomOrderChannel'
 			,0
 			,'Lookup'
 			,null
@@ -359,7 +359,7 @@ BEGIN
 			,0
 			,1
 			,1
-			,'ValidationsFulfillment'
+			,'CustomOrderChannel'
 			,1
 			,0
 			,'95c95e9f-124c-4338-a82a-64e4f7969159'
@@ -379,7 +379,7 @@ BEGIN
 				) VALUES (
 					'95c95e9f-124c-4338-a82a-64e4f7969159'
 					,'en-US'
-					,'Custom lookup Att'
+					,'Order Channel'
 				)
 END
 
@@ -395,7 +395,7 @@ BEGIN
 				) VALUES (
 					'95c95e9f-124c-4338-a82a-64e4f7969159'
 					,'fr-CA'
-					,'Att lookup custom'
+					,'Canal de commande'
 				)
 END
 
