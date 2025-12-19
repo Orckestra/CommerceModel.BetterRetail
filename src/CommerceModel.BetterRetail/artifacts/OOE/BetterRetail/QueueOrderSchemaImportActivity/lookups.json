@@ -1377,7 +1377,7 @@
       "en-US": "PaymentHistory",
       "fr-CA": "Historique de paiement"
     },
-	"isActive": true,
+    "isActive": true,
     "values": [
       {
         "value": "Authorized",
@@ -1517,6 +1517,67 @@
           "fr-CA": "Numéro du retour"
         },
         "sortOrder": 14,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "lookupName": "CustomOrderChannel",
+    "displayName": {
+      "en-CA": "Order Channel",
+      "en-US": "Order Channel",
+      "fr-CA": "Canal de commande"
+    },
+    "isActive": true,
+    "values": [
+      {
+        "value": "Web",
+        "displayName": {
+          "en-US": "Web",
+          "en-CA": "Web",
+          "fr-CA": "Web"
+        },
+        "sortOrder": 1,
+        "isActive": true
+      },
+      {
+        "value": "Amazon",
+        "displayName": {
+          "en-US": "Amazon",
+          "en-CA": "Amazon",
+          "fr-CA": "Amazon"
+        },
+        "sortOrder": 2,
+        "isActive": true
+      },
+      {
+        "value": "CSR",
+        "displayName": {
+          "en-US": "Customer Service Representative",
+          "en-CA": "Customer Service Representative",
+          "fr-CA": "Représentant du service à la clientèle"
+        },
+        "sortOrder": 3,
+        "isActive": true
+      },
+      {
+        "value": "In-Store",
+        "displayName": {
+          "en-US": "In-Store",
+          "en-CA": "In-Store",
+          "fr-CA": "En magasin"
+        },
+        "sortOrder": 4,
+        "isActive": true
+      },
+      {
+        "value": "Kiosk",
+        "displayName": {
+          "en-US": "Kiosk",
+          "en-CA": "Kiosk",
+          "fr-CA": "Kiosque"
+        },
+        "sortOrder": 5,
         "isActive": true
       }
     ]
