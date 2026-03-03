@@ -153,6 +153,7 @@
                                 <p style="font-size: 18px; margin-top: 0px; margin-bottom: 5px;">
 									<strong>Payment Method(s)</strong></p>
 								<!--{% for payment in Order.Cart.Payments %}-->
+								<!--{% if payment.PaymentStatus == "Paid" or payment.PaymentStatus == "Authorized" %}-->
 									<!--{% case payment.PaymentMethod.Type %}-->
 										<!--{% when "CreditCard", "SavedCreditCard" %}-->
 											<span>{{payment.PaymentMethod.CreditCardBrand}}</span>
@@ -163,9 +164,10 @@
 												<span> {{payment.PaymentMethod.ExpiryDate}}</span>
 											<!--{% endif %}-->
 										<!--{% else %}-->
-											<span>{{payment.PaymentMethod.Type | localize_lookup: "order", "PaymentMethodType", "en-CA"}}</span>
+											<span>{{payment.PaymentMethod.Type | localize_lookup: "order", "PaymentMethodType", templateCulture}}</span>
 									<!--{% endcase %}-->
 								<br />
+								<!--{% endif %}-->
 								<!--{% endfor %}-->
 							</div>
 							<br />
@@ -233,19 +235,19 @@
 										<tr>
 											<td colspan="2"></td>
 											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-												<span style="text-transform: none;">Fulfillment total: </span>
+												<span>Sub-Total :</span>
 											</td>
 											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
-												<strong>{{ Order.Cart.FulfillmentCost | money:"en-CA" }}</strong>
+												<strong>{{ Order.Cart.SubTotal | money:"en-CA" }}</strong>
 											</td>
 										</tr>
 										<tr>
 											<td colspan="2"></td>
 											<td colspan="2" style="text-transform: uppercase; line-height: 20px; text-align: left;">
-												<span>Sub-Total:</span>
+												<span style="text-transform: none;">Fulfillment total: </span>
 											</td>
 											<td colspan="1" style="line-height: 20px; padding: 5px 10px 5px 0px;">
-												<strong>{{ Order.Cart.SubTotal | money:"en-CA" }}</strong>
+												<strong>{{ Order.Cart.FulfillmentCost | money:"en-CA" }}</strong>
 											</td>
 										</tr>
 										<!--{% for fee in Order.Cart.ShipmentFees %}

@@ -52,6 +52,7 @@
                                 <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
                                     <p style="font-size: 18px; margin-top: 0px; margin-bottom: 5px;"><strong>Payment Method(s)</strong></p>
                                     <!--{% for payment in Order.Cart.Payments %}-->
+                                    <!--{% if payment.PaymentStatus == "Paid" or payment.PaymentStatus == "Authorized" %}-->
                                         <!--{% case payment.PaymentMethod.Type %}-->
                                                 <!--{% when "CreditCard", "SavedCreditCard" %}-->
                                                     <span>{{payment.PaymentMethod.CreditCardBrand}}</span>
@@ -62,9 +63,10 @@
                                                         <span> {{payment.PaymentMethod.ExpiryDate}}</span>
                                                     <!--{% endif %}-->
                                                 <!--{% else %}-->
-                                                    <span>{{payment.PaymentMethod.Type | localize_lookup: "order", "PaymentMethodType", "en-CA"}}</span>
+                                                    <span>{{payment.PaymentMethod.Type | localize_lookup: "order", "PaymentMethodType", templateCulture}}</span>
                                         <!--{% endcase %}-->
                                         <br />
+                                    <!--{% endif %}-->
                                     <!--{% endfor %}-->
                                 </td>
                             </tr>
@@ -90,7 +92,7 @@
                                                 <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;" colspan="2">
                                                     {{item.ProductDisplayName}} <br />
                                                     <!--{% for kva in item.KvaDisplayValues%}-->
-                                                    <span>{{kva}}</span><br />
+                                                    <span>{{ kva[0] }}: {{ kva[1] }}</span><br />
                                                     <!--{% endfor %}-->
                                                 </td>
                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">{{item.ProductPrice | money:templateCulture }}</td>

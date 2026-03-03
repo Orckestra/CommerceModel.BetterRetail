@@ -53,7 +53,30 @@
                                     </table>
                                 </td>
                             </tr>
-                            <!-- //// --> <!-- Return summary -->
+                            <!-- //// -->
+                            <tr>
+                                <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
+                                    <p style="font-size: 18px; margin-top: 0px; margin-bottom: 5px;"><strong>Méthode(s) de paiement</strong></p>
+                                    <!--{% for payment in Order.Cart.Payments %}-->
+                                    <!--{% if payment.PaymentStatus == "Paid" or payment.PaymentStatus == "Authorized" %}-->
+                                        <!--{% case payment.PaymentMethod.Type %}-->
+                                                <!--{% when "CreditCard", "SavedCreditCard" %}-->
+                                                    <span>{{payment.PaymentMethod.CreditCardBrand}}</span>
+                                                    <span>{{payment.PaymentMethod.CreditCardNumberLastDigits}}</span>
+                                                    <!--{% if payment.PaymentMethod.CreditCardExpiryDate != null and payment.PaymentMethod.CreditCardExpiryDate != "" %}-->
+                                                        <span> {{payment.PaymentMethod.CreditCardExpiryDate}}</span>
+                                                    <!--{% elsif payment.PaymentMethod.ExpiryDate != null and payment.PaymentMethod.ExpiryDate != "" %}-->
+                                                        <span> {{payment.PaymentMethod.ExpiryDate}}</span>
+                                                    <!--{% endif %}-->
+                                                <!--{% else %}-->
+                                                    <span>{{payment.PaymentMethod.Type | localize_lookup: "order", "PaymentMethodType", templateCulture}}</span>
+                                        <!--{% endcase %}-->
+                                        <br />
+                                    <!--{% endif %}-->
+                                    <!--{% endfor %}-->
+                                </td>
+                            </tr>
+                            <!-- Return summary -->
                             <tr>
                                 <td style="padding: 15px 20px 60px;">
                                     <p style="font-size: 18px; margin-top: 0px;"><strong>D&eacute;tails du retour</strong></p>
@@ -75,7 +98,7 @@
                                                 <td style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;" colspan="2">
                                                     <strong>{{item.ProductDisplayName}}</strong> <br />
                                                     <!--{% for kva in item.KvaDisplayValues%}-->
-                                                    <span>{{kva}}</span><br />
+                                                    <span>{{ kva[0] }}: {{ kva[1] }}</span><br />
                                                     <!--{% endfor %}-->
                                                 </td>
                                                 <td style="padding: 20px 0px; border-bottom-color: #e1e4ea; border-bottom-width: 1px; border-bottom-style: solid;">
@@ -152,7 +175,7 @@
                                 <td style="padding: 15px 20px; border-bottom-color: #eaeaea; border-bottom-width: 1px; border-bottom-style: solid;">
                                     <p>
                                         Veuillez ne pas r&eacute;pondre &agrave; à ce courriel. Il a &eacute;t&eacute; envoy&eacute; &agrave;
-                                        partir d'une adresse qui n'accepte pas les courriels. P
+                                        partir d'une adresse qui n'accepte pas les courriels.
                                     </p>
                                     <p style="font-size: 12px;">
                                         &copy; Droits d'auteur {{Variables.CopyrightsYear}} {{Variables.CompanyName}}
