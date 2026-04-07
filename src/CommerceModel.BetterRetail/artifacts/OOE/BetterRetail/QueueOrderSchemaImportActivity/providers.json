@@ -15,7 +15,7 @@
     "values": {
       "GenerateCustomsDeclaration": {
         "__type": "ValueOfBoolean",
-        "value": true
+        "value": false
       },
       "ShouldBookReturnLabel": {
         "__type": "ValueOfBoolean",
@@ -969,7 +969,7 @@
     "values": {
       "GenerateCustomsDeclaration": {
         "__type": "ValueOfBoolean",
-        "value": true
+        "value": false
       },
       "ShouldBookReturnLabel": {
         "__type": "ValueOfBoolean",
@@ -1340,7 +1340,7 @@
     "values": {
       "GenerateCustomsDeclaration": {
         "__type": "ValueOfBoolean",
-        "value": true
+        "value": false
       },
       "ShouldBookReturnLabel": {
         "__type": "ValueOfBoolean",
@@ -1643,7 +1643,7 @@
     "values": {
       "GenerateCustomsDeclaration": {
         "__type": "ValueOfBoolean",
-        "value": true
+        "value": false
       },
       "ShouldBookReturnLabel": {
         "__type": "ValueOfBoolean",
