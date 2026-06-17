@@ -191,7 +191,7 @@
 									<tbody>
 										<!--{% for shipment in Order.Cart.Shipments %}
 										{% for item in shipment.LineItems%}-->
-										<!--{% if item.Status == "PreOrder" %}-->
+										<!--{% if item.Status == "PreOrder" or item.Status == "BackOrder" %}-->
     									<tr>
 											<td colspan="2" style="padding: 20px 0px 10px 10px; text-align: left; border-bottom: none; border-bottom-width: 0px;">
 												<strong>{{item.ProductSummary.DisplayName}}</strong><br />
@@ -214,7 +214,12 @@
 										</tr>
 										<tr>
 											<td colspan="5" style="padding: 10px 0px 20px 0px; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
+												<!-- {% if item.Status == "PreOrder" %} -->
 												<strong>Preorder.</strong> 
+												<!--{% endif %}-->
+												<!-- {% if item.Status == "BackOrder" %} -->
+												<strong>Backorder.</strong> 
+												<!--{% endif %}-->
 												<!--{% if item.FutureInventorySummary %}-->
 												<span>Estimated fulfillment date: {{item.FutureInventorySummary.FutureInventoryEta | localize_date: "en-CA","D"}}</span>
 											   <!--{% endif %}-->
