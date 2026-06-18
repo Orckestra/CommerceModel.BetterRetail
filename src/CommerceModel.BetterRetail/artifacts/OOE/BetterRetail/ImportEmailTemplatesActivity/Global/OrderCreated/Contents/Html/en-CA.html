@@ -191,6 +191,41 @@
 									<tbody>
 										<!--{% for shipment in Order.Cart.Shipments %}
 										{% for item in shipment.LineItems%}-->
+										<!--{% if item.Status == "PreOrder" or item.Status == "BackOrder" %}-->
+    									<tr>
+											<td colspan="2" style="padding: 20px 0px 10px 10px; text-align: left; border-bottom: none; border-bottom-width: 0px;">
+												<strong>{{item.ProductSummary.DisplayName}}</strong><br />
+												<!--{% for kva in item.kvaDisplayValues%}-->
+												<span>{{ kva[0] }}: {{ kva[1] }}</span><br />
+												<!--{% endfor %}-->
+											</td>
+											<td style="padding: 20px 0px 10px 0px; border-bottom: none;">
+												<strong>{{item.PlacedPrice | money:"en-CA" }}</strong>
+											</td>
+											<td style="padding: 20px 0px 10px 0px; border-bottom: none;">
+												<strong>{{item.Quantity}}</strong>
+											</td>
+											<td style="padding: 20px 10px 10px 0px; border-bottom: none;">
+												<strong>{{item.Total | money:"en-CA" }}</strong>
+												<!--{% for fee in item.additionalFees%}-->
+												<br><span style="font-size:11px;">+ {{fee.Amount | money:"en-CA" }}<!--{% if fee.calculationRule == "PerUnit" %}-->/unit<!--{% else %}{% endif %}--> of {{ fee.DisplayName | localize:"en-CA" }}</span>
+												<!--{% endfor %}-->
+											</td>
+										</tr>
+										<tr>
+											<td colspan="5" style="padding: 10px 0px 20px 0px; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
+												<!-- {% if item.Status == "PreOrder" %} -->
+												<strong>Pre-order.</strong> 
+												<!--{% endif %}-->
+												<!-- {% if item.Status == "BackOrder" %} -->
+												<strong>Backorder.</strong> 
+												<!--{% endif %}-->
+												<!--{% if item.FutureInventorySummary %}-->
+												<span>Estimated fulfillment date: {{item.FutureInventorySummary.FutureInventoryEta | localize_date: "en-CA","D"}}</span>
+											   <!--{% endif %}-->
+											</td>
+										</tr>
+										<!-- {% else %}-->
 										<tr>
 											<!--<td style="border-bottom: 1px solid #e1e4ea; padding: 20px 0;"><img src="{{item.ImageURL}}" width="76" alt="product-image" style="display: block;" /></td>-->
 											<td colspan="2" style="padding: 20px 0px 20px 10px; text-align: left; border-bottom-color: rgb(225, 228, 234); border-bottom-width: 1px; border-bottom-style: solid;">
@@ -210,6 +245,7 @@
 												<!--{% endfor %}-->
 											</td>
 										</tr>
+										<!--{% endif %}-->
 										<!--{% endfor %}
 										{% endfor %}-->
 									</tbody>
