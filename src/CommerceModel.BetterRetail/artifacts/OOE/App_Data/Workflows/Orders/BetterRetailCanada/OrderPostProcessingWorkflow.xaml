@@ -137,23 +137,22 @@
         </InOutArgument>
       </ooopwap:RouteFulfillmentsActivity.OrderProcessingResultArgument>
     </ooopwap:RouteFulfillmentsActivity>
-    <ooopwap:UpdateReservationAndSplitShipmentActivity sap2010:Annotation.AnnotationText="This activity will update reservations and if necessary and allowed split the shipments of an order to fulfill future reservations." DisplayName="UpdateReservationAndSplitShipmentActivity">
-        <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderFulfillmentStateArgument>
-            <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
-                <mca:CSharpValue x:TypeArguments="oosof:OrderFulfillmentState">OrderFulfillmentStateArgument</mca:CSharpValue>
-            </InArgument>
-        </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderFulfillmentStateArgument>
-        <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingContextArgument>
-            <InArgument x:TypeArguments="oosop:OrderProcessingContext">
-                <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
-            </InArgument>
-        </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingContextArgument>
-        <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingResultArgument>
-            <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
-                <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
-            </InOutArgument>
-        </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingResultArgument>
-        <sap2010:WorkflowViewState.IdRef>UpdateReservationAndSplitShipmentActivity_1</sap2010:WorkflowViewState.IdRef>
+    <ooopwap:UpdateReservationAndSplitShipmentActivity sap2010:Annotation.AnnotationText="This activity will update reservations and if necessary and allowed split the shipments of an order to fulfill future reservations." DisplayName="UpdateReservationAndSplitShipmentActivity" sap2010:WorkflowViewState.IdRef="UpdateReservationAndSplitShipmentActivity_1">
+      <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderFulfillmentStateArgument>
+        <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
+          <mca:CSharpValue x:TypeArguments="oosof:OrderFulfillmentState">OrderFulfillmentStateArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderFulfillmentStateArgument>
+      <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingContextArgument>
+      <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingResultArgument>
     </ooopwap:UpdateReservationAndSplitShipmentActivity>
     <ooopwa:RetrieveFulfillmentMethodsActivity sap2010:WorkflowViewState.IdRef="RetrieveFulfillmentMethodsActivity_1">
       <ooopwa:RetrieveFulfillmentMethodsActivity.OrderProcessingContextArgument>
@@ -197,6 +196,18 @@
         </InOutArgument>
       </ooopwap:FulfillmentTransitionChangeStatusActivity.OrderProcessingResultArgument>
     </ooopwap:FulfillmentTransitionChangeStatusActivity>
+    <ooopwa:AuthorizePaymentsActivity AuthorizeOnlyAvailableItems="True" sap2010:WorkflowViewState.IdRef="AuthorizePaymentsActivity_1">
+      <ooopwa:AuthorizePaymentsActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:AuthorizePaymentsActivity.OrderProcessingContextArgument>
+      <ooopwa:AuthorizePaymentsActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:AuthorizePaymentsActivity.OrderProcessingResultArgument>
+    </ooopwa:AuthorizePaymentsActivity>
     <ooopwap:EvaluateShipmentsFulfillmentReadinessActivity sap2010:WorkflowViewState.IdRef="EvaluateShipmentsFulfillmentReadinessActivity_1">
       <ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderFulfillmentStateArgument>
         <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
@@ -214,7 +225,7 @@
         </InOutArgument>
       </ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderProcessingResultArgument>
     </ooopwap:EvaluateShipmentsFulfillmentReadinessActivity>
-    <sads:DebugSymbol.Symbol>d5wBQzpcZ2l0XENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXHNyY1xDb21tZXJjZU1vZGVsLkJldHRlclJldGFpbFxhcnRpZmFjdHNcT09FXEFwcF9EYXRhXFdvcmtmbG93c1xPcmRlcnNcQmV0dGVyUmV0YWlsQ2FuYWRhXE9yZGVyUG9zdFByb2Nlc3NpbmdXb3JrZmxvdy54YW1sIGAD2gEOAgEBYQV6CgIBTXsFiwEpAgFAjAEFnQEpAgEzngEFqQExAgEqqgEFqgGCBQIBJasBBbYBOAIBHLcBBccBOQIBD8gBBdgBPQIBAmQLZLQBAgFOaAl4MAIBUn4LfnkCAUmIAQuIAYEBAgFFgwELgwF7AgFBjwELjwF5AgE8mQELmQGBAQIBOJQBC5QBewIBNKYBC6YBgQECAS+hAQuhAXsCASuqAd4EqgH/BAIBKKoBnQSqAb8EAgEmswELswGBAQIBIa4BC64BewIBHboBC7oBeQIBGMQBC8QBgQECARS/AQu/AXsCARDLAQvLAXkCAQvVAQvVAYEBAgEH0AEL0AF7AgEDaw9rfQIBW3UPdYUBAgFXcA9wfwIBUw==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d5sBQzpcd29cQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXGFydGlmYWN0c1xPT0VcQXBwX0RhdGFcV29ya2Zsb3dzXE9yZGVyc1xCZXR0ZXJSZXRhaWxDYW5hZGFcT3JkZXJQb3N0UHJvY2Vzc2luZ1dvcmtmbG93LnhhbWwjYAPlAQ4CAQFhBXoKAgFWewWLASkCAUmMAQWcATkCATydAQWoATECATOpAQWpAYIFAgEuqgEFtQE4AgEltgEFxgE5AgEYxwEF0gEoAgEP0wEF4wE9AgECZAtktAECAVdoCXgwAgFbfgt+eQIBUogBC4gBgQECAU6DAQuDAXsCAUqPAQuPAXkCAUWZAQuZAYEBAgFBlAELlAF7AgE9pQELpQGBAQIBOKABC6ABewIBNKkB3gSpAf8EAgExqQGdBKkBvwQCAS+yAQuyAYEBAgEqrQELrQF7AgEmuQELuQF5AgEhwwELwwGBAQIBHb4BC74BewIBGc8BC88BgQECARTKAQvKAXsCARDWAQvWAXkCAQvgAQvgAYEBAgEH2wEL2wF7AgEDaw9rfQIBZHUPdYUBAgFgcA9wfwIBXA==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -240,7 +251,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="UpdateReservationAndSplitShipmentActivity_1" sap:VirtualizedContainerService.HintSize="200,105">
+      <sap2010:ViewStateData Id="UpdateReservationAndSplitShipmentActivity_1" sap:VirtualizedContainerService.HintSize="425,105">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -257,15 +268,16 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="AssignFulfillmentScheduleDateTimeActivity_1" sap:VirtualizedContainerService.HintSize="425,100" />
       <sap2010:ViewStateData Id="FulfillmentTransitionChangeStatusActivity_1" sap:VirtualizedContainerService.HintSize="425,68" />
+      <sap2010:ViewStateData Id="AuthorizePaymentsActivity_1" sap:VirtualizedContainerService.HintSize="425,22" />
       <sap2010:ViewStateData Id="EvaluateShipmentsFulfillmentReadinessActivity_1" sap:VirtualizedContainerService.HintSize="425,22" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="447,1162">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="447,1209">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Orckestra.Overture.Services.Web.Host.OrderPostProcessingWorkflow2_1" sap:VirtualizedContainerService.HintSize="487,1242">
+      <sap2010:ViewStateData Id="Orckestra.Overture.Services.Web.Host.OrderPostProcessingWorkflow2_1" sap:VirtualizedContainerService.HintSize="487,1289">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
