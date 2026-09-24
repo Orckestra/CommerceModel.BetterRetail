@@ -549,18 +549,18 @@
         </InOutArgument>
       </ooopwa:CancelPendingVoidPaymentsActivity.OrderProcessingResultArgument>
     </ooopwa:CancelPendingVoidPaymentsActivity>
-    <ooopwa:AuthorizePaymentsActivity AuthorizeOnlyAvailableItems="False" sap2010:WorkflowViewState.IdRef="AuthorizePaymentsActivity_1">
-      <ooopwa:AuthorizePaymentsActivity.OrderProcessingContextArgument>
+    <ooopwa:EvaluatePaymentAuthorizationActivity sap2010:WorkflowViewState.IdRef="EvaluatePaymentAuthorizationActivity_1">
+      <ooopwa:EvaluatePaymentAuthorizationActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
           <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
         </InArgument>
-      </ooopwa:AuthorizePaymentsActivity.OrderProcessingContextArgument>
-      <ooopwa:AuthorizePaymentsActivity.OrderProcessingResultArgument>
+      </ooopwa:EvaluatePaymentAuthorizationActivity.OrderProcessingContextArgument>
+      <ooopwa:EvaluatePaymentAuthorizationActivity.OrderProcessingResultArgument>
         <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
           <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
         </InOutArgument>
-      </ooopwa:AuthorizePaymentsActivity.OrderProcessingResultArgument>
-    </ooopwa:AuthorizePaymentsActivity>
+      </ooopwa:EvaluatePaymentAuthorizationActivity.OrderProcessingResultArgument>
+    </ooopwa:EvaluatePaymentAuthorizationActivity>
     <ooopwa:ConsumeCartCouponsActivity sap2010:WorkflowViewState.IdRef="ConsumeCartCouponsActivity_1">
       <ooopwa:ConsumeCartCouponsActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
@@ -573,7 +573,7 @@
         </InOutArgument>
       </ooopwa:ConsumeCartCouponsActivity.OrderProcessingResultArgument>
     </ooopwa:ConsumeCartCouponsActivity>
-    <sads:DebugSymbol.Symbol>d5oBQzpcd29cQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXGFydGlmYWN0c1xPT0VcQXBwX0RhdGFcV29ya2Zsb3dzXE9yZGVyc1xCZXR0ZXJSZXRhaWxDYW5hZGFcRGVmYXVsdFN1Ym1pdE9yZGVyV29ya2Zsb3cueGFtbHGTAQPBBA4CAQGUAQWfATcDAfcBoAEFqwE0AwHwAawBBbcBJwMB6QG4AQXDATcDAeIBxAEFzwE0AwHbAdABBdsBKwMB1AHcAQWVAxACAWWWAwWhAzUCAV6iAwXfAxACATrgAwXrAzYCATPsAwX3Ay0CASz4AwWDBDYCASWEBAWPBC4CAR6QBAWbBDICARecBAWnBDACARCoBAWzBCgCAQm0BAW/BCkCAQKcAQucAYEBAwH7AZcBC5cBewMB+AGoAQuoAYEBAwH0AaMBC6MBewMB8QG0AQu0AYEBAwHtAa8BC68BewMB6gHAAQvAAYEBAwHmAbsBC7sBewMB4wHMAQvMAYEBAwHfAccBC8cBewMB3AHYAQvYAYEBAwHYAdMBC9MBewMB1QHdAQf2ARIDAcUB9wEH/AISAgF0/QIHiAMxAgFtiQMHlAMvAgFmngMLngOBAQIBYpkDC5kDewIBX6MDB64DMQIBV68DB7oDMwIBULsDB8YDKgIBSccDB9IDJwIBQtMDB94DKwIBO+gDC+gDgQECATfjAwvjA3sCATT0Awv0A4EBAgEw7wML7wN7AgEtgAQLgASBAQIBKfsDC/sDewIBJowEC4wEgQECASKHBAuHBHsCAR+YBAuYBIEBAgEbkwQLkwR7AgEYpAQLpASBAQIBFJ8EC58EewIBEbAEC7AEgQECAQ2rBAurBHsCAQq8BAu8BIEBAgEGtwQLtwR7AgED3gEJ6QEzAwHNAeoBCfUBMwMBxgH4AQmDAiwDAb4BhAIJjwIxAwG3AZACCZsCPQMBsAGcAgmnAk4DAakBqAIJswI3AwGiAbQCCb8CNQMBmwHAAgnLAjcDAZQBzAIJ1wI6AwGNAdgCCeMCMgMBhgHkAgnvAjgCAXzwAgn7AjcCAXWFAw2FA4MBAgFxgAMNgAN9AgFukQMNkQODAQIBaowDDYwDfQIBZ6sDDasDgwECAVumAw2mA30CAVi3Aw23A4MBAgFUsgMNsgN9AgFRwwMNwwODAQIBTb4DDb4DfQIBSs8DDc8DgwECAUbKAw3KA30CAUPbAw3bA4MBAgE/1gMN1gN9AgE85gEP5gGFAQMB0QHhAQ/hAX8DAc4B8gEP8gGFAQMBygHtAQ/tAX8DAccBgAIPgAKFAQMBwgH7AQ/7AX8DAb8BjAIPjAKFAQMBuwGHAg+HAn8DAbgBmAIPmAKFAQMBtAGTAg+TAn8DAbEBpAIPpAKFAQMBrQGfAg+fAn8DAaoBsAIPsAKFAQMBpgGrAg+rAn8DAaMBvAIPvAKFAQMBnwG3Ag+3An8DAZwByAIPyAKFAQMBmAHDAg/DAn8DAZUB1AIP1AKFAQMBkQHPAg/PAn8DAY4B4AIP4AKFAQMBigHbAg/bAn8DAYcB5AKOAeQClAEDAYUB5AKHAuQCjgIDAYQB7AIP7AKFAQMBgQHnAg/nAn8CAX7kApsC5AKiAgIBffgCD/gChQECAXnzAg/zAn8CAXY=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d5oBQzpcd29cQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXGFydGlmYWN0c1xPT0VcQXBwX0RhdGFcV29ya2Zsb3dzXE9yZGVyc1xCZXR0ZXJSZXRhaWxDYW5hZGFcRGVmYXVsdFN1Ym1pdE9yZGVyV29ya2Zsb3cueGFtbHGTAQPBBA4CAQGUAQWfATcDAfcBoAEFqwE0AwHwAawBBbcBJwMB6QG4AQXDATcDAeIBxAEFzwE0AwHbAdABBdsBKwMB1AHcAQWVAxACAWWWAwWhAzUCAV6iAwXfAxACATrgAwXrAzYCATPsAwX3Ay0CASz4AwWDBDYCASWEBAWPBC4CAR6QBAWbBDICARecBAWnBDACARCoBAWzBDMCAQm0BAW/BCkCAQKcAQucAYEBAwH7AZcBC5cBewMB+AGoAQuoAYEBAwH0AaMBC6MBewMB8QG0AQu0AYEBAwHtAa8BC68BewMB6gHAAQvAAYEBAwHmAbsBC7sBewMB4wHMAQvMAYEBAwHfAccBC8cBewMB3AHYAQvYAYEBAwHYAdMBC9MBewMB1QHdAQf2ARIDAcUB9wEH/AISAgF0/QIHiAMxAgFtiQMHlAMvAgFmngMLngOBAQIBYpkDC5kDewIBX6MDB64DMQIBV68DB7oDMwIBULsDB8YDKgIBSccDB9IDJwIBQtMDB94DKwIBO+gDC+gDgQECATfjAwvjA3sCATT0Awv0A4EBAgEw7wML7wN7AgEtgAQLgASBAQIBKfsDC/sDewIBJowEC4wEgQECASKHBAuHBHsCAR+YBAuYBIEBAgEbkwQLkwR7AgEYpAQLpASBAQIBFJ8EC58EewIBEbAEC7AEgQECAQ2rBAurBHsCAQq8BAu8BIEBAgEGtwQLtwR7AgED3gEJ6QEzAwHNAeoBCfUBMwMBxgH4AQmDAiwDAb4BhAIJjwIxAwG3AZACCZsCPQMBsAGcAgmnAk4DAakBqAIJswI3AwGiAbQCCb8CNQMBmwHAAgnLAjcDAZQBzAIJ1wI6AwGNAdgCCeMCMgMBhgHkAgnvAjgCAXzwAgn7AjcCAXWFAw2FA4MBAgFxgAMNgAN9AgFukQMNkQODAQIBaowDDYwDfQIBZ6sDDasDgwECAVumAw2mA30CAVi3Aw23A4MBAgFUsgMNsgN9AgFRwwMNwwODAQIBTb4DDb4DfQIBSs8DDc8DgwECAUbKAw3KA30CAUPbAw3bA4MBAgE/1gMN1gN9AgE85gEP5gGFAQMB0QHhAQ/hAX8DAc4B8gEP8gGFAQMBygHtAQ/tAX8DAccBgAIPgAKFAQMBwgH7AQ/7AX8DAb8BjAIPjAKFAQMBuwGHAg+HAn8DAbgBmAIPmAKFAQMBtAGTAg+TAn8DAbEBpAIPpAKFAQMBrQGfAg+fAn8DAaoBsAIPsAKFAQMBpgGrAg+rAn8DAaMBvAIPvAKFAQMBnwG3Ag+3An8DAZwByAIPyAKFAQMBmAHDAg/DAn8DAZUB1AIP1AKFAQMBkQHPAg/PAn8DAY4B4AIP4AKFAQMBigHbAg/bAn8DAYcB5AKOAeQClAEDAYUB5AKHAuQCjgIDAYQB7AIP7AKFAQMBgQHnAg/nAn8CAX7kApsC5AKiAgIBffgCD/gChQECAXnzAg/zAn8CAXY=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -656,7 +656,7 @@
       <sap2010:ViewStateData Id="ValidateCartAttributesActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="ConfirmTimeSlotReservationsActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="CancelPendingVoidPaymentsActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
-      <sap2010:ViewStateData Id="AuthorizePaymentsActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
+      <sap2010:ViewStateData Id="EvaluatePaymentAuthorizationActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="ConsumeCartCouponsActivity_1" sap:VirtualizedContainerService.HintSize="443,22" />
       <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="465,3129">
         <sap:WorkflowViewStateService.ViewState>

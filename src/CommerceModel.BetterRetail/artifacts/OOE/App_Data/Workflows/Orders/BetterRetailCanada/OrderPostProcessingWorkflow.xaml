@@ -196,18 +196,18 @@
         </InOutArgument>
       </ooopwap:FulfillmentTransitionChangeStatusActivity.OrderProcessingResultArgument>
     </ooopwap:FulfillmentTransitionChangeStatusActivity>
-    <ooopwa:AuthorizePaymentsActivity AuthorizeOnlyAvailableItems="True" sap2010:WorkflowViewState.IdRef="AuthorizePaymentsActivity_1">
-      <ooopwa:AuthorizePaymentsActivity.OrderProcessingContextArgument>
+    <ooopwa:ManageFuturePaymentsActivity sap2010:WorkflowViewState.IdRef="ManageFuturePaymentsActivity_1">
+      <ooopwa:ManageFuturePaymentsActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
           <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
         </InArgument>
-      </ooopwa:AuthorizePaymentsActivity.OrderProcessingContextArgument>
-      <ooopwa:AuthorizePaymentsActivity.OrderProcessingResultArgument>
+      </ooopwa:ManageFuturePaymentsActivity.OrderProcessingContextArgument>
+      <ooopwa:ManageFuturePaymentsActivity.OrderProcessingResultArgument>
         <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
           <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
         </InOutArgument>
-      </ooopwa:AuthorizePaymentsActivity.OrderProcessingResultArgument>
-    </ooopwa:AuthorizePaymentsActivity>
+      </ooopwa:ManageFuturePaymentsActivity.OrderProcessingResultArgument>
+    </ooopwa:ManageFuturePaymentsActivity>
     <ooopwap:EvaluateShipmentsFulfillmentReadinessActivity sap2010:WorkflowViewState.IdRef="EvaluateShipmentsFulfillmentReadinessActivity_1">
       <ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderFulfillmentStateArgument>
         <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
@@ -225,7 +225,7 @@
         </InOutArgument>
       </ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderProcessingResultArgument>
     </ooopwap:EvaluateShipmentsFulfillmentReadinessActivity>
-    <sads:DebugSymbol.Symbol>d5sBQzpcd29cQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXGFydGlmYWN0c1xPT0VcQXBwX0RhdGFcV29ya2Zsb3dzXE9yZGVyc1xCZXR0ZXJSZXRhaWxDYW5hZGFcT3JkZXJQb3N0UHJvY2Vzc2luZ1dvcmtmbG93LnhhbWwjYAPlAQ4CAQFhBXoKAgFWewWLASkCAUmMAQWcATkCATydAQWoATECATOpAQWpAYIFAgEuqgEFtQE4AgEltgEFxgE5AgEYxwEF0gEoAgEP0wEF4wE9AgECZAtktAECAVdoCXgwAgFbfgt+eQIBUogBC4gBgQECAU6DAQuDAXsCAUqPAQuPAXkCAUWZAQuZAYEBAgFBlAELlAF7AgE9pQELpQGBAQIBOKABC6ABewIBNKkB3gSpAf8EAgExqQGdBKkBvwQCAS+yAQuyAYEBAgEqrQELrQF7AgEmuQELuQF5AgEhwwELwwGBAQIBHb4BC74BewIBGc8BC88BgQECARTKAQvKAXsCARDWAQvWAXkCAQvgAQvgAYEBAgEH2wEL2wF7AgEDaw9rfQIBZHUPdYUBAgFgcA9wfwIBXA==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d5sBQzpcd29cQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXGFydGlmYWN0c1xPT0VcQXBwX0RhdGFcV29ya2Zsb3dzXE9yZGVyc1xCZXR0ZXJSZXRhaWxDYW5hZGFcT3JkZXJQb3N0UHJvY2Vzc2luZ1dvcmtmbG93LnhhbWwjYAPlAQ4CAQFhBXoKAgFWewWLASkCAUmMAQWcATkCATydAQWoATECATOpAQWpAYIFAgEuqgEFtQE4AgEltgEFxgE5AgEYxwEF0gErAgEP0wEF4wE9AgECZAtktAECAVdoCXgwAgFbfgt+eQIBUogBC4gBgQECAU6DAQuDAXsCAUqPAQuPAXkCAUWZAQuZAYEBAgFBlAELlAF7AgE9pQELpQGBAQIBOKABC6ABewIBNKkB3gSpAf8EAgExqQGdBKkBvwQCAS+yAQuyAYEBAgEqrQELrQF7AgEmuQELuQF5AgEhwwELwwGBAQIBHb4BC74BewIBGc8BC88BgQECARTKAQvKAXsCARDWAQvWAXkCAQvgAQvgAYEBAgEH2wEL2wF7AgEDaw9rfQIBZHUPdYUBAgFgcA9wfwIBXA==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -268,7 +268,7 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="AssignFulfillmentScheduleDateTimeActivity_1" sap:VirtualizedContainerService.HintSize="425,100" />
       <sap2010:ViewStateData Id="FulfillmentTransitionChangeStatusActivity_1" sap:VirtualizedContainerService.HintSize="425,68" />
-      <sap2010:ViewStateData Id="AuthorizePaymentsActivity_1" sap:VirtualizedContainerService.HintSize="425,22" />
+      <sap2010:ViewStateData Id="ManageFuturePaymentsActivity_1" sap:VirtualizedContainerService.HintSize="425,22" />
       <sap2010:ViewStateData Id="EvaluateShipmentsFulfillmentReadinessActivity_1" sap:VirtualizedContainerService.HintSize="425,22" />
       <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="447,1209">
         <sap:WorkflowViewStateService.ViewState>
