@@ -33,14 +33,22 @@
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>Autofac</AssemblyReference>
+      <AssemblyReference>Azure.Core</AssemblyReference>
+      <AssemblyReference>Azure.Core.Amqp</AssemblyReference>
+      <AssemblyReference>Azure.Messaging.ServiceBus</AssemblyReference>
+      <AssemblyReference>Azure.Storage.Blobs</AssemblyReference>
+      <AssemblyReference>Azure.Storage.Common</AssemblyReference>
       <AssemblyReference>Common.Logging</AssemblyReference>
       <AssemblyReference>Common.Logging.Core</AssemblyReference>
       <AssemblyReference>Ionic.Zip</AssemblyReference>
       <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
-      <AssemblyReference>Microsoft.Azure.KeyVault.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.Azure.Amqp</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.TimeProvider</AssemblyReference>
       <AssemblyReference>Microsoft.Data.Edm</AssemblyReference>
       <AssemblyReference>Microsoft.Data.OData</AssemblyReference>
       <AssemblyReference>Microsoft.Data.Services.Client</AssemblyReference>
+      <AssemblyReference>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.Common</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.SemanticLogging</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling</AssemblyReference>
@@ -50,46 +58,77 @@
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus</AssemblyReference>
       <AssemblyReference>Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
-      <AssemblyReference>Orckestra.AsyncExtensions</AssemblyReference>
-      <AssemblyReference>Orckestra.Caching</AssemblyReference>
-      <AssemblyReference>Orckestra.Data</AssemblyReference>
-      <AssemblyReference>Orckestra.Logging</AssemblyReference>
-      <AssemblyReference>Orckestra.Overture.DurableTask</AssemblyReference>
-      <AssemblyReference>Orckestra.Overture.DurableTask.Scheduling.Quartz</AssemblyReference>
-      <AssemblyReference>Orckestra.Overture.Extensibility</AssemblyReference>
-      <AssemblyReference>Orckestra.Overture.Interfaces</AssemblyReference>
-      <AssemblyReference>Orckestra.Overture.MessagingModel</AssemblyReference>
-      <AssemblyReference>Orckestra.Overture.Orders.Processing.Workflows</AssemblyReference>
-      <AssemblyReference>Orckestra.Overture.Orders.Processing.Workflows.Activities</AssemblyReference>
-      <AssemblyReference>Orckestra.Overture.ServiceModel</AssemblyReference>
-      <AssemblyReference>Orckestra.Overture.ServiceModel.Requests</AssemblyReference>
-      <AssemblyReference>Orckestra.Overture.SolrIndexing</AssemblyReference>
-      <AssemblyReference>Orckestra.SolrLib</AssemblyReference>
-      <AssemblyReference>OrckestraCommerce.DataExchange</AssemblyReference>
+      <AssemblyReference>OrckestraCommerce.CommerceModelUtilities</AssemblyReference>
+      <AssemblyReference>Polly</AssemblyReference>
+      <AssemblyReference>Polly.Core</AssemblyReference>
       <AssemblyReference>Quartz</AssemblyReference>
-      <AssemblyReference>ServiceStack.Common</AssemblyReference>
       <AssemblyReference>ServiceStack.Interfaces</AssemblyReference>
       <AssemblyReference>ServiceStack.OrmLite</AssemblyReference>
       <AssemblyReference>ServiceStack.OrmLite.SqlServer</AssemblyReference>
       <AssemblyReference>ServiceStack.Text</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Buffers</AssemblyReference>
+      <AssemblyReference>System.ClientModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Annotations</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.DataAnnotations</AssemblyReference>
+      <AssemblyReference>System.Configuration</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.IO</AssemblyReference>
+      <AssemblyReference>System.IO.Hashing</AssemblyReference>
+      <AssemblyReference>System.IO.Pipelines</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net</AssemblyReference>
+      <AssemblyReference>System.Net.Http</AssemblyReference>
+      <AssemblyReference>System.Net.Http.WinHttpHandler</AssemblyReference>
+      <AssemblyReference>System.Numerics</AssemblyReference>
+      <AssemblyReference>System.Numerics.Vectors</AssemblyReference>
       <AssemblyReference>System.Reactive.Core</AssemblyReference>
       <AssemblyReference>System.Reactive.Interfaces</AssemblyReference>
       <AssemblyReference>System.Reactive.Linq</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
+      <AssemblyReference>System.Runtime.CompilerServices.Unsafe</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Algorithms</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Encoding</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.X509Certificates</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>System.Spatial</AssemblyReference>
+      <AssemblyReference>System.Text.Encodings.Web</AssemblyReference>
+      <AssemblyReference>System.Text.Json</AssemblyReference>
       <AssemblyReference>System.Threading.Tasks.Dataflow</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Extensions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System.Net.Http</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>OrckestraCommerce.CommerceModelUtilities</AssemblyReference>
+      <AssemblyReference>CommerceModel.BetterRetail.Activities</AssemblyReference>
+      <AssemblyReference>Orckestra.AsyncExtensions</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Interfaces</AssemblyReference>
+      <AssemblyReference>Orckestra.Caching</AssemblyReference>
+      <AssemblyReference>Orckestra.Logging</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.ServiceModel</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.ServiceModel.Requests</AssemblyReference>
+      <AssemblyReference>Orckestra.Data</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.DurableTask</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.DurableTask.Scheduling.Quartz</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Extensibility</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.MessagingModel</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Orders.Processing.Workflows.Activities</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.Orders.Processing.Workflows</AssemblyReference>
+      <AssemblyReference>Orckestra.Overture.SolrIndexing</AssemblyReference>
+      <AssemblyReference>Orckestra.SolrLib</AssemblyReference>
+      <AssemblyReference>OrckestraCommerce.DataExchange</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>CommerceModel.BetterRetail</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
@@ -137,23 +176,22 @@
         </InOutArgument>
       </ooopwap:RouteFulfillmentsActivity.OrderProcessingResultArgument>
     </ooopwap:RouteFulfillmentsActivity>
-    <ooopwap:UpdateReservationAndSplitShipmentActivity sap2010:Annotation.AnnotationText="This activity will update reservations and if necessary and allowed split the shipments of an order to fulfill future reservations." DisplayName="UpdateReservationAndSplitShipmentActivity">
-        <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderFulfillmentStateArgument>
-            <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
-                <mca:CSharpValue x:TypeArguments="oosof:OrderFulfillmentState">OrderFulfillmentStateArgument</mca:CSharpValue>
-            </InArgument>
-        </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderFulfillmentStateArgument>
-        <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingContextArgument>
-            <InArgument x:TypeArguments="oosop:OrderProcessingContext">
-                <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
-            </InArgument>
-        </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingContextArgument>
-        <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingResultArgument>
-            <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
-                <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
-            </InOutArgument>
-        </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingResultArgument>
-        <sap2010:WorkflowViewState.IdRef>UpdateReservationAndSplitShipmentActivity_1</sap2010:WorkflowViewState.IdRef>
+    <ooopwap:UpdateReservationAndSplitShipmentActivity sap2010:Annotation.AnnotationText="This activity will update reservations and if necessary and allowed split the shipments of an order to fulfill future reservations." DisplayName="UpdateReservationAndSplitShipmentActivity" sap2010:WorkflowViewState.IdRef="UpdateReservationAndSplitShipmentActivity_1">
+      <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderFulfillmentStateArgument>
+        <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
+          <mca:CSharpValue x:TypeArguments="oosof:OrderFulfillmentState">OrderFulfillmentStateArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderFulfillmentStateArgument>
+      <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingContextArgument>
+      <ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwap:UpdateReservationAndSplitShipmentActivity.OrderProcessingResultArgument>
     </ooopwap:UpdateReservationAndSplitShipmentActivity>
     <ooopwa:RetrieveFulfillmentMethodsActivity sap2010:WorkflowViewState.IdRef="RetrieveFulfillmentMethodsActivity_1">
       <ooopwa:RetrieveFulfillmentMethodsActivity.OrderProcessingContextArgument>
@@ -197,6 +235,30 @@
         </InOutArgument>
       </ooopwap:FulfillmentTransitionChangeStatusActivity.OrderProcessingResultArgument>
     </ooopwap:FulfillmentTransitionChangeStatusActivity>
+    <ooopwa:CalculateCartTaxesActivity sap2010:WorkflowViewState.IdRef="CalculateCartTaxesActivity_1">
+      <ooopwa:CalculateCartTaxesActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:CalculateCartTaxesActivity.OrderProcessingContextArgument>
+      <ooopwa:CalculateCartTaxesActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:CalculateCartTaxesActivity.OrderProcessingResultArgument>
+    </ooopwa:CalculateCartTaxesActivity>
+    <ooopwa:ManageUpcomingPaymentsActivity sap2010:WorkflowViewState.IdRef="ManageUpcomingPaymentsActivity_1">
+      <ooopwa:ManageUpcomingPaymentsActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </ooopwa:ManageUpcomingPaymentsActivity.OrderProcessingContextArgument>
+      <ooopwa:ManageUpcomingPaymentsActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </ooopwa:ManageUpcomingPaymentsActivity.OrderProcessingResultArgument>
+    </ooopwa:ManageUpcomingPaymentsActivity>
     <ooopwap:EvaluateShipmentsFulfillmentReadinessActivity sap2010:WorkflowViewState.IdRef="EvaluateShipmentsFulfillmentReadinessActivity_1">
       <ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderFulfillmentStateArgument>
         <InArgument x:TypeArguments="oosof:OrderFulfillmentState">
@@ -214,7 +276,7 @@
         </InOutArgument>
       </ooopwap:EvaluateShipmentsFulfillmentReadinessActivity.OrderProcessingResultArgument>
     </ooopwap:EvaluateShipmentsFulfillmentReadinessActivity>
-    <sads:DebugSymbol.Symbol>d5wBQzpcZ2l0XENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXHNyY1xDb21tZXJjZU1vZGVsLkJldHRlclJldGFpbFxhcnRpZmFjdHNcT09FXEFwcF9EYXRhXFdvcmtmbG93c1xPcmRlcnNcQmV0dGVyUmV0YWlsQ2FuYWRhXE9yZGVyUG9zdFByb2Nlc3NpbmdXb3JrZmxvdy54YW1sIGAD2gEOAgEBYQV6CgIBTXsFiwEpAgFAjAEFnQEpAgEzngEFqQExAgEqqgEFqgGCBQIBJasBBbYBOAIBHLcBBccBOQIBD8gBBdgBPQIBAmQLZLQBAgFOaAl4MAIBUn4LfnkCAUmIAQuIAYEBAgFFgwELgwF7AgFBjwELjwF5AgE8mQELmQGBAQIBOJQBC5QBewIBNKYBC6YBgQECAS+hAQuhAXsCASuqAd4EqgH/BAIBKKoBnQSqAb8EAgEmswELswGBAQIBIa4BC64BewIBHboBC7oBeQIBGMQBC8QBgQECARS/AQu/AXsCARDLAQvLAXkCAQvVAQvVAYEBAgEH0AEL0AF7AgEDaw9rfQIBW3UPdYUBAgFXcA9wfwIBUw==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d5sBQzpcd29cQ29tbWVyY2VNb2RlbC5CZXR0ZXJSZXRhaWxcc3JjXENvbW1lcmNlTW9kZWwuQmV0dGVyUmV0YWlsXGFydGlmYWN0c1xPT0VcQXBwX0RhdGFcV29ya2Zsb3dzXE9yZGVyc1xCZXR0ZXJSZXRhaWxDYW5hZGFcT3JkZXJQb3N0UHJvY2Vzc2luZ1dvcmtmbG93LnhhbWwmhwEDmAIOAgEBiAEFoQEKAgFfogEFsgEpAgFSswEFwwE5AgFFxAEFzwExAgE80AEF0AGCBQIBN9EBBdwBOAIBLt0BBe0BOQIBIe4BBfkBKQIBGPoBBYUCLQIBD4YCBZYCPQIBAosBC4sBtAECAWCPAQmfATACAWSlAQulAXkCAVuvAQuvAYEBAgFXqgELqgF7AgFTtgELtgF5AgFOwAELwAGBAQIBSrsBC7sBewIBRswBC8wBgQECAUHHAQvHAXsCAT3QAd4E0AH/BAIBOtABnQTQAb8EAgE42QEL2QGBAQIBM9QBC9QBewIBL+ABC+ABeQIBKuoBC+oBgQECASblAQvlAXsCASL2AQv2AYEBAgEd8QEL8QF7AgEZggILggKBAQIBFP0BC/0BewIBEIkCC4kCeQIBC5MCC5MCgQECAQeOAguOAnsCAQOSAQ+SAX0CAW2cAQ+cAYUBAgFplwEPlwF/AgFl</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -240,7 +302,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="UpdateReservationAndSplitShipmentActivity_1" sap:VirtualizedContainerService.HintSize="200,105">
+      <sap2010:ViewStateData Id="UpdateReservationAndSplitShipmentActivity_1" sap:VirtualizedContainerService.HintSize="425,105">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -257,15 +319,17 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="AssignFulfillmentScheduleDateTimeActivity_1" sap:VirtualizedContainerService.HintSize="425,100" />
       <sap2010:ViewStateData Id="FulfillmentTransitionChangeStatusActivity_1" sap:VirtualizedContainerService.HintSize="425,68" />
+      <sap2010:ViewStateData Id="CalculateCartTaxesActivity_1" sap:VirtualizedContainerService.HintSize="425,22" />
+      <sap2010:ViewStateData Id="ManageUpcomingPaymentsActivity_1" sap:VirtualizedContainerService.HintSize="425,22" />
       <sap2010:ViewStateData Id="EvaluateShipmentsFulfillmentReadinessActivity_1" sap:VirtualizedContainerService.HintSize="425,22" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="447,1162">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="447,1271">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Orckestra.Overture.Services.Web.Host.OrderPostProcessingWorkflow2_1" sap:VirtualizedContainerService.HintSize="487,1242">
+      <sap2010:ViewStateData Id="Orckestra.Overture.Services.Web.Host.OrderPostProcessingWorkflow2_1" sap:VirtualizedContainerService.HintSize="487,1351">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
