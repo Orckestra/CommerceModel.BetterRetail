@@ -550,18 +550,18 @@
         </InOutArgument>
       </ooopwa:CancelPendingVoidPaymentsActivity.OrderProcessingResultArgument>
     </ooopwa:CancelPendingVoidPaymentsActivity>
-    <ooopwa:EvaluatePaymentAuthorizationActivity sap2010:WorkflowViewState.IdRef="EvaluatePaymentAuthorizationActivity_1">
-      <ooopwa:EvaluatePaymentAuthorizationActivity.OrderProcessingContextArgument>
+    <ooopwa:EvaluatePaymentsAuthorizationActivity sap2010:WorkflowViewState.IdRef="EvaluatePaymentAuthorizationActivity_1">
+      <ooopwa:EvaluatePaymentsAuthorizationActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
           <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
         </InArgument>
-      </ooopwa:EvaluatePaymentAuthorizationActivity.OrderProcessingContextArgument>
-      <ooopwa:EvaluatePaymentAuthorizationActivity.OrderProcessingResultArgument>
+      </ooopwa:EvaluatePaymentsAuthorizationActivity.OrderProcessingContextArgument>
+      <ooopwa:EvaluatePaymentsAuthorizationActivity.OrderProcessingResultArgument>
         <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
           <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
         </InOutArgument>
-      </ooopwa:EvaluatePaymentAuthorizationActivity.OrderProcessingResultArgument>
-    </ooopwa:EvaluatePaymentAuthorizationActivity>
+      </ooopwa:EvaluatePaymentsAuthorizationActivity.OrderProcessingResultArgument>
+    </ooopwa:EvaluatePaymentsAuthorizationActivity>
     <ooopwa:ConsumeCartCouponsActivity sap2010:WorkflowViewState.IdRef="ConsumeCartCouponsActivity_1">
       <ooopwa:ConsumeCartCouponsActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
