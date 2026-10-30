@@ -415,7 +415,7 @@
         </ooopwav:ValidateCartDiscountsActivity.OrderProcessingResultArgument>
       </ooopwav:ValidateCartDiscountsActivity>
     </Sequence>
-    <ooopwav:ValidateInventoryAvailabilityActivity sap2010:WorkflowViewState.IdRef="ValidateInventoryAvailabilityActivity_1" IgnoreReservations="False">
+    <ooopwav:ValidateInventoryAvailabilityActivity sap2010:WorkflowViewState.IdRef="ValidateInventoryAvailabilityActivity_1" IgnoreReservations="False" IgnoreFulfillmentLocationWithoutInventory="True">
       <ooopwav:ValidateInventoryAvailabilityActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
           <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>

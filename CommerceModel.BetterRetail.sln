@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.0.0
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12217.157 stable
 MinimumVisualStudioVersion = 17.0.0.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceModel.BetterRetail", "src\CommerceModel.BetterRetail\CommerceModel.BetterRetail.csproj", "{9052B54B-3DA8-4EED-B224-D99841E450A0}"
 EndProject
@@ -26,7 +26,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPathV6 = Packages\NuGet\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
 		SolutionGuid = {773110B0-FD05-4A56-B9D4-385C9D9DED4D}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = Packages\NuGet\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;Packages\NuGet\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal
