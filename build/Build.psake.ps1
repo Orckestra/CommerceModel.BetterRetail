@@ -87,6 +87,7 @@ Task Compile      -depends RestorePackages,
                            InitializeDeploymentPackageManifestVersion,
                            InitializeMetadata,
                            DetectBuildStability,
+                           WriteBuildSummary,
                            CompileSolutions,
                            GeneratePackages,
 						   UndoSensitiveData
@@ -339,11 +340,47 @@ Task InitializeDeploymentPackageManifestVersion -precondition { $IsRunningOnBuil
 
 Task DetectBuildStability -precondition { $IsRunningOnBuildMachine } {
     Write-BuildStability -gitversionOutput (Get-CachedSemanticVersion)
+}
 
-    # Azure DevOps gets CmpStability from the ##vso line written by Write-BuildStability. GitHub Actions: expose it
-    # as an output of the Build step for the job that publishes to CMP.
-    if ($env:GITHUB_ACTIONS -eq 'true' -and $env:GITHUB_OUTPUT) {
-        "cmp-stability=$($BuildStability.cmp)" | Add-Content -Path $env:GITHUB_OUTPUT
+Task WriteBuildSummary -precondition { $IsRunningOnBuildMachine } {
+    # This task depends on:
+    # - variable BuildStability set by DetectBuildStability
+
+    $version = (Get-CachedSemanticVersion).NuGetVersionV1
+
+    # Azure DevOps: renames the build with the version.
+    Write-Host "##vso[build.updatebuildnumber]$($version)"
+
+    if ($env:GITHUB_ACTIONS -ne 'true') { return }
+
+    # GitHub Actions cannot rename a run once started: show the version as a notice banner at the top of the
+    # run's summary page and in the job summary instead.
+    # Notices in the order they should be displayed: the version first, then the build settings.
+    # Never add $NugetFeeds or $SensitiveData here: they contain credentials.
+    $notices = @(
+        @{ Title = 'Build version';           Value = $version }
+        @{ Title = 'CMP stability';           Value = $BuildStability.cmp }
+        @{ Title = 'Configuration';           Value = $Configuration }
+        @{ Title = 'IsRunningOnBuildMachine'; Value = $IsRunningOnBuildMachine }
+        @{ Title = 'MsbuildVerbosity';        Value = $MsbuildVerbosity }
+        @{ Title = 'NugetVerbosity';          Value = $NugetVerbosity }
+        @{ Title = 'BuildReason';             Value = $BuildReason }
+    )
+    # GitHub displays the annotations in the reverse order they were written: write them last to first.
+    [array]::Reverse($notices)
+    foreach ($notice in $notices) {
+        Write-Host "::notice title=$($notice.Title)::$($notice.Value)"
+    }
+
+    if ($env:GITHUB_STEP_SUMMARY) {
+        # Default encoding on purpose: in Windows PowerShell 5.1, '-Encoding utf8' may add a BOM; the text is ASCII.
+        "**Version:** ``$($version)``" | Add-Content -Path $env:GITHUB_STEP_SUMMARY
+    }
+
+    # Outputs of the Build step, used by the job that publishes to CMP (PublishToCMP's buildNumber and
+    # cmpStability inputs).
+    if ($env:GITHUB_OUTPUT) {
+        "version=$version", "cmp-stability=$($BuildStability.cmp)" | Add-Content -Path $env:GITHUB_OUTPUT
     }
 }
 
@@ -419,41 +456,6 @@ function Get-CachedSemanticVersion {
     if (-not $cachedSemanticVersion) {
         $cachedSemanticVersion = Get-SemVer
         Set-Variable -Name "cachedSemanticVersion" -Value $cachedSemanticVersion -Scope Global
-
-        $version = $cachedSemanticVersion.NugetVersionV1
-
-        # Azure DevOps: renames the build with the version.
-        Write-Host "##vso[build.updatebuildnumber]$($version)"
-
-        # GitHub Actions cannot rename a run once started: show the version as a notice banner at the top of the
-        # run's summary page and in the job summary instead.
-        if ($env:GITHUB_ACTIONS -eq 'true') {
-            # Notices in the order they should be displayed: the version first, then the build settings.
-            # Never add $NugetFeeds or $SensitiveData here: they contain credentials.
-            $notices = @(
-                @{ Title = 'Build version';           Value = $version }
-                @{ Title = 'Configuration';           Value = $Configuration }
-                @{ Title = 'IsRunningOnBuildMachine'; Value = $IsRunningOnBuildMachine }
-                @{ Title = 'MsbuildVerbosity';        Value = $MsbuildVerbosity }
-                @{ Title = 'NugetVerbosity';          Value = $NugetVerbosity }
-                @{ Title = 'BuildReason';             Value = $BuildReason }
-            )
-            # GitHub displays the annotations in the reverse order they were written: write them last to first.
-            [array]::Reverse($notices)
-            foreach ($notice in $notices) {
-                Write-Host "::notice title=$($notice.Title)::$($notice.Value)"
-            }
-
-            if ($env:GITHUB_STEP_SUMMARY) {
-                # Default encoding on purpose: in Windows PowerShell 5.1, '-Encoding utf8' may add a BOM; the text is ASCII.
-                "**Version:** ``$($version)``" | Add-Content -Path $env:GITHUB_STEP_SUMMARY
-            }
-
-            # Used by the job that publishes to CMP (PublishToCMP's buildNumber input).
-            if ($env:GITHUB_OUTPUT) {
-                "version=$version" | Add-Content -Path $env:GITHUB_OUTPUT
-            }
-        }
     }
 
     return $cachedSemanticVersion
