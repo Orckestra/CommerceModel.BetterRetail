@@ -67,15 +67,12 @@ env:
 jobs:
   build:
     name: Build BetterRetail
-    runs-on: windows-2022   # Visual Studio 2022, as $VisualStudioVersion in build/Build.psake.ps1
+    # Visual Studio 2022, as $VisualStudioVersion in build/Build.psake.ps1. Also required by PublishToCMP (Windows
+    # PowerShell 5.1).
+    runs-on: windows-2022
     permissions:
       contents: read
       id-token: write   # azure/login OIDC inside LoadKeyVaultSecrets
-    outputs:
-      version: ${{ steps.build.outputs.version }}
-      cmp-stability: ${{ steps.build.outputs.cmp-stability }}
-      artifact-items: ${{ steps.list-artifacts.outputs.items }}
-      staging-artifact-id: ${{ steps.stage-artifacts.outputs.artifact-id }}
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -92,7 +89,7 @@ jobs:
           tenant-id: ${{ vars.ORCKESTRAINC_AZURE_TENANT_ID }}
           subscription-id: ${{ vars.ORCKESTRAPRODUCTTEAM_AZURE_SUBSCRIPTION_ID }}
           vault-name: ${{ vars.ORCKESTRAPRODUCTTEAM_AZURE_KEY_VAULT_NAME }}
-          secrets: "nuget-feeds:NUGET_FEEDS, betterretail-sensitive-data:SENSITIVE_DATA"
+          secrets: "nuget-feeds:NUGET_FEEDS, betterretail-sensitive-data:SENSITIVE_DATA, cmp-username:CMP_USERNAME, cmp-password:CMP_PASSWORD"
 
       - name: Build
         id: build
@@ -120,130 +117,32 @@ jobs:
           }
           & .\build\Build.ps1 @buildArgs
 
-      - name: Publish artifact Troubleshooting
-        if: success() || failure()
-        uses: actions/upload-artifact@v7
-        with:
-          name: Troubleshooting
-          path: artifacts/Troubleshooting
-          if-no-files-found: warn
-
-      # The NuGet packages are published one artifact per file (no zip), by the publish-artifacts job.
-      # With a single folder in 'path', the files are at the root of the staging artifact.
-      - name: Stage artifacts
-        id: stage-artifacts
-        if: success() || failure()
-        uses: actions/upload-artifact@v7
-        with:
-          name: artifacts-staging
-          path: artifacts/Nuget
-          if-no-files-found: warn
-          retention-days: 1
-
-      - name: List artifact items
-        id: list-artifacts
-        if: success() || failure()
-        shell: pwsh
-        run: |
-          $folderPath = 'artifacts/Nuget'
-          $items = if (Test-Path $folderPath) {
-            Get-ChildItem -Path $folderPath | ForEach-Object {
-              [ordered]@{ name = $_.Name; path = $_.Name; archive = $_.PSIsContainer }
-            }
-          }
-          $json = ConvertTo-Json -InputObject @($items) -Compress
-          "items=$json" >> $env:GITHUB_OUTPUT
-
-  publish-artifacts:
-    name: Publish ${{ matrix.name }}
-    needs: build
-    # Like Azure DevOps (succeededOrFailed), also published when the build failed.
-    if: (success() || failure()) && needs.build.outputs.artifact-items != '' && needs.build.outputs.artifact-items != '[]'
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    strategy:
-      matrix:
-        include: ${{ fromJSON(needs.build.outputs.artifact-items) }}
-    steps:
-      - uses: actions/download-artifact@v8
-        with:
-          name: artifacts-staging
-          path: staging
-      - uses: actions/upload-artifact@v7
-        with:
-          name: ${{ matrix.name }}   # ignored when archive is false
-          path: staging/${{ matrix.path }}
-          archive: ${{ matrix.archive }}
-          if-no-files-found: error
-
-  publish-cmp:
-    name: Publish to CMP
-    needs: build
-    if: github.event_name != 'pull_request'
-    runs-on: windows-2022   # PublishToCMP requires Windows PowerShell 5.1
-    permissions:
-      contents: read
-      id-token: write   # azure/login OIDC inside LoadKeyVaultSecrets
-    steps:
-      - name: Checkout local actions
-        uses: actions/checkout@v7
-        with:
-          sparse-checkout: .github/actions
-          persist-credentials: false
-
-      - name: Load values from key vault
-        uses: ./.github/actions/OrckestraCommerce.github.actions/LoadKeyVaultSecrets
-        with:
-          client-id: ${{ vars.ORCKESTRAPRODUCTTEAM_AZURE_CLIENT_ID }}
-          tenant-id: ${{ vars.ORCKESTRAINC_AZURE_TENANT_ID }}
-          subscription-id: ${{ vars.ORCKESTRAPRODUCTTEAM_AZURE_SUBSCRIPTION_ID }}
-          vault-name: ${{ vars.ORCKESTRAPRODUCTTEAM_AZURE_KEY_VAULT_NAME }}
-          secrets: "cmp-username:CMP_USERNAME, cmp-password:CMP_PASSWORD"
-
-      - name: Download NuGet packages
-        uses: actions/download-artifact@v8
-        with:
-          name: artifacts-staging
-          path: Nuget
+      # No workflow artifact is published (NuGet package, troubleshooting logs): the NuGet package contains the
+      # sensitive data substituted during the build, and this repository is public, so anyone could download them.
+      # The package is published to CMP from this job instead, without leaving the runner.
 
       - name: Publish package for OCC
+        if: github.event_name != 'pull_request'
         uses: ./.github/actions/OrckestraCommerce.github.actions/PublishToCMP
         with:
           cmpUsername: ${{ env.CMP_USERNAME }}
           cmpPassword: ${{ env.CMP_PASSWORD }}
           cmpClientCode: occ
-          cmpPackageFolder: ${{ github.workspace }}\Nuget
-          cmpStability: ${{ needs.build.outputs.cmp-stability }}
+          cmpPackageFolder: ${{ github.workspace }}\artifacts\Nuget
+          cmpStability: ${{ steps.build.outputs.cmp-stability }}
           packagesList: 'CommerceModel*.nupkg'
           packagesListFilterType: FilePattern
-          buildNumber: ${{ needs.build.outputs.version }}
+          buildNumber: ${{ steps.build.outputs.version }}
 
       - name: Publish package for SLS
+        if: github.event_name != 'pull_request'
         uses: ./.github/actions/OrckestraCommerce.github.actions/PublishToCMP
         with:
           cmpUsername: ${{ env.CMP_USERNAME }}
           cmpPassword: ${{ env.CMP_PASSWORD }}
           cmpClientCode: sls
-          cmpPackageFolder: ${{ github.workspace }}\Nuget
-          cmpStability: ${{ needs.build.outputs.cmp-stability }}
+          cmpPackageFolder: ${{ github.workspace }}\artifacts\Nuget
+          cmpStability: ${{ steps.build.outputs.cmp-stability }}
           packagesList: 'CommerceModel*.nupkg'
           packagesListFilterType: FilePattern
-          buildNumber: ${{ needs.build.outputs.version }}
-
-  cleanup-artifacts-staging:
-    name: Delete artifacts-staging
-    needs: [build, publish-artifacts, publish-cmp]
-    # Only once every job that reads the staging artifact succeeded (publish-cmp is skipped on pull requests), so
-    # nothing is lost on failure.
-    if: >-
-      !cancelled() && needs.build.outputs.staging-artifact-id != ''
-      && needs.publish-artifacts.result == 'success'
-      && (needs.publish-cmp.result == 'success' || needs.publish-cmp.result == 'skipped')
-    runs-on: ubuntu-latest
-    permissions:
-      actions: write
-    steps:
-      - env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh api --method DELETE "repos/${{ github.repository }}/actions/artifacts/${{ needs.build.outputs.staging-artifact-id }}"
+          buildNumber: ${{ steps.build.outputs.version }}

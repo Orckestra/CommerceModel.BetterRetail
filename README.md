@@ -150,12 +150,12 @@ By default, the deployment script `integration.psake.ps1` does not automatically
 
 ### Deployment Using GitHub Actions
 
-The workflow [`.github/workflows/build.yml`](.github/workflows/build.yml) builds the repository, publishes the NuGet package as a workflow artifact and, except for pull requests, uploads it to Orckestra's Cloud Management Platform (CMP). Its secrets are read from an Azure Key Vault through OpenID Connect: no secret is stored in GitHub.
+The workflow [`.github/workflows/build.yml`](.github/workflows/build.yml) builds the repository and, except for pull requests, uploads the NuGet package to Orckestra's Cloud Management Platform (CMP). It doesn't publish the package as a workflow artifact: the package contains the sensitive data of the build, and workflow artifacts of a public repository can be downloaded by anyone. Its secrets are read from an Azure Key Vault through OpenID Connect: no secret is stored in GitHub.
 
 1. Copy this repository to your GitHub account or organization
    1. Either fork it (a fork of this public repository stays public), or create a new private repository and push the content of this one to it
    1. In a fork, enable the workflows in the `Actions` tab of the repository: GitHub disables them in new forks
-   1. Edit the file `.github/workflows/build.yml`: in the `publish-cmp` job, keep only one of the `Publish package for ...` steps and change its `cmpClientCode` input to `${{ vars.CMP_CLIENT_CODE }}`
+   1. Edit the file `.github/workflows/build.yml`: in the `build` job, keep only one of the `Publish package for ...` steps and change its `cmpClientCode` input to `${{ vars.CMP_CLIENT_CODE }}`
 1. Create the following secrets in an Azure Key Vault. Each value must fit on a **single line**.
 
    | Secret                        | Value                                                                                                                                                      | Comment                                                                         |
