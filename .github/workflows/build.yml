@@ -211,7 +211,6 @@ jobs:
       - name: Publish package for OCC
         uses: ./.github/actions/OrckestraCommerce.github.actions/PublishToCMP
         with:
-          cmpUrl: ${{ env.CMP_URL }}
           cmpUsername: ${{ env.CMP_USERNAME }}
           cmpPassword: ${{ env.CMP_PASSWORD }}
           cmpClientCode: occ
@@ -224,7 +223,6 @@ jobs:
       - name: Publish package for SLS
         uses: ./.github/actions/OrckestraCommerce.github.actions/PublishToCMP
         with:
-          cmpUrl: ${{ env.CMP_URL }}
           cmpUsername: ${{ env.CMP_USERNAME }}
           cmpPassword: ${{ env.CMP_PASSWORD }}
           cmpClientCode: sls
