@@ -1,0 +1,59 @@
+name: 'Load Key Vault Secrets'
+inputs:
+  client-id:
+    description: 'The Azure App Registration Client Id'
+    required: true
+  tenant-id:
+    description: 'The Azure App Registration Tenant Id'
+    required: true
+  subscription-id:
+    required: false
+    default: ''
+  vault-name:
+    description: 'The name of the key vault'
+    required: true
+  secrets:
+    description: 'Comma-separated list, optionally "source:alias", e.g. "Bob:Bobby, Fred!, Jeff" . Variables are masked by default for security and we can use ! to unmask a variable.'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - uses: azure/login@v3
+      with:
+        client-id: ${{ inputs.client-id }}
+        tenant-id: ${{ inputs.tenant-id }}
+        subscription-id: ${{ inputs.subscription-id }}
+
+    - shell: bash
+      run: |
+        IFS=',' read -ra ITEMS <<< "${{ inputs.secrets }}"
+        for raw in "${ITEMS[@]}"; do
+          item=$(echo "$raw" | xargs)
+
+          unmask=false
+          if [[ "$item" == *"!" ]]; then
+            unmask=true
+            item="${item%!}"
+            item=$(echo "$item" | xargs)
+          fi
+
+          secret_name="${item%%:*}"
+          if [[ "$item" == *:* ]]; then
+            alias="${item#*:}"
+          else
+            alias="$secret_name"
+          fi
+          secret_name=$(echo "$secret_name" | xargs)
+          alias=$(echo "$alias" | xargs)
+
+          value=$(az keyvault secret show --vault-name "${{ inputs.vault-name }}" --name "$secret_name" --query value -o tsv)
+
+          if [[ "$unmask" == true ]]; then
+            echo "::notice::'$alias' is configured as visible in logs (unmasked) — verify this is intentional"
+          else
+            echo "::add-mask::$value"
+          fi
+
+          env_name=$(echo "$alias" | tr '[:lower:]-' '[:upper:]_')
+          echo "${env_name}=${value}" >> "$GITHUB_ENV"
+        done
