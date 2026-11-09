@@ -353,28 +353,30 @@ Task WriteBuildSummary -precondition { $IsRunningOnBuildMachine } {
 
     if ($env:GITHUB_ACTIONS -ne 'true') { return }
 
-    # GitHub Actions cannot rename a run once started: show the version as a notice banner at the top of the
-    # run's summary page and in the job summary instead.
-    # Notices in the order they should be displayed: the version first, then the build settings.
-    # Never add $NugetFeeds or $SensitiveData here: they contain credentials.
-    $notices = @(
-        @{ Title = 'Build version';           Value = $version }
-        @{ Title = 'CMP stability';           Value = $BuildStability.cmp }
-        @{ Title = 'Configuration';           Value = $Configuration }
-        @{ Title = 'IsRunningOnBuildMachine'; Value = $IsRunningOnBuildMachine }
-        @{ Title = 'MsbuildVerbosity';        Value = $MsbuildVerbosity }
-        @{ Title = 'NugetVerbosity';          Value = $NugetVerbosity }
-        @{ Title = 'BuildReason';             Value = $BuildReason }
-    )
-    # GitHub displays the annotations in the reverse order they were written: write them last to first.
-    [array]::Reverse($notices)
-    foreach ($notice in $notices) {
-        Write-Host "::notice title=$($notice.Title)::$($notice.Value)"
-    }
-
+    # GitHub Actions cannot rename a run once started: show the version and the build settings in a table of
+    # the job summary (run's summary page) instead.
     if ($env:GITHUB_STEP_SUMMARY) {
+        # Rows in display order: the version first, then the build settings.
+        # Never add $NugetFeeds or $SensitiveData here: they contain credentials.
+        $rows = [ordered]@{
+            'Build version'           = $version
+            'CMP stability'           = $BuildStability.cmp
+            'Configuration'           = $Configuration
+            'IsRunningOnBuildMachine' = $IsRunningOnBuildMachine
+            'MsbuildVerbosity'        = $MsbuildVerbosity
+            'NugetVerbosity'          = $NugetVerbosity
+            'BuildReason'             = $BuildReason
+        }
+
+        $table = @('| Setting | Value |', '|---|---|')
+        foreach ($row in $rows.GetEnumerator()) {
+            $value = "$($row.Value)" -replace '\|', '\|'  # a '|' would end the cell
+            $cell = if ($value) { "``$value``" } else { '' }  # an empty code span would show the backticks
+            $table += "| $($row.Name) | $cell |"
+        }
+
         # Default encoding on purpose: in Windows PowerShell 5.1, '-Encoding utf8' may add a BOM; the text is ASCII.
-        "**Version:** ``$($version)``" | Add-Content -Path $env:GITHUB_STEP_SUMMARY
+        $table | Add-Content -Path $env:GITHUB_STEP_SUMMARY
     }
 
     # Outputs of the Build step, used by the job that publishes to CMP (PublishToCMP's buildNumber and
