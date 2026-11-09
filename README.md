@@ -52,7 +52,7 @@ The build process will modify files which contain sensitive data and revert them
 
 ## Deployment
 
-The build script will generate an artifact named `CommerceModel.BetterRetail.*.nupkg`. On a developer workstation this package will be copied to the folder `C:\packages` and in an Azure Pipeline it will be uploaded to Orckestra's Cloud Management platform for deployment on a publicly accessible platform.
+The build script will generate an artifact named `CommerceModel.BetterRetail.*.nupkg`. On a developer workstation this package will be copied to the folder `C:\packages` and in the GitHub Actions workflow it will be uploaded to Orckestra's Cloud Management platform for deployment on a publicly accessible platform.
 
 ### Deployment On A Developer Workstation
 
@@ -120,7 +120,7 @@ By default, the deployment script `integration.psake.ps1` does not automatically
    #$Deployment.Input.DataProfileLoadingActivity = SetOrDefault $DataProfileLoadingActivity $defaultProfileLoadingActivity
    ```
 
-1. Modify the function `HandleDataProfileLoading` to add the required `inputs` parameters to `$body`. Refer to `Deployment Using Azure Pipeline` below to have the description of the input parameters. This script uses PowerShell so you have to use PowerShell syntax to add the input parameters like so:
+1. Modify the function `HandleDataProfileLoading` to add the required `inputs` parameters to `$body`. Refer to `Deployment Using GitHub Actions` below to have the description of the input parameters. This script uses PowerShell so you have to use PowerShell syntax to add the input parameters like so:
 
    ```powershell
    $body = @{
@@ -148,45 +148,51 @@ By default, the deployment script `integration.psake.ps1` does not automatically
    }
    ```
 
-### Deployment Using Azure Pipeline
+### Deployment Using GitHub Actions
 
-> [!IMPORTANT]
-> You need to install `Orckestra Technologies Inc. Azure Pipeline Tasks` from the Azure DevOps marketplace. You can follow this [link](https://marketplace.visualstudio.com/items?itemName=orckestra-technologies.orckestra-technologies-pipeline-tasks) to install it.
-> ![Orckestra Technologies Inc. Azure Pipeline Tasks](docs/images/readme/azure_devops_marketplace_extension.png)
+The workflow [`.github/workflows/build.yml`](.github/workflows/build.yml) builds the repository, publishes the NuGet package as a workflow artifact and, except for pull requests, uploads it to Orckestra's Cloud Management Platform (CMP). Its secrets are read from an Azure Key Vault through OpenID Connect: no secret is stored in GitHub.
 
-1. Fork this repository on Azure DevOps
-   1. Create a new repository on Azure DevOps
-   1. Download this repository from GitHub and upload it to the new Azure DevOps repository
-   1. Edit the file `build/build-pipeline.yml` and keep only one of the `PublishToCMP` tasks and change its `clientCode` input to `$(CMP.ClientCode)`
-1. Create a variable group (in Pipeline/Library) called `CMP - Connection API V2`
+1. Copy this repository to your GitHub account or organization
+   1. Either fork it (a fork of this public repository stays public), or create a new private repository and push the content of this one to it
+   1. In a fork, enable the workflows in the `Actions` tab of the repository: GitHub disables them in new forks
+   1. Edit the file `.github/workflows/build.yml`: in the `publish-cmp` job, keep only one of the `Publish package for ...` steps and change its `cmpClientCode` input to `${{ vars.CMP_CLIENT_CODE }}`
+1. Create the following secrets in an Azure Key Vault. Each value must fit on a **single line**.
 
-   1. This group should have 4 values:
+   | Secret                        | Value                                                                                                                                                      | Comment                                                                         |
+   | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+   | `nuget-feeds`                 | @{ Release = @{ password = '`<PAT>`' }; 'Pre-Release' = @{}; Internal = @{} } | A PowerShell formatted Hashtable. `Release.password` is the token used to restore Orckestra's NuGet packages: ask your Orckestra Support Specialist for it. To also publish the package to your own NuGet feeds, add `url`, `username` and `password` to the entry of each stability (`Internal`, `Pre-Release`, `Release`); an entry without them is skipped. |
+   | `betterretail-sensitive-data` | @{ NewUsersPassword = '' ; ShippoApiKey = '' ; TranssmartApiUsername = '' ; TranssmartApiPassword = '' ; TranssmartAccount = '' ; TranssmartApiEndpoint = '' ; AvalaraAccountNumber = '' ; AvalaraCompanyCode = '' ; AvalaraLicenceKey = '' ; AvalaraServiceUrl = '' ; DeliverySolutionsApiEndpoint = '' ; DeliverySolutionsApiKey = '' ; DeliverySolutionsTenantId = '' ; DeliverySolutionsSecretKey = '' } | A PowerShell formatted Hashtable containing the ExtraProperties's SensitiveData. You can use the value shown on the left and fill in the values. |
+   | `cmp-username`                | svcCmpPipeline`<CLIENTCODE>`@orckestra.com | The service account used to interact with Orckestra's Cloud Management Platform. Ask your Orckestra Support Specialist for your service account. |
+   | `cmp-password`                |                                            | The password of the service account                                             |
 
-      | Variable       | Value                                      | Comment                                                                         |
-      | -------------- | ------------------------------------------ | ------------------------------------------------------------------------------- |
-      | CMP.ClientCode |                                            | A short (3 to 5 characters) value to identify your project/client               |
-      | CMP.UserName   | svcCmpPipeline`<CLIENTCODE>`@orckestra.com | The service account used to interact with Orckestra's Cloud Management Platform |
-      | CMP.Password   |                                            | You should encrypt the password                                                 |
-      | CMP.URL        | <https://api.orckestra.cloud>              | URL of Orckestra's Cloud Management Platform                                    |
+1. Allow the workflow to read the Key Vault
+   1. Create an app registration in Microsoft Entra ID (or use an existing one) and give it read access to the secrets of the Key Vault (e.g. the `Key Vault Secrets User` role)
+   1. Add a federated credential to the app registration for your repository. The workflow runs on several branches, so use a credential with a claims-matching expression, where `<OWNER>/<REPOSITORY>` is your repository and `<OWNER_ID>` the numeric id of its owner (`gh api orgs/<OWNER> --jq .id`, or `gh api users/<OWNER> --jq .id` for a personal account):
 
-      Ask your Orckestra Support Specialist for your service account.
+      ```text
+      claims['sub'] matches 'repo:<OWNER>/<REPOSITORY>:*' and claims['repository_owner_id'] eq '<OWNER_ID>'
+      ```
 
-1. Create a variable group (in Pipeline/Library) called `BetterRetail Sensitive Data`
+1. Create the following variables (in the repository's `Settings` / `Secrets and variables` / `Actions` / `Variables`)
 
-   1. This group should have 1 value:
+   | Variable                                     | Value                                                             |
+   | -------------------------------------------- | ----------------------------------------------------------------- |
+   | `ORCKESTRAPRODUCTTEAM_AZURE_CLIENT_ID`       | The client id of the app registration                             |
+   | `ORCKESTRAINC_AZURE_TENANT_ID`               | The tenant id of the app registration                             |
+   | `ORCKESTRAPRODUCTTEAM_AZURE_SUBSCRIPTION_ID` | The subscription of the Key Vault                                 |
+   | `ORCKESTRAPRODUCTTEAM_AZURE_KEY_VAULT_NAME`  | The name of the Key Vault                                         |
+   | `CMP_CLIENT_CODE`                            | A short (3 to 5 characters) value to identify your project/client |
 
-      | Variable      | Value                                                                                                                                                      | Comment                                                                         |
-      | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-      | SensitiveData | @{ NewUsersPassword = '' ; ShippoApiKey = '; TranssmartApiUsername = '; TranssmartApiPassword = '; TranssmartAccount = '; TranssmartApiEndpoint = ''; AvalaraAccountNumber = '' ; AvalaraCompanyCode = '' ; AvalaraLicenceKey = '' ; AvalaraServiceUrl = '' ; DeliverySolutionsApiEndpoint = '' ; DeliverySolutionsApiKey = '' ; DeliverySolutionsTenantId = '' ; DeliverySolutionsSecretKey = '' } | A PowerShell formatted Hashtable containing the ExtraProperties's SentitiveData. You can use the value shown on the left and fill in the values. |
-
-      Ask your Orckestra Support Specialist for your service account.
-
-1. Create a new Azure DevOps pipeline based on the file `build/build-pipeline.yml`
-1. Execute the newly created pipeline to build the repository and upload the package to Orckestra's Cloud Management Platform
+1. Run the workflow to build the repository and upload the package to Orckestra's Cloud Management Platform. It runs on each push to a `version/*`, `feature*` or `bug*` branch, and can be started from the `Actions` tab (`Build` / `Run workflow`) once the workflow file is on the default branch of your repository.
    > [!TIP]
-   > You will need to authorize access to the variable group on the first run of the pipeline
-1. As with the desired installer of a developer workstation you need to add a reference to the package to your desired state of your release pipeline to deploy the package. You can refer to [this documentation](https://docs.orckestra.com/developer-documentation/getting-started/developer-environment-setup/undersanding-the-project-template) to know how and where to modify your desired state. You will need to select the correct version and source for the package. This information will be present in the output of the pipeline.
-1. Importing the BetterRetail commerce model can be achieved by adding the task `Execute Orckestra Commerce Cloud Activity` in your release pipeline. This task is found in the Azure DevOps Extension `Orckestra Technologies Inc. Azure Pipeline Tasks` that was installed before. You will need to input the following parameter in the task:
+   > The version of the package is shown in the summary of the workflow run.
+1. As with the desired installer of a developer workstation you need to add a reference to the package to your desired state of your release pipeline to deploy the package. You can refer to [this documentation](https://docs.orckestra.com/developer-documentation/getting-started/developer-environment-setup/undersanding-the-project-template) to know how and where to modify your desired state. You will need to select the correct version and source for the package. This information will be present in the output of the workflow run.
+1. Importing the BetterRetail commerce model can be achieved by adding the task `Execute Orckestra Commerce Cloud Activity` in your release pipeline. This task is found in the Azure DevOps Extension `Orckestra Technologies Inc. Azure Pipeline Tasks`, which you can install from the Azure DevOps marketplace with this [link](https://marketplace.visualstudio.com/items?itemName=orckestra-technologies.orckestra-technologies-pipeline-tasks). If your release pipeline runs on GitHub Actions, ask your Orckestra Support Specialist for the equivalent GitHub action.
+
+   ![Orckestra Technologies Inc. Azure Pipeline Tasks](docs/images/readme/azure_devops_marketplace_extension.png)
+
+   You will need to input the following parameter in the task:
+
    |Parameter |Value |Note |
    |---------|---------|---------|
    |Display name | Load Data Profile (BetterRetail) | |
