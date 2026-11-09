@@ -1,5 +1,5 @@
 # Builds the BetterRetail Commerce Model package and publishes it to CMP (client codes 'occ' and 'sls').
-# Migrated from the Azure DevOps pipeline build/build-pipeline.yml.
+# Migrated from the former Azure DevOps pipeline build/build-pipeline.yml (removed).
 #
 # Local actions: this repository is public, so it can't use the private Hecom-ORCK/OrckestraCommerce.github.actions
 # repository. Its LoadKeyVaultSecrets and PublishToCMP actions are copied, with the same folder structure, under
@@ -18,7 +18,6 @@
 #                                  @{ Release = @{ url = '...'; username = '...'; password = '...' }; ... }
 #   betterretail-sensitive-data    'BetterRetail Sensitive Data' SensitiveData: PowerShell hashtable literal, e.g.
 #                                  @{ NewUsersPassword = '...'; ShippoApiKey = '...'; ... }
-#   cmp-url                        'CMP - Connection API V2' CMP.Url
 #   cmp-username                   'CMP - Connection API V2' CMP.UserName
 #   cmp-password                   'CMP - Connection API V2' CMP.Password
 
