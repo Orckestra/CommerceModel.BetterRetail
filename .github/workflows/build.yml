@@ -200,7 +200,7 @@ jobs:
           tenant-id: ${{ vars.ORCKESTRAINC_AZURE_TENANT_ID }}
           subscription-id: ${{ vars.ORCKESTRAPRODUCTTEAM_AZURE_SUBSCRIPTION_ID }}
           vault-name: ${{ vars.ORCKESTRAPRODUCTTEAM_AZURE_KEY_VAULT_NAME }}
-          secrets: "cmp-url:CMP_URL!, cmp-username:CMP_USERNAME, cmp-password:CMP_PASSWORD"
+          secrets: "cmp-username:CMP_USERNAME, cmp-password:CMP_PASSWORD"
 
       - name: Download NuGet packages
         uses: actions/download-artifact@v8
