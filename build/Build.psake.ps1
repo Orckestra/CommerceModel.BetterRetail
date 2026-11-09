@@ -144,8 +144,12 @@ $WorkspaceRoot = Split-Path $psake.build_script_dir -Parent
 # (i.e. before RestorePackages is called)
 $packages = Copy-Item "$WorkspaceRoot\build\packages.bootstrap.config" -Destination (Join-Path $env:TEMP 'packages.config') -Force -PassThru
 Exec { & "$WorkspaceRoot\lib\nuget\nuget.exe" restore $packages.FullName -PackagesDirectory "$WorkspaceRoot\packages\NuGet" -ConfigFile "$WorkspaceRoot\nuget.config" -Verbosity quiet }
-Get-ChildItem "$WorkspaceRoot\packages\NuGet" -Recurse -Include @('Orckestra.PsUtil.psd1', 'Orckestra.Versioning.psd1') |
-ForEach-Object { Import-Module $_.FullName -Global -Force -Verbose:$false } 
+# Only the modules at the root of each package (<package>\tools\<module>\<module>.psd1): Orckestra.Versioning
+# embeds an older copy of Orckestra.PsUtil (tools\installer\Modules\External) that would otherwise be imported
+# last and replace the Orckestra.PsUtil version of packages.bootstrap.config.
+Get-ChildItem "$WorkspaceRoot\packages\NuGet\Orckestra.*\tools\*\*.psd1" |
+Where-Object { $_.Name -in @('Orckestra.PsUtil.psd1', 'Orckestra.Versioning.psd1') } |
+ForEach-Object { Import-Module $_.FullName -Global -Force -Verbose:$false }
 
 $ArtifactsStagingDirectory = "$WorkspaceRoot\artifacts"
 $TroubleshootingArtifactsStagingDirectory = "$ArtifactsStagingDirectory\Troubleshooting"
@@ -335,6 +339,12 @@ Task InitializeDeploymentPackageManifestVersion -precondition { $IsRunningOnBuil
 
 Task DetectBuildStability -precondition { $IsRunningOnBuildMachine } {
     Write-BuildStability -gitversionOutput (Get-CachedSemanticVersion)
+
+    # Azure DevOps gets CmpStability from the ##vso line written by Write-BuildStability. GitHub Actions: expose it
+    # as an output of the Build step for the job that publishes to CMP.
+    if ($env:GITHUB_ACTIONS -eq 'true' -and $env:GITHUB_OUTPUT) {
+        "cmp-stability=$($BuildStability.cmp)" | Add-Content -Path $env:GITHUB_OUTPUT
+    }
 }
 
 Task InitializeAssemblyVersion -precondition { $IsRunningOnBuildMachine } {
@@ -410,7 +420,40 @@ function Get-CachedSemanticVersion {
         $cachedSemanticVersion = Get-SemVer
         Set-Variable -Name "cachedSemanticVersion" -Value $cachedSemanticVersion -Scope Global
 
-        Write-Host "##vso[build.updatebuildnumber]$($cachedSemanticVersion.NugetVersionV1)"
+        $version = $cachedSemanticVersion.NugetVersionV1
+
+        # Azure DevOps: renames the build with the version.
+        Write-Host "##vso[build.updatebuildnumber]$($version)"
+
+        # GitHub Actions cannot rename a run once started: show the version as a notice banner at the top of the
+        # run's summary page and in the job summary instead.
+        if ($env:GITHUB_ACTIONS -eq 'true') {
+            # Notices in the order they should be displayed: the version first, then the build settings.
+            # Never add $NugetFeeds or $SensitiveData here: they contain credentials.
+            $notices = @(
+                @{ Title = 'Build version';           Value = $version }
+                @{ Title = 'Configuration';           Value = $Configuration }
+                @{ Title = 'IsRunningOnBuildMachine'; Value = $IsRunningOnBuildMachine }
+                @{ Title = 'MsbuildVerbosity';        Value = $MsbuildVerbosity }
+                @{ Title = 'NugetVerbosity';          Value = $NugetVerbosity }
+                @{ Title = 'BuildReason';             Value = $BuildReason }
+            )
+            # GitHub displays the annotations in the reverse order they were written: write them last to first.
+            [array]::Reverse($notices)
+            foreach ($notice in $notices) {
+                Write-Host "::notice title=$($notice.Title)::$($notice.Value)"
+            }
+
+            if ($env:GITHUB_STEP_SUMMARY) {
+                # Default encoding on purpose: in Windows PowerShell 5.1, '-Encoding utf8' may add a BOM; the text is ASCII.
+                "**Version:** ``$($version)``" | Add-Content -Path $env:GITHUB_STEP_SUMMARY
+            }
+
+            # Used by the job that publishes to CMP (PublishToCMP's buildNumber input).
+            if ($env:GITHUB_OUTPUT) {
+                "version=$version" | Add-Content -Path $env:GITHUB_OUTPUT
+            }
+        }
     }
 
     return $cachedSemanticVersion

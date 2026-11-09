@@ -1,0 +1,252 @@
+# Builds the BetterRetail Commerce Model package and publishes it to CMP (client codes 'occ' and 'sls').
+# Migrated from the Azure DevOps pipeline build/build-pipeline.yml.
+#
+# Local actions: this repository is public, so it can't use the private Hecom-ORCK/OrckestraCommerce.github.actions
+# repository. Its LoadKeyVaultSecrets and PublishToCMP actions are copied, with the same folder structure, under
+# .github/actions/OrckestraCommerce.github.actions/: copy any change of the original repository there as is.
+#
+# Required variables (organization or repository variables; a repository variable overrides an organization one):
+#   ORCKESTRAPRODUCTTEAM_AZURE_CLIENT_ID        App registration used through OIDC. It needs a federated credential
+#                                               for each subject that runs this workflow (branches, pull_request)
+#                                               and the permission to read the secrets of the vault.
+#   ORCKESTRAINC_AZURE_TENANT_ID
+#   ORCKESTRAPRODUCTTEAM_AZURE_SUBSCRIPTION_ID
+#   ORCKESTRAPRODUCTTEAM_AZURE_KEY_VAULT_NAME
+#
+# Key Vault secrets (single-line values), replacing the Azure DevOps variable groups:
+#   nuget-feeds                    'Nuget - AA Feeds' NugetFeeds: PowerShell hashtable literal, e.g.
+#                                  @{ Release = @{ url = '...'; username = '...'; password = '...' }; ... }
+#   betterretail-sensitive-data    'BetterRetail Sensitive Data' SensitiveData: PowerShell hashtable literal, e.g.
+#                                  @{ NewUsersPassword = '...'; ShippoApiKey = '...'; ... }
+#   cmp-url                        'CMP - Connection API V2' CMP.Url
+#   cmp-username                   'CMP - Connection API V2' CMP.UserName
+#   cmp-password                   'CMP - Connection API V2' CMP.Password
+
+name: Build
+
+on:
+  push:
+    # In GitHub filters '*' does not match '/' (unlike Azure DevOps), hence the '/**' patterns.
+    branches:
+      - 'feature*'
+      - 'feature*/**'   # features/123-x
+      - 'bug*'
+      - 'bug*/**'       # bugs/123-x
+      - 'version/*'     # version/5.10
+  pull_request:
+    branches:
+      - 'version/*'
+  workflow_dispatch:
+    inputs:
+      configuration:
+        description: 'Build configuration'
+        type: choice
+        options: [Release, Debug]
+        default: Release
+      msbuild-verbosity:
+        description: 'MSBuild verbosity'
+        type: choice
+        options: [quiet, minimal, normal, detailed, diagnostic]
+        default: normal
+      nuget-verbosity:
+        description: 'NuGet verbosity'
+        type: choice
+        options: [quiet, normal, detailed]
+        default: quiet
+      verbose:
+        description: 'Run the build with verbose PowerShell output'
+        type: boolean
+        default: false
+
+# Push and pull_request runs get empty inputs: each value falls back to the input's default.
+env:
+  BUILD_CONFIGURATION: ${{ inputs.configuration || 'Release' }}
+  BUILD_MSBUILD_VERBOSITY: ${{ inputs.msbuild-verbosity || 'normal' }}
+  BUILD_NUGET_VERBOSITY: ${{ inputs.nuget-verbosity || 'quiet' }}
+  BUILD_VERBOSE: ${{ inputs.verbose && 'true' || 'false' }}
+
+jobs:
+  build:
+    name: Build BetterRetail
+    runs-on: windows-2022   # Visual Studio 2022, as $VisualStudioVersion in build/Build.psake.ps1
+    permissions:
+      contents: read
+      id-token: write   # azure/login OIDC inside LoadKeyVaultSecrets
+    outputs:
+      version: ${{ steps.build.outputs.version }}
+      cmp-stability: ${{ steps.build.outputs.cmp-stability }}
+      artifact-items: ${{ steps.list-artifacts.outputs.items }}
+      staging-artifact-id: ${{ steps.stage-artifacts.outputs.artifact-id }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0   # Orckestra.Versioning computes the version from the git history and tags
+          lfs: true
+          persist-credentials: false   # the build doesn't push anything
+
+      # Loaded on every event, pull requests included. Pull requests from forks can't get an OIDC token and fail here.
+      - name: Load values from key vault
+        uses: ./.github/actions/OrckestraCommerce.github.actions/LoadKeyVaultSecrets
+        with:
+          client-id: ${{ vars.ORCKESTRAPRODUCTTEAM_AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.ORCKESTRAINC_AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.ORCKESTRAPRODUCTTEAM_AZURE_SUBSCRIPTION_ID }}
+          vault-name: ${{ vars.ORCKESTRAPRODUCTTEAM_AZURE_KEY_VAULT_NAME }}
+          secrets: "nuget-feeds:NUGET_FEEDS, betterretail-sensitive-data:SENSITIVE_DATA"
+
+      - name: Build
+        id: build
+        shell: powershell   # Windows PowerShell 5.1, required by build/Build.ps1
+        env:
+          # Get-SemVer (Orckestra.Versioning) reads the branch from this Azure DevOps variable when HEAD is detached
+          # (pull request merge commits). github.ref has the same format (refs/heads/..., refs/pull/...).
+          BUILD_SOURCEBRANCH: ${{ github.ref }}
+          # Build.psake.ps1 skips publishing NuGet packages when the reason is 'PullRequest' (Azure DevOps Build.Reason).
+          BUILD_REASON: ${{ github.event_name == 'pull_request' && 'PullRequest' || github.event_name }}
+        run: |
+          $extraProperties = @{ NugetVerbosity = $env:BUILD_NUGET_VERBOSITY }
+          # The values are PowerShell hashtable literals, as in the Azure DevOps variable groups.
+          if ($env:NUGET_FEEDS) { $extraProperties.NugetFeeds = Invoke-Expression $env:NUGET_FEEDS }
+          if ($env:SENSITIVE_DATA) { $extraProperties.SensitiveData = Invoke-Expression $env:SENSITIVE_DATA }
+
+          $buildArgs = @{
+            TaskList                = 'All'
+            IsRunningOnBuildMachine = $true
+            Configuration           = $env:BUILD_CONFIGURATION
+            MsbuildVerbosity        = $env:BUILD_MSBUILD_VERBOSITY
+            BuildReason             = $env:BUILD_REASON
+            ExtraProperties         = $extraProperties
+            Verbose                 = $env:BUILD_VERBOSE -eq 'true'
+          }
+          & .\build\Build.ps1 @buildArgs
+
+      - name: Publish artifact Troubleshooting
+        if: success() || failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: Troubleshooting
+          path: artifacts/Troubleshooting
+          if-no-files-found: warn
+
+      # The NuGet packages are published one artifact per file (no zip), by the publish-artifacts job.
+      # With a single folder in 'path', the files are at the root of the staging artifact.
+      - name: Stage artifacts
+        id: stage-artifacts
+        if: success() || failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: artifacts-staging
+          path: artifacts/Nuget
+          if-no-files-found: warn
+          retention-days: 1
+
+      - name: List artifact items
+        id: list-artifacts
+        if: success() || failure()
+        shell: pwsh
+        run: |
+          $folderPath = 'artifacts/Nuget'
+          $items = if (Test-Path $folderPath) {
+            Get-ChildItem -Path $folderPath | ForEach-Object {
+              [ordered]@{ name = $_.Name; path = $_.Name; archive = $_.PSIsContainer }
+            }
+          }
+          $json = ConvertTo-Json -InputObject @($items) -Compress
+          "items=$json" >> $env:GITHUB_OUTPUT
+
+  publish-artifacts:
+    name: Publish ${{ matrix.name }}
+    needs: build
+    # Like Azure DevOps (succeededOrFailed), also published when the build failed.
+    if: (success() || failure()) && needs.build.outputs.artifact-items != '' && needs.build.outputs.artifact-items != '[]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    strategy:
+      matrix:
+        include: ${{ fromJSON(needs.build.outputs.artifact-items) }}
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: artifacts-staging
+          path: staging
+      - uses: actions/upload-artifact@v7
+        with:
+          name: ${{ matrix.name }}   # ignored when archive is false
+          path: staging/${{ matrix.path }}
+          archive: ${{ matrix.archive }}
+          if-no-files-found: error
+
+  publish-cmp:
+    name: Publish to CMP
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: windows-2022   # PublishToCMP requires Windows PowerShell 5.1
+    permissions:
+      contents: read
+      id-token: write   # azure/login OIDC inside LoadKeyVaultSecrets
+    steps:
+      - name: Checkout local actions
+        uses: actions/checkout@v7
+        with:
+          sparse-checkout: .github/actions
+          persist-credentials: false
+
+      - name: Load values from key vault
+        uses: ./.github/actions/OrckestraCommerce.github.actions/LoadKeyVaultSecrets
+        with:
+          client-id: ${{ vars.ORCKESTRAPRODUCTTEAM_AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.ORCKESTRAINC_AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.ORCKESTRAPRODUCTTEAM_AZURE_SUBSCRIPTION_ID }}
+          vault-name: ${{ vars.ORCKESTRAPRODUCTTEAM_AZURE_KEY_VAULT_NAME }}
+          secrets: "cmp-url:CMP_URL!, cmp-username:CMP_USERNAME, cmp-password:CMP_PASSWORD"
+
+      - name: Download NuGet packages
+        uses: actions/download-artifact@v8
+        with:
+          name: artifacts-staging
+          path: Nuget
+
+      - name: Publish package for OCC
+        uses: ./.github/actions/OrckestraCommerce.github.actions/PublishToCMP
+        with:
+          cmpUrl: ${{ env.CMP_URL }}
+          cmpUsername: ${{ env.CMP_USERNAME }}
+          cmpPassword: ${{ env.CMP_PASSWORD }}
+          cmpClientCode: occ
+          cmpPackageFolder: ${{ github.workspace }}\Nuget
+          cmpStability: ${{ needs.build.outputs.cmp-stability }}
+          packagesList: 'CommerceModel*.nupkg'
+          packagesListFilterType: FilePattern
+          buildNumber: ${{ needs.build.outputs.version }}
+
+      - name: Publish package for SLS
+        uses: ./.github/actions/OrckestraCommerce.github.actions/PublishToCMP
+        with:
+          cmpUrl: ${{ env.CMP_URL }}
+          cmpUsername: ${{ env.CMP_USERNAME }}
+          cmpPassword: ${{ env.CMP_PASSWORD }}
+          cmpClientCode: sls
+          cmpPackageFolder: ${{ github.workspace }}\Nuget
+          cmpStability: ${{ needs.build.outputs.cmp-stability }}
+          packagesList: 'CommerceModel*.nupkg'
+          packagesListFilterType: FilePattern
+          buildNumber: ${{ needs.build.outputs.version }}
+
+  cleanup-artifacts-staging:
+    name: Delete artifacts-staging
+    needs: [build, publish-artifacts, publish-cmp]
+    # Only once every job that reads the staging artifact succeeded (publish-cmp is skipped on pull requests), so
+    # nothing is lost on failure.
+    if: >-
+      !cancelled() && needs.build.outputs.staging-artifact-id != ''
+      && needs.publish-artifacts.result == 'success'
+      && (needs.publish-cmp.result == 'success' || needs.publish-cmp.result == 'skipped')
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method DELETE "repos/${{ github.repository }}/actions/artifacts/${{ needs.build.outputs.staging-artifact-id }}"

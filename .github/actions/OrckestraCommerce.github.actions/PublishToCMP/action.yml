@@ -1,0 +1,79 @@
+name: 'Upload package'
+description: 'Upload deployment package to CMP'
+inputs:
+  cmpUrl:
+    description: 'Address of the CMP instance used to deploy the platform'
+    required: true
+    default: 'https://api.orckestra.cloud/'
+  cmpUsername:
+    description: 'Username to use to authenticate to CMP. See also [documentation](https://docs.orckestra.com/developer-documentation/getting-started/setting-up-your-platform/undersanding-the-project-template/azure-devops-pipeline-tasks#cmp-connection).'
+    required: true
+  cmpPassword:
+    description: 'Password to use to authenticate to CMP'
+    required: true
+  cmpClientCode:
+    description: 'The code of the client'
+    required: true
+  cmpPackageFolder:
+    description: 'Folder where to search for packages to upload to CMP.'
+    required: true
+  cmpStability:
+    type: choice
+    description: 'Sets the CMP feed where packages are uploaded. Recognized values: Release, PreRelease, Develop.'
+    options: 
+    - 'Develop'
+    - 'PreRelease'
+    - 'Release'
+  packagesList:
+    description: 'Specifies which files to upload. See [syntax specification](https://docs.orckestra.com/developer-documentation/getting-started/setting-up-your-platform/undersanding-the-project-template/azure-devops-pipeline-tasks#pubcmp-packages-filter).'
+    required: true
+  packagesListFilterType:
+    type: choice
+    description: 'The format used for each line of the package list. See [documentation](https://docs.orckestra.com/developer-documentation/getting-started/setting-up-your-platform/undersanding-the-project-template/azure-devops-pipeline-tasks#pubcmp-packages-filter-type).'
+    options: 
+    - 'FilePattern'
+    - 'RegEx'
+    default: 'FilePattern'
+  buildNumber:
+    type: string
+    description: 'If any ''optional version target'' is specified in parameter ''Packages to upload'' above, this build version is compared against it to determine whether the package should be uploaded or not. It must be in a format `\\d+\\.\\d+.*`\n\nYou can use the value `$(Build.BuildNumber)` when this task is in a release pipeline and `$(GitVersion.NuGetVersion)` when the task is in a build pipeline. You can hardcode a version (e.g.: 0.0) if you cannot use a build variable.'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Publish package to CMP
+      shell: powershell
+      run: |
+            # Expand to see script
+            if ($PSVersionTable.PSVersion.Major -ne 5 -or $PSVersionTable.PSVersion.Minor -ne 1) {
+                throw "This script requires Windows PowerShell 5.1. Current version is $($PSVersionTable.PSVersion)."
+            }
+
+            # force TLS1.2
+            [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol, [Net.SecurityProtocolType]::Tls12
+
+            Write-Host "Starting publish to CMP"
+
+            # Accessing inputs using GitHub environment syntax
+            $url = "${{ inputs.cmpUrl }}"
+            $username = "${{ inputs.cmpUsername }}"
+            $password = "${{ inputs.cmpPassword }}"
+            $clientCode = "${{ inputs.cmpClientCode }}"
+            $packageFolder = "${{ inputs.cmpPackageFolder }}"
+            $stability = "${{ inputs.cmpStability }}"
+            $packagesList = @'
+            ${{ inputs.packagesList }}
+            '@
+            $packagesListFilterType = "${{ inputs.packagesListFilterType }}"
+            $buildNumber = "${{ inputs.buildNumber }}"
+
+            & "${{ github.action_path }}\publish.ps1" `
+              -Url $url `
+              -Username $username `
+              -Password $password `
+              -ClientCode $clientCode `
+              -PackageFolder $packageFolder `
+              -Stability $stability `
+              -PackagesList $packagesList `
+              -PackagesListFilterType $packagesListFilterType `
+              -BuildNumber $buildNumber
