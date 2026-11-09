@@ -87,6 +87,7 @@ Task Compile      -depends RestorePackages,
                            InitializeDeploymentPackageManifestVersion,
                            InitializeMetadata,
                            DetectBuildStability,
+                           WriteBuildSummary,
                            CompileSolutions,
                            GeneratePackages,
 						   UndoSensitiveData
@@ -144,8 +145,12 @@ $WorkspaceRoot = Split-Path $psake.build_script_dir -Parent
 # (i.e. before RestorePackages is called)
 $packages = Copy-Item "$WorkspaceRoot\build\packages.bootstrap.config" -Destination (Join-Path $env:TEMP 'packages.config') -Force -PassThru
 Exec { & "$WorkspaceRoot\lib\nuget\nuget.exe" restore $packages.FullName -PackagesDirectory "$WorkspaceRoot\packages\NuGet" -ConfigFile "$WorkspaceRoot\nuget.config" -Verbosity quiet }
-Get-ChildItem "$WorkspaceRoot\packages\NuGet" -Recurse -Include @('Orckestra.PsUtil.psd1', 'Orckestra.Versioning.psd1') |
-ForEach-Object { Import-Module $_.FullName -Global -Force -Verbose:$false } 
+# Only the modules at the root of each package (<package>\tools\<module>\<module>.psd1): Orckestra.Versioning
+# embeds an older copy of Orckestra.PsUtil (tools\installer\Modules\External) that would otherwise be imported
+# last and replace the Orckestra.PsUtil version of packages.bootstrap.config.
+Get-ChildItem "$WorkspaceRoot\packages\NuGet\Orckestra.*\tools\*\*.psd1" |
+Where-Object { $_.Name -in @('Orckestra.PsUtil.psd1', 'Orckestra.Versioning.psd1') } |
+ForEach-Object { Import-Module $_.FullName -Global -Force -Verbose:$false }
 
 $ArtifactsStagingDirectory = "$WorkspaceRoot\artifacts"
 $TroubleshootingArtifactsStagingDirectory = "$ArtifactsStagingDirectory\Troubleshooting"
@@ -337,6 +342,50 @@ Task DetectBuildStability -precondition { $IsRunningOnBuildMachine } {
     Write-BuildStability -gitversionOutput (Get-CachedSemanticVersion)
 }
 
+Task WriteBuildSummary -precondition { $IsRunningOnBuildMachine } {
+    # This task depends on:
+    # - variable BuildStability set by DetectBuildStability
+
+    $version = (Get-CachedSemanticVersion).NuGetVersionV1
+
+    # Azure DevOps: renames the build with the version.
+    Write-Host "##vso[build.updatebuildnumber]$($version)"
+
+    if ($env:GITHUB_ACTIONS -ne 'true') { return }
+
+    # GitHub Actions cannot rename a run once started: show the version and the build settings in a table of
+    # the job summary (run's summary page) instead.
+    if ($env:GITHUB_STEP_SUMMARY) {
+        # Rows in display order: the version first, then the build settings.
+        # Never add $NugetFeeds or $SensitiveData here: they contain credentials.
+        $rows = [ordered]@{
+            'Build version'           = $version
+            'CMP stability'           = $BuildStability.cmp
+            'Configuration'           = $Configuration
+            'IsRunningOnBuildMachine' = $IsRunningOnBuildMachine
+            'MsbuildVerbosity'        = $MsbuildVerbosity
+            'NugetVerbosity'          = $NugetVerbosity
+            'BuildReason'             = $BuildReason
+        }
+
+        $table = @('| Setting | Value |', '|---|---|')
+        foreach ($row in $rows.GetEnumerator()) {
+            $value = "$($row.Value)" -replace '\|', '\|'  # a '|' would end the cell
+            $cell = if ($value) { "``$value``" } else { '' }  # an empty code span would show the backticks
+            $table += "| $($row.Name) | $cell |"
+        }
+
+        # Default encoding on purpose: in Windows PowerShell 5.1, '-Encoding utf8' may add a BOM; the text is ASCII.
+        $table | Add-Content -Path $env:GITHUB_STEP_SUMMARY
+    }
+
+    # Outputs of the Build step, used by the job that publishes to CMP (PublishToCMP's buildNumber and
+    # cmpStability inputs).
+    if ($env:GITHUB_OUTPUT) {
+        "version=$version", "cmp-stability=$($BuildStability.cmp)" | Add-Content -Path $env:GITHUB_OUTPUT
+    }
+}
+
 Task InitializeAssemblyVersion -precondition { $IsRunningOnBuildMachine } {
     $rootFolder = Get-GitWorkspaceRoot
     InitializeAssemblyInfoUsingSemVerGit -RootFolder $rootFolder -SemVerResults (Get-CachedSemanticVersion) -GlobalAssemblyInfoPath (Join-Path $rootFolder 'src\Common\GlobalAssemblyInfo.cs') -ProjectsDirectoryPaths @('src', 'tests')
@@ -409,8 +458,6 @@ function Get-CachedSemanticVersion {
     if (-not $cachedSemanticVersion) {
         $cachedSemanticVersion = Get-SemVer
         Set-Variable -Name "cachedSemanticVersion" -Value $cachedSemanticVersion -Scope Global
-
-        Write-Host "##vso[build.updatebuildnumber]$($cachedSemanticVersion.NugetVersionV1)"
     }
 
     return $cachedSemanticVersion
