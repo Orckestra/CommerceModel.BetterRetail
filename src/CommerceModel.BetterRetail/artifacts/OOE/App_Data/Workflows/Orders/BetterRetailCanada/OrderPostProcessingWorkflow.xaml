@@ -1,6 +1,7 @@
 ﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Orckestra.Overture.Services.Web.Host.OrderPostProcessingWorkflow2"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:cba="clr-namespace:CommerceModel.BetterRetail.Activities;assembly=CommerceModel.BetterRetail.Activities"
  xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
  xmlns:ooopwa="clr-namespace:Orckestra.Overture.Orders.Processing.Workflows.Activities;assembly=Orckestra.Overture.Orders.Processing.Workflows.Activities"
  xmlns:ooopwap="clr-namespace:Orckestra.Overture.Orders.Processing.Workflows.Activities.PostProcessing;assembly=Orckestra.Overture.Orders.Processing.Workflows.Activities"
@@ -91,9 +92,22 @@
       <AssemblyReference>OrckestraCommerce.CommerceModelUtilities</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>CommerceModel.BetterRetail</AssemblyReference>
+      <AssemblyReference>CommerceModel.BetterRetail.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <cba:SetMobileStoreFulfillmentAttributesActivity sap2010:WorkflowViewState.IdRef="SetMobileStoreFulfillmentAttributesActivity_1">
+      <cba:SetMobileStoreFulfillmentAttributesActivity.OrderProcessingContextArgument>
+        <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+          <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+        </InArgument>
+      </cba:SetMobileStoreFulfillmentAttributesActivity.OrderProcessingContextArgument>
+      <cba:SetMobileStoreFulfillmentAttributesActivity.OrderProcessingResultArgument>
+        <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+          <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+        </InOutArgument>
+      </cba:SetMobileStoreFulfillmentAttributesActivity.OrderProcessingResultArgument>
+    </cba:SetMobileStoreFulfillmentAttributesActivity>
     <If sap2010:WorkflowViewState.IdRef="If_1">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
@@ -208,6 +222,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="SetMobileStoreFulfillmentAttributesActivity_1" sap:VirtualizedContainerService.HintSize="464,22" />
       <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="464,225">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
