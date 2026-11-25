@@ -96,6 +96,9 @@
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="ShipmentsHasBeenModified" />
+    </Sequence.Variables>
     <cba:SetMobileStoreFulfillmentAttributesActivity sap2010:WorkflowViewState.IdRef="SetMobileStoreFulfillmentAttributesActivity_1">
       <cba:SetMobileStoreFulfillmentAttributesActivity.OrderProcessingContextArgument>
         <InArgument x:TypeArguments="oosop:OrderProcessingContext">
@@ -150,7 +153,83 @@
           <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
         </InOutArgument>
       </ooopwap:RouteFulfillmentsActivity.OrderProcessingResultArgument>
+      <ooopwap:RouteFulfillmentsActivity.ShipmentsHasBeenModified>
+        <OutArgument x:TypeArguments="x:Boolean">
+          <mca:CSharpReference x:TypeArguments="x:Boolean">ShipmentsHasBeenModified</mca:CSharpReference>
+        </OutArgument>
+      </ooopwap:RouteFulfillmentsActivity.ShipmentsHasBeenModified>
     </ooopwap:RouteFulfillmentsActivity>
+    <If DisplayName="If shipments modified">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <mca:CSharpValue x:TypeArguments="x:Boolean">ShipmentsHasBeenModified</mca:CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <Sequence DisplayName="Calculation">
+          <ooopwa:AssignCartLineItemPricesActivity>
+            <ooopwa:AssignCartLineItemPricesActivity.OrderProcessingContextArgument>
+              <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+                <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+              </InArgument>
+            </ooopwa:AssignCartLineItemPricesActivity.OrderProcessingContextArgument>
+            <ooopwa:AssignCartLineItemPricesActivity.OrderProcessingResultArgument>
+              <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+                <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+              </InOutArgument>
+            </ooopwa:AssignCartLineItemPricesActivity.OrderProcessingResultArgument>
+          </ooopwa:AssignCartLineItemPricesActivity>
+          <ooopwa:RetrieveFulfillmentMethodsActivity>
+            <ooopwa:RetrieveFulfillmentMethodsActivity.OrderProcessingContextArgument>
+              <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+                <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+              </InArgument>
+            </ooopwa:RetrieveFulfillmentMethodsActivity.OrderProcessingContextArgument>
+            <ooopwa:RetrieveFulfillmentMethodsActivity.OrderProcessingResultArgument>
+              <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+                <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+              </InOutArgument>
+            </ooopwa:RetrieveFulfillmentMethodsActivity.OrderProcessingResultArgument>
+          </ooopwa:RetrieveFulfillmentMethodsActivity>
+          <ooopwa:RetrieveDiscountsActivity>
+            <ooopwa:RetrieveDiscountsActivity.OrderProcessingContextArgument>
+              <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+                <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+              </InArgument>
+            </ooopwa:RetrieveDiscountsActivity.OrderProcessingContextArgument>
+            <ooopwa:RetrieveDiscountsActivity.OrderProcessingResultArgument>
+              <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+                <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+              </InOutArgument>
+            </ooopwa:RetrieveDiscountsActivity.OrderProcessingResultArgument>
+          </ooopwa:RetrieveDiscountsActivity>
+          <ooopwa:AddGiftsToCartActivity>
+            <ooopwa:AddGiftsToCartActivity.OrderProcessingContextArgument>
+              <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+                <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+              </InArgument>
+            </ooopwa:AddGiftsToCartActivity.OrderProcessingContextArgument>
+            <ooopwa:AddGiftsToCartActivity.OrderProcessingResultArgument>
+              <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+                <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+              </InOutArgument>
+            </ooopwa:AddGiftsToCartActivity.OrderProcessingResultArgument>
+          </ooopwa:AddGiftsToCartActivity>
+          <ooopwa:CalculateCartTaxesActivity>
+            <ooopwa:CalculateCartTaxesActivity.OrderProcessingContextArgument>
+              <InArgument x:TypeArguments="oosop:OrderProcessingContext">
+                <mca:CSharpValue x:TypeArguments="oosop:OrderProcessingContext">OrderProcessingContextArgument</mca:CSharpValue>
+              </InArgument>
+            </ooopwa:CalculateCartTaxesActivity.OrderProcessingContextArgument>
+            <ooopwa:CalculateCartTaxesActivity.OrderProcessingResultArgument>
+              <InOutArgument x:TypeArguments="oosop:OrderProcessingResult">
+                <mca:CSharpReference x:TypeArguments="oosop:OrderProcessingResult">OrderProcessingResultArgument</mca:CSharpReference>
+              </InOutArgument>
+            </ooopwa:CalculateCartTaxesActivity.OrderProcessingResultArgument>
+          </ooopwa:CalculateCartTaxesActivity>
+        </Sequence>
+      </If.Then>
+    </If>
     <ooopwa:SubmitOrderTaxesActivity sap2010:Annotation.AnnotationText="Send a SalesInvoice entry with the &quot;Uncommited&quot; status to Avalara. &#xA;&#xA;We may de-activate the previous CalculateCartTax Activity in the case we use only Avalara Tax Provider (to limit costs) since the SubmitOrderTaxes Activity uses almost the same GetTax call to Avalara service with only a few different parameters to save invoice details in Avalara system." sap2010:WorkflowViewState.IdRef="SubmitOrderTaxesActivity_1" OrderProcessingContextArgument="[OrderProcessingContextArgument]" OrderProcessingResultArgument="[OrderProcessingResultArgument]" />
     <ooopwa:AssignFulfillmentScheduleDateTimeActivity AvailableSlotsMaximumTimeSpan="182" sap2010:WorkflowViewState.IdRef="AssignFulfillmentScheduleDateTimeActivity_1" TimeOffsetWithoutSlots="20">
       <ooopwa:AssignFulfillmentScheduleDateTimeActivity.OrderProcessingContextArgument>
